@@ -1,6 +1,6 @@
 # Gestures
 
-<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Level Programmer</span>
 
 Gestures are special patterns of [Pointers](pointers.md). The system is able to recognize these patterns and trigger certain events that correspond to these patterns.
