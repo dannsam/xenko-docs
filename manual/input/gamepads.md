@@ -76,7 +76,6 @@ Use the following fields of the [Input.GetGamePad(Int32)](xref="SiliconStudio.Xe
 
 ### Gamepad Vibration
 [Input.SetGamePadVibration(Int32, Single, Single)](xref="SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration.System.Int32.System.Single.System.Single") method sets vibration states for gamepads.
-``` method of the Input base class sets vibration states for gamepads.
 
 > [!Note] Currently, you cannot control gamepad vibration in Xenko.
 > This feature will be added in the future releases.
