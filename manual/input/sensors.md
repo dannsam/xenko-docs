@@ -193,4 +193,7 @@ The following sample shows you how to get an instance of the gyroscope and retri
   var rotationZ =  rotationRate.Z;
 ```
 
-Now, you know how to handle **Sensors Input** in your game. For information on how to handle other input devices, see [Input overview page](index.md).
+<div class="doc-relatedtopics">
+* [Gestures](gestures.md)
+* [Pointers](pointers.md)
+</div>
