@@ -29,7 +29,7 @@ Alternatively, you can enable **Gesture Recognition** of the **Long Press Gestur
 > [!Note] Pointer events are listed in chronological order (time of the event).
 
 ##Use Multi-Touch
-**To manage Multi-Touch** functionality use ``MultiTouchEnabled`` property of the ``Input`` base class.
+**To manage Multi-Touch** functionality use [Input.MultiTouchEnabled](xref="SiliconStudio.Xenko.Input.InputManager.MultiTouchEnabled") property.
 
 It gets or sets a Boolean value (true/false) indicating if simultaneous multiple finger touches are enabled or not.
 If Multi-touch is disabled, Xenko triggers events of only one finger at a time.
@@ -40,25 +40,25 @@ If Multi-touch is disabled, Xenko triggers events of only one finger at a time.
 
 ##Use PointerEvent Class
 
-```PointerEvent``` class of the ``Input`` base class handles all input from **Pointers**.
-A ```PointerEvent``` contains information on the **Pointer status**.
+[PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") class handles all input from the **Pointers**.
+[PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") contains information on the **Pointer Status**.
 It is thrown every time when a modification happens to that **Pointer**.
-The ```Input.IInputManager``` interface provides access to the list of **Pointer Events** that happened during the last update via the ```Input.PointerEvents``` field.
+The ```Input.IInputManager``` interface provides access to the list of **Pointer Events** that happened during the last update via the [Input.PointerEvents](xref="SiliconStudio.Xenko.Input.InputManager.PointerEvents") field.
 
 Xenko buffers a detailed sequence of pointer events every update. Developer gets this sequence in the next update.
 The list is cleared every update, so you don't need to clear it manually.
 All pointer events not analyzed during a frame turn are lost.
 
-```PointerEvent``` class has the following properties, use them to handle **Pointer input**:
+[PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") class has the following properties, use them to handle **Pointer input**:
 
 ###Get Pointer Details
 
-```IsPrimary``` property is a Boolean value (true/false) for multi-touch functionality. It checks if a Pointer is a **primary pointer**.
+[Input.PointerEvent.IsPrimary](xref="SiliconStudio.Xenko.Input.PointerEvent.IsPrimary") property is a Boolean value (true/false) for multi-touch functionality. It checks if a Pointer is a **primary pointer**.
 Only input from the primary pointer will be treated as a mouse pointer.
 
-```PointerType``` checks Pointer type. There are three pointer types in total: _Mouse_, _Touch_, and _None_.
+[Input.PointerEvent.PointerType](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerType") checks Pointer type. There are three pointer types: _Mouse_, _Touch_, and _None_.
 
-```PointerId``` property identifies **Pointer** that triggered a certain **Pointer event**.
+[Input.PointerEvent.PointerId](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerId") property identifies **Pointer** that triggered a certain **Pointer event**.
 
 Each pointer has its own ID that is valid only during _Down->Move->Up_ sequence of pointer events.
 So a finger can have different IDs each time it touches the screen.
@@ -68,7 +68,7 @@ This new touch is a new **Pointer**. It gets a **different ID** and starts a new
 
 ###Get Pointer State & Position
 
-```Position``` property of the ```PointerEvent``` class checks **Pointer Position**.
+[Input.PointerEvent.Position](xref="SiliconStudio.Xenko.Input.PointerEvent.Position") property checks **Pointer Position**.
 
 Xenko uses **normalized coordinates** for Pointer positions instead of actual screen sizes in pixels.
 This way, pointer position **adjusts correctly** to any screen resolution, so you don't have to write separate code for every screen size.
@@ -76,7 +76,7 @@ This way, pointer position **adjusts correctly** to any screen resolution, so yo
 * (0,0) represents the left-top corner of the screen
 * (1,1) represents the right-bottom corner of the screen.
 
-```State``` property gets the data from the **Enum** ```PointerState```. It is an enumeration describing the **Action** performed by the pointer. There are five states:
+[Input.PointerEvent.State](xref="SiliconStudio.Xenko.Input.PointerEvent.State") property gets the data from the **Enum** [Input.PointerState](xref="SiliconStudio.Xenko.Input.PointerState"). It is an enumeration describing the **Action** performed by the pointer. There are five states:
 
 * _Down_: Pointer just touched the screen.
 * _Move_: Pointer changes position along the screen.
@@ -93,9 +93,9 @@ This way, pointer position **adjusts correctly** to any screen resolution, so yo
 
 ###Get Delta Values
 
-```DeltaTime``` gets the amount of time elapsed from the previous update.
+[Input.PointerEvent.DeltaTime](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaTime") gets the amount of time elapsed from the previous update.
 
-```DeltaPosition``` gets the change of the pointer position since the previous update.
+[Input.PointerEvent.DeltaPosition](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition") gets the change of the pointer position since the previous update.
 
 > [!Note] Delta values are always nulls at the beginning of the sequence of pointer events.
 > That is, when **Pointer State** is _Down_, delta values are always nulls.
