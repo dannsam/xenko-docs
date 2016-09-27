@@ -216,4 +216,7 @@ default:
 }
 ```
 
-Now, you know how to handle **Gestures** in your game. For information on how to handle other input devices, see [Input overview page](index.md).
+<div class="doc-relatedtopics">
+* [Pointers](pointers.md)
+* [Virtual Keys](virtual-keys.md)
+</div>
