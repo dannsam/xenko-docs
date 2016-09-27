@@ -12,7 +12,7 @@ Let's see the difference between using [Input](xref="SiliconStudio.Xenko.Input.I
 
 | Class | Game Type | When to Use? |
 | --- | --- | --- |
-| [Input](xref="SiliconStudio.Xenko.Input.InputManager") | Desktop only | For desktop games, you usually handle input with multiple mouse buttons. Therefore, use properties and methods of the ```Input``` base class. |
+| [Input](xref="SiliconStudio.Xenko.Input.InputManager") | Desktop only | For desktop games, you usually handle input with multiple mouse buttons. Therefore, use properties and methods of the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class. |
 | [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") | Cross-platform | For mobile games, you usually simulate pointers with just the left mouse button. Therefore, you can treat mouse input entirely like Pointers, no need to create separate mouse-specific controls. See [Pointers Overview Page](pointers.md) for details. |
 
 
