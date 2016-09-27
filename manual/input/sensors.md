@@ -119,7 +119,7 @@ The gravity sensor gives a three-dimensional vector indicating the direction and
 The following code shows you how to get an instance of the gravity sensor:
 
 ```
-  var gravitySensor = Input.Gravity;
+ var gravitySensor = Input.Gravity;
  var gravity = gravitySensor.Vector;
 ```
 
