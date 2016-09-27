@@ -12,9 +12,9 @@ Each **Gamepad** brand has unique buttons and features. Therefore, it's importan
 
 Before you can handle gamepad input, check whether a gamepad is available in the system:
 
-1. ```HasGamePad``` property of the ```Input``` base class returns a Boolean (true/false) value that indicates gamepad availability.
+1. [Input.HasGamePad](xref="SiliconStudio.Xenko.Input.InputManager.HasGamePad") property returns a Boolean (true/false) value that indicates gamepad availability.
 
-2. ```GamePadCount``` property of the ```Input``` base class gets the number of gamepads connected to the system.
+2. [Input.GamePadCount](xref="SiliconStudio.Xenko.Input.InputManager.GamePadCount") property gets the number of gamepads connected to the system.
 
 3. ```IsConnected``` field of the ```GetGamePad(Int32)``` method of the ```Input``` base class is Boolean (true/false) value that indicates if a specific gamepad is connected.
 
@@ -42,7 +42,7 @@ _Xbox Gamepad_
 
 ### Digital Buttons
 
-For **Digital buttons** as well as for instances when a player **Presses Thumb buttons**, use three methods of the ``Input`` base class:
+For **Digital buttons** as well as for instances when a player **Presses Thumb buttons**, use three methods of the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class:
 
 | Method | Functionality |
 |----|----|
