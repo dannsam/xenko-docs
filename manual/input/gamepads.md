@@ -1,7 +1,7 @@
 #Gamepads
 
 <span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level Programmer</span>
+<span class="label label-doc-audience">Programmer</span>
 
 **Gamepads** are popular console input devices, e.g. Xbox Elite Wireless Controller and PS4 DualShock.
 Some players use gamepads instead of usual keyboard/mouse even on desktop platforms.
@@ -18,13 +18,10 @@ Before you can handle gamepad input, it's important to check, whether a gamepad 
 
 ```IsConnected``` field of the ```GetGamePad(Int32)``` method of the ```Input``` base class is Boolean (true/false) value that indicates if a specific gamepad is connected.
 
-> [!Note] Suppose, the end user unplugged a gamepad, started a game, and then plugged in a gamepad in run-time.
-> In this case ```HasGamePad``` property returns a **false** value even when the user plugs in a gamepad.
-> This means, user has to close and re-open game application, otherwise gamepad will not be available in the game.
+> [!Note] 
+> Currently Xenko does not support gamepad plugged at run-time. This feature will be added in the future releases.
 
-**Syntax**: ```bool hasGamePad = Input. GamePad; ```
-
-##Learn Gamepad Buttons
+##Gamepad Buttons
 
 Below is an image of the Xbox Elite Wireless Controller. Let's use it to study how to handle **Gamepad Input** in your games:
 
@@ -40,8 +37,6 @@ _Xbox Gamepad_
 |----|----|
 |A player presses a stick like a button | Handle like input from a digital button with the usual three states (_Pressed_, _Down_, _Released_). |
 |A player rotates a stick in some direction | Use **Thumb stick x-axis/y-axis value** to get a precise stick position at every update. |
-
-
 
 ## Handle Gamepad Input
 
@@ -85,15 +80,6 @@ Use the following fields of the ```GetGamePad(Int32)``` method to handle **Input
 > [!Note] Currently, you cannot control gamepad vibration in Xenko.
 > This feature will be added in the future releases.
 
-## Check if Gamepads are Equal
-
-Xenko has two operators to check equality and inequality of the gamepads:
-
-|Name | Description|
-|---|---|
-| Equality(GamePadState, GamePadState)/ == Operator | Boolean value (true/false) that check if gamepads are equal. |
-| Inequality(GamePadState, GamePadState)/!= Operator | Boolean value (true/false) that check if gamepads are not equal. |
-
 ##Gamepad Limitations
 
 Currently, Xenko doesn't distinguish between **Gamepads** of different brands. Such approach implies certain limitations.
@@ -103,54 +89,40 @@ This issue will be addressed in the future releases of the Game Engine.
 ##Code Sample
 
 ```
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SiliconStudio.Core.Diagnostics;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Xenko.Engine;
-
-namespace MyGame
+public class TestScript : SyncScript
 {
-    public class TestScript : SyncScript
-    {
-        public override void Update()
-        {   
-            //if gamepad is available
-            if (Input.HasGamePad)
-            {
+	public override void Update()
+	{   
+		//Check if a gamepad is available
+		if (Input.HasGamePad)
+		{
+			//Get the number of gamepad plugged
+			int gamepadCount = Input.GamePadCount;
+			
+			// Check the status of each gamepad
+			for (int i = 0; i < gamepadCount; i++)
+			{
+				//Get analog sticks' position (Thumbs)
+				Vector2 speed = Input.GetGamePad(i).LeftThumb;
+				Vector2 direction = Input.GetGamePad(i).RightThumb;
 
-                //get gamepad count
-                int gamepadCount = Input.GamePadCount;
-                for (int i = 0; i < gamepadCount; i++)
-                {
-
-                    
-                    //get analog sticks' position (Thumbs)
-                    Vector2 speed = Input.GetGamePad(i).LeftThumb;
-                    Vector2 direction = Input.GetGamePad(i).RightThumb;
-
-
-                    //get digital buttons
-
-                    if (Input.IsPadButtonDown(i, GamePadButton.X)){
-                        //shoot if button is down
-                    }
-
-                    if (Input.IsPadButtonPressed(i, GamePadButton.A))
-                    {
-                        //use med-kit if button was pressed, single instance of the action per button press, even if player holds that button down.
-                    }
-
-                }
-
-            }
-        }
-    }
+				//Get status of digital buttons
+				if (Input.IsPadButtonDown(i, GamePadButton.X))
+				{
+					// Do repetitive action here (for example: shoot)
+				}
+				if (Input.IsPadButtonPressed(i, GamePadButton.A))
+				{
+					// Do one-time action here (for example: use med-kit). 
+					// This is triggered once only even if player holds that button down.
+				}
+			}
+		}
+	}
 }
 ```
 
-Now, you know how to handle **Gamepad Input** in your game. For information on how to handle other input devices, see [Input overview page](index.md).
+<div class="doc-relatedtopics">
+* [Keyboard](keyboard.md)
+* [Virtual Keys](virtual-keys.md)
+</div>
