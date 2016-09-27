@@ -17,7 +17,20 @@ Before you can handle keyboard input with either ```Input``` base class or ```Ke
 
 **Syntax**: ```bool hasKeyboard = Input.HasKeyboard;```
 
-##Use Public Lists
+##Get Key States
+
+```Input``` base class has several **Methods** that check keyboard states: Pressed, Down, and Released.
+
+| Method | Description |
+| --- | --- |
+| IsKeyDown (Keys) | Checks if a specified key is currently being pressed down. |
+| IsKeyPressed(Keys) | Checks if a specified key was pressed in the last frame. |
+| IsKeyReleased(Keys) | Checks if a specified key was released in the last frame. |
+
+> [!Note] Xenko API currently does not support retrieving interpreted keys,
+> such as special characters and capital letters.
+
+##Get Key Events
 
 Using inbuilt key events you can identify key status (_Pressed/Released/Down_) and perform the required actions. You can adjust your **Game's Keyboard Controls** with the following public lists:
 
@@ -36,19 +49,6 @@ The ``KeyEvent`` has two parameters:
     * Released: A key has been released.
 
 > [!Note] If you handle **Keyboard Input** with **Public Lists**, you have to check the states of all buttons at every update.
-
-##Use Methods of the Input Class
-
-```Input``` base class has several **Methods** that check keyboard states: Pressed, Down, and Released.
-
-| Method | Description |
-| --- | --- |
-| IsKeyDown (Keys) | Checks if a specified key is currently being pressed down. |
-| IsKeyPressed(Keys) | Checks if a specified key was pressed in the last frame. |
-| IsKeyReleased(Keys) | Checks if a specified key was released in the last frame. |
-
-> [!Note] Xenko API currently does not support retrieving interpreted keys,
-> such as special characters and capital letters.
 
 ##Code Sample
 
