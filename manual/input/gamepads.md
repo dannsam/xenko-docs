@@ -10,13 +10,13 @@ Each **Gamepad** brand has unique buttons and features. Therefore, it's importan
 
 ##Check Gamepad Availability
 
-Before you can handle gamepad input, it's important to check, whether a gamepad is available in the system.
+Before you can handle gamepad input, check whether a gamepad is available in the system:
 
-```HasGamePad``` property of the ```Input``` base class returns a Boolean (true/false) value to indicate gamepad availability.
+1. ```HasGamePad``` property of the ```Input``` base class returns a Boolean (true/false) value that indicates gamepad availability.
 
-```GamePadCount``` property of the ```Input``` base class gets the number of gamepads connected to the system.
+2. ```GamePadCount``` property of the ```Input``` base class gets the number of gamepads connected to the system.
 
-```IsConnected``` field of the ```GetGamePad(Int32)``` method of the ```Input``` base class is Boolean (true/false) value that indicates if a specific gamepad is connected.
+3. ```IsConnected``` field of the ```GetGamePad(Int32)``` method of the ```Input``` base class is Boolean (true/false) value that indicates if a specific gamepad is connected.
 
 > [!Note] 
 > Currently Xenko does not support gamepad plugged at run-time. This feature will be added in the future releases.
