@@ -86,4 +86,8 @@ namespace MyGame
     }
 ```
 
-Now, you know how to handle **Keyboard Input** in your game. For information on how to handle other input devices, see [Input overview page](index.md).
+<div class="doc-relatedtopics">
+* [Gamepads](gamepads.md)
+* [Mouse](mouse.md)
+* [Virtual Keys](virtual-keys.md)
+</div>
