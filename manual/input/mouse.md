@@ -1,7 +1,7 @@
 #Mouse
 
 <span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level Programmer</span>
+<span class="label label-doc-audience">Programmer</span>
 
 **Mouse** is a common input device that triggers various actions in desktop games.
 **Xenko Game Studio** handles mouse input by implementing **Methods** and **Properties** of the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
