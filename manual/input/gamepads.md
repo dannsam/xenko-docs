@@ -69,10 +69,10 @@ Use the following fields of the [Input.GetGamePad(Int32)](xref="SiliconStudio.Xe
 
 | Field | Description |
 |----|----|
-| LeftThumb | Left thumb stick x-axis/y-axis value in the range [-1.0f, 1.0f] for both axis. |
-| LeftTrigger | Left trigger analog control value in the range [0, 1.0f] for a single axis. |
-| RightThumb | Right thumb stick x-axis/y-axis value in the range [-1.0f, 1.0f] for both axis. |
-| RightTrigger | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
+| [LeftThumb](xref="SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | Left thumb stick x-axis/y-axis value in the range [-1.0f, 1.0f] for both axis. |
+| [LeftTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axis. |
+| [RightThumb](xref="SiliconStudio.Xenko.Input.GamePadState.RightThumb) | Right thumb stick x-axis/y-axis value in the range [-1.0f, 1.0f] for both axis. |
+| [RightTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
 
 ### Gamepad Vibration
 [Input.SetGamePadVibration(Int32, Single, Single)](xref="SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration.System.Int32.System.Single.System.Single") method sets vibration states for gamepads.
