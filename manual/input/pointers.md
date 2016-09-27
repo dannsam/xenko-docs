@@ -137,7 +137,7 @@ Here is a sample script that tracks pointer movement along the screen and prints
 ```
 
 <div class="doc-relatedtopics">
-* [Gestures](Gestures.md)
+* [Gestures](gestures.md)
 * [Mouse](mouse.md)
 * [Virtual Keys](virtual-keys.md)
 </div>
