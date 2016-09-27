@@ -1,7 +1,7 @@
 #Pointers
 
 <span class="label label-doc-level">Beginner</span>
-<span class="label label-doc-audience">Level Programmer</span>
+<span class="label label-doc-audience">Programmer</span>
 
 **Pointers** are points on the device screen corresponding to **finger touches**:
 * On desktop platforms, left-mouse-button clicks create pointers. For more information on mouse controls, see [Mouse Input](mouse.md).
