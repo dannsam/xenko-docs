@@ -1,7 +1,7 @@
 #Sensors
 
 <span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Level Programmer</span>
+<span class="label label-doc-audience">Programmer</span>
 
 Xenko supports various sensors that you can use as **Input Devices** in your games. Sensors provide functionality that is extensively used in racing, arcade, and many other mobile games.
 Use [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class to access sensors:
