@@ -142,4 +142,9 @@ namespace MyGame
 }
 ```
 
-Now, you know how to handle **Mouse Input** in your game. For information on how to handle other input devices, see [Input overview page](index.md).
+<div class="doc-relatedtopics">
+* [Gamepads](gamepads.md)
+* [Keyboard](keyboard.md)
+* [Pointers](pointers.md)
+* [Virtual Keys](virtual-keys.md)
+</div>
