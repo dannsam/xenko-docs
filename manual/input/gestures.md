@@ -31,7 +31,7 @@ of the gesture event.
 You can restrict *Drag* and *Flick* gestures to *vertical* and *horizontal* shapes.
 In that case, the gesture event is triggered only if the gesture is close enough to the indicated shape.
 
-For more information on gesture shapes see [API reference](http://doc.xenko.com/latest/api/SiliconStudio.Xenko.Input.GestureShape.html#SiliconStudio_Xenko_Input_GestureShape).
+For more information on gesture shapes see [API reference]((xref="SiliconStudio.Xenko.Input.GestureShape).
 
 ##Recognize Gestures
 
