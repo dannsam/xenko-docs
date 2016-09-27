@@ -136,4 +136,8 @@ Here is a sample script that tracks pointer movement along the screen and prints
         }
 ```
 
-Now, you know how to handle **Pointers Input** in your game. For information on how to handle other input devices, see [Input overview page](index.md).
+<div class="doc-relatedtopics">
+* [Gestures](Gestures.md)
+* [Mouse](mouse.md)
+* [Virtual Keys](virtual-keys.md)
+</div>
