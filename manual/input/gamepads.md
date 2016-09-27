@@ -93,28 +93,28 @@ public class TestScript : SyncScript
 {
 	public override void Update()
 	{   
-		//Check if a gamepad is available
+		//Check if a gamepad is available.
 		if (Input.HasGamePad)
 		{
-			//Get the number of gamepad plugged
+			//Get a number of plugged-in gamepads.
 			int gamepadCount = Input.GamePadCount;
 			
-			// Check the status of each gamepad
+			// Check each gamepad's status.
 			for (int i = 0; i < gamepadCount; i++)
 			{
 				//Get analog sticks' position (Thumbs)
 				Vector2 speed = Input.GetGamePad(i).LeftThumb;
 				Vector2 direction = Input.GetGamePad(i).RightThumb;
 
-				//Get status of digital buttons
+				//Get digital buttons's status.
 				if (Input.IsPadButtonDown(i, GamePadButton.X))
 				{
-					// Do repetitive action here (for example: shoot)
+					// Perform a repetitive action (for example: shoot).
 				}
 				if (Input.IsPadButtonPressed(i, GamePadButton.A))
 				{
-					// Do one-time action here (for example: use med-kit). 
-					// This is triggered once only even if player holds that button down.
+					// Perform a one-time action (for example: use med-kit). 
+					// The action is triggered only once, even if player holds the button down.
 				}
 			}
 		}
