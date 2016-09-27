@@ -141,18 +141,23 @@ You can modify ``Input.GestureConfigTap.RequiredNumberOfTaps`` field to manage t
 ###Activate/Desactivate Gestures Recognitions
 
 ```cs
-var singleTapConfig = new GestureConfigTap(); // create the configuration of the gesture you want to recognize
-Input.ActivatedGestures.Add(singleTapConfig); // start the tap gesture recognition
+// Create the configuration of a gesture you want to recognize.
+var singleTapConfig = new GestureConfigTap();
+
+// Start tap gesture recognition.
+Input.ActivatedGestures.Add(singleTapConfig);
  
-var doubleTapConfig = new GestureConfigTap(2, 1); // create the configuration of the gesture you want to recognize
-Input.ActivatedGestures.Add(doubleTapConfig ); // start the double tap gesture recognition
+// Create the configuration of the gesture you want to recognize.
+var doubleTapConfig = new GestureConfigTap(2, 1);
+
+// Start double tap gesture recognition.
+Input.ActivatedGestures.Add(doubleTapConfig );
  
- // ...
+// Stop tap gesture recognition.
+Input.ActivatedGestures.Remove(singleTapConfig);
  
-Input.ActivatedGestures.Remove(singleTapConfig); // stop the tap gesture recognition
- 
-// ...
-Input.ActivatedGestures.Clear(); // stop all remaining gesture recognitions
+// Stop all gesture recognitions.
+Input.ActivatedGestures.Clear(); 
 ```
 
 ###Set Gesture Configuration
@@ -163,9 +168,14 @@ Other parameters correspond to the fields that we don't recommend to modify to k
 Yet, those fields can, too, be modified by accessing the corresponding properties.
 
 ```cs
-var singleTapConfig = new GestureConfigTap(); // default config for the gesture.
-var doubleTapConfig = new GestureConfigTap(2, 2); // personalize the gesture config by using the dedicated constructor.
-var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero }; // personalize the gesture config by directly accessing the desired property (be sure you know, what you are doing, as this action may break the input system coherency in some cases).
+// Default gesture config.
+var singleTapConfig = new GestureConfigTap();
+
+// Personalize gesture config by using the dedicated constructor.
+var doubleTapConfig = new GestureConfigTap(2, 2);
+
+// Personalize gesture config by directly accessing the desired property (be sure you know, what you are doing, as this action may break the input system coherency in some cases).
+var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero };
 ```
  
 
@@ -186,14 +196,17 @@ Use the ``Input.GestureEvent.Type`` field to identity the gesture type and then 
 ```cs
 foreach( var gestureEvent in Input.GestureEvents)
 {
-   	if (gestureEvent.Type != GestureType.Tap) // determine if the event is from a tap gesture
+   	// Determine if the event is from a tap gesture
+	if (gestureEvent.Type != GestureType.Tap)
 		continue;
    
-	GestureEventTap  tapEvent = (GestureEventTap) gestureEvent; // cast the specific tap event class
-    log.Info("Tap position: {0}.", tapEvent.TapPosition); // access tap event specific field
+	// Cast a specific tap event class.
+	GestureEventTap  tapEvent = (GestureEventTap) gestureEvent;
+	
+    // Access tap-event-specific field.
+    log.Info("Tap position: {0}.", tapEvent.TapPosition);
 }
-```
- 
+``` 
 
 Use ``Input.GestureEvent.State`` field to learn gesture event state.
 
