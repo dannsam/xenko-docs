@@ -53,24 +53,13 @@ The ``KeyEvent`` has two parameters:
 ##Code Sample
 
 ```
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Xenko.Engine;
-
-namespace MyGame
-{
     public class KeyboardEventsScript : SyncScript
     {
-        //declared public member variables and properties will show in the game studio
+        //Declared public member variables and properties will show in the game studio.
 
         public override void Update()
         {
-            //do something every new update
+            //Perform an action in every update.
             if (Game.IsRunning)
             {
                 if (Input.IsKeyDown(Keys.Left))
