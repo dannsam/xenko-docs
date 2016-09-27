@@ -16,7 +16,7 @@ Before you can handle gamepad input, check whether a gamepad is available in the
 
 2. [Input.GamePadCount](xref="SiliconStudio.Xenko.Input.InputManager.GamePadCount") property gets the number of gamepads connected to the system.
 
-3. ```IsConnected``` field of the ```GetGamePad(Int32)``` method of the ```Input``` base class is Boolean (true/false) value that indicates if a specific gamepad is connected.
+3. [Input.GamePadState.IsConnected](xref="SiliconStudio.Xenko.Input.GamePadState.IsConnected") field is a Boolean (true/false) value that indicates if a specific gamepad is connected.
 
 > [!Note] 
 > Currently Xenko does not support gamepad plugged at run-time. This feature will be added in the future releases.
@@ -46,26 +46,26 @@ For **Digital buttons** as well as for instances when a player **Presses Thumb b
 
 | Method | Functionality |
 |----|----|
-| IsPadButtonDown(Int32, GamePadButton) | Checks whether the specified gamepad button is being pressed down. |
-| IsPadButtonPressed(Int32, GamePadButton) | Checks whether the specified gamepad button was pressed since the previous update. |
-| IsPadButtonReleased(Int32, GamePadButton) | Checks whether the specified gamepad button was released since the previous update. |
+| [IsPadButtonDown(Int32, GamePadButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonDown.System.Int32") | Checks whether the specified gamepad button is being pressed down. |
+| [IsPadButtonPressed(Int32, GamePadButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonPressed.System.Int32") | Checks whether the specified gamepad button was pressed since the previous update. |
+| [IsPadButtonReleased(Int32, GamePadButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonReleased.System.Int32") | Checks whether the specified gamepad button was released since the previous update. |
 
 _Index (Int32)_: Specifies a gamepad you want to check.
 
 _GamePadButton_: Specifies a button you want to check.
 
-You can also get information on digital buttons with the ``Buttons`` field of the ```GetGamePad(Int32)``` method of the ```Input``` base class.
+You can also get information on digital buttons with the [GamePadState.Buttons](xref="SiliconStudio.Xenko.Input.GamePadState.Buttons") field.
 
 > [!Note] ``Buttons`` field is a bitmask that uses binary system.
 > Depending on the bitmask value you can determine which buttons are _Up_ or _Down_.
 
 ### Analog Buttons
 
-``GetGamePad(Int32)`` method of the Input base class handles **Analog Input** from **Triggers** and **Thumbs' Rotations**.
+[Input.GetGamePad(Int32)](xref="SiliconStudio.Xenko.Input.InputManager.GetGamePad.System.Int32") method handles **Analog Input** from **Triggers** and **Thumbs' Rotations**.
 
 _Index (Int32)_: Specifies a gamepad you want to check.
 
-Use the following fields of the ```GetGamePad(Int32)``` method to handle **Input** from a specific **Analog** button:
+Use the following fields of the [Input.GetGamePad(Int32)](xref="SiliconStudio.Xenko.Input.InputManager.GetGamePad.System.Int32") method to handle **Input** from a specific **Analog** button:
 
 | Field | Description |
 |----|----|
@@ -75,7 +75,8 @@ Use the following fields of the ```GetGamePad(Int32)``` method to handle **Input
 | RightTrigger | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
 
 ### Gamepad Vibration
-```SetGamePadVibration(Int32, Single, Single)``` method of the Input base class sets vibration states for gamepads.
+[Input.SetGamePadVibration(Int32, Single, Single)](xref="SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration.System.Int32.System.Single.System.Single") method sets vibration states for gamepads.
+``` method of the Input base class sets vibration states for gamepads.
 
 > [!Note] Currently, you cannot control gamepad vibration in Xenko.
 > This feature will be added in the future releases.
