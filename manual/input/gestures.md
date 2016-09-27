@@ -1,7 +1,7 @@
 # Gestures
 
 <span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Level Programmer</span>
+<span class="label label-doc-audience">Programmer</span>
 
 Gestures are special patterns of [Pointers](pointers.md). The system is able to recognize these patterns and trigger certain events that correspond to these patterns.
 For instance, in a strategy game you can drag and drop a unit to the battlefield with a **Drag** gesture.
