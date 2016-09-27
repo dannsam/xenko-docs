@@ -11,7 +11,7 @@ For instance, in a strategy game you can drag and drop a unit to the battlefield
 
 ##Learn Gestures
 
-Gestures can be single- or multi-finger. Access gestures via the ``GestureConfig`` classes. Each gesture has its own associated config class.
+Gestures can be single- or multi-finger. Access gestures via the [GestureConfig](xref="SiliconStudio.Xenko.Input.GestureConfig") classes. Each gesture has its own associated config class.
 
 Currently, Xenko supports the following gesture types:
 
@@ -20,8 +20,7 @@ Currently, Xenko supports the following gesture types:
 * Continuous gestures (_Drag_, _Composite_) trigger a series of events every time an end-user changes the direction of the gesture.
 This way, a gesture can trigger certain complex actions in mobile games.
 
-You can get the current state of gesture (_Began_, _Changed_, _Ended_, _Occurred_) by in the ``Input.GestureEvent.State`` field
-of the gesture event.
+You can get the current state of gesture (_Began_, _Changed_, _Ended_, _Occurred_) by in the [Input.GestureEvent.State](xref="SiliconStudio.Xenko.Input.GestureEvent.State") field of the gesture event.
 
 > [!Note] _Discrete_ gesture always has a state **Occurred**.
 
@@ -178,9 +177,8 @@ var doubleTapConfig = new GestureConfigTap(2, 2);
 // Be sure you know, what you are doing, as in some cases this action may break the input system coherency.
 var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero };
 ```
- 
 
-You can access the recognized gestures via the ``Input.GestureEvents`` collection.
+You can access the recognized gestures via the [Input.GestureEvents](xref="SiliconStudio.Xenko.Input.GestureEvents") collection.
 The collection is automatically cleared every update.
 
 **Code:** Access Gesture events
@@ -190,7 +188,7 @@ var currentFrameGestureEvents = Input.GestureEvents;
 ```
 
 
-Use the ``Input.GestureEvent.Type`` field to identity the gesture type and then cast it to the appropriate event type to have extra info about the event. 
+Use the [Input.GestureEvent.Type](xref="SiliconStudio.Xenko.Input.GestureEvent.Type") field to identity the gesture type and then cast it to the appropriate event type to have extra info about the event. 
 
 **Code:** Identify the gesture type
 
@@ -209,7 +207,7 @@ foreach( var gestureEvent in Input.GestureEvents)
 }
 ``` 
 
-Use ``Input.GestureEvent.State`` field to learn gesture event state.
+Use [Input.GestureEvent.State](xref="SiliconStudio.Xenko.Input.GestureEvent.State") field to learn gesture event state.
 
 **Code:** Identify the event state
 
