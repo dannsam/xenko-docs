@@ -78,7 +78,7 @@ You can assign mouse buttons to trigger various actions in a game. For example, 
 | IsMouseButtonPressed (MouseButton) | Checks if a specified mouse button was pressed in the last update. For example, ```IsMouseButtonPressed(MouseButton.Left)``` event triggers an action, associated with the left mouse button. |
 | IsMouseButtonReleased (MouseButton) | Checks if a specified mouse button was released in the last update. For example, ```IsMouseButtonReleased(MouseButton.Right)``` event triggers an action, associated with the right mouse button. |
 
-###Mouse Wheel Delta
+###Mouse Wheel Delta 
 
 You can assign mouse wheel to control various actions in a game. This way, when mouse wheel position changes, it triggers certain events, e.g. switches weapons, moves characters, zooms in, etc.
 
