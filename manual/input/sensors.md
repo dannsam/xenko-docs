@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Level Programmer</span>
 
 Xenko supports various sensors that you can use as **Input Devices** in your games. Sensors provide functionality that is extensively used in racing, arcade, and many other mobile games.
-Use ```Input``` base class to access sensors:
+Use [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class to access sensors:
 
 * Check if a particular sensor is supported by Xenko.
 * Disable a particular sensor.
@@ -12,15 +12,15 @@ Use ```Input``` base class to access sensors:
 
 ##Check Availability
 
-Xenko has a separate class for each supported sensor type. All sensor classes are inherited from the ``SensorBase`` class.
+Xenko has a separate class for each supported sensor type. All sensor classes are inherited from the [SensorBase](xref="SiliconStudio.Xenko.Input.SensorBase") base class.
 
 Before handling input from any sensor, it's important to check if it is available in the system.
-You can do that with the ```SensorBase``` base class and its properties:
+You can do that with the [SensorBase](xref="SiliconStudio.Xenko.Input.SensorBase") base class and its properties:
 
 | Property | Description |
 |----|----|
-| IsEnabled | Gets or sets the sensor enabled state. |
-| IsSupported | Gets a Boolean value (true/false) if the sensor is available on the current device. |
+| [IsEnabled](xref="SiliconStudio.Xenko.Input.SensorBase.IsEnabled") | Gets or sets the sensor enabled state. |
+| [IsSupported](xref="SiliconStudio.Xenko.Input.SensorBase.IsSupported") | Gets a Boolean value (true/false) if the sensor is available on the current device. |
 
 **Syntax**: ```bool IsEnabled = SensorBase. Orientation Sensor; ```
 
@@ -41,22 +41,21 @@ _Orientation sensor_
 
 | Property        | Description                                     | Declaration                                 |
 |-----------------|-------------------------------------------------|---------------------------------------------|
-| Roll            | Rotation around the Ox axis.                    | ```public float Roll { get; }```            |
-| Pitch           | Rotation around the Oy axis.                    | ```public float Pitch { get; }```           |
-| Yaw             | Rotation around the Oz axis.                    | ```public float Yaw { get; }```             |
-| Rotation Matrix | Current rotation of the device.                 | ```public Matrix RotationMatrix { get; }``` |
-| Quaternion      | Current orientation and rotation of the device. | ```public Quaternion Quaternion { get; }``` |
+| [Roll](xref="SiliconStudio.Xenko.Input.OrientationSensor.Roll") | Rotation around the Ox axis. | ```public float Roll { get; }``` |
+| [Pitch](xref="SiliconStudio.Xenko.Input.OrientationSensor.Pitch")           | Rotation around the Oy axis.                    | ```public float Pitch { get; }```           |
+| [Yaw](xref="SiliconStudio.Xenko.Input.OrientationSensor.Yaw")             | Rotation around the Oz axis.                    | ```public float Yaw { get; }``` |
+| [Rotation Matrix](xref="SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix") | Current rotation of the device.  | ```public Matrix RotationMatrix { get; }``` |
+| [Quaternion](xref="SiliconStudio.Xenko.Input.OrientationSensor.Quaternion") | Current orientation and rotation of the device. |  ```public Quaternion Quaternion { get; }``` |
 
 The following is a sample code that has all the properties of the ```Orientation Sensor``` class:
 
 ```
   var orientation = Input.Orientation;
-                var pitch = orientation.Pitch;
-                var quaternion = orientation.Quaternion;
-                var roll = orientation.Roll;
-                var rotationMatrix = orientation.RotationMatrix;
-                var yaw = orientation.Yaw;
-
+  var pitch = orientation.Pitch;
+  var quaternion = orientation.Quaternion;
+  var roll = orientation.Roll;
+  var rotationMatrix = orientation.RotationMatrix;
+  var yaw = orientation.Yaw;
 ```
 
 ##Use Motion Sensors
@@ -84,7 +83,7 @@ The following image displays the Accelerometer sensor for various devices.
 
 _Accelerometer sensor_
 
-```AccelerometerSensor``` class has the **Acceleration** property that checks current acceleration applied on the device (m/s2).
+[AccelerometerSensor.Acceleration](xref="SiliconStudio.Xenko.Input.AccelerometerSensor.Acceleration") property checks current acceleration applied on the device (meters/second squared).
 
 As example, suppose you put device on a flat table, and then move it:
 
@@ -107,15 +106,13 @@ var acceleration = accelerometer.Acceleration;
 
 //to disable the Accelerometer on current device
 accelerometer.IsEnabled = false;
-
-
 ```
 
 ###Use Gravity Sensor
 
-```GravitySensor``` class measures the gravity force applied on a device.
+[GravitySensor](xref="SiliconStudio.Xenko.Input.GravitySensor") class measures the gravity force applied on a device.
 
-The gravity sensor gives a three-dimensional vector indicating the direction and magnitude of gravity (m/s2).
+The gravity sensor gives a three-dimensional vector indicating the direction and magnitude of gravity (meters/second squared).
 The following code shows you how to get an instance of the gravity sensor:
 
 ```
@@ -126,10 +123,10 @@ The following code shows you how to get an instance of the gravity sensor:
 ###Use User Acceleration Sensor
 **User Acceleration Sensor** sensor is similar to Accelerometer, but it measures the acceleration applied only by a user (without gravitational acceleration).
 
-In Xenko, the ```UserAccelerationSensor``` class represents a user acceleration sensor.
+In Xenko, the [UserAccelerationSensor](xref="SiliconStudio.Xenko.Input.UserAccelerationSensor") class represents a user acceleration sensor.
 It measures the acceleration applied by a user (no gravity) on the device.
 
-You can get the ```UserAccelerationSensor``` by the following code:
+You can get the [UserAccelerationSensor](xref="SiliconStudio.Xenko.Input.UserAccelerationSensor") by the following code:
 
 ```
 var userAccelerationSensor = Input.UserAcceleration;                        
@@ -147,9 +144,9 @@ The following image displays the compass sensor of a smartphone.
 
 _Compass_
 
-``CompassSensor`` class handles input from the **Compass sensor**. It measures the angle between the device's top and the North Pole.
+[CompassSensor](xref="SiliconStudio.Xenko.Input.CompassSensor") class handles input from the **Compass sensor**. It measures the angle between the device's top and the North Pole.
 
-``Heading`` property of the ``CompassSensor`` class gets the angle between the top of the device and the North (in radian).
+[CompassSensor.Heading](xref="SiliconStudio.Xenko.Input.CompassSensor.Heading") property gets the angle between the top of the device and the North (in radian).
 
 Declaration: ``public float Heading { get; }``
 
@@ -179,7 +176,7 @@ _Gyroscope sensor_
 | Gyroscope | Measures the rotational velocity of the device. |
 
 Similar to the **Accelerometer**, a Gyroscope provides the current rotation speed of the device along the X, Y, or Z axes.
-You can get this information using ```RotationRate``` property of the ```GyroscopeSensor``` class.
+You can get this information using [GyroscopeSensor.RotationRate](xref="SiliconStudio.Xenko.Input.GyroscopeSensor.RotationRate") propertys.
 
 **Gyroscope** works with **Accelerometer** to detect the rotation of the device. Using Gyroscope, you can achieve auto-rotation of the screen when the user rotates the device.
 
