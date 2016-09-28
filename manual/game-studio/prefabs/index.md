@@ -1,58 +1,29 @@
-#Use Prefabs
+# Introduction to using Prefabs
 
+<div class="doc-incomplete"/>
 <span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Programmer</span>
-<span class="label label-doc-audience">Designer</span>
 
-**Prefabs** are groups of **Entities** that help you create identical elements in a game.
-Prefabs are ideal for things like scenery and props.
+Prefabs are essentially collections of various kinds of Entities that can be re-used in your project, and need a single point where they can be configured and maintained. Prefabs are ideal to use for things like scenery and props.
 
-You can combine any **Entities** in a **Prefab**: be it a group of four simple identical trees or a complex combination of sprites, models, cameras and any other **Entities**.
-**Prefabs** help you easily scale game levels and re-use same **Prefabs** in different levels.
+## Prefabs in the Game Studio
 
-##Use Prefabs from Game Studio
+At design time, since all instances of a prefab are based on the original prefab, changing any property or content of the prefab will cause all instances of this prefab to be altered.
 
-###Create Prefabs
+You can create an empty Prefab with "Add Asset" in the Asset View:
 
-You can create **Prefabs** in two ways:
+![media/create-new-prefab.png](media/create-new-prefab.png)
 
-1) Create an **Empty Prefab** with **Add Asset** button in **Asset View**:
+Alternatively, you can create one from a group of entities in a scene:
 
-![Create New Prefab](media/create-new-prefab.png)
+![media/create-prefab-from-selection.png](media/create-prefab-from-selection.png)
 
-_Create New Prefab_
+Once you've created a Prefab, you can easily drag and drop the Prefab from the Asset view into the Scene editor to instantiate it, like any other Asset.
 
-2) Select a group of **Entities** in **Scene Editor** and create a **Prefab**:
+Double-clicking on the Prefab will open another Scene editor with its content, allowing you to edit it. Any changes you do will be reflected on their instances in other scenes.
 
-![Create Prefab from Selection](media/create-prefab-from-selection.png)
+## Using Prefabs from script
 
-_Create Prefab from Selection_
-
-**Prefabs** are essentially **Assets**.
-So just like any other asset, you can instantiate a **Prefab** by dragging and dropping it from the **Asset View** to the **Scene Editor**.
-
-Here's how **Prefabs** help you create a whole army of knights:
-
-![Use prefabs](media/use-prefabs-compressed.gif)
-
-_Use prefabs_
-
-###Edit Prefabs
-
-In **Asset View** Double-click on the **Prefab** to edit it in the Editor.
-**Prefab Editor** is very similar to **Scene Editor**. You can add/delete **Entities** to/from a **Prefab**.
-You can also add and modify various components of these **Entities**: scripts, materials, models, animations, etc.
-
-For more information on using **Entities** and their components, see [Populate a Scene](get-started/populate-a-scene.md).
-
-> [!Note] When you modify a **Prefab**, all its instances change accordingly in the current **Scene** as well as in **all other scenes** where the prefab is used.
-> Yet, you can personalize each instance of the **Prefab** individually, with out changing the Prefab itself.
-
-##Use Prefabs from Scripts
-
-In order to use **Prefabs** in runtime, you need to instantiate them.
-Suppose you have a **Prefab** called _'MyBulletPrefab'_. It is in the root of your project, and you want to create an instance of that Prefab in your scene.
-Use the following code sample:
+In order to use prefabs at runtime, you need to intantiate them. Let's assume we have a Prefab called 'MyBulletPrefab' located in the root of our project, and we want to create an instance in our scene. The code snippet below shows how this is done.
 
 ````cs
 private void InstantiateBulletPrefab()
@@ -71,8 +42,4 @@ private void InstantiateBulletPrefab()
 }
 ````
 
-Sometimes you need to change certain properties of a **Prefab** in runtime.
-
-Suppose you have a _ChangeTreeColor_ script. At certain point in the game, this script changes tree color from green to red in a forest prefab.
-These changes won't affect **Existing Instances** of the **Prefab** that were instantiated before the _ChangeTreeColor_ script was introduced.
-Yet, all **New Instances** of the forest prefab **will be red**.
+At runtime, any changes done to the original prefab (`myBulletPrefab` in this example) won't be reflected on the already existing instances of this prefab (`bullet` in this example). However, subsequent calls to @'SiliconStudio.Xenko.Engine.PrefabExtensions.Instantiate(SiliconStudio.Xenko.Engine.Prefab)' will include the new changes.
