@@ -19,8 +19,8 @@ You can do that with the [SensorBase](xref="SiliconStudio.Xenko.Input.SensorBase
 
 | Property | Description |
 |----|----|
-| [IsEnabled](xref="SiliconStudio.Xenko.Input.SensorBase.IsEnabled") | Gets or sets the sensor enabled state. |
-| [IsSupported](xref="SiliconStudio.Xenko.Input.SensorBase.IsSupported") | Gets a Boolean value (true/false) if the sensor is available on the current device. |
+| [SensorBase.IsEnabled](xref="SiliconStudio.Xenko.Input.SensorBase.IsEnabled") | Gets or sets the sensor enabled state. |
+| [SensorBase.IsSupported](xref="SiliconStudio.Xenko.Input.SensorBase.IsSupported") | Gets a Boolean value (true/false) if the sensor is available on the current device. |
 
 **Syntax**: ```bool IsEnabled = SensorBase. Orientation Sensor; ```
 
@@ -71,8 +71,6 @@ The following image displays **Accelerometer**, **UserAcceleration**, and **Grav
 
 ![Motion Sensors](media/sensor-overview-accelerometer-acceleration-gravity.png)
 
-_Accelerometer, User Acceleration, and Gravity sensors_
-
 ###Use Accelerometer
 
 **Accelerometer** measures acceleration applied on the device, including gravity and user acceleration.
@@ -80,8 +78,6 @@ _Accelerometer, User Acceleration, and Gravity sensors_
 The following image displays the Accelerometer sensor for various devices.
 
 ![ Accelerometer](media/sensor-overview-accelerometer-sensor.png)
-
-_Accelerometer sensor_
 
 [AccelerometerSensor.Acceleration](xref="SiliconStudio.Xenko.Input.AccelerometerSensor.Acceleration") property checks current acceleration applied on the device (meters/second squared).
 
@@ -142,8 +138,6 @@ The following image displays the compass sensor of a smartphone.
 
 ![Compass](media/sensor-overview-compasss.png)
 
-_Compass_
-
 [CompassSensor](xref="SiliconStudio.Xenko.Input.CompassSensor") class handles input from the **Compass sensor**. It measures the angle between the device's top and the North Pole.
 
 [CompassSensor.Heading](xref="SiliconStudio.Xenko.Input.CompassSensor.Heading") property gets the angle between the top of the device and the North (in radian).
@@ -165,8 +159,6 @@ It also allows to switch device screen output from portrait to landscape and als
 The following image displays the Gyroscope sensor of a smartphone.
 
 ![Gyroscope](media/sensor-overview-gyroscope-sensor.png)
-
-_Gyroscope sensor_
 
 **Gyroscope** is similar to **Accelerometer**:
 

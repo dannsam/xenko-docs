@@ -15,6 +15,7 @@ Let's see the difference between using [Input](xref="SiliconStudio.Xenko.Input.I
 | [Input](xref="SiliconStudio.Xenko.Input.InputManager") | Desktop only | For desktop games, you usually handle input with multiple mouse buttons. Therefore, use properties and methods of the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class. |
 | [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") | Cross-platform | For mobile games, you usually simulate pointers with just the left mouse button. Therefore, you can treat mouse input entirely like Pointers, no need to create separate mouse-specific controls. See [Pointers Overview Page](pointers.md) for details. |
 
+See [Input Overview Page](index.md) to understand the difference between these options.
 
 ##Check Mouse Availability
 Before you can handle mouse input with either [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class or [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") class, it's important to check, whether a mouse is available in the system.
@@ -127,5 +128,5 @@ You can assign mouse wheel to control various actions in a game. This way, when 
 * [Gamepads](gamepads.md)
 * [Keyboard](keyboard.md)
 * [Pointers](pointers.md)
-* [Virtual Keys](virtual-keys.md)
+* [Virtual Buttons](virtual-buttons.md)
 </div>

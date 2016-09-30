@@ -230,5 +230,5 @@ default:
 
 <div class="doc-relatedtopics">
 * [Pointers](pointers.md)
-* [Virtual Keys](virtual-keys.md)
+* [Virtual Buttons](virtual-buttons.md)
 </div>

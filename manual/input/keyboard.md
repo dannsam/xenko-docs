@@ -3,7 +3,10 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Keyboard** is a common input device, which triggers various actions in desktop games. **Xenko Game Studio** handles keyboard input by implementing **Methods** and **Properties** of the [Input](xref="SiliconStudio.Xenko.Input.InputManager")  base class and the [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") struct.
+**Keyboard** is a common input device, which triggers various actions in desktop games.
+**Xenko Game Studio** handles keyboard input by implementing **Methods** and **Properties** of the [Input](xref="SiliconStudio.Xenko.Input.InputManager")  base class and the [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") struct.
+
+See [Input Overview Page](index.md) to understand the difference between these options.
 
 ##Check Keyboard Availability
 
@@ -30,7 +33,7 @@ Before you can handle keyboard input with either [Input](xref="SiliconStudio.Xen
 
 ##Get Key Events
 
-Using inbuilt key events you can identify key status (_Pressed/Released/Down_) and perform the required actions. You can adjust your **Game's Keyboard Controls** with the following public lists:
+With the in-built **Key Events** you can identify **Key Status** (_Pressed/Down/Released_) and perform the required actions. You can adjust your **Game's Keyboard Controls** with the following public lists:
 
 | Public List | Description |
 | --- | --- |
@@ -76,5 +79,5 @@ Every [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") has two parameters:
 <div class="doc-relatedtopics">
 * [Gamepads](gamepads.md)
 * [Mouse](mouse.md)
-* [Virtual Keys](virtual-keys.md)
+* [Virtual Buttons](virtual-buttons.md)
 </div>

@@ -27,8 +27,6 @@ Below is an image of the Xbox Elite Wireless Controller. Let's use it to study h
 
 ![Xbox Gamepad](media/input-gamepad-standard-gamepad.png)
 
-_Xbox Gamepad_
-
 1. Most gamepad controls are **Digital** buttons. They have only three states: _Pressed_, _Down_, _Released_.
 2. Right and Left **Triggers** (**C** & **D**) are **Analog** buttons. A player can pull a gamepad Trigger to a different degree. Therefore, you have to get the precise pull-degree of the **Triggers** at every update.
 3. Right and Left **Thumbs** of **Thumb Sticks** (**A** & **B**) combine functionality of **Analog** and **Digital** buttons. Here's how you can handle **Input** from **Thumbs**:
@@ -124,5 +122,5 @@ public class TestScript : SyncScript
 
 <div class="doc-relatedtopics">
 * [Keyboard](keyboard.md)
-* [Virtual Keys](virtual-keys.md)
+* [Virtual Buttons](virtual-buttons.md)
 </div>
