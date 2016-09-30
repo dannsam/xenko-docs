@@ -70,7 +70,8 @@ private void InstantiateBulletPrefab()
 }
 ````
 
-Sometimes you need to change certain properties of a **Prefab** in runtime.
+Sometimes you need to change certain properties of a **Prefab** in runtime:
 
-Suppose you have a _ChangeTreeColor_ script. At certain point in the game, this script changes tree color from green to red in a forest prefab.
-These changes won't affect **Existing Instances** of the **Prefab** that were instantiated before the _ChangeTreeColor_ script was introduced. Yet, all **New Instances** of the forest prefab **will be red**.
+1. Suppose you have a _ChangeTreeColor_ script. At certain point in the game, this script changes tree color from green to red in a forest prefab.
+2. These changes won't affect **Existing Instances** of the **Prefab** that were instantiated before the _ChangeTreeColor_ script was introduced.
+3. Yet, all **New Instances** of the forest prefab **will be red**.
