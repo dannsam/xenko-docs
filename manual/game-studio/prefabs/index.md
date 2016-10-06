@@ -4,31 +4,23 @@
 
 #Prefabs
 
+Oftentimes, there are game objects that you want to re-use multiple times, e.g. props and scenery.
+Certainly, you can copy-and-paste such objects. Yet, if you need to modify them later on, you will have to edit each duplicate individually.
+
+More often than not you want to change object's properties once and apply these changes to all its instances.
+That's when **Prefabs** come in handy.
+
 **Prefabs** help you easily manage complex **Models**, multiple **Entities** and even entire game levels.
 **Prefabs** allow you to:
 
 * Combine separate elements of a complex **Model** for easy management.
-* Combine several **Entities** to manage them as a single object and re-use when needed.
+* Combine several **Entities** to manage them as a single object.
 * Create game levels faster and update them on the fly.
 
-With **Prefabs**, you can re-use the same objects on multiple levels of your game and easily update them if required:
-
-1. Suppose you created a **Model** and used it throughout the game.
-2. In later stages of your project, you realize you need to change textures of a certain model.
-3. There is no need to go through the whole game again and change each **Entity** of this **Model** individually.
-4. Simply modify the **Prefab** and all its **Instances** will update accordingly.
-
-## What Is a Prefab?
-**Prefab** is essentially a special **Model** that acts as a container of **Entities**.
-You can add, manage and delete **Prefab Components** without compromising **Entities** you used to create this **Prefab**.
-
-**Prefabs** help you easily scale game levels and re-use complex identical objects in different game levels.
-For instance, here's how **Prefabs** help create a whole army of knights:
+**Prefabs** help you easily scale game levels and re-use complex identical objects.
+Watch how **Prefabs** can help you create a whole army of knights:
 
 ![Use prefabs](media/use-prefabs-compressed.gif)
-
-You can combine any **Entities** in a **Prefab**.
-Be it a group of two simple identical trees or a complex combination of sprites, models, cameras and any other **Entities**.
 
 This section explains the following concepts:
 
