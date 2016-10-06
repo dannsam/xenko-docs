@@ -4,7 +4,7 @@ Sometimes you require similar **Assets** that slightly differ from one another.
 Suppose, you create a simple sports simulator. Players wear nearly identical t-shirts that differ only in color.
 
 You can create one t-shirt **Material**, copy it several times, and then customize each material separately.
-If you decide to change _Core Properties_ of these materials later on, you would have to change each **Material** individually.
+If you decide to change some _Property_ of these materials later on, you would have to change each **Material** individually.
 
 That's when **Archetypes** come in handy.
 An **Archetype** is essentially a **Master Asset** that controls **Core Properties** of the **Derived Assets**.
@@ -21,6 +21,10 @@ Here's how you can use **Archetypes**:
 
 ![Create Derived Asset](media/archetypes-create-derived-asset.png)
 
+In **Asset View**, select the **Derived Asset**.
+Now, go to **Property Grid** to see that this **Asset** has an **Archetype**.
+You can click on its image to locate **Archetype Asset** in **Asset View**.
+
 ## Manage Archetypes
 You can change any property of the **Derived Asset**. If later on you change the same property of an **Archetype**, it won't affect the **Derived Asset**.
 
@@ -36,4 +40,7 @@ Suppose, you do the following actions:
 
 ## Use Archetypes
 
-You can create a whole hierarchy of **Master** and **Derived** assets.
+You can create a whole hierarchy of **Archetypes** and **Derived** assets.
+
+You can derive an **Asset** from **Archetype**, and then derive another **Asset** from that **Derived Asset**.
+This way you can create different layers of **Material Properties** and keep your game consistent with minimum effort.
