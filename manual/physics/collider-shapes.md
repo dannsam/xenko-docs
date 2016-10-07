@@ -27,3 +27,7 @@ The plane collider has 2 properties: a normal, and offset. The normal determines
 ## Sphere
 
 A sphere shaped collider. The size can be adjusted by the 'radius' property.
+
+## Cone
+
+Similar to a Cylinder but tipped... like a cone.
