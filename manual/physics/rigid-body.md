@@ -2,7 +2,7 @@
 
 <div class="doc-incomplete"/>
 
-Rigid body simulation refers to the simulation of physics for objects that do not deform. Rigid body simultation can be used for collision between objects, and for objects that need to respond to incoming collisions.
+Rigid body simulation refers to the simulation of physics for objects that do not deform. Rigid body simulation can be used for collision between objects, and for objects that need to respond to incoming collisions.
 
 **To enable rigid body simulation for a sphere entity:**
 
@@ -24,18 +24,18 @@ Now you've created a Rigidbody for a sphere, the sphere and ground plane are rea
 
 Property              | Description
 ----------------------|---------------------------------------------------------
-Collision group       | Defines to which collision group this entity belongs.
-Can collide with      | Defines with which groups this entity can collide.
-Collision events      | Toggles whether this entity received collision events.
-Can Sleep             | Toggles whether this entity can sleep.
+Collision group       | Defines to which collision group this rigidbody belongs.
+Can collide with      | Defines with which groups this rigidbody can collide.
+Collision events      | Toggles whether this rigidbody received collision events. (this is useful just to increase performance when processing collisions after the simulation, it has no implications in the physics world)
+Can Sleep             | Toggles whether this entity can sleep. (this is useful just to increase performance as bodies will stop under a certain threshold)
 Restitution           | This coefficient defines how much energy remains after a collision for the objects to rebound from one another. Typical values range from 0...1 where 0 means all energy is lost, and 1 means all energy is preserved and the objects will move away from each other at the same speed they collided.
-Friction              | Defines how much surface friction this entity has.
-Rolling Friction      | Defines how much rolling friction this entity has.
+Friction              | Defines how much surface friction this rigidbody has.
+Rolling Friction      | Defines how much rolling friction this rigidbody has.
 Ccd Motion Threshold  | Continuous collision detected velocity threshold - this value indicates at which velocity the Ccd kicks in to prevent errors for objects that are moving very fast.
 Ccd Swept Sphere Radius | Continuous collision detected sphere radius - this is the radius of the bounding sphere containing the position between 2 physics frames.
-Is Trigger            | Toggles whether this entity is a trigger.
-Is Kinematic          | Toggles whether this entity is kinemetic, i.e. interacting with other physics objects.
-Mass                  | Defines the mass of this entity in KG.
+Is Trigger            | Toggles whether this rigidbody is a trigger. (which means it will not have dynamic response anymore as well)
+Is Kinematic          | Toggles whether this rigidbody is kinemetic (which means it is driven by the Transformation component of the entity this rigidbody is contained)
+Mass                  | Defines the mass of this entity. (KG is not correct, the solver uses a non physically correct unit and masses should not have big discrepancies between bodies, a more complex solver is required for KG correctness)
 Linear Damping        | Damping factor for directional forces.
 Angular Damping       | Damping factor for rotational forces.
 Override gravity      | Use custom set gravity vector.
