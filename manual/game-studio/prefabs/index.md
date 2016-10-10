@@ -5,22 +5,33 @@
 #Prefabs
 
 Oftentimes, there are game objects that you want to re-use multiple times, e.g. props and scenery.
-Certainly, you can copy-and-paste such objects. Yet, if you need to modify them later on, you will have to edit each duplicate individually.
+Certainly, you can copy-and-paste such objects.
+Yet, if you need to modify them later on, you will have a hard time editing each duplicate individually.
 
-More often than not you want to change object's properties once and apply these changes to all its instances.
+It's more convenient to change object's properties once and apply these changes to all its instances.
 That's when **Prefabs** come in handy.
 
 **Prefabs** help you easily manage complex **Models**, multiple **Entities** and even entire game levels.
 **Prefabs** allow you to:
 
-* Combine separate elements of a complex **Model** for easy management.
+* Combine elements of multi-component **Models** for easy management.
 * Combine several **Entities** to manage them as a single object.
 * Create game levels faster and update them on the fly.
 
-**Prefabs** help you easily scale game levels and re-use complex identical objects.
+You can combine any **Entities** in a **Prefab**,
+be it a group of two simple identical trees or a combination of sprites, models, and other **Entities**.
+
+**Prefabs** help you easily scale game levels and re-use complex identical objects on multiple game levels.
 Watch how **Prefabs** can help you create a whole army of knights:
 
 ![Use prefabs](media/use-prefabs-compressed.gif)
+
+You can also modify a single **Prefab** and all its **Instances** will change accordingly:
+
+1. Suppose you have a set of trees and want to use it throughout your game.
+2. Create a **Prefab** of this set.
+3. If in later stages of your project you need to change textures of the trees, there's no need to change each **Instance** of this **Prefab** individually.
+5. Simply modify the **Prefab** and all its **Instances** will update accordingly.
 
 This section explains the following concepts:
 

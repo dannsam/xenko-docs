@@ -4,18 +4,18 @@
 
 # Use Prefabs
 
-Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in your game:
+Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the Scene:
 
-1. Instantiate **Prefab**.
-2. Modify **Instances** of this **Prefab**.
-3. Use **Scripts** to animate these **Instances** at runtime.
+1. Instantiate.
+2. Modify these **Instances**.
+3. Use **Scripts** to animate **Prefab Instances** at runtime.
 
 ## Create Prefab Instances
 
 To instantiate a **Prefab**, drag and drop it from **Asset View** to the **Scene**.
 When you instantiate a Prefab, you create a **Prefab Instance**.
 
-In the **Scene Editor**, Prefab Instance is displayed as **Parent Entity** and all **Prefab Elements** are its **Children**.
+In Scene Editor, **Prefab Instance** is displayed as **Parent Entity** and **Prefab Elements** as its **Children**.
 
 ![Prefab Instance in Scene Editor](media/prefabs-in-scene-editor.png)
 
@@ -25,33 +25,46 @@ You can re-arrange **Entities** of the **Prefab Instance** just like you do with
 * Drag **Entities** to add them to the **Prefab Instance**.
 * Drag **Entities** away from the **Prefab Instance** to make them independent **Entities**.
 
-Sometimes, you instantiate a Prefab, modify it, and then want to save and re-use this modified **Prefab**.
+Sometimes, you instantiate a Prefab, modify it, and then want to re-use this modified **Prefab**.
 In that case, simply create a new **Prefab** from the **Prefab Instance**. You can further re-use it like a separate Prefab.
 
 ## Modify Prefab Instances
-When you create **Prefab Instance**, customize it like any other **Entity**:
+### Adjust in Scene Editor
+Once you create **Prefab Instance**, customize it like any other **Entity**:
 
 * Use transformation gizmos to _Translate_, _Rotate_ and _Scale_.
 * Change **Materials** and **Textures**.
 * **Add Components**, e.g. **Scripts**, **Animations**, etc.
 
-You can customize **Prefab Instance** as a single unit, or any of its **Child Entities** independently.
+You can customize **Prefab Instance** as a single unit, or edit any of its **Child Entities** independently.
 For more information on **Entities** and their components, see [Populate a Scene](../get-started/populate-a-scene.md).
 
 > [!Note] When you modify **Prefab Instances**, the **Prefab** itself **is unaffected**.
 
-## Modify Prefabs at Runtime
-Sometimes you need to change certain properties of a **Prefab** at runtime.
+### Access Prefab from its Instance
 
-Suppose you have a _ChangeTreeColor_ script.
-At certain point in the game, this script changes tree color from green to red in a _Forest Prefab_.
+You can access **Prefab** from its **Instances**.
+In **Scene Editor**, right-click any child of a **Prefab Instance** and select _Open Prefab in Editor_.
 
-These changes won't affect **Existing Instances** of the **Prefab** that were spawned before the _ChangeTreeColor_ script was introduced.
-Yet, all **New Instances** of the forest prefab **will be red**.
+![Open Prefab in Editor](media/use-prefabs-prefab-open-prefab-from-prefab-instance.png)
 
-## Modify Prefab
+### Break Link to Prefab
 
-When you modify a **Prefab**, you affect only identical **Properties** of **Prefab** and **Prefab Instance**.
+You can break link between a **Prefab** and **Child Entities** of the **Prefab Instance**.
+In **Scene Editor**, right-click any child and select _Break Link to Prefab_.
+Keep in mind you can select multiple children and break link to all of them at once.
+
+![Break Link to Prefab](media/use-prefabs-break-link-to-prefab.gif)
+
+After you break link, **Prefab Instance** is no longer affected by the changes you make to the **Prefab**.
+
+## Modify Prefabs in Editor
+
+When you modify a certain _Property_ of a **Prefab**, here's how it affects the same _Property_ of a **Prefab Instance**:
+
+1. _Property_ in Prefab and Prefab Instance **are identical**: **Prefab Instance** changes exactly like **Prefab**.
+2. _Property_ in Prefab and Prefab Instance **are different**: changes in **Prefab** do not affect **Prefab Instance**.
+
 This way you can re-use the same **Prefab** throughout the game, but customize each **Prefab Instance** individually.
 
 Let's see how it works on an example:
@@ -79,27 +92,42 @@ Let's see how it works on an example:
 
 ![Change Material of Prefab](media/use-prefabs-prefab-example-4.png)
 
+## Modify Prefabs at Runtime
+Sometimes you need to change certain _Properties_ of a **Prefab** at runtime.
+
+Suppose you have a _ChangeTreeColor_ script.
+At certain point in the game, this script changes tree color from green to red in a _Forest Prefab_.
+
+These changes won't affect **Instances** of the **Prefab** that were spawned before the _ChangeTreeColor_ script was introduced.
+Yet, all **New Instances** of the forest prefab **will be red**.
+
 ## Use Prefabs from Scripts
 
 You can instantiate a **Prefab** from **Code**.
 
-> [!Note] Keep in mind you can only instantiate separate **Entities** of the **Prefab**.
+> [!Note] By default, you can only instantiate **Entities** of the **Prefab**, not the whole **Prefab**.
+
+You have to know which **Entity** of the **Prefab** you want to instantiate.
+Each **Prefab Entity** has an index that corresponds to its position in the **Prefab Editor**.
+Top **Entity** has index **0**, second has index **1**, and so on.
 
 In order to instantiate the whole **Prefab**, proceed as follows:
 
-**1)** In **Prefab Editor**, create an empty **Entity**, drag it to the top of the Entity list and **Rename** it.
+**1)** In **Asset View** double-click your **Prefab** to open it in **Prefab Editor**.
+
+**2)** In **Prefab Editor**, create an empty **Entity** and drag it to the top of the Entity list.
 
 ![Create Parent Entity in Prefab](media/use-prefabs-create-prefab-parent-entity.png)
 
-**2)** Select all other **Entities** and drag them to this newly created **Entity**.
+**3)** Select all other **Entities** and drag them to this newly created **Entity**.
 
 ![Drag Entities to Parent Entity](media/use-prefabs-drag-entities-to-parent-entity.png)
 
-**3)** Now there is single Parent **Entitiy** on the top level of your hierarchy, and all other **Prefab Elements** are its children.
+**4)** Now there is single Parent **Entitiy** on the top level of your hierarchy, and all other **Prefab Elements** are its children.
 
 ![Instantiate Single Parent Entity](media/use-prefabs-instantiate-single-parent-entity.png)
 
-**4)** Back in Visual Studio, instantiate the whole **Prefab** with:
+**5)** Back in Visual Studio, instantiate the whole **Prefab** with:
 
 ``var bullet = myBulletPrefab.Instantiate().First();``.
 
