@@ -3,7 +3,7 @@
 
 # Archetypes
 
-Sometimes you require a set of **Assets** that have identical properties.
+Sometimes you require a set of **Assets** that have identical _Properties_.
 Suppose, you create a simple sports simulator where players wear nearly identical t-shirts that differ only in color.
 
 You can create one t-shirt **Material**, copy it several times, and then customize each **Material** separately.
