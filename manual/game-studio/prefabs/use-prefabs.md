@@ -56,7 +56,7 @@ Keep in mind you can select multiple children and break link to all of them at o
 
 ![Break Link to Prefab](media/use-prefabs-break-link-to-prefab.gif)
 
-After you break link, **Prefab Instance** is no longer affected by the changes you make to the **Prefab**.
+After you break link, the selected **Entities** of the **Prefab Instance** are no longer affected by the changes you make to the **Prefab**.
 
 ## Modify Prefabs in Editor
 
@@ -133,7 +133,7 @@ In order to instantiate the whole **Prefab**, proceed as follows:
 
 ## Code Samples
 Suppose you have a **Prefab** called _'MyBulletPrefab'_.
-It is in the root folder of your project, and you want to create an instance of that **Prefab** in your **Scene**.
+It is in the root folder of your project, and you want to instantiate that **Prefab** in your **Scene**.
 
 Use the following code samples:
 

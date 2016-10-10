@@ -8,7 +8,7 @@ Oftentimes, there are game objects that you want to re-use multiple times, e.g. 
 Certainly, you can copy-and-paste such objects.
 Yet, if you need to modify them later on, you will have a hard time editing each duplicate individually.
 
-It's more convenient to change object's properties once and apply these changes to all its instances.
+It's far more convenient to change object's properties once and apply these changes to all its instances.
 That's when **Prefabs** come in handy.
 **Prefabs** help you easily manage complex **Models**, multiple **Entities** and even entire game levels.
 
@@ -34,7 +34,7 @@ You can modify certain _Properties_ of a **Prefab**, and all its identical **Ins
 2. Create a **Prefab** of this set.
 3. If in later stages of your project you need to change textures of the trees,
 there's no need to change each **Instance** of this **Prefab** individually.
-4. Simply modify the **Prefab** and all its **Instances** will update accordingly.
+4. Simply modify the **Prefab** and all its identical **Instances** will update accordingly.
 
 This section explains the following concepts:
 
