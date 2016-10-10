@@ -10,8 +10,9 @@ Yet, if you need to modify them later on, you will have a hard time editing each
 
 It's more convenient to change object's properties once and apply these changes to all its instances.
 That's when **Prefabs** come in handy.
-
 **Prefabs** help you easily manage complex **Models**, multiple **Entities** and even entire game levels.
+
+## Build Game Levels
 **Prefabs** allow you to:
 
 * Combine elements of multi-component **Models** for easy management.
@@ -24,14 +25,16 @@ be it a group of two simple identical trees or a combination of sprites, models,
 **Prefabs** help you easily scale game levels and re-use complex identical objects on multiple game levels.
 Watch how **Prefabs** can help you create a whole army of knights:
 
-![Use prefabs](media/use-prefabs-compressed.gif)
+![Creating Army with Prefabs](media/use-prefabs-compressed.gif)
 
-You can also modify a single **Prefab** and all its **Instances** will change accordingly:
+## Manage Game Levels
+You can modify certain _Properties_ of a **Prefab**, and all its identical **Instances** will inherit these changes:
 
 1. Suppose you have a set of trees and want to use it throughout your game.
 2. Create a **Prefab** of this set.
-3. If in later stages of your project you need to change textures of the trees, there's no need to change each **Instance** of this **Prefab** individually.
-5. Simply modify the **Prefab** and all its **Instances** will update accordingly.
+3. If in later stages of your project you need to change textures of the trees,
+there's no need to change each **Instance** of this **Prefab** individually.
+4. Simply modify the **Prefab** and all its **Instances** will update accordingly.
 
 This section explains the following concepts:
 

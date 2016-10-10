@@ -3,7 +3,6 @@
 
 # Create & Manage Prefabs
 
-**Prefab** is basically a container of **Entities**.
 You can add, manage and delete **Prefab Elements** without compromising **Entities** you used to create this **Prefab**.
 
 **Prefabs** also reduce PC resources that Xenko uses to run its applications.
@@ -43,7 +42,6 @@ It allows you to:
 * Use transformation gizmos to _Translate_, _Rotate_ and _Scale_ **Entities** of a **Prefab**.
 For more information on using gizmos, see [Arrange Entities](../get-started/arrange-entities.md).
 * Add/delete **Entities** to/from **Prefab**.
-* Edit **Entities**, as well as their **Assets**.
 * Create **Parent-Child** relations between **Entities** of the **Prefab**.
 * Add and modify various components of these **Entities**: scripts, materials, models, animations, etc.
 
@@ -51,6 +49,5 @@ For more information on managing **Entities**, see [Populate a Scene](../get-sta
 
 ## Use Prefabs
 
-Every **Prefab** is essentially a special **Model Asset**. 
-So just like other **Models**, you can instantiate a **Prefab** by dragging and dropping it from the **Asset View** to the **Scene**.
+Every **Prefab** is a special **Asset** that you can instantiate by dragging and dropping it from the **Asset View** to the **Scene**.
 For more information, see [Use Prefabs](use-prefabs.md).
