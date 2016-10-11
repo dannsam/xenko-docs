@@ -23,7 +23,7 @@ This page will show you how to create a bouncing ball.
 
 9. In the **Property view**, under **Rigidbody**, click **+** next to the **Collider Shapes** header, and select **Sphere**.
 
-10. Under **Rigidbody** set the **Mass** property to 80.
+10. Under **Rigidbody** set the **Mass** property to 4.
 
 11. Move the sphere up, by setting it's position to _X: 0, Y: 6, Z: 0_
 
