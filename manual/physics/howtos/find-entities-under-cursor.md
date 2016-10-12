@@ -4,6 +4,7 @@
 
 This page will show you how to find objects under the mouse cursor.
 
+#**This should not use a SAMPLE, howtos should just be something from scratch or new game**#
 Start a new Game Project and select the **Raycasting Sample** project under Samples > Physics. and run the sample.
 
 ![Raycasting sample](media/how-to-find-raycasting-sample.png)
