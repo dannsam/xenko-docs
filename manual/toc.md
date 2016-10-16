@@ -102,6 +102,7 @@
 ## [Keyboard](input/keyboard.md)
 ## [Mouse](input/mouse.md)
 ## [Pointers](input/pointers.md)
+## [Sensors](input/sensors.md)
 ## [Virtual Keys](input/virtual-keys.md)
 
 # [Particles](particles/index.md)
