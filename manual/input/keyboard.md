@@ -3,24 +3,24 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Keyboard** is a common input device, which triggers various actions in desktop games.
-**Xenko Game Studio** handles keyboard input by implementing **Methods** and **Properties** of the [Input](xref="SiliconStudio.Xenko.Input.InputManager")  base class and the [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") struct.
+The **Keyboard** is the most common input device for **desktop games**.
+There are two ways to handles keyboard input in Xenko, first by **querying key states**, 
+and secondly by **using [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") lists**.
+You can access both from the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
 
-See [Input Overview Page](index.md) to understand the difference between these options.
+See [Input Overview Page](index.md) to understand the difference between the different options.
 
 ##Check Keyboard Availability
 
-Before you can handle keyboard input with either [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class or [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") struct, it's important to check, whether a keyboard is available in the system.
+Before analyzing keyboard input, it's important to first check that you have a keyboard is available to the system.
 
 [Input.HasKeyboard](xref="SiliconStudio.Xenko.Input.InputManager.HasKeyboard") property returns a Boolean (true/false) value that indicates keyboard availability.
 
 > [!Note] Currently Xenko does not support keyboard plugged at run-time. This feature will be added in the future releases.
 
-**Syntax**: ```bool hasKeyboard = Input.HasKeyboard;```
-
 ##Get Key States
 
-[Input](xref="SiliconStudio.Xenko.Input.InputManager") base class has several **Methods** that check keyboard states: _Pressed_, _Down_, and _Released_.
+[Input](xref="SiliconStudio.Xenko.Input.InputManager") base class provides several **Methods** to query keyboard states: _Pressed_, _Down_, and _Released_.
 
 | Method | Description |
 | --- | --- |
@@ -33,14 +33,15 @@ Before you can handle keyboard input with either [Input](xref="SiliconStudio.Xen
 
 ##Get Key Events
 
-With the in-built **Key Events** you can identify **Key Status** (_Pressed/Down/Released_) and perform the required actions. You can adjust your **Game's Keyboard Controls** with the following public lists:
+There are some cases when you want to **know all the keys** that are currently down or that have been pressed during last frame.
+The key **state query API is not well suited** in this case as you would have to make a query for each of the available keys.
+You can use the **Key Events** collections available in the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class
+for this purpose.
 
 | Public List | Description |
 | --- | --- |
 | [KeyDown](xref="SiliconStudio.Xenko.Input.InputManager.KeyDown") | Gets a list of the keys being currently pressed down. |
 | [KeyEvents](xref="SiliconStudio.Xenko.Input.InputManager.KeyEvents") | Gets a list of the key events that happened in the last frame (keys pressed or released). |
-
-**Declaration**: ```public KeyEvent(Keys key, KeyEventType type) ```
 
 Every [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") has two parameters:
 
@@ -48,8 +49,6 @@ Every [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") has two parameters:
 2. **KeyEventType**: There are two key event types:
     * _Pressed_: A key has been pressed.
     * _Released_: A key has been released.
-
-> [!Note] If you handle **Keyboard Input** with **Public Lists**, you have to check the states of all buttons at every update.
 
 ##Code Sample
 
