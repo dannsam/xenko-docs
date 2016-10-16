@@ -93,34 +93,33 @@ You can assign mouse wheel to control various actions in a game. This way, when 
 ##Code Sample
 
 ```
-    public class MouseInputScript : SyncScript
-    {
-        public override void Update()
-        {
-            //If left mouse button is being pressed down in this update, do something.
-            if (Input.IsMouseButtonDown(MouseButton.Left))
-            {   
-            }
-            //If middle mouse button was pressed since the last update, do something.
-            if (Input.IsMouseButtonPressed(MouseButton.Middle))
-            {  
-            }
+public class MouseInputScript : SyncScript
+{
+	public override void Update()
+	{
+		//If left mouse button is being pressed down in this update, do something.
+		if (Input.IsMouseButtonDown(MouseButton.Left))
+		{   
+		}
+		//If middle mouse button was pressed since the last update, do something.
+		if (Input.IsMouseButtonPressed(MouseButton.Middle))
+		{  
+		}
 
-            //If mouse pointer moved more than 0.2 units of the screen size in X direction, do something.
-            if (Input.MouseDelta.X > 0.2f)
-            {
-            }
-            
-            //Analyze each pointer recorded during last update.
-            foreach (PointerEvent e in Input.PointerEvents)
-            {   
-                //If left mouse button is being pressed down in this update, do something.
-                if (e.State == PointerState.Down)
-                {
-                }
-            }
-        }
-    }
+		//If mouse pointer moved more than 0.2 units of the screen size in X direction, do something.
+		if (Input.MouseDelta.X > 0.2f)
+		{
+		}
+		
+		//Analyze each pointer recorded during last update.
+		foreach (PointerEvent e in Input.PointerEvents)
+		{   
+			//If left mouse button is being pressed down in this update, do something.
+			if (e.State == PointerState.Down)
+			{
+			}
+		}
+	}
 }
 ```
 

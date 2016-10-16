@@ -53,26 +53,26 @@ Every [KeyEvent](xref="SiliconStudio.Xenko.Input.KeyEvent") has two parameters:
 ##Code Sample
 
 ```
-    public class KeyboardEventsScript : SyncScript
-    {
-        //Declared public member variables and properties will show in the game studio.
+public class KeyboardEventsScript : SyncScript
+{
+	//Declared public member variables and properties will show in the game studio.
 
-        public override void Update()
-        {
-            //Perform an action in every update.
-            if (Game.IsRunning)
-            {
-                if (Input.IsKeyDown(Keys.Left))
-                {
-                    this.Entity.Transform.Position.X -= 0.1f;
-                }
-                if (Input.IsKeyDown(Keys.Right))
-                {
-                    this.Entity.Transform.Position.X += 0.1f;
-                }
-            }
-        }
-    }
+	public override void Update()
+	{
+		//Perform an action in every update.
+		if (Game.IsRunning)
+		{
+			if (Input.IsKeyDown(Keys.Left))
+			{
+				this.Entity.Transform.Position.X -= 0.1f;
+			}
+			if (Input.IsKeyDown(Keys.Right))
+			{
+				this.Entity.Transform.Position.X += 0.1f;
+			}
+		}
+	}
+}
 ```
 
 <div class="doc-relatedtopics">
