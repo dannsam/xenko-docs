@@ -3,11 +3,18 @@
 
 # Create & Manage Prefabs
 
-You can add, manage and delete **Prefab Elements** without compromising **Entities** you used to create this **Prefab**.
+With **Prefabs** you can easily manage game levels.
+Sometimes you need to change a certain _Property_ of all **Prefab Instances**.
+In other situations you need to customize **Prefab Instance** independently from the **Prefab**.
+Xenko allows all of these manipulations:
 
-**Prefabs** also reduce PC resources that Xenko uses to run its applications.
-Rather than loading multiple copies of the same set of **Entities**, Game Studio loads a **Prefab** once.
-It than uses references to the **Prefab** for each **Prefab Instance**.
+1. Add, manage and delete **Prefab Elements** without compromising **Entities** you used to create this **Prefab**.
+2. Change **Prefab** _Properties_ and all its **Instances** with identical _Properties_ will inherit these changes.
+3. Customize _Properties_ of **Prefab Instance** and changes to **Prefab** will no longer affect these _Properties_.
+
+Here's how **Prefabs** and **Prefab Instances** relate to one another:
+
+![How Prefabs Work](media/create-manage-prefabs-how-prefabs-work.png)
 
 ## Create Prefabs
 
