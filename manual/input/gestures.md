@@ -54,18 +54,18 @@ To activate the recognition of a gesture proceed as follows:
 1. **Instantiate the gesture configuration** class corresponding to gesture you want to detect. 
 For example a [GestureConfigDrag](xref="SiliconStudio.Xenko.Input.GestureConfigDrag") for a drag gesture (see below for correspondence list).
 2. **Configure the gesture** by properly adjusting the parameters of the configuration class.
-3. **Add the gesture configuration** to the [Input.ActivatedGestures](xref="SiliconStudio.Xenko.Input.InputManager.ActivatedGestures") collection, 
+3. **Add the gesture configuration** to the [ActivatedGestures](xref="SiliconStudio.Xenko.Input.InputManager.ActivatedGestures") collection, 
 this activates the gesture recognition.
 
 > [!Warning] Once you activate a gesture for recognition, you can no longer modify its parameters.
-To change gesture parameters, you have to delete the previous entry from the [Input.ActivatedGestures](xref="SiliconStudio.Xenko.Input.InputManager.ActivatedGestures") collection and create a new entry with new parameters.
+To change gesture parameters, you have to delete the previous entry from the [ActivatedGestures](xref="SiliconStudio.Xenko.Input.InputManager.ActivatedGestures") collection and create a new entry with new parameters.
 
 **To stop the gesture recognition**, simply remove the gesture configuration from the [Input.ActivatedGestures](xref="SiliconStudio.Xenko.Input.InputManager.ActivatedGestures") collection.
 
 ### Gesture Recognition
 
 When the system detects a gesture, it adds a [GestureEvent](xref="SiliconStudio.Xenko.Input.GestureEvent") to the list of gesture events, 
-[Input.GestureEvents](xref="SiliconStudio.Xenko.Input.InputManager.GestureEvents").
+[GestureEvents](xref="SiliconStudio.Xenko.Input.InputManager.GestureEvents").
 The event contains information about the gesture that have been detected and its current state (how many fingers, where, etc.).
 
 > [!Note]
@@ -148,7 +148,7 @@ You can modify [GestureConfigLongPress.RequiredPressTime](xref="SiliconStudio.Xe
 **Composite Gesture** is triggered when the system detects one of the three basic actions:
 * _Translation_: user translates two fingers together in the same direction.
 * _Scale_: user moves two fingers closer or further from each other.
-* _Rotation_: user turns two fingers around the middle point.
+* _Rotation_: user rotates two fingers around the middle point.
 
 ###Tap Gesture 
 

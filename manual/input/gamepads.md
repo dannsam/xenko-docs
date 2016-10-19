@@ -10,7 +10,7 @@ Each **Gamepad** brand has unique buttons and features. Therefore, it's importan
 
 ##Check Gamepad Availability
 
-Before starting handling gamepad input, you should check whether a gamepad is available in the system:
+Before handling gamepad input, check whether a gamepad is available in the system:
 
 * Use [Input.HasGamePad](xref="SiliconStudio.Xenko.Input.InputManager.HasGamePad") to know if there is any gamepad current connected to your system.
 * Use [Input.GamePadCount](xref="SiliconStudio.Xenko.Input.InputManager.GamePadCount") to know how many gamepads are currently available.
@@ -22,32 +22,32 @@ Before starting handling gamepad input, you should check whether a gamepad is av
 ##Gamepad Buttons
 
 Below is an image of the Xbox Elite Wireless Controller.
-You can see the different buttons with their equivalent names in Xenko.
+The image show gamepad buttons with their equivalent names in Xenko.
 
 ![Xbox Gamepad](media/input-gamepad-standard-gamepad.png)
 
-Gamepads have three **different types of buttons**:
-1. **Digital** buttons. They only have three states: _Pressed_, _Down_, _Released_. 
-Pad, Start, Back, LeftThumb, RightThumb, A, B, X and Y are digital buttons.
-2. **Analog** buttons. They return a value between 0 and 1 letting you know how much the user is pulling or pressing the button. 
+Gamepads have **three types of buttons**:
+1. **Digital** buttons have only three states: _Pressed_, _Down_, _Released_. 
+_Pad_, _Start_, _Back_, _A_, _B_, _X_ and _Y_ are digital buttons.
+2. **Analog** buttons. They return a value between 0 and 1 that indicates how much the user is pulling or pressing the button. 
 Right and Left **Triggers** are analog buttons. 
-3. **Thumb stick** buttons. They combine functionality of **Analog** and **Digital** buttons. 
-When the user presses the stick it is considered as a normal analog button.
-When the user rotates the stick it return a value between -1 and 1 in each axis indicating the current direction of the thumb.
+3. **Thumb stick** buttons combine functionality of **Analog** and **Digital** buttons:
+    * When a user **presses** a stick, it is considered a **digital** button.
+    * When a user **rotates** a stick, it is considered an **analog** button. It returns a value between -1 and 1 in each axis indicating the current direction of the thumb.
 
 ## Handle Gamepad Input
 
 ### Digital Buttons
 
-You can query the **state and state changes** of digital buttons using the following three methods:
+You can query the **states and state changes of digital buttons** with the following methods:
 
 | Method | Functionality |
 |----|----|
-| [IsPadButtonDown(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonDown.System.Int32") | Checks whether the button is in the down state. |
-| [IsPadButtonPressed(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonPressed.System.Int32") | Checks whether the user pressed the button since the previous update. |
-| [IsPadButtonReleased(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonReleased.System.Int32") | Checks whether the user released the button since the previous update. |
+| [IsPadButtonDown(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonDown.System.Int32") | Checks whether the button is in the _down_ state. |
+| [IsPadButtonPressed(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonPressed.System.Int32") | Checks whether the user _pressed_ the button since the previous update. |
+| [IsPadButtonReleased(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonReleased.System.Int32") | Checks whether the user _released_ the button since the previous update. |
 
-_Index (int)_: The index of the gamepad that you want to check.
+_Index (integer)_: The index of the gamepad that you want to check.
 
 _Button (GamePadButton)_: The gamepad button that you want to check.
 
@@ -59,13 +59,13 @@ You can also get the state of digital buttons using the [GamePadState.Buttons](x
 ### Analog Buttons
 
 To query values of analog buttons, you should **first get the current state of gamepad** using 
-[Input.GetGamePad(index)](xref="SiliconStudio.Xenko.Input.InputManager.GetGamePad.System.Int32").
+[GetGamePad(index)](xref="SiliconStudio.Xenko.Input.InputManager.GetGamePad.System.Int32").
 
-_Index (int)_: The index of the gamepad that you want to check.
+_Index (integer)_: The index of the gamepad that you want to check.
 
 > [!WARNING]
-> The value returned by `GetGamePad` is the state of the gamepad at the **current** frame.
-> You cannot reuse returned value for the next frames but have to query it again at each frame.
+> The value returned by ``GetGamePad`` is the state of the gamepad at the **current** frame.
+> You cannot reuse this value for the next frames and have to query it again at each frame.
 
 To get the values of **Triggers** and **Thumbs' Rotations**, use the following fields of 
 [GamePadState](xref="SiliconStudio.Xenko.Input.GamePadState"):
@@ -80,7 +80,7 @@ To get the values of **Triggers** and **Thumbs' Rotations**, use the following f
 ### Gamepad Vibration
 
 You can set the vibration level of gamepads using 
-[Input.SetGamePadVibration](xref="SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration.System.Int32.System.Single.System.Single").
+[SetGamePadVibration](xref="SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration.System.Int32.System.Single.System.Single").
 
 > [!Note] Currently, you cannot control gamepad vibration in Xenko.
 > This feature will be added in the future releases.

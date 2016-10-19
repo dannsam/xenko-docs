@@ -4,21 +4,23 @@
 <span class="label label-doc-audience">Programmer</span>
 
 **Pointers** are points on the device screen corresponding to **finger touches**:
-* On desktop platforms, the left-mouse-button can be used to simulate pointers. For more information on mouse controls, see [Mouse Input](mouse.md).
+
+* On desktop platforms, the left mouse button can be used to simulate pointers. For more information on mouse controls, see [Mouse Input](mouse.md).
 * Devices with multi-touch functionality support several simultaneous pointers.
 
 ##Understand Pointers
 
-Here's how Xenko handles Input from Pointers:
+Here's how Xenko processes Input from Pointers.
 
-1. Every time the end-user touches the screen (or presses left mouse button) it **creates a Pointer**.
-2. Xenko assigns **PointerId** to that Pointer corresponding to a given finger.
-3. **Game Engine** creates new **Pointer Event** with that Pointer ID every time a modification happens to that **Pointer**.
-4. For the each new finger, Xenko creates a **new Pointer** with a **different ID**.
+1. A user touches the screen (or presses left mouse button).
+2. Xenko **creates a Pointer**.
+3. Xenko assigns **PointerId** to that Pointer corresponding to a given finger.
+4. New **Pointer Event** with that Pointer ID is created every time a the **Pointer** is modified.
+5. For the each new finger, Xenko creates a **new Pointer** with a **different ID**.
 
 > [!Warning]
 > Each OS handles pointer modifications in a different manner. 
-> So a same finger gesture can generate slightly different pointer event sequences depending on the platform.
+> Therefore, the same finger gesture can generate slightly different pointer event sequence depending on the platform.
 > For instance, **on Android** the system does not create **Pointer Events** when a finger touches the screen but doesn't move.
 > Other OS/Hardware can treat such actions differently. Check particular OS/Hardware documentation for details.
 
@@ -31,14 +33,12 @@ See [Gestures](gestures.md) for more information.
 > [!Note] Pointer events are listed in chronological order (time of the event).
 
 ##Use Multi-Touch
-**To active Multi-Touch** functionality use [Input.MultiTouchEnabled](xref="SiliconStudio.Xenko.Input.InputManager.MultiTouchEnabled") property.
+**To active Multi-Touch** functionality use [MultiTouchEnabled](xref="SiliconStudio.Xenko.Input.InputManager.MultiTouchEnabled").
 
-It gets or sets a Boolean value (true/false) indicating if simultaneous multiple finger touches are enabled or not.
-If Multi-touch is disabled, Xenko triggers events only for the first finger which touched the screen.
+It indicates if simultaneous multiple finger touches are enabled or not.
+If Multi-touch is disabled, Xenko triggers events only for the first finger that touches the screen.
 
-**Syntax**: ``public abstract bool MultiTouchEnabled { get; set; }``
-
-> [!Note] By default, multi-touch functionality is enabled.
+> [!Note] By default, multi-touch is enabled.
 
 ##Use PointerEvent Class
 
@@ -47,7 +47,7 @@ It contains the current **Pointer Status** and time information.
 It is thrown every time that modification happens to the **Pointer**.
 
 You can access the list of **Pointer Events** that happened since the last update using the 
-[Input.PointerEvents](xref="SiliconStudio.Xenko.Input.InputManager.PointerEvents") field.
+[PointerEvents](xref="SiliconStudio.Xenko.Input.InputManager.PointerEvents").
 The list is cleared at every update, so you don't need to clear it manually.
 All pointer events not analyzed during a frame turn are lost.
 
@@ -71,7 +71,7 @@ You can use the following properties to get information about the pointer that t
 
 ###Get Pointer Position
 
-Use the [PointerEvent.Position](xref="SiliconStudio.Xenko.Input.PointerEvent.Position") property to retrieve the **Pointer Position**.
+Use [PointerEvent.Position](xref="SiliconStudio.Xenko.Input.PointerEvent.Position") to retrieve **Pointer Position**.
 
 Xenko uses **normalized coordinates** for Pointer positions instead of actual screen sizes in pixels.
 This way, pointer position **adjusts correctly** to any screen resolution, so you don't have to write separate code for every screen size.
@@ -81,8 +81,8 @@ This way, pointer position **adjusts correctly** to any screen resolution, so yo
 
 ###Get Pointer State
 
-Use the [PointerEvent.State](xref="SiliconStudio.Xenko.Input.PointerEvent.State") property to get the *Action** performed by the pointer
-when the event was triggered. It returns a value inside [Input.PointerState](xref="SiliconStudio.Xenko.Input.PointerState"). 
+Use the [PointerEvent.State](xref="SiliconStudio.Xenko.Input.PointerEvent.State") to check the **Action** performed by the pointer
+when the event was triggered. It returns a value inside [PointerState](xref="SiliconStudio.Xenko.Input.PointerState"). 
 
 There are five possible states:
 
