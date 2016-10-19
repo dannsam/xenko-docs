@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Programmer</span>
 
 **Gamepads** are popular console input devices, e.g. Xbox Elite Wireless Controller and PS4 DualShock.
-Some players use gamepads instead of usual keyboard/mouse even on desktop platforms.
+Some players use gamepads instead of usual keyboard/mouse even on desktops.
 
 Each **Gamepad** brand has unique buttons and features. Therefore, it's important to understand how to handle gamepad input and what limitations **Xenko** has with regards to different gamepad types.
 
@@ -12,7 +12,7 @@ Each **Gamepad** brand has unique buttons and features. Therefore, it's importan
 
 Before handling gamepad input, check whether a gamepad is available in the system:
 
-* Use [Input.HasGamePad](xref="SiliconStudio.Xenko.Input.InputManager.HasGamePad") to know if there is any gamepad current connected to your system.
+* Use [Input.HasGamePad](xref="SiliconStudio.Xenko.Input.InputManager.HasGamePad") to know if there is a gamepad available in the system.
 * Use [Input.GamePadCount](xref="SiliconStudio.Xenko.Input.InputManager.GamePadCount") to know how many gamepads are currently available.
 * Use [GamePadState.IsConnected](xref="SiliconStudio.Xenko.Input.GamePadState.IsConnected") to know if the current gamepad has been disconnected.
 
@@ -28,12 +28,12 @@ The image show gamepad buttons with their equivalent names in Xenko.
 
 Gamepads have **three types of buttons**:
 1. **Digital** buttons have only three states: _Pressed_, _Down_, _Released_. 
-_Pad_, _Start_, _Back_, _A_, _B_, _X_ and _Y_ are digital buttons.
-2. **Analog** buttons. They return a value between 0 and 1 that indicates how much the user is pulling or pressing the button. 
+These are digital buttons: _Pad buttons_, _Start_, _Back_, _A_, _B_, _X_ and _Y_.
+2. **Analog** buttons return a value between 0 and 1 that indicates how hard a user is pressing the button. 
 Right and Left **Triggers** are analog buttons. 
-3. **Thumb stick** buttons combine functionality of **Analog** and **Digital** buttons:
+3. **Thumb sticks** combine functionality of **Analog** and **Digital** buttons:
     * When a user **presses** a stick, it is considered a **digital** button.
-    * When a user **rotates** a stick, it is considered an **analog** button. It returns a value between -1 and 1 in each axis indicating the current direction of the thumb.
+    * When a user **rotates** a stick, it is considered an **analog** stick. It returns a value between -1 and 1 in each axis indicating the current direction of the thumb.
 
 ## Handle Gamepad Input
 
@@ -64,8 +64,8 @@ To query values of analog buttons, you should **first get the current state of g
 _Index (integer)_: The index of the gamepad that you want to check.
 
 > [!WARNING]
-> The value returned by ``GetGamePad`` is the state of the gamepad at the **current** frame.
-> You cannot reuse this value for the next frames and have to query it again at each frame.
+> The value returned by ``GetGamePad`` is the state of the gamepad at the **current** update.
+> You cannot reuse this value for the next updates and have to query it again in every update.
 
 To get the values of **Triggers** and **Thumbs' Rotations**, use the following fields of 
 [GamePadState](xref="SiliconStudio.Xenko.Input.GamePadState"):

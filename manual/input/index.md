@@ -51,7 +51,7 @@ Here's how you should handle input from various devices:
 You can query the **Change of State** of the _Buttons_ and _Keys_ since the previous update.
 In this case, you don't get the list of all buttons and keys, but have to query each Button and Key separately.
 
-* For _Gamepad digital buttons_, _Keyboard_, and _Mouse buttons_, query if the button or key was _Pressed, _Down_ and _Released_ in the last update.
+* For _Gamepad digital buttons_, _Keyboard_, and _Mouse buttons_, query if the button or key was _Pressed_, _Down_ or _Released_ in the last update.
 * For _Mouse Position_ and _Mouse Wheel Scrolls_, query _Delta Values_ since the previous update.
 
 [Diagram 4]
@@ -72,9 +72,9 @@ For _Pointers_, _Gestures_, and _Keyboard_, you can query the **List of Events**
 
 ###4: Use Virtual Buttons
 You can use **Virtual Buttons**, so that the **Input** is not tied to physical buttons and keys.
-Associate keys to actions, and write your gameplay based on those actions rather than particular keys.
+Associate keys to actions, and write your gameplay based on those actions rather than physical keys.
 
-Fore more info read[Vritual keys].
+Fore more info read [Vritual Buttons](virtual-buttons.md).
 
 [Diagram 9]
 
@@ -84,7 +84,7 @@ Fore more info read[Vritual keys].
 * [Gamepads](gamepads.md): Low-level API lets you control buttons and analog sticks of the XBox-like gamepads.
 * [Gestures](gestures.md): High-level API interprets predefined patterns of finger touches.
 * [Keyboard](keyboard.md): Low-level API allows you to query the state of keys and control keyboard input.
-* [Mouse](mouse.md): Low-level API lets you query the state of mouse buttons, query input from mouse wheel and additional mouse buttons.
-* [Pointers](pointers.md): Low-level API for mobile devices allows to query data of finger touches.
+* [Mouse](mouse.md): Low-level API lets you query the state of mouse buttons, input from mouse wheel scroll and additional mouse buttons.
+* [Pointers](pointers.md): Low-level API for mobile devices allows to read finger touches.
 * [Sensors](sensors.md): Special API that interprets input from the sensors of the mobile devices.
 * [Virtual Buttons](virtual-buttons.md): Special API helps you build games and applications around user actions rather than particular physical keys and buttons.

@@ -36,8 +36,8 @@ You can query **Key states and state changes** with the following **Methods**:
 
 ##Get Key Events
 
-In some cases, you want to know all **Keys** that are currently _Down_, or all **Keys** that have been _Pressed_ during last frame.
-The **Key state query API is not well suited** in this case, as you have to query each available key separately.
+In some cases, you want to know all **Keys** that are currently _Down_, or all **Keys** that have been _Pressed_ during last update.
+The **Key state API is not well suited** in this case, as you have to query each available key separately.
 
 Instead, you can use **Key Events** collections available in the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
 

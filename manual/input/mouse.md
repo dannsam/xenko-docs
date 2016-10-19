@@ -4,13 +4,13 @@
 <span class="label label-doc-audience">Programmer</span>
 
 **Mouse** is a common input **device for desktop games**.
-There are two ways to handle keyboard input in Xenko:
+There are two ways to handle mouse input in Xenko:
 
 1. Query **Mouse Button States**.
 2. For cross-platform games that target primarily mobile devices, you can use [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") lists.
 For more information on using **Pointers**, see [Pointers Overview Page](pointers.md).
 
-You can access both from the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
+You can access **Mouse Button States** and **Pointer Events List** from the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
 
 Let's see the difference between using **Mouse Button States** and [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") lists:
 
@@ -32,8 +32,8 @@ Use [Input.HasMouse](xref="SiliconStudio.Xenko.Input.InputManager.HasMouse") to 
 
 ###Mouse Position
 
-[MousePosition](xref="SiliconStudio.Xenko.Input.InputManager.MousePosition") returns mouse pointer position.
-It returns X and Y coordinates which determine mouse pointer position on the screen.
+[MousePosition](xref="SiliconStudio.Xenko.Input.InputManager.MousePosition") returns X and Y
+coordinates which determine mouse pointer position on the screen.
 The values for X and Y are between 0 and 1 (normalized values):
 
 * If (x,y) = (0,0): mouse pointer is in the top-left corner of the screen.
@@ -45,19 +45,18 @@ The values for X and Y are between 0 and 1 (normalized values):
 
 ###Mouse Delta
 
-Use [MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") to get mouse position since the last update.
+Use [MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") to get the change in mouse position since the last update.
 Use it to analyze mouse movement speed and direction.
 
 [MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") also uses **normalized coordinates**.
 
 ###Lock Mouse Position
 
-In many games you don't want mouse pointer to move beyond screen edges.
-This feature is very common in FPS games where you need a 360-degree rotation.
+In many games you want mouse pointer to move beyond screen edges.
+This feature is very common in FPS games where you need a 360-degree camera rotation.
 At the same time, you also want to hide mouse cursor, so that it doesn't confuse the user.
 
-Xenko allows you to lock mouse position and hide mouse pointer for these purposes.
-Use the following properties/methods to lock and unlock mouse position:
+Xenko allows you to lock mouse position and hide mouse pointer with the following properties/methods:
 
 | Method/Property | Description |
 | --- | --- |
@@ -90,10 +89,10 @@ This way, when mouse wheel position changes, it triggers certain events, e.g. sw
 
 [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") property returns the following values:
 
-* Any floating value: There is a scroll movement on mouse wheel.
+* Any floating value: There is a mouse wheel scroll movement.
 * 0: There is no movement.
 
-> [!Note] [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") returns a positive value when a user scrolls forward and negative value when he/she scrolls backwards.
+> [!Note] [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") returns a positive value when a user scrolls forward and negative value when scrolling backwards.
 
 > [!Note] By default, [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") returns 120*x, where X is amount of wheel steps scrolled during the last update.
 

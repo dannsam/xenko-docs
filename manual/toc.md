@@ -103,7 +103,7 @@
 ## [Mouse](input/mouse.md)
 ## [Pointers](input/pointers.md)
 ## [Sensors](input/sensors.md)
-## [Virtual Keys](input/virtual-keys.md)
+## [Virtual Buttons](input/virtual-buttons.md)
 
 # [Particles](particles/index.md)
 ## [Particles Reference](particles/reference/index.md)

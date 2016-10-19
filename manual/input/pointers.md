@@ -14,8 +14,8 @@ Here's how Xenko processes Input from Pointers.
 
 1. A user touches the screen (or presses left mouse button).
 2. Xenko **creates a Pointer**.
-3. Xenko assigns **PointerId** to that Pointer corresponding to a given finger.
-4. New **Pointer Event** with that Pointer ID is created every time a the **Pointer** is modified.
+3. Xenko assigns **Pointer ID** to that Pointer corresponding to a given finger.
+4. New **Pointer Event** with that Pointer ID is created every time this **Pointer** is modified.
 5. For the each new finger, Xenko creates a **new Pointer** with a **different ID**.
 
 > [!Warning]
@@ -57,17 +57,17 @@ You can use the following properties to get information about the pointer that t
 
 |Property|Description|
 |--------|-----------|
-|[PointerEvent.IsPrimary](xref="SiliconStudio.Xenko.Input.PointerEvent.IsPrimary")| Indicate if the pointer which triggered the event was the first finger to touch the screen |
-|[PointerEvent.PointerType](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerType") | Indicate if the pointer which triggered the event was simulated from _Mouse_ or real _Touch_. |
-|[PointerEvent.PointerId](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerId") | Indicate the id the **Pointer** which triggered the event. |
+|[PointerEvent.IsPrimary](xref="SiliconStudio.Xenko.Input.PointerEvent.IsPrimary")| Indicates if the pointer which triggered the event was the first finger to touch the screen |
+|[PointerEvent.PointerType](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerType") | Indicates if the pointer which triggered the event was simulated from _Mouse_ or real _Touch_. |
+|[PointerEvent.PointerId](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerId") | Indicates the id the **Pointer** which triggered the event. |
 
 > [!Warning]
-> The ID of a pointer is valid only during a single _Down->Move->Up_ sequence of pointer events.
+> The ID of a pointer is valid only during a single _Down->Move->Up_ sequence of the pointer events.
 > A finger can have different IDs each time it touches the screen (even if this happens very fast).
 
 > [!Warning]
-> Each OS have its own way to assign IDs to pointers.
-> You should not make any assumption between the pointer ID values and corresponding fingers.
+> Each OS has its own way to assign IDs to pointers.
+> There's no relation between the pointer ID values and corresponding fingers.
 
 ###Get Pointer Position
 
@@ -90,12 +90,11 @@ There are five possible states:
 * _Move_: Pointer changes position on the screen.
 * _Up_: Pointer left the screen.
 * _Out_: Pointer gets out of the touch region.
-* _Cancel_: The pointer sequence got canceled. This can happen for example when the application is interrupted (phone call, etc.).
+* _Cancel_: The pointer sequence got canceled. This can happen when the application is interrupted (phone call, etc.).
 
 > [!Note] A sequence of **Pointer Events** for a particular pointer
 > always starts with **Down** action, then followed by 0 or more **Move** actions
 > and ends with **Up**, **Out** or **Cancel** action.
-
 
 ###Get Delta Values
 
