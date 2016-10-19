@@ -19,14 +19,15 @@ There are **two main types** of gesture in Xenko:
 
 * **Continuous** gestures (_Drag_, _Composite_) that trigger a series of events every time an end-user changes the direction of the gesture.
 
-A gesture is always in one of the following states: _Began_, _Changed_, _Ended_, _Occurred_.
-You can query the current state of a gesture with [GestureEvent.State](xref="SiliconStudio.Xenko.Input.GestureEvent.State")
-field of the triggered gesture events.
+A gesture can have one of the four states: _Began_, _Changed_, _Ended_, _Occurred_.
 
 > [!Note] A _Discrete_ gesture always has a state **Occurred**.
 
 > [!Note] A _Continuous_ gesture always starts with **Began** action, then followed by 0 or more **Changed** actions
 > and ends with **Ended** action.
+
+You can query the current state of a gesture with [GestureEvent.State](xref="SiliconStudio.Xenko.Input.GestureEvent.State")
+field of the triggered gesture events.
 
 ### Gesture Configuration
 
@@ -81,14 +82,13 @@ The list is cleared every update, so you don't need to clear it manually. All **
 
 **Event class**: [GestureEventDrag](xref="SiliconStudio.Xenko.Input.GestureEventDrag")
 
-**Action description**: A user touches the screen, performs a translation and withdraws his/her finger(s).
+**Action description**: A user touches the screen, performs a translation and withdraws finger(s).
 
 **Comments**: The number of fingers on the screen cannot vary during the gesture.
 You can decrease [GestureConfigDrag.MinimumDragDistance](xref="SiliconStudio.Xenko.Input.GestureConfigDrag.MinimumDragDistance")
 if the gesture must be triggered for **smaller drags**. 
 
-You can restrict direction of the drag to **vertical** or **horizontal** by using 
-[GestureConfigDrag.DragShape](xref="SiliconStudio.Xenko.Input.GestureConfigDrag.DragShape").
+You can restrict direction of the drag to **vertical** or **horizontal** by using [GestureConfigDrag.DragShape](xref="SiliconStudio.Xenko.Input.GestureConfigDrag.DragShape").
 In that case, the gesture is triggered only if it is close enough to the indicated direction.
 
 ###Flick Gesture 
@@ -101,7 +101,7 @@ In that case, the gesture is triggered only if it is close enough to the indicat
 
 **Event class**: [GestureEventFlick](xref="SiliconStudio.Xenko.Input.GestureEventFlick")
 
-**Action description**: A user touches the screen, performs a quick straight translation and withdraws his/her finger(s).
+**Action description**: A user touches the screen, performs a quick straight translation and withdraws finger(s).
 
 **Comments**: The number of fingers on the screen cannot vary during the gesture.
 You can modify [GestureConfigFlick.MinimumFlickLength](xref="SiliconStudio.Xenko.Input.GestureConfigFlick.MinimumFlickLength") 
@@ -154,7 +154,7 @@ You can modify [GestureConfigLongPress.RequiredPressTime](xref="SiliconStudio.Xe
 
 **Event class**: [GestureEventTap](xref="SiliconStudio.Xenko.Input.GestureEventTap")
 
-**Action description**: A user touches the screen and removes his/her fingers quickly without moving.
+**Action description**: A user touches the screen and removes fingers quickly without moving.
 
 **Comments**: The number of fingers on the screen cannot vary during the gesture.
 You can modify [GestureConfigTap.RequiredNumberOfTaps](xref="SiliconStudio.Xenko.Input.GestureConfigTap.RequiredNumberOfTaps") field to manage the required number of taps to detect.
