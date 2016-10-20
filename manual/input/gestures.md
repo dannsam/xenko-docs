@@ -13,13 +13,13 @@ For instance, in a strategy game you can drag and drop a unit to the battlefield
 ##Overview
 
 Gestures can be single or multi-finger.
-There are **two main types** of gesture in Xenko:
+There are **two main types** of gestures in Xenko:
 
 * **Discrete** gestures (_Flick_, _LongPress_, _Tap_) that trigger a single event when they are recognized.
 
 * **Continuous** gestures (_Drag_, _Composite_) that trigger a series of events every time an end-user changes the direction of the gesture.
 
-A gesture can have one of the four states: _Began_, _Changed_, _Ended_, _Occurred_.
+A gesture always has one of the four states: _Began_, _Changed_, _Ended_, _Occurred_.
 
 > [!Note] A _Discrete_ gesture always has a state **Occurred**.
 
