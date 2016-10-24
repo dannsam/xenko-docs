@@ -78,7 +78,7 @@ To get the values of **Triggers** and **Thumbs' Rotations**, use the following f
 | [LeftTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axis. |
 | [RightTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
 
-Thumb sticks' move along _Ox_ and _Oy_ axes in all four directions. Therefore, their position reads as follows:
+Thumb sticks move along _Ox_ and _Oy_ axes in all four directions. Therefore, their position reads as follows:
 
 ![Query Thunmb Position](media/index-gamepad-stick-position-1.png)
 ![Query Thunmb Position](media/index-gamepad-stick-position-2.png)
