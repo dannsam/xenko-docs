@@ -27,6 +27,7 @@ The image show gamepad buttons with their equivalent names in Xenko.
 ![Xbox Gamepad](media/input-gamepad-standard-gamepad.png)
 
 Gamepads have **three types of buttons**:
+
 1. **Digital** buttons have only three states: _Pressed_, _Down_, _Released_. 
 These are digital buttons: _Pad buttons_, _Start_, _Back_, _A_, _B_, _X_ and _Y_.
 2. **Analog** buttons return a value between 0 and 1 that indicates how hard a user is pressing the button. 
@@ -51,7 +52,7 @@ _Index (integer)_: The index of the gamepad that you want to check.
 
 _Button (GamePadButton)_: The gamepad button that you want to check.
 
-You can also get the state of digital buttons using the [GamePadState.Buttons](xref="SiliconStudio.Xenko.Input.GamePadState.Buttons") field.
+You can also get the state of digital buttons using the [GamePadState.Buttons](xref="SiliconStudio.Xenko.Input.GamePadState.Buttons").
 
 > [!Note] ``Buttons`` field is a bitmask that uses binary system.
 > Depending on the bitmask value you can determine which buttons are _Up_ or _Down_.
@@ -73,9 +74,18 @@ To get the values of **Triggers** and **Thumbs' Rotations**, use the following f
 | Field | Description |
 |----|----|
 | [LeftThumb](xref="SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | Left thumb stick x-axis/y-axis value in the range [-1.0f, 1.0f] for both axis. |
-| [LeftTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axis. |
 | [RightThumb](xref="SiliconStudio.Xenko.Input.GamePadState.RightThumb) | Right thumb stick x-axis/y-axis value in the range [-1.0f, 1.0f] for both axis. |
+| [LeftTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axis. |
 | [RightTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
+
+Thumb sticks' move along _Ox_ and _Oy_ axes in all four directions. Therefore, their position reads as follows:
+
+![Query Thunmb Position](media/index-gamepad-stick-position-1.png)
+![Query Thunmb Position](media/index-gamepad-stick-position-2.png)
+
+Trigger move along a single _Ox_ axis. Therefore, their position reads as follows:
+
+![Query Trigger Position](media/index-gamepad-trigger-position.png)
 
 ### Gamepad Vibration
 

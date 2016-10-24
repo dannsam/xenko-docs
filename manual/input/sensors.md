@@ -22,7 +22,8 @@ enabling or testing the availability of the sensor.
 
 Sensors are state-based. Each sensor instance is **automatically updated** every frame, and it contains the value of the sensor just before the update.
 
-**Access a sensor**
+**Access Sensor**
+
 ```
 var accelerometer = Input.Accelerometer;
 ```
@@ -36,7 +37,7 @@ if the corresponding sensor is supported and available on the current system.
 > [!Note]
 > When a sensor type is not natively supported by the system, Xenko will **try to emulate** it from other sensor inputs when possible.
 
-**Check the availability of a sensor**
+**Check availability of the sensor**
 ```
 var hasCompass = Input.Compass.IsSupported;
 ```
@@ -73,7 +74,8 @@ Use [Input.Orientation](xref="SiliconStudio.Xenko.Input.InputManager.Orientation
 > You can use the form that best fits your needs, but we recommend to use the quaternion form when possible. This form does 
 > not suffer from Gimbal lock problem.
 
-**Access the orientation of your device**
+**Access orientation of the device**
+
 ```
   var orientation = Input.Orientation.Quaternion;
 ```
@@ -90,7 +92,7 @@ Xenko Supports three types of **motion sensors**:
 
 The three motion sensors utilize the following **physic relation**: 
 
-* ```Accelerometer = Gravity + UserAcceleration``` 
+```Accelerometer = Gravity + UserAcceleration``` 
 
 The below image illustrates this relation:
 

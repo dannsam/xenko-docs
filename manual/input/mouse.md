@@ -28,9 +28,7 @@ Use [Input.HasMouse](xref="SiliconStudio.Xenko.Input.InputManager.HasMouse") to 
 
 > [!Note] Currently Xenko does not support mouse plugged at run-time. This feature will be added in the future releases.
 
-##Query Mouse States
-
-###Mouse Position
+##Query Mouse Position
 
 [MousePosition](xref="SiliconStudio.Xenko.Input.InputManager.MousePosition") returns X and Y
 coordinates which determine mouse pointer position on the screen.
@@ -43,30 +41,7 @@ The values for X and Y are between 0 and 1 (normalized values):
 > This way, mouse pointer position adjusts correctly to any screen resolution,
 > so you don't have to write separate code for every screen size.
 
-###Mouse Delta
-
-Use [MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") to get the change in mouse position since the last update.
-Use it to analyze mouse movement speed and direction.
-
-[MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") also uses **normalized coordinates**.
-
-###Lock Mouse Position
-
-In many games you want mouse pointer to move beyond screen edges.
-This feature is very common in FPS games where you need a 360-degree camera rotation.
-At the same time, you also want to hide mouse cursor, so that it doesn't confuse the user.
-
-Xenko allows you to lock mouse position and hide mouse pointer with the following properties/methods:
-
-| Method/Property | Description |
-| --- | --- |
-| [LockMousePosition(Boolean)](xref="SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System.Boolean") | Locks mouse position and hides mouse pointer until the next call to ``UnlockMousePosition ()`` event. |
-| [UnlockMousePosition()](xref="SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition") | Unlocks mouse position previously locked by ``LockMousePosition (Boolean)`` event, and restores mouse visibility. |
-| [IsMousePositionLocked](xref="SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked") | Checks if mouse position is currently locked. |
-
-> [!Tip] You can get or set mouse visibility with [GameWindow.IsMouseVisible](xref="SiliconStudio.Xenko.Games.GameWindow.IsMouseVisible").
-
-###Changes of Mouse Button States
+##Query Change of Mouse Button States
 
 You can use mouse buttons to trigger various actions in a game.
 For example, left mouse button is commonly used to shoot, jump, move left, etc.
@@ -82,6 +57,13 @@ For example, left mouse button is commonly used to shoot, jump, move left, etc.
 | [IsMouseButtonPressed (MouseButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsMouseButtonPressed.SiliconStudio.Xenko.Input.MouseButton") | Checks if a specified mouse button was pressed in the last update. |
 | [IsMouseButtonReleased (MouseButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsMouseButtonReleased.SiliconStudio.Xenko.Input.MouseButton") | Checks if a specified mouse button was released in the last update. |
 
+###Mouse Delta
+
+Use [MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") to get the change in mouse position since the last update.
+Use it to analyze mouse movement speed and direction.
+
+[MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") also uses **normalized coordinates**.
+
 ###Mouse Wheel Delta 
 
 You can use mouse wheel to control various actions in a game.
@@ -95,6 +77,23 @@ This way, when mouse wheel position changes, it triggers certain events, e.g. sw
 > [!Note] [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") returns a positive value when a user scrolls forward and negative value when scrolling backwards.
 
 > [!Note] By default, [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") returns 120*x, where X is amount of wheel steps scrolled during the last update.
+
+
+##Lock Mouse Position
+
+In many games you want mouse pointer to move beyond screen edges.
+This feature is very common in FPS games where you need a 360-degree camera rotation.
+At the same time, you also want to hide mouse cursor, so that it doesn't confuse the user.
+
+Xenko allows you to lock mouse position and hide mouse pointer with the following properties/methods:
+
+| Method/Property | Description |
+| --- | --- |
+| [LockMousePosition(Boolean)](xref="SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System.Boolean") | Locks mouse position and hides mouse pointer until the next call to ``UnlockMousePosition ()`` event. |
+| [UnlockMousePosition()](xref="SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition") | Unlocks mouse position previously locked by ``LockMousePosition (Boolean)`` event, and restores mouse visibility. |
+| [IsMousePositionLocked](xref="SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked") | Checks if mouse position is currently locked. |
+
+> [!Tip] You can get or set mouse visibility with [GameWindow.IsMouseVisible](xref="SiliconStudio.Xenko.Games.GameWindow.IsMouseVisible").
 
 ##Code Sample
 
