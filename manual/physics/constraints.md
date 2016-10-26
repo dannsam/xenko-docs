@@ -21,7 +21,7 @@ Constraints can link either two rigidbodies together or a single rigidbody to a 
 They can be extremely useful to simulate interesting physics behavior to enrich your game.
 
 Currently to create constrains you can use the following static methods from `Simulation`:
-```
+```cs
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, Matrix frameA, bool useReferenceFrameA);
 ```
 The method above will link rigidBodyA to the world at it's current location.
@@ -33,7 +33,7 @@ The method above will link rigidBodyA to the world at it's current location.
 
 `useReferenceFrameA` boolean is used to decide in which coordinate system (either rigidbody A or world) limits are applied.
 
-```
+```cs
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, RigidbodyComponent rigidBodyB, Matrix frameA, Matrix frameB, bool useReferenceFrameA)
 ```
 The method above will link rigidBodyA with rigidBodyB.
@@ -47,17 +47,17 @@ The method above will link rigidBodyA with rigidBodyB.
 
 #### Adding constraints to the simulation
 After a constrain has been created you can simply add it to the simulation from a script by calling:
-```
+```cs
 this.GetSimulation().AddConstraint(constraint);
 ```
 or:
-```
+```cs
 var disableCollisionsBetweenLinkedBodies = true;
 this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBodies);
 ```
 `disableCollisionsBetweenLinkedBodies` is useful when you want to prevent the two linked bodies to collide with eachother.
 Similarly removing a constrain from the simulation:
-```
+```cs
 this.GetSimulation().RemoveConstraint(constraint);
 ```
 
