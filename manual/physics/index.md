@@ -32,4 +32,7 @@ Few flags are important:
 * `ContinuosCollisionDetection`: This will initialize the `Simulation` with Continous collision detection support. Quite useful if you have very high velocity rigidbody such as bullets in a FPS game.
 * Other flags are not currently implemented/working.
 
-From the `Simulation` itself you can 
+From the `Simulation` itself you can change on the flight many things which include:
+* the `FixedTimeStep` time of the `Simulation`
+* the number of `MaxSubSteps` the engine should do in the case of update rate being slow.
+* the `Gravity` of the `Simulation`.
