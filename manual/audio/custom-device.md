@@ -3,16 +3,15 @@
 For example in the case of Oculus rift you want to make sure you use the right audio device.
 In that case you would do something like that within your custom Game constructor.
 
-```
+```cs
 namespace OculusRenderer
 {
-    public class OculusGame : Game, IVrGame
+    public class OculusGame : Game
     {
 		public OculusGame()
         {
-        	var deviceName = new StringBuilder(128);
-			OculusOvr.GetAudioDeviceID(deviceName);
-			var deviceUuid = new AudioDevice { Name = $"\\\\?\\SWD#MMDEVAPI#{deviceName}#{{e6327cad-dcec-4949-ae8a-991e976a79d2}}" };
+        	var deviceName = OculusOvr.GetAudioDeviceFullName();
+			var deviceUuid = new AudioDevice { Name = deviceName };
 			Audio.RequestedAudioDevice = deviceUuid;
         }
     }
