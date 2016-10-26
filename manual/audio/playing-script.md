@@ -10,6 +10,7 @@ music.IsLooping = true;
 music.Volume = 0.25f;
 music.Play();
 ```
+Should have explanation about the API somewhere even if very simple. (pause/play/stop/pitch/pan/etc) in proper categories (control playback, etc.)
 
 `Sound` are to be consumed in a `SoundInstance`, `SoundInstance` has many properties and methods to allow you to make your sound behave in many ways.
 In the example above we wanted just to play continously a background music.
@@ -48,3 +49,5 @@ await music.ReadyToPlay();
 music.Play();
 ```
 
+Remarks:
+call Play (resp. pause/stop) while it is playing (paused/stopped) as no effect and is ignored.
