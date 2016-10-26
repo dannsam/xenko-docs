@@ -24,8 +24,10 @@
 --->
 
 # [Audio](audio/index.md)
-## [AudioSystem](audio/audiosystem.md)
-## [AudioEngine](audio/audioengine.md)
+## [Import & Setup Sounds](audio/import-setup.md)
+## [Play Sounds](audio/todo.md)
+## [Advanced Features](audio/advanced-features.md)
+
 
 # [Game Studio](game-studio/index.md)
 ## [Prefabs](game-studio/prefabs/index.md)

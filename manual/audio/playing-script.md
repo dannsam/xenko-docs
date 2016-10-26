@@ -48,18 +48,3 @@ await music.ReadyToPlay();
 music.Play();
 ```
 
-### Playing custom audio data:
-The Xenko audio layer allows you to play your own custom audio streams. The streaming mechanism is completely up to you.
-All you have to do is creating a sub class of `DynamicSoundSource` , you could look at `CompressedSoundSource` source code to understand how to implement that.
-To consume a custom `DynamicSoundSource` at run time you would want to do something like this:
-```
-int sampleRate = 48000;
-bool mono = false;
-bool spatialized = false;
-DynamicSoundSource myCustomSource = new MyCustomSource(...);
-AudioListener listener = Audio.AudioEngine.DefaultListener;
-AudioEngine audioEngine = Audio.AudioEngine;
-SoundInstance myCustomInstance = new SoundInstance(audioEngine, listener, myCustomSource, sampleRate, mono, spatialized);
-await myCustomInstance.ReadyToPlay();
-myCustomInstance.Play();
-```
