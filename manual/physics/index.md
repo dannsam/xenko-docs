@@ -25,3 +25,11 @@ Besides collision detection and dynamic response, the physics simulation in Xenk
 * [Triggers](triggers.md) - these are objects that detect collision, but no not affect the objects that collide with it. This allows for script logic to be linked when an object enters (collides with) another object.
 * [Raycasting](raycasting.md) - this is the process of tracing a line (ray) through the scene, to find out which objects intersect with this ray. This can be useful for instance to find objects in the scene based on the screen position where the user clicks is mouse, or finding out which objects are affected by a fired projectile.
 * [Constraints](constraints.md) - constraints can be used to link colliders together with certain conditions. An exampleof this is: limbs that have a limited amount of rotation to be realistic.
+
+In Xenko the orchestrator of all those types above is a `Simulation`, the way a `Simulation` is initialized can be decided by few flags in the `PhysicsSettings` which are accessible from the Game Studio under the Game Settings.
+Few flags are important:
+* `CollisionsOnly`: This will initialize the `Simulation` to support collision detection but no dynamic will be simulated.
+* `ContinuosCollisionDetection`: This will initialize the `Simulation` with Continous collision detection support. Quite useful if you have very high velocity rigidbody such as bullets in a FPS game.
+* Other flags are not currently implemented/working.
+
+From the `Simulation` itself you can 
