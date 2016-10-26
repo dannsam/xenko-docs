@@ -24,4 +24,4 @@ Besides collision detection and dynamic response, the physics simulation in Xenk
 
 * [Triggers](triggers.md) - these are objects that detect collision, but no not affect the objects that collide with it. This allows for script logic to be linked when an object enters (collides with) another object.
 * [Raycasting](raycasting.md) - this is the process of tracing a line (ray) through the scene, to find out which objects intersect with this ray. This can be useful for instance to find objects in the scene based on the screen position where the user clicks is mouse, or finding out which objects are affected by a fired projectile.
-* [Constraints](constraints.md) - constraints can be used to link colliders together with certain conditions. An exampleof this is: limbs that have a limited amount of rotation to be realistic.  
+* [Constraints](constraints.md) - constraints can be used to link colliders together with certain conditions. An exampleof this is: limbs that have a limited amount of rotation to be realistic.
