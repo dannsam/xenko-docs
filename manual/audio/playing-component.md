@@ -1,8 +1,30 @@
-# Playing spatialized sounds
+#Play Audio
 
-In order to have spatialization a scene must contain at least one entity (generally the camera entity) with a `AudioListenerComponent`, this component provides the location in space of the listener, so to be able to apply effects and filtering to sounds in order to simulate 3D audio.
 
-Spatialized sounds must be played from a `AudioEmitterComponent`. Within such component you can assign directly from the Game Studio different Sounds, those sounds can be consumed by Scripts and they will always be considered to "emitt" waves from the Entity location.
+## Playing spatialized sounds
+**Spatialized Audio** requires at least one _Audio Receiver_ and one or multiple _Sound Emitters_.
+
+###Audio Listeners
+A receiver is any **Entity** in a Scene with an `AudioListenerComponent` component.
+Usually, you attach `AudioListener Component` to the user's camera view.
+This way the user can receive proper 3D sound from multiple `AudioEmitters` at runtime.
+
+Here's how to create an `AudioListener Component`:
+
+**Step 1:** Select an Entity you want to be an audio receiver.
+
+![Select an Entity](media/audio-add-audiolistener-component-select-entity.png)
+
+**Step 2:** In **Property Grid**, press _Add Component_.
+
+**Step 3:** Select `AudioListener Component`.
+
+![Add AudioListener Component](media/audio-add-audiolistener-component.png)
+
+###Audio Emitters
+Spatialized sounds are produced by **Entities** with an `AudioEmitter Component`.
+You can assign sound to these _Components_ in Game Studio, and then use **Scripts** to manage Audio at runtime.
+`AudioEmitter Component` always emits _Sounds_ from the Entity location.
 
 **TODO: Pic of game studio Entity with a AudioEmitterComponent and some sounds in it**
 
@@ -33,4 +55,4 @@ mySound2Controller.PlayAndForget();
 ```
 Please note that when using `PlayAndForget` the property `IsLooping` has no effect, those sounds will be always stopped when they end.
 
-
+##Play Audio from Scripts
