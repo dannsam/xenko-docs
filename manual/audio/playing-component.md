@@ -2,10 +2,11 @@
 
 
 ## Playing spatialized sounds
-**Spatialized Audio** requires at least one _Audio Receiver_ and one or multiple _Sound Emitters_.
+**Spatialized Audio** requires at least one _Audio Listener_ and one or multiple _Sound Emitters_.
+
 
 ###Audio Listeners
-A receiver is any **Entity** in a Scene with an `AudioListenerComponent` component.
+A listener is any **Entity** in a Scene with an `AudioListenerComponent` component.
 Usually, you attach `AudioListener Component` to the user's camera view.
 This way the user can receive proper 3D sound from multiple `AudioEmitters` at runtime.
 
@@ -21,10 +22,25 @@ Here's how to create an `AudioListener Component`:
 
 ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
 
+> [!Warning] On iOS, only one `AudioListenerComponent` will work.
+> You can still create multiple listeners but only one will be used.
+> This issue will be addressed in future releases.
+
 ###Audio Emitters
 Spatialized sounds are produced by **Entities** with an `AudioEmitter Component`.
-You can assign sound to these _Components_ in Game Studio, and then use **Scripts** to manage Audio at runtime.
-`AudioEmitter Component` always emits _Sounds_ from the Entity location.
+You can assign sound Assets to these _Components_ in Game Studio, and then use **Scripts** to manage Audio at runtime.
+`AudioEmitter Component` always emits _Sounds_ from Entity's location.
+
+###Doppler Effect
+Doppler effect describes sound waves produced by a mobile sound source.
+Sound coming from a moving object has different frequency depending on the observer's position:
+
+* Sound coming from an approaching source has higher frequency.
+* Sound of the same source moving away from the observer has lower frequency.
+
+**Spatialized Audio** takes Doppler effect into account for an even more natural audio experience.
+
+
 
 **TODO: Pic of game studio Entity with a AudioEmitterComponent and some sounds in it**
 
