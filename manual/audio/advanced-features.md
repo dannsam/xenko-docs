@@ -1,9 +1,9 @@
 
 
-## Set special loop points
+## Set Loop Points
 In Xenko you can play the whole audio file, or only its certain fragments.
 This way, you can access a single `Sound` file in multiple `SoundInstance` objects and simply play different ranges of this audio.
-It works much the same way as accessing individual Sprites of a **Sprite Sheet**.
+It works much the same way as accessing individual Sprites of a [Sprite Sheet](../animation/2d-animations.md).
 
 You setup **Loop Points** inside the audio file and play the required ranges at runtime.
 Use the following methods to achieve this objective:
@@ -17,23 +17,26 @@ Use the following methods to achieve this objective:
 [Should have a schema explaining how to make nice looping effects]
 |---beginning-play-once -------|loop-point-start-------------looping-part----------------loop-point-end|---------------------|end-of-track.
 
-Sample Code:
+Code Sample:
 
 ```cs
 var length = mySound.TotalLength;
-//assume the sound is 5 seconds.
+//Assume sample length is 5 seconds.
 var begin = TimeSpan.FromSeconds(2);
 var duration = TimeSpan.FromSeconds(2);
 mySoundInstance.SetRange(new PlayRange(begin, duration));
 ```
 
+## Stream Custom Audio
+Xenko allows you to play custom audio streams at runtime.
+The streaming mechanism is completely up to you: simply create a sub-class of `DynamicSoundSource`
 
+ you could look at `CompressedSoundSource` source code to understand how to implement that.
 
+To have a custom `DynamicSoundSource` at runtime you can use:
 
-## Playing custom audio data:
-The Xenko audio layer allows you to play your own custom audio streams. The streaming mechanism is completely up to you.
-All you have to do is creating a sub class of `DynamicSoundSource` , you could look at `CompressedSoundSource` source code to understand how to implement that.
-To consume a custom `DynamicSoundSource` at run time you would want to do something like this:
+Code Sample:
+
 ```
 int sampleRate = 48000;
 bool mono = false;
@@ -46,10 +49,12 @@ await myCustomInstance.ReadyToPlay();
 myCustomInstance.Play();
 ```
 
-## Use a not default audio device
+## Use Custom Audio Device
+Sometimes you don't want to use the default audio device, but want to access specific audio hardware.
+For example, you can access _Oculus Rift_ audio device from your custom _Game Constructor_.
+Use this code to play audio with the requested device at runtime.
 
-For example in the case of Oculus rift you want to make sure you use the right audio device.
-In that case you would do something like that within your custom Game constructor.
+Code Sample:
 
 ```cs
 namespace OculusRenderer
@@ -65,4 +70,3 @@ namespace OculusRenderer
     }
 }
 ```
-This code will make sure that when the game gets initialized and in turn the audio system, the right requested device will be used.
