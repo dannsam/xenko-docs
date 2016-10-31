@@ -1,18 +1,21 @@
 
 
 ## Set Loop Points
-In Xenko you can play the whole audio file, or only its certain fragments.
-This way, you can access a single `Sound` file in multiple `SoundInstance` objects and simply play different ranges of this audio.
+In Xenko, you can stream the whole audio file, or play its fragments.
+This way, you can pack different **Sounds** in a single file,
+and then access different ranges of this audio in multiple [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") objects.
 It works much the same way as accessing individual Sprites of a [Sprite Sheet](../animation/2d-animations.md).
 
 You setup **Loop Points** inside the audio file and play the required ranges at runtime.
-Use the following methods to achieve this objective:
+Use the following methods:
 
-`Sound.TotalLength`: total length of the `Sound` and that is achieved by reading the `Sound.TotalLength` property.
-`SoundInstance.SetRange(PlayRange range)`: set the actual range inside the audio file.
-`PlayRange`: timing information of the range, including starting point and the length of the range.
-`SoundInstance.Position` returns a `TimeSpan` with the actual time position of the range.
-`SoundInstance.IsLooping` make this range an actual loop point.
+| Method or Property | Functionality |
+|---------|-----------|
+| [Sound.TotalLength](xref="SiliconStudio.Xenko.Audio.Sound.TotalLength") | Total length of the [Sound](xref="SiliconStudio.Xenko.Audio.Sound"). |
+| [SoundInstance.SetRange(PlayRange range)](xref="SiliconStudio.Xenko.Audio.SoundInstance.SetRange.SiliconStudio.Xenko.Audio.PlayRange") | Set the time range inside the audio. |
+| [PlayRange](xref="SiliconStudio.Xenko.Audio.PlayRange") | Time information, including range's starting point and length. |
+| [SoundInstance.Position](xref="SiliconStudio.Xenko.Audio.SoundInstance.Position") | `TimeSpan` of the range (in seconds). |
+| [SoundInstance.IsLooping](xref="SiliconStudio.Xenko.Audio.SoundInstance.IsLooping") | Makes the range an actual loop point. |
 
 [Should have a schema explaining how to make nice looping effects]
 |---beginning-play-once -------|loop-point-start-------------looping-part----------------loop-point-end|---------------------|end-of-track.
