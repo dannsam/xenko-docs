@@ -73,8 +73,7 @@ Here's how to create an `AudioListener Component`:
 
 ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
 
-> [!Warning] On iOS, only one `AudioListenerComponent` will work.
-> You can still create multiple listeners but only one will be used.
+> [!Warning] On iOS, you can create multiple `AudioListenerComponent`, but only one will be used.
 > This issue will be addressed in future releases.
 
 ##Spatialized Audio
