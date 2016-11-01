@@ -17,6 +17,8 @@ Use the following methods:
 | [SoundInstance.Position](xref="SiliconStudio.Xenko.Audio.SoundInstance.Position") | `TimeSpan` of the range (in seconds). |
 | [SoundInstance.IsLooping](xref="SiliconStudio.Xenko.Audio.SoundInstance.IsLooping") | Makes the range an actual loop point. |
 
+![Loop Points](media/audio-advanced-features-loop-points.png)
+
 [Should have a schema explaining how to make nice looping effects]
 |---beginning-play-once -------|loop-point-start-------------looping-part----------------loop-point-end|---------------------|end-of-track.
 

@@ -19,14 +19,14 @@ This is how you can import audio files in Game Studio:
 **Step 5:** Choose Asset type:
 
 * _Sound Effect_: choose for smaller files that you want to play directly from memory.
-* _Spatialized Sound_: choose for spatialized sounds that you want to play directly from memory.
+* _Spatialized Sound_: choose for spatialized sounds that you want to play directly from the memory.
 For more information on spatialization, see [Play Object-Specific Audio](play-entity-audio.md).
 * _Music_: choose for larger files that you want to stream from the disk to save memory.
 * _Raw Asset_.
 
 ![Choose Asset type](media/import-audio-choose-asset-type.png)
 
-As soon as you import audio file, go to **Asset View** and click on a newly created **Audio Asset**.
+As soon as you import audio file, click on it in **Asset View** to select.
 Then, go to **Property Grid** to setup _Audio Properties_.
 
 ##Setup Audio Properties

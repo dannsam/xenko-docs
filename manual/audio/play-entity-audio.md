@@ -1,49 +1,61 @@
 #Play Object-Specific Audio
-Unlike [Background Audio](play-background-audio.md) that affects equally the whole Scene,
-**Object-Specific Audio** depends on an **Entity**.
-The parameters of such Audio (e.g. volume, pitch, etc.) change 
-For this, you need two components:
+Unlike [Background Audio](play-background-audio.md) that affects the whole Scene,
+**Object-Specific Audio** is attached to **Entities**.
+You can attach _Audio Components_ to any Entity, including cameras, 3D models, sprites, and more.
 
-1. `Audio Emitter` that will play the sounds
-2. `Audio Receiver` that will be able to hear **Audio** at runtime.
+Object-specific Audio does not have same volume and pitch throughout the **Scene**.
+These parameters vary depending on the distance to the object that emits sound.
+ 
+Therefore, to hear _Object-Specific Audio_, you need to have:
 
-
+1. `Audio Emitter` plays the sounds.
+2. `Audio Listener` is able to hear **Audio** if it's close enough to the `Emitter`.
 
 ##Audio Emitters
-You can attach [AudioEmitter](xref="SiliconStudio.Xenko.Audio.AudioEmitter") _Component_ to any Entity.
+An emitter is any **Entity** in a Scene with an [AudioEmitter](xref="SiliconStudio.Xenko.Audio.AudioEmitter") _Component_.
 
 > [!Note] You need at least one ``AudioListenerComponent`` in the Scene,
-> otherwise sound from `AudioEmitters` will not be played.
+> otherwise you will not be able to hear the audio from `AudioEmitters` at runtime.
 
-Here's how to create an `AudioEmitter Component`:
+You can access [AudioEmitters](xref="SiliconStudio.Xenko.Audio.AudioEmitter") in two ways.
+With both options, you need to add `AudioEmitter` and `Script` _Components_ to a single Entity.
+For more information, see [Audio Emitters](audio-emitters.md).
 
-**Step 1:** In **Scene View**, select an Entity you want to be an _Audio Emitter_.
+##Audio Listeners
+A listener is any **Entity** with an [AudioListener](xref="SiliconStudio.Xenko.Audio.AudioListener") _Component_.
+Usually, you attach [AudioListener](xref="SiliconStudio.Xenko.Audio.AudioListener") _Component_ to the user's camera view,
+but can use it with any other Entity, too.
+There can be multiple `AudioListeners` in a **Scene**.
+
+Here's how to add an `AudioListener Component` to **Entity**:
+
+**Step 1:**  In **Scene View**, select an Entity you want to be an _Audio Listener_.
 
 ![Select an Entity](media/audio-add-audiolistener-component-select-entity.png)
 
-**Step 2:** In **Property Grid**, press _Add Component_.
+**Step 2:** In **Property Grid**, press _Add Component_ and select `AudioListener Component`.
 
-**Step 3:** Select `AudioEmitter Component`.
+![Add AudioListener Component](media/audio-add-audiolistener-component.png)
 
-![Add AudioEmitter Component](media/audio-add-audioemitter-component-select-entity.png)
+You don't need to setup `AudioListeners` as they only receive the sound.
+All sound settings, including _Volume_ and _Pitch_ and handled entirely with `AudioEmitters'.
+For more information, see [Audio Emitters](audio-emitters.md).
 
-**Step 4:** Press _Add New Sound_ and change its name if required.
+> [!Warning] On iOS, you can create multiple `AudioListenerComponent` objects, but only one will be used.
+> This issue will be addressed in the future releases.
 
-![Add New Sound Entry](media/audio-play-audioemitter-component-add-new-entry.png)
+##Spatialized Audio
+_Spatialized Sounds_ are produced by **Entities** with an `AudioEmitter Component`.
+You can assign _Audio Assets_ to these _Components_, and then use **Scripts** to manage _Spatialized Audio_ at runtime.
 
-**Step 5:** Drag and drop **Audio Asset** directly from **Asset View**.
+_Spatialized Audio_ takes listener's position into account.
+`Emitter` of the _Spatialized Audio_ reads receiver's position,
+and than accurately simulates sounds in a 3-Dimensional space around that position.
+Therefore, **Spatialized Audio** requires at least one _Audio Listener_ and one _Sound Emitter_ in the **Scene**.
 
-![Drag and Drop Audio Asset](media/audio-play-drag-and-drop-audio-asset.gif)
+![Spatialized Audio](media/audio-index-spatialized-audio.png)
 
-Alternatively press _Pick an Asset Up_:
-
-![Pick an Asset Up](media/audio-play-audioemitter-component-pick-an-asset.png)
-
-Then choose the required **Audio Asset**.
-
-![Select Audio Asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
-
-Here's a snippet that shows how you can setup such audio:
+Here's a snippet that shows how you can setup 3D audio:
 
 ```cs
 public override void Start()
@@ -56,77 +68,22 @@ public override void Start()
    }
 ```
 
-##Audio Listeners
-A listener is any **Entity** in a Scene with an `AudioListener` component.
-Usually, you attach `AudioListener Component` to the user's camera view, but can use it with any other Entity.
-You can have multiple `AudioListeners` in a **Scene**.
-
-Here's how to create an `AudioListener Component`:
-
-**Step 1:**  In **Scene View**, select an Entity you want to be an _Audio Listener_.
-
-![Select an Entity](media/audio-add-audiolistener-component-select-entity.png)
-
-**Step 2:** In **Property Grid**, press _Add Component_.
-
-**Step 3:** Select `AudioListener Component`.
-
-![Add AudioListener Component](media/audio-add-audiolistener-component.png)
-
-> [!Warning] On iOS, you can create multiple `AudioListenerComponent`, but only one will be used.
-> This issue will be addressed in future releases.
-
-##Spatialized Audio
-Spatialized sounds are produced by **Entities** with an `AudioEmitter Component`.
-You can assign sound Assets to these _Components_, and then use **Scripts** to manage Audio at runtime.
-You can have as many `AudioEmitters` in the **Scene**, as you need.
-
-**Spatialized Audio** takes into account listener's position.
-Emitter of the Spatialized Audio reads receiver's position, and than accurately simulates sounds around that position.
-Therefore, **Spatialized Audio** requires at least one _Audio Listener_ and one _Sound Emitter_ in the **Scene**.
-
-![Spatialized Audio](media/audio-index-spatialized-audio.png)
-
 ###Doppler Effect
 _Doppler Effect_ describes sound waves produced by a mobile sound source.
-Sound coming from a moving object has different frequency depending on the observer's position:
+The frequency of the sound coming from a moving object varies depending on the observer's position:
 
-* Sound from _Approaching_ source has higher frequency.
-* Sound from _Recending_ source has lower frequency.
+* Sound from _Approaching_ source has _Higher_ frequency.
+* Sound from _Recending_ source has _Lower_ frequency.
 
 ![Doppler Effect](media/audio-index-play-audio-doppler-effect.png)
 
 **Spatialized Audio** takes _Doppler Effect_ into account to create a even more natural listener's experience.
 
-**TODO: Pic of game studio Entity with a AudioEmitterComponent and some sounds in it**
-
-
-###This is because in the Scene you might have multiple
-###listeners and so to play the sound internally the engine might create multiple `SoundInstance`.
-
+> [Note!] Xenko always converts 3D spatialized sounds to Mono (Single channel) sounds.
 
 ##Code Samples
-##Access Spatialized Audio from Code
-Here' a code snippet that plays Audio by instantiating
-[AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController"):
 
-```
-AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>();
-AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1"];
-AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
-```
-
-[AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") 
-works similarly to [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance").
-You can access sounds from the above example like this:
-
-```
-mySound2Controller.IsLooping = true;
-mySound2Controller.Pitch = 2.0f;
-mySound2Controller.Volume = 0.5f;
-mySound2Controller.Play();
-```
-
+```cs
 public class EmitterScr : SyncScript
 {
         
@@ -176,23 +133,7 @@ public class EmitterScr : SyncScript
         }
     }
 }
-
-
-
-
-With [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") you can use _Play and Forget_ functionality:
-
-###This is very useful in the case of for example, bullets, one hit and forget sounds, etc.
-###With play and forget you don't have to care about stopping the sound
-###and internally the engine will allocate and clean up resources transparently.
-
 ```
-mySound2Controller.PlayAndForget();
-```
-> [!Note] When you use [AudioEmitterSoundController.PlayAndForget](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayAndForget"),
-> [AudioEmitterSoundController.IsLooping](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.IsLooping") has no effect.
-> Such sounds will be played only once, without looping effect.
-
 
 <div class="doc-relatedtopics">
 * [Play Background Audio](play-background-audio.md)
