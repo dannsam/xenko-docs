@@ -1,12 +1,12 @@
 #Advanced Audio Features
 
 ## Set Loop Points
-In Xenko, you can stream the whole audio file, or play its fragments.
+In Xenko, you can stream the whole audio file, or play only its fragments.
 This way, you can pack different **Sounds** in a single file,
 and then access different ranges of this audio in multiple [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") objects.
-It works much the same way as accessing individual Sprites of a [Sprite Sheet](../animation/2d-animations.md).
 
-You setup **Loop Points** inside the audio file and play the required ranges at runtime.
+It works much the same way as accessing individual **Sprites** of a [Sprite Sheet](../animation/2d-animations.md).
+Simply, setup **Loop Points** inside the audio file and play the required ranges at runtime.
 Use the following methods:
 
 | Method or Property | Functionality |
