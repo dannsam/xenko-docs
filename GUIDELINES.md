@@ -5,7 +5,7 @@ breaks: false
 # Guidelines
 
 Xenko users will be reading your articles to learn about the engine in their every day work. 
-Your goal is to write pages easy to understand and that are accessible to all. 
+Your goal is to write pages that are easy to understand and accessible to all. 
 To help you in your quest and to have an unified documentation easy to use,
 we ask you to follow to the below Guidelines when writing.
 
