@@ -25,8 +25,8 @@ Use the following methods:
 Code Sample:
 
 ```cs
-var length = mySound.TotalLength;
 //Assume sample length is 5 seconds.
+var length = mySound.TotalLength;
 var begin = TimeSpan.FromSeconds(2);
 var duration = TimeSpan.FromSeconds(2);
 mySoundInstance.SetRange(new PlayRange(begin, duration));

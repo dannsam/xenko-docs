@@ -1,11 +1,11 @@
 #Spatialized Audio
 **Spatialized Audio** (3D Audio) is a special type of [Object-Specific Audio](entity-audio.md).
-It is closer to real-life sound than stereo as it uses all three dimensions to simulate sounds at runtime.
-
+It uses all three dimensions to simulate sounds at runtime, so it's closer to real-life sound than stereo .
 The difference between _Spatialized_ and _non-Spatialized_ Audio is explained [here](index.md).
 
-If **Spatialized Audio** in enabled, Xenko tracks `AudioListener's` position relative to `AudioEmitters`.
-System then takes this relation into account to simulate accurate sounds in a 3-Dimensional space around `AudioListener`.
+If **Spatialized Audio** is enabled, Xenko tracks position of `AudioListeners` and `AudioEmitters`,
+as well as their movement direction, speed, and other parameters.
+System then takes all this data into account to simulate accurate sounds in a 3-Dimensional space around `AudioListener`.
 This technology is a perfect fit for VR applications, and is also widely used in conventional platform and desktop games.
 
 ![Spatialized Audio](media/audio-index-spatialized-audio.png)
@@ -15,9 +15,10 @@ This technology is a perfect fit for VR applications, and is also widely used in
 
 ###Import and Setup
 Import _Spatialized Audio_ just like any other sounds or music.
+See [Import and Setup Audio](import-setup.md) for more information on how to import and setup Audio.
 When prompted to choose _Asset Type_, select _Spatialized Sound_.
 
-> [Note!] Xenko always converts 3D spatialized sounds to Mono (Single channel) sounds.
+> [Note!] Xenko always converts 3D spatialized audio to Mono (Single channel) sounds.
 
 You can also change _non-Spatialized Audio_ to _Spatialized_ in **Property Grid**:
 
@@ -26,8 +27,6 @@ You can also change _non-Spatialized Audio_ to _Spatialized_ in **Property Grid*
 **Step 2:** In **Property Grid**, tick _Spatialized_: 
 
 ![Tick Spatialized Sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
- 
-See [Import and Setup Audio](import-setup.md) for more information on how to import and setup Audio.
 
 ###Adjust Settings
 Just like other _Object-Specific Audio_, **Spatialized Sounds** are produced by **Entities** with an `AudioEmitter Component`.

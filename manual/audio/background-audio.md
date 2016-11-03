@@ -1,10 +1,10 @@
 #Background Audio
 
-Sometimes you need play _Background_ or _Ambient Audio_ that equally affects the whole **Scene**.
+Sometimes you need play **Background** (**Ambient**) **Audio** that equally affects the whole **Scene**.
 This feature is commonly reserved for _Menu Music_, _Game Music_, and other _Background Sounds_.
 
-**Background Audio** does not require Audio _Listeners_ or _Emitters_,
-as it has the same _Volume_, _Pitch_, and other _Sound Parameters_ throughout the **Scene**.
+**Background Audio** does not require _Audio Listeners_ or _Emitters_,
+as it has the same _Volume_, _Pitch_ (_Frequency_), and other _Sound Parameters_ throughout the **Scene**.
 To play **Background Audio** at runtime, you need to instantiate it and adjust its settings entirely in **Visual Studio**.
 
 > [!Note] Make sure you reference _Audio Asset_ in a **Script**
@@ -24,7 +24,7 @@ It has multiple _Properties_ and _Methods_ that control _Audio Settings_ at runt
 | [Position](xref="SiliconStudio.Xenko.Audio.SoundInstance.Position")	| Gets the currently played point of the audio track. |
 | [Volume](xref="SiliconStudio.Xenko.Audio.SoundInstance.Volume")	| Volume settings of the sound. |
 
-For more details on _Properties_ and _Methods_, see [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") documentation.
+For more details on _Properties_ and _Methods_, see [Xenko API documentation](xref="SiliconStudio.Xenko.Audio.SoundInstance") documentation.
 
 ##Stream from Disk
 More often than not, you want to stream large audio files from the disk to save memory.
@@ -36,7 +36,7 @@ Here's how to handle _Streams_ in Xenko:
 
 ![Audio Asset Properties](media/audio-asset-properties-property-grid.png)
 
-**Step 3:** In **Visual Studio**, you can setup track to start playing only once the audio engine buffers enough audio samples.
+**Step 3:** In **Visual Studio**, you can setup track to start playing once the audio engine buffers enough audio samples.
 You can do so with the following `Task`:
 
 ```cs
@@ -46,7 +46,7 @@ music.Play();
 ```
 
 > [!Note] If the track is playing, Xenko ignores all additional calls to [SoundInstance.Play](xref="SiliconStudio.Xenko.Audio.SoundInstance.Play").
-> Works similarly with [SoundInstance.Pause](xref="SiliconStudio.Xenko.Audio.SoundInstance.Pause") and [SoundInstance.Stop](xref="SiliconStudio.Xenko.Audio.SoundInstance.Stop").
+> Works the same for [SoundInstance.Pause](xref="SiliconStudio.Xenko.Audio.SoundInstance.Pause") and [SoundInstance.Stop](xref="SiliconStudio.Xenko.Audio.SoundInstance.Stop").
 
 ##Code Sample
 Here's a code sample that shows how to instantiate _Background Audio_,
@@ -58,7 +58,7 @@ public override async Task Execute()
     // Load music.
     Sound musicSound = Content.Load<Sound>("Sounds/combat_music_xenko");
     
-    Create Sound Instance.
+    // Create Sound Instance.
     SoundInstance music = SoundMusic.CreateInstance();
 
     if (!IsLiveReloading)
@@ -75,7 +75,6 @@ public override async Task Execute()
     }
 }
 ```
-
 
 <div class="doc-relatedtopics">
 * [Object-Specific Audio](entity-audio.md)

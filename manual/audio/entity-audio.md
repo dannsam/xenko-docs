@@ -3,9 +3,9 @@ Unlike [Background Audio](background-audio.md) that affects the whole Scene,
 **Object-Specific Audio** is attached to a particular **Entity**.
 You can add _Audio Components_ to any Entity, including cameras, 3D models, sprites, and more.
 
-**Object-specific Audio** does not have identical _Volume_ and _Pitch_ (frequency) throughout the **Scene**.
+**Object-specific Audio** does not have identical _Volume_ and _Pitch_ (_Frequency_) throughout the **Scene**.
 These parameters vary as you move closer and further from the `Audio Emitter`. 
-To hear _Object-Specific Audio_, you need two elements:
+To hear _Object-Specific Audio_ at runtime, you need two elements:
 
 1. `Audio Listener` that is able to hear **Audio**, if it's close enough to the `Emitter`.
 2. `Audio Emitter` that plays the sounds.
@@ -13,7 +13,7 @@ To hear _Object-Specific Audio_, you need two elements:
 ##Audio Listeners
 A _Listener_ is an **Entity** with an `AudioListener Component`.
 Usually, you attach `AudioListener Component` to the user's camera view, but can use it with any other Entity, too.
-There can be multiple `AudioListeners` in a **Scene**.
+There can be multiple `AudioListeners` in a **Scene**, e.g. in multi-player games.
 
 Here's how to add an `AudioListener Component` to an **Entity**:
 
@@ -25,8 +25,8 @@ Here's how to add an `AudioListener Component` to an **Entity**:
 
 ![Add AudioListener Component](media/audio-add-audiolistener-component.png)
 
-You don't need to setup `AudioListeners` as they only receive the sound.
-All sound settings, including _Volume_ and _Pitch_ and handled entirely via `AudioEmitters`.
+You don't need to setup `AudioListeners` as they only receive the audio.
+All sound settings, including _Volume_ and _Pitch_ (_Frequency_) and handled entirely via `AudioEmitters`.
 
 > [!Warning] On iOS, you can create multiple objects with `AudioListener Component` in a Scene.
 > Yet, only one will be used at runtime.
@@ -34,9 +34,10 @@ All sound settings, including _Volume_ and _Pitch_ and handled entirely via `Aud
 
 ##Audio Emitters
 An _Emitter_ is an **Entity** with an `AudioEmitter Component`.
+There can be multiple `AudioEmitters` in a **Scene**.
+
 There are two ways to access [AudioEmitters](xref="SiliconStudio.Xenko.Audio.AudioEmitter") in Xenko.
 With both options, you need to add `AudioEmitter` and `Script` _Components_ to the same Entity.
-There can be multiple `AudioEmitters` in a **Scene**.
  
 > [!Note] You need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Audio.AudioListener") in the Scene,
 > otherwise you will not be able to hear the audio from [AudioEmitters](xref="SiliconStudio.Xenko.Audio.AudioEmitter") at runtime.
@@ -45,7 +46,7 @@ There can be multiple `AudioEmitters` in a **Scene**.
 ####1: Add AudioEmitter Component
 Here's how to add `AudioEmitter Component` to an **Entity**:
 
-**Step 1:** In **Scene View**, select an Entity you want to be an _Audio Emitter_.
+**Step 1:** In **Scene View**, select an Entity you want to be an _AudioEmitter_.
 
 ![Select an Entity](media/audio-add-audiolistener-component-select-entity.png)
 
@@ -73,11 +74,11 @@ Then choose the required _Audio Asset_.
 
 ####2: Create Script
 In **Visual Studio**, create a _Script_ and access _Audio Assets_ with the names you used in `AudioEmitter Component`.
-For instance, in the example below you have two sounds: _MySound1_ and _MySound2_:
+For instance, in the example below you have two sounds (_MySound1_ and _MySound2_):
 
 ![List of Sounds in AudioEmitter Component](media/audio-emitters-dictionary-of-sounds-audio-emitter-component.png)
 
-Instantiate [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController")
+So now you need to instantiate [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController")
 for each sound you want to use in this script.
 In the above example you would access sounds as follows:
 
@@ -94,16 +95,16 @@ that you can use:
 
 | Property/Method  | Description |
 |-------    |-------|
-| [IsLooping](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.IsLooping") | Gets or sets looping of the audio: when track's end is reaches, audio starts over. |
-| [Pitch](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Pitch")     | Gets or sets sound pitch. Use with caution for spatialized audio. |
-| [PlayState](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayState")	| Gets the state of the [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance"). |
-| [Volume](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Volume")	| Volume settings of the sound. |
-| [Pause()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Pause")	| Pause Audio. |
-| [Play()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Play")      | Play audio. |
+| [IsLooping](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.IsLooping") | Gets or sets looping of the audio: when the system reached the end of the track, audio starts over. |
+| [Pitch](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Pitch")     | Gets or sets sound pitch (frequency). Use with caution for spatialized audio. |
+| [PlayState](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayState")	| Gets the current state of the [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance"). |
+| [Volume](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Volume")	| Volume of the audio. |
+| [Pause()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Pause")	| Pauses audio. |
+| [Play()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Play")      | Plays audio. |
 | [PlayAndForget()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayAndForget")| Plays audio once, and automatically clears memory when the audio is finished. |
-| [Stop()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Stop")	| Stop Audio. |
+| [Stop()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Stop")	| Stops audio. |
 
-For more information on `AudioEmitterSoundController` see [Xenko API documentation](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController")
+For more information on `AudioEmitterSoundController` see [Xenko API documentation](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController").
 
 You can adjust sounds from the above example like this:
 
@@ -129,15 +130,14 @@ Back in **Game Studio**, add `Script Component` to an **Entity**:
 
 ![Press Add Component](media/audio-emitters-add-script-component.png)
  
-**Step 3:** Select the _Script_ you want to add, in this example `EmitterScr`:
+**Step 3:** Select the _Script_ you want to add. For instance, an `EmitterScr` script:
 
 ![Add Script Component to Entity](media/audio-emitters-add-script-component-to-entity.png)
 
 ###Option II: Public Variables
 ####1: Add Public Variables
-In **Visual Studio**:
 
-**Step 1**: Create a Script.
+**Step 1**: Create a Script in **Visual Studio**.
 
 **Step 2**: Instantiate [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController"):
 
@@ -148,7 +148,6 @@ AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>(
 **Step 3**: Add **Public Variables** for each sound you want to use, for instance:
 
 ```cs
-// Music track is loaded from Game Studio as a public variable.
 private AudioEmitterSoundController musicController;
 public override void Start()
 {
@@ -162,7 +161,8 @@ public override void Start()
 ```
 
 ####2: Setup Audio
-As soon as you add **Public Variables**, you can setup audio with the _Properties_ and _Methods_ described in [Option I: AudioEmitter Component](###Option-I:-AudioEmitter-Component).
+As soon as you add **Public Variables**, you can setup audio with the
+_Properties_ and _Methods_ described in [Option I: AudioEmitter Component](#3-setup-audio).
 
 ####3: Add Script Component
 Back in **Game Studio**, add `Script Component` to an **Entity**:
@@ -175,7 +175,7 @@ Back in **Game Studio**, add `Script Component` to an **Entity**:
  
 ![Press Add Component](media/audio-emitters-add-script-component.png)
 
-**Step 3:** Select the _Script_ you want to add, in this example `SoundScript`:
+**Step 3:** Select the _Script_ you want to add, for instance `SoundScript`:
 
 ![Add Script Component to Entity](media/audio-emitters-add-script-component-to-entity-2.png)
 
@@ -193,9 +193,7 @@ Then choose the required _Audio Asset_.
 
 ![Select Audio Asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
-**Step 5:** Repeat **Step 3** and **Step 4** to tie _Audio Asset_ to every **Public Variable** you used in _Script_.
-
-
+**Step 5:** Repeat **Step 3** and **Step 4** to tie _Audio Asset_ to every **Public Variable** you used in the _Script_.
 
 ####4: Add AudioEmitter Component
 
@@ -205,9 +203,7 @@ Here's how to add `AudioEmitter Component` to an **Entity**:
 
 ![Select an Entity](media/audio-add-audiolistener-component-select-entity.png)
 
-**Step 2:** In **Property Grid**, press _Add Component_.
-
-**Step 3:** Select `AudioEmitter Component`.
+**Step 2:** In **Property Grid**, press _Add Component_ and select `AudioEmitter Component`.
 
 ![Add AudioEmitter Component](media/audio-add-audioemitter-component-select-entity.png)
 
@@ -215,7 +211,7 @@ Here's how to add `AudioEmitter Component` to an **Entity**:
 > Therefore, you don't need to attach _Sound Assets_ to this `Audio Emitter Component`.
 
 ##Code Samples
-The following code sample shows how to use both **Option** when handling _Audio_ at runtime:
+The following code sample shows how to use both **Options** when handling _Audio_ at runtime:
 
 ```cs
 public class EmitterScr : SyncScript

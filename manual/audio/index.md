@@ -1,13 +1,13 @@
 # Audio
 Xenko's fully integrated audio system supports many advanced features,
 e.g. steamed audio, 3D spatialized audio and low latency playback.
-You can import any sound files in the project to use in your games and applications.
+You can import any sound files and use them in your games and applications.
 
 ![Audio in Xenko](media/audio-index-intro-picture.png)
 
 ## Overview
-You can control global sound settings of your _Game_ or _Application_
-by accessing _Properties_ of [AudioEngine](xref="SiliconStudio.Xenko.Audio.AudioEngine") class:
+You can control **Global Audio Settings_ by accessing _Properties_
+of [AudioEngine](xref="SiliconStudio.Xenko.Audio.AudioEngine") class:
 
 | Property | Functionality |
 |--- | --- |
@@ -36,8 +36,7 @@ For more information, see [Object-Specific Audio](entity-audio.md).
 
 ### Streamed and non-Streamed Audio
 Xenko allows you to stay flexible when managing sounds.
-Either buffer entire audio files, or stream compressed audio from disk at runtime.
-
+Either buffer entire audio files, or stream compressed audio from the disk at runtime.
 The choice usually depends on the size of the audio file.
 More often than not, you want to stream bigger samples and play smaller files directly from the memory:
 
