@@ -3,6 +3,8 @@ Unlike [Background Audio](background-audio.md) that affects the whole Scene,
 **Object-Specific Audio** is attached to a particular **Entity**.
 You can add _Audio Components_ to any Entity, including cameras, 3D models, sprites, and more.
 
+> [!Note] Keep in mind, you can also control _Global Sound Settings_ of your game or application, see [Audio page](index.md).
+
 **Object-specific Audio** does not have identical _Volume_ and _Pitch_ (_Frequency_) throughout the **Scene**.
 These parameters vary as you move closer and further from the `Audio Emitter`. 
 To hear _Object-Specific Audio_ at runtime, you need two elements:
@@ -13,7 +15,7 @@ To hear _Object-Specific Audio_ at runtime, you need two elements:
 ##Audio Listeners
 A _Listener_ is an **Entity** with an `AudioListener Component`.
 Usually, you attach `AudioListener Component` to the user's camera view, but can use it with any other Entity, too.
-There can be multiple `AudioListeners` in a **Scene**, e.g. in multi-player games.
+There can be multiple `AudioListeners` in a **Scene**, particularly in multi-player games.
 
 Here's how to add an `AudioListener Component` to an **Entity**:
 
@@ -34,8 +36,6 @@ All sound settings, including _Volume_ and _Pitch_ (_Frequency_) and handled ent
 
 ##Audio Emitters
 An _Emitter_ is an **Entity** with an `AudioEmitter Component`.
-There can be multiple `AudioEmitters` in a **Scene**.
-
 There are two ways to access [AudioEmitters](xref="SiliconStudio.Xenko.Audio.AudioEmitter") in Xenko.
 With both options, you need to add `AudioEmitter` and `Script` _Components_ to the same Entity.
  
@@ -104,7 +104,7 @@ that you can use:
 | [PlayAndForget()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayAndForget")| Plays audio once, and automatically clears memory when the audio is finished. |
 | [Stop()](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Stop")	| Stops audio. |
 
-For more information on `AudioEmitterSoundController` see [Xenko API documentation](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController").
+For more details, see [Xenko API documentation](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController").
 
 You can adjust sounds from the above example like this:
 
@@ -207,8 +207,8 @@ Here's how to add `AudioEmitter Component` to an **Entity**:
 
 ![Add AudioEmitter Component](media/audio-add-audioemitter-component-select-entity.png)
 
-> [!Note] You've already added sounds as **Public Variables** in the _Script_.
-> Therefore, you don't need to attach _Sound Assets_ to this `Audio Emitter Component`.
+> [!Note] You've already added _Sounds_ as **Public Variables** in the _Script_.
+> Therefore, you don't need to attach _Audio Assets_ to this `Audio Emitter Component`.
 
 ##Code Samples
 The following code sample shows how to use both **Options** when handling _Audio_ at runtime:

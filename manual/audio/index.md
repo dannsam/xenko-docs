@@ -1,12 +1,12 @@
 # Audio
 Xenko's fully integrated audio system supports many advanced features,
-e.g. steamed audio, 3D spatialized audio and low latency playback.
+e.g. 3D spatialized audio, streaming and low latency playback.
 You can import any sound files and use them in your games and applications.
 
 ![Audio in Xenko](media/audio-index-intro-picture.png)
 
 ## Overview
-You can control **Global Audio Settings_ by accessing _Properties_
+You can control **Global Audio Settings** by accessing _Properties_
 of [AudioEngine](xref="SiliconStudio.Xenko.Audio.AudioEngine") class:
 
 | Property | Functionality |
@@ -29,7 +29,7 @@ The examples are:
 For more information, see [Background Audio](background-audio.md).
 
 **2)** Usually, _Audio_ is attached to a particular object in a **Scene**.
-In that case, you need to add `Audio Emitters` and `Audio Listeners` to the **Scene** to be able to hear the _Audio_.
+In that case, you need to add `Audio Emitters` and `Audio Listeners` to the **Scene** to be able to hear the _Audio_ at runtime.
 
 [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") helps you adjust object-specific _Audio_.
 For more information, see [Object-Specific Audio](entity-audio.md).
@@ -41,11 +41,11 @@ The choice usually depends on the size of the audio file.
 More often than not, you want to stream bigger samples and play smaller files directly from the memory:
 
 **1) Non-Streamed Audio**: Xenko plays audio directly from the memory. This option is useful for smaller sound files.
-For instance, when you need to play sound effect, e.g. explosion or shooting sound.
+For instance, when you need to play a special sound effect, e.g. explosion or shooting sound.
 
 ![Non-Streamed Audio](media/audio-index-non-streamed-audio.png)
 
-**2) Streamed Audio** is designed to handle larger audio files, like soundtracks, dialogs, etc.
+**2) Streamed Audio** is designed for larger audio files, like soundtracks, dialogs, etc.
 Rather than playing the whole file directly from the memory, Xenko buffers and plays it in sequences.
 As soon as the first sequence is buffered, Game Engine plays it while buffering the following sequences in parallel.
 

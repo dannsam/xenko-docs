@@ -1,7 +1,10 @@
 #Background Audio
 
-Sometimes you need play **Background** (**Ambient**) **Audio** that equally affects the whole **Scene**.
+Sometimes you need play **Background** (**Ambient**) **Audio** that equally affects the whole **Scene**
+and not just [individual Entities](entity-audio.md).
 This feature is commonly reserved for _Menu Music_, _Game Music_, and other _Background Sounds_.
+
+> [!Note] Keep in mind, you can also control _Global Sound Settings_ of your game or application, see [Audio page](index.md).
 
 **Background Audio** does not require _Audio Listeners_ or _Emitters_,
 as it has the same _Volume_, _Pitch_ (_Frequency_), and other _Sound Parameters_ throughout the **Scene**.
@@ -24,7 +27,7 @@ It has multiple _Properties_ and _Methods_ that control _Audio Settings_ at runt
 | [Position](xref="SiliconStudio.Xenko.Audio.SoundInstance.Position")	| Gets the currently played point of the audio track. |
 | [Volume](xref="SiliconStudio.Xenko.Audio.SoundInstance.Volume")	| Volume settings of the sound. |
 
-For more details on _Properties_ and _Methods_, see [Xenko API documentation](xref="SiliconStudio.Xenko.Audio.SoundInstance") documentation.
+For more details, see [Xenko API documentation](xref="SiliconStudio.Xenko.Audio.SoundInstance").
 
 ##Stream from Disk
 More often than not, you want to stream large audio files from the disk to save memory.
@@ -47,6 +50,8 @@ music.Play();
 
 > [!Note] If the track is playing, Xenko ignores all additional calls to [SoundInstance.Play](xref="SiliconStudio.Xenko.Audio.SoundInstance.Play").
 > Works the same for [SoundInstance.Pause](xref="SiliconStudio.Xenko.Audio.SoundInstance.Pause") and [SoundInstance.Stop](xref="SiliconStudio.Xenko.Audio.SoundInstance.Stop").
+
+You can also **Play Custom Streams** at runtime and set **Custom Loop Points**. For more information, see [Advanced Features](advanced-features.md).
 
 ##Code Sample
 Here's a code sample that shows how to instantiate _Background Audio_,
@@ -82,6 +87,3 @@ public override async Task Execute()
 * [Spatialized Audio](spatialized-audio.md)
 * [Advanced Features](advanced-features.md)
 </div>
-
-
-

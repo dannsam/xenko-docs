@@ -1,6 +1,6 @@
 #Spatialized Audio
-**Spatialized Audio** (3D Audio) is a special type of [Object-Specific Audio](entity-audio.md).
-It uses all three dimensions to simulate sounds at runtime, so it's closer to real-life sound than stereo .
+**Spatialized Audio** (**3D Audio**) is a special type of [Object-Specific Audio](entity-audio.md).
+It uses all three dimensions to simulate sounds at runtime, so it's closer to real-life sound than stereo.
 The difference between _Spatialized_ and _non-Spatialized_ Audio is explained [here](index.md).
 
 If **Spatialized Audio** is enabled, Xenko tracks position of `AudioListeners` and `AudioEmitters`,
@@ -34,7 +34,7 @@ You can assign _Audio Assets_ to these _Components_, and then use **Scripts** to
 **Spatialized Audio** also requires at least one `Audio Listener` in the **Scene**.
 For more information, see [Object-Specific Audio](entity-audio.md).
 
-Here's a snippet that shows how you can enable _3D Audio_ from the **Script**:
+Here's a snippet that shows how you can enable **3D Audio** from the _Script_:
 
 ```cs
 public override void Start()
@@ -48,7 +48,7 @@ public override void Start()
 You can also use all _Methods_ and _Properties_ of the
 [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController")
 to adjust _Spatialized Audio_, just like any other sounds.
-For more information, see [Object-Specific Audio](object-specific-audio.md).
+For more information, see [Object-Specific Audio](entity-audio.md).
 
 As soon as you import **Spatialized Audio** and adjust its basic settings, you don't have to fine-tune it manually.
 Integrated **Audio Engine** automatically makes all required calculations and simulates accurate _Spatialized Audio Effects_ at runtime.

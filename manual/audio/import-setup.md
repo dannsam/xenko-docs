@@ -32,6 +32,8 @@ For more information on spatialization, see [Spatialized Audio](spatialized-audi
 
 ![Choose Asset type](media/import-audio-choose-asset-type.png)
 
+> [Note!] Xenko always converts 3D spatialized sounds to Mono (Single channel) sounds.
+
 As soon as you import audio file, click on it in **Asset View** to select.
 Then, go to **Property Grid** to setup _Audio Properties_.
 
@@ -48,6 +50,11 @@ Typical sample rates are 44.1 kHz (44,100 Hz), 48 kHz, 88.2 kHz, and 96 kHz.
 * **Stream from disk**: tick if you want to stream audio from the disk. Use this option for larger audio files.
 * **Spatialized**: tick if the audio file is a spatialized sound. For more information on **Spatialization**, see [Spatialized Audio](spatialized-audio.md).
 
-> [Note!] Xenko always converts 3D spatialized sounds to Mono (Single channel) sounds.
-
 As soon as you import and setup audio file, you can use it as a [Background Audio](background-audio.md) or [Object-Specific Audio](entity-audio.md).
+
+<div class="doc-relatedtopics">
+* [Background Audio](background-audio.md)
+* [Object-Specific Audio](entity-audio.md)
+* [Spatialized Audio](spatialized-audio.md)
+* [Advanced Features](advanced-features.md)
+</div>
