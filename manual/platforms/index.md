@@ -11,11 +11,11 @@ so that you don't have adapt your game code to each specific platform.
 ## Supported Platforms
 
 Xenko currently supports for following platforms:
-- Windows Desktop
+- Windows Desktop 7, 8, 10
 - Windows Universal (UWP)
-- [Linux](linux/index.md)
-- Android
-- iOS
+- [Linux (Ubuntu)](linux/index.md)
+- Android 2.3+
+- iOS 8.0+
 
 For information concerning a specific platform, click on the corresponding link.
 
