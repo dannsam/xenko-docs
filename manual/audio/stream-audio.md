@@ -1,11 +1,11 @@
 # Stream audio
 By default, Xenko plays audio directly from memory. This is useful for short sound effects, such as gunshots or footsteps.
 
-    ![Non-streamed audio](media/audio-index-non-streamed-audio.png)
+![Non-streamed audio](media/audio-index-non-streamed-audio.png)
 
 Alternatively, Xenko can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Xenko plays it while buffering the following sequences in parallel. This saves memory when used for larger audio files such as background music and character dialogue.
 
-    ![Streamed audio](media/audio-index-streamed-audio.png)
+![Streamed audio](media/audio-index-streamed-audio.png)
 
 To enable streaming for a sound asset:
 
