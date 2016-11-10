@@ -67,13 +67,9 @@ Here's how you should handle input from various devices:
 ### 03: Query List of Events
 For _Pointers_, _Gestures_, and _Keyboard_, you can query the **List of Events** that happened in the last update.
 
-![Query Events List](media/index-events-list-one-action-between-updates.png)
-
-![Query Pointer Events List](media/index-pointer-events-list-one-action-between-updates.png)
-
-> [!Note] Sometimes a user performs several actions between two updates. If in total there was no state change between two updates, Xenko won't register any events:
-
 ![Several Actions between Update](media/index-events-list-several-actions-between-updates.png)
+
+> [!Note] Even if a user performs several actions between two updates, Xenko registers all these events.
 
 ### 04: Use Virtual Buttons
 You can use **Virtual Buttons**, so the **Input** is not tied to physical buttons and keys.
