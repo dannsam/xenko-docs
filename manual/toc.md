@@ -24,7 +24,7 @@
 --->
 
 # [Audio](audio/index.md)
-## [Import audio](audio/import-audio.md)
+## [Import audio as a sound asset](audio/import-audio-as-a-sound-asset.md)
 ## [Sound asset properties](audio/sound-asset-properties.md)
 ## [Spatialized audio](audio/spatialized-audio.md)
 ### [Audio emitters](audio/audio-emitters.md)
@@ -38,7 +38,6 @@
 
 # [Game Studio](game-studio/index.md)
 ## [Prefabs](game-studio/prefabs/index.md)
-
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
 ### [Overview](graphics/graphics-compositor/overview.md)
