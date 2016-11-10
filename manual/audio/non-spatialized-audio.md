@@ -12,7 +12,7 @@ Non-spatialized audio is stereo and moves along a single axis (usually the x-axi
 
 To play non-spatialized audio at runtime, you need to instantiate it and adjust its settings in the code.
 
-1. In Game Studio, [import the audio as a sound asset](import-audio.md).
+1. In Game Studio, [import the audio as a sound asset](import-audio-as-a-sound-asset.md).
 
 2. Make sure the sound asset is included in the build as a root asset. This is indicated with a blue icon in the top-left of the asset icon in the **Asset view**. 
 

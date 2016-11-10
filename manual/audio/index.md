@@ -4,7 +4,7 @@ You can import sound files and use them in your games and applications. Xenko su
 ![Audio in Xenko](media/audio-index-intro-picture.png)
 
 ## Pages in this section
-* [Import audio](import-audio.md)
+* [Import audio as a sound asset](import-audio-as-a-sound-asset.md)
 * [Audio properties](audio-properties.md)
 * [Global audio settings](global-audio-settings.md)
 * [Play a range within an audio file](play-a-range-within-an-audio-file.md)
