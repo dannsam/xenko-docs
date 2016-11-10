@@ -1,4 +1,4 @@
-#Input
+# Input
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
@@ -18,39 +18,35 @@ These APIs allow fast processing of the Input from _Pointers_, _Keyboard_, _Mous
 These APis are reserved for _Gestures_ and some _Sensors_.
 
 ## Overview
+You should handle **Input** entirely with [InputManager](xref="SiliconStudio.Xenko.Input.InputManager') class that you can access from script with the `Input` property.
+
 To check whether a particular input device is available,
 use the corresponding property of the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
 For instance, use [Input.HasMouse](xref="SiliconStudio.Xenko.Input.InputManager.HasMouse") to check if **Mouse** is connected.
 
-> [!Note] 
-> Currently Xenko does not support devices plugged at run-time. This feature will be added in the future releases.
-
 After you check device availability, there are _Four_ ways to handle **Input** in Xenko.
 
-###01: Query States
-You can query the **State** of the _Keys_ and _Buttons_ in the last update.
+### 01: Query States
+You can query the **State** of the _Keys_ and _Buttons_ and **Numeric values** for _Analog buttons_ and _Sensors_.
 For instance, [KeyDown](xref="SiliconStudio.Xenko.Input.InputManager.KeyDown") gets a list of the keys that were _Down_ in the last update.
 
 Here's how you should handle input from various devices:
 
-**1) For Gamepad digital buttons and Keyboard**: query which keys and buttons are _Down_.
+**1) For buttons and keys** query which keys and buttons are _Down_.
 
 ![Query Key States](media/index-state-one-action-between-updates.png)
 
-> [!Note] Sometimes a user performs several actions between two updates.
-> If in total there was no state change between two updates, Xenko won't register any actions:
+> [!Note] Sometimes a user performs several actions between two updates. If in total there was no state change between two updates, Xenko won't register any actions:
 
 ![Several Actions between Updates](media/index-state-several-actions-between-updates.png)
 
-**2) For Gamepad analog buttons (thumbs and triggers)**: query _Position_ values:
+**2) For analog buttons and sensors** query numeric values.
 
 ![Position of Analog Sticks](media/index-state-analog-stick-position.png)
 
 > [!Note] If there's no position change between two updates, Xenko won't register position change.
 
-**3) For Sensors**: query _Float_ or _Vector_ values.
-
-###02: Query State Change
+### 02: Query State Change
 You can query the **Change of State** of the _Buttons_ and _Keys_ since the previous update.
 In this case, you don't get the list of all buttons and keys, but have to query each Button and Key separately.
 
@@ -60,10 +56,7 @@ Here's how you should handle input from various devices:
 
 ![Query Key State Change](media/index-state-change-one-action-between-updates.png)
 
-> [!Note] Sometimes a user performs several actions between two updates.
-> If in total there was no state change between two updates, Xenko won't register any actions:
-
-![Several Actions between Updates](media/index-state-change-several-actions-between-updates.png)
+> [!Note] Sometimes a user performs several actions between two updates. If in total there was no state change between two updates, Xenko won't register any actions.
 
 **2) For Mouse Position and Mouse Wheel Scrolling**: query _Delta Values_ since the previous update:
 
@@ -71,19 +64,18 @@ Here's how you should handle input from various devices:
 
 > [!Note] If there's no mouse wheel position change between two updates, Xenko registers Zero Delta Value.
 
-###03: Query List of Events
+### 03: Query List of Events
 For _Pointers_, _Gestures_, and _Keyboard_, you can query the **List of Events** that happened in the last update.
 
 ![Query Events List](media/index-events-list-one-action-between-updates.png)
 
 ![Query Pointer Events List](media/index-pointer-events-list-one-action-between-updates.png)
 
-> [!Note] Sometimes a user performs several actions between two updates.
-> If in total there was no state change between two updates, Xenko won't register any events:
+> [!Note] Sometimes a user performs several actions between two updates. If in total there was no state change between two updates, Xenko won't register any events:
 
 ![Several Actions between Update](media/index-events-list-several-actions-between-updates.png)
 
-###04: Use Virtual Buttons
+### 04: Use Virtual Buttons
 You can use **Virtual Buttons**, so the **Input** is not tied to physical buttons and keys.
 Associate keys to actions, and write your gameplay based on those actions rather than physical keys.
 
