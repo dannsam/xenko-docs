@@ -90,9 +90,9 @@ There are five possible states:
 
 ### Get Delta Values
 
-Use [PointerEvent.DeltaTime](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaTime") to get the amount of time elapsed from the previous update.
+Use [PointerEvent.DeltaTime](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaTime") to get the amount of time elapsed from the previous `PonterEvent` for a particular Pointer ID.
 
-Use [PointerEvent.DeltaPosition](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition") to get the change of the pointer position since the previous update.
+Use [PointerEvent.DeltaPosition](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition") to get the position change since the previous `PointerEvent` for a particular Pointer ID.
 
 > [!Note] Delta values are always nulls at the beginning of the sequence of pointer events.
 > That is, when **Pointer State** is _Down_, delta values are always nulls.
