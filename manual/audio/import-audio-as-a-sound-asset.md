@@ -1,6 +1,6 @@
-# Import audio
+# Import audio as a sound asset
 
-You can import audio files to use as assets in your project. You can import file types including .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, and .mpc.
+You can import audio files to use as **sound assets** in your project. You can import file types including .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, and .mpc.
 
 1. Drag and drop the audio file from Windows Explorer to the **Asset view**:
 
@@ -11,7 +11,7 @@ You can import audio files to use as assets in your project. You can import file
     1. Click ![](media/index-audio-add-new-asset-button.png) 
     2. Click ![](media/index-audio-import-audio-directly-from-file.png) (**Import audio directly from file**) and select the audio file.
 
-2. To give the audio asset some default properties, choose a preset. (You can always change the properties in the Property grid later.)
+2. To give the sound asset some default properties, choose a preset. (You can always [change the properties in the Property grid later](sound-asset-properties.md).)
 
     ![Choose Asset type](media/import-audio-choose-asset-type.png)
 

@@ -13,8 +13,7 @@ To enable streaming for a sound asset:
 
 2. In the **Property grid**, select **Stream From Disk**:
 
-    ![Audio asset properties](media/audio-asset-properties-property-grid.png)
-
+    ![Sound asset properties](media/audio-asset-properties-property-grid.png)
 
 In the script for the asset, you can configure an audio file to play once the audio engine buffers enough audio samples.
 

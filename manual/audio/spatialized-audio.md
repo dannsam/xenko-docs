@@ -23,7 +23,7 @@ Spacialized audio is widely used for sound effects in platform, desktop, and VR 
 Spatialized audio uses more CPU than non-spatialized audio, as it requires more sound channels.
 
 ## Enable spatialized audio
-When you [import your audio asset](import-audio.md), select _Spatialized Sound_ as the asset type.
+When you [import your sound asset](import-audio.md), select _Spatialized Sound_ as the asset type.
 
 You can also set audio to spatialized in the asset's **Property grid**:
 

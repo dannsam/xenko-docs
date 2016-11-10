@@ -1,18 +1,18 @@
-# Play a range within an audio file
-You can have Xenko play only certain portions of an audio file. This means, for example, that you can create several samples from a single sound by specifying different ranges in different [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") objects.
+# Play a range within a sound asset
+You can have Xenko play only certain portions of a sound asset. This means, for example, that you can create multiple samples from a single sound asset by specifying different ranges in different [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") objects.
 
 ![Loop points](media/audio-advanced-features-loop-points.png)
 
-You can use the following properties and methods:
+You can use the following properties, methods, and structures:
 
-| Method / property | Function |
+| Property, method, or structure | Function |
 |---------|-----------|
 | [Sound.TotalLength](xref="SiliconStudio.Xenko.Audio.Sound.TotalLength") | The total length of the [sound](xref="SiliconStudio.Xenko.Audio.Sound"). |
-| [SoundInstance.SetRange(PlayRange range)](xref="SiliconStudio.Xenko.Audio.SoundInstance.SetRange.SiliconStudio.Xenko.Audio.PlayRange") | Set the time range inside the sound. |
+| [SoundInstance.SetRange(PlayRange)](xref="SiliconStudio.Xenko.Audio.SoundInstance.SetRange.SiliconStudio.Xenko.Audio.PlayRange") | Sets the time range to play within the sound asset. |
 | [PlayRange](xref="SiliconStudio.Xenko.Audio.PlayRange") | Time information, including the range's starting point and length. |
-| [SoundInstance.Position](xref="SiliconStudio.Xenko.Audio.SoundInstance.Position") | `TimeSpan` of the range. |
+| [SoundInstance.Position](xref="SiliconStudio.Xenko.Audio.SoundInstance.Position") | Gets the current play position as `TimeSpan`. |
 
-## Example code
+For example:
 
 ```cs
 //Assume sample length is 5 seconds.

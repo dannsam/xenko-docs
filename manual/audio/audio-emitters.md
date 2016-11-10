@@ -26,24 +26,24 @@ You also need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Au
 
     ![Add New Sound Entry](media/audio-play-audioemitter-component-add-new-entry.png)
 
-4. From the **Asset view**, drag and drop an audio asset to the sound you just added:
+4. From the **Asset view**, drag and drop a sound asset to the sound you just added:
 
-    ![Drag and drop audio asset](media/audio-play-drag-and-drop-audio-asset.gif)
+    ![Drag and drop a sound asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
     Alternatively, to open the **Asset picker**, click the hand icon:
 
-    ![Pick an Asset Up](media/audio-play-audioemitter-component-pick-an-asset.png)
+    ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
 
-    Then choose an audio asset:
+    Then choose a sound asset:
 
-    ![Select Audio Asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
+    ![Select sound asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
-5. Repeat steps 3 and 4 to add as many audio assets as you need to the emitter entity. For example, a character might make footstep noises when walking and gunshot noises when shooting.
+5. Repeat steps 3 and 4 to add as many sound assets as you need to the emitter entity. For example, a character might make footstep noises when walking and gunshot noises when shooting.
 
 ### 2: Create a script
 Now we need to create a script to control how the sound is used.
 
-1. Create a script and access the audio assets with the names you specified in the `AudioEmitter Component`.
+1. Create a script and access the sound assets with the names you specified in the `AudioEmitter Component`.
 
 2. Instantiate [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") for each sound you want to use in the script.
 
