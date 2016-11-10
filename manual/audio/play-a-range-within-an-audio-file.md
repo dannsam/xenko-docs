@@ -1,4 +1,8 @@
 # Play a range within a sound asset
+
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Programmer</span>
+
 You can have Xenko play only certain portions of a sound asset. This means, for example, that you can create multiple samples from a single sound asset by specifying different ranges in different [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") objects.
 
 ![Loop points](media/audio-advanced-features-loop-points.png)
@@ -24,3 +28,5 @@ mySoundInstance.SetRange(new PlayRange(begin, duration));
 
 ## See also
 * [Global audio settings](global-audio-settings.md)
+* [Spatialized audio](spatialized-audio.md)
+* [Non-spatialized audio](non-spatialized-audio.md)

@@ -1,9 +1,14 @@
 # Stream audio
+
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Programmer</span>
+
 By default, Xenko plays audio directly from memory. This is useful for short sound effects, such as gunshots or footsteps.
 
 ![Non-streamed audio](media/audio-index-non-streamed-audio.png)
 
-Alternatively, Xenko can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Xenko plays it while buffering the following sequences in parallel. This saves memory when used for larger audio files such as background music and character dialogue.
+Alternatively, Xenko can buffer audio and stream it in sequences. As soon as the first sequence is buffered, Xenko plays it while buffering the following sequences in parallel. This saves a lot of memory when used for larger audio files such as background music and character dialogue.
 
 ![Streamed audio](media/audio-index-streamed-audio.png)
 
@@ -28,3 +33,5 @@ music.Play();
 ## See also
 * [Global audio settings](global-audio-settings.md)
 * [Sound-asset-properties](sound-asset-properties.md)
+* [Spatialized audio](spatialized-audio.md)
+* [Non-spatialized audio](non-spatialized-audio.md)

@@ -16,10 +16,12 @@ You can import audio files to use as **sound assets** in your project. You can i
     ![Choose Asset type](media/import-audio-choose-asset-type.png)
 
     * **Sound effect**: Recommended for smaller files that you want to play directly from memory.
-    * **Spatialized sound**: Recommended for [Spatialized audio](spatialized-audio.md) files that you want to play directly from memory. Note that Xenko always converts 3D spatialized sounds to mono (single-channel) sounds.
+    * **Spatialized sound**: Process the sound asset as [spatialized audio](spatialized-audio.md). Note that Xenko processes audio files as mono (single-channel) audio. The source file is unaffected.
     * **Music**: Recommended for larger files that you want to stream from disk to save memory.
 
 After you import an audio file, you can select it as an asset in the **Asset view**.
 
 ## See also
+* [Spatialized audio](spatialized-audio.md)
+* [Non-spatialized audio](non-spatialized-audio.md)
 * [Global audio settings](global-audio-settings.md)

@@ -1,4 +1,8 @@
 # Audio listeners
+
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+
 An **audio listener** is an entity that listens for audio emitted by audio emitters. They are used in conjuction with audio emitters for spatialized audio.
 
 > [!Note] 

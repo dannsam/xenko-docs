@@ -1,4 +1,8 @@
-# Custom audio 
+# Custom audio
+
+<span class="label label-doc-level">Advanced</span>
+<span class="label label-doc-audience">Programmer</span>
+
 You can play custom audio using your own sound generation mechanism.
 
 To do this, create a subclass of `DynamicSoundSource`. For an example of how to implement this, see the `CompressedSoundSource` source code.

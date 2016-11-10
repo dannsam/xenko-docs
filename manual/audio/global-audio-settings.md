@@ -1,4 +1,8 @@
-## Global audio settings
+# Global audio settings
+
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Programmer</span>
+
 Global audio settings apply to all the audio in your project. 
 
 You can control the global audio settings by accessing the [AudioEngine](xref="SiliconStudio.Xenko.Audio.AudioEngine") **properties** class:
@@ -10,3 +14,7 @@ You can control the global audio settings by accessing the [AudioEngine](xref="S
 | [ResumeAudio](xref="SiliconStudio.Xenko.Audio.AudioEngine.ResumeAudio") | Resumes all audio. |
 
 You can manage individual sounds in the **scene**.
+
+## See also
+* [Spatialized audio](spatialized-audio.md)
+* [Non-spatialized audio](non-spatialized-audio.md)

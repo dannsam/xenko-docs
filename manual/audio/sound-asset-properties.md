@@ -12,3 +12,5 @@ After you select a sound asset in the **Asset view**, you can configure its prop
 ## See also
 * [Import audio as a sound asset](import-audio-as-a-sound-asset.md)
 * [Global audio settings](global-audio-settings.md)
+* [Spatialized audio](spatialized-audio.md)
+* [Non-spatialized audio](non-spatialized-audio.md)

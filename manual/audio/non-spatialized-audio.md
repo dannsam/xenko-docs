@@ -1,5 +1,8 @@
 # Non-spatialized audio
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Non-spatialized audio** sounds the same regardless of the position of entities (such as the player camera). Unlike [spatialized audio](spatialized-audio.md), its _volume_, _pitch_ (_frequency_), and other parameters do not change. This is useful, for example, for background music and menu sound effects.
 
 Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio listeners](audio-listeners.md).
