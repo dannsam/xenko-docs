@@ -1,7 +1,4 @@
 # Custom audio 
-
-
-
 You can play custom audio using your own sound generation mechanism.
 
 To do this, create a subclass of `DynamicSoundSource`. For an example of how to implement this, see the `CompressedSoundSource` source code.
@@ -20,3 +17,7 @@ AudioEngine audioEngine = Audio.AudioEngine;
 SoundInstance myCustomInstance = new SoundInstance(audioEngine, listener, myCustomSource, sampleRate, mono, spatialized);
 await myCustomInstance.ReadyToPlay();
 myCustomInstance.Play();
+```
+
+## See also
+* [Global audio settings](global-audio-settings.md)

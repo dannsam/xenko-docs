@@ -1,5 +1,5 @@
-# Audio properties
-After you select an audio file in the **Asset view**, you can configure its properties in the **Property grid**.
+# Sound asset properties
+After you select a sound asset in the **Asset view**, you can configure its properties in the **Property grid**.
 
 ![Audio Asset Properties](media/audio-asset-properties.png)
 
@@ -8,3 +8,7 @@ After you select an audio file in the **Asset view**, you can configure its prop
 * **Compression ratio**: Xenko compresses audio files with the open-source [Opus/Celt](https://en.wikipedia.org/wiki/CELT) codec. 1 is no compression; 40 is maximum compression. Greater compression optimizes memory use, but decreases audio quality.
 * **Stream from disk**: Streaming from disk is useful for larger audio files.
 * **Spatialized**: Specify that this audio file is [spatialized audio](spatialized-audio.md).
+
+## See also
+* [Import audio](import-audio.md)
+* [Global audio settings](global-audio-settings.md)

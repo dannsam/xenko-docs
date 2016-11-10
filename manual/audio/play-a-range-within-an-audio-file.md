@@ -21,3 +21,6 @@ var begin = TimeSpan.FromSeconds(2);
 var duration = TimeSpan.FromSeconds(2);
 mySoundInstance.SetRange(new PlayRange(begin, duration));
 ```
+
+## See also
+* [Global audio settings](global-audio-settings.md)

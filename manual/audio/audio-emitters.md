@@ -3,15 +3,14 @@
 
 The pitch and volume of sound changes as the audio listener moves closer to and away from the audio emitter.
 
-You need to add `Audio Emitter` and `Script` _Components_ to the same entity.
+You need to add `Audio Emitter` and `Script`components to the same entity.
 
 > [!Note] 
 You also need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Audio.AudioListener") in the scene to hear audio from audio emitters.
 
-> [!Note] 
-For information about configuring the global sound settings in your project, see [Audio page](index.md).
+## Set up an audio emitter
 
-## 1: Add an audio emitter component to an entity
+### 1: Add an audio emitter component to an entity
 
 1. In the **Scene view**, select an entity you want to be an audio emitter:
 
@@ -41,7 +40,7 @@ For information about configuring the global sound settings in your project, see
 
 5. Repeat steps 3 and 4 to add as many audio assets as you need to the emitter entity. For example, a character might make footstep noises when walking and gunshot noises when shooting.
 
-## 2: Create a script
+### 2: Create a script
 Now we need to create a script to control how the sound is used.
 
 1. Create a script and access the audio assets with the names you specified in the `AudioEmitter Component`.
@@ -60,7 +59,7 @@ AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1
 AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
 ```
 
-## 3: Define the audio behavior
+### 3: Define the audio behavior
 You can use the following [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") properties and methods to define the audio behavior in the script:
 
 | Property / method | Description |
@@ -89,6 +88,11 @@ For more information, see the [AudioEmitterSoundController Xenko API documentati
 
 Add the script via a script component to the entity.... for more information about that see this other generic documentation.
 
-## 4: Add the script to the audio emitter entity
+### 4: Add the script to the audio emitter entity
 
 Game Studio lists the script as a component. Add the script to the audio emitter entity.
+
+## See also
+* [Spatialized audio](spatialized-audio.md)
+* [Audio listeners](audio-listeners.md)
+* [Global audio settings](global-audio-settings.md)

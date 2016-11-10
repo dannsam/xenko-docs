@@ -8,7 +8,7 @@ Non-spatialized audio is stereo and moves along a single axis (usually the x-axi
 
 ![Non-spatialized audio](media/audio-index-non-spatialized-audio.png)
 
-## Import and script non-spatialized audio
+* [Import and script non-spatialized audio](#Import)
 
 To play non-spatialized audio at runtime, you need to instantiate it and adjust its settings in the code.
 
@@ -70,7 +70,7 @@ public override async Task Execute()
 }
 ```
 
-## Alternative: create a script with public variables
+### Alternative: create a script with public variables
 
 1. In your script, create a public variable for each sound asset you want to use. You can use the same properties listed above.
 
@@ -134,3 +134,7 @@ public class SoundScript : SyncScript
     Then choose the audio asset you want to use:
 
     ![Select audio asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
+
+## See also
+* [Global audio settings](global-audio-settings.md)
+* [Spatialized audio](spatialized-audio.md)

@@ -20,3 +20,6 @@ You can import audio files to use as assets in your project. You can import file
     * **Music**: Recommended for larger files that you want to stream from disk to save memory.
 
 After you import an audio file, you can select it as an asset in the **Asset view**.
+
+## See also
+* [Global audio settings](global-audio-settings.md)
