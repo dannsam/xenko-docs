@@ -78,10 +78,10 @@ when the event was triggered. It returns a value inside [PointerState](xref="Sil
 
 There are five possible states:
 
-* _Down_: Pointer just touched the screen.
-* _Move_: Pointer changes position on the screen.
-* _Up_: Pointer left the screen.
-* _Out_: Pointer gets out of the touch region.
+* _Down_: Finger just touched the screen.
+* _Move_: Finger moves along the screen.
+* _Up_: Finger left the screen.
+* _Out_: Finger gets out of the touch region.
 * _Cancel_: The pointer sequence got canceled. This can happen when the application is interrupted (phone call, etc.).
 
 > [!Note] A sequence of **Pointer Events** for a particular pointer
