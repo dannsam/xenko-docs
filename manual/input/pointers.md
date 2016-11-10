@@ -20,7 +20,7 @@ Devices with multi-touch functionality support several simultaneous pointers.
 > [!Note] 
 > Each **pointer event** contains information on only one pointer. If several pointers are modified simultaneously in the same update, Xenko creates a separate **pointer event** for each pointer.
 
-> [!Note] 
+> [!Tip] 
 > Pointer events are listed in chronological order (time of the event).
 
 > [!Warning]
