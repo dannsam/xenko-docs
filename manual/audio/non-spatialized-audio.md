@@ -123,17 +123,17 @@ public class SoundScript : SyncScript
 
 5. You can see the **public variables** in the script (for example Sound Music and Sound Effect).
 
-    To tie the variables to the audio assets, drag and drop each asset from the **Asset view** to each  variable:
+    To tie the variables to the sound assets, drag and drop each asset from the **Asset view** to each  variable:
 
-    ![Drag and drop audio asset](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
+    ![Drag and drop a sound asset](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
 
     Alternatively, click the hand icon (**Pick an asset up**):
 
-    ![Pick an Asset Up](media/audio-play-script-component-pick-an-asset.png)
+    ![Pick up an asset](media/audio-play-script-component-pick-an-asset.png)
 
-    Then choose the audio asset you want to use:
+    Then choose the sound asset you want to use:
 
-    ![Select audio asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
+    ![Select a sound asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
 ## See also
 * [Global audio settings](global-audio-settings.md)
