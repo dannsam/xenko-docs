@@ -42,7 +42,7 @@ The following templates are available by default in Xenko.
 Template | Result
 ---------|--------
 Empty Scene | An empty scene containing no entity and with no pre-configured rendering pipeline
-Scene with HRD pipeline | A scene containing basic elements and pre-configured for HDR rendering
+Scene with HDR pipeline | A scene containing basic elements and pre-configured for HDR rendering
 Scene with LDR pipeline | A scene containing basic elements and pre-configured for LDR rendering
 
 ## Open a new Scene

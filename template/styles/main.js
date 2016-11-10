@@ -5,5 +5,6 @@ $(function() {
     });
   };
   
-  showCaptionFromAlt("article img");
+  // Captions are not automatically shown anymore by default; uncomment to reenable them
+  //showCaptionFromAlt("article img");
 });

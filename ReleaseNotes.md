@@ -159,9 +159,9 @@ Release date: 2016/08/31
 - Fixed ColliderShape cached matrices computation.
 
 #### Game Studio
-* Credential dialog will now save the credential settings when closing.
-* Credential dialog will not appear if you checked "Do not ask again".
-* Fixed hang when launching a Linux game remotely.
+- Credential dialog will now save the credential settings when closing.
+- Credential dialog will not appear if you checked "Do not ask again".
+- Fix hang when launching a Linux game remotely.
 
 ### Breaking changes
 
@@ -174,8 +174,8 @@ Release date: 2016/08/31
 
 #### Audio
 
-- Removed Play with boolean argument from `SoundInstance`, instead the same behavior will be achieved by using PlayExtended or Play.
-- Renamed `IsLooped` into `IsLooping`.
+- Remove Play with boolean argument from `SoundInstance`, instead the same behavior will be achieved by using PlayExtended or Play.
+- Rename `IsLooped` into `IsLooping`.
 - Deprecated: `GetSoundController`, `AttachSound`, `AttachSounds`, `DetachSound`, `DetachSounds`. Please add sounds now from the `AudioEmitterComponent`
 
 #### Physics
@@ -189,6 +189,7 @@ Release date: 2016/08/31
 #### Linux
 
 - Fix Mono issue with the new effect compiler (introduced in 1.7.5-Beta). No need to enable the "remote compiler" anymore in the "package properties".
+
 
 ## Version 1.8.1-Beta
 
@@ -225,6 +226,7 @@ Release date: 2016/09/09
 
 - Fix samples were depending on the wrong version of Xenko.
 
+
 ## Version 1.8.2-Beta
 
 Release date: 2016/09/21
@@ -254,6 +256,47 @@ Release date: 2016/09/21
 #### Samples
 
 - Fix some scripts that were depending on C# level 6 features.
+
+
+## Version 1.8.3-Beta
+
+Release date: 2016/10/07
+
+### Enhancements
+
+#### Editor
+- Creating a Prefab from a group of entities will name it after the first entity
+- More relevant messages displayed now when assets are not found
+
+#### Physics
+
+- Add a new Jump method which supports an arbitrary jump vector.
+- Add NormalizedDistance to HitResult.
+- Add a version of RaycastPenetrating ( and shape sweep ) that accepts a group and filters accordingly.
+- Add optional offsets to convex hull shapes.
+- Make Move method obsolete, the new method to use from now is SetVelocity which internally applies the simulation fixed time step.
+- Change Character controller's max slope default value to 45 degrees
+
+### Issues fixed
+
+#### Engine
+
+- Fix calculation of bounding boxes of skinned meshes.
+- Fix culling mode for meshes with negative scale.
+- Disable bloom, light streaks and lens flares when the bright-pass is disabled.
+- Fix an issue with Event system and scheduling.
+
+#### Physics
+
+- Fix debug shape rendering of static colliders when those colliders are forced to move
+- Fix debug shape rendering of enabled/disabled entities.
+- Fix issues with Jumping
+- Fix transformation propagation of dynamic bodies when in a skeleton.
+
+#### Serialization
+
+- Fix an issue in SharpYaml preventing generic types to be properly serialized. For instance List<string> can now be used from a script.
+
 
 # Known Issues
 

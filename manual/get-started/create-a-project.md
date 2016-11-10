@@ -13,9 +13,9 @@ This page will show you how to create a new empty project, and how to create a p
 One way to start your game is to create an empty project. 
 
 An **empty project** is project that contains only the **bare minimum** to make a game: 
-a rendering pipeline properly set-up to your needs and an start-up scene composed 
+a rendering pipeline properly set-up to your needs and an start-up scene comprised 
 of a ground, a light, a camera, and script to move the camera.
-Create an **empty project** when to want to **start your game from scratch** without having any useless elements in your initial game.
+Create an **empty project** when you want to **start your game from scratch** without having any non-essential elements in your initial game.
 
 To create an empty game:
 
@@ -40,7 +40,7 @@ To create an empty game:
 5. **Select the platform(s)** you would like your game to support from the *Platforms* section.  
     If your development system does not have the required prerequisites installed for any of the selected platform, a warning message is displayed.
     > [!Note]
-    >  To run your game on iOS and Android, you need to install [Xamarin](https://www.xamarin.com/studio) (free if you have Visual Studio).
+    >  To run your game on iOS and Android, you need to install <a href="https://www.xamarin.com/studio" target="_blank"> Xamarin </a> (free if you have Visual Studio).
 
 6. **Select the desired options** from the *Rendering* section.  
     6.a. **Graphics API:** The graphics features that you can use in your game are dependent on the API that you select.  
