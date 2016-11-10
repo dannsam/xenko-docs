@@ -2,10 +2,8 @@
 <span class="label label-doc-audience">Designer</span>
 
 # Create & Manage Prefabs
-
-With **Prefabs** you can easily manage game levels.
 Sometimes you need to change a certain _Property_ of all **Prefab Instances**.
-In other situations you need to customize **Prefab Instance** independently from the **Prefab**.
+In other situations you need to customize each **Prefab Instance** independently from the **Prefab**.
 Xenko allows all of these manipulations:
 
 1. Add, manage and delete **Prefab Elements** without compromising **Entities** you used to create this **Prefab**.
@@ -53,6 +51,9 @@ For more information on using gizmos, see [Arrange Entities](../get-started/arra
 * Add and modify various components of these **Entities**: scripts, materials, models, animations, etc.
 
 For more information on managing **Entities**, see [Populate a Scene](../get-started/populate-a-scene.md).
+
+## Manage Prefabs
+
 
 ## Use Prefabs
 

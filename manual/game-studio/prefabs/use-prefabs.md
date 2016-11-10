@@ -11,10 +11,11 @@ Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the 
 3. Use **Scripts** to animate **Prefab Instances** at runtime.
 
 ## Create Prefab Instances
-
 To instantiate a **Prefab**, drag and drop it from **Asset View** to the **Scene**.
-When you instantiate a Prefab, you create a **Prefab Instance**.
 
+> [!Tip] To create a **Nested Prefab**, you can also drag and drop it from **Asset View** to **Prefab Editor**.
+
+When you add a **Prefab** to a scene, you create its **Instance**.
 In Scene Editor, **Prefab Instance** is displayed as **Parent Entity** and **Prefab Elements** as its **Children**.
 
 ![Prefab Instance in Scene Editor](media/prefabs-in-scene-editor.png)

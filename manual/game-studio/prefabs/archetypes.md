@@ -1,16 +1,19 @@
+# Archetypes
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
-
-# Archetypes
 
 Sometimes you require a set of **Assets** that have identical _Properties_.
 Suppose, you create a simple sports simulator where players wear nearly identical t-shirts that differ only in color.
 
 You can create one t-shirt **Material**, copy it several times, and then customize each **Material** separately.
-If later on you decide to change some specific _Property_ of these materials (e.g. change transparency settings), you would have to go through each **Material**.
+If later on you decide to change some specific _Property_ of these materials (e.g. change transparency settings),
+you would have to go through each **Material**.
 
 That's when **Archetypes** come in handy.
 An **Archetype** is essentially a **Master Asset** that controls **Core Properties** of the **Derived Assets**.
+
+> [!Note] You can create **Archetypes** of any assets, e.g. audio, models, materials, etc.
 
 Here's how you can use **Archetypes**:
 
@@ -51,9 +54,6 @@ Suppose, you do the following actions:
 5. **Color** of the **Derived Asset** will not be affected, as you've already customized this property.
 
 ## Use Archetypes
-
-**Archetypes** also help you optimize PC productivity.
-For instance, Xenko loads textures of an **Archetype** once, rather than loading the same **Textures** for all **Material** clones.
 
 You can create a whole hierarchy of **Archetypes** and **Derived** assets.
 
