@@ -29,7 +29,7 @@ In order to use prefabs at runtime, you need to intantiate them. Let's assume we
 private void InstantiateBulletPrefab()
 {
     // Note that "MyBulletPrefab" refers to the name and location of your prefab Asset
-    var myBulletPrefab = Asset.Load<Prefab>("MyBulletPrefab");
+    var myBulletPrefab = Content.Load<Prefab>("MyBulletPrefab");
     
     // Assume there is only one top-level entity (could be multiple)
     var bullet = myBulletPrefab.Instantiate().First();
