@@ -21,10 +21,10 @@ There are **two main types** of gestures in Xenko:
 
 A gesture always has one of the four states: _Began_, _Changed_, _Ended_, _Occurred_.
 
-> [!Note] A _Discrete_ gesture always has a state **Occurred**.
+A _Discrete_ gesture always has a state **Occurred**.
 
-> [!Note] A _Continuous_ gesture always starts with **Began** action, then followed by 0 or more **Changed** actions
-> and ends with **Ended** action.
+A _Continuous_ gesture always starts with **Began** action, then followed by 0 or more **Changed** actions
+and ends with **Ended** action.
 
 You can query the current state of a gesture with [GestureEvent.State](xref="SiliconStudio.Xenko.Input.GestureEvent.State")
 field of the triggered gesture events.
@@ -128,7 +128,7 @@ You can modify [GestureConfigLongPress.RequiredPressTime](xref="SiliconStudio.Xe
 
 ###Composite Gesture 
 
-![Translation Gesture](media/gestures_translation_gesture.png) ![media/scale.png](media/gestures_scale_gesture.png) ![media/rotation.png](media/gestures_rotation_gesture.png) 
+![Translation Gesture](media/gestures_translation_gesture.png) ![Scale Gesture](media/gestures_scale_gesture.png) ![Rotation Gesture](media/gestures_rotation_gesture.png) 
 
 **Type** : Continuous
 
