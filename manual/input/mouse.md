@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Mouse** is a common input **device for desktop games**.
+**Mouse** is a common input device for desktop games.
 There are two ways to handle mouse input in Xenko:
 
 1. Query **Mouse Button States**.
@@ -12,7 +12,7 @@ For more information on using **Pointers**, see [Pointers Overview Page](pointer
 
 You can access **Mouse Button States** and **Pointer Events List** from the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
 
-Let's see the difference between using **Mouse Button States** and [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") lists:
+Let's see when it is better to use **Mouse Button States** and when [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") lists:
 
 | Class | Game Type | When to Use? |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ This way, when mouse wheel position changes, it triggers certain events, e.g. sw
 
 ##Lock Mouse Position
 
-In many games you want mouse pointer to move beyond screen edges.
+In many games you don't want mouse cursor to be blocked on the screen borders.
 This feature is very common in FPS games where you need a 360-degree camera rotation.
 At the same time, you also want to hide mouse cursor, so that it doesn't confuse the user.
 
@@ -116,14 +116,6 @@ public class MouseInputScript : SyncScript
 		{
 		}
 		
-		//Analyze each pointer recorded during last update.
-		foreach (PointerEvent e in Input.PointerEvents)
-		{   
-			//If left mouse button is being pressed down in this update, do something.
-			if (e.State == PointerState.Down)
-			{
-			}
-		}
 	}
 }
 ```
