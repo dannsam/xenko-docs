@@ -19,7 +19,7 @@ You must have both audio emitters and audio listeners to hear spatialized sound 
 
 Spacialized audio is widely used for sound effects in platform, desktop, and VR games. For example, a gun might make a gunshot sound when fired, or a character might make a footstep sound when they take a step.
 
-> [Note!] 
+> [!Note] 
 Spatialized audio uses more CPU than non-spatialized audio, as it requires more sound channels.
 
 ## Enable spatialized audio
@@ -33,5 +33,5 @@ You can also set audio to spatialized in the asset's **Property grid**:
 
     ![Select spatialized sound](media/audio-asset-properties-property-grid-spatialized-sound.png)
 
-> [Note!] 
+> [!Note] 
 Xenko processes spatialized audio as mono (single-channel) audio. The source file is not affected.
