@@ -8,7 +8,7 @@ Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the 
 1. Instantiate.
 2. Modify these **Instances**.
 3. Reset properties to original values.
-4. Break link to prefab
+4. Break link to prefab.
 5. Use **Scripts** to animate **Prefab Instances** at runtime.
 
 ## Create Prefab Instances
@@ -61,11 +61,11 @@ In **Property Grid**, you can see which properties of the **Prefab instance** di
 
     ![Identical properties appear gray](media/use-prefabs-identical-properties-appear-gray.png) 
 
-In **Property Grid**, you can also press **Display only overriden properties** to see only the properties that differ from the **Prefab**:
+In **Property Grid**, you can also press **Display only overriden properties** to display only properties that differ from the **Prefab**:
 
 ![Display only overriden properties](media/use-prefabs-display-only-overriden-properties.png) 
 
-You can always reset overridden or unique properties of the **Prefab Instance** to the base value of the parent **Prefab**.
+You can always reset overridden or unique properties of the **Prefab Instance** to base values of the parent **Prefab**.
 
 To do so, right-click the property and click _Peset to base value_.
 

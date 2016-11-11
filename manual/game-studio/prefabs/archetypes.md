@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-Sometimes you require a set of **Assets** that have identical _Properties_.
+Sometimes you require a set of **Assets** with identical _Properties_.
 Suppose, you create a simple sports simulator where players wear nearly identical t-shirts that differ only in color.
 
 You can create one t-shirt **Material**, copy it several times, and then customize each **Material** separately.
@@ -32,18 +32,16 @@ Here's how you can use **Archetypes**:
 
 **3)** In **Asset View**, select the **Derived Asset**.
 
-**4)** Go to **Property Grid** to see that this **Asset** has an **Archetype**.
+**4)** In **Property Grid**, you can see this **Asset** has an **Archetype**.
 
 ![Derived Asset in Property Grid](media/archetypes-archetype-in-property-grid.png)
 
-**5)** You can click on **Archetype** image to locate **Archetype Asset** in **Asset View**.
+**5)** In **Asset View**, you can click **Archetype** image to locate **Archetype Asset**.
 
 ## Manage Archetypes
-Suppose, you change some _Property_ of the **Derived Asset**.
-If later on you change the _Same Property_ of an **Archetype**, it won't affect the **Derived Asset**.
-
-> [!Note] Any changes you make to an **Archetype** affect only properties of the **Derived Assets**
-> that are identical to that **Archetype**.
+Suppose, you override a certain _Property_ of the **Derived Asset**.
+If later on you change the _Same Property_ in **Archetype**, it won't affect the **Derived Asset**.
+Any changes you make to an **Archetype** affect only properties of the **Derived Assets** that are identical to this **Archetype**.
 
 Suppose, you do the following actions:
 
@@ -64,21 +62,21 @@ In **Property Grid**, you can see which properties of the **Derived Asset** diff
 
     ![Identical properties appear gray](media/archetypes-identical-properties-appear-gray.png) 
 
-In **Property Grid**, you can also press **Display only overriden properties** to see only the properties that differ from the **Archetype**:
+In **Property Grid**, you can also press **Display only overriden properties** to display only properties that differ from an **Archetype**:
 
 ![Display only overriden properties](media/archetypes-display-only-overriden-properties.png) 
 
-You can always reset overridden or unique properties of the **Derived Asset** to the base value of the parent **Archetype**.
+You can always reset overridden or unique properties of the **Derived Asset** to base values of the parent **Archetype**.
 
 To do so, right-click the property and click _Peset to base value_.
 
 ![Peset to base value](media/archetypes-reset-property-to-base-value.png)
 
 ### Clear Archetype
-You can always break link between the Derived Asset and the Archetype:
+You can always break link between the Derived Asset and Archetype:
 
-1. In **Asset View**, select the Derived asset.
-2. Right-click on it and click _Clear archetype_.
+1. In **Asset View**, right-click the Derived asset.
+2. Click _Clear archetype_.
 
 ![Clear Archetype](media/archetypes-clear-archetypes.png)
 
