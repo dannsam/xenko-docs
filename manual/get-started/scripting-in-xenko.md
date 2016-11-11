@@ -49,7 +49,7 @@ When writing your script **inherit** from the script type that provides the **mo
 
 This script is called at **load** time and **unload** time (e.g. when the attached entity is loaded and unloaded). 
 It is used mostly to **initialize** certain game elements and **destroy** them when the scene is unloaded. 
-It has a [Start](xref:SiliconStudio.Xenko.Engine.StartupSctipt.Start) method for initialization and
+It has a [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method for initialization and
 a [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method for cancellation that should be override.
 
 ```
