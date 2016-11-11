@@ -1,4 +1,4 @@
-# Use Prefabs
+# Use Prefab Instances
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
@@ -7,8 +7,9 @@ Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the 
 
 1. Instantiate.
 2. Modify these **Instances**.
-3. Reset values to the property of the parent prefab.
-3. Use **Scripts** to animate **Prefab Instances** at runtime.
+3. Reset properties to original values.
+4. Break link to prefab
+5. Use **Scripts** to animate **Prefab Instances** at runtime.
 
 ## Create Prefab Instances
 To instantiate a **Prefab**, drag and drop it from **Asset View** to the **Scene**.
@@ -81,79 +82,6 @@ You can break link between a **Prefab** and **Child Entities** of the **Prefab I
 
 After you break link, the selected **Entities** of the **Prefab Instance** are no longer affected by the changes you make to the **Prefab**.
 
-## Modify Prefabs in Editor
-
-When you modify a certain _Property_ of a **Prefab**, here's how it affects the same _Property_ of a **Prefab Instance**:
-
-1. _Property_ in Prefab and Prefab Instance **are identical**: **Prefab Instance** changes exactly like **Prefab**.
-2. _Property_ in Prefab and Prefab Instance **are different**: changes in **Prefab** do not affect **Prefab Instance**.
-
-This way you can re-use the same **Prefab** throughout the game, but customize each **Prefab Instance** individually.
-
-Let's see how it works on an example:
-
-**1)** Create a **Prefab** of three yellow spheres.
-
-**2)** Create two **Instances** of this **Prefab** in the **Scene**.
-
-![Create Two Prefab Instances](media/use-prefabs-prefab-example-1.png)
-
-**3)** Select one **Prefab Instance** and choose a different **Material Asset** for one of its spheres.
-
-![Change Material of Prefab Instance](media/use-prefabs-prefab-example-2.png)
-
-**4)** In **Asset View**, select a **Prefab** and change **Material Asset** of the same sphere.
-
-> [!Note] This action affects only **Prefab Instance** where **Material Asset** hasn't been previously changed.
-
-![Change Material of Prefab](media/use-prefabs-prefab-example-3.png)
-
-**5)** Change **Material Color** for all other spheres of the **Prefab**.
-
-> [!Note] This action affects all **Prefab Instances**,
-> as **Prefab** and all its **Instances** use the same **Material Asset** for the remaining two spheres.
-
-![Change Material of Prefab](media/use-prefabs-prefab-example-4.png)
-
-## Modify Prefabs at Runtime
-Sometimes you need to change certain _Properties_ of a **Prefab** at runtime.
-
-Suppose you have a _ChangeTreeColor_ script.
-At certain point in the game, this script changes tree color from green to red in a _Forest Prefab_.
-
-These changes won't affect **Instances** of the **Prefab** that were spawned before the _ChangeTreeColor_ script was introduced.
-Yet, all **New Instances** of the forest prefab **will be red**.
-
-## Use Prefabs from Scripts
-
-You can instantiate a **Prefab** from **Code**.
-
-> [!Note] By default, you can only instantiate **Entities** of the **Prefab**, not the whole **Prefab**.
-
-You have to know which **Entity** of the **Prefab** you want to instantiate.
-Each **Prefab Entity** has an index that corresponds to its position in the **Prefab Editor**.
-Top **Entity** has index **0**, second has index **1**, and so on.
-
-In order to instantiate the whole **Prefab**, proceed as follows:
-
-**1)** In **Asset View** double-click your **Prefab** to open it in **Prefab Editor**.
-
-**2)** In **Prefab Editor**, create an empty **Entity** and drag it to the top of the Entity list.
-
-![Create Parent Entity in Prefab](media/use-prefabs-create-prefab-parent-entity.png)
-
-**3)** Select all other **Entities** and drag them to this newly created **Entity**.
-
-![Drag Entities to Parent Entity](media/use-prefabs-drag-entities-to-parent-entity.png)
-
-**4)** Now there is single Parent **Entitiy** on the top level of your hierarchy, and all other **Prefab Elements** are its children.
-
-![Instantiate Single Parent Entity](media/use-prefabs-instantiate-single-parent-entity.png)
-
-**5)** Back in Visual Studio, instantiate the whole **Prefab** with:
-
-``var bullet = myBulletPrefab.Instantiate().First();``.
-
 ## Code Samples
 Suppose you have a **Prefab** called _'MyBulletPrefab'_.
 It is in the root folder of your project, and you want to instantiate that **Prefab** in your **Scene**.
@@ -166,8 +94,11 @@ private void InstantiateBulletPrefab()
     // Note that "MyBulletPrefab" refers to the name and location of your prefab Asset.
     var myBulletPrefab = Asset.Load<Prefab>("MyBulletPrefab");
     
-    // Assume there is only one top-level entity (could be multiple).
-    var bullet = myBulletPrefab.Instantiate().First();
+    //Instantiate a Prefab.
+    var bullet = myBulletPrefab.Instantiate();
+
+    // Add the bullet to the scene.
+    SceneSystem.SceneInstance.Scene.Entities.AddRange(bullet); 
 
     // Change the X coordinate.
     bullet.Transform.Position.X = 20.0f;
