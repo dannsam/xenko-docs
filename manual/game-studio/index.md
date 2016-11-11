@@ -1,46 +1,63 @@
-# Game Studio
+#Prefabs
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Programmer</span>
+<span class="label label-doc-audience">Designer</span>
 
-A central place to start developing your game with Xenko, the Game Studio is helping to fully manage your assets:
+Oftentimes, there are objects that you want to re-use multiple times, e.g. props and elements of the scenery.
+Certainly, you can copy-and-paste such objects.
+Yet, if you need to modify them later on, you will have a hard time editing each duplicate individually.
 
-- You can import your assets, modify their parameters and see changes in real-time in the preview window.
-- You can organize your assets by folders, attach tags and get notifications from modified assets on the disk.
-- You can also build a game executable and run it directly from it.
+It's far more convenient to change object's properties once and apply these changes to all its instances.
+That's when **Prefabs** come in handy.
 
-It makes it easy to work in a team with the same assets management experience.
+Prefab is a hierarchy of entities that you can add to a scene with a single drag and drop action.
+**Prefabs** help you easily manage complex **Models**, multiple **Entities** and even entire game levels.
 
-For game developers, the editor is also tightly integrated with your Visual Studio projects enabling to seamlessly sync and switch back-and-forth.
+## Scale Projects
+**Prefabs** allow you to:
 
-![media/Editor.jpg](media/Editor.jpg) 
+* Combine several **Entities** to manage them as a single object.
+* Create game levels faster and update them on the fly.
 
-# Interface
+You can combine any **Entities** in a **Prefab**,
+be it a group of two simple identical trees or a combination of sprites, models, and other entities.
 
-More information can be found on the page [Game Studio interface](../get-started/game-studio.md).
+**Prefabs** allow to scale your project easily and re-use complex identical objects on multiple scenes:
 
-## Assets
+![Creating Army with Prefabs](media/use-prefabs-compressed.gif)
 
-You can create and browse assets in the asset view:
+## Manage Game Levels
+You can modify certain _Properties_ of a **Prefab**, and all its identical **Instances** will inherit these changes:
 
-![media/Editor2_assetview_thumb.jpg](media/Editor2_assetview_thumb.jpg) 
+1. Suppose you have a set of trees and want to use it throughout your game.
+2. Create a **Prefab** of this set.
+3. If in later stages of your project you need to change textures of the trees,
+there's no need to change each **Instance** of this **Prefab** individually.
+4. Simply modify the **Prefab** and all its identical **Instances** will update accordingly.
 
-Of course, you can also import existing assets such as FBX files:
+## Create Nested Prefabs
+You can use a prefab in other prefabs.
+This way you create nested prefabs to build deeper level of composition of your project.
+For instance, you can do the following:
 
-![media/EditorImportAssets_explorer_thumb.jpg](media/EditorImportAssets_explorer_thumb.jpg) 
+1. Create several prefabs of walls using several models, textures, and other assets.
+2. Add these `Wall Prefabs` to different prefabs of rooms.
+3. Use `Room Prefabs` in different prefabs of houses.
+4. Then instantiate `House Prefabs` by dragging them to the scene.
 
-You can then edit those assets in the Property Editor:
+If later on you need to change a layer, update a single prefab and all dependent prefabs will inherit changes automatically.
+For example, you can change wall texture in one `Wall Prefab` and it will instantly update all rooms and houses where this texture has been used.
+In this example there are three layers of prefabs, but you can create as many levels as your project requires:
 
-![media/EditorProperties_props_thumb.jpg](media/EditorProperties_props_thumb.jpg) 
+```cs
+House Prefabs
+    Room Prefabs
+        Wall Prefabs
+            ...
+```
 
-...while checking live preview:
-
-![media/EditorProperties_preview_thumb.jpg](media/EditorProperties_preview_thumb.jpg) 
-
-## Samples
-
-Xenko is coming with a set of technical samples for each engine parts (2D, 3D, Sprites, Fonts, UI, Audio, Input...) and a set of small games to help you bootstrap into making your own game.
-
-You can access them by creating a new project, and selecting the appropriate sample template. 
-
-Feel free to take a look at them, this should inspire you and give you concrete examples on how to use Xenko:
-
-![media/EditorNewSamples_thumb.jpg](media/EditorNewSamples_thumb.jpg) 
-
+## See also
+1. [Create Prefabs](create-prefabs.md).
+2. [Manage Prefabs](manage-prefabs.md).
+3. [Modify Prefabs](modify-prefabs.md).
+4. [Use Prefabs](use-prefabs.md).

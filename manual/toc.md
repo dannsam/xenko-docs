@@ -28,7 +28,12 @@
 ## [AudioEngine](audio/audioengine.md)
 
 # [Game Studio](game-studio/index.md)
-## [Prefabs](game-studio/prefabs/index.md)
+## [Prefabs](game-studio/prefabs.md)
+### [Create Prefabs](game-studio/create-prefabs.md)
+### [Manage Prefabs](game-studio/manage-prefabs.md)
+### [Modify Prefabs](game-studio/modify-prefabs.md)
+### [Use Prefabs](game-studio/use-prefabs.md)
+## [Archetypes](game-studio/archetypes.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
