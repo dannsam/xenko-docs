@@ -53,9 +53,40 @@ Suppose, you do the following actions:
 4. **Transparency** of the **Derived Material Asset** will change exactly as in **Archetype**.
 5. **Color** of the **Derived Asset** will not be affected, as you've already customized this property.
 
+### Reset to Base Values
+In **Property Grid**, you can see which properties of the **Derived Asset** differ from the **Archetype**: 
+
+* **Overridden** and **unique** properties appear **white**.
+
+    ![Overriden properties appear white](media/archetypes-overriden-properties-appear-white.png) 
+
+* **Identical** properties appear **gray**.
+
+    ![Identical properties appear gray](media/archetypes-identical-properties-appear-gray.png) 
+
+In **Property Grid**, you can also press **Display only overriden properties** to see only the properties that differ from the **Archetype**:
+
+![Display only overriden properties](media/archetypes-display-only-overriden-properties.png) 
+
+You can always reset overridden or unique properties of the **Derived Asset** to the base value of the parent **Archetype**.
+
+To do so, right-click the property and click _Peset to base value_.
+
+![Peset to base value](media/archetypes-reset-property-to-base-value.png)
+
+### Clear Archetype
+You can always break link between the Derived Asset and the Archetype:
+
+1. In **Asset View**, select the Derived asset.
+2. Right-click on it and click _Clear archetype_.
+
+![Clear Archetype](media/archetypes-clear-archetypes.png)
+
 ## Use Archetypes
 
 You can create a whole hierarchy of **Archetypes** and **Derived** assets.
+You can derive an **Asset** from an **Archetype**, and then derive another **Asset** from that **Derived Asset**.
+This way you can create different layers of _Asset Properties_ to keep your game project consistent and well-structured:
 
 ```cs
 Archetype
@@ -63,5 +94,3 @@ Archetype
         Derived Asset
 ```
 
-You can derive an **Asset** from an **Archetype**, and then derive another **Asset** from that **Derived Asset**.
-This way you can create different layers of _Asset Properties_ to keep your game project consistent and well-structured.
