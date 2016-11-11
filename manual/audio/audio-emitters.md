@@ -15,7 +15,7 @@ You need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Audio.A
 
 1. In the **Scene view**, select an entity you want to be an audio emitter:
 
-    ![Select an wntity](media/audio-add-audiolistener-component-select-entity.png)
+    ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
 2. In the **Property grid**, click **Add component** and select **Audio Emitter**:
 
