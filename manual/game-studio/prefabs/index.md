@@ -22,8 +22,7 @@ Prefab is a hierarchy of entities that you can add to a scene with a single drag
 You can combine any **Entities** in a **Prefab**,
 be it a group of two simple identical trees or a combination of sprites, models, and other entities.
 
-**Prefabs** allow to scale your project easily and re-use complex identical objects on multiple scenes.
-Watch how **Prefabs** can help you create a whole army of knights:
+**Prefabs** allow to scale your project easily and re-use complex identical objects on multiple scenes:
 
 ![Creating Army with Prefabs](media/use-prefabs-compressed.gif)
 
