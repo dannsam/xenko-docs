@@ -34,7 +34,7 @@
 ## [Play a range within an audio file](audio/play-a-range-within-an-audio-file.md)
 ## [Set an audio device](audio/set-an-audio-device.md)
 ## [Stream audio](audio/stream-audio.md)
-## [Custom audio](audio/custom-audio.md)
+## [Custom audio data](audio/custom-audio-data.md)
 
 # [Game Studio](game-studio/index.md)
 ## [Prefabs](game-studio/prefabs/index.md)

@@ -4,18 +4,14 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-**[Audio emitter components](xref="SiliconStudio.Xenko.Audio.AudioEmitter")** emit audio used to create spatialized audio. You can add them to any entity.
+**[Audio emitter components](xref="SiliconStudio.Xenko.Audio.AudioEmitter")** emit audio used to create [spatialized audio](spatialized-audio.md). You can add them to any entity.
 
-The pitch and volume of sound changes as the audio listener moves closer to and away from the audio emitter.
-
-You need to add `Audio Emitter` and `Script`components to the same entity.
+The pitch and volume of the sound changes as the [audio listener](audio-listeners.md) moves closer to and away from the audio emitter.
 
 > [!Note] 
-You also need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Audio.AudioListener") in the scene to hear audio from audio emitters.
+You need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Audio.AudioListener") in the scene to hear audio from audio emitters.
 
-## Set up an audio emitter
-
-### 1: Add an audio emitter component to an entity
+## 1. Set up an audio emitter asset
 
 1. In the **Scene view**, select an entity you want to be an audio emitter:
 
@@ -35,7 +31,7 @@ You also need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Au
 
     ![Drag and drop a sound asset](media/audio-play-drag-and-drop-audio-asset.gif)
 
-    Alternatively, to open the **Asset picker**, click the hand icon:
+    Alternatively, click the hand icon to open the **Asset picker**:
 
     ![Pick up an asset](media/audio-play-audioemitter-component-pick-an-asset.png)
 
@@ -43,29 +39,22 @@ You also need at least one [AudioListenerComponent](xref="SiliconStudio.Xenko.Au
 
     ![Select sound asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
-5. Repeat steps 3 and 4 to add as many sound assets as you need to the emitter entity. For example, a character might make footstep noises when walking and gunshot noises when shooting.
+5. Repeat steps 3 and 4 to add as many sound assets as you need.
 
-### 2: Create a script
-Now we need to create a script to control how the sound is used.
+## 2: Create a script to play the audio
+Now we need to create a script to play and configure the sound asset.
 
-1. Create a script and access the sound assets with the names you specified in the `AudioEmitter Component`.
+1. In your script, instantiate [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") for each sound you want to use in the script.
 
-2. Instantiate [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") for each sound you want to use in the script.
-
-    For example, say we have two sounds, **MySound1** and **MySound2**:
-
-    ![List of Sounds in AudioEmitter Component](media/audio-emitters-dictionary-of-sounds-audio-emitter-component.png)
-
-    We can access the sounds like this:
-
+   For example, say we have two sounds, **MySound1** and **MySound2**:
+   
 ```cs
 AudioEmitterComponent audioEmitterComponent = Entity.Get<AudioEmitterComponent>();
 AudioEmitterSoundController mySound1Controller = audioEmitterComponent["MySound1"];
 AudioEmitterSoundController mySound2Controller = audioEmitterComponent["MySound2"];
 ```
 
-### 3: Define the audio behavior
-You can use the following [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") properties and methods to define the audio behavior in the script:
+2. Use the following [AudioEmitterSoundController](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController") properties and methods to play and configure the audio:
 
 | Property / method | Description |
 |-------    |-------|
@@ -87,15 +76,11 @@ mySound2Controller.Volume = 0.5f;
 mySound2Controller.Play();
 ```
 
-This sound will loop at double the original pitch and half the original volume.
+This sound will loop at double the original pitch and half the original volume. For more information, see the [AudioEmitterSoundController Xenko API documentation](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController").
 
-For more information, see the [AudioEmitterSoundController Xenko API documentation](xref="SiliconStudio.Xenko.Audio.AudioEmitterSoundController").
+## 3: Add the script to the audio emitter entity
 
-Add the script via a script component to the entity.... for more information about that see this other generic documentation.
-
-### 4: Add the script to the audio emitter entity
-
-Game Studio lists the script as a component. Add the script to the audio emitter entity.
+Game Studio lists the script as a component under **Add component**. Add the script to the audio emitter entity.
 
 ## See also
 * [Spatialized audio](spatialized-audio.md)

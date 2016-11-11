@@ -3,29 +3,29 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Non-spatialized audio** sounds the same regardless of the position of entities (such as the player camera). Unlike [spatialized audio](spatialized-audio.md), its _volume_, _pitch_ (_frequency_), and other parameters do not change. This is useful, for example, for background music and menu sound effects.
-
-Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio listeners](audio-listeners.md).
-
-Non-spatialized audio is stereo and moves along a single axis (usually the x-axis).
+**Non-spatialized audio** sounds the same throughout the scene, regardless of the position of entities (such as the player camera). It's stereo and moves along a single axis (usually the X-axis). Unlike [spatialized audio](spatialized-audio.md), the _volume_, _pitch_ (_frequency_), and other parameters of spatialized audio don't change. This is useful, for example, for background music and menu sound effects.
 
 ![Non-spatialized audio](media/audio-index-non-spatialized-audio.png)
 
-* [Import and script non-spatialized audio](#Import)
+Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio listeners](audio-listeners.md).
 
-To play non-spatialized audio at runtime, you need to instantiate it and adjust its settings in the code.
+## 1. Import audio and include it in the build
 
-1. In Game Studio, [import the audio as a sound asset](import-audio-as-a-sound-asset.md).
+1. [Import the audio as a sound asset](import-audio-as-a-sound-asset.md).
 
-2. Make sure the sound asset is included in the build as a root asset. This is indicated with a blue icon in the top-left of the asset icon in the **Asset view**. 
+2. Make sure the sound asset is included in the build as a **root asset**. In the **Asset view**, right-click the asset and select **Include in build as root asset**:
 
-    To include the asset in the build as a root asset, in the **Asset view**, right-click the asset and select **Include in build as root asset**.
+    ![Include in build as root asset](media/audio-include-in-build-as-root-asset.png)
 
-3. Instantiate the sound asset in your code.
+    If the menu option reads **Do not include in build as root asset**, the option is already selected and you don't need to change it.
 
-Access non-spatialized audio with the [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") class. This has the following properties, which control audio settings at runtime:
+## 2. Create a script to play audio
 
-| Property  | Description |
+To play non-spatialized audio at runtime, create an instance of it and define its behavior in the code.
+
+The [SoundInstance](xref="SiliconStudio.Xenko.Audio.SoundInstance") controls audio at runtime with the following properties:
+
+| Property  | Function |
 |-------    |-------|
 | [IsLooping](xref="SiliconStudio.Xenko.Audio.SoundInstance.IsLooping") | Gets or sets looping of the audio. |
 | [Pan](xref="SiliconStudio.Xenko.Audio.SoundInstance.Pan")       | Sets the balance between left and right speakers. By default, each speaker a value of 0.5. |
@@ -37,96 +37,86 @@ Access non-spatialized audio with the [SoundInstance](xref="SiliconStudio.Xenko.
 For more details, see the [SoundInstance API documentation](xref="SiliconStudio.Xenko.Audio.SoundInstance").
 
 > [!Note]
-If the track is playing, Xenko ignores all additional calls to [SoundInstance.Play](xref="SiliconStudio.Xenko.Audio.SoundInstance.Play").
-This works the same for [SoundInstance.Pause](xref="SiliconStudio.Xenko.Audio.SoundInstance.Pause") and [SoundInstance.Stop](xref="SiliconStudio.Xenko.Audio.SoundInstance.Stop").
+If the sound is already playing, Xenko ignores all additional calls to [SoundInstance.Play](xref="SiliconStudio.Xenko.Audio.SoundInstance.Play").
+The same goes for [SoundInstance.Pause](xref="SiliconStudio.Xenko.Audio.SoundInstance.Pause") (when a sound is already paused) and [SoundInstance.Stop](xref="SiliconStudio.Xenko.Audio.SoundInstance.Stop") (when a sound is already stopped).
 
-### Example code
-
-This code:
+For example, the following code:
 
 * instantiates non-spatialized audio
-* sets the sound to loop
+* sets the audio to loop
 * sets the volume
-* plays the sound
+* plays the audio
 
 ```
-public override async Task Execute()
-{
-    // Load music.
-    Sound musicSound = Content.Load<Sound>("MySound");
-    
-    // Create Sound Instance.
-    SoundInstance music = SoundMusic.CreateInstance();
-
-    if (!IsLiveReloading)
+ public override async Task Execute()
     {
-      
-        // Start playing ambient music.
+        // Load the sound
+        Sound musicSound = Content.Load<Sound>("MySound");
+            
+        // Create a sound instance
+        SoundInstance music = musicSound.CreateInstance();
+            
+        // Loop
         music.IsLooping = true;
 
-        // Set music volume.
+        // Set the volume
         music.Volume = 0.25f;
 
-        // Play the music.
+        // Play the music
         music.Play();
     }
-}
 ```
 
 ### Alternative: create a script with public variables
 
-1. In your script, create a public variable for each sound asset you want to use. You can use the same properties listed above.
+Create a public variable for each sound asset you want to use. You can use the same properties listed above.
 
     For example:
 
 ```cs
-public class SoundScript : SyncScript
+public class MySoundScript : SyncScript
 {
-    public Sound SoundMusic;
-    public Sound SoundEffect;
+    public Sound MyMusic;
 
-    public SoundInstance musicInstance;
-    public bool isMusicOn;
+    private SoundInstance musicInstance;
+    public bool PlayMusic;
 
     public override void Start()
     {
-        musicInstance = SoundMusic.CreateInstance();
+        musicInstance = MyMusic.CreateInstance();
     }
 
     public override void Update()
     {
-        // If music is not played, but should be played, start the music.
-        if (isMusicOn & musicInstance.PlayState != SoundPlayState.Playing)
+        // If music isn't playing but should be, play the music.
+        if (PlayMusic & musicInstance.PlayState != SoundPlayState.Playing)
         {
             musicInstance.Play();
         }
 
-        // If music should not be played, stop the music.
-        else if (!isMusicOn)
+        // If music is playing but shouldn't be, stop the music.
+        else if (!PlayMusic)
         {
             musicInstance.Stop();
         }
     }
 }
 ```
+## Add the script to the entity
 
-
-
-2. In the **Scene view**, select the entity you want to add the script to:
+1. In the **Scene view**, select the entity you want to add the script to:
 
     ![Select an entity](media/audio-add-audiolistener-component-select-entity.png)
 
-3. In the **Property grid**, click **Add component**:
+2. In the **Property grid**, click **Add component** and select your script:
  
     ![Click Add component](media/audio-emitters-add-script-component.png)
 
-4. Select the script you want to add (eg `SoundScript`):
+    The script is added to the entity.
 
-    ![Add script component to entity](media/audio-emitters-add-script-component-to-entity-2.png)
+3. If you added **public variables** to the script, you need to tie them to sound assets.
 
-5. You can see the **public variables** in the script (for example Sound Music and Sound Effect).
-
-    To tie the variables to the sound assets, drag and drop each asset from the **Asset view** to each  variable:
+    Drag and drop an asset from the **Asset view** to each variable:
 
     ![Drag and drop a sound asset](media/entity-audio-drag-and-drop-audio-asset-to-script-component.gif)
 
@@ -139,5 +129,6 @@ public class SoundScript : SyncScript
     ![Select a sound asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
 ## See also
+* [Import audio as a sound asset](Import-audio-as-a-sound-asset.md)
 * [Global audio settings](global-audio-settings.md)
 * [Spatialized audio](spatialized-audio.md)
