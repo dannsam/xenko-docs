@@ -30,7 +30,7 @@ The [SoundInstance](xref:SiliconStudio.Xenko.Audio.SoundInstance) controls audio
 | [IsLooping](xref:SiliconStudio.Xenko.Audio.SoundInstance.IsLooping) | Gets or sets looping of the audio. |
 | [Pan](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pan)       | Sets the balance between left and right speakers. By default, each speaker a value of 0.5. |
 | [Pitch](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pitch)     | Gets or sets the audio pitch (frequency). |
-| [PlayState](xref:SiliconStudio.Xenko.Audio.SoundInstance.PlayState")	| Gets the state of the [SoundInstance](xref:"SiliconStudio.Xenko.Audio.SoundInstance). |
+| [PlayState](xref:SiliconStudio.Xenko.Audio.SoundInstance.PlayState)	| Gets the state of the [SoundInstance](xref:SiliconStudio.Xenko.Audio.SoundInstance). |
 | [Position](xref:SiliconStudio.Xenko.Audio.SoundInstance.Position)	| Gets the current play position of the audio. |
 | [Volume](xref:SiliconStudio.Xenko.Audio.SoundInstance.Volume)	| Sets the audio volume. |
 
@@ -38,7 +38,7 @@ For more details, see the [SoundInstance API documentation](xref:SiliconStudio.X
 
 > [!Note]
 If the sound is already playing, Xenko ignores all additional calls to [SoundInstance.Play](xref:SiliconStudio.Xenko.Audio.SoundInstance.Play).
-The same goes for [SoundInstance.Pause](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pause") (when a sound is already paused) and [SoundInstance.Stop](xref:"SiliconStudio.Xenko.Audio.SoundInstance.Stop) (when a sound is already stopped).
+The same goes for [SoundInstance.Pause](xref:SiliconStudio.Xenko.Audio.SoundInstance.Pause) (when a sound is already paused) and [SoundInstance.Stop](xref:SiliconStudio.Xenko.Audio.SoundInstance.Stop) (when a sound is already stopped).
 
 For example, the following code:
 
