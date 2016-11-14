@@ -4,9 +4,11 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Spatialized audio**, also called **3D audio**, simulates three-dimensional sound. This creates more realistic audio than [non-spatialized audio](non-spatialized-audio.md), especially for sounds simulated above, below, and behind the listener. 
+**Spatialized audio**, also called **3D audio**, simulates three-dimensional sound.
+This creates more realistic audio than [non-spatialized audio](non-spatialized-audio.md), especially for sounds simulated above, below, and behind the listener. 
 
-In real life, our experience of sound sound is affected by factors including its volume, the surrounding area (such as a cave or small room), and the position and movement of the sound source. We can usually tell approximately where a sound is coming from and whether it is moving.
+In real life, our experience of sound is affected by factors including its volume, the surrounding area (such as a cave or small room), and the position and movement of the sound source.
+We can usually tell approximately where a sound is coming from and whether it is moving.
 
 ![Spatialized audio](media/audio-index-spatialized-audio.png) 
 
