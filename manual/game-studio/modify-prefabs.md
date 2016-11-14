@@ -1,9 +1,9 @@
-# Modify Prefabs
+# Modify prefabs
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-## Modify Prefabs in Editor
+## Modify prefabs in editor
 
 When you modify a certain _Property_ of a **Prefab**, here's how it affects the same _Property_ of a **Prefab Instance**:
 
@@ -37,7 +37,7 @@ Let's see how it works on an example:
 
 ![Change Material of Prefab](media/use-prefabs-prefab-example-4.png)
 
-## Modify Prefabs at Runtime
+## Modify prefabs at runtime
 Sometimes you need to change certain _Properties_ of a **Prefab** at runtime.
 
 Suppose you have a _ChangeTreeColor_ script.
@@ -45,3 +45,9 @@ At certain point in the game, this script changes tree color from green to red i
 
 These changes won't affect **Instances** of the **Prefab** that were spawned before the _ChangeTreeColor_ script was introduced.
 Yet, all **New Instances** of the forest prefab **will be red**.
+
+## See also
+1. [Prefabs](prefabs.md).
+2. [Create prefabs](create-prefabs.md).
+3. [Manage prefabs](manage-prefabs.md).
+4. [Use prefabs](use-prefabs.md).

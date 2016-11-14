@@ -22,7 +22,7 @@ Here's how you can use **Archetypes**:
 3. Adjust _Core Properties_ in **Archetype**, if needed.
 4. Customize _Minor Properties_ of each **Derived Asset** individually.
 
-## Create Archetypes
+## Create an archetype
 
 **1)** In **Asset View**, right-click the Asset you want to be an **Archetype**.
 
@@ -38,7 +38,7 @@ Here's how you can use **Archetypes**:
 
 **5)** In **Asset View**, you can click **Archetype** image to locate **Archetype Asset**.
 
-## Manage Archetypes
+## Manage archetypes
 Suppose, you override a certain _Property_ of the **Derived Asset**.
 If later on you change the _Same Property_ in **Archetype**, it won't affect the **Derived Asset**.
 Any changes you make to an **Archetype** affect only properties of the **Derived Assets** that are identical to this **Archetype**.
@@ -51,7 +51,7 @@ Suppose, you do the following actions:
 4. **Transparency** of the **Derived Material Asset** will change exactly as in **Archetype**.
 5. **Color** of the **Derived Asset** will not be affected, as you've already customized this property.
 
-### Reset to Base Values
+### Reset to base values
 In **Property Grid**, you can see which properties of the **Derived Asset** differ from the **Archetype**: 
 
 * **Overridden** and **unique** properties appear **white**.
@@ -72,7 +72,7 @@ To do so, right-click the property and click _Peset to base value_.
 
 ![Peset to base value](media/archetypes-reset-property-to-base-value.png)
 
-### Clear Archetype
+### Clear an archetype
 You can always break link between the Derived Asset and Archetype:
 
 1. In **Asset View**, right-click the Derived asset.
@@ -80,7 +80,7 @@ You can always break link between the Derived Asset and Archetype:
 
 ![Clear Archetype](media/archetypes-clear-archetypes.png)
 
-## Use Archetypes
+## Use archetypes
 
 You can create a whole hierarchy of **Archetypes** and **Derived** assets.
 You can derive an **Asset** from an **Archetype**, and then derive another **Asset** from that **Derived Asset**.
@@ -92,3 +92,7 @@ Archetype
         Derived Asset
 ```
 
+## See also
+
+1. [Prefabs](prefabs.md).
+2. [Manage prefabs](manage-prefabs.md).

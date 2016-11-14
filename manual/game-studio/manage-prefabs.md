@@ -1,7 +1,7 @@
+# Manage prefabs
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-# Manage Prefabs
 Sometimes you need to change a certain _Property_ of all **Prefab Instances**.
 In other situations you need to customize each **Prefab Instance** independently from the **Prefab**.
 Xenko allows all of these manipulations:
@@ -14,7 +14,7 @@ Here's how **Prefabs** and **Prefab Instances** relate to one another:
 
 ![How Prefabs Work](media/create-manage-prefabs-how-prefabs-work.png)
 
-##Prefab Editor
+##Prefab editor
 Open **Prefab Editor** with either option:
 
 1. In **Asset View**, right-click on the **Prefab** and press _Edit Asset_:
@@ -38,3 +38,9 @@ For more information on managing **Entities**, see [Populate a Scene](../get-sta
 
 Every **Prefab** is a special **Asset** that you can instantiate by dragging and dropping it from the **Asset View** to the **Scene**.
 For more information, see [Use Prefabs](use-prefabs.md).
+
+## See also
+1. [Prefabs](prefabs.md).
+2. [Create prefabs](create-prefabs.md).
+3. [Modify prefabs](modify-prefabs.md).
+4. [Use prefabs](use-prefabs.md).

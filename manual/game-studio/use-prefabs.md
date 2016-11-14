@@ -1,4 +1,4 @@
-# Use Prefabs
+# Use prefabs
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
@@ -11,7 +11,7 @@ Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the 
 4. Break link to prefab.
 5. Use **Scripts** to animate **Prefab Instances** at runtime.
 
-## Create Prefab Instances
+## Create prefab instances
 To instantiate a **Prefab**, drag and drop it from **Asset View** to the **Scene**.
 
 > [!Tip] To create a **Nested Prefab**, you can also drag and drop it from **Asset View** to **Prefab Editor**.
@@ -30,8 +30,8 @@ You can re-arrange **Entities** of the **Prefab Instance** just like you do with
 Sometimes, you instantiate a Prefab, modify it, and then want to re-use this modified **Prefab**.
 In that case, simply create a new **Prefab** from the **Prefab Instance**. You can further re-use it like a separate Prefab.
 
-## Modify Prefab Instances
-### Adjust in Scene Editor
+## Modify prefab instances
+### Adjust in scene editor
 Once you create **Prefab Instance**, customize it like any other **Entity**:
 
 * Use transformation gizmos to _Translate_, _Rotate_ and _Scale_.
@@ -43,14 +43,14 @@ For more information on **Entities** and their components, see [Populate a Scene
 
 > [!Note] When you modify **Prefab Instances**, the **Prefab** itself **is unaffected**.
 
-### Access Prefab from its Instance
+### Access prefab from its instance
 
 You can access **Prefab** from its **Instances**.
 In **Scene Editor**, right-click any child of a **Prefab Instance** and select _Open Prefab in Editor_.
 
 ![Open Prefab in Editor](media/use-prefabs-prefab-open-prefab-from-prefab-instance.png)
 
-### Reset Properties to Base Values
+### Reset properties to base values
 In **Property Grid**, you can see which properties of the **Prefab instance** differ from the **Prefab**: 
 
 * **Overridden** and **unique** properties appear **white**.
@@ -71,7 +71,7 @@ To do so, right-click the property and click _Peset to base value_.
 
 ![Peset to base value](media/use-prefabs-reset-property-to-base-value.png)
 
-### Break Link to Prefab
+### break link to prefab
 
 You can break link between a **Prefab** and **Child Entities** of the **Prefab Instance**:
 
@@ -82,7 +82,7 @@ You can break link between a **Prefab** and **Child Entities** of the **Prefab I
 
 After you break link, the selected **Entities** of the **Prefab Instance** are no longer affected by the changes you make to the **Prefab**.
 
-## Code Samples
+## Code samples
 Suppose you have a **Prefab** called _'MyBulletPrefab'_.
 It is in the root folder of your project, and you want to instantiate that **Prefab** in your **Scene**.
 
@@ -107,3 +107,9 @@ private void InstantiateBulletPrefab()
     SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
 }
 ```
+
+## See also
+1. [Prefabs](prefabs.md).
+2. [Create prefabs](create-prefabs.md).
+3. [Manage prefabs](manage-prefabs.md).
+4. [Modify prefabs](modify-prefabs.md).
