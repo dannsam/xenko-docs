@@ -1,4 +1,4 @@
-# Create a Project
+# Create a project
 
 <span class="label label-doc-level">Beginner</span>
 

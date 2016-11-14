@@ -39,13 +39,13 @@ These objects are described in more detail in the Xenko API reference.
 Of course you can still use standard C# class in Xenko, but those classes are not called *Scritps*
 and the Game Studio will not let you attach those class to entities or your scenes.
 
-## Script Types
+## Script types
 
 There are three main types of scripts in Xenko: **Startup scripts**, **Synchronous scripts**, and **Asynchronous scripts**. 
 Each of these scripts has a precise function. 
 When writing your script **inherit** from the script type that provides the **most adequate behavior**.
 
-### Startup Script
+### Startup script
 
 This script is called at **load** time and **unload** time (e.g. when the attached entity is loaded and unloaded). 
 It is used mostly to **initialize** certain game elements and **destroy** them when the scene is unloaded. 
@@ -62,7 +62,7 @@ public class StartUpScriptExample : StartupScript
 }
 ```
 
-### Synchronous Script
+### Synchronous script
 
 This script gets first initialized, then **updated every frame** and finally canceled.
 The initialization code, if any, should be placed in the [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method.

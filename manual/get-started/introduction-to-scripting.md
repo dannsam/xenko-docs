@@ -1,4 +1,4 @@
-# Introduction to Scripting
+# Introduction to scripting
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
@@ -42,7 +42,7 @@ This can be done either from the scene editor or from the code.
 
 To debug a script use Visual Studio and simply put a break point in the desired code section.
 
-## The Basics
+## The basics
 
 This section will explain the following subjects:
 

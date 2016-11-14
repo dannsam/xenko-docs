@@ -1,4 +1,4 @@
-# Introduction to Scenes
+# Introduction to scenes
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Level Designer</span>
@@ -34,7 +34,7 @@ You can **translate, rotate, and resize** your scene entities very easily and in
 In the scene editor, you can easily **move around and focus** on specific entities accurately adjust new entities.
 
 
-## The Basics
+## The basics
 
 This section will discuss the following subjects:
 

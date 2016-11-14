@@ -1,4 +1,4 @@
-# Use a Script
+# Use a script
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>

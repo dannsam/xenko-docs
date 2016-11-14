@@ -8,7 +8,7 @@ To edit a scene use the **scene editor**, a specialized tool to edit scenes.
 
 In this page, we will explain the basics of the scene editor and see how to create and open new scenes.
 
-## The Scene Editor
+## The scene editor
 
 After creating a new project, an initial scene is automatically created and opened in the editor.
 You can see the content of your scene in the **central region** of the Game Studio.
@@ -28,7 +28,7 @@ At the top of the view is the tool bar that can be used to modify entities of th
 
 ![Scene Editor Interface](media/create-a-scene-default-scene-editor.png)
 
-## Create a new Scene
+## Create a new scene
 
 As soon as you want to create another level for your game, you will need to **create a new scene**.
 
@@ -45,7 +45,7 @@ Empty Scene | An empty scene containing no entity and with no pre-configured ren
 Scene with HDR pipeline | A scene containing basic elements and pre-configured for HDR rendering
 Scene with LDR pipeline | A scene containing basic elements and pre-configured for LDR rendering
 
-## Open a new Scene
+## Open a new scene
 
 To open your new scene, simply **double click** on new scene asset or press **Ctrl+Enter** after selecting it.
 

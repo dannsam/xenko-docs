@@ -1,4 +1,4 @@
-# Create Assets
+# Create assets
 
 <span class="label label-doc-level">Beginner</span>
 
@@ -8,7 +8,7 @@ Xenko provides two main ways to create assets for your game:
  * Create assets by using the **Add Asset** button from the *Asset View* tab.
  * Create assets by **dragging and dropping resource files** (images, audio, etc.) in the *Asset view* tab
  
-## Use the 'Add Asset' button
+## Use the 'Add asset' button
 
  1. In the *Asset View* tab, **click** ![](media/create-and-add-assets-add-new-asset-button.png).
  

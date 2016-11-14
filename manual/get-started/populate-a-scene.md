@@ -1,4 +1,4 @@
-# Populate a Scene
+# Populate a scene
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Level Designer</span>

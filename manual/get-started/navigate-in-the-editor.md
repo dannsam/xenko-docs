@@ -1,4 +1,4 @@
-# Navigate inside the Scene Editor
+# Navigate inside the scene editor
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Level Designer</span>
@@ -7,9 +7,9 @@ When building scenes of your game in the Scene Editor, you **need to move around
 
 This page will show you how to quickly and easily navigate in the Scene Editor as well as how to use the navigation controls, and navigation gizmos.
 
-## Navigation Controls
+## Navigation controls
 
-### Walk in a Scene
+### Walk in a scene
 
 You can use the **walk navigation** mode by pressing the **left mouse button** and **moving the mouse** in the corresponding direction. 
 The Walk Navigation mode lets you freely move along the X and Z dimensions of the scene.
@@ -53,7 +53,7 @@ The following video shows the sample actions and effects as listed in the above 
  
 _Video: Fly in a scene_
 
-### Orbital Rotation
+### Orbital rotation
 
 When you want to **rotate around objects** of your scene, you can use the orbital rotation by pressing the **Alt** key and the **left mouse button**.
 
@@ -95,7 +95,7 @@ _Focus on an entity using F key_
 > Focusing on an entity automatically adjust the radius of rotation for orbital rotation.
 > The **combination focus + orbital rotation** is perfect to inspect and **turn around** an entity
 
-### Controls Summary
+### Controls summary
 
 The following table shows a summary of all navigation actions and their controls.
 
@@ -109,14 +109,14 @@ Zoom in or zoom out    | Rotate mouse wheel, Alt key + Right mouse button
 Pan                    | Press middle mouse button
 Focus                  | Select an entity and press the F button
 
-## Navigation Gizmos
+## Navigation gizmos
 
 Navigation gizmos are small objects present on the Scene Editor that **help you navigate** inside a scene.
 
 By using the **view camera gizmo**, you can change the **camera view angle** and switch **projection modes**.
 You can use the scene orientation gizmo to know the current orientation of your scene.
 
-### View Camera Gizmo
+### View camera gizmo
 
 You can use the view camera gizmo cube to **change the orientation** of the camera. 
 The view camera gizmo is present on the top-right corner of the Scene Editor. 
@@ -126,7 +126,7 @@ The following image displays the view camera gizmo.
 
 By using this gizmo, you can easily set the camera view angle to the preset values and switch between Perspective and Orthographic projections.
 
-#### Change Camera View Angle
+#### Change camera view angle
 
 To **change the view angle** of the editor camera, simply **click the corresponding face or edge or corner** of the view camera gizmo cube.
 
@@ -146,7 +146,7 @@ The following video shows how to change a camera view angle using the view camer
 
 _Video: Change view angle using view camera gizmo_
 
-#### Switch Projection Modes
+#### Switch projection modes
 
 You can **switch the projection** modes to view the objects in your scene from different dimensions. 
 To switch between perspective and orthographic projection modes, **click the view camera gizmo cube** while you are facing it.
@@ -159,7 +159,7 @@ The following animation shows how to switch between perspective and orthographic
 
    _Switch between perspective and orthographic projections_
 
-### Scene Orientation Gizmo
+### Scene orientation gizmo
 
 The scene orientation gizmo is displayed in the bottom-left corner of the Scene Editor.
 
