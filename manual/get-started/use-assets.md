@@ -1,10 +1,10 @@
-# Use Assets
+# Use assets
 
 <span class="label label-doc-level">Beginner</span>
 
 This page explains you how to **use the assets** in your game once you've created them.
 
-## Reference Assets
+## Reference assets
 
 The first and most common way to use an asset is to **reuse it** in another of your assets by adding a reference.
 
@@ -43,7 +43,7 @@ the *Referencers* button shows you all the asset that the currently selected ass
 
 ![References tab](media/use-assets-references-tab.png)
 
-## Load Assets from code
+## Load assets from code
 
 Another way to use your assets is to **load them at runtime** and use them in your scripts.
 

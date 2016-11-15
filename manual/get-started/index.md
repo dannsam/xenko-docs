@@ -1,4 +1,4 @@
-# Get Started with Xenko
+# Get started with Xenko
 
 <span class="label label-doc-level">Beginner</span>
 

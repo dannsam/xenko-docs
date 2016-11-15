@@ -1,9 +1,17 @@
 # Audio
+You can import sound files and use them in your games and applications. Xenko supports audio features including 3D spatialized audio, streaming, and low-latency playback.
 
-<div class="doc-incomplete"/>
+![Audio in Xenko](media/audio-index-intro-picture.png)
 
-The audio system is composed of two different APIs:
-
-- A **high level API** called the [AudioSystem](audiosystem.md) that provides automatic 3D localization and audio updates based on the [Entity System](../engine/entity-component-model/index.md).
-- A **low level API** called the [AudioEngine](audioengine.md) that provides a precise control on Audio output.
-
+## Pages in this section
+* [Import audio as a sound asset](import-audio-as-a-sound-asset.md)
+* [Sound asset properties](sound-asset-properties.md)
+* [Non-spatialized audio](non-spatialized-audio.md)
+* [Spatialized audio](spatialized-audio.md)
+    * [Audio emitters](audio-emitters.md)
+    * [Audio listeners](audio-listeners.md)
+* [Stream audio](stream-audio.md)
+* [Global audio settings](global-audio-settings.md)
+* [Play a range within an audio file](play-a-range-within-an-audio-file.md)
+* [Custom audio data](custom-audio-data.md)
+* [Set an audio device](set-an-audio-device.md)

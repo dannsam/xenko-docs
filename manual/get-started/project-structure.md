@@ -1,4 +1,4 @@
-# Project Structure
+# Project structure
 
 <span class="label label-doc-level">Beginner</span>
 
@@ -24,7 +24,7 @@ A package (with its dependencies) makes up an **independent block** that can be 
 > [!NOTE]
 > A game is a package having a main executable (entry point).
 
-## Package Directory Structure
+## Package directory structure
 
 The Game Studio creates one **dedicated folder** for each package of your game.
 Inside each of these folders, it organizes the different files as follow (example of a package named 'MyPackage'): 

@@ -1,4 +1,4 @@
-# Introduction to Assets
+# Introduction to assets
 
 <span class="label label-doc-level">Beginner</span>
 
@@ -23,7 +23,7 @@ You can modify and configure Assets using the **dedicated editors** and the **pr
 With the Asset view you can easily organize, search and visualize your Assets. 
 Assets can be **dragged and dropped** into the editors or the property grid to start using them. 
 
-## The Basics
+## The basics
 
 This section will discuss the following subjects:
 

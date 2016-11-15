@@ -1,4 +1,4 @@
-# Arrange Entities
+# Arrange entities
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Level Designer</span>
@@ -9,7 +9,7 @@ The Game studio provides you with tools named **gizmos** to perform these operat
 This page will show you how to use those gizmos to adapt the entities of your scene and build a full game level.
 
 
-## Transformation Gizmos
+## Transformation gizmos
 
 You can find the transformation gizmo tool box at the **top of the scene editor**.
 

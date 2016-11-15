@@ -1,2 +1,1 @@
-deps\docfx\docfx.exe
-pause
+deps\docfx\docfx.exe > build.log

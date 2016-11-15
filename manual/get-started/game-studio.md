@@ -10,7 +10,7 @@ This page will introduce you to the different views and tabs of the Game Studio.
 
 ![The Game Studio](media/game-studio-main-interface.png)
 
-## Asset Editors 
+## Asset editors 
 
 The **center area** of the Game Studio window is dedicated to **asset editors**. 
 Some asset types have their **specific editor** to enable more **complex modifications** of the asset. 
