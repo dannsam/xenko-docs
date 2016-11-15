@@ -7,7 +7,7 @@ Rather than bind controls to physical keys and buttons, you can bind them to **v
 
 For example, imagine you develop a first-person shooter game and need to assign a key for the _UseMedkit_ function. Rather than bind the function to a particular key, you can create a **virtual button** called _UseMedkit_, then bind the virtual button to the **F** key. If they want to, the player can then bind the virtual key to a different key at runtime.
 
-![Virtual buttons](media/index-how-virtual-button-work.png)
+![Virtual buttons](media/index-how-virtual-buttons-work.png)
 
 ## Create virtual buttons
 
@@ -39,9 +39,8 @@ public override void Start()
 > [!Note]
 > You can also bind keys and buttons not included in the Xenko API. For example, while the Xenko API supports two _Extended Mouse Buttons_, you can bind additional _Extended Buttons_ to virtual buttons and use them in your project.
 
-
 ## See also
 * [Input index](index.md)
 * [Gamepads](gamepads.md)
-* [Keyboard](keyboard.md)
+* [Keyboard](keyboards.md)
 * [Pointers](pointers.md)

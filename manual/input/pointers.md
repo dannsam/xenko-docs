@@ -30,14 +30,14 @@ You can enable gesture recognition to detect gestures such as long presses and t
 ## Multi-touch
 If multi-touch is enabled, Xenko triggers events for multiple fingers. If it's disabled, Xenko triggers events only for the first finger that touches the screen. Multi-touch is enabled by default.
 
-To enable **multi-touch**, use [MultiTouchEnabled](xref="SiliconStudio.Xenko.Input.InputManager.MultiTouchEnabled").
+To enable **multi-touch**, use [MultiTouchEnabled](xref:SiliconStudio.Xenko.Input.InputManager.MultiTouchEnabled).
 
 ## The `PointerEvent` class
 
-[PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") reports pointer events. It contains the current **pointer status** and time information. It is thrown every time the **pointer** is modified.
+[PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) reports pointer events. It contains the current **pointer status** and time information. It is thrown every time the **pointer** is modified.
 
 You can access the list of **pointer events** since the last update using 
-[PointerEvents](xref="SiliconStudio.Xenko.Input.InputManager.PointerEvents"). The list is cleared at every update, so you don't need to clear it manually. Pointer events not analyzed during a frame turn are lost.
+[PointerEvents](xref:SiliconStudio.Xenko.Input.InputManager.PointerEvents). The list is cleared at every update, so you don't need to clear it manually. Pointer events not analyzed during a frame turn are lost.
 
 ### Get pointer information
 
@@ -45,9 +45,9 @@ You can use the following properties to get information about the pointer that t
 
 |Property|Description|
 |--------|-----------|
-|[PointerEvent.IsPrimary](xref="SiliconStudio.Xenko.Input.PointerEvent.IsPrimary")| Indicates if the pointer which triggered the event was the first finger to touch the screen |
-|[PointerEvent.PointerType](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerType") | Indicates if the pointer which triggered the event was simulated from _Mouse_ or real _Touch_. |
-|[PointerEvent.PointerId](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerId") | Indicates the ID of the pointer which triggered the event. |
+|[PointerEvent.IsPrimary](xref:SiliconStudio.Xenko.Input.PointerEvent.IsPrimary)| Indicates if the pointer which triggered the event was the first finger to touch the screen |
+|[PointerEvent.PointerType](xref:SiliconStudio.Xenko.Input.PointerEvent.PointerType) | Indicates if the pointer which triggered the event was simulated from _Mouse_ or real _Touch_. |
+|[PointerEvent.PointerId](xref:SiliconStudio.Xenko.Input.PointerEvent.PointerId) | Indicates the ID of the pointer which triggered the event. |
 
 > [!Warning]
 > The ID of a pointer is valid only during a single _Down->Move->Up_ sequence of pointer events.
@@ -59,7 +59,7 @@ You can use the following properties to get information about the pointer that t
 
 ### Get the pointer position
 
-[PointerEvent.Position](xref="SiliconStudio.Xenko.Input.PointerEvent.Position") returns X and Y coordinates which determine the pointer position. The values are between 0 and 1 (normalized values). For example:
+[PointerEvent.Position](xref:SiliconStudio.Xenko.Input.PointerEvent.Position) returns X and Y coordinates which determine the pointer position. The values are between 0 and 1 (normalized values). For example:
 
 * (0,0): the pointer is in the top-left corner of the screen
 * (1,1): pointer is in the bottom-right corner of the screen
@@ -69,7 +69,7 @@ You can use the following properties to get information about the pointer that t
 
 ### Get pointer events
 
-Use the [PointerEvent.State](xref="SiliconStudio.Xenko.Input.PointerEvent.State") to check the pointer events. This returns a value inside [PointerState](xref="SiliconStudio.Xenko.Input.PointerState").
+Use the [PointerEvent.State](xref:SiliconStudio.Xenko.Input.PointerEvent.State) to check the pointer events. This returns a value inside [PointerState](xref:SiliconStudio.Xenko.Input.PointerState).
 
 Xenko recognizes five types of event:
 
@@ -79,16 +79,17 @@ Xenko recognizes five types of event:
 * _Out_: The finger left the touch region.
 * _Cancel_: The pointer sequence was canceled. This can happen when the application is interrupted; for example, a phone app might be interrupted by an incoming phone call.
 
-> [!Note] A sequence of pointer events for one pointer always starts with a _Down_ event. This might be followed by one or more _Move_ events, and always ends with an _Up_, _Out_, or _Cancel_ event.
+> [!Note] 
+> A sequence of pointer events for one pointer always starts with a _Down_ event. This might be followed by one or more _Move_ events, and always ends with an _Up_, _Out_, or _Cancel_ event.
 
 ### Get delta values
 
-Use [PointerEvent.DeltaTime](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaTime") to get the time elapsed from the previous `PonterEvent` for a particular pointer ID.
+Use [PointerEvent.DeltaTime](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaTime) to get the time elapsed from the previous `PonterEvent` for a particular pointer ID.
 
-Use [PointerEvent.DeltaPosition](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition") to get the change in position since the previous `PointerEvent` for a particular pointer ID.
+Use [PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition) to get the change in position since the previous `PointerEvent` for a particular pointer ID.
 
 > [!Note] 
-> Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **Pointer State** is _Down_).
+> Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **pointer state** is _Down_).
 
 ## Example code
 

@@ -8,26 +8,27 @@
 There are two ways to handle mouse input in Xenko:
 
 * Query **mouse button states**
-* For cross-platform games that target mobile devices, you can use [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") lists.
+* For cross-platform games that target mobile devices, you can use [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) lists.
 For more information, see [Pointers](pointers.md).
 
-You can access **mouse button states** and **pointer events list** from the [Input manager](xref="SiliconStudio.Xenko.Input.InputManager").
+You can access **mouse button states** and **pointer events list** from the [Input manager](xref:SiliconStudio.Xenko.Input.InputManager).
 
 | Class | Project type | When to use |
 | --- | --- | --- |
-| [Input](xref="SiliconStudio.Xenko.Input.InputManager") | Desktop only | For desktop games, you usually handle input with multiple mouse buttons. This means you should usually use **mouse button states**. |
-| [PointerEvent](xref="SiliconStudio.Xenko.Input.PointerEvent") | Cross-platform | For mobile games, you usually simulate pointers with just the left mouse button. This means you can treat the mouse input like pointers. There's no need to create separate mouse-specific controls. For more information, see [Pointers](pointers.md).|
+| [Input](xref:SiliconStudio.Xenko.Input.InputManager) | Desktop only | For desktop games, you usually handle input with multiple mouse buttons. This means you should usually use **mouse button states**. |
+| [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) | Cross-platform | For mobile games, you usually simulate pointers with just the left mouse button. This means you can treat the mouse input like pointers. There's no need to create separate mouse-specific controls. For more information, see [Pointers](pointers.md).|
 
 For more information about these options, see the [Input index](index.md).
 
 ## Check mouse availability
-Before handling mouse input, use [Input.HasMouse](xref="SiliconStudio.Xenko.Input.InputManager.HasMouse") to check if a mouse is connected.
+Before handling mouse input, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse) to check if a mouse is connected.
 
-> [!Note] Xenko doesn't support mice connected at runtime. This feature will be added in a future release.
+> [!Note] 
+> Xenko doesn't support mice connected at runtime. This feature will be added in a future release.
 
 ## Query the mouse position
 
-[MousePosition](xref="SiliconStudio.Xenko.Input.InputManager.MousePosition") returns X and Y coordinates which determine the mouse pointer position. The values are between 0 and 1 (normalized values):
+[MousePosition](xref:SiliconStudio.Xenko.Input.InputManager.MousePosition) returns X and Y coordinates which determine the mouse pointer position. The values are between 0 and 1 (normalized values):
 
 * (0,0): the pointer is in the top-left corner of the screen
 * (1,1): pointer is in the bottom-right corner of the screen
@@ -39,29 +40,29 @@ Before handling mouse input, use [Input.HasMouse](xref="SiliconStudio.Xenko.Inpu
 
 You can use the mouse buttons to trigger actions in a project. For example, in first-person shooter games, the left mouse button is commonly used to shoot.
 
-The [Input manager](xref="SiliconStudio.Xenko.Input.InputManager") has several methods that check mouse button states (_Pressed_, _Down_, or _Released_):
+The [Input manager](xref:SiliconStudio.Xenko.Input.InputManager) has several methods that check mouse button states (_Pressed_, _Down_, or _Released_):
 
 | Method | Description |
 | --- | --- |
-| [HasDownMouseButtons()](xref="SiliconStudio.Xenko.Input.InputManager.HasDownMouseButtons") | Checks if one or more mouse buttons are currently pressed down. |
-| [HasPressedMouseButtons()](xref="SiliconStudio.Xenko.Input.InputManager.HasPressedMouseButtons") | Checks if one or more mouse buttons were pressed in the last update. |
-| [HasReleasedMouseButtons()](xref="SiliconStudio.Xenko.Input.InputManager.HasReleasedMouseButtons") | Checks if one or more mouse buttons were released in the last update. |
-| [IsMouseButtonDown (MouseButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsMouseButtonDown.SiliconStudio.Xenko.Input.MouseButton") | Checks if a specified mouse button is currently pressed down. |
-| [IsMouseButtonPressed (MouseButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsMouseButtonPressed.SiliconStudio.Xenko.Input.MouseButton") | Checks if a specified mouse button was pressed in the last update. |
-| [IsMouseButtonReleased (MouseButton)](xref="SiliconStudio.Xenko.Input.InputManager.IsMouseButtonReleased.SiliconStudio.Xenko.Input.MouseButton") | Checks if a specified mouse button was released in the last update. |
+| [HasDownMouseButtons()](xref:SiliconStudio.Xenko.Input.InputManager.HasDownMouseButtons) | Checks if one or more mouse buttons are currently pressed down. |
+| [HasPressedMouseButtons()](xref:SiliconStudio.Xenko.Input.InputManager.HasPressedMouseButtons) | Checks if one or more mouse buttons were pressed in the last update. |
+| [HasReleasedMouseButtons()](xref:SiliconStudio.Xenko.Input.InputManager.HasReleasedMouseButtons) | Checks if one or more mouse buttons were released in the last update. |
+| [IsMouseButtonDown (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonDown\(SiliconStudio.Xenko.Input.MouseButton\)) | Checks if a specified mouse button is currently pressed down. |
+| [IsMouseButtonPressed (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonPressed\(SiliconStudio.Xenko.Input.MouseButton\)) | Checks if a specified mouse button was pressed in the last update. |
+| [IsMouseButtonReleased (MouseButton)](xref:SiliconStudio.Xenko.Input.InputManager.IsMouseButtonReleased\(SiliconStudio.Xenko.Input.MouseButton\)) | Checks if a specified mouse button was released in the last update. |
 
 ### Mouse delta
 
-Use [MouseDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseDelta") to get the change in mouse position in normalized coordinates since the last update. You can use this to analyze mouse movement speed and direction.
+Use [MouseDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseDelta) to get the change in mouse position in normalized coordinates since the last update. You can use this to analyze mouse movement speed and direction.
 
 ### Mouse wheel delta 
 
 You can use the mouse wheel to trigger actions in a project. For example, in a first-person shooter game, moving the mouse wheel might switch weapons or zoom a camera.
 
-The [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") returns a positive value when the user scrolls forwards and a negative value when the user scrolls backwards. A value of `0` indicates no movement.
+The [MouseWheelDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta) returns a positive value when the user scrolls forwards and a negative value when the user scrolls backwards. A value of `0` indicates no movement.
 
 > [!Note] 
-> By default, [MouseWheelDelta](xref="SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta") returns 120*X, where X is the amount of wheel steps scrolled during the last update.
+> By default, [MouseWheelDelta](xref:SiliconStudio.Xenko.Input.InputManager.MouseWheelDelta) returns 120*X, where X is the amount of wheel steps scrolled during the last update.
 
 ## Lock the mouse position
 
@@ -71,12 +72,12 @@ You can lock the mouse position and hide the cursor with the following propertie
 
 | Method or property | Description |
 | --- | --- |
-| [LockMousePosition(Boolean)](xref="SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System.Boolean") | Locks the mouse position and hides the cursor until the next call to the ``UnlockMousePosition()`` event. |
-| [UnlockMousePosition()](xref="SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition") | Unlocks the mouse position previously locked by ``LockMousePosition (Boolean)`` event and restores the cursor visibility. |
-| [IsMousePositionLocked](xref="SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked") | Checks if the mouse position is locked. |
+| [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System.Boolean) | Locks the mouse position and hides the cursor until the next call to the [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) event. |
+| [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) | Unlocks the mouse position locked by the [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System.Boolean) event and restores the cursor visibility. |
+| [IsMousePositionLocked](xref:SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked) | Checks if the mouse position is locked. |
 
 > [!Tip] 
-> You can get or set mouse visibility with [GameWindow.IsMouseVisible](xref="SiliconStudio.Xenko.Games.GameWindow.IsMouseVisible").
+> You can get or set mouse visibility with [GameWindow.IsMouseVisible](xref:SiliconStudio.Xenko.Games.GameWindow.IsMouseVisible).
 
 ## Example code
 
@@ -105,6 +106,6 @@ public class MouseInputScript : SyncScript
 ## See also
 * [Input index](index.md)
 * [Gamepads](gamepads.md)
-* [Keyboard](keyboard.md)
+* [Keyboard](keyboards.md)
 * [Pointers](pointers.md)
 * [Virtual buttons](virtual-buttons.md)

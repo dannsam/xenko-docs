@@ -24,48 +24,48 @@ The Xbox Elite controller buttons have the following names in Xenko:
 
 Before handling gamepad input:
 
-* Use [Input.HasGamePad](xref="SiliconStudio.Xenko.Input.InputManager.HasGamePad") to check if a gamepad is connected.
-* Use [Input.GamePadCount](xref="SiliconStudio.Xenko.Input.InputManager.GamePadCount") to check how many gamepads are connected.
-* Use [GamePadState.IsConnected](xref="SiliconStudio.Xenko.Input.GamePadState.IsConnected") to check if the current gamepad has been disconnected.
+* To check if a gamepad is connected, use [Input.HasGamePad](xref:SiliconStudio.Xenko.Input.InputManager.HasGamePad).
+* To check how many gamepads are connected, use [Input.GamePadCount](xref:SiliconStudio.Xenko.Input.InputManager.GamePadCount).
+* To check if the current gamepad has been disconnected, use [GamePadState.IsConnected](xref:SiliconStudio.Xenko.Input.GamePadState.IsConnected).
 
 > [!Note] 
 > Xenko doesn't support gamepads connected at runtime. This feature will be added in a future release.
 
 ### Digital buttons
 
-Query the states and state changes of digital buttons with the following methods:
+Query the states and state changes of digital gamepad buttons with the following methods:
 
 | Method | Functionality |
 |----|----|
-| [IsPadButtonDown(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonDown.System.Int32") | Checks whether the button is in the _down_ state. |
-| [IsPadButtonPressed(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonPressed.System.Int32") | Checks whether the user has _pressed_ the button since the previous update. |
-| [IsPadButtonReleased(index, button)](xref="SiliconStudio.Xenko.Input.InputManager.IsPadButtonReleased.System.Int32") | Checks whether the user has _released_ the button since the previous update. |
+| [IsPadButtonDown(index, button)](xref:SiliconStudio.Xenko.Input.InputManager.IsPadButtonDown\(System.Int32,SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the button is in the _down_ state. |
+| [IsPadButtonPressed(index, button)](xref:SiliconStudio.Xenko.Input.InputManager.IsPadButtonPressed\(System.Int32,SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the user has _pressed_ the button since the previous update. |
+| [IsPadButtonReleased(index, button)](xref:SiliconStudio.Xenko.Input.InputManager.IsPadButtonReleased\(System.Int32,SiliconStudio.Xenko.Input.GamePadButton\)) | Checks whether the user has _released_ the button since the previous update. |
 
 * _index (Integer)_: The index of the gamepad you want to check.
 * _button (GamePadButton)_: The gamepad button you want to check.
 
-You can also get the state of digital buttons using the [GamePadState.Buttons](xref="SiliconStudio.Xenko.Input.GamePadState.Buttons").
+You can also get the state of digital buttons using [GamePadState.Buttons](xref:SiliconStudio.Xenko.Input.GamePadState.Buttons).
 
-> [!Note] The ``Buttons`` field is a bitmask that uses binary system.
-> Depending on the bitmask value, you can determine which buttons are _Up_ or _Down_.
+> [!Note] 
+> The [GamePadState.Buttons](xref:SiliconStudio.Xenko.Input.GamePadState.Buttons) field is a bitmask that uses binary system. Depending on the bitmask value, you can determine which buttons are _up_ or _down_.
 
 ### Analog buttons
 
 To query values of analog buttons, first get the current state of gamepad using 
-[GetGamePad(index)](xref="SiliconStudio.Xenko.Input.InputManager.GetGamePad.System.Int32"), where _index (Integer)_ is the index of the gamepad you want to check.
+[GetGamePad(index)](xref:SiliconStudio.Xenko.Input.InputManager.GetGamePad\(System.Int32\)), where _index (Integer)_ is the index of the gamepad you want to check.
 
 > [!WARNING]
-> The value returned by `GetGamePad` is the state of the gamepad at the **current** update. You can't reuse this value for the next updates. You have to query it again in every update.
+> The value returned by [GetGamePad(index)](xref:SiliconStudio.Xenko.Input.InputManager.GetGamePad\(System.Int32\)) is the state of the gamepad at the **current** update. You can't reuse this value for the next updates. You have to query it again in every update.
 
 To get trigger and thumbstick positions, use these 
-[GamePadState](xref="SiliconStudio.Xenko.Input.GamePadState") fields:
+[GamePadState](xref:SiliconStudio.Xenko.Input.GamePadState) fields:
 
 | Field | Description |
 |----|----|
-| [LeftThumb](xref="SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | Left thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
-| [RightThumb](xref="SiliconStudio.Xenko.Input.GamePadState.RightThumb) | Right thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
-| [LeftTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axes. |
-| [RightTrigger](xref="SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
+| [LeftThumb](xref:SiliconStudio.Xenko.Input.GamePadState.LeftThumb) | Left thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
+| [RightThumb](xref:SiliconStudio.Xenko.Input.GamePadState.RightThumb) | Right thumbstick X-axis/Y-axis value in the range [-1.0f, 1.0f] for both axes. |
+| [LeftTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.LeftTrigger) | Left trigger analog control value in the range [0, 1.0f] for a single axes. |
+| [RightTrigger](xref:SiliconStudio.Xenko.Input.GamePadState.RightTrigger) | Right trigger analog control value in the range [0, 1.0f] for a single axis. |
 
 Thumbsticks move along the X and Y axes. Their positions read as follows:
 
@@ -79,7 +79,7 @@ Triggers move along the X axis. Their positions reads as follows:
 ### Vibration
 
 To set the gamepad vibration level, use 
-[SetGamePadVibration](xref="SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration.System.Int32.System.Single.System.Single").
+[SetGamePadVibration](xref:SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration\(System.Int32,System.Single,System.Single\)).
 
 > [!Note] 
 > Xenko only supports vibration for Xbox gamepads. Vibration support for other gamepads will be added in a future release.
