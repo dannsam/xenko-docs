@@ -47,31 +47,30 @@ For example, the following code:
 * sets the volume
 * plays the audio
 
-```
- public override async Task Execute()
-    {
-        // Load the sound
-        Sound musicSound = Content.Load<Sound>("MySound");
+```cs
+public override async Task Execute()
+{
+    // Load the sound
+    Sound musicSound = Content.Load<Sound>("MySound");
             
-        // Create a sound instance
-        SoundInstance music = musicSound.CreateInstance();
+    // Create a sound instance
+    SoundInstance music = musicSound.CreateInstance();
             
-        // Loop
-        music.IsLooping = true;
+    // Loop
+    music.IsLooping = true;
 
-        // Set the volume
-        music.Volume = 0.25f;
+    // Set the volume
+    music.Volume = 0.25f;
 
-        // Play the music
-        music.Play();
-    }
+    // Play the music
+    music.Play();
+}
 ```
 
 ### Alternative: create a script with public variables
 
 Create a public variable for each sound asset you want to use. You can use the same properties listed above.
-
-    For example:
+For example:
 
 ```cs
 public class MySoundScript : SyncScript

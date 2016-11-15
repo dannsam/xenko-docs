@@ -25,8 +25,7 @@ You must have both audio emitters and audio listeners to hear spatialized sound 
 
 Spatialized audio is widely used for sound effects in platform, desktop, and VR games. For example, a gun might make a gunshot sound when fired, or a character might make a footstep sound when they take a step.
 
-> [!Note] 
-Spatialized audio uses more CPU than non-spatialized audio.
+> [!Note] Spatialized audio uses more CPU than non-spatialized audio.
 
 ## Enable spatialized audio
 When you [import your sound asset](import-audio-as-a-sound-asset.md), select _Spatialized Sound_ as the asset type.
