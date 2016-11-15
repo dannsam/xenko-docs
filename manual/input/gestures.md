@@ -90,7 +90,7 @@ The user touches the screen and quickly removes their finger.
 The number of fingers on the screen can't vary during the gesture. To set the number of fingers required for a tap, modify [GestureConfigTap.RequiredNumberOfTaps](xref="SiliconStudio.Xenko.Input.GestureConfigTap.RequiredNumberOfTaps").
 
 > [!TIP] 
-> To distinguish single taps from multi-taps, the system uses latency in tap events. To avoid this latency, set the [GestureConfigTap.MaximumTimeBetweenTaps](xref="SiliconStudio.Xenko.Input.GestureConfigTap.MaximumTimeBetweenTaps") field to **0**.
+> To distinguish single taps from multi-taps, the system uses latency in tap events. To disable this, set the [GestureConfigTap.MaximumTimeBetweenTaps](xref="SiliconStudio.Xenko.Input.GestureConfigTap.MaximumTimeBetweenTaps") field to **0**.
 
 #### <a name="Flick"> Flick</a>
 
