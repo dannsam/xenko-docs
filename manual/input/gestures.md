@@ -94,7 +94,7 @@ The number of fingers on the screen can't vary during the gesture. To set the nu
 
 #### <a name="Flick"> Flick</a>
 
-![Flick](media/gestures_flick_gesture.png)
+![Flick gesture](media/gestures_flick_gesture.png)
 
 The user touches the screen, performs a quick straight translation, and withdraws their finger(s).
 
@@ -111,7 +111,7 @@ To restrict the direction of the drag to **vertical** or **horizontal**, use
 
 #### <a name="Long-press"> Long press</a>
 
-![longPress Gesture](media/gestures_long_press_gesture.png) 
+![longPress gesture](media/gestures_long_pres_gesture.png) 
 
 The user touches the screen and maintains pressure without removing their finger for a certain period of time (the default time is one second).
 
@@ -127,7 +127,7 @@ To change the minimum press length for the long press gesture, modify  [GestureC
 
 #### <a name="Drag"> Drag</a>
 
-![Drag](media/gestures_drag_gesture.png) 
+![Drag gesture](media/gestures_drag_gesture.png)
 
 The user touches the screen, performs a translation, and withdraws their finger(s).
 
