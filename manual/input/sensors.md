@@ -1,175 +1,138 @@
-#Sensors
+# Sensors
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Xenko supports various sensors that you can use as **Input Devices** in your games. 
-Sensors provide functionalities that are often used in racing, arcade, and many other mobile games.
+You can use various **sensors** as input devices in your project. Sensors are often used in mobile games.
 
-Use [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class to access sensors, and:
+Use the [input manager](xref="SiliconStudio.Xenko.Input.InputManager") to access sensors and:
 
-* Check if a particular sensor is supported by Xenko.
-* Disable a particular sensor.
-* Retrieve the data provided by a particular sensor.
+* check if a sensor is supported by Xenko
+* disable a sensor
+* retrieve sensor data
 
-##Overview
+Xenko can receive data from six types of sensor: _Orientation_, _Accelerometer_, _UserAcceleration_, _Gravity_, _Compass_ and _Gyroscope_. They inherit from [SensorBase](xref="SiliconStudio.Xenko.Input.SensorBase"), which provides base functionalities such as enabling or testing the availability of the sensor.
 
-Xenko provides **6 built-in sensors**: _Orientation_, _Accelerometer_, _UserAcceleration_, _Gravity_, _Compass_ and _Gyroscope_ sensors.
-They all inherit from [SensorBase](xref="SiliconStudio.Xenko.Input.SensorBase"), **which provides base functionalities** such as 
-enabling or testing the availability of the sensor.
+Xenko creates a default instance for each sensor type. You can access each instance from the [input manager](xref="SiliconStudio.Xenko.InputManager").
 
-**A default instance** is created by Xenko for each sensor type. You can access it from the [Input](xref="SiliconStudio.Xenko.InputManager") base class.
+Sensors are state-based. Each sensor instance is automatically updated every frame, and contains the value of the sensor just before the update.
 
-Sensors are state-based. Each sensor instance is **automatically updated** every frame, and it contains the value of the sensor just before the update.
-
-**Access Sensor**
+To access a sensor, use (for example):
 
 ```
 var accelerometer = Input.Accelerometer;
 ```
 
-##Check Availability
+## Check if a sensor is available
 
-Before reading sensor input, you should **first check sensor availability** in the system.
-Use the [SensorBase.IsSupported](xref="SiliconStudio.Xenko.Input.SensorBase.IsSupported") to determine
-if the corresponding sensor is supported and available on the current system.
+Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref="SiliconStudio.Xenko.Input.SensorBase.IsSupported") property.
 
-> [!Note]
-> When a sensor type is not natively supported by the system, Xenko will **try to emulate** it from other sensor inputs when possible.
-
-**Check availability of the sensor**
+For example:
 ```
 var hasCompass = Input.Compass.IsSupported;
 ```
 
-##Enable a Sensor
+> [!Note]
+> If a sensor isn't natively supported by the device, Xenko will try to emulate it using the device's other sensors.
 
-By default Xenko disables all available sensors, as retrieving and updating sensor data **takes some CPU time**.
+## Enable a sensor
 
-To use a sensor, you should **first enable it** by setting [SensorBase.IsEnabled](xref="SiliconStudio.Xenko.Input.SensorBase.IsEnabled")
-to ```True```. When you don't need sensor input, you should **turn it off** by setting the property to ```False```.
+By default, Xenko disables all available sensors, as retrieving and updating sensor data takes significant CPU time.
 
-##Use Orientation Sensor
+To enable a sensor, set [SensorBase.IsEnabled](xref="SiliconStudio.Xenko.Input.SensorBase.IsEnabled")
+to ```True```. When you don't need the sensor, disable it by setting the property to ```False```.
 
-The **Orientation sensor** indicates the **orientation of the device** with respect to gravity and the Earth's magnetic North Pole. 
-This means that the orientation of the device is considered as null when the Y-axis of the device is aligned with magnetic North pole
-and the Z-axis with the gravity. You can use orientation data to control various actions in a game.
+## Use the orientation sensor
 
-The following image displays how orientation sensor works on smartphones:
+The **orientation sensor** indicates the **orientation of the device** with respect to gravity and the Earth's north pole. The orientation is null when the device's Y-axis is aligned with the magnetic north pole and the Z-axis with the gravity. You can use orientation data to control various actions in a game.
 
 ![Orientation sensor](media/sensor-overview-orientation-sensor.png)
 
-Use [Input.Orientation](xref="SiliconStudio.Xenko.Input.InputManager.Orientation") to get the current orientation of the system.
+Use [Input.Orientation](xref="SiliconStudio.Xenko.Input.InputManager.Orientation") to get the current orientation of the device.
 
 | Property        | Description                                     | Declaration                                 |
 |-----------------|-------------------------------------------------|---------------------------------------------|
-| [Roll](xref="SiliconStudio.Xenko.Input.OrientationSensor.Roll") | Rotation around the Ox axis. | ```public float Roll { get; }``` |
-| [Pitch](xref="SiliconStudio.Xenko.Input.OrientationSensor.Pitch")           | Rotation around the Oy axis.                    | ```public float Pitch { get; }```           |
-| [Yaw](xref="SiliconStudio.Xenko.Input.OrientationSensor.Yaw")             | Rotation around the Oz axis.                    | ```public float Yaw { get; }``` |
-| [Rotation Matrix](xref="SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix") | Current rotation of the device.  | ```public Matrix RotationMatrix { get; }``` |
-| [Quaternion](xref="SiliconStudio.Xenko.Input.OrientationSensor.Quaternion") | Current orientation and rotation of the device. |  ```public Quaternion Quaternion { get; }``` |
+| [Roll](xref="SiliconStudio.Xenko.Input.OrientationSensor.Roll") | The rotation around the X-axis. | ```public float Roll { get; }``` |
+| [Pitch](xref="SiliconStudio.Xenko.Input.OrientationSensor.Pitch")           | The rotation around the Y-axis.                    | ```public float Pitch { get; }```           |
+| [Yaw](xref="SiliconStudio.Xenko.Input.OrientationSensor.Yaw")             | The rotation around the Z-axis.                    | ```public float Yaw { get; }``` |
+| [Rotation Matrix](xref="SiliconStudio.Xenko.Input.OrientationSensor.RotationMatrix") | The device rotation.  | ```public Matrix RotationMatrix { get; }``` |
+| [Quaternion](xref="SiliconStudio.Xenko.Input.OrientationSensor.Quaternion") | The device orientation and rotation. |  ```public Quaternion Quaternion { get; }``` |
 
-> [!Note]
-> For convenience, Xenko provides the system orientation under the Pitch/Yaw/Roll, Rotation Matrix, or Quaternion forms.
-> You can use the form that best fits your needs, but we recommend to use the quaternion form when possible. This form does 
-> not suffer from Gimbal lock problem.
-
-**Access orientation of the device**
+For example:
 
 ```
   var orientation = Input.Orientation.Quaternion;
 ```
 
-##Use Motion Sensors
-**Motion sensors** measure the **acceleration forces** applied on the device.
-Using motion sensors you can detect actions such as tilts, shakes, and swing. 
+> [!Note]
+> Xenko provides the orientation under the pitch/yaw/roll, rotation matrix, or quaternion forms. We recommend the quaternion form as it doesn't suffer from [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
 
-Xenko Supports three types of **motion sensors**:
+## Motion sensors
+**Motion sensors** measure **acceleration forces** such as tilts, shakes, and swing. Xenko supports three types of motion sensor:
 
-* **Accelerometer** sensor: measures the **raw acceleration** applied on the device.
-* **Gravity** sensor: measures only the **gravity force**.
-* **UserAcceleration** sensor: measures only the **acceleration applied by the user** on the device.
+* **Accelerometer**: measures the **raw acceleration**
+* **Gravity**: measures gravity only
+* **UserAcceleration**: measures only the acceleration applied by the user
 
-The three motion sensors utilize the following **physic relation**: 
+The sensors use the physic relation ```Accelerometer = Gravity + UserAcceleration```.
 
-```Accelerometer = Gravity + UserAcceleration``` 
+![Motion sensors](media/sensor-overview-accelerometer-acceleration-gravity.png)
 
-The below image illustrates this relation:
+Motion sensors have a single field that specifies the current **acceleration vector** on the device. Xenko measures the acceleration in **meters per second squared**.
 
-![Motion Sensors](media/sensor-overview-accelerometer-acceleration-gravity.png)
-
-Motion sensors possess a single field that specifies current **acceleration vector** applied on the device.
-In Xenko, the accelerations are measured in **meters per second squared**.
-
-The below image shows the **coordinate basis** used to measure the acceleration on smartphones and tablets. 
+This image shows the **coordinate basis** Xenko uses to measure acceleration on smartphones and tablets:
 
 ![Accelerometer](media/sensor-overview-accelerometer-sensor.png)
 
-###Use Accelerometer Sensor
+### Use the accelerometer
 
-**Accelerometer** measures the raw acceleration applied on the device. This includes **gravity** and **user acceleration**.
+The **accelerometer** measures the raw acceleration applied to the device. This includes **gravity** and **user acceleration**.
 
-Use [Accelerometer.Acceleration](xref="SiliconStudio.Xenko.Input.AccelerometerSensor.Acceleration") to get the **current acceleration**
-applied on the device. 
+> [!NOTE]
+> When the user isn't applying force, the **device acceleration** is equal to its **gravity**.
 
-> [!TIP]
-> When the end-user does not apply any force to the device, the **device acceleration** equals to **gravity**.
-
-**Access device raw acceleration**
+To get the raw acceleration, use [Accelerometer.Acceleration](xref="SiliconStudio.Xenko.Input.AccelerometerSensor.Acceleration"). For example:
 ```
 var acceleration = Input.Accelerometer.Acceleration;
 ```
 
-###Use Gravity Sensor
+### Use the gravity sensor
+The gravity sensor gives a 3D vector indicating the direction and magnitude of gravity (meters per second squared) acting on the device. 
 
-[GravitySensor](xref="SiliconStudio.Xenko.Input.GravitySensor") measures the gravity force applied on a device.
-
-The gravity sensor gives a three-dimensional vector indicating the direction and magnitude of gravity (meters per second squared).
-The following code shows how to get an instance of the gravity sensor:
+To get the gravity vector, use [GravitySensor](xref="SiliconStudio.Xenko.Input.GravitySensor"). For example:
 
 ```
  var gravityVector = Input.Gravity.Vector;
 ```
 
-###Use User Acceleration Sensor
-**User Acceleration Sensor** is similar to Accelerometer, but it measures the acceleration applied **only** by a user
-(without gravitational acceleration).
+### Use user acceleration sensor
+The **user acceleration sensor** is similar to the accelerometer, but measures the acceleration applied **only** by a user (without gravitational acceleration). 
 
-Use [UserAcceleration.Acceleration](xref="SiliconStudio.Xenko.Input.InputManager.UserAccelerationSensor") to get user acceleration value.
-
-**Access user acceleration**
+To get the user acceleration, use [UserAcceleration.Acceleration](xref="SiliconStudio.Xenko.Input.InputManager.UserAccelerationSensor"). For example:
 ```                       
 var userAcceleration = Input.UserAcceleration.Acceleration;
 ```
 
-##Use Compass Sensor
+### Use the compass sensor
 
-**Compass** indicates the direction to the magnetic **North Pole** and **bearings** to it. 
-You can use compass to auto-rotate and align digital maps.
-
-The following image displays the compass sensor of a smartphone.
+The **compass** indicates measures the angle between the top of the device and the **North Pole**. This is useful, for example, to rotate and align digital maps.
 
 ![Compass](media/sensor-overview-compasss.png)
 
-The compass measures the **angle** between the **top of the device** and the **North Pole**.
-Use [CompassSensor.Heading](xref="SiliconStudio.Xenko.Input.CompassSensor.Heading") to get this angle (in radian).
+To get this angle, use [CompassSensor.Heading](xref="SiliconStudio.Xenko.Input.CompassSensor.Heading"). For example:
 
-**Access compass heading**
 ```
 var heading = Input.Compass.Heading;
 ```
 
-##Use Gyroscope
+### Use the gyroscope
 
-The gyroscope sensor measures the **rotation speed** of the device (**radians per second**).
-
-The following image displays the orientation of the rotation axis used by the Gyroscope sensor.
+The gyroscope measures the **rotation speed** of the device (**radians per second**).
 
 ![Gyroscope](media/sensor-overview-gyroscope-sensor.png)
 
-Use [GyroscopeSensor.RotationRate](xref="SiliconStudio.Xenko.Input.GyroscopeSensor.RotationRate") to get the **current rotation speed** of the device.
+To get the rotation speed, use [GyroscopeSensor.RotationRate](xref="SiliconStudio.Xenko.Input.GyroscopeSensor.RotationRate"). For example:
 
-**Access the current rotation speed**
 ```
   var rotationRate = Input.Gyroscope.RotationRate; 
   var rotationSpeedX =  rotationRate.X;
@@ -177,7 +140,7 @@ Use [GyroscopeSensor.RotationRate](xref="SiliconStudio.Xenko.Input.GyroscopeSens
   var rotationSpeedZ =  rotationRate.Z;
 ```
 
-## Code Sample
+## Example code
 
 ```
 public class SensorScript : AsyncScript
@@ -206,7 +169,7 @@ public class SensorScript : AsyncScript
 }
 ```
 
-<div class="doc-relatedtopics">
+## See also
+* [Input index](index.md)
 * [Gestures](gestures.md)
 * [Pointers](pointers.md)
-</div>

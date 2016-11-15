@@ -3,13 +3,11 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Pointers** are points on the device screen corresponding to **finger touches**.
+**Pointers** are points on the device screen corresponding to **finger touches**. Devices with multi-touch functionality support multiple simultaneous pointers.
 
-On desktop platforms, the left mouse button can be used to simulate pointers. For more information on mouse controls, see [Mouse Input](mouse.md).
+On desktop platforms, the left mouse button can be used to simulate pointers. For more information about mouse input, see [Mice](mice.md).
 
-Devices with multi-touch functionality support several simultaneous pointers.
-
-## How Xenko processes input from pointers
+## How Xenko processes pointer input
 
 1. The user touches the screen or clicks the left mouse button.
 2. Xenko creates a pointer.
@@ -17,22 +15,20 @@ Devices with multi-touch functionality support several simultaneous pointers.
 4. Every time the pointer is modified, Xenko creates a new **pointer event** with that pointer.
 5. For each new finger, Xenko creates a new pointer with a new pointer ID.
 
-> [!Note] 
-> Each **pointer event** contains information on only one pointer. If several pointers are modified simultaneously in the same update, Xenko creates a separate **pointer event** for each pointer.
+> [!Note]
+> Pointer events are listed in chronological order.
 
-> [!Tip] 
-> Pointer events are listed in chronological order (time of the event).
+> [!Note] 
+> Each pointer event contains information about only one pointer. If several pointers are modified simultaneously in the same update, Xenko creates a separate event for each pointer.
 
 > [!Warning]
-> Each OS handles pointer modifications differently. This means the same finger gesture can generate slightly different pointer event sequences across different platforms.
->
-> For example, Android doesn't create new a pointer event when a finger touches the screen but doesn't move.
-> For more details, check the documentation for your OS.
+> Each OS handles pointer modifications differently. This means the same finger gesture can generate slightly different pointer event sequences across different platforms. For example, Android doesn't create new a pointer event when a finger touches the screen but doesn't move.
+For more information, check your OS documentation.
 
-You can enable **gesture recognition** to detect gestures such as **long presses** and **taps**. For more information, see [Gestures](gestures.md).
+You can enable gesture recognition to detect gestures such as long presses and taps. For more information, see [Gestures](gestures.md).
 
 ## Multi-touch
-If multi-touch is disabled, Xenko triggers events only for the first finger that touches the screen. Multi-touch is enabled by default.
+If multi-touch is enabled, Xenko triggers events for multiple fingers. If it's disabled, Xenko triggers events only for the first finger that touches the screen. Multi-touch is enabled by default.
 
 To enable **multi-touch**, use [MultiTouchEnabled](xref="SiliconStudio.Xenko.Input.InputManager.MultiTouchEnabled").
 
@@ -51,55 +47,52 @@ You can use the following properties to get information about the pointer that t
 |--------|-----------|
 |[PointerEvent.IsPrimary](xref="SiliconStudio.Xenko.Input.PointerEvent.IsPrimary")| Indicates if the pointer which triggered the event was the first finger to touch the screen |
 |[PointerEvent.PointerType](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerType") | Indicates if the pointer which triggered the event was simulated from _Mouse_ or real _Touch_. |
-|[PointerEvent.PointerId](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerId") | Indicates the id the **Pointer** which triggered the event. |
+|[PointerEvent.PointerId](xref="SiliconStudio.Xenko.Input.PointerEvent.PointerId") | Indicates the ID of the pointer which triggered the event. |
 
 > [!Warning]
-> The ID of a pointer is valid only during a single _Down->Move->Up_ sequence of the pointer events.
-> A finger can have different IDs each time it touches the screen (even if this happens very fast).
+> The ID of a pointer is valid only during a single _Down->Move->Up_ sequence of pointer events.
+> A finger can have different IDs each time it touches the screen (even if this happens very quickly).
 
 > [!Warning]
-> Each OS has its own way to assign IDs to pointers.
+> Each OS has its own way of assigning IDs to pointers.
 > There's no relation between the pointer ID values and corresponding fingers.
 
-### Get Pointer Position
+### Get the pointer position
 
-Use [PointerEvent.Position](xref="SiliconStudio.Xenko.Input.PointerEvent.Position") to retrieve **Pointer Position**.
+[PointerEvent.Position](xref="SiliconStudio.Xenko.Input.PointerEvent.Position") returns X and Y coordinates which determine the pointer position. The values are between 0 and 1 (normalized values). For example:
 
-Xenko uses **normalized coordinates** for Pointer positions instead of actual screen sizes in pixels.
-This way, pointer position **adjusts correctly** to any screen resolution, so you don't have to write separate code for every screen size.
+* (0,0): the pointer is in the top-left corner of the screen
+* (1,1): pointer is in the bottom-right corner of the screen
 
-* (0,0) represents the left-top corner of the screen
-* (1,1) represents the right-bottom corner of the screen.
+> [!Note] 
+> Xenko uses normalized coordinates instead of actual screen sizes in pixels. This means the pointer position adjusts to any resolution, and you don't have to write separate code for different resolutions.
 
-### Get Pointer State
+### Get pointer events
 
-Use the [PointerEvent.State](xref="SiliconStudio.Xenko.Input.PointerEvent.State") to check the **Action** performed by the pointer
-when the event was triggered. It returns a value inside [PointerState](xref="SiliconStudio.Xenko.Input.PointerState"). 
+Use the [PointerEvent.State](xref="SiliconStudio.Xenko.Input.PointerEvent.State") to check the pointer events. This returns a value inside [PointerState](xref="SiliconStudio.Xenko.Input.PointerState").
 
-There are five possible states:
+Xenko recognizes five types of event:
 
-* _Down_: Finger just touched the screen.
-* _Move_: Finger moves along the screen.
-* _Up_: Finger left the screen.
-* _Out_: Finger gets out of the touch region.
-* _Cancel_: The pointer sequence got canceled. This can happen when the application is interrupted (phone call, etc.).
+* _Down_: The finger touched the screen.
+* _Move_: The finger moved along the screen.
+* _Up_: The finger left the screen.
+* _Out_: The finger left the touch region.
+* _Cancel_: The pointer sequence was canceled. This can happen when the application is interrupted; for example, a phone app might be interrupted by an incoming phone call.
 
-> [!Note] A sequence of **Pointer Events** for a particular pointer
-> always starts with **Down** action, then followed by 0 or more **Move** actions
-> and ends with **Up**, **Out** or **Cancel** action.
+> [!Note] A sequence of pointer events for one pointer always starts with a _Down_ event. This might be followed by one or more _Move_ events, and always ends with an _Up_, _Out_, or _Cancel_ event.
 
-### Get Delta Values
+### Get delta values
 
-Use [PointerEvent.DeltaTime](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaTime") to get the amount of time elapsed from the previous `PonterEvent` for a particular Pointer ID.
+Use [PointerEvent.DeltaTime](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaTime") to get the time elapsed from the previous `PonterEvent` for a particular pointer ID.
 
-Use [PointerEvent.DeltaPosition](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition") to get the position change since the previous `PointerEvent` for a particular Pointer ID.
+Use [PointerEvent.DeltaPosition](xref="SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition") to get the change in position since the previous `PointerEvent` for a particular pointer ID.
 
-> [!Note] Delta values are always nulls at the beginning of the sequence of pointer events.
-> That is, when **Pointer State** is _Down_, delta values are always nulls.
+> [!Note] 
+> Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **Pointer State** is _Down_).
 
 ## Example code
 
-Here is a sample script that tracks pointer movement along the screen and prints its positions:
+This script tracks the pointer movement and prints its positions:
 
 ```
 public override async Task Execute()
@@ -134,6 +127,7 @@ public override async Task Execute()
 ```
 
 ## See also
+* [Input index](index.md)
 * [Gestures](gestures.md)
-* [Mouse](mouse.md)
+* [Mice](mice.md)
 * [Virtual buttons](virtual-buttons.md)

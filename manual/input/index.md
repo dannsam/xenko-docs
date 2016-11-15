@@ -3,87 +3,54 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Input devices** allow users to interact with games and applications.
-Every interactive game should support at least one input device, otherwise it will be impossible to play.
+Users interact with games and applications using **input devices** such as gamepads, mice, and keyboards. Every interactive application must support at least one input device.
 
-![Input Devices](media/input-device-icons.png)
+![Input devices](media/input-device-icons.png)
 
-Standard input devices are _Keyboard_, _Mouse_, _Gamepad_, _Pointers_, _Gestures_, and _Sensors_.
-Xenko handles **Input** entirely via scripts.
+Xenko handles input entirely via scripts. There are low-level and high-level APIs to handle different input types:
 
-Xenko provides two types of APIs:
-* Low-level APIs are close to hardware, so they have latency.
-These APIs allow fast processing of the Input from _Pointers_, _Keyboard_, _Mouse_, _Gamepads_, and some _Sensors_.
-* High-level APIs interpret Input for you, so they have higher latency.
-These APis are reserved for _Gestures_ and some _Sensors_.
+* **Low-level** APIs are close to hardware, so they have lower latency. These allow fast processing of the input from [pointers](pointers.md), [keyboards](keyboard.md), [mice](mice.md), [gamepads](gamepads.md), and some [sensors](sensors.md).
+* **High-level** APIs interpret input for you, so they have higher latency. These APIs are used for [gestures](gestures.md) and some [sensors](sensors.md).
+* There are also **special APIs** for some [sensors](sensors.md) and [virtual buttons](virtual-buttons.md).
 
-## Overview
-You should handle **Input** entirely with [InputManager](xref="SiliconStudio.Xenko.Input.InputManager') class that you can access from script with the `Input` property.
+## Handle input
+Handle input with the [InputManager](xref="SiliconStudio.Xenko.Input.InputManager') class. You can access this class from a script with the `Input` property.
 
-To check whether a particular input device is available,
-use the corresponding property of the [Input](xref="SiliconStudio.Xenko.Input.InputManager") base class.
-For instance, use [Input.HasMouse](xref="SiliconStudio.Xenko.Input.InputManager.HasMouse") to check if **Mouse** is connected.
+To check whether a particular input device is available, use the corresponding [Input](xref="SiliconStudio.Xenko.Input.InputManager") property. For example, to check if a mouse is connected, use [Input.HasMouse](xref="SiliconStudio.Xenko.Input.InputManager.HasMouse").
 
-After you check device availability, there are _Four_ ways to handle **Input** in Xenko.
+After you check device availability, there are four ways to handle input in Xenko.
 
-### 01: Query States
-You can query the **State** of the _Keys_ and _Buttons_ and **Numeric values** for _Analog buttons_ and _Sensors_.
-For instance, [KeyDown](xref="SiliconStudio.Xenko.Input.InputManager.KeyDown") gets a list of the keys that were _Down_ in the last update.
+### Query state
+You can query the state of digital keys and buttons (ie _Up_ or _Down_) and the numeric values of analog buttons and sensors. For example, [KeyDown](xref="SiliconStudio.Xenko.Input.InputManager.KeyDown") gets a list of the keys that were in the state _Down_ in the last update.
 
-Here's how you should handle input from various devices:
+![Query key and button states](media/index-state-one-action-between-updates.png)
 
-**1) For buttons and keys** query which keys and buttons are _Down_.
+![Analog stick positions](media/index-state-analog-stick-position.png)
 
-![Query Key States](media/index-state-one-action-between-updates.png)
+Sometimes a user performs more than one action between updates. If there's no state change between the updates (the end result is the same), Xenko registers no action:
 
-> [!Note] Sometimes a user performs several actions between two updates. If in total there was no state change between two updates, Xenko won't register any actions:
+![Several actions between updates](media/index-state-several-actions-between-updates.png)
 
-![Several Actions between Updates](media/index-state-several-actions-between-updates.png)
+### Query a state change
+You can query the change of state of buttons and keys since the previous update.
+In this case, you don't get the list of all buttons and keys, but have to query each button and key separately.
 
-**2) For analog buttons and sensors** query numeric values.
+* For digital buttons and keys, query if the button or key was _Pressed_, _Down_ or _Released_ in the last update.
 
-![Position of Analog Sticks](media/index-state-analog-stick-position.png)
+    ![Query key state change](media/index-state-change-one-action-between-updates.png)
 
-> [!Note] If there's no position change between two updates, Xenko won't register position change.
+* For mouse positions and mouse wheel scrolling, query _Delta Values_ since the previous update:
 
-### 02: Query State Change
-You can query the **Change of State** of the _Buttons_ and _Keys_ since the previous update.
-In this case, you don't get the list of all buttons and keys, but have to query each Button and Key separately.
+    ![Mouse wheel delta](media/index-state-change-mouse-wheel-scroll.png)
 
-Here's how you should handle input from various devices:
+Sometimes a user performs several actions between two updates. If there's no state change between two updates (the end result is the same), Xenko registers no action.
 
-**1) For Gamepad digital buttons, Keyboard, and Mouse buttons**: query if the button or key was _Pressed_, _Down_ or _Released_ in the last update.
+### Query the list of events
+For pointers, gestures, and keyboards, you can query all the events that happened in the last update.
 
-![Query Key State Change](media/index-state-change-one-action-between-updates.png)
-
-> [!Note] Sometimes a user performs several actions between two updates. If in total there was no state change between two updates, Xenko won't register any actions.
-
-**2) For Mouse Position and Mouse Wheel Scrolling**: query _Delta Values_ since the previous update:
-
-![Mouse Wheel Delta](media/index-state-change-mouse-wheel-scroll.png)
-
-> [!Note] If there's no mouse wheel position change between two updates, Xenko registers Zero Delta Value.
-
-### 03: Query List of Events
-For _Pointers_, _Gestures_, and _Keyboard_, you can query the **List of Events** that happened in the last update.
-
-![Several Actions between Update](media/index-events-list-several-actions-between-updates.png)
+![Several actions between updates](media/index-events-list-several-actions-between-updates.png)
 
 > [!Note] Even if a user performs several actions between two updates, Xenko registers all these events.
 
-### 04: Use Virtual Buttons
-You can use **Virtual Buttons**, so the **Input** is not tied to physical buttons and keys.
-Associate keys to actions, and write your gameplay based on those actions rather than physical keys.
-
-![Virtual Buttons](media/index-how-virtual-button-work.png)
-
-Fore more info read [Vritual Buttons](virtual-buttons.md).
-
-##Available Input APIs
-* [Gamepads](gamepads.md): Low-level API lets you control buttons and analog sticks of the XBox-like gamepads.
-* [Gestures](gestures.md): High-level API interprets predefined patterns of finger touches.
-* [Keyboard](keyboard.md): Low-level API allows you to query the state of keys and control keyboard input.
-* [Mouse](mouse.md): Low-level API lets you query the state of mouse buttons, input from mouse wheel scroll and additional mouse buttons.
-* [Pointers](pointers.md): Low-level API for mobile devices allows to read finger touches.
-* [Sensors](sensors.md): Special API that interprets input from the sensors of the mobile devices.
-* [Virtual Buttons](virtual-buttons.md): Special API helps you build games and applications around user actions rather than particular physical keys and buttons.
+### Use virtual buttons
+You can use **virtual buttons** to associate input to actions rather than physical keys, then let the user define their own keys. For more information, see [virtual buttons](virtual-buttons.md).

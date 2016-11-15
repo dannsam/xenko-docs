@@ -1,39 +1,24 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-# Virtual Buttons
+# Virtual buttons
 
-**Virtual Buttons** allow smooth customization of the in-game controls.
-Rather than binding certain controls to physical buttons, you can create **Virtual Buttons**.
-This will allow end-user of your game to assign any buttons and keys to any functions.
+Rather than bind controls to physical keys and buttons, you can bind them to **virtual buttons**. Users can then assign physical buttons to the virtual buttons, allowing them to create their own control schemes.
 
-Let's see how **Virtual Buttons** work:
+For example, imagine you develop a first-person shooter game and need to assign a key for the _UseMedkit_ function. Rather than bind the function to a particular key, you can create a **virtual button** called _UseMedkit_, then bind the virtual button to the **F** key. If they want to, the player can then bind the virtual key to a different key at runtime.
 
-1. Suppose you develop an FPS-shooter and need to assign a hotkey for _UseMedkit_ function.
-2. Rather than binding that function to a particular key, create a **Virtual Button** called _UseMedkit_.
-3. By defualt, bind _UseMedkit_ **Virtual Button** to a physical keyboard **F** key.
-4. If a player changes hotkey to **J** at run-time, he/she will be able to use _UseMedkit_ with that newly assigned **J** hotkey.
+![Virtual buttons](media/index-how-virtual-button-work.png)
 
-##Create Virtual Buttons
+## Create virtual buttons
 
-Here's how you can create **Virtual Buttons** and use them in your game:
-
-1. Bind **M** key to a virtual button _MyButton_.
-2. Create a list of **Virtual Buttons**.
+1. Bind a key, button, or pointer to the virtual button (eg _MyButton_).
+2. Create a list of virtual buttons.
 3. Add _MyButton_ to this list.
-4. Assign a certain function to _MyButton_.
-5. Create additional **Virtual Buttons**.
-6. Add additional buttons to the same list or create additional lists of **Virtual Buttons**.
+4. Assign a function to _MyButton_.
+5. Create additional virtual buttons.
+6. Add the additional buttons to the same list, or create additional lists.
 
-You can bind any keys, buttons, and pointers to **Virtual Buttons**.
-This page explains how to bind physical keys, buttons, and pointers that are included into Xenko API.
-
-> [!Note] You can bind keys, not included into Xenko API, to Virtual Buttons.
-> For instance, Xenko API supports two _Extended Mouse Buttons_.
-> At the sane time, you can bind any additional _Extended Buttons_, not included in Xenko API, to Virtual Buttons and use them in your game.
-> However, this is an advanced programming topic that is not covered on this page.
-
-##Code Sample
+## Example code
 
 ```cs
 public override void Start()
@@ -50,3 +35,13 @@ public override void Start()
    
     float button = Input.GetVirtualButton(1, "MyButton");
 ```
+
+> [!Note]
+> You can also bind keys and buttons not included in the Xenko API. For example, while the Xenko API supports two _Extended Mouse Buttons_, you can bind additional _Extended Buttons_ to virtual buttons and use them in your project.
+
+
+## See also
+* [Input index](index.md)
+* [Gamepads](gamepads.md)
+* [Keyboard](keyboard.md)
+* [Pointers](pointers.md)
