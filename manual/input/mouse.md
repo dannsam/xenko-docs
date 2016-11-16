@@ -1,4 +1,4 @@
-# Mice
+# Mouse
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
