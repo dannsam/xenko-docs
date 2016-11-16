@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can use various **sensors** as input devices in your project. Sensors are often used in mobile games.
+You can use various **sensors**, such as gyroscopes and accelerometers, as input devices in your project. Sensors are often used in mobile games.
 
 Use the [input manager](xref:SiliconStudio.Xenko.Input.InputManager) to access sensors and:
 
@@ -25,9 +25,7 @@ var accelerometer = Input.Accelerometer;
 
 ## Check if a sensor is available
 
-Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported) property.
-
-For example:
+Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported) property. For example:
 ```
 var hasCompass = Input.Compass.IsSupported;
 ```
