@@ -111,7 +111,7 @@ To restrict the direction of the drag to **vertical** or **horizontal**, use
 
 #### <a name="Long-press"> Long press</a>
 
-![longPress gesture](media/gestures_long_pres_gesture.png) 
+![Long press gesture](media/gestures_long_pres_gesture.png) 
 
 The user touches the screen and maintains pressure without removing their finger for a certain period of time (the default time is one second).
 
