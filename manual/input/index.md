@@ -9,7 +9,7 @@ Users interact with games and applications using **input devices** such as gamep
 
 Xenko handles input entirely via scripts. There are low-level and high-level APIs to handle different input types:
 
-* **Low-level** APIs are close to hardware, so they have lower latency. These allow fast processing of the input from [pointers](pointers.md), [keyboards](keyboards.md), [mice](mice.md), [gamepads](gamepads.md), and some [sensors](sensors.md).
+* **Low-level** APIs are close to hardware, so they have lower latency. These allow fast processing of the input from [pointers](pointers.md), [keyboards](keyboards.md), [mouse](mouse.md), [gamepads](gamepads.md), and some [sensors](sensors.md).
 * **High-level** APIs interpret input for you, so they have higher latency. These APIs are used for [gestures](gestures.md) and some [sensors](sensors.md).
 * There are also **special APIs** for some [sensors](sensors.md) and [virtual buttons](virtual-buttons.md).
 

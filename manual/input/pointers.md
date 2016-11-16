@@ -5,7 +5,7 @@
 
 **Pointers** are points on the device screen corresponding to **finger touches**. Devices with multi-touch functionality support multiple simultaneous pointers.
 
-On desktop platforms, the left mouse button can be used to simulate pointers. For more information about mouse input, see [Mice](mice.md).
+On desktop platforms, the left mouse button can be used to simulate pointers. For more information about mouse input, see [Mouse](mouse.md).
 
 ## How Xenko processes pointer input
 
@@ -130,5 +130,5 @@ public override async Task Execute()
 ## See also
 * [Input index](index.md)
 * [Gestures](gestures.md)
-* [Mice](mice.md)
+* [Mouse](mouse.md)
 * [Virtual buttons](virtual-buttons.md)
