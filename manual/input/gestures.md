@@ -1,162 +1,232 @@
 # Gestures
 
-<div class="doc-incomplete"/>
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Gestures are special patterns made by pointers that the system is able to recognize and trigger. Gestures can be single or multiple fingers depending on their type.
+Gestures are predefined [pointer](pointers.md) patterns. Xenko can recognize gestures and trigger corresponding events. For example, in a strategy game, the player can drag and drop a unit to the battlefield with a **drag** gesture. Gestures can use one or several fingers.
 
-# Overview
+> [!Note] 
+> All lengths, speeds and error margins of configuration files must use normalized values.
 
-Xenko currently provides support for 5 different type of gestures: *Drag, Flick, LongPress, Composite, Tap*. Each of those gestures is configurable by the programmer via the *GestureConfig* classes (each gesture has its own associated config class).
+## Turn on gesture recognition
 
-When the system detects a gesture, a @'SiliconStudio.Xenko.Input.GestureEvent' is added to the list of gesture events of the input system. Each gesture has its own associated gesture event class. The @'SiliconStudio.Xenko.Input.GestureEvent.Type' field of the gesture event indicate which gesture has been recognized. The user can then cast the base gesture event into the gesture specific event type to have gesture type specific information about the event. The system can detect several gesture simultaneously, so the event list can contain more than one item at a given frame. Notice that this list is cleared every frames by the system, so it is the programmer responsibility to check it correctly if he wants to react on gestures.
+By default, the input system doesn't recognize gestures, as this requires CPU time. 
 
-There is mainly two types of gestures: discrete and continuous gestures. Discrete gestures (*Flick, LongPress, Tap)* trigger only one event every time they happened. On the contrary continuous gestures (*drag, Composite)* trigger a whole series of events every time that the gesture properties change so that the programmer can update the UI or its game in real time. The programmer can follow the current state of gesture (*Began, Changed, Ended, Occurred)* by checking the @'SiliconStudio.Xenko.Input.GestureEvent.State' field of gesture event. The state of an discrete gesture is always *Occurred**.* The state of a continuous gesture always starts by *Began* when the gesture is detected, then is followed by the series of *Changed* events as the gesture goes on, and finally ends by a *Ended* event when the gesture finishes.
+To turn on gesture recognition:
 
-Some gestures (*Drag* and Flick) can be restricted to specific shapes (*vertical,* *horizontal*). When it is the case the gesture event is triggered only the gesture is close enough to the indicated shape.
+1. Instantiate the configuration class for the gesture you want to recognize. For example, for the drag gesture, create an instance of [GestureConfigDrag](xref:SiliconStudio.Xenko.Input.GestureConfigDrag).
+2. Configure the class parameters.
+3. Add the gesture configuration to the [ActivatedGestures](xref:SiliconStudio.Xenko.Input.InputManager.ActivatedGestures) collection.
 
-## Drag Gesture
+> [!Warning] 
+> After you activate recognition for a gesture, you can't modify the gesture's parameters. If you need to do this, delete the gesture from the [ActivatedGestures](xref:SiliconStudio.Xenko.Input.InputManager.ActivatedGestures) collection and create a new entry with new parameters.
 
-![media/dragGesture.png](media/dragGesture.png) 
+### Turn off gesture recognition
 
-**Type** : Continuous
+Delete the gesture from the [ActivatedGestures](xref:SiliconStudio.Xenko.Input.InputManager.ActivatedGestures) collection.
 
-**Configuration class**: @'SiliconStudio.Xenko.Input.GestureConfigDrag'
+## Gesture recognition
 
-**Event class**: @'SiliconStudio.Xenko.Input.GestureEventDrag'
+When the input system detects a gesture, it adds a [GestureEvent](xref:SiliconStudio.Xenko.Input.GestureEvent) to the list of [GestureEvents](xref:SiliconStudio.Xenko.Input.InputManager.GestureEvents). The event contains information about the gesture and its state, such as its location and the number of fingers used.
 
-**Action description**:The user touched the screen, performed a translation and withdraw its finger(s).
+> [!Note]
+> Each gesture has its own associated gesture event class (see below).
 
-**Comments**: The number of finger on the screen cannot vary during the gesture. The programmer can modify the @'SiliconStudio.Xenko.Input.GestureConfigDrag.MinimumDragDistance' field if he need the gesture to be triggered for smaller drags. 
+The [GestureEvent.Type](xref:SiliconStudio.Xenko.Input.GestureEvent.Type) field indicates which gesture has been recognized. You can then cast the base gesture event into the gesture-specific event type to have gesture-type-specific information about the event.
 
-## Flick Gesture 
+Xenko can detect several gestures simultaneously, so the event list can contain more than one item in an update.
 
-![media/flick.png](media/flick.png) 
+The list is cleared with every update, so you don't need to clear it manually. Gesture events not analyzed during a frame turn are lost.
 
-**Type** : Discrete
+## Types of gesture
 
-**Configuration class**: @'SiliconStudio.Xenko.Input.GestureConfigFlick'
+There are two main types of gesture in Xenko:
 
-**Event class**: @'SiliconStudio.Xenko.Input.GestureEventFlick'
+* **Discrete** gestures (_Flick_, _LongPress_, _Tap_) trigger a single event.
 
-**Action description**:The user touched the screen, performed a quick straight translation and withdraw its finger(s).
+* **Continuous** gestures (_Drag_, _Composite_) trigger a series of events when the user changes the direction of the gesture.
 
-**Comments**: The number of finger on the screen cannot vary during the gesture. The programmer can modify the @'SiliconStudio.Xenko.Input.GestureConfigFlick.MinimumFlickLength' field to constrain the flick to have a minimum length. 
+A gesture always has one of four states: _Began_, _Changed_, _Ended_, and _Occurred_. _Discrete_ gestures always have the state _Occurred_. _Continuous_ gestures always begin with the state _Began_, followed by any  _Changed_ states, and end with the _Ended_ state.
 
-## Long Press Gesture 
+You can query the current state of a gesture with the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State)
+field of the triggered gesture events.
 
-![media/longPress.png](media/longPress.png) 
+## Configure gestures
 
-**Type** : Discrete
+In the [GestureConfig](xref:SiliconStudio.Xenko.Input.GestureConfig) classes, you can configure parameters including:
+* the number of fingers the gesture uses
+* the number and duration of taps the gesture uses
+* the gesture direction
 
-**Configuration class**: @'SiliconStudio.Xenko.Input.GestureConfigLongPress'
+> [!Note] 
+> Each gesture has its own configuration class with specific configuration parameters (see below).
 
-**Event class**: @'SiliconStudio.Xenko.Input.GestureEventLongPress'
+## Supported gestures
+Xenko supports two main types of gesture:
 
-**Action description**:The user touched the screen, and maintained the pressure without moving during a given time (default about 1 second).
+* **Discrete** gestures trigger a single event.
 
-**Comments**: The number of finger on the screen cannot vary during the gesture. The programmer can modify the @'SiliconStudio.Xenko.Input.GestureConfigLongPress.RequiredPressTime' field to change the press time. 
+    * [Tap](#Tap)
+    * [Flick](#Flick)
+    * [Long press](#Long-press)
 
-## Composite Gesture 
+* **Continuous** gestures trigger a series of events when the user changes the direction of the gesture.
 
-![media/translation.png](media/translation.png) ![media/scale.png](media/scale.png) ![media/rotation.png](media/rotation.png) 
+    * [Drag](#Drag)
+    * [Composite](#Composite)
 
-**Type** : Continuous
+### Discrete gestures
 
-**Configuration class**: @'SiliconStudio.Xenko.Input.GestureConfigComposite'
+#### <a name="Tap"> Tap </a>
 
-**Event class**: @'SiliconStudio.Xenko.Input.GestureEventComposite'
+![Tap gesture](media/gestures_tap_gesture.png) 
 
-**Action description**:The user touched the screen with two fingers, and moved them independently.
+The user touches the screen and quickly removes their finger.
 
-**Comments**: This gesture is a composition the 3 basic transformations *translation, scale, rotation*. It requires exactly 2 fingers on the screen. The gesture is triggered when the system detect a small translation, scale or rotation. To perform a translation, the user translates uniformly the two fingers together. To perform a scale, the user moves closer or further the two fingers from each other. To perform a rotation, the user turns the two fingers around there their middle.
+**Configuration class**: [GestureConfigTap](xref:SiliconStudio.Xenko.Input.GestureConfigTap)
 
-## Tap Gesture 
+**Event class**: [GestureEventTap](xref:SiliconStudio.Xenko.Input.GestureEventTap)
 
-![media/tap.png](media/tap.png) 
+The number of fingers on the screen can't vary during the gesture. To set the number of fingers required for a tap, modify [GestureConfigTap.RequiredNumberOfTaps](xref:SiliconStudio.Xenko.Input.GestureConfigTap.RequiredNumberOfTaps).
 
- 
+> [!TIP] 
+> To distinguish single taps from multi-taps, the system uses latency in tap events. To disable this, set the [GestureConfigTap.MaximumTimeBetweenTaps](xref:SiliconStudio.Xenko.Input.GestureConfigTap.MaximumTimeBetweenTaps) field to **0**.
 
-**Type** : Discrete
+#### <a name="Flick"> Flick</a>
 
-**Configuration class**: @'SiliconStudio.Xenko.Input.GestureConfigTap'
+![Flick gesture](media/gestures_flick_gesture.png)
 
-**Event class**: @'SiliconStudio.Xenko.Input.GestureEventTap'
+The user touches the screen, performs a quick straight translation, and withdraws their finger(s).
 
-**Action description**:The user touched the screen, and removed its fingers quickly without moving.
+**Configuration class**: [GestureConfigFlick](xref:SiliconStudio.Xenko.Input.GestureConfigFlick)
 
-**Comments**: The number of finger on the screen cannot vary during the gesture.The programmer can modify the @'SiliconStudio.Xenko.Input.GestureConfigTap.RequiredNumberOfTaps' field to decide the number tap that he wants to detect. Note that to be able to distinguish single taps from multi-tap taps, the system has to wait a given time and thus introduces latency in tap events. If the programmer is interested only in single taps, he can put the @'SiliconStudio.Xenko.Input.GestureConfigTap.MaximumTimeBetweenTaps' field to 0 to avoid this latency.
+**Event class**: [GestureEventFlick](xref:SiliconStudio.Xenko.Input.GestureEventFlick)
 
-# Usage
+The number of fingers on the screen can't during the gesture.
 
-By default, the input system does not recognize any Gesture. To start (resp. stop) some gesture recognition the programmer has to add (resp. remove) gesture configurations to the @'SiliconStudio.Xenko.Input.ActivatedGestures' collection. Once a gesture is activated for recognition, its associated configuration is frozen and the user cannot modify it any more. If the user wants to stop all gesture recognition he can directly clear the collection.
+To set a minimum length for the flick gesture, use [GestureConfigFlick.MinimumFlickLength](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.MinimumFlickLength).
 
-**Code:** Activate/Desactivate Gestures Recognitions
+To restrict the direction of the drag to **vertical** or **horizontal**, use 
+[GestureConfigFlick.FlickShape](xref:SiliconStudio.Xenko.Input.GestureConfigFlick.FlickShape).
+
+#### <a name="Long-press"> Long press</a>
+
+![Long press gesture](media/gestures_long_pres_gesture.png) 
+
+The user touches the screen and maintains pressure without removing their finger for a certain period of time (the default time is one second).
+
+**Configuration class**: [GestureConfigLongPress](xref:SiliconStudio.Xenko.Input.GestureConfigLongPress)
+
+**Event class**: [GestureEventLongPress](xref:SiliconStudio.Xenko.Input.GestureEventLongPress)
+
+The number of fingers on the screen can't vary during the gesture.
+
+To change the minimum press length for the long press gesture, modify  [GestureConfigLongPress.RequiredPressTime](xref:SiliconStudio.Xenko.Input.GestureConfigLongPress.RequiredPressTime).
+
+### Discrete gestures
+
+#### <a name="Drag"> Drag</a>
+
+![Drag gesture](media/gestures_drag_gesture.png)
+
+The user touches the screen, performs a translation, and withdraws their finger(s).
+
+**Configuration class**: [GestureConfigDrag](xref:SiliconStudio.Xenko.Input.GestureConfigDrag)
+
+**Event class**: [GestureEventDrag](xref:SiliconStudio.Xenko.Input.GestureEventDrag)
+
+The number of fingers on the screen can't vary during the gesture.
+
+To detect smaller drags, decrease [GestureConfigDrag.MinimumDragDistance](xref:SiliconStudio.Xenko.Input.GestureConfigDrag.MinimumDragDistance).
+
+To restrict the direction of the drag to **vertical** or **horizontal**, use [GestureConfigDrag.DragShape](xref:SiliconStudio.Xenko.Input.GestureConfigDrag.DragShape).
+
+#### <a name="Composite"> Composite</a>
+
+![Translation gesture](media/gestures_translation_gesture.png) ![Scale gesture](media/gestures_scale_gesture.png) ![Rotation gesture](media/gestures_rotation_gesture.png)
+
+The user touches the screen with two fingers and moves them independently.
+
+**Configuration class**: [GestureConfigComposite](xref:SiliconStudio.Xenko.Input.GestureConfigComposite)
+
+**Event class**: [GestureEventComposite](xref:SiliconStudio.Xenko.Input.GestureEventComposite)
+
+The composite gesture requires exactly two fingers on the screen. It's triggered when the system detects one of the three basic actions:
+* _Translation_: the user translates two fingers together in the same direction.
+* _Scale_: the user moves two fingers closer together or further apart.
+* _Rotation_: the user rotates two fingers around a center point.
+
+## Example code
+
+### Activate or deactivate gesture recognition
 
 ```cs
-var singleTapConfig = new GestureConfigTap(); // create the configuration of the gesture we want to recognize
-Input.ActivatedGestures.Add(singleTapConfig); // start the tap gesture recognition
+// Create the configuration of a gesture you want to recognize.
+var singleTapConfig = new GestureConfigTap();
+
+// Start tap gesture recognition.
+Input.ActivatedGestures.Add(singleTapConfig);
  
-var doubleTapConfig = new GestureConfigTap(2, 1); // create the configuration of the gesture we want to recognize
-Input.ActivatedGestures.Add(doubleTapConfig ); // start the double tap gesture recognition
+// Create the configuration of the gesture you want to recognize.
+var doubleTapConfig = new GestureConfigTap(2, 1);
+
+// Start double tap gesture recognition.
+Input.ActivatedGestures.Add(doubleTapConfig );
  
- // ...
+// Stop tap gesture recognition.
+Input.ActivatedGestures.Remove(singleTapConfig);
  
-Input.ActivatedGestures.Remove(singleTapConfig); // stop the tap gesture recognition
- 
-// ...
-Input.ActivatedGestures.Clear(); // stop all remaining gesture recognitions
+// Stop all gesture recognitions.
+Input.ActivatedGestures.Clear(); 
 ```
 
+### Configure the gesture
+Each configuration class has a parameterless constructor that corresponds to the default gesture configuration. You can use special constructors for frequently-modified parameters.
 
- 
-
-Each configuration class has a parameterless constructor corresponding to the default gesture configuration. Special constructors have also been implemented for parameters that the programmer may modify frequently. Other parameters correspond to fields that are not recommended to modify to keep a good coherency of the system. Those fields can be modified by accessing the corresponding properties.
-
-**Code:** Set gesture configuration
+> [!warning] 
+> We don't recommend you modify other fields as this might break the input system. But if you need to, you can modify them using the corresponding properties.
 
 ```cs
-var singleTapConfig = new GestureConfigTap(); // default config for the gesture.
-var doubleTapConfig = new GestureConfigTap(2, 2); // personalize the gesture config by using the dedicated constructor
-var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero }; // personalize the gesture config by directly accessing the desired property (user must be aware of was he does, this may break the input system coherency in some cases)
+// Default gesture config.
+var singleTapConfig = new GestureConfigTap();
+
+// Personalize gesture config using the dedicated constructor.
+var doubleTapConfig = new GestureConfigTap(2, 2);
+
+// Personalize gesture config by directly accessing the desired property.
+// Make sure you know what you're doing! Modifying this might break the input system.
+var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero };
 ```
 
-
- 
-
-The programmer can access the recognized gestures via the @'SiliconStudio.Xenko.Input.IInputManager.GestureEvents' collections. The collection is automatically cleared every frame.
-
-**Code:** Access Gesture events
+### Access gesture events
+You can access the list of events triggered by recognized gestures using the 
+[Input.GestureEvents](xref:SiliconStudio.Xenko.Input.InputManager.GestureEvents) collection.
+The collection is automatically cleared at every update.
 
 ```cs
 var currentFrameGestureEvents = Input.GestureEvents;
 ```
 
-
- 
-
-One can use the @'SiliconStudio.Xenko.Input.GestureEvent.Type' field to identity the gesture type and then cast it to the appropriate event type to have extra info about the event. 
-
-**Code:** Identifying the gesture type
+### Identify the gesture type
+Use the [GestureEvent.Type](xref:SiliconStudio.Xenko.Input.GestureEvent.Type) field to identity the gesture type, then cast it to the appropriate event type to get extra information about the event. 
 
 ```cs
 foreach( var gestureEvent in Input.GestureEvents)
 {
-   	if (gestureEvent.Type != GestureType.Tap) // determine if the event is from a tap gesture
+   	// Determine if the event is from a tap gesture
+	if (gestureEvent.Type != GestureType.Tap)
 		continue;
    
-	GestureEventTap  tapEvent = (GestureEventTap) gestureEvent; // cast the event the specific tap event class
-    log.Info("Tap position: {0}.", tapEvent.TapPosition); // access tap event specific field
+	// Cast a specific tap event class.
+	GestureEventTap  tapEvent = (GestureEventTap) gestureEvent;
+	
+    // Access tap-event-specific field.
+    log.Info("Tap position: {0}.", tapEvent.TapPosition);
 }
-```
+``` 
 
-
- 
-
-One can know the gesture state by analyzing the @' SiliconStudio.Xenko.Input.GestureEvent.State' field.
-
-**Code:** Identifying the event state
+### Identify the gesture state
+Use the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State) field to get gesture event state.
 
 ```cs
 switch(compositeGestureEvent.State)
@@ -175,10 +245,7 @@ default:
 }
 ```
 
-
- 
-
-# Remarks
-
-- The input system works with normalized coordinates. So all the lengths, speeds and error margins of configuration files must be expressed in this normalized coordinate system.
-
+## See also
+* [Input index](index.md)
+* [Pointers](pointers.md)
+* [Virtual buttons](virtual-buttons.md)
