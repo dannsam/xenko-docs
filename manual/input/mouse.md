@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Mice** are common input devices for desktop games. 
+**Mouse** is a common input device for desktop games. 
 
 There are two ways to handle mouse input in Xenko:
 
@@ -15,7 +15,7 @@ You can access **mouse button states** and **pointer events list** from the [Inp
 
 | Class | Project type | When to use |
 | --- | --- | --- |
-| [Input](xref:SiliconStudio.Xenko.Input.InputManager) | Desktop only | For desktop games, you usually handle input with multiple mouse buttons. This means you should usually use **mouse button states**. |
+| [Input](xref:SiliconStudio.Xenko.Input.InputManager) | Desktop only | For desktop games, you usually handle input with multiple mouse buttons. This means you should use **mouse button states**. |
 | [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) | Cross-platform | For mobile games, you usually simulate pointers with just the left mouse button. This means you can treat the mouse input like pointers. There's no need to create separate mouse-specific controls. For more information, see [Pointers](pointers.md).|
 
 For more information about these options, see the [Input index](index.md).
@@ -24,7 +24,7 @@ For more information about these options, see the [Input index](index.md).
 Before handling mouse input, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse) to check if a mouse is connected.
 
 > [!Note] 
-> Xenko doesn't support mice connected at runtime. This feature will be added in a future release.
+> Xenko doesn't support mouse connected at runtime. This feature will be added in a future release.
 
 ## Query the mouse position
 
@@ -73,7 +73,7 @@ You can lock the mouse position and hide the cursor with the following propertie
 | Method or property | Description |
 | --- | --- |
 | [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition\(System.Boolean\)) | Locks the mouse position and hides the cursor until the next call to the [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) event. |
-| [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) | Unlocks the mouse position locked by the [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System(Boolean) event and restores the cursor visibility. |
+| [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) | Unlocks the mouse position locked by the [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition\(System.Boolean\)) event and restores the cursor visibility. |
 | [IsMousePositionLocked](xref:SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked) | Checks if the mouse position is locked. |
 
 > [!Tip] 

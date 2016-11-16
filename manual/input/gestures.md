@@ -46,7 +46,7 @@ There are two main types of gesture in Xenko:
 
 * **Continuous** gestures (_Drag_, _Composite_) trigger a series of events when the user changes the direction of the gesture.
 
-A gesture always has one of four states: _Began_, _Changed_, _Ended_, and _Occurred_. _Discrete_ gestures always have the state _Occurred_. _Continuous_ gestures always begin with the state _Began_, followed by any  _Changed_ states, and end with the _Ended_ state.
+A gesture always has one of four states: _Began_, _Changed_, _Ended_, and _Occurred_. _Discrete_ gestures always have the state _Occurred_. _Continuous_ gestures always begin with the state _Began_, followed by any _Changed_ states, and end with the _Ended_ state.
 
 You can query the current state of a gesture with the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State)
 field of the triggered gesture events.

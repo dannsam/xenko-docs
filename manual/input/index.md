@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Users interact with games and applications using **input devices** such as gamepads, mice, and keyboards. Every interactive application must support at least one input device.
+Users interact with games and applications using **input devices** such as gamepad, mouse, and keyboard. Every interactive application must support at least one input device.
 
 ![Input devices](media/input-device-icons.png)
 
@@ -14,7 +14,7 @@ Xenko handles input entirely via scripts. There are low-level and high-level API
 * There are also **special APIs** for some [sensors](sensors.md) and [virtual buttons](virtual-buttons.md).
 
 ## Handle input
-Handle input with the [InputManager](xref:SiliconStudio.Xenko.Input.InputManager) class. You can access this class from a script with the `Input` property.
+Handle input with the [InputManager](xref:SiliconStudio.Xenko.Input.InputManager) class. You can access this class from a script with its properties and methods.
 
 To check whether a particular input device is available, use the corresponding [Input](xref:SiliconStudio.Xenko.Input.InputManager) property. For example, to check if a mouse is connected, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse).
 
