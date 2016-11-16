@@ -72,7 +72,7 @@ You can lock the mouse position and hide the cursor with the following propertie
 
 | Method or property | Description |
 | --- | --- |
-| [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System(Boolean) | Locks the mouse position and hides the cursor until the next call to the [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) event. |
+| [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition\(System.Boolean\)) | Locks the mouse position and hides the cursor until the next call to the [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) event. |
 | [UnlockMousePosition()](xref:SiliconStudio.Xenko.Input.InputManager.UnlockMousePosition) | Unlocks the mouse position locked by the [LockMousePosition(Boolean)](xref:SiliconStudio.Xenko.Input.InputManager.LockMousePosition.System(Boolean) event and restores the cursor visibility. |
 | [IsMousePositionLocked](xref:SiliconStudio.Xenko.Input.InputManager.IsMousePositionLocked) | Checks if the mouse position is locked. |
 
