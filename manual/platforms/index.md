@@ -1,4 +1,4 @@
-# Multiplatform Support
+# Multiplatform support
 
 Xenko is cross-platform game engine. 
 
@@ -8,7 +8,7 @@ The engine converts C# and shaders to the different native languages
 and abstracts the concepts that differ from one platform to the other,
 so that you don't have adapt your game code to each specific platform.
 
-## Supported Platforms
+## Supported platforms
 
 Xenko currently supports for following platforms:
 - Windows Desktop 7, 8, 10
@@ -24,7 +24,7 @@ For information concerning a specific platform, click on the corresponding link.
 > [Platform.Type](xref:SiliconStudio.Core.Platform.Type) variable.
 
 
-## Supported Graphic APIs
+## Supported graphic APIs
 
 Xenko currently support the following graphics back-ends:
 - DirectX 9, 10, 11, 12
@@ -38,8 +38,8 @@ For information concerning a specific API, click on the corresponding link.
 > At runtime, you can check on which graphics back-end your game is executing by using the 
 > [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
 
-## Preprocessor Variables
+## Preprocessor variables
 
 Xenko defines preprocessor variables if you want to write code that can 
 compile only under a specific platform, for more information see
-[Preprocessor variables](../scripting/preprocessor-variables.md).
+[Preprocessor variables](../scripts/preprocessor-variables.md).

@@ -16,7 +16,7 @@ A package is a **container** composed of:
   See [Introduction to Assets](introduction-to-assets.md) for more information.
 * **Resources**: A resource is a data file used by an asset such as an image, a 3D model, a sound file, etc.
 * **Code files**: The code files of your game, that is scripts, shader and effect files. 
-  For more information about scripts, see [Scripting in Xenko](scripting-in-xenko.md).
+  For more information about scripts, see [Scripting in Xenko](scripts-in-xenko.md).
 * **Dependencies** to other packages.
 
 A package (with its dependencies) makes up an **independent block** that can be **reused** in other games or applications.

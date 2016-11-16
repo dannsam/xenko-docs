@@ -1,4 +1,4 @@
-# How do I setup a HDR pipeline with posteffects?
+# Set up an HDR pipeline with post-effects
 
 Assuming that you are already familiar with the  [Scene Graphics Compositor](../graphics-compositor/index.md), we would like to setup a High Dynamic Range rendering pipeline.
 

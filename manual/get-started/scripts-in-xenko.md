@@ -1,11 +1,11 @@
-# Scripting in Xenko
+# Scripts in Xenko
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
 A script is a **unit of code** that enables you to **add behaviors** to your entities. 
 
-In this page, you’ll learn what is a script, the different types of scripts in Xenko, 
+In this page, you’ll learn what a script is, the different types of scripts in Xenko, 
 and how to make certain properties of your script appear in the Game Studio so that artists can configure script parameters.
 
 ## Scripting and C&#35;
@@ -41,7 +41,7 @@ and the Game Studio will not let you attach those class to entities or your scen
 
 ## Script types
 
-There are three main types of scripts in Xenko: **Startup scripts**, **Synchronous scripts**, and **Asynchronous scripts**. 
+There are three main types of script in Xenko: **Startup scripts**, **Synchronous scripts**, and **Asynchronous scripts**. 
 Each of these scripts has a precise function. 
 When writing your script **inherit** from the script type that provides the **most adequate behavior**.
 
@@ -126,7 +126,7 @@ public class SampleSyncScript : StartupScript
 
 The above script appears as following in the Game Studio.
 
-![Public property appears in the Property grid](media/scripting-in-xenko-change-value-public-property.png)
+![Public property appears in the Property grid](media/scripts-in-xenko-change-value-public-property.png)
 
 If you don't want the field to appear in the Game Studio, you can either declare your member internal or private, or 
 use the [DataMemberIgnore](xref:SiliconStudio.Core.DataMemberIgnoreAttribute) attribute as follows:
@@ -139,7 +139,7 @@ use the [DataMemberIgnore](xref:SiliconStudio.Core.DataMemberIgnoreAttribute) at
 	
 ```
 
-![Public property has been hidden with ```[DataMemberIgnore]```](media/scripting-in-xenko-public-property-with-datamemberignore.png)
+![Public property has been hidden with ```[DataMemberIgnore]```](media/scripts-in-xenko-public-property-with-datamemberignore.png)
    
 Now that you've learned about the basics of scripting in Xenko, let's continue to [Create a script](create-a-script.md)
  

@@ -1,4 +1,4 @@
-# Skybox Lights
+# Skybox lights
 
 # Overview
 

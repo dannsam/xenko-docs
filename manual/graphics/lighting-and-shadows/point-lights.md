@@ -40,7 +40,7 @@ Properties that defines a point light:
 |                     |                                                                                                                                                     |
 |                     | *Note: Other techniques will be added*                                                                                                              |
 | Size                | The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**.                               |
-|                     | See [shadow map atlas size calculation](shadows-optimizations.md) for details.                                                                      |
+|                     | See [shadow map atlas size calculation](shadow-optimization.md) for details.                                                                      |
 |                     |                                                                                                                                                     |
 |                     |  *For a point light, this value is by default to **small**.*                                                                                        |
 | Bias Parameters     | These parameters are used to avoid some artifacts of the shadow map technique                                                                       |

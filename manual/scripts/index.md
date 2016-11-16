@@ -2,7 +2,7 @@
 
 <div class="doc-incomplete"/>
 
-For basic information about scripting, see [Introduction to Scripting](../get-started/introduction-to-scripting.md)
+For basic information about scripting, see [Introduction to Scripting](../get-started/introduction-to-scripts.md)
 
 ## Various
 

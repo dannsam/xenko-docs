@@ -34,7 +34,7 @@ To create an empty game:
 
 4. **Enter a value** for the *Namespace* you'd like to use, or leave unchanged if you're happy with the given suggestion.  
     > [!Note]
-    > If you're not familiar with Namespaces, please refer to the [Introduction to scripting section](introduction-to-scripting.md). 
+    > If you're not familiar with Namespaces, please refer to the [Introduction to scripting section](introduction-to-scripts.md). 
     > For now it's fine to leave this at it's default value.
 
 5. **Select the platform(s)** you would like your game to support from the *Platforms* section.  

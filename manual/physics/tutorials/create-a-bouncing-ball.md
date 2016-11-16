@@ -1,4 +1,4 @@
-# How to create a bouncing ball
+# Create a bouncing ball
 
 <div class="doc-incomplete"/>
 

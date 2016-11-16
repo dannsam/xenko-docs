@@ -167,5 +167,5 @@ This gizmo indicates the **current orientation** of the scene.
 
    ![Scene orientation gizmo](media/navigate-in-a-scene-scene-orientation-gizmo.png)
 
-The next step is to make your scene more dynamic. To do this, you need to use scripts. For information about using scripts, see [Introduction to scripting](introduction-to-scripting.md).
+The next step is to make your scene more dynamic. To do this, you need to use scripts. For information about using scripts, see [Introduction to scripting](introduction-to-scripts.md).
 

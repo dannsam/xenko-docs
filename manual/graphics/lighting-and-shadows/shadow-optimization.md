@@ -1,4 +1,4 @@
-# Shadows optimizations
+# Shadow optimization
 
 The technique used to render shadows is called shadow mapping and consist in rendering to a depth texture from the point-of-view of the light all potential occluders, and then reuse this information to render the shadows along the rendering of the scene.
 
