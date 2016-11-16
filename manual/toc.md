@@ -114,7 +114,7 @@
 ## [Mice](input/mice.md)
 ## [Pointers](input/pointers.md)
 ## [Sensors](input/sensors.md)
-## [Virtual Buttons](input/virtual-buttons.md)
+## [Virtual buttons](input/virtual-buttons.md)
 
 # [Particles](particles/index.md)
 ## [Particles Reference](particles/reference/index.md)
