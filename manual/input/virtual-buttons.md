@@ -1,7 +1,7 @@
+# Virtual buttons
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
-
-# Virtual buttons
 
 Rather than bind controls to physical keys and buttons, you can bind them to **virtual buttons**. Users can then assign physical buttons to the virtual buttons, allowing them to create their own control schemes.
 
