@@ -1,4 +1,4 @@
-# System Requirements
+# System requirements
 
 Xenko is a cross-platform game engine, so there's no need to adapt your code to each specific platform.
 Create a single project and seamlessly deploy it on all supported platforms.
@@ -6,7 +6,7 @@ Game Engine automatically converts **C#** and **Shaders** code to specific platf
 
 ![System requirements and supported APIs](media/game-engine-system-requirements-intro-pic.png)
 
-## General Requirements
+## System specifications
 
 To develop projects on Xenko, your PC has to fulfill the following **requirements**:
 
@@ -21,7 +21,7 @@ RAM requirements vary depending on the project's complexity:
 * Developing simple 2D applications is not RAM-intensive.
 * Developing 3D games with numerous assets requires vast amounts of RAM.
 
-### Mobile Development
+### Mobile development
 
 There are additional requirements if your project targets popular mobile platforms:
 
@@ -33,7 +33,7 @@ There are additional requirements if your project targets popular mobile platfor
 > [!Note]
 > If you use Visual Studio, you automatically have free Xamarin license.
 
-## Supported Graphics APIs 
+## Supported graphics APIs 
 
 In Xenko, you can create projects that target the following **graphics APIs**:
 
@@ -45,7 +45,7 @@ In Xenko, you can create projects that target the following **graphics APIs**:
 > [!Tip]
 > Use [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice\(SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform\)) variable to check which graphics API is executed at runtime.
 
-## Supported Platforms
+## Supported platforms
 
 With Xenko, you can develop applications for the following **platforms**:
 
@@ -58,7 +58,7 @@ With Xenko, you can develop applications for the following **platforms**:
 > [!Tip]
 > Use [Platform.Type](xref:SiliconStudio.Core.PlatformType) variable to check which platform the application executes at runtime.
 
-## Pre-processor Variables
+## Pre-processor variables
 
 If you want to write code that can compiles only under a specific platform, use preprocessor variables.
 For more information, see [Preprocessor Variables](../scripts/preprocessor-variables.md).
