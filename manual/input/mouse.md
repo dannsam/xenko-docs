@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Mouse** is a common input device for desktop games. 
+The **mouse** is a common input device for desktop games.
 
 There are two ways to handle mouse input in Xenko:
 
@@ -24,7 +24,7 @@ For more information about these options, see the [Input index](index.md).
 Before handling mouse input, use [Input.HasMouse](xref:SiliconStudio.Xenko.Input.InputManager.HasMouse) to check if a mouse is connected.
 
 > [!Note] 
-> Xenko doesn't support mouse connected at runtime. This feature will be added in a future release.
+> Xenko doesn't support mice connected at runtime. This feature will be added in a future release.
 
 ## Query the mouse position
 
