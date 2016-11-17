@@ -14,7 +14,7 @@ By default, the input system doesn't recognize gestures, as this requires CPU ti
 
 To turn on gesture recognition:
 
-1. Instantiate the configuration class for the gesture you want to recognize. For example, for the drag gesture, create an instance of [GestureConfigDrag](xref:SiliconStudio.Xenko.Input.GestureConfigDrag).
+1. Create an instance of the configuration class for the gesture you want to recognize. For example, for the drag gesture, create an instance of [GestureConfigDrag](xref:SiliconStudio.Xenko.Input.GestureConfigDrag).
 2. Configure the class parameters.
 3. Add the gesture configuration to the [ActivatedGestures](xref:SiliconStudio.Xenko.Input.InputManager.ActivatedGestures) collection.
 
@@ -38,19 +38,6 @@ Xenko can detect several gestures simultaneously, so the event list can contain 
 
 The list is cleared with every update, so you don't need to clear it manually. Gesture events not analyzed during a frame turn are lost.
 
-## Types of gesture
-
-There are two main types of gesture in Xenko:
-
-* **Discrete** gestures (_Flick_, _LongPress_, _Tap_) trigger a single event.
-
-* **Continuous** gestures (_Drag_, _Composite_) trigger a series of events when the user changes the direction of the gesture.
-
-A gesture always has one of four states: _Began_, _Changed_, _Ended_, and _Occurred_. _Discrete_ gestures always have the state _Occurred_. _Continuous_ gestures always begin with the state _Began_, followed by any  _Changed_ states, and end with the _Ended_ state.
-
-You can query the current state of a gesture with the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State)
-field of the triggered gesture events.
-
 ## Configure gestures
 
 In the [GestureConfig](xref:SiliconStudio.Xenko.Input.GestureConfig) classes, you can configure parameters including:
@@ -61,16 +48,29 @@ In the [GestureConfig](xref:SiliconStudio.Xenko.Input.GestureConfig) classes, yo
 > [!Note] 
 > Each gesture has its own configuration class with specific configuration parameters (see below).
 
-## Supported gestures
+## Gesture states
+A gesture always has one of four states:
+
+* Began
+* Changed
+* Ended 
+* Occurred
+
+**Discrete** gestures (tap, flick, long press) always have the state _occurred_. **Continuous** gestures (drag and composite) always begin with the state _began_, followed by any  _changed_ states, and end with the _ended_ state.
+
+To query the current state of a gesture, use the [GestureEvent.State](xref:SiliconStudio.Xenko.Input.GestureEvent.State)
+field of the triggered gesture event.
+
+## Types of gesture
 Xenko supports two main types of gesture:
 
-* **Discrete** gestures trigger a single event.
+* **Discrete** gestures (tap, flick, long press) trigger a single event.
 
     * [Tap](#Tap)
     * [Flick](#Flick)
     * [Long press](#Long-press)
 
-* **Continuous** gestures trigger a series of events when the user changes the direction of the gesture.
+* **Continuous** gestures (drag and composite) trigger a series of events when the user changes the direction of the gesture.
 
     * [Drag](#Drag)
     * [Composite](#Composite)
@@ -123,7 +123,7 @@ The number of fingers on the screen can't vary during the gesture.
 
 To change the minimum press length for the long press gesture, modify  [GestureConfigLongPress.RequiredPressTime](xref:SiliconStudio.Xenko.Input.GestureConfigLongPress.RequiredPressTime).
 
-### Discrete gestures
+### Continuous gestures
 
 #### <a name="Drag"> Drag</a>
 
