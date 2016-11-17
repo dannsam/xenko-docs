@@ -25,7 +25,7 @@ var accelerometer = Input.Accelerometer;
 
 ## Check if a sensor is available
 
-Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported) property. For example:
+Before you get the value of a sensor, first check that the sensor is available in the device. To do this, use the [SensorBase.IsSupported](xref:SiliconStudio.Xenko.Input.SensorBase.IsSupported). For example:
 ```
 var hasCompass = Input.Compass.IsSupported;
 ```

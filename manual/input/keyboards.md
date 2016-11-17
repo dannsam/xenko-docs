@@ -41,7 +41,7 @@ Instead, use the **key events** collections available in the [Input](xref:Silico
 | [KeyDown](xref:SiliconStudio.Xenko.Input.InputManager.KeyDown) | Gets a list of the keys that were down in the last update. |
 | [KeyEvents](xref:SiliconStudio.Xenko.Input.InputManager.KeyEvents) | Gets a list of the key events in the last update (keys pressed or released). |
 
-Every [KeyEvent](xref:SiliconStudio.Xenko.Input.KeyEvent) has two parameters: **Key** (the affected key) and **KeyEventType** (whether the key was _Pressed_ or _Released_).
+Every [KeyEvent](xref:SiliconStudio.Xenko.Input.KeyEvent) has two parameters: [Key](xref:SiliconStudio.Xenko.Input.KeyEvent\(SiliconStudio.Xenko.Input.KeyEvent.Key\)) (the affected key) and [KeyEventType](xref:SiliconStudio.Xenko.Input.KeyEventType) (whether the key was _Pressed_ or _Released_).
 
 ## Example code
 

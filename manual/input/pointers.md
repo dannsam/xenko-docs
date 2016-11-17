@@ -22,7 +22,7 @@ On desktop platforms, the left mouse button can be used to simulate pointers. Fo
 > Each pointer event contains information about only one pointer. If several pointers are modified simultaneously in the same update, Xenko creates a separate event for each pointer.
 
 > [!Warning]
-> Each OS handles pointer modifications differently. This means the same finger gesture can generate slightly different pointer event sequences across different platforms. For example, Android doesn't create new a pointer event when a finger touches the screen but doesn't move.
+> Each OS handles pointer modifications differently. This means the same finger gesture can generate slightly different pointer event sequences across different platforms. For example, Android doesn't create a new pointer event when a finger touches the screen but doesn't move.
 For more information, check your OS documentation.
 
 You can enable gesture recognition to detect gestures such as long presses and taps. For more information, see [Gestures](gestures.md).
@@ -32,7 +32,7 @@ If multi-touch is enabled, Xenko triggers events for multiple fingers. If it's d
 
 To enable **multi-touch**, use [MultiTouchEnabled](xref:SiliconStudio.Xenko.Input.InputManager.MultiTouchEnabled).
 
-## The `PointerEvent` class
+## The PointerEvent class
 
 [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) reports pointer events. It contains the current **pointer status** and time information. It is thrown every time the **pointer** is modified.
 
@@ -84,9 +84,9 @@ Xenko recognizes five types of event:
 
 ### Get delta values
 
-Use [PointerEvent.DeltaTime](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaTime) to get the time elapsed from the previous `PonterEvent` for a particular pointer ID.
+Use [PointerEvent.DeltaTime](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaTime) to get the time elapsed from the previous [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) for a particular pointer ID.
 
-Use [PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition) to get the change in position since the previous `PointerEvent` for a particular pointer ID.
+Use [PointerEvent.DeltaPosition](xref:SiliconStudio.Xenko.Input.PointerEvent.DeltaPosition) to get the change in position since the previous [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) for a particular pointer ID.
 
 > [!Note] 
 > Delta values are always nulls at the beginning of the sequence of pointer events (ie when the **pointer state** is _Down_).

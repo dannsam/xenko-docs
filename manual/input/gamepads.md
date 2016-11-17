@@ -11,7 +11,7 @@
 ## Digital and analog buttons
 
 * **Digital** buttons have three states: _pressed_, _down_, and _released_.
-The D-pad, Start, Back, Thumbstick (press), A, B, X and Y buttons are analog buttons.
+The D-pad, Start, Back, Thumbstick (press), A, B, X and Y buttons are digital buttons.
 * **Analog** buttons return a value depending on how hard the user presses. The triggers are analog buttons, and return a value between 0 and 1. The thumbsticks are also analog, and return values between -1 and 1 on the X and Y axes. 
 
 The Xbox Elite controller buttons have the following names in Xenko:
@@ -72,7 +72,7 @@ Thumbsticks move along the X and Y axes. Their positions read as follows:
 ![Query thumb position](media/index-gamepad-stick-position-1.png)
 ![Query thumb position](media/index-gamepad-stick-position-2.png)
 
-Triggers move along the X axis. Their positions reads as follows:
+Triggers move along the X axis. Their positions read as follows:
 
 ![Query trigger position](media/index-gamepad-trigger-position.png)
 

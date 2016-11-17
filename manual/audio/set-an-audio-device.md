@@ -9,7 +9,7 @@ If you don't specify a device, Xenko uses the default audio advice.
 
 ## Example code
 
-This code sets the Ocoulus Rift device at runtime:
+This code sets the Oculus Rift device at runtime:
 
 ```cs
 namespace OculusRenderer
