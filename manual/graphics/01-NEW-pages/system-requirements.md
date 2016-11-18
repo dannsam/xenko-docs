@@ -12,7 +12,7 @@ To develop projects on Xenko, your PC has to fulfill the following **requirement
 
 | Requirement | Specifications |
 |-------|-------|
-| Platform | Windows Desktop (7/8/8.1/10) |
+| Operating system | Windows Desktop (7/8/8.1/10) |
 | IDE for writing code | Visual Studio 2012/2013/2015<br> Xamarin Studio |
 | CPU | x64 Quad Core<br> x64 Dual Core Hyper-threaded |
 | GPU | DirectX 10+ compatible GPU |
