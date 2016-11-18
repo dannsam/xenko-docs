@@ -1,13 +1,13 @@
 # Skybox
 
-A **skybox** is a special technique that creates distant-looking backgrounds.
-Game engine puts the scene inside an extremely big cube, and then projects background textures inside skybox's faces.
+A **skybox** is a special technique that creates distant-looking backgrounds at runtime.
+Xenko puts the scene inside an extremely big cube, and then projects background textures inside skybox's faces.
 This simulates three-dimensional surroundings that look spacious, even if the actual game level is quite small.
 
 The examples of skybox backgrounds include skies, clouds, mountains, and other scenery.
 
 > [!Tip]
-> Skybox backgrounds are pre-rendered, meaning the system requires little GPU and CPU resources to render them at runtime.
+> Skyboxes are pre-rendered, meaning the system requires little GPU and CPU resources to render them at runtime.
 
 ## Create a cubemap
 
@@ -44,7 +44,7 @@ Once you have a cubemap, you can add it to your project:
 
 By default, **skybox asset** is included in every new Xenko project.
 Yet, sometimes you want more than one skybox.
-For instance when you need to split the screen into several section and use a separate camera with a unique skybox for each section.
+For instance when you need to split the screen into several section and use a unique skybox for each section.
 
 Here's how to add a **skybox asset** to your project:
 
@@ -68,13 +68,13 @@ Here's how to add a [skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxCom
 
     ![Add skybox component](media/engine-skybox-add-skybox-component.png)
 
-3. Choose skybox asset you want to use with this component.
+3. Choose skybox asset for this component.
 
     ![Skybox component's properties](media/engine-skybox-skybox-components-properties.png)
 
 4. You can also change the following settings of the skybox component:
     * Specify how to display skybox in the background.
-    * Set the background radiation intensity of the skybox from 0 (no light intensity) to 100 (maximum).
+    * Set the background radiation intensity of the skybox from 0 (no radiation) to 100 (maximum).
 
 ## Code sample
 
