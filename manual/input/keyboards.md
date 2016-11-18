@@ -73,3 +73,4 @@ public class KeyboardEventsScript : SyncScript
 * [Gamepads](gamepads.md)
 * [Mouse](mouse.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input overview](index.md)
