@@ -2,52 +2,78 @@
 
 <div class="doc-incomplete"/>
 
-This page will show you how to create a bouncing ball.
+In this tutorial, we'll use the static [static collider](static-colliders.md) and [rigid body](rigid-bodies.md) components to create a ball bouncing on a floor.
+
+## 1. Add the components
 
 1. Start a **New Game** project.
-   The Game Studio starts, and you are presented with the plane and sphere project. First we're going to enable physics for both objects.
+   
+The scene comes preloaded with five entities: Camera, Directional light, Skybox, Ground, and Sphere. We're going to add physics components to the **Ground** and **Sphere** entities.
 
-2. Select the ground object.
+Let's begin by adding a [static collider](static-colliders.md) component to the Ground entity.
+   
+2. Select the **Ground** entity.
 
-3. Click **Add component** in the **Property grid**.
+3. In the **Property grid**, click **Add component** and select **Static Collider**.
 
-4. Select **Static Collider**.
+Now we need to set the component shape to match the shape of the Ground entity. 
 
-5. In the **Property view**, under **Static Collider**, click **+** next to the **Collider Shapes** header, and select **Infinite plane**.
+5. In the **Property grid**, expand the **Static Collider component** to view its properties.
 
-6. Next we add a Rigid Body collider to the sphere. Select the sphere in the Scene editor window.
+6. Next to **Collider Shapes**, click the **green + icon** and select **Infinite Plane**.
 
-7. Click **Add component** in the **Property grid**.
+Now we'll add a rigid body component to the sphere.
 
-8. Select **Rigidbody**
+7. In the **Scene Editor**, select the **Sphere** entity.
 
-9. In the **Property view**, under **Rigidbody**, click **+** next to the **Collider Shapes** header, and select **Sphere**.
+8. In the **Property grid**, click **Add component** and select **Rigidbody**.
 
-10. Under **Rigidbody** set the **Mass** property to 4.
+Just like we did for the Ground entity, we need to set the rigid body component shape to match the shape of the Sphere.
 
-11. Move the sphere up, by setting it's position to _X: 0, Y: 6, Z: 0_
+9. In the **Property grid**, expand the **Rigidbody component** to view its properties.
 
-12. Select the Camera in the Scene editor and change it's position to _X: -12, Y: 7, Z: 9_ and it's rotation to _X: -20, Y: -50, Z: 0_
+10. Next to **Collider Shapes**, click the **green + icon** and select **Sphere**.
 
-We have made sure that both the ground and the sphere can interact with each other, moved the sphere up a bit, for a bigger collision impact, and changed the camera position and rotation to have a good overview of the whole scene.
+## 2. Set up the positions
 
-Now run the game to see what how the Rigidbody interacts with the static collider.
+Let's move the sphere so it begins in mid-air and falls to the ground.
 
-![Initial Setup](media/how-to-create-a-bouncing-ball-initial-setup.png)
-_Initial setup of our scene_
+1. In the **Property grid**, under **Transform**, set the **Position** to: _X: 0, Y: 6, Z: 0_
 
-When running the game you'll see that the sphere starts falling because of gravity, and the static collider (the ground) will stop it. However you won't see any bounce effect.
+Now we'll move the camera to give us a good view of the scene. 
 
-To create the bounce effect we have to set the **Restitution** property of both physics objects. The restitution coefficient says how much energy remains after collision for the objects to rebound from one another, creating the effect of 'bouncyness'. If this coefficient is set to 0, no energy remains, and the objects stop moving after a head-on collision, where a value of 1 means no energy is lost, and the objects move away from each other after collision with the same speed as they collided.
+2. Select the **Camera** entity. 
 
-The **Restitution** property should typically be 0 < **Restitution** < 1 for real-world collisions.
+3. In the **Property grid**, under **Transform**, set the **Position** to: _X: -12, Y: 7, Z: 9_
 
-1. Select the sphere in the Scene editor
+4. Set the **Rotation** to: _X: -20, Y: -50, Z: 0_
 
-2. Under **Rigidbody** set the **Restitution** property to 0.8
+    ![Positions](media/create-a-bouncing-ball-positions.png)
 
-3. Select the plane in the Scene editor
+Let's see what the scene looks like so far. To run the project, press **F5**.
 
-4. Under **Static Collider** set the **Restitution** property to 0.5
+The sphere (rigid body) responds to gravity and falls. The ground (static collider) breaks its fall. But there's no bounce effect yet.
 
-Run the game again to check how the **Restitution** value has changed the behaviour of the collision between the sphere and the ground.
+## 3. Add some bounce
+
+To create a bounce effect, we need to change the **restitution** property of both physics components. This simulates the [coefficient of restitution (Wikipedia)](https://en.wikipedia.org/wiki/Coefficient_of_restitution) of real-world collisions, which measures the remaining kinetic energy after a collision.
+
+If the restitution property of colliding entities is 0, the entities lose all energy and stop moving immediately on impact. If the restitution is 1, they lose no energy and rebound with the same velocity they collided at.
+
+Let's set the restitution of our Sphere and Ground entities.
+
+1. In the **Scene Editor**, select the **Sphere** entity.
+
+2. In the **Property grid**, under **Rigidbody**, set the sphere's **Restitution** to 0.8.
+
+3. In the **Scene Editor**, select the **Ground** entity.
+
+4. In the **Property grid**, under **Static Collider**, set the **Restitution** to 0.5.
+
+To see see how this changes the physics, run the project again (**F5**).
+
+This time, the ball bounces on the ground.
+
+Try changing the restitution of both entities to 1. This creates a ball that bounces for ever. 
+
+Set the restitution to 1.1 and the ball bounces a little higher each time.
