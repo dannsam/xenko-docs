@@ -23,7 +23,7 @@ RAM requirements vary depending on the project's complexity:
 
 ### Mobile development
 
-There are additional requirements if your project targets popular mobile platforms:
+There are additional requirements if you develop your project for the popular mobile platforms:
 
 | Platform | Requirements |
 |-------|-------|
