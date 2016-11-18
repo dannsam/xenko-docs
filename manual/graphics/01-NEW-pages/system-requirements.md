@@ -18,8 +18,8 @@ To develop projects on Xenko, your PC has to fulfill the following **requirement
 | GPU | DirectX 10+ compatible GPU |
 
 RAM requirements vary depending on the project's complexity:
-* Developing simple 2D applications is not RAM-intensive.
-* Developing 3D games with numerous assets requires vast amounts of RAM.
+* Developing simple 2D applications does not require much RAM.
+* Developing 3D games with numerous assets requires larger amounts of RAM.
 
 ### Mobile development
 
