@@ -16,13 +16,13 @@ For skyboxes, Xenko uses cubemaps with a `.dds` extension.
 > [!Note]
 > Currently, you cannot convert `.jpg` or other images to cubemap directly in Game Studio. The feature will be added in a future release.
 
-You can use external software to create a cubemap out of separate images, for instance:
+Use external software to create a cubemap out of separate images, for instance:
 
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop).
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen).
 
-You will require six images for each face of the cubemap.
-Use the above-mentioned or similar tools to combine separate images into a proper `.dds` skybox texture.
+You will need six images for each face of the cubemap.
+Use the above-mentioned or similar tools to combine these separate images into a proper `.dds` skybox texture.
 
 > [!Warning]
 > Currently, Xenko doesn't support spherical and hemispherical skydomes. Please, use cube-shaped skyboxes only.
@@ -58,12 +58,12 @@ Here's how to add a **skybox asset** to your project:
     ![Choose texture](media/engine-skybox-select-skybox-texture.png)
 
 ## Add skybox component to an entity
-You can override the default **skybox** by adding a [skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to the camera entity.
+You can create more than one **skybox** by adding a [skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need.
 This might be useful for multiplayer games, when the screen is split in halves, and each half uses its own skybox.
 
 Here's how to add a [skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to an entity: 
 
-1. In **scene view**, select a camera that you want to add a skybox component to.
+1. In **scene view**, select an entity that you want to add a skybox component to (can be an empty entity).
 2. In **property grid**, click _Add component_ and select _Skybox component_.
 
     ![Add skybox component](media/engine-skybox-add-skybox-component.png)
@@ -74,7 +74,7 @@ Here's how to add a [skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxCom
 
 4. You can also change the following settings of the skybox component:
     * Specify how to display skybox in the background.
-    * Set the light intensity of the skybox from 0 (no light intensity) to 100 (maximum).
+    * Set the background radiation intensity of the skybox from 0 (no light intensity) to 100 (maximum).
 
 ## Code sample
 
