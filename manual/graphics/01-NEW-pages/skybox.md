@@ -1,4 +1,7 @@
 # Skybox
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Programmer</span>
 
 A **skybox** is a special technique that creates distant-looking backgrounds at runtime.
 Xenko puts the scene inside an extremely big cube, and then projects background textures inside skybox's faces.
