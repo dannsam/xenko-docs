@@ -1,4 +1,4 @@
-# Physics collider shapes
+# Collider shapes
 
 <div class="doc-incomplete"/>
 
@@ -6,7 +6,9 @@ This section will briefly discuss the different available physics collider shape
 
 ## Box
 
-The box's orientation and size can be controlled with the rotation, and size properties. 
+Properties: size, rotation
+
+The box's orientation and size can be controlled with the rotation and size properties.
 
 ## Capsule
 
@@ -22,11 +24,11 @@ The cylinder collider has the same 3 properties as the capsule, and can be used 
 
 ## Infinite plane
 
-The plane collider has 2 properties: a normal, and offset. The normal determines the vector which is perpendicular to the plane, and the offset determines how much in the direction of this vector, the plane is offsetted from the Entity it is part of.
+The plane collider has 2 properties: a normal, and offset. The normal determines the vector which is perpendicular to the plane, and the offset determines how much in the direction of this vector, the plane is offset from the Entity it is part of.
 
 ## Sphere
 
-A sphere shaped collider. The size can be adjusted by the 'radius' property.
+A spherical collider. The size can be adjusted by the radius property.
 
 ## Cone
 
