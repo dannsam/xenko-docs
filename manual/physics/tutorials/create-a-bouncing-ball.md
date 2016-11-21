@@ -44,17 +44,15 @@ Let's move the sphere so it begins in mid-air and falls to the ground.
 
 1. Select the **Sphere** entity. 
 
-1. In the **Property grid**, under **Transform**, set the **Position** to: _X: 0, Y: 6, Z: 0_
+2. In the **Property grid**, under **Transform**, set the **Position** to: _X: 0, Y: 6, Z: 0_
 
     ![Chane Sphere position](media/physics-tutorials-create-a-bouncing-ball-change-sphere-position.png)
 
+3. Now we'll move the camera to give us a good view of the scene. Select the **Camera** entity. 
 
+4. In the **Property grid**, under **Transform**, set the **Position** to: _X: -12, Y: 7, Z: 9_
 
-1. Now we'll move the camera to give us a good view of the scene. Select the **Camera** entity. 
-
-2. In the **Property grid**, under **Transform**, set the **Position** to: _X: -12, Y: 7, Z: 9_
-
-3. Set the **Rotation** to: _X: -20, Y: -50, Z: 0_
+5. Set the **Rotation** to: _X: -20, Y: -50, Z: 0_
 
     ![Change camera position](media/physics-tutorials-create-a-bouncing-ball-change-camera-position.png)
 
