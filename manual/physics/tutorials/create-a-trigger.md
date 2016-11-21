@@ -67,7 +67,7 @@ Let's write a script to make something happen when the entity enters the trigger
     * If Game Studio asks you to save your script, click **Yes**. 
     * If Game Studio asks to reload the assemblies, click **Yes**.
 
-    ![Add a script](media/physics-tutorials-create-a-trigger-reload-assemblies.png)
+        ![Add a script](media/physics-tutorials-create-a-trigger-reload-assemblies.png)
 
 3. Open the script, add the following code, and save it:
 
