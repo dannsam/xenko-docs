@@ -3,9 +3,9 @@
 <div class="doc-incomplete"/>
 
 **Triggers** are [static colliders](static-colliders.md) that detect collision, but don't affect the objects they collide with.
-When a static collider is a trigger, objects no longer bump into them.
-Instead they pass through, triggering an event which you can detect in your code.
-For example, you can use a trigger to detect when a player character enters ("collides" with) a room, and use this in your script to begin a new event.
+When a static collider is a trigger, other objects no longer collide with it.
+Instead they pass through this static object, triggering an event which you can detect in your code.
+For example, you can use a trigger to detect when a player character enters ("collides" with) a room, and use this in your script to trigger a certain event.
 
 ## 1. Add the trigger component
 
@@ -21,15 +21,15 @@ Game Studio adds an entity to the scene with the default name **Entity**.
 
     ![Create new entity](media/physics-tutorials-create-a-trigger-add-new-entity.png)
 
-2. Rename the entity _Trigger_.
+2. Rename the entity to _Trigger_.
 
-3. With the Trigger entity selected, in the **Property grid**, click **Add component** and select **Static Collider**.
+3. In the **Property grid**, click **Add component** and select **Static Collider**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-collider-component.png)
 
 4. In the **Property grid**, expand the **Static Collider component** to view its properties.
 
-5. Select the **Is Trigger** checkbox. This means that objects can pass through the entity.
+5. Check the **Is Trigger** checkbox. This means that objects can pass through the entity.
 
     ![Check 'Is trigger'](media/physics-tutorials-create-a-trigger-is-trigger-checkbox.png)
 
@@ -62,14 +62,14 @@ Let's write a script to make something happen when the entity enters the trigger
 
     ![Add a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
-2. In the **Script wizard** dialog, give the name a script (eg _Trigger_) and click **OK**.
+2. In the **Script wizard** dialog, name your script (eg _Trigger_) and click **OK**.
 
     * If Game Studio asks you to save your script, click **Yes**. 
     * If Game Studio asks to reload the assemblies, click **Yes**.
 
         ![Add a script](media/physics-tutorials-create-a-trigger-reload-assemblies.png)
 
-3. Open the script, add the following code, and save it:
+3. Open the script, add the following code, and build your Solution:
 
     ```
     using SiliconStudio.Xenko.Engine;
@@ -116,10 +116,13 @@ Let's write a script to make something happen when the entity enters the trigger
     This code doubles the size (scale) of any entity that enters the trigger.
     When the entity exits the trigger, it returns to its original size.
 
-4. Add the Trigger script component to the trigger entity. To do this, with the Trigger entity selected, in the **Property grid**, click **Add component** and select the **Trigger** script.
+4. Back in **Game Studio**, select the trigger entity.
+
+5. In the **Property grid**, click **Add component** and select the **Trigger** script.
 
     ![Add script component to entity](media/physics-tutorials-create-a-trigger-add-script-component-to-entity.png)
 
-5. Run the project (**F5**) to see the trigger in action. The ball falls through the trigger, doubles in size, exits the trigger, and returns to its normal size.
+5. Run the project (**F5**) to see the trigger in action.
+The ball falls through the trigger, doubles in size, exits the trigger, and returns to its normal size.
 
      ![Ball passes through trigger](media/physics-tutorials-create-a-trigger-ball-passes-trigger.gif)
