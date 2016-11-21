@@ -15,10 +15,11 @@ At this point constraints can be used only from Scripts as there is not yet supp
 
 **Please not that this API will be subject to changes**
 
-#### Creating constraints
+## Creating constraints
 
-Constraints can link either two rigidbodies together or a single rigidbody to a point in the world.
-They can be extremely useful to simulate interesting physics behavior to enrich your game.
+Constraints can link either two rigid bodies together, or link a single rigidbody to a point in the world.
+
+They're useful to simulate interesting physics behavior.
 
 Currently to create constrains you can use the following static methods from `Simulation`:
 ```cs
@@ -45,8 +46,8 @@ The method above will link rigidBodyA with rigidBodyB.
 
 `useReferenceFrameA` boolean is used to decide in which coordinate system (either rigidbody A or B) limits are applied.
 
-#### Adding constraints to the simulation
-After a constrain has been created you can simply add it to the simulation from a script by calling:
+## Adding constraints to the simulation
+After a constraint has been created you can simply add it to the simulation from a script by calling:
 ```cs
 this.GetSimulation().AddConstraint(constraint);
 ```
