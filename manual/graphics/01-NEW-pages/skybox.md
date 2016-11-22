@@ -5,7 +5,12 @@
 
 A **skybox** is a special technique that creates distant-looking backgrounds at runtime.
 Xenko puts the scene inside an extremely big cube, and then projects background textures inside skybox's faces.
+
+![Distant planet skybox](media/skybox-disassembled.png)
+
 This simulates three-dimensional surroundings that look spacious, even if the actual game level is quite small.
+
+![Merged skybox](media/skybox-assembled.png)
 
 The examples of skybox backgrounds include skies, clouds, mountains, and other scenery.
 
