@@ -1,27 +1,31 @@
-# Create a trigger
+# Script a triggered event
 
 <div class="doc-incomplete"/>
 
-**Triggers** are [static colliders](static-colliders.md) that detect collision, but don't affect the objects they collide with.
-When a static collider is a trigger, other objects no longer collide with it.
-Instead they pass through this static object, triggering an event which you can detect in your code.
-For example, you can use a trigger to detect when a player character enters ("collides" with) a room, and use this in your script to trigger a certain event.
+**Triggers** are [static colliders](static-colliders.md) that detect collision, but don't affect the objects they collide with. When a static collider is a trigger, other objects no longer collide with it. Instead they pass through it, **triggering** an event which you can detect in your code. For example, you can use a trigger to detect when a player character enters ("collides" with) a room, and use this in your script to trigger an event.
 
-## 1. Add the trigger component
+In this tutorial, we'll create a trigger that doubles the size of a ball when the ball passes through it.
 
-Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial.
+## 1. Add a trigger
+
+1. Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial.
 This gives us a simple scene in which a ball falls from mid-air, hits the ground, and bounces.
 
-![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
+2. For the purposes of this tutorial, set the restitution of both the sphere and the ground to 1, so the ball bounces indefinitely without losing energy:
 
-Now we'll add a trigger in the space between the ball and the ground.
+    ![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
+
+    This will make it easier to see the effect of the trigger later.
+
+Now we'll add a trigger in the space between the ball and the ground, so the ball passes through it.
 
 1. In the **Scene editor**, click the white plus sign (**Create new entity**) and select **Empty entity**.
-Game Studio adds an entity to the scene with the default name **Entity**.
 
     ![Create new entity](media/physics-tutorials-create-a-trigger-add-new-entity.png)
 
-2. Rename the entity to _Trigger_.
+Game Studio adds an entity to the scene with the default name **Entity**.
+
+2. Rename the entity _Trigger_.
 
 3. In the **Property grid**, click **Add component** and select **Static Collider**.
 
@@ -29,34 +33,35 @@ Game Studio adds an entity to the scene with the default name **Entity**.
 
 4. In the **Property grid**, expand the **Static Collider component** to view its properties.
 
-5. Check the **Is Trigger** checkbox. This means that objects can pass through the entity.
+5. Check the **Is Trigger** checkbox.
 
     ![Check 'Is trigger'](media/physics-tutorials-create-a-trigger-is-trigger-checkbox.png)
+
+    This means objects can pass through the collider, but are still detected in the code.
 
 6. We need to give the trigger a shape. Next to **Collider Shapes**, click the **green plus icon** and select **Box**.
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
-7. Let's make the trigger a larger area. Under **Transform**, set the **scale** to: _X:2, Y:2, Z:2_
+7. Let's make the trigger a larger area. In the **Property grid**, under **Transform**, set the **scale** to: _X:2, Y:2, Z:2_
 
     ![Scale a trigger](media/physics-tutorials-create-a-trigger-scale-trigger.png)
 
-8. Right now, the trigger is in the same position as the ground.
+We need to position the trigger between the ground and the sphere, so the ball falls through it.
     
-    ![Trigger on the ground](media/physics-tutorials-create-a-trigger-trigger-on-the-ground.png)
+8. With the trigger entity selected, in the **Property grid**, under **Transform**, set the **Position** to: _X:0, Y:3, Z:0_
 
-    We need to move it between the ground and the sphere. 
-    With the entity selected, in the **Property grid**, under **Transform**, set the **Position** to: _X:0, Y:3, Z:0_
+    Now the trigger entity is between the ground and the sphere:
 
     ![Trigger between ground and sphere](media/physics-tutorials-create-a-trigger-trigger-between-ground-and-sphere.png)
 
 ## 2. Handle the trigger event with script
 
-If we run the project now (**F5**), the ball falls through the trigger, but nothing happens.
+If we run the project now (**F5**), the ball falls through the trigger, but nothing happens. Note that the trigger is invisible, as we didn't give it a graphical component.
 
 ![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
 
-Let's write a script to make something happen when the entity enters the trigger.
+Let's write a script to change the size of the ball when it enters the trigger.
 
 1. In the **Asset view**, click **Add asset** and select **Scripts** > **Async Script**.
 
@@ -64,12 +69,11 @@ Let's write a script to make something happen when the entity enters the trigger
 
 2. In the **Script wizard** dialog, name your script (eg _Trigger_) and click **OK**.
 
-    * If Game Studio asks you to save your script, click **Yes**. 
-    * If Game Studio asks to reload the assemblies, click **Yes**.
+    2a. If Game Studio asks if you want to save your script, click **Yes**.
+    
+    2b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
 
-        ![Add a script](media/physics-tutorials-create-a-trigger-reload-assemblies.png)
-
-3. Open the script, add the following code, and build your Solution:
+3. Open the script, add the following code, and build your solution:
 
     ```
     using SiliconStudio.Xenko.Engine;
@@ -113,8 +117,9 @@ Let's write a script to make something happen when the entity enters the trigger
     }
     ```
 
-    This code doubles the size (scale) of any entity that enters the trigger.
-    When the entity exits the trigger, it returns to its original size.
+    This code doubles the size (scale) of any entity that enters the trigger. When the entity exits the trigger, it returns to its original size.
+
+Finally, let's add this script to the trigger entity as a component.
 
 4. Back in **Game Studio**, select the trigger entity.
 
