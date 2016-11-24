@@ -1,10 +1,9 @@
 # Script a triggered event
 
-<div class="doc-incomplete"/>
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
 
-**Triggers** are [static colliders](static-colliders.md) that detect collision, but don't affect the objects they collide with. When a static collider is a trigger, other objects no longer collide with it. Instead they pass through it, **triggering** an event which you can detect in your code. For example, you can use a trigger to detect when a player character enters ("collides" with) a room, and use this in your script to trigger an event.
-
-In this tutorial, we'll create a trigger that doubles the size of a ball when the ball passes through it.
+In this tutorial, we'll create a **trigger** that doubles the size of a ball when the ball passes through it.
 
 ## 1. Add a trigger
 
@@ -15,7 +14,7 @@ This gives us a simple scene in which a ball falls from mid-air, hits the ground
 
     ![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
 
-    This will make it easier to see the effect of the trigger later.
+    This isn't strictly necessary, but makes it easier to see the effect of the trigger later.
 
 Now we'll add a trigger in the space between the ball and the ground, so the ball passes through it.
 
@@ -25,7 +24,9 @@ Now we'll add a trigger in the space between the ball and the ground, so the bal
 
 Game Studio adds an entity to the scene with the default name **Entity**.
 
-2. Rename the entity _Trigger_.
+2. This entity will be our trigger, so rename it *Trigger*.
+
+Since we don't need the trigger to move, we'll make it a static collider.
 
 3. In the **Property grid**, click **Add component** and select **Static Collider**.
 
@@ -43,13 +44,13 @@ Game Studio adds an entity to the scene with the default name **Entity**.
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
-7. Let's make the trigger a larger area. In the **Property grid**, under **Transform**, set the **scale** to: _X:2, Y:2, Z:2_
+7. Let's make the trigger a larger area. In the **Property grid**, under **Transform**, set the **scale** to: *X:2, Y:2, Z:2*
 
     ![Scale a trigger](media/physics-tutorials-create-a-trigger-scale-trigger.png)
 
 We need to position the trigger between the ground and the sphere, so the ball falls through it.
     
-8. With the trigger entity selected, in the **Property grid**, under **Transform**, set the **Position** to: _X:0, Y:3, Z:0_
+8. With the trigger entity selected, in the **Property grid**, under **Transform**, set the **Position** to: *X:0, Y:3, Z:0*
 
     Now the trigger entity is between the ground and the sphere:
 
@@ -67,7 +68,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
     ![Add a script](media/physics-tutorials-create-a-trigger-add-async-script.png)
 
-2. In the **Script wizard** dialog, name your script (eg _Trigger_) and click **OK**.
+2. In the **Script wizard** dialog, name your script *Trigger* and click **OK**.
 
     2a. If Game Studio asks if you want to save your script, click **Yes**.
     
