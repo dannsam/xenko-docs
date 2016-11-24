@@ -22,7 +22,7 @@ PhysicsComponent.UpdatePhysicsTransformation();
 
 ## Rigid bodies
 
-Rigid bodies move based on physical forces applied to them, such gravity and collisions. Typical rigid bodies are boxes, balls, furniture, and so on — objects that get pushed and knocked around.
+Rigid bodies move based on physical forces applied to them, such gravity and collisions. Typical rigid bodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigid bodies they collide with.
 
 ### Kinematic rigid bodies
 
@@ -88,3 +88,7 @@ Step Height           | Character                                        | The m
 Fall Speed            | Character                                        | The maximum fall speed.
 Max Slope             | Character                                         | The maximum slope the character can climb, in degrees. 
 Jump Speed            | Character                                        | The amount of jump force.
+
+## See also
+* [Collider shapes](collider-shapes.md)
+* [Physics tutorials](tutorials/index.md)

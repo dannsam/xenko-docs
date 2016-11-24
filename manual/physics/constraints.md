@@ -53,9 +53,7 @@ This method links ``rigidBodyA`` to ``rigidBodyB``.
 
 The boolean `useReferenceFrameA` determines which coordinate system (`rigidbody A` or `B`) the limits are applied to.
 
-
-
-[useReferenceFrameA](CreateConstraint\(ConstraintTypes, RigidbodyComponent, Matrix, Boolean\))
+[useReferenceFrameA](CreateConstraint.\(ConstraintTypes, RigidbodyComponent, Matrix, Boolean\))
 
 ## Add constraints to the simulation
 
@@ -70,11 +68,16 @@ var disableCollisionsBetweenLinkedBodies = true;
 this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBodies);
 ```
 
-[disableCollisionsBetweenLinkedBodies](xref:SiliconStudio.Xenko.Physics.Simulation.AddConstraint\(Constraint, Boolean\))
+The parameter [disableCollisionsBetweenLinkedBodies]( SiliconStudio.Xenko.Physics.Simulation.AddConstraint\(SiliconStudio.Xenko.Physics.Constraint,System.Boolean\))
+ stops linked bodies colliding with each other.
 
-The parameter `disableCollisionsBetweenLinkedBodies` prevents linked bodies from colliding with each other.
-Similarly, removing a constrain from the simulation:
+
+
+Likewise, to remove a constraint from the simulation, use:
 
 ```cs
 this.GetSimulation().RemoveConstraint(constraint);
 ```
+
+## See also
+* [Colliders](colliders.md)

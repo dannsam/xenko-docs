@@ -132,3 +132,8 @@ Finally, let's add this script to the trigger entity as a component.
 The ball falls through the trigger, doubles in size, exits the trigger, and returns to its normal size.
 
      ![Ball passes through trigger](media/physics-tutorials-create-a-trigger-ball-passes-trigger.gif)
+
+## See also
+* [Colliders](../colliders.md)
+* [Collider shapes](../collider-shapes.md)
+* [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)

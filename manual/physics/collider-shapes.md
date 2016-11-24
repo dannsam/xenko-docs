@@ -80,3 +80,8 @@ The script binds the the collider shape visibility to **Left Shift + Left Ctrl +
 
 > [!Note]
 > Collider shapes for infinite planes are always invisible.
+
+## See also
+* [Colliders](colliders.md)
+* [Tutorial: Create a bouncing ball](tutorials/create-a-bouncing-ball.md)
+* [Tutorial: Script a triggered event](tutorials/script-a-triggered-event.md)

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-In this tutorial, we'll use the static collider and rigid body components to create a ball bouncing on a floor.
+In this tutorial, we'll use the [static collider and rigid body components](../colliders.md) to create a ball bouncing on a floor.
 
 ## 1. Add the components
    
@@ -21,8 +21,7 @@ In this tutorial, we'll use the static collider and rigid body components to cre
 
     A static collider is a physics object that doesn't move. Typical static colliders are walls, floors, large rocks, and so on.
 
-4. Now set the component shape to match the shape of the Ground entity.
-In the **Property grid**, expand the **Static Collider component** to view its properties.
+4. Now set the [collider shape](../collider-shapes.md) to match the entity. In the **Property grid**, expand the **Static Collider component** to view its properties.
 
 5. Next to **Collider Shapes**, click the **green + icon** and select **Infinite Plane**.
 
@@ -38,7 +37,7 @@ Next, we'll add a rigid body component to the sphere.
 
     A rigid body is a physics object that moves — perfect for our bouncing ball.
 
-Just like we did for the Ground entity, we're going to set the component shape to match the entity.
+Just like we did for the Ground entity, we're going to set the [collider shape](../collider-shapes.md) to match the entity.
 
 8. In the **Property grid**, expand the **Rigidbody component** to view its properties.
 
@@ -105,3 +104,8 @@ Set the restitution to 1.1 and the ball bounces a little higher each time:
 ![Ball bouncing higher](media/physics-tutorials-create-a-bouncing-ball-higher-and-higher.gif)
 
 Now we've created a bouncing ball, we can use it to learn about triggers. For more information, see the [Script a triggered event](script-a-triggered-event.md) tutorial.
+
+## See also
+* [Colliders](../colliders.md)
+* [Collider shapes](../collider-shapes.md)
+* [Tutorial: Script a triggered event](script-a-triggered-event.md)
