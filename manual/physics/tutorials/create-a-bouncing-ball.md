@@ -1,8 +1,9 @@
 # Create a bouncing ball
 
-<div class="doc-incomplete"/>
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
 
-In this tutorial, we'll use the [static collider](static-colliders.md) and [rigid body collider](rigid-body-colliders.md) components to create a ball bouncing on a floor.
+In this tutorial, we'll use the static collider and rigid body components to create a ball bouncing on a floor.
 
 ## 1. Add the components
    
@@ -10,7 +11,7 @@ In this tutorial, we'll use the [static collider](static-colliders.md) and [rigi
 
     The default scene comes preloaded with five entities: Camera, Directional light, Skybox, Ground, and Sphere. We're going to add physics components to the **Ground** and **Sphere** entities.
 
-    Let's begin by adding a [static collider](static-colliders.md) component to the Ground entity.
+    Let's begin by adding a static collider component to the Ground entity.
 
 2. Select the **Ground** entity.
 
@@ -35,7 +36,7 @@ Next, we'll add a rigid body component to the sphere.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-add-rigitbody-component.png)
 
-    A rigid body collider is a physics object that moves — perfect for our bouncing ball.
+    A rigid body is a physics object that moves — perfect for our bouncing ball.
 
 Just like we did for the Ground entity, we're going to set the component shape to match the entity.
 
@@ -91,7 +92,7 @@ Let's set the restitution of our Sphere and Ground entities.
 
     ![Set restitution for the ground](media/physics-tutorials-create-a-bouncing-ball-restitution-of-the-ground.png)
 
-To see how this changes the physics, run the project again (**F5**). This time, the ball bounces on the ground:
+To see how this changes the physics, run the project again (**F5**). This time, the ball bounces on the ground before coming to a stop:
 
 ![Bouncing effect](media/physics-tutorials-create-a-bouncing-ball-falling-and-bouncing-ball.gif)
 
@@ -103,4 +104,4 @@ Set the restitution to 1.1 and the ball bounces a little higher each time:
 
 ![Ball bouncing higher](media/physics-tutorials-create-a-bouncing-ball-higher-and-higher.gif)
 
-Now we've created a bouncing ball, we can use it to learn about triggers. For more information, see [Tutorial: Create a trigger](create-a-trigger.md).
+Now we've created a bouncing ball, we can use it to learn about triggers. For more information, see the [Script a triggered event](script-a-triggered-event.md) tutorial.
