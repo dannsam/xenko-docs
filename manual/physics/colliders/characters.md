@@ -3,10 +3,11 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Characters** respond to user [input](../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things). Player characters without the Character component will pass through objects.
+**Characters** respond to user [input](../../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things). Player characters without the [Character component]((xref:SiliconStudio.Xenko.Physics.CharacterComponent)
+) will pass through objects.
 
 > [!Note]
-> Entities with the character component can only be moved with SetVelocity, Jump, and Teleport.
+> Entities with the character component can only be moved with the methods SetVelocity, Jump, and Teleport.
 
 ## Add a collider component to an entity
 
@@ -37,3 +38,9 @@ Step Height           | The maximum height the character can step onto.
 Fall Speed            | The maximum fall speed.
 Max Slope             | The maximum slope the character can climb, in degrees. 
 Jump Speed            | The amount of jump force.
+
+## See also
+
+* [Static colliders](static-colliders.md)
+* [Rigid bodies](rigid-bodies.md)
+* [Collider shapes](collider-shapes.md)

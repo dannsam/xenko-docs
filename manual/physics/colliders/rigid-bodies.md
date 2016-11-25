@@ -48,6 +48,8 @@ Node Name             | If the collider entity contains a bone structure, the no
 Collider Shapes       | Adds a [collider shape](collider-shapes.md).
 
 ## See also
+
+* [Static colliders](static-colliders.md)
+* [Characters](characters.md)
 * [Collider shapes](collider-shapes.md)
-* [Simulation](simulation.md)
-* [Physics tutorials](tutorials/index.md)
+* [Triggers](triggers.md)

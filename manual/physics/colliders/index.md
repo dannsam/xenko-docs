@@ -11,9 +11,13 @@ There are three types of collider:
 * **[Rigid bodies](rigid-bodies.md)**, which are moved around by forces such as gravity and collisions
 * **[Characters](characters.md)**, which are controlled by user input
 
-You can also make colliders [triggers](triggers.md), and use them to script events when objects pass through them.
+You can also: 
+
+* set the [shape of collider components](collider-shapes.md)
+* make colliders [triggers](triggers.md), and use them to script events when objects pass through them
+* constrict collider movement with [constraints](constraints.md)
 
 ## See also
 * [Collider shapes](collider-shapes.md)
-* [Simulation](simulation.md)
-* [Physics tutorials](tutorials/index.md)
+* [Simulation](../simulation.md)
+* [Physics tutorials](../tutorials/index.md)

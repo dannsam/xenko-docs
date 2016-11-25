@@ -31,4 +31,11 @@ Friction              | Sets the surface friction.
 Rolling Friction      | Sets the rolling friction.
 CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
 CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection.
-Is Trigger            | Toggles whether the static collider is a [trigger](triggers.md)..
+Is Trigger            | Toggles whether the static collider is a [trigger](triggers.md)
+
+## See also
+
+* [Rigid bodies](rigid-bodies.md)
+* [Characters](characters.md)
+* [Collider shapes](collider-shapes.md)
+* [Triggers](triggers.md)

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-For [colliders](colliders.md) to interact, you need to give them a shape in the entity's **Property grid**. The shape can be different from the entity's other components (such as its model). Components can have multiple intersecting shapes. Each shape has additional properties including size, orientation, offset, and so on.
+For colliders to interact, you need to give them a shape in the entity's **Property grid**. The shape can be different from the entity's other components (such as its model). Components can have multiple intersecting shapes. Each shape has additional properties including size, orientation, offset, and so on.
 
 You can specify a geometric shape, or generate a shape based on a model you specify.
 
@@ -95,6 +95,6 @@ The script binds the the collider shape visibility to **Left Shift + Left Ctrl +
 > Collider shapes for infinite planes are always invisible.
 
 ## See also
-* [Colliders](colliders.md)
-* [Tutorial: Create a bouncing ball](tutorials/create-a-bouncing-ball.md)
-* [Tutorial: Script a triggered event](tutorials/script-a-triggered-event.md)
+* [Colliders](index.md)
+* [Tutorial: Create a bouncing ball](../tutorials/create-a-bouncing-ball.md)
+* [Tutorial: Script a triggered event](../tutorials/script-a-triggered-event.md)

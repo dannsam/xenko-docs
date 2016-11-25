@@ -9,4 +9,4 @@ You can use this to script events. For example, you can use a trigger to detect 
 
 To make a collider a trigger, in the **Property grid**, under the component properties, select **Is Trigger**.
 
-For an example of how to use triggers, see the [Script a triggered event](tutorials/script-a-triggered-event.md) tutorial.
+For an example of how to use triggers, see the [Script a triggered event](../tutorials/script-a-triggered-event.md) tutorial.
