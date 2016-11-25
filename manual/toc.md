@@ -137,7 +137,10 @@
 ### [Lasers and lightnings](particles/tutorials/lasers.md)
 
 # [Physics](physics/index.md)
-## [Colliders](physics/Colliders.md)
+## [Colliders](physics/colliders.md)
+### [Static colliders](physics/static-colliders.md)
+### [Rigid bodies](physics/rigid-bodies.md)
+### [Characters](physics/characters.md)
 ### [Collider shapes](physics/collider-shapes.md)
 ### [Constraints](physics/constraints.md)
 ## [Raycasting](physics/raycasting.md)
