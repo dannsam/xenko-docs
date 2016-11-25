@@ -14,4 +14,4 @@ To make a trigger, in the **Property grid**, under the component properties, sel
 
 ![Check 'Is trigger'](media/triggers-select-is-trigger-checkbox.png)
 
-For an example of how to use triggers, see the [Script a triggered event](../tutorials/script-a-triggered-event.md) tutorial.
+For an example of how to use triggers, see the [Script a triggered event](tutorials/script-a-triggered-event.md) tutorial.

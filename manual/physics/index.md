@@ -4,21 +4,13 @@ Xenko simulates real-world physics such as gravity and collisions. This section 
 
 ## In this section
 
-* [Colliders](colliders/index.md)
+* [Colliders](colliders.md)
     
     Create physics by adding collider components to entities
 
-    * [Collider shapes](colliders/collider-shapes.md)
+* [Constraints](constraints.md)
 
-        Define the shape of collider components
-
-    * [Triggers](colliders/triggers.md)
-
-        Use colliders to detect when objects pass through them 
-
-    * [Constraints](colliders/constraints.md)
-
-        Limit the freedom rigid bodies have to move to create interesting and realistic physics
+    Limit the freedom rigid bodies have to move to create interesting and realistic physics
 
 * [Raycasting](raycasting.md)
 

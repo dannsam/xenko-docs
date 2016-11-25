@@ -37,4 +37,4 @@ public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, Camer
 ```
 
 ## See also
-* [Colliders](colliders/index.md)
+* [Colliders](colliders.md)

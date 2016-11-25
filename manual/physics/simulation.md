@@ -21,5 +21,5 @@ At runtime, you can change some [Simulation](xref:SiliconStudio.Xenko.Physics.Si
 * `MaxSubSteps` — the maximum number of fixed timesteps the engine takes per update
 
 ## See also
-* [Colliders](colliders/index.md)
-* [Collider shapes](colliders/collider-shapes.md)
+* [Colliders](colliders.md)
+* [Collider shapes](collider-shapes.md)
