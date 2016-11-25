@@ -73,9 +73,9 @@ The sphere (rigid body) responds to gravity and falls. The ground (static collid
 
 ## 3. Add a bounce effect
 
-To create a bounce effect, we need to change the **restitution** property of both physical objects. This simulates the [coefficient of restitution (Wikipedia)](https://en.wikipedia.org/wiki/Coefficient_of_restitution) of real-world collisions. 
+To create a bounce effect, we need to change the **restitution** of both physical objects. This simulates the [coefficient of restitution (Wikipedia)](https://en.wikipedia.org/wiki/Coefficient_of_restitution) of real-world collisions. 
 
-If the restitution property of colliding entities is 0, the entities lose all energy and stop moving immediately on impact. If the restitution is 1, they lose no energy and rebound with the same velocity at which they collided. If the restitution is higher than 1, they gain energy and rebound with _more_ velocity. To create realistic collisions, we generally set the restitution between 0 and 1.
+If the restitution property of colliding entities is 0, the entities lose all energy and stop moving immediately on impact. If the restitution is 1, they lose no energy and rebound with the same velocity at which they collided. If the restitution is higher than 1, they gain energy and rebound with _more_ velocity. As a rule, to create realistic collisions, set the restitution between 0 and 1.
 
 Let's set the restitution of our Sphere and Ground entities.
 

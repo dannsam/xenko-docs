@@ -3,22 +3,33 @@
 Xenko simulates real-world physics such as gravity and collisions. This section explains how physics components work, how to add them to your project, and how to how to use them with scripts.
 
 ## In this section
-Create physics by adding [collider components](colliders.md) to entities. There are three types of collider component:
 
-* **static colliders**, for objects which other objects bump into
-* **rigid bodies**, for objects moved around by physics
-* **characters**, for player characters controlled via user input that need to bump into things
+* [Colliders](colliders.md)
+    
+    Create physics by adding collider components to entities
 
-* [Raycasting](raycasts.md) trace a line (ray) through the scene to find intersecting objects. This is useful, for example, to find which objects are under the mouse cursor when a user clicks in a 3D image, or to check which objects are in a gun's line of fire.
-* [Constraints](constraints.md) limit collider movement; for example, a swinging chain.
+* [Constraints](constraints.md)
 
-## Physics simulation
-Xenko physics are controlled by [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation). You can set how [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) is initialized by a few flags in [PhysicsSettings](xref:SiliconStudio.Xenko.Physics.PhysicsSettings), accessible from Game Studio in the **Game Settings** asset.
+    Limit the freedom rigid bodies have to move to create interesting and realistic physics
 
-* `CollisionsOnly` initializes the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) with collision detection with no dynamic.
-* `ContinuosCollisionDetection` initializes the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) with continuous collision detection (CCD). CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
+* [Raycasting](raycasting.md)
 
-From the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation), you can change some options on the fly, including:
-* `Gravity` 
-* `FixedTimeStep`
-* the number of `MaxSubSteps` the engine should take in the case of slow update rate
+    Trace an invisible line through the scene to find intersecting objects
+
+* [Simulation](simulation.md)
+
+    How the Xenko engine controls physics
+
+### Tutorials
+
+* [Create a bouncing ball](tutorials/create-a-bouncing-ball.md)
+
+    Use the static collider and rigid body components to create a ball bouncing on a floor
+
+* [Script a triggered event](tutorials/script-a-triggered-event.md)
+    
+    Create a trigger that doubles the size of a ball when the ball passes through it
+
+## Further reference
+
+Xenko uses the open-source [Bullet Physics](http://bulletphysics.org/wordpress/) engine. For detailed information about this, see the [Bullet User Manual](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf).

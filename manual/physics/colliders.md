@@ -3,15 +3,18 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-To create a physics object, add a **collider** component to an entity. There are three types of collider component: **static colliders**,  **rigid bodies**, and **characters**.
+To use physics in your project, add a **collider** component to an entity. Colliders are entities that can bump into one another.
+
+## Types of collider
+There are three types of collider: **static colliders**,  **rigid bodies**, and **characters**.
 
 ![Static and rigid body colliders](media/static-and-rigid-body-colliders.png)
 
-## Static colliders
+### Static colliders
 
 **Static colliders** aren't moved by forces such as gravity and collisions, but other physics objects can bump into them. Typical static colliders are strong immovable objects like walls, floors, large rocks, and so on.
 
-### Move a static collider at runtime
+#### Move a static collider at runtime
 If you need to move a static collider at runtime, you can do it programatically with:
 
 ```
@@ -20,31 +23,31 @@ PhysicsComponent.Entity.Transform.UpdateWorldMatrix();
 PhysicsComponent.UpdatePhysicsTransformation();
 ```
 
-## Rigid bodies
+### Rigid bodies
 
 Rigid bodies move based on physical forces applied to them, such gravity and collisions. Typical rigid bodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigid bodies they collide with.
 
 ### Kinematic rigid bodies
 
-By default, rigid bodies are moved only by the forces acting on them, such as gravity and collisions. However, sometimes you want to give them some specific movement. For example, you could have an elevator move up and down (controlled in a script via its Transform property) rather than have other objects push and pull it. This is a **kinematic** rigid body.
+Sometimes you want to move rigid bodies in a specific way rather than have other objects move them. For example, you might control an elevator with a script, via its Transform property, rather than have other objects push and pull it. This is a **kinematic** rigid body.
 
 Although kinematic rigid bodies aren't moved by physics, other objects can still collide with them. In the case of the elevator, for example, objects placed inside won't fall through the elevator floor.
 
 ![Kinematic elevator](media/kinematic-elevator-1.png)
 
-To make a rigid-body collider kinematic, in the **Property grid**, under the component properties, select **Is kinematic** in the **Rigidbody**.
+To make a rigid body kinematic, in the **Property grid**, under the **Rigidbody** component properties, select **Is kinematic**.
 
-### Scripting kinematic rigid bodies
-You can script the _is kinematic_ property to turn on and off on certain events. For example, imagine our kinematic elevator's suspension cables are cut. You can script the _is kinematic_ property to change to _false_ when this happens. The elevator becomes subject to the usual forces of physics, and plummets.
+#### Scripting kinematic rigid bodies
+You can script the **Is kinematic** property to turn on and off on certain events. For example, imagine our kinematic elevator's suspension cables are cut. You can script the **is kinematic** property to change to _false_ when this happens. The elevator becomes subject to the usual forces of physics, and falls.
 
 ![Kinematic elevator with objects](media/kinematic-elevator-2.png)
 
-## Characters
+### Characters
 
-**Character** components are used for entities which need to respond to user input (eg player characters) but also interact with other colliders. Player characters without the Character component will pass through other colliders.
+**Character** components are used for entities which need to respond to user [input](../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things). Player characters without the Character component will pass through objects.
 
 > [!Note]
-> Entities with the character component can only be moved with `SetVelocity`, `Jump` and `Teleport`.
+> Entities with the character component can only be moved with SetVelocity, Jump, and Teleport.
 
 ## Add a collider component to an entity
 
@@ -56,13 +59,17 @@ You can script the _is kinematic_ property to turn on and off on certain events.
 > For colliders to interact with other physics objects, you need to set a [collider shape](collider-shapes.md) in the **Properties** grid.
 
 ## Triggers
-When a collider is a **trigger**, objects no longer bump into it. Instead they pass through it, **triggering** an event which you can detect in your code. For example, you can use a trigger to detect when a player character enters ("collides" with) a room, and use this in your script to trigger an event.
+When a collider is a **trigger**, objects don't bump into it. Instead they pass through it, which the trigger detects. 
+
+You can use this to script events. For example, you can use a trigger to detect when a player character enters a room, and use this in your script to trigger an event.
 
 To make a collider a trigger, in the **Property grid**, under the component properties, select **Is Trigger**.
 
 For an example of how to use triggers, see the [Script a triggered event](tutorials/script-a-triggered-event.md) tutorial.
 
 ## Component properties
+
+You can adjust the properties of each component in the **Property grid**.
 
 Property              | Component             |  Description
 ----------------------|-----------------------|---------------------------------
@@ -91,4 +98,5 @@ Jump Speed            | Character                                        | The a
 
 ## See also
 * [Collider shapes](collider-shapes.md)
+* [Simulation](simulation.md)
 * [Physics tutorials](tutorials/index.md)
