@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Xenko's physics are controlled by the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) class. You can change how Xenko intializes the [simulation](xref:SiliconStudio.Xenko.Physics.Simulation) by modifying flags in [PhysicsSettings](xref:SiliconStudio.Xenko.Physics.PhysicsSettings), accessed in the **GameSettings** asset properties.
+Xenko's physics are controlled by the [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) class. You can change how Xenko initializes the [simulation](xref:SiliconStudio.Xenko.Physics.Simulation) by modifying flags in [PhysicsSettings](xref:SiliconStudio.Xenko.Physics.PhysicsSettings), accessed in the **GameSettings** asset properties.
 
 ![Physics Settings](media/physics-settings.png)
 
@@ -14,7 +14,7 @@ Xenko's physics are controlled by the [Simulation](xref:SiliconStudio.Xenko.Phys
 > [!Note] 
 > The ``SoftBodySupport``, ``MultiThreaded``, and ``UseHardwareWhenPossible`` flags are currently disabled. They'll be added in a future release.
 
-At runtime, you can change some [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) paramaters:
+At runtime, you can change some [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation) parameters:
 
 * `Gravity` — the global gravity, in meters per second squared
 * `FixedTimeStep` — the length of a simulation timestep, in seconds
