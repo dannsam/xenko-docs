@@ -19,12 +19,12 @@ The examples of skybox backgrounds include skies, clouds, mountains, and other s
 
 ## Create a cubemap
 
-For skyboxes, Xenko uses cubemaps with a `.dds` extension.
+Xenko uses cubemaps with a `.dds` extension for skyboxes.
 
 > [!Note]
 > Currently, you cannot convert `.jpg` or other images to cubemap directly in Game Studio. The feature will be added in a future release.
 
-Use external software to create a cubemap out of separate images, for instance:
+Use external software to create a cubemap out of the separate images, for instance:
 
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop).
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen).
