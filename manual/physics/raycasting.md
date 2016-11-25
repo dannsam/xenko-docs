@@ -1,11 +1,13 @@
-# Raycasts
+# Raycasting
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A **raycast** is an invisible line traced through the scene to find intersecting collider components. Raycasts are useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
+**Raycasting** traces an invisible line through the scene to find intersecting physics objects. Raycasting is useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
 
-Implement a raycast using the current ```Simulation``` object. To find the first collider the raycast intersects with, use the function ```Simulation.Raycast(Vector3 from, Vector3 to)```.
+To raycast, in the current `Simulation`, use `Simulation.Raycast(Vector3 from, Vector3 to)`.
+
+For an example of raycasting in a simple game, load the **Physics Sample** project.
 
 ## Example code
 
