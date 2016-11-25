@@ -64,7 +64,7 @@ The capsule shape is especially useful for character components, as its curved b
 
 The infinite plane covers an infinite distance across one dimension.
 Think of it like a wall or floor stretching into the distance for ever.
-You can use several infinite planes together to box the user in and stop them "tunneling" outside the level.
+You can use several infinite planes together to box the users in and stop them "tunneling" outside the level.
 
 | Property       | Description |
 | -------------- |-------------| 

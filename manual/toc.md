@@ -142,6 +142,7 @@
 ### [Rigid bodies](physics/rigid-bodies.md)
 ### [Characters](physics/characters.md)
 ### [Collider shapes](physics/collider-shapes.md)
+### [Triggers](physics/triggers.md)
 ### [Constraints](physics/constraints.md)
 ## [Raycasting](physics/raycasting.md)
 ## [Simulation](physics/simulation.md)
