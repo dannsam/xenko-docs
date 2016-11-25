@@ -31,7 +31,7 @@ To create a constraint, use the following [Simulation](xref:SiliconStudio.Xenko.
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, Matrix frameA, bool useReferenceFrameA);
 ```
 
-This links `rigidBodyA` to the world at its current location. The boolean `useReferenceFrameA` decides which coordinate system (either `rigidbody A` or the world) the limit is applied to.
+This links `rigidBodyA` to the world at its current location. The boolean [useReferenceFrameA](CreateConstraint.\(ConstraintTypes, RigidbodyComponent, Matrix, Boolean\)) decides which coordinate system (either `rigidbody A` or the world) the limit is applied to.
 
 > [!Note]
 > * In the case of `ConstraintTypes.Point2Point`, the frame represents a pivot in A. Only the translation vector is considered. `useReferenceFrameA` is ignored.
@@ -51,9 +51,7 @@ This method links ``rigidBodyA`` to ``rigidBodyB``.
 > * In the case of `ConstraintTypes.ConeTwist`, `useReferenceFrameA` is ignored.
 > * In the case of `ConstraintTypes.Gear`, `useReferenceFrameA` is ignored. The frame just represents the Axis either in A or B; only the translation vector (which should contain the axis) is used.
 
-The boolean `useReferenceFrameA` determines which coordinate system (`rigidbody A` or `B`) the limits are applied to.
-
-[useReferenceFrameA](CreateConstraint.\(ConstraintTypes, RigidbodyComponent, Matrix, Boolean\))
+The boolean [useReferenceFrameA](CreateConstraint.\(ConstraintTypes, RigidbodyComponent, Matrix, Boolean\)) determines which coordinate system (`rigidbody A` or `B`) the limits are applied to.
 
 ## Add constraints to the simulation
 
@@ -70,8 +68,6 @@ this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBod
 
 The parameter [disableCollisionsBetweenLinkedBodies]( SiliconStudio.Xenko.Physics.Simulation.AddConstraint\(SiliconStudio.Xenko.Physics.Constraint,System.Boolean\))
  stops linked bodies colliding with each other.
-
-
 
 Likewise, to remove a constraint from the simulation, use:
 
