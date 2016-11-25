@@ -5,12 +5,13 @@
 
 For [colliders](colliders.md) to interact, you need to give them a shape in the entity's **Property grid**. The shape can be different from the entity's other components (such as its model). Components can have multiple intersecting shapes. Each shape has additional properties including size, orientation, offset, and so on.
 
-You can specify one of five possible geomatric shapes, or generate a shape based on a model.
+You can specify a geometric shape, or generate a shape based on a model you specify.
 
 ### Box
 
 | Property       | Description |
 | -------------- |-------------| 
+| Is 2D | Makes the box infinitely flat in one dimension. |
 | Size    | The box size in XYZ values |
 | Local offset     | The box position relative to the entity it's attached to|
 | Local rotation      | The box rotation in XYZ values|
@@ -21,12 +22,24 @@ The capsule shape is especially useful for character components, as its curved b
 
 | Property       | Description |
 | -------------- |-------------| 
-| Is 2D | |
-| Length| The length of the capsule|
+| Is 2D | Makes the capsule infinitely flat in one dimension.|
+| Length | The length of the capsule|
 | Radius | The radius of the capsule|
 | Orientation | The axis along which the shape is stretched (X,Y, or Z)|
 | Local offset     | The capsule position relative to the entity it's attached to|
 | Local rotation      | The capsule rotation in XYZ values|
+
+### Cone
+
+The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
+
+| Property       | Description |
+| -------------- |-------------| 
+| Height | The height of the cone|
+| Radius | The radius of the cone at the bottom end|
+| Orientation | The axis along which the shape is stretched (X,Y, or Z)|
+| Local offset     | The cone position relative to the entity it's attached to|
+| Local rotation      | The cone rotation in XYZ values|
 
 ### Cylinder
 
@@ -42,7 +55,7 @@ The capsule shape is especially useful for character components, as its curved b
 
 | Property       | Description |
 | -------------- |-------------| 
-| Is 2D | |
+| Is 2D | Makes the sphere infinitely flat in one dimension. |
 | Radius | The radius of the sphere|
 | Local offset     | The sphere position relative to the entity it's attached to|
 
