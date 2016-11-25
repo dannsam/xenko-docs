@@ -145,9 +145,9 @@
 ### [Constraints](physics/constraints.md)
 ## [Raycasting](physics/raycasting.md)
 ## [Simulation](physics/simulation.md)
-## [Tutorials](physics/tutorials/index.md)
-### [Create a bouncing ball](physics/tutorials/create-a-bouncing-ball.md)
-### [Script a triggered event](physics/tutorials/script-a-triggered-event.md)
+## [Tutorials](physics/tutorials.md)
+### [Create a bouncing ball](physics/create-a-bouncing-ball.md)
+### [Script a triggered event](physics/script-a-triggered-event.md)
 
 # [Platforms](platforms/index.md)
 ## [Linux](platforms/linux/index.md)

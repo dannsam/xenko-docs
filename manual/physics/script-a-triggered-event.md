@@ -26,7 +26,7 @@ Game Studio adds an entity to the scene with the default name **Entity**.
 
 2. This entity will be our trigger, so rename it *Trigger*.
 
-Since we don't need the trigger to move, we'll make it a [static collider](../colliders/static-colliders.md).
+Since we don't need the trigger to move, we'll make it a static collider.
 
 3. In the **Property grid**, click **Add component** and select **Static Collider**.
 
@@ -134,6 +134,6 @@ The ball falls through the trigger, doubles in size, exits the trigger, and retu
      ![Ball passes through trigger](media/physics-tutorials-create-a-trigger-ball-passes-trigger.gif)
 
 ## See also
-* [Colliders](../colliders/index.md)
-* [Collider shapes](../colliders/collider-shapes.md)
+* [Colliders](colliders.md)
+* [Collider shapes](collider-shapes.md)
 * [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)

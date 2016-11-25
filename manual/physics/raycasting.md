@@ -8,7 +8,7 @@ Raycasting is useful, for example, to check which objects are in a gun's line of
 
 To raycast, in the current [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation), use [Simulation.Raycast](xref:SiliconStudio.Xenko.Physics.Simulation/(SiliconStudio.Core.Mathematics.Vector3.SiliconStudio.Core.Mathematics.Vector3/)).
 
-For an example of raycasting in a simple game, load the **Physics Sample** project.
+Raycasting is showcased in the **Physics Sample** project.
 
 ## Example code
 
@@ -37,4 +37,4 @@ public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, Camer
 ```
 
 ## See also
-* [Colliders](colliders/index.md)
+* [Colliders](colliders.md)
