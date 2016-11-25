@@ -3,11 +3,14 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-For colliders to interact, you need to give them a shape in the entity's **Property grid**. The shape can be different from the entity's other components (such as its model). Components can have multiple intersecting shapes. Each shape has additional properties including size, orientation, offset, and so on.
+For [colliders](colliders.md) to interact, you need to give them a shape in the entity's **Property grid**.
+The shape can be different from the entity's other components (such as its model).
+Components can have multiple intersecting shapes.
+Each shape has additional properties including size, orientation, offset, and so on.
 
-You can specify a geometric shape, or generate a shape based on a model you specify.
+You can specify a geometric shape, or generate a shape based on a model you select.
 
-### Box
+## Box
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -16,7 +19,7 @@ You can specify a geometric shape, or generate a shape based on a model you spec
 | Local offset     | The box position relative to the entity it's attached to|
 | Local rotation      | The box rotation in XYZ values|
 
-### Capsule
+## Capsule
 
 The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
 
@@ -29,7 +32,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Local offset     | The capsule position relative to the entity it's attached to|
 | Local rotation      | The capsule rotation in XYZ values|
 
-### Cone
+## Cone
 
 The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
 
@@ -41,7 +44,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Local offset     | The cone position relative to the entity it's attached to|
 | Local rotation      | The cone rotation in XYZ values|
 
-### Cylinder
+## Cylinder
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -51,7 +54,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Local offset     | The cylinder position relative to the entity it's attached to|
 | Local rotation      | The cylinder  rotation in XYZ values|
 
-### Sphere
+## Sphere
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -59,7 +62,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Radius | The radius of the sphere|
 | Local offset     | The sphere position relative to the entity it's attached to|
 
-### Infinite plane
+## Infinite plane
 
 The infinite plane covers an infinite distance across one dimension. Think of it like a wall or floor stretching into the distance for ever. You can use several infinite planes together to box the user in and stop them "tunneling" outside the level.
 
@@ -68,7 +71,7 @@ The infinite plane covers an infinite distance across one dimension. Think of it
 | Normal  | Which vector (X, Y, or Z) is perpendicular to the plane. For example, to make an infinite floor, set the normal property to: _X:0, Y:1, Z:0_ |
 | Offset     | The plane position relative to the entity it's attached to|
 
-### Asset
+## Asset
 
 This generates a collider shape from a model asset.
 
