@@ -246,6 +246,6 @@ default:
 ```
 
 ## See also
-* [Input index](index.md)
 * [Pointers](pointers.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input overview](index.md)
