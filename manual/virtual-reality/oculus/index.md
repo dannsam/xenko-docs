@@ -56,7 +56,6 @@ using SiliconStudio.Xenko.Rendering;
 using SharpDX.Direct3D11;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Graphics;
-using SiliconStudio.Xenko.Graphics.Direct3D;
 using SiliconStudio.Xenko.Native;
 using SiliconStudio.Xenko.Rendering.Composers;
 
@@ -107,7 +106,7 @@ namespace OculusRenderer
         protected override Task LoadContent()
         {
             //Create directx11 render target textures
-            var nativeDevice = SharpDxInterop.GetNativeDevice(GraphicsDevice);
+            var nativeDevice = SharpDXInterop.GetNativeDevice(GraphicsDevice);
             if (!OculusOvr.CreateTexturesDx(SessionPtr, nativeDevice.NativePointer, out texturesCount, GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height))
             {
                 throw new Exception(OculusOvr.GetError());
@@ -124,7 +123,7 @@ namespace OculusRenderer
                     throw new Exception(OculusOvr.GetError());
                 }
                 var dxTex = new Texture2D(ptr);
-                textures[i] = SharpDxInterop.CreateTextureFromNative(GraphicsDevice, dxTex, true);
+                textures[i] = SharpDXInterop.CreateTextureFromNative(GraphicsDevice, dxTex, true);
 
                 if (depthBuffer == null)
                 {
@@ -150,7 +149,7 @@ namespace OculusRenderer
             SceneCameraRenderers[0] = (SceneCameraRenderer)compositor.Master.Renderers[1];
             SceneCameraRenderers[1] = (SceneCameraRenderer)compositor.Master.Renderers[2];
 
-            var backbufferNative = SharpDxInterop.GetNativeResource(GraphicsDevice.Presenter.BackBuffer);
+            var backbufferNative = SharpDXInterop.GetNativeResource(GraphicsDevice.Presenter.BackBuffer);
 
             //rebuild the renderers structure
             compositor.Master.Renderers.Clear();
@@ -162,7 +161,7 @@ namespace OculusRenderer
             {
                 OculusOvr.CommitFrame(SessionPtr);
 
-                var nativeContext = SharpDxInterop.GetNativeDeviceContext(x.CommandList);
+                var nativeContext = SharpDXInterop.GetNativeDeviceContext(x.CommandList);
                 nativeContext.CopyResource(MirrorTexture, backbufferNative);
             }));
 
