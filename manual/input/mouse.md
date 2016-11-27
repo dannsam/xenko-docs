@@ -7,7 +7,7 @@ The **mouse** is a common input device for desktop games.
 
 There are two ways to handle mouse input in Xenko:
 
-* Query **mouse button states**
+* Query **mouse button states**.
 * For cross-platform games that target mobile devices, you can use [PointerEvent](xref:SiliconStudio.Xenko.Input.PointerEvent) lists.
 For more information, see [Pointers](pointers.md).
 
@@ -104,8 +104,8 @@ public class MouseInputScript : SyncScript
 }
 ```
 ## See also
-* [Input index](index.md)
-* [Gamepads](gamepads.md)
-* [Keyboard](keyboards.md)
 * [Pointers](pointers.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Keyboard](keyboards.md)
+* [Gamepads](gamepads.md)
+* [Input overview](index.md)

@@ -168,6 +168,6 @@ public class SensorScript : AsyncScript
 ```
 
 ## See also
-* [Input index](index.md)
 * [Gestures](gestures.md)
 * [Pointers](pointers.md)
+* [Input overview](index.md)

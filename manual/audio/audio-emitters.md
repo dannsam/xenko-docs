@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-**[Audio emitter components](xref:SiliconStudio.Xenko.Audio.AudioEmitter)** emit audio used to create [spatialized audio](spatialized-audio.md). You can add them to any entity.
+[Audio emitter components](xref:SiliconStudio.Xenko.Audio.AudioEmitter) emit audio used to create [spatialized audio](spatialized-audio.md). You can add them to any entity.
 
 The pitch and volume of the sound changes as the [audio listener](audio-listeners.md) moves closer to and away from the audio emitter.
 
@@ -58,13 +58,13 @@ Now we need to create a script to play and configure the sound asset.
 
 | Property / method | Description |
 |-------    |-------|
-| [IsLooping](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.IsLooping) | Loops audio. Has no effect if ``PlayAndForget`` is set to true.|
+| [IsLooping](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.IsLooping) | Loops audio. Has no effect if [PlayAndForget()](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayAndForget) is set to true.|
 | [Pitch](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Pitch)     | Gets or sets sound pitch (frequency). Use with caution for spatialized audio. |
 | [PlayState](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayState)	| Gets the current state of the audio emitter sound controller. |
 | [Volume](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Volume)	| Volume of the audio. | 
 | [Pause()](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Pause)	| Pauses audio. |
 | [Play()](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Play)      | Plays audio. |
-| [PlayAndForget()](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayAndForget)| Plays audio once, then clears the memory. Useful for short sounds such as gunshots. Overrides ``IsLooping``.|
+| [PlayAndForget()](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.PlayAndForget)| Plays audio once, then clears the memory. Useful for short sounds such as gunshots. Overrides [IsLooping](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.IsLooping).|
 | [Stop()](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController.Stop)	| Stops audio. |
 
 For example:
