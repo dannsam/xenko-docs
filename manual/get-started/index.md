@@ -1,4 +1,4 @@
-# Get Started with Xenko
+# Get started with Xenko
 
 <span class="label label-doc-level">Beginner</span>
 
@@ -23,5 +23,5 @@ This section will discuss the following subjects:
 * [Project structure](project-structure.md) - learn about project structures
 * [Introduction to assets](introduction-to-assets.md) - getting started with assets
 * [Introduction to scenes](introduction-to-scenes.md) - getting started with scenes
-* [Introduction to scripting](introduction-to-scripting.md) - getting started with scripting
+* [Introduction to scripting](introduction-to-scripts.md) - getting started with scripting
 * [Launch your game](launch-a-game.md) - how to launch your game on different platforms

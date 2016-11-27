@@ -1,303 +1,286 @@
 # Highlights
-Xenko release 1.8 introduces three major new features along with several relevant enhancements to existing features.
 
-We are proud to be able to offer you our new **UI Editor**, enhanced performance via our newly **multithreaded engine** with Vulkan support and our new **Prefab Model**.
+Xenko release 1.9β introduces several major new features along with several relevant enhancements to existing features.
 
-Also, for your cutting edge rendering needs, we now support **SSAO** and **cel (toon) shading**!
+We are excited to offer three new game templates to speed up your game design time, a brand new script editor as well as expanded copy-paste functionality.
 
-## UI Editor
+The last major new feature is our new Navigation Mesh system.
 
-This release introduces new UI assets along with a brand-new UI editor, so that you can create amazing UI directly from the Game Studio!
+## Game Templates
 
-[![UI Editor](https://img.youtube.com/vi/YlCViinxviI/0.jpg)](https://www.youtube.com/watch?v=YlCViinxviI "UI Editor")
+We have added several templates packed with a lot of functionality to help you kickstart your games. Choose from:
 
-The UI editor provides a full WYSIWYG experience. You can author the whole visual tree of your UI, edit the properties of each UI element (such as layout, background color, etc.) and preview its rendering.
+* First Person Shooter
+* Third Person Platformer
+* Top-View RPG
 
-Two new assets are available:
-* **UI Page asset**: represents a typical tree of UI elements that can assigned to the UI Component of an entity in the scene or prefab editor.
-* **UI Library asset**: represents a collection of UI trees (similar to prefabs) that can be reused by other UI Pages.
-* Both have runtime equivalents. UIComponent now expects a UI Page. A UI Library is useful to create or edit UI at runtime.
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/game_templates.jpg">
+   <source src="media/ReleaseNotes-1.9/game_templates.mp4" type="video/mp4">
+</video>
 
-And since it is built on the same system as archetypes and prefabs, you can easily create shared UI parts, override some properties and have changes propagating automatically.
+All of them come with basic camera and player functionality found in most games of their respective genres. They also have many production-quality assets so you can easily try different features on your own.
 
-## Performance
+In addition to the game templates, the **New Game** project now includes optional packages with all the assets we used to build the samples. Unlike the game templates which are trimmed down, the optional packages include ALL assets, including some which are not used by any Xenko sample.
 
-### Multithreading
+## Script Editor
 
-Many computationally intensive systems have been multithreaded. Expect a major increase in performance and better scaling to correspond with the size of your game! We have observed up to 6 times higher frame rates for heavily CPU bound scenes so far (on a typical 4-core CPU).
+To ease friction from switching back and forth between the Game Studio and your IDE, we’ve built a new Script Editor.  Relying fully on Visual Studio is no longer necessary because you can now edit your code directly within the Game Studio itself. You’ll get full syntax highlighting, auto-completion, live diagnostics and even the ability to auto-reload C# files and projects that changed on your hard drive due to changes in your external editor (e.g., Visual Studio).
 
-[![Multithreading demo](https://img.youtube.com/vi/sJ2p982cZFc/0.jpg)](https://www.youtube.com/watch?v=sJ2p982cZFc "Multithreading demo")
+In fact, expect:
+* Highlight, auto-completion and live diagnostics is available in the Xenko API, your own game code and libraries that you use
+* Auto-reload C# scripts and C# project changes that happened in the background
+* A Visual Studio like experience for all your code editing!
 
-Parallelized code includes many `EntityProcessors` and almost every part of our recently rewritten **rendering pipeline**. On **Vulkan** and **Direct3D12** this includes also recording of drawing command lists, giving them an edge over the other APIs.
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/script_editor/code_completion.jpg">
+   <source src="media/ReleaseNotes-1.9/script_editor/code_completion.mp4" type="video/mp4">
+</video>
 
-![Multithreading](media/ReleaseNotes-1.8/multithreading.jpg)
+We had some help from Microsoft’s .NET compiler, [Roslyn](https://github.com/dotnet/roslyn), so Xenko users will also receive the full benefit of all the latest features of .NET. Adding a Rosyln-based Script Editor makes it easier to keep up with the latest C# updates.
 
-Developers can find classes and utilities for concurrent programming in the `SiliconStudio.Core.Threading` namespace, e.g. `Dispatcher.For()`, which resemble the Task Parallel Library, but are more lightweight and tailored for work performed every frame in a game's update loop.
+Using the Xenko Script Editor is fairly straightforward. Just follow these steps:
 
-Over time, we will look into multithreading more parts of the engine, including independent subsystems, such as different phases of the `RenderSystem` and `Scripts`.
+* Create a new project/game in Game Studio
+* Add a script in Game Studio
+* Edit the script in Game Studio
 
-### Prefab Model
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/script_editor/create_script_gamestudio.jpg">
+   <source src="media/ReleaseNotes-1.9/script_editor/create_script_gamestudio.mp4" type="video/mp4">
+</video>
 
-The Prefab Model is a new type of Model asset that generates an optimized baked and merged single model from a prefab.
+C# scripts saved on Visual Studio side (or any text editor, for that matter) will automatically be updated in Game Studio without reloading. Same goes for project changes (.csproj): new scripts will appear automatically upon saving. GameStudio will automatically listen for file changes on the hard drive and update them live, or ask you what to do in case of conflicts.
 
-It merges meshes together by material and vertex layout. You can easily go from thousands of draw calls to one or two draw calls.
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/script_editor/external_changes.jpg">
+   <source src="media/ReleaseNotes-1.9/script_editor/external_changes.mp4" type="video/mp4">
+</video>
 
-To use it, just create a new Prefab Model asset from the Game Studio and assign a prefab to it.
-Make sure that the base prefab is just containing static entities as only `ModelComponent` types are merged.
+Under the hood, [Rosyln](https://github.com/dotnet/roslyn) is the underlying technology that can process your Xenko source code. But we didn’t stop there! We were fortunate to find [AvalonEdit](http://avalonedit.net/), which provided us what we wanted for the visual appearance of the UI aspect of the Xenko script editor. We also integrated [RoslynPad](https://roslynpad.net/), which connects Roslyn and AvalonEdit together.
 
-## Rendering
+## Navigation Meshes
 
-### SSAO
+In Xenko 1.9β, you can create a **navigation mesh** powered by [Recast and Detour](https://github.com/recastnavigation/recastnavigation) with **real-time feedback** directly in the **Xenko GameStudio!** The navigation mesh is especially useful for RPGs or top-down strategy games, as you can use it to **guide characters through complex scenes**. The real-time feedback makes it easy to adjust and conveniently customize AI movement and the dimensions of the navigation mesh itself. The green outline of Xenko’s Navigation Mesh shows where the AI comes into play and where the colliders are set.
 
-Ambient Occlusion was added to the list of post-processing effects. The current technique implements [Scalable Ambient Obscurance](https://graphics.cs.williams.edu/papers/SAOHPG12/). It exposes a variety of options, including number of tap samples, intensity, tap radius and back buffer size.
 
-![SAO comparison shots](media/ReleaseNotes-1.8/SAO.jpg)
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/navmeshes/withOutlineAE.jpg">
+   <source src="media/ReleaseNotes-1.9/navmeshes/withOutlineAE.mp4" type="video/mp4">
+</video>
 
-It is currently part of the post-effect pipeline, but will later move to the lighting pipeline for more realistic rendering.
+In the videos, you can see how the AI navigates the level using the logic within the navigation mesh, and how the colliders will automatically be set in real-time. Of course, you can script AI movement manually, too.
 
-### Cel Shading
 
-Cel shading (or Toon shading) is now available as a rendering model with both Diffuse and Specular rendering options. The default implementation limits the light product to binary or 3-cuts discrete levels. You can also reference a ramp texture for better artistic control.
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/navmeshes/NoOutlineAE.jpg">
+   <source src="media/ReleaseNotes-1.9/navmeshes/NoOutlineAE.mp4" type="video/mp4">
+</video>
 
-[![Cel Shading](https://img.youtube.com/vi/RJDrG1QR3Uo/0.jpg)](https://www.youtube.com/watch?v=RJDrG1QR3Uo "Cel Shading")
+## Copy & Paste Functionality Expanded
 
-# How To Upgrade
+In the past we only supported copy and pasting of assets, but now you can **copy-paste pretty much anything** in the Game Studio.
 
-## UI
+Any entities in a scene are now copyable, as well as any sprites of a sprite sheet, UI elements, or even a single property in the property grid! For instance, you can copy a list and perform any of the following operations.
 
-The UIComponent `RootElement`  property has been replaced with the `Page` property. It now expects an instance of the `UIPage` type. Scripts that were setting the `RootElement` property need to be updated:
+* Insert it into another list at various positions, for example:
 
-```
-// previous code (will not compile)
-var grid = new Grid();
-var component = Entity.Get<UIComponent>();
-component.RootElement = grid;
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/copy_paste/Copy_InsertIntoList.jpg">
+   <source src="media/ReleaseNotes-1.9/copy_paste/Copy_InsertIntoList.mp4" type="video/mp4">
+</video>
 
-// new code
-var grid = new Grid();
-var component = Entity.Get<UIComponent>();
-component.Page = new UIPage
-{
-    RootElement = grid
-};
-```
+* Copy and insert into the list (by pasting at a list item level).*
 
-Due to the slight API and behavior changes made to UI system, you might have to adapt some other part of your code. For example:
 
-```
-var text = new TextBlock();
-var canvas = new Canvas();
-canvas.Children.Add(text);
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/copy_paste/Copy_AppendToList.jpg">
+   <source src="media/ReleaseNotes-1.9/copy_paste/Copy_AppendToList.mp4" type="video/mp4">
+</video>
 
-var position = new Vector3(0.0f, 1.0f, 0.0f);
-// previously setting this attached property will also set Canvas.UseAbsolutePositionPropertyKey to false automatically
-text.DependencyProperties.Set(Canvas.RelativePositionPropertyKey, position);
-// now you need to set it explicitly
-text.DependencyProperties.Set(Canvas.UseAbsolutePositionPropertyKey, false);
-// note that using extension methods is the recommended way, and does all of that in a more concise way:
-text.SetCanvasRelativePosition(position);
-```
+* Copy and append to a list, for example, append it to the end of the list.
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/copy_paste/Copy_ReplaceList.jpg">
+   <source src="media/ReleaseNotes-1.9/copy_paste/Copy_ReplaceList.mp4" type="video/mp4">
+</video>
+
+* Copy and replace the whole list.
+
+A bit more difficult to explain, but perhaps easier to show than write about is **copy and replace at an item level**. This action (shown in the video below) will remove the item (at its position in the list) and insert the copied ones starting at the same position of the item in the list. In our example below, the copy replace starts from Item 2 in List 2:
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/copy_paste/Copy_ReplaceIntoList.jpg">
+   <source src="media/ReleaseNotes-1.9/copy_paste/Copy_ReplaceIntoList.mp4" type="video/mp4">
+</video>
+
+
+Some information about copying entities and prefabs:
+
+**An entire hierarchy of entities can be copied from one scene or prefab to another scene or prefab**. Prefab instance will keep their reference to the source prefab as illustrated in the following example:
+
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/copy_paste/CopyPaste_BetweenScenes2.jpg">
+   <source src="media/ReleaseNotes-1.9/copy_paste/CopyPaste_BetweenScenes2.mp4" type="video/mp4">
+</video>
+
+*The prefab “MyHero” is copied into the scene. Links to the prefab are maintained.*
+
+
+It is also possible to **copy a component from an entity and paste it into another entity**.
+
+
+**Any absolutely any property that can be serialized can be copied**. You can copy something from one scene to another scene, from a sub-element in one scene to another scene and even from a scene to a text file, back and forth as needed. You can also copy simple values in the property grid (e.g., primitives such as int, vector3, string…) between separate Game Studio instances if that is something you find practical and useful.
+
+
+Here’s an example of copying between scripts and transform entities in the GameStudio Property Grid: 
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-1.9/copy_paste/CopyPaste_PropertyGrid.jpg">
+   <source src="media/ReleaseNotes-1.9/copy_paste/CopyPaste_PropertyGrid.mp4" type="video/mp4">
+</video>
+
+## .NET Standard
+
+Starting with Xenko 1.9, shared Game assemblies will be created using [.NET Standard](https://docs.microsoft.com/en-us/dotnet/articles/standard/library) rather than PCL.
+
+It offers [many advantages](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/): much better API surface for the developer, improved forward and backward compatibility, reduced fragmentation, finer-grained modularity of the framework, easier to write cross-platform apps, more frequent updates, etc.
+
+Newly created applications will target .NET Standard 1.4, but users are of course free to target a different version. Also, your existing PCL projects will still work as is, but we recommend you to update your projects to .NET Standard!
+
+## Assembly Reloading
+
+Iterating on code is very important. So far, Xenko was supporting changes in scripts: as soon as you saved any C# file, Game Studio was offering to recompile and reload the assembly with the updated scripts. If there is an error loading the type, you can still edit other part of the asset, save it back while preserving the parts that could not be loaded.
+
+In this version, we generalized the approach so that any type embedded in your assets can be reloaded! As a result, you can now implement your own classes for anything you want directly in your game or plugin assemblies, and keep editing them without restarting the Game Studio.
+
+This includes renderers, material features, and will soon be extensively used in new assets.
+
+# Breaking changes
+
+## Windows Phone and Windows Store Removed
+
+Windows Phone and Windows Store platforms are both removed.
+Please use the newer `Universal Windows Apps (UWP)` instead. This platform was previously known as `Windows 10`.
+Projects will be automatically upgraded to reflect this change.
+
+Also, we renamed preprocessor definition `SILICONSTUDIO_PLATFORM_WINDOWS_RUNTIME` into `SILICONSTUDIO_PLATFORM_UWP`.
+
+## .NET Standard
+
+The switch to .NET Standard for newly created projects implies that:
+
+* Runtime .NET framework requirement when distributing your projects is bumped from .NET 4.5 to .NET 4.6.1.
+* You need Visual Studio 2015 to open and compile newly created projects
+* You can upgrade older projects to use .NET Standard using Visual Studio 2015 Update 3 (in project properties)
+* From version 1.9, we don't install prerequisites to compile PCL projects anymore. If you have somebody in your team still working on a project created with a previous version of Xenko on a fresh PC, please make them install Xenko 1.8 so that it installs the proper prerequisites (even if the project has been updated to a newer version of Xenko).
+
+
+## Asset Serialization
+
+We changed how we serialize asset in YAML. We introduced new concepts that improve how we can track overrides between an archetype or a prefab and assets/entities inheriting from it. Although everything happens "under the hood", this is a actually a heavy change that might impact the upgrading of your project.
+
+We removed asset upgrading for projects made with version 1.3 and below (released more than a year ago). It is possible that you experience some issues when upgrading a project made with versions 1.4 to 1.7, but you should properly be able to upgrade any project that uses version 1.8. However a few cases are not supported:
+* Dependency Properties of UI elements that are overridden from an UI library will be reset during upgrade. Therefore, properties such as Grid Column and Row will have to be manually restored.
+* Some case of overriden materials in the material list of ModelComponent might be improperly upgraded.
+
+## Dropping Support for Windows Store 8.1 and Windows Phone 8.1 
+
+To properly support the .NET Standard 1.4 and offer our developers a more up-to-date and robust API, we decided to drop support for Windows Store 8.1 and Windows Phone 8.1 platforms.
+
+As Microsoft seems to be focusing on Universal Windows Platform (UWP), we’ve also decided it was best to refocus on more pertinent and relevant platforms for Xenko users. UWP was introduced with Windows 10, and a whole range of devices already support it.
+
+Of course, you are free to stick with Xenko 1.8 in case you have a project targeting one of those two platforms -- we know this is a big change, and we will make every effort to help our developers with this transition. We apologize for the inconvenience, and aim to bring you a top-notch .NET user experience!
+
+Just as a reminder, we already support Universal Windows Platform (UWP) on x86, x64 and ARM as of Xenko 1.8, which means games and apps developed with Xenko can be deployed on a whole range of Microsoft devices, including [Xbox One](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index). Until 1.9, this platform was named Windows10 in Xenko, but we took the liberty to rename it UWP to better match the official naming.
 
 # Changelog
 
-## Version 1.8.0-Beta
+## Version 1.9.0-beta
 
-Release date: 2016/08/31
+Release date 2016/11/24
 
 ### Enhancements
 
 #### General
 
-- Added a `DebugConsoleSystem` to be able to print basic debug information in game.
-- Added Utility methods `FindChild` and `FindRoot` to `Entity`.
-- Animation blend trees can now be created in script. The `AnimationBlend` pre-built script shows how to do it easily
-- Updated Roslyn to 1.3.2
+* From now on, new projects are created as .NET Standard projects rather than PCL projects.
+* `NuGet restore` is automatically run on projects having a `project.json` file
+* Bumped FBX SDK to 2017.0.1
+* Mesh importing now supports *ByEdge* smoothing which was previously ignored. If you notice any difference with vertex normals for your models please check your FBX export settings.
+* Prerequisites installer will ask for UAC once instead of many times, and perform a silent installation for all of the prerequisites.
+
+#### Game Studio
+
+* Previously, when an `EntityComponent` (i.e. script) couldn't be loaded because game or plugin assembly didn't compile properly, we kept a Yaml representation of it so that it could be saved or reloaded after a code fix. Now we allow it to happen anywhere, so that you can use and/or implement custom classes for any type of the engine in your game/plugin.
+* Improve asset logs and errors to properly display failure/warning icon on all assets, including the one with icon-style thumbnails.
+* Improve loading/refreshing of assets in the scene editor.
+* Asset editors will display a * in the tab name when an asset is dirty.
+* Add editor for C# source code.
+* C# files and .csproj files are automatically reloaded as they are modified on hard drive (using a Yes, Yes to All, No, No to All dialog).
+* C# files have their own undo/redo stack
+* Add a Save All button that saves both assets and source code files.
+* The Game Studio now uses _AvalonDock_ as docking system
+* Improve DPI support ([#454](https://github.com/SiliconStudio/xenko/issues/454) and [#470](https://github.com/SiliconStudio/xenko/issues/470))
 
 #### Assets
 
-- Yaml scene files now encode entity and component references in a much more compact way
-- Yaml serialization order is now following class declaration order
-
-#### Audio
-
-- Game studio side: added hard limits in Compression ratio, also now it is using a slider.
-- Added `SetRange` in `SoundInstance` to be able to set play range, it also enables seeking.
-- Added `Position` property in `SoundInstance` to be able to know the position in time of your playing instance.
-- Added `PlayAndForget` to `AudioEmitterSoundController` to play many instances of the same sound rapidly.
-- Added RequestedAudioDevice in AudioSystem to allow game code to select audio devices (Windows only for now).
-- `AudioEmitterComponent` now contains a dictionary of sounds that can be used from the emitter, those can be set from the Game Studio directly!
-- Game Studio sound preview now uses the internal engine, this means that you can directly preview the compression rate!
-
-#### Graphics
-
-- CommandList can now compiled and executed
-- Constant Buffers are now uploaded in a single GPU Buffer and set with offsets on platform/API that support this mode
-- D3D12: reduced number of API calls
-
-#### Game Studio
-
-- About Page accessible from Menu-->Help-->About.
-
-#### Input
-
-- Added preliminary controller vibration support with `Input.SetGamePadVibration`
-
-#### Particles
-
-- Particle rendering now uses the improved multithreaded pipeline, significantly speeding up the vertex buffer building.
-
-#### Samples
-
-- Several samples have been removed. Particles and Physics samples have been greatly reduced and merged into only two, which allows the user to check more features with a single sample.
-
-### Issues fixed
-
-#### Physics
-
-- Procedural models can now be used as a source to generate convex hull shapes.
-- We are now using the github version of Bullet Physics and actively cooperating with the project.
-- Fixed ColliderShape cached matrices computation.
-
-#### Game Studio
-- Credential dialog will now save the credential settings when closing.
-- Credential dialog will not appear if you checked "Do not ask again".
-- Fix hang when launching a Linux game remotely.
-
-### Breaking changes
-
-#### UI
-
-- The UIComponent expect a UI Page in place of the previous Root Element property.
-- Most dependency properties were changed into regular C# properties, except the ones that are attached properties (such as the Column and Row attached property of a Grid).
-- In desktop, TouchMove event is also raised when no mouse button are pressed.
-- Default style of the UI has been removed.
-
-#### Audio
-
-- Remove Play with boolean argument from `SoundInstance`, instead the same behavior will be achieved by using PlayExtended or Play.
-- Rename `IsLooped` into `IsLooping`.
-- Deprecated: `GetSoundController`, `AttachSound`, `AttachSounds`, `DetachSound`, `DetachSounds`. Please add sounds now from the `AudioEmitterComponent`
-
-#### Physics
-
-- `Collision.Contacts` is now an `HashSet` so access by index is not possible anymore, please use `foreach` or iterate them instead.
-
-#### VR
-
-- Add audio, status and re-center support for Oculus Rift.
-
-#### Linux
-
-- Fix Mono issue with the new effect compiler (introduced in 1.7.5-Beta). No need to enable the "remote compiler" anymore in the "package properties".
-
-
-## Version 1.8.1-Beta
-
-Release date: 2016/09/09
-
-### Enhancements
-
-#### Game Studio
-
-- Current selection in the UI editor can be changed from the context menu. This is especially useful to select an element that is covered by another.
-- Add snapping when moving or resizing a element in the UI editor.
-
-### Issues fixed
-
-- Fix a compilation issue with Prefab Models using other Prefab Models to be compiled
-- Fix and improve edition of Generics and Composition Nodes for Shader class nodes in materials
-
-#### Game Studio
-
-- Fix a potential NullReferenceException when validating a range value in the property grid.
-- Creation of derived asset (ArcheType) for UI page or UI library are not supported, but were still allowed.
-- Fix an issue with message box that returned a wrong value when the user chose to close it instead of clicking on one of its button. This could result in data loss when asked to save the project upon closing the Game Studio.
-- Remove incorrect GPL headers in script templates, e.g. BasicCameraController ([#457](https://github.com/SiliconStudio/xenko/issues/457)).
-- Display error message in credential dialog when remote location does not exist instead of reporting invalid credentials.
-
-#### Linux
-- Fix failure when compiling shaders for the Vulkan backend on the remote host.
-
-#### Particles
-
-- Particles materials refactored, significantly improving memory performance.
-
-#### Samples
-
-- Fix samples were depending on the wrong version of Xenko.
-
-
-## Version 1.8.2-Beta
-
-Release date: 2016/09/21
-
-### Enhancements
-
-#### Game Studio
-
-- Improve snapping when moving or resizing an element in the UI editor: moved element will be "attracted" by the parent container bounds or siblings like magnets. This should ease aligning elements with one another.
-- Auto adjust alignment property when moving to left/right (resp. top/bottom) edge of the parent container.
-- The single root of a UI page can be removed and a new one can be added instead.
-- Improve responsiveness of the Game Studio.
-
-### Issues fixed
-
-#### Game Studio
-
-- Fix magic wand tool not working inside the sprite region.
-- Fix an issue when removing the single root of a UI page.
-- Fix some user operations that were taking a very long time to be executed.
-- Fix a crash when setting materials in a model component.
-
-#### Physics
-
-- Fix some memory leaks.
-
-#### Samples
-
-- Fix some scripts that were depending on C# level 6 features.
-
-
-## Version 1.8.3-Beta
-
-Release date: 2016/10/07
-
-### Enhancements
-
-#### Editor
-- Creating a Prefab from a group of entities will name it after the first entity
-- More relevant messages displayed now when assets are not found
-
-#### Physics
-
-- Add a new Jump method which supports an arbitrary jump vector.
-- Add NormalizedDistance to HitResult.
-- Add a version of RaycastPenetrating ( and shape sweep ) that accepts a group and filters accordingly.
-- Add optional offsets to convex hull shapes.
-- Make Move method obsolete, the new method to use from now is SetVelocity which internally applies the simulation fixed time step.
-- Change Character controller's max slope default value to 45 degrees
-
-### Issues fixed
+* Asset YAML serialization has been changed to handle overrides in collection in a better way. More scenario of overrides are now supported.
+* `SharpYaml` has been integrated into our codebase as `SiliconStudio.Core.Yaml`. Most of the duplicated types have been merged back in the `SiliconStudio.Core.Reflection`.
+* Assets don't use a ~Base section nor a ~BasePart.
+* Change `Asset.Id` to be of an `AssetId` type rather than `Guid`, to avoid invalid comparisons with other kind of ids.
+* Remove the `Properties` member of Package.
+* Introduce a new assembly Assets.Quantum 
+* Overrides of properties is now handled using _Quantum_ instead of `ShadowObject`.
+* Remove the asset diff/merge classes.
 
 #### Engine
 
-- Fix calculation of bounding boxes of skinned meshes.
-- Fix culling mode for meshes with negative scale.
-- Disable bloom, light streaks and lens flares when the bright-pass is disabled.
-- Fix an issue with Event system and scheduling.
+* DataSerializers are now generated in a file with .pdb information, so that the user can debug them.
+* Add Local offsets to procedural models.
+* `EntityComponent` now implements `IIdentifiable` and has an `Id` property.
+
+#### Audio
+
+* Add `SetRange` support to `AudioEmitterSoundController`
+* Improve compilation speed of audio files
+
+#### Materials
+
+* Normal maps now have the option to `Invert Y`, supporting both textures where the green component is facing up or down
+
+#### Particles
+
+* Minor optimizations around vertex buffer building
+* Add StopEmitters() method to the particle system, which prevents new particles from spawning without pausing the entire system
 
 #### Physics
 
-- Fix debug shape rendering of static colliders when those colliders are forced to move
-- Fix debug shape rendering of enabled/disabled entities.
-- Fix issues with Jumping
-- Fix transformation propagation of dynamic bodies when in a skeleton.
+* Add Cone collider shape.
+* Replace float with `AngleSingle` for `MaxSlope` of character controllers.
 
-#### Serialization
+### Issues Fixed
 
-- Fix an issue in SharpYaml preventing generic types to be properly serialized. For instance List<string> can now be used from a script.
+#### General
 
+* UWP platform now uses UniversalWindowsPlatform 5.2.2 (was previously 5.0.0).
+
+#### Game Studio
+
+* Fix many issues with property overrides.
+* Fix many issues when setting/overriding materials in ModelComponent.
+* Asset logs were not properly sent forward to editor, resulting in an empty log for all assets.
+* Sometimes there was a deadlock when compiling effects due to the way we were using the thread pool and task continuations.
+* Fix performance issue that could occur when duplicating entities with the same name many times.
+* Fix 'Rename' menu entry when right-clicking a folder of the scene editor.
+* Fix crashes in the UI editor that could occur when deleting or moving an element.
+* Fix crashes in sprite sheet editor that could occur when deleting, duplicating or moving sprites.
+* Fix sort order of assets in the asset view.
+
+#### Assets
+
+* Fix tangents of imported meshes, when transforms are negative along some axes
+
+#### Engine
+
+* Several issues with spot lights were fixed, including shadow maps
+* Fix flickering of some materials when no ambient light is present
+* Fix an issue on OpenGL that caused low frame rates when using post effects, due to blocking GPU-readback
+
+#### Animation
+
+* Fix a bug where an empty animation clip caused a crash
 
 # Known Issues
 
-- On Linux, when switching the underlying Graphics Platform, rendering will not occur or fail. Delete the cache, local and roaming folder on the Linux host and restarting the game should fix the issue.
+* On Linux, when switching the underlying Graphics Platform, rendering will not occur or fail. Delete the cache, local and roaming folder on the Linux host and restarting the game should fix the issue.
+* Performance issues on mobile (being worked on)

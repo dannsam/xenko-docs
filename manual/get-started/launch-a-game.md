@@ -1,4 +1,4 @@
-# Launch a Game
+# Launch a game
 
 <span class="label label-doc-level">Beginner</span>
 
@@ -6,7 +6,7 @@ When your game is ready, you will be curious to see what it looks like.
 
 This page will show you how to start your game using either the **Game studio** or **Visual Studio**.
 
-## Launch your Game from Game Studio
+## Launch your game from Game Studio
 
   1. First **select your target platform** in the top bar of Game Studio.
 
@@ -21,7 +21,7 @@ This page will show you how to start your game using either the **Game studio** 
 > Currently it is not possible to start your Game for the **Windows Store** and **Windows 10** platforms from Game Studio.
 > For those platform proceed from Visual Studio.
 
-## Launch your Game from Visual Studio
+## Launch your game from Visual Studio
 
 1. **Open Visual Studio** by clicking on ![](media/launch-your-game-ide-icon.png) icon in the Game Studio.
 
@@ -42,6 +42,6 @@ This page will show you how to start your game using either the **Game studio** 
    * Press **Ctrl + F5** to start the game without debugging
    * Click ![](media/launch-your-game-start-button.png) or press **F5** to start the game with debugging.
 
-   ![Your running gam](media/launch-your-game-mygame-running.png)
+   ![Your running game](media/launch-your-game-mygame-running.png)
    
 **Congratulation!** You finished the get started pages. Continue your learning by reading the reference and tutorial pages.

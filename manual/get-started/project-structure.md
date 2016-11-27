@@ -1,4 +1,4 @@
-# Project Structure
+# Project structure
 
 <span class="label label-doc-level">Beginner</span>
 
@@ -16,7 +16,7 @@ A package is a **container** composed of:
   See [Introduction to Assets](introduction-to-assets.md) for more information.
 * **Resources**: A resource is a data file used by an asset such as an image, a 3D model, a sound file, etc.
 * **Code files**: The code files of your game, that is scripts, shader and effect files. 
-  For more information about scripts, see [Scripting in Xenko](scripting-in-xenko.md).
+  For more information about scripts, see [Scripting in Xenko](scripts-in-xenko.md).
 * **Dependencies** to other packages.
 
 A package (with its dependencies) makes up an **independent block** that can be **reused** in other games or applications.
@@ -24,7 +24,7 @@ A package (with its dependencies) makes up an **independent block** that can be 
 > [!NOTE]
 > A game is a package having a main executable (entry point).
 
-## Package Directory Structure
+## Package directory structure
 
 The Game Studio creates one **dedicated folder** for each package of your game.
 Inside each of these folders, it organizes the different files as follow (example of a package named 'MyPackage'): 

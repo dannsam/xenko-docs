@@ -1,4 +1,4 @@
-# Manage Assets
+# Manage assets
 
 <span class="label label-doc-level">Beginner</span>
 
@@ -6,7 +6,7 @@ After adding an new asset to your game project, you may need to **make some chan
 
 This page will show you how to configure, edit and manage your assets.
 
-## Configure assets using the Property Grid
+## Configure assets using the property grid
 
 You can make **simple asset modifications** and configurations using the **Property Grid** tab in the top-right corner of Game Studio.
 
@@ -53,7 +53,7 @@ _Scene Editor_
 
 For more information about the specific editors, see the corresponding sections in the manual reference.
 
-## Organize Assets
+## Organize assets
 
 As soon as your game starts getting big, you will need to organize your asset into **folders**. 
 For that you can use the *Solution Explorer* view at the bottom-left of the Game Studio.
