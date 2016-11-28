@@ -1,16 +1,40 @@
 # Raycasting
 
-<div class="doc-incomplete"/>
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Programmer</span>
 
-Raycasting is the process of tracing along a vector (ray) to detect any intersection with colliders in a scene. This process can be used for instance to determine what object is under the mouse pointer when the user clicks somewhere in the 3D image.
+**Raycasting** traces an invisible line through the scene to find intersecting physics objects.
+Raycasting is useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
 
-Raycasting can be done in your code using the current ```Simulation``` object. Using the ```Simulation.Raycast(Vector3 from, Vector3 to)``` function, it is easy to check if any collider intersects with this ray, and retrieve the collider the ray first hits.
+To raycast, in the current [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation), use [Simulation.Raycast](xref:SiliconStudio.Xenko.Physics.Simulation.Raycast\(SiliconStudio.Core.Mathematics.Vector3,SiliconStudio.Core.Mathematics.Vector3\)).
+
+Raycasting is showcased in the **Physics Sample** project.
+
+## Example code
+
+This code sends a raycast from the mouse's screen position:
 
 ```cs
-    simulation = this.GetSimulation();
-    var result = simulation.Raycast(unprojectedNear, unprojectedFar);
-    if (!result.Succeeded || result.Collider == null) return;
+public static bool ScreenPositionToWorldPositionRaycast(Vector2 screenPos, CameraComponent camera, Simulation simulation)
+{
+    Matrix invViewProj = Matrix.Invert(camera.ViewProjectionMatrix);
 
-    var rigidBody = result.Collider as RigidbodyComponent;
-    if (rigidBody == null) return;
+    Vector3 sPos;
+    sPos.X = screenPos.X * 2f - 1f;
+    sPos.Y = 1f - screenPos.Y * 2f;
+
+    sPos.Z = 0f;
+    var vectorNear = Vector3.Transform(sPos, invViewProj);
+    vectorNear /= vectorNear.W;
+
+    sPos.Z = 1f;
+    var vectorFar = Vector3.Transform(sPos, invViewProj);
+    vectorFar /= vectorFar.W;
+
+    var result = simulation.Raycast(vectorNear.XYZ(), vectorFar.XYZ());
+    return result.Succeeded;
+}
 ```
+
+## See also
+* [Colliders](colliders.md)

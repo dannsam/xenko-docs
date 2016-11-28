@@ -1,29 +1,101 @@
-# Physics collider shapes
+# Collider shapes
 
-<div class="doc-incomplete"/>
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
 
-This section will briefly discuss the different available physics collider shapes. Note that all physics colliders have the properties 'Local offset' and 'Local rotation'. Local offset determines how much, and in which direction the physics model will be offsetted from the Entity it will be a part of. Local rotation determines how the physics object is oriented from it Entity.
+For [colliders](colliders.md) to interact, you need to select an entity and set its shape in the **Property grid**. The shape can be different from the entity's other components (such as its model). Components can have multiple intersecting shapes. Each shape has additional properties including size, orientation, offset, and so on.
+
+You can specify a geometric shape, or generate a shape based on a model you select.
 
 ## Box
 
-The box's orientation and size can be controlled with the rotation, and size properties. 
+| Property       | Description |
+| -------------- |-------------| 
+| Is 2D | Makes the box infinitely flat in one dimension. |
+| Size    | The box size in XYZ values. |
+| Local offset     | The box position relative its entity.|
+| Local rotation      | The box rotation in XYZ values.|
 
 ## Capsule
 
-The capsule collider has 3 properties: Length, Radius, and Orientation. The Orientation property determines along which axis the capsule is stretched, the radius and length properties determine how big the capsule is in the 2 different dimensions.
+The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
 
-## Convex hull
+| Property       | Description |
+| -------------- |-------------| 
+| Is 2D | Makes the capsule infinitely flat in one dimension.|
+| Length | The length of the capsule.|
+| Radius | The radius of the capsule.|
+| Orientation | The axis along which the shape is stretched (X, Y, or Z).|
+| Local offset     | The capsule position relative to its entity.|
+| Local rotation      | The capsule rotation in XYZ values.|
 
-The convex hull collider shape, is generated from a model. The generated physics shape will follow the model's outline, to creating a bounding physics model, to create realistic physics interaction with other objects.
+## Cone
+
+| Property       | Description |
+| -------------- |-------------| 
+| Height | The height of the cone.|
+| Radius | The radius of the cone at the bottom end.|
+| Orientation | The axis along which the shape is stretched (X, Y, or Z).|
+| Local offset     | The cone position relative to its entity.|
+| Local rotation      | The cone rotation in XYZ values.|
 
 ## Cylinder
 
-The cylinder collider has the same 3 properties as the capsule, and can be used in the same way.
-
-## Infinite plane
-
-The plane collider has 2 properties: a normal, and offset. The normal determines the vector which is perpendicular to the plane, and the offset determines how much in the direction of this vector, the plane is offsetted from the Entity it is part of.
+| Property       | Description |
+| -------------- |-------------| 
+| Height | The length of the cylinder.|
+| Radius | The radius of the cylinder.|
+| Orientation | Sets the axis along which the shape is stretched (X, Y, or Z).|
+| Local offset     | The cylinder position relative to its entity.|
+| Local rotation      | The cylinder  rotation in XYZ values.|
 
 ## Sphere
 
-A sphere shaped collider. The size can be adjusted by the 'radius' property.
+| Property       | Description |
+| -------------- |-------------| 
+| Is 2D | Makes the sphere infinitely flat in one dimension. |
+| Radius | The radius of the sphere.|
+| Local offset     | The sphere position relative to its entity.|
+
+## Infinite plane
+
+The infinite plane covers an infinite distance across one dimension.
+Think of it like a wall or floor stretching into the distance for ever.
+You can use several infinite planes together to box users in and stop them "tunneling" outside the level.
+
+| Property       | Description |
+| -------------- |-------------| 
+| Normal  | Which vector (X, Y, or Z) is perpendicular to the plane. For example, to make an infinite floor, set the normal property to: _X:0, Y:1, Z:0_. |
+| Offset     | The plane position relative to its entity.|
+
+## Asset
+
+This generates a collider shape from a model asset.
+
+| Property       | Description |
+| -------------- |-------------| 
+| Shape | The model asset used to generate the collider shape.|
+
+## Show collider shapes at runtime
+You can make collider shapes visible at runtime, which is useful for debugging problems with physics. To do this, use:
+
+``
+this.GetSimulation().ColliderShapesRendering = true;
+``
+
+To show or hide collider shapes at runtime with a keyboard shortcut, use the **DebugPhysicsShapes** script.
+
+1. In the **Asset view**, click **Add asset**.
+2. Select **Scripts** > **Debug Physics Shapes**.
+3. Add the **Debug Physics Shapes** script as a component to an entity in the scene.
+
+The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime.
+You can edit the script to bind a different key combination.
+
+> [!Note]
+> Collider shapes for infinite planes are always invisible.
+
+## See also
+* [Colliders](colliders.md)
+* [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
+* [Tutorial: Script a triggered event](script-a-triggered-event.md)
