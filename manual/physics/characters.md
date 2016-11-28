@@ -4,19 +4,19 @@
 <span class="label label-doc-audience">Designer</span>
 
 **Characters** respond to user [input](../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things).
-Player characters without the Character component will pass through objects.
+Player characters without the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) will pass through objects.
 
 > [!Note]
-> Entities with the character component can only be moved with the methods SetVelocity, Jump, and Teleport.
+> Entities with the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(Core.Mathematics_Vector3\)), [Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump\(Core.Mathematics_Vector3\)), and [Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(Core.Mathematics_Vector3\)).
 
 ## Add a collider component to an entity
 
 1. In the **Scene Editor**, select the entity you want to add the component to.
 
-2. In the **Property grid**, click **Add component** and select **Rigidbody**, **Static Collider**, or **Character**.
+2. In the **Property grid**, click **Add component** and select **Character**.
 
 >[!Note]
-> For colliders to interact with other physics objects, you need to set a [collider shape](collider-shapes.md) in the **Properties** grid. The capsule shape is appropriate for most character colliders.
+> For colliders to interact with other physics objects, you need to set a [collider shape](collider-shapes.md) in the **Property grid**. The capsule shape is appropriate for most character colliders.
 
 ## Component properties
 

@@ -3,12 +3,13 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Static colliders** aren't moved by forces such as gravity and collisions, but other physics objects can bump into them. Typical static colliders are strong immovable objects like walls, floors, large rocks, and so on.
+**Static colliders** aren't moved by forces such as gravity and collisions, but other physics objects can bump into them.
+Typical static colliders are strong immovable objects like walls, floors, large rocks, and so on.
 
-![Static and rigid body colliders](media/static-and-rigid-body-colliders.png)
+![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
 ## Move a static collider at runtime
-If you need to move a static collider at runtime, you can do it programatically with:
+If you need to move a static collider at runtime, you can do it with a script:
 
 ```
 PhysicsComponent.Entity.Transform.Position += PhysicsComponent.Entity.Transform.Position + Vector3.UnitX;

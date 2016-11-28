@@ -121,6 +121,6 @@ public class TestScript : SyncScript
 }
 ```
 ## See also
-* [Input index](index.md)
 * [Keyboards](keyboards.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input overview](index.md)

@@ -5,18 +5,20 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Constraints** limit the freedom rigid bodies have to move. For example, a realistic knee joint has only one degree of freedom (it can only move along one axis), and can't bend forwards.
+**Constraints** restrict rigid bodies to certain movement patterns.
+For example, a realistic knee joint can only move along one axis and can't bend forwards.
 
-Constraints can either link two rigid bodies together, or link a single rigid body to a point in the world. They allow for interaction and dependency among rigid bodies. 
+Constraints can either link two rigid bodies together, or link a single rigid body to a point in the world.
+They allow for interaction and dependency among rigid bodies. 
 
-There are six types of constraint:
+There are six types of constraints:
 
-* Hinges
-* Gears
-* Sliders
-* Cones (twist and turn)
-* Point to point (fixed distance between two colliders)
-* Six degrees of freedom
+* Hinges.
+* Gears.
+* Sliders.
+* Cones (twist and turn).
+* Point to point (fixed distance between two colliders).
+* Six degrees of freedom.
 
 For a demonstration of the different constraints, load the **PhysicsSample** sample project.
 
@@ -31,7 +33,8 @@ To create a constraint, use the [Simulation](xref:SiliconStudio.Xenko.Physics.Si
 CreateConstraint(ConstraintTypes type, RigidbodyComponent rigidBodyA, Matrix frameA, bool useReferenceFrameA);
 ```
 
-This links `rigidBodyA` to the world at its current location. The boolean [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) specifies which coordinate system the limit is applied to (either `rigidbody A` or the world).
+This links `rigidBodyA` to the world at its current location.
+The boolean [useReferenceFrameA](xref:SiliconStudio.Xenko.Physics.Simulation.CreateConstraint\(SiliconStudio.Xenko.Physics.ConstraintTypes,SiliconStudio.Xenko.Physics.RigidbodyComponent,SiliconStudio.Core.Mathematics.Matrix,System.Boolean\)) specifies which coordinate system the limit is applied to (either `rigidbody A` or the world).
 
 > [!Note]
 > * In the case of `ConstraintTypes.Point2Point`, the frame represents a pivot in A. Only the translation vector is considered. `useReferenceFrameA` is ignored.
@@ -76,4 +79,4 @@ this.GetSimulation().RemoveConstraint(constraint);
 ```
 
 ## See also
-* [Colliders](index.md)
+* [Colliders](colliders.md)

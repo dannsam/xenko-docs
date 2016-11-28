@@ -3,35 +3,35 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Rigid bodies** move based on physical forces applied to them, such gravity and collisions.
+**Rigid bodies** move based on physical forces applied to them, such as gravity and collisions.
 Typical rigid bodies are boxes, balls, furniture, and so on — objects that are pushed, pulled, and knocked around, and also have effects on other rigid bodies they collide with.
-
-![Static and rigid body colliders](media/static-and-rigid-body-colliders.png)
 
 ## Kinematic rigid bodies
 
 Sometimes you want to move rigid bodies in a specific way rather than have other objects move them.
-For example, you might control an elevator with a script, via its Transform property, rather than have other objects push and pull it.
+For example, you might control an elevator with a script, via its `Transform` property, rather than have other objects push and pull it.
 This is a **kinematic** rigid body.
 
 Although kinematic rigid bodies aren't moved by physics, other objects can still collide with them.
-In the case of the elevator, for example, objects placed inside won't fall through the elevator floor.
+For example, in the case of the elevator, objects placed inside won't fall through the elevator floor.
 
-![Kinematic elevator](media/kinematic-elevator-1.png)
+![Kinematic elevator](media/rigid-bodies-kinematic-elevator.png)
 
 To make a rigid body kinematic, in the **Property grid**, under the **Rigidbody** component properties, select **Is kinematic**.
+
+![Check 'Is kinematic'](media/rigid-bodies-is-kinematic-checkbox.png)
 
 ### Scripting kinematic rigid bodies
 You can script the **Is kinematic** property to turn on and off on certain events.
 For example, imagine our kinematic elevator's suspension cables are cut.
-You can script the **is kinematic** property to change to _false_ when this happens.
+You can script the **Is kinematic** property to change to _false_ when this happens.
 The elevator becomes subject to the usual forces of physics, and falls.
 
-![Kinematic elevator with objects](media/kinematic-elevator-2.png)
+![Non-kinematic elevator](media/rigid-bodies-non-kinematic-elevator.png)
 
 ## Component properties
 
-You can adjust the properties of each component in the **Property grid**.
+In the **Property grid**, you can adjust the properties of each component:
 
 Property              | Description
 ----------------------|-----------------------

@@ -3,15 +3,15 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-In this tutorial, we'll use the [static collider](../colliders/static-colliders.md) and [rigid body](../colliders/rigid-bodies.md)) components to create a ball bouncing on a floor.
+In this tutorial, we'll use the [static collider and rigid body components](colliders.md) to create a ball bouncing on a floor.
 
 ## 1. Add the components
    
 1. Start a **New Game** project.
 
-    The default scene comes preloaded with five entities: Camera, Directional light, Skybox, Ground, and Sphere. We're going to add physics components to the **Ground** and **Sphere** entities.
+    The default scene comes pre-loaded with five entities: Camera, Directional light, Skybox, Ground, and Sphere. We're going to add physics components to the **Ground** and **Sphere** entities.
 
-    Let's begin by adding a [static collider](../colliders/static-colliders.md) component to the Ground entity.
+    Let's begin by adding a [static collider](static-colliders.md) component to the Ground entity.
 
 2. Select the **Ground** entity.
 
@@ -21,13 +21,13 @@ In this tutorial, we'll use the [static collider](../colliders/static-colliders.
 
     A static collider is a physics object that doesn't move. Typical static colliders are walls, floors, large rocks, and so on.
 
-4. Now set the [collider shape](../colliders/collider-shapes.md) to match the entity. In the **Property grid**, expand the **Static Collider component** to view its properties.
+4. Now set the [collider shape](collider-shapes.md) to match the entity. In the **Property grid**, expand the **Static Collider component** to view its properties.
 
 5. Next to **Collider Shapes**, click the **green + icon** and select **Infinite Plane**.
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
-Next, we'll add a [rigid body](../colliders/rigid-bodies.md)) component to the sphere. 
+Next, we'll add a [rigid body](rigid-bodies.md)) component to the sphere. 
 
 6. In the **Scene Editor**, select the **Sphere** entity.
 
@@ -37,7 +37,7 @@ Next, we'll add a [rigid body](../colliders/rigid-bodies.md)) component to the s
 
     A rigid body is a physics object that moves — perfect for our bouncing ball.
 
-Just like we did for the Ground entity, we're going to set the [collider shape](../colliders/collider-shapes.md) to match the entity.
+Just like we did for the Ground entity, we're going to set the [collider shape](collider-shapes.md) to match the entity.
 
 8. In the **Property grid**, expand the **Rigidbody component** to view its properties.
 
@@ -83,7 +83,7 @@ Let's set the restitution of our Sphere and Ground entities.
 
 2. In the **Property grid**, under **Rigidbody**, set the **Restitution** to 0.8.
 
-    ![Set restitution for a scphere](media/physics-tutorials-create-a-bouncing-ball-restitution-of-a-sphere.png)
+    ![Set restitution for a sphere](media/physics-tutorials-create-a-bouncing-ball-restitution-of-a-sphere.png)
 
 3. In the **Scene Editor**, select the **Ground** entity.
 
@@ -106,6 +106,6 @@ Set the restitution to 1.1 and the ball bounces a little higher each time:
 Now we've created a bouncing ball, we can use it to learn about triggers. For more information, see the [Script a triggered event](script-a-triggered-event.md) tutorial.
 
 ## See also
-* [Colliders](../colliders/index.md)
-[collider shape](../colliders/collider-shapes.md)
+* [Colliders](colliders.md)
+* [Collider shape](collider-shapes.md)
 * [Tutorial: Script a triggered event](script-a-triggered-event.md)

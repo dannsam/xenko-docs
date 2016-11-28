@@ -128,7 +128,7 @@ public override async Task Execute()
 ```
 
 ## See also
-* [Input index](index.md)
 * [Gestures](gestures.md)
 * [Mouse](mouse.md)
 * [Virtual buttons](virtual-buttons.md)
+* [Input overview](index.md)
