@@ -5,19 +5,19 @@ This section explains how physics components work, how to add them to your proje
 
 ## In this section
 
-* [Colliders](colliders.md): Create physics by adding collider components to entities.
-    * [Static colliders](static-colliders.md): Colliders that don't move.
-    * [Rigid bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions.
-    * [Characters](characters.md): Colliders controlled by the user's input.
-    * [Collider shapes](collider-shapes.md): Define the shape of collider components.
-    * [Triggers](triggers.md): Use triggers to detect passing objects.
-    * [Constraints](constraints.md): Create appealing and realistic physics.
-* [Raycasting](raycasting.md): Trace intersecting objects.
-* [Simulation](simulation.md): See how Xenko controls physics.
+* [Colliders](colliders.md): Create physics by adding collider components to entities
+    * [Static colliders](static-colliders.md): Colliders that don't move
+    * [Rigid bodies](rigid-bodies.md): Moving objects, affected by gravity and collisions
+    * [Characters](characters.md): Colliders controlled by the user's input
+    * [Collider shapes](collider-shapes.md): Define the shape of collider components
+    * [Triggers](triggers.md): Use triggers to detect passing objects
+    * [Constraints](constraints.md): Create appealing and realistic physics
+* [Raycasting](raycasting.md): Trace intersecting objects
+* [Simulation](simulation.md): See how Xenko controls physics
 
 ### Tutorials
-* [Create a bouncing ball](create-a-bouncing-ball.md): Use the static collider and rigid body components to create a ball bouncing on a floor.
-* [Script a triggered event](script-a-triggered-event.md): Create a trigger that doubles the size of a ball when it passes through.
+* [Create a bouncing ball](create-a-bouncing-ball.md): Use the static collider and rigid body components to create a ball bouncing on a floor
+* [Script a triggered event](script-a-triggered-event.md): Doubles the size of a ball when it passes through a trigger
 
 ## Further reference
 
