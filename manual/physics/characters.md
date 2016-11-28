@@ -3,8 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Characters** respond to user [input](../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things).
-Player characters without the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) will pass through objects.
+**Characters** respond to user [input](../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things). Player characters without the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) pass through objects.
 
 > [!Note]
 > Entities with the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(Core.Mathematics_Vector3\)), [Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump\(Core.Mathematics_Vector3\)), and [Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(Core.Mathematics_Vector3\)).

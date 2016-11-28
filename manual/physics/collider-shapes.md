@@ -3,10 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-For [colliders](colliders.md) to interact, you need to select an entity and set its shape in the **Property grid**.
-The shape can be different from the entity's other components (such as its model).
-Components can have multiple intersecting shapes.
-Each shape has additional properties including size, orientation, offset, and so on.
+For [colliders](colliders.md) to interact, you need to select an entity and set its shape in the **Property grid**. The shape can be different from the entity's other components (such as its model). Components can have multiple intersecting shapes. Each shape has additional properties including size, orientation, offset, and so on.
 
 You can specify a geometric shape, or generate a shape based on a model you select.
 
@@ -64,7 +61,7 @@ The capsule shape is especially useful for character components, as its curved b
 
 The infinite plane covers an infinite distance across one dimension.
 Think of it like a wall or floor stretching into the distance for ever.
-You can use several infinite planes together to box the users in and stop them "tunneling" outside the level.
+You can use several infinite planes together to box users in and stop them "tunneling" outside the level.
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -99,6 +96,6 @@ You can edit the script to bind a different key combination.
 > Collider shapes for infinite planes are always invisible.
 
 ## See also
-* [Colliders](collidersx.md)
+* [Colliders](colliders.md)
 * [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
 * [Tutorial: Script a triggered event](script-a-triggered-event.md)

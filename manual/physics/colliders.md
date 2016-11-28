@@ -5,13 +5,11 @@
 
 To use physics in your project, add a **collider** component to an entity. Colliders are entities that can bump into one another.
 
-There are three types of colliders:
+There are three types of collider:
 
 * [Static colliders](static-colliders.md) don't move.
 * [Rigid bodies](rigid-bodies.md) are moved around by forces such as gravity and collisions.
 * [Characters](characters.md) are controlled by user input.
-
-![Types of colliders](media/colliders-types-of-colliders.png)
 
 You can also: 
 
