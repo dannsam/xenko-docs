@@ -286,6 +286,10 @@ Release date 2016/11/29
 
 ### Issues fixed
 
+### Game Studio
+
+* Moving or renaming an asset that has overridden properties (eg. a scene using prefabs) was loosing override information once saved.
+
 #### Engine
 
 * Normal maps issue fixed where z-component was wrongly assumed to be 1 (it's now equal to sqrt(1 - x^2 - y^2))
