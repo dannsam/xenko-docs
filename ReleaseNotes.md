@@ -280,6 +280,22 @@ Release date 2016/11/24
 
 * Fix a bug where an empty animation clip caused a crash
 
+## Version 1.9.1-beta
+
+Release date 2016/11/29
+
+### Issues fixed
+
+#### Engine
+
+* Normal maps issue fixed where z-component was wrongly assumed to be 1 (it's now equal to sqrt(1 - x^2 - y^2))
+* Depth of Field halo around foreground objects issue resolved
+
+#### Samples
+
+* Missing normal maps on some samples have been restored
+
+
 # Known Issues
 
 * On Linux, when switching the underlying Graphics Platform, rendering will not occur or fail. Delete the cache, local and roaming folder on the Linux host and restarting the game should fix the issue.
