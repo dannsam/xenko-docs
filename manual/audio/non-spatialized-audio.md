@@ -13,7 +13,9 @@ Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio 
 
 1. [Import the audio as a sound asset](import-audio-as-a-sound-asset.md).
 
-2. Make sure the sound asset is included in the build as a **root asset**. In the **Asset view**, right-click the asset and select **Include in build as root asset**:
+2. Make sure the sound asset is a **root asset**. Root assets are assets that Xenko includes in the build so they can be used at runtime.
+
+    In the **Asset view**, right-click the asset and select **Include in build as root asset**:
 
     ![Include in build as root asset](media/audio-include-in-build-as-root-asset.png)
 
