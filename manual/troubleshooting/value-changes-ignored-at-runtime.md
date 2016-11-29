@@ -1,8 +1,10 @@
 ## Value changes ignored at runtime
   
-When you add a script to your project as a component, Game Studio lists its public variables in the component's Properties grid. These are the values used at runtime. However, if you then change a value in the script, Game Studio doesn't update the component with the new value.
+When you add a script to your project as a component, Game Studio lists its public variables in the component's Properties grid. These are the values used at runtime. 
 
-For example, imagine you have a script with the variable `SpeedFactor` with the value `5.0f`. You add the script to the project as a component. Now, in the script, you change the `SpeedFactor` variable to `6.0f`, save the script, and run the project. Game Studio doesn't update the component, so the speed `SpeedFactor` value is still `5.0f`.
+However, if you then change a value in the script, Game Studio doesn't update the component with the new value.
+
+For example, imagine you have a script with the variable `SpeedFactor` with the value `5.0f`. You add the script to the project as a component. Now, in the script, you change the `SpeedFactor` variable to `6.0f`, save the script, and run the project. Game Studio doesn't update the component with the script changes, so the speed `SpeedFactor` value is still `5.0f`.
 
 ## Fix
 
@@ -12,7 +14,7 @@ Alternatively, if you want Game Studio to update the values in the component pro
 
 1. Add `using System.ComponentModel` at the top of the script.
 
-2. Above the value you want to update, add ``[DefaultValue()]``. For example:
+2. Above the variable you want to update, add ``[DefaultValue()]``. For example, if the variable is `SpeedFactor`, use:
 
 ```
 [DefaultValue(6.0f)]
