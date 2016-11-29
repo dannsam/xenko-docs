@@ -1,10 +1,10 @@
-## Value changes ignored at runtime
+## Default value changes ignored at runtime
   
-When you add a script to your project as a component, Game Studio lists its public variables in the component's Properties grid. These are the values used at runtime. 
+When you add a script to your project as a component, Game Studio lists its public variables in the Properties grid. These are the values used at runtime. 
 
-However, if you then change a value in the script, Game Studio doesn't update the component with the new value.
+However, if you then change the default value in the script, Game Studio doesn't update the component with the new value.
 
-For example, imagine you have a script with the variable `SpeedFactor` with the value `5.0f`. You add the script to the project as a component. Now, in the script, you change the `SpeedFactor` variable to `6.0f`, save the script, and run the project. Game Studio doesn't update the component with the script changes, so the speed `SpeedFactor` value is still `5.0f`.
+For example, imagine you have a script with the variable `SpeedFactor` with a default value of `5.0f`. You add the script to the project as a component. Now, in the script, you change the default value of the `SpeedFactor` variable to `6.0f`, save the script, and run the project. Game Studio doesn't update the component with the script changes, so the speed `SpeedFactor` value is still `5.0f`.
 
 ## Fix
 
@@ -24,4 +24,4 @@ public float SpeedFactor { get; set; } = 6.0f;
 When you change the value, update both the `SpeedFactor` and the `DefaultValue` to the same value.
 
 > [!Note]
-> This doesn't work in both directions. In Game Studio, if you set a value other than the `DefaultValue`, the value is saved in Game Studio only. If you then change a value directly in the script, Game Studio no longer updates the component with the new value.
+> This doesn't work in both directions. In Game Studio, if you set a value other than the `DefaultValue`, the value is saved in the asset and default value is overidden at runtime.
