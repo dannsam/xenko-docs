@@ -1,90 +1,89 @@
-# Skybox
+# Skyboxes
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A **skybox** is a special technique that creates distant-looking backgrounds at runtime.
-Xenko puts the scene inside an extremely big cube, and then projects background textures inside skybox's faces.
+**Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery.
 
-![Distant planet skybox](media/skybox-disassembled.png)
-
-This simulates three-dimensional surroundings that look spacious, even if the actual game level is quite small.
-
-![Merged skybox](media/skybox-assembled.png)
-
-The examples of skybox backgrounds include skies, clouds, mountains, and other scenery.
-
-> [!Tip]
-> Skyboxes are pre-rendered, meaning the system requires little GPU and CPU resources to render them at runtime.
-
-## Create a cubemap
-
-Xenko uses cubemaps with a `.dds` extension for skyboxes.
-
-> [!Note]
-> Currently, you cannot convert `.jpg` or other images to cubemap directly in Game Studio. The feature will be added in a future release.
-
-Use external software to create a cubemap out of the separate images, for instance:
-
-* [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop).
-* [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen).
-
-You will need six images for each face of the cubemap.
-Use the above-mentioned or similar tools to combine these separate images into a proper `.dds` skybox texture.
+To create a skybox, Xenko encloses the scene in a cube and maps a texture, called a **cubemap**, on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious. Skyboxes are pre-rendered, so require little GPU and CPU. You can also use skyboxes to light a scene.
 
 > [!Warning]
-> Currently, Xenko doesn't support spherical and hemispherical skydomes. Please, use cube-shaped skyboxes only.
+> Currently, Xenko doesn't support skydomes.
 
-## Add cubemap texture to project
+## Cubemaps
 
-Once you have a cubemap, you can add it to your project:
+Cubemaps are composed of six images, one for each face of the cube. Xenko uses cubemaps with the extension `.dds`.
 
-1. In **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png) and show path to your `.dds` file.
-2. When prompted, choose _texture_ file type and press **OK**.
-    
+The six sides of a cubemap: 
+![Distant planet skybox](media/skybox-disassembled.png)
+
+The cubemap's appearance when assembled:
+![Merged skybox](media/skybox-assembled.png)
+
+> [!Note]
+> Currently, Game Studio can't convert image files to `.dds` files for you.
+> Use another application to create a cubemap from separate images, such as:
+> * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
+> * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
+
+### Add a cubemap to the project
+
+* In the **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png), select **Textures** > **Texture**, and browse to the `.dds` file.
+
     ![Select texture as asset type](media/engine-skybox-select-asset-type.png)
 
-    Alternatively, you can simply drag and drop skybox texture from **Windows explorer** to **Asset view**.
+* Alternatively, drag and drop a `.dds` file from **Windows Explorer** to the **Asset view**, then select **Texture**.
 
     ![Drag and drop background texture](media/engine-skybox-drag-and-drop-background-texture.gif)
 
-## Add skybox to a project
+The cubemap is now available as an asset in your project. You can use the cubemap asset in your skybox asset.
 
-By default, **skybox asset** is included in every new Xenko project.
-Yet, sometimes you want more than one skybox.
-For instance when you need to split the screen into several section and use a unique skybox for each section.
+## Add a skybox asset to a project
 
-Here's how to add a **skybox asset** to your project:
+To add a skybox asset to your project:
 
-1. In **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png)
-2. Select _Miscellaneous_, and then choose _Skybox_
+1. In the **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png)
+2. Select **Miscellaneous**, and choose **Skybox**.
 
     ![Choose asset type](media/engine-skybox-choose-asset-type.png)
 
-3. Choose skybox texture from the assets of your project or press _Cancel_ to add the texture later.
+    The **Asset picker** opens.
+
+3. Choose a skybox texture from your project assets and click **OK**.
     
     ![Choose texture](media/engine-skybox-select-skybox-texture.png)
 
-## Add skybox component to an entity
-You can create more than one **skybox** by adding a [skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need.
-This might be useful for multiplayer games, when the screen is split in halves, and each half uses its own skybox.
+In the skybox asset properties, under **Usage**, you can select whether to use the skybox to light your scene.
 
-Here's how to add a [skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to an entity: 
+* **Lighting**: The skybox is only used to light the scene, and isn't visible at runtime.
+* **Background**: The skybox is only used as a background image, with no lighting.
+* **Lighting and background** The skybox is used for both lighting and background.
 
-1. In **scene view**, select an entity that you want to add a skybox component to (can be an empty entity).
-2. In **property grid**, click _Add component_ and select _Skybox component_.
+## Add a skybox component to an entity
+
+Xenko includes a skybox entity in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes in the scene, Xenko loads the first. 
+
+You can create more than one skybox by adding [skybox components](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need. You might want to include more than one skybox, for example, if you want to script the skybox to change at runtime.
+
+To add a skybox component:
+
+1. In the **Scene view**, select the entity you want to add the skybox component to. 
+
+    This can be an empty entity. Its position in the scene doesn't matter.
+
+2. In the **Property grid**, click **Add component** and select **Skybox component**.
 
     ![Add skybox component](media/engine-skybox-add-skybox-component.png)
 
-3. Choose skybox asset for this component.
+3. Specify the **skybox asset** you want to use.
 
-    ![Skybox component's properties](media/engine-skybox-skybox-components-properties.png)
+    ![Skybox component properties](media/engine-skybox-skybox-components-properties.png)
 
-4. You can also change the following settings of the skybox component:
-    * Specify how to display skybox in the background.
-    * Set the background radiation intensity of the skybox from 0 (no radiation) to 100 (maximum).
+You can change the following settings of the skybox component:
+    * specify how to display skybox in the background
+    * set the background radiation intensity of the skybox from 0 (no radiation) to 100 (maximum)
 
-## Code sample
+## Example code
 
 ```cs
 public Skybox skybox;
