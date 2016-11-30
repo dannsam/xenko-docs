@@ -19,8 +19,8 @@ To create a skybox, Xenko encloses the scene in a cube and maps a texture, calle
 Cubemaps are composed of six images, one for each face of the skybox cube. Xenko uses cubemaps with the extension `.dds`.
 
 Currently, Game Studio can't convert image files to `.dds` files. Use another application to create a cubemap from separate image files, such as:
-> * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
-> * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
+* [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
+* [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
 
 ### Add a cubemap asset to a project
 
@@ -71,8 +71,8 @@ You can add a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent
 
 You can modify the following [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) settings:
 
-* [Background](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Background): how to display the skybox
-* [Intensity](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Intensity): the skybox background radiation intensity, from 0 (none) to 100 (maximum)
+* [Background](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Background): how to display the skybox.
+* [Intensity](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Intensity): the skybox background radiation intensity, from 0 (none) to 100 (maximum).
 
 ## Light the scene with a skybox
 
