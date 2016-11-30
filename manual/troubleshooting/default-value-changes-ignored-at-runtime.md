@@ -24,4 +24,4 @@ public float SpeedFactor { get; set; } = 6.0f;
 When you change the value, update both the `SpeedFactor` and the `DefaultValue` to the same value.
 
 > [!Note]
-> This doesn't work in both directions. In Game Studio, if you set a value other than the `DefaultValue`, the value is saved in the asset and default value is overidden at runtime.
+> This doesn't work in both directions. If you set a value other than the `DefaultValue` in the Properties grid, Game Studio saves the value in the asset and overrides the default value at runtime.
