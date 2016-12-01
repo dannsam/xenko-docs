@@ -74,36 +74,11 @@ You can modify the following [Skybox component](xref:SiliconStudio.Xenko.Engine.
 * [Background](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Background): how to display the skybox
 * [Intensity](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Intensity): the skybox background radiation intensity, from 0 (none) to 100 (maximum)
 
-## Light the scene with a skybox
+## Use a skybox as a light source
 
-You can use a skybox to light the scene. Xenko analyzes the skybox and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+You can set the skybox as the light type in a a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
-1. Select the skybox asset.
-
-2. In the **Properties grid**, under **Usage**, you can choose whether the skybox is used for lighting, a background image, or both:
-
-    ![Skybox lighting properties](media/engine-skybox-lighting-and-background.png)
-
-    * **Lighting and Background** (default): The skybox is used for both lighting and the background.
-    * **Lighting**: The skybox is only used for lighting, and isn't visible at runtime.
-    * **Background**: The skybox is only used as a background image, with no lighting.
-
-    To use the skybox for lighting, choose **Lighting** or **Lighting and background**.
-
-3. Select the entity that has the [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent).
-
-4. In the entity **Properties grid**, click **Add component** and select [Light](xref:SiliconStudio.Xenko.Engine.LightComponent).
-
-    ![Skybox component properties](media/engine-skybox-add-light-component.png)
-
-4. In the **Light** component properties, under **Usage**, select **Skybox**.
-
-    ![Light component property](media/engine-light-component-property.png)
-
-The [Light](xref:SiliconStudio.Xenko.Engine.LightComponent) uses the skybox asset to light the scene.
-
->[!Note]
->The **Intensity** properties in the Skybox and Light components are linked. To calculate the Light component [intensity](xref:SiliconStudio.Xenko.Engine.LightComponent.Intensity), Xenko multiplies it by the Skybox component [intensity](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Intensity).
+For more information, see [Skybox lights](lighting-and-shadows/skybox-lights.md).
 
 ## Example code
 
@@ -126,4 +101,5 @@ public void ChangeSkyboxParameters()
 ```
 
 ## See also
+* [Skybox lights](lighting-and-shadows/skybox-lights.md)
 * [Lighting and shadows](lighting-and-shadows/index.md)
