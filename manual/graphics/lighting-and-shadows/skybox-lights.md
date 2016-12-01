@@ -3,7 +3,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](index/skyboxes.md).  Xenko analyzes the skybox cubemap and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes.md).  Xenko analyzes the skybox cubemap and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png) 
 
@@ -12,7 +12,7 @@ To use a skybox light, an entity must have both:
 * a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent) of type **Skybox**
 * a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent)
 
-These images show the difference between ambient and skybox lighting on two pure diffuse [materials](index/materials/index.md):
+These images show the difference between ambient and skybox lighting on two pure diffuse [materials](../materials/index.md):
 
 | Ambient lighting                                     | Skybox lighting     
 | ---------------------------------------------------- | -------------------------------
@@ -25,7 +25,7 @@ These images show the effect of skybox lighting on different materials:
 
 # Set up a skybox light
 
-To follow these instructions, you need a skybox asset and an entity with a skybox component. For information about how to add them, see the [Skybox](index/skyboxes.md) page.
+To follow these instructions, you need a skybox asset and an entity with a skybox component. For information about how to add them, see the [Skybox](../skyboxes.md) page.
 
 1. Select the skybox asset.
 
@@ -70,4 +70,4 @@ The [Light componenet](xref:SiliconStudio.Xenko.Engine.LightComponent) uses the 
 
 ## See also
 
-* [Skyboxes](skyboxes.md)
+* [Skyboxes](../skyboxes.md)
