@@ -19,6 +19,7 @@ To create a skybox, Xenko encloses the scene in a cube and maps a texture, calle
 Cubemaps are composed of six images, one for each face of the skybox cube. Xenko uses cubemaps with the extension `.dds`.
 
 Currently, Game Studio can't convert image files to `.dds` files. Use another application to create a cubemap from separate image files, such as:
+
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
 
@@ -36,7 +37,7 @@ The cubemap is now available as an asset in your project. You can use the cubema
 
 ## Add a skybox asset to a project
 
-1. In the **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png)
+1. In the **Asset view**, click ![Add new asset](media/engine-skybox-add-new-asset-button.png)
 2. Select **Miscellaneous**, and choose **Skybox**.
 
     ![Choose asset type](media/engine-skybox-choose-asset-type.png)
@@ -46,6 +47,8 @@ The cubemap is now available as an asset in your project. You can use the cubema
 3. Choose a skybox texture (`.dds` file) from the project assets and click **OK**.
     
     ![Choose texture](media/engine-skybox-select-skybox-texture.png)
+
+The skybox asset properties affect how the skybox lights the scene. For information about these properties, see [Skybox lights](lighting-and-shadows/skybox-lights.md).
 
 ## Add a skybox component to an entity
 
