@@ -5,7 +5,7 @@
 
 **Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery.
 
-To create a skybox, Xenko encloses the scene in a cube and maps a texture, called a **cubemap**, on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious. Skyboxes are pre-rendered, so require little GPU and CPU. You can also use skyboxes to light a scene.
+To create a skybox, Xenko encloses the scene in a cube and maps a texture, called a **cubemap**, on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lighting-and-shadows/skybox-lights.md).
 
 ![Distant planet skybox](media/skybox-disassembled.png)
 
@@ -54,7 +54,7 @@ The skybox asset properties affect how the skybox lights the scene. For informat
 
 Xenko includes an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko loads the first. 
 
-You can create more than one skybox by adding [Skybox components](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need. For example, you might want to include more than one skybox if you want to switch between them at runtime.
+You can add [Skybox components](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need. You might want to include more than one skybox, for example, if you want to switch between them at runtime.
 
 To add a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to an entity:
 
@@ -69,8 +69,6 @@ To add a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to 
 3. Specify the **skybox asset** you want to use.
 
     ![Skybox component properties](media/engine-skybox-skybox-components-properties.png)
-
-You can add a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need. For example, you might want to include more than one skybox if you want to switch between them at runtime.
 
 You can modify the following [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) settings:
 

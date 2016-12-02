@@ -18,12 +18,14 @@ These images show the difference between ambient and skybox lighting on two pure
 
 | Ambient lighting                                     | Skybox lighting     
 | ---------------------------------------------------- | -------------------------------
-| ![media/AmbientLight.png](media/AmbientLight.png)  | ![media/SkyboxLight-MaterialPureDiffuse.png](media/SkyboxLight-MaterialPureDiffuse.png)  |                                                           |                        
-These images show the effect of skybox lighting on different materials:
+| ![Ambient lighting](media/AmbientLight.png)  | ![Skybox lighting.png](media/SkyboxLight-MaterialPureDiffuse.png)  |                                                           |                        
+These images show the effect of skybox lighting on a material with different metal and gloss properties:
 
 | Material Plastic    | Metal 100% Gloss 50%                                                                                    | Metal 100% Gloss 100%                                                                                      |
 ----------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
- ![media/SkyboxLight-MaterialPlastic.png](media/SkyboxLight-MaterialPlastic.png)  | ![media/SkyboxLight-MaterialMetal100Gloss50.png](media/SkyboxLight-MaterialMetal100Gloss50.png)  | ![media/SkyboxLight-MaterialMetal100Gloss100.png](media/SkyboxLight-MaterialMetal100Gloss100.png)  |
+ ![Material plastic](media/SkyboxLight-MaterialPlastic.png)  | ![Material 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss50.png)  | ![Metal 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss100.png)  |
+
+Notice how the skybox texture colours are reflected.
 
 ## Set up a skybox light
 
