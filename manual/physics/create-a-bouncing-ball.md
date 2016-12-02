@@ -27,7 +27,7 @@ In this tutorial, we'll use the [static collider and rigid body components](coll
 
     ![Add Static collider component](media/physics-tutorials-create-a-bouncing-ball-collider-shape.png)
 
-Next, we'll add a [rigid body](rigid-bodies.md)) component to the sphere. 
+Next, we'll add a [rigid body](rigid-bodies.md) component to the sphere. 
 
 6. In the **Scene Editor**, select the **Sphere** entity.
 
