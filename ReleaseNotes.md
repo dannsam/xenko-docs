@@ -304,3 +304,4 @@ Release date 2016/11/29
 
 * On Linux, when switching the underlying Graphics Platform, rendering will not occur or fail. Delete the cache, local and roaming folder on the Linux host and restarting the game should fix the issue.
 * Performance issues on mobile (being worked on)
+* On iOS if `Enable device-specific builds` is toggled on (from the project properties) it won't be possible to debug game code. Please manually select the architecture of your device from the Advanced tab to speed up your development.
