@@ -94,6 +94,7 @@
 ### [Render features](graphics/rendering-pipeline/render-features.md)
 ### [Render stages](graphics/rendering-pipeline/render-stages.md)
 ## [Sprite fonts](engine/sprite-fonts.md)
+## [Skyboxes](graphics/skyboxes.md)
 ## [Tutorials](graphics/tutorials/index.md)
 ### [Set up an HDR pipeline with post-effects](graphics/tutorials/set-up-an-hdr-pipeline-with-posteffects.md)
 
