@@ -336,3 +336,48 @@ h4{
 h5{
     font-size: 16px;
 }
+/* Redesign Documentation main page (05.12.2016) */
+.submenu-navbar{
+    margin: 5px 0;
+}
+.submenu-navbar li{
+    display: inline-block;
+    border-right: 1px solid #e7e7e7;
+}
+.submenu-navbar li:last-child{
+    border-right: none;
+}
+.submenu-navbar li a{
+    display: inline-block;
+    color: #111111;
+    font-size: 1.4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.documentation_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.documentation_list li{
+    margin-left: 0;    
+    position: relative;
+}
+.documentation_list li a h2,
+.documentation_list li a p{
+    color: #000;
+    position: relative;
+}
+.documentation_list li a h2:before{
+    display: none;
+}
+.documentation_list li a p:after{
+    content: " ";
+    display: inline-block;
+    background: url(http://xenko.com/images/svg/arrow_red_8.svg) no-repeat 100% 50%;
+    position: absolute;
+    top: 15%;
+    right: -50px;
+    height: 70%;
+    width: 50px;
+}
