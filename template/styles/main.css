@@ -362,6 +362,7 @@ h5{
 .documentation_list li{
     margin-left: 0;    
     position: relative;
+    margin-bottom: 35px;
 }
 .documentation_list li a h2,
 .documentation_list li a p{
@@ -380,4 +381,33 @@ h5{
     right: -50px;
     height: 70%;
     width: 50px;
+}
+
+.custom__breadcrumb{
+    margin-top: 15px;
+    padding: 15px 0 0 0;
+}
+.custom__breadcrumb ul{
+    padding: 5px 0 0 0;
+    margin: 0;
+    background: transparent;
+}
+.custom__breadcrumb + article.content h1,
+.custom__breadcrumb + article.content h2,
+.custom__breadcrumb + article.content h3,
+.custom__breadcrumb + article.content h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px){
+    .documentation_list li a p:after{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px){
+    .submenu-navbar li a{
+        font-size: 1.2rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

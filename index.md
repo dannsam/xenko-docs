@@ -1,29 +1,11 @@
- # Xenko Documentation
+<style>
+	.sideaffix{
+		display: none;
+	}
+</style>
 
-<!-- ## Manual
-
-Please visit [Xenko Manual](manual/index.md).
-
-## API Reference
-
-Please visit [API Reference](api/SiliconStudio.Xenko.Engine.yml).
-
-## Release Notes
-
-[Release Notes 1.9](ReleaseNotes.md)
-
-[Release Notes 1.8](ReleaseNotes-1.8.md)
-
-[Release Notes 1.7](ReleaseNotes-1.7.md)
- 
-[Release Notes 1.6](ReleaseNotes-1.6.md)
-
-[Release Notes 1.5](ReleaseNotes-1.5.md)
-
-[Release Notes 1.4](ReleaseNotes-1.4.md) -->
-
-
-<ul class="documentation_list col-md-5">
+# Xenko Documentation
+<ul class="documentation_list col-md-5 col-sm-10">
 	<li>
 		<a href="manual/index.html">
 			<h2>
@@ -45,7 +27,7 @@ Please visit [API Reference](api/SiliconStudio.Xenko.Engine.yml).
 		</a>
 	</li>
 	<li>
-		<a href="ReleaseNotes.html">
+		<a href="ReleaseNotes/index.html">
 			<h2>
 				Release Notes
 			</h2>

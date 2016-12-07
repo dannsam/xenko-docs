@@ -1,3 +1,6 @@
+---
+uid: ../toc.md
+---
 # Get started with Xenko
 
 <span class="label label-doc-level">Beginner</span>
