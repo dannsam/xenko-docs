@@ -3,43 +3,46 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-Sometimes you require a set of **Assets** with identical _Properties_.
-Suppose, you create a simple sports simulator where players wear nearly identical t-shirts that differ only in color.
+An **archetype** is a master asset that controls the properties of assets you derive from it. You can use archetypes to create **derived** assets - exceptions to the archetype.
 
-You can create one t-shirt **Material**, copy it several times, and then customize each **Material** separately.
-If later on you decide to change some specific _Property_ of these materials (e.g. change transparency settings),
-you would have to go through each **Material**.
+For example, imagine you create a game in which the characters wear identical shirts. You can simply give each character the same shirt material asset. If you decide to change the color of the shirt, simply change the color in the asset and every shirt changes. No problem!
 
-That's when **Archetypes** come in handy.
-An **Archetype** is essentially a **Master Asset** that controls **Core Properties** of the **Derived Assets**.
+But imagine you create a sports game in which the players wear shirts that differ only in color. You could create a single shirt material, duplicate it for every player, 
 
-> [!Note] You can create **Archetypes** of any assets, e.g. audio, models, materials, etc.
+then customize each material color individually. However, if you then change a property of these materials (eg transparency), you have to edit each material individually.
 
-Here's how you can use **Archetypes**:
+Instead, you can create a single archetype material and derive other materials from it. 
 
-1. Create an **Archetype** and set its _Core Properties_.
-2. Create **Derived Assets** that inherit _Core Properties_ from this **Archetype**.
-3. Adjust _Core Properties_ in **Archetype**, if needed.
-4. Customize _Minor Properties_ of each **Derived Asset** individually.
+You can create archetypes from any kind of asset, including audio, models, materials, and so on.
 
 ## Create an archetype
 
-**1)** In **Asset View**, right-click the Asset you want to be an **Archetype**.
+In the **Asset View**, right-click the asset you want to make an **archetype** and select **Create derived asset**.
 
-**2)** Click _Create Derived Asset_:
+![Create derived asset](media/archetypes-create-derived-asset.png)
 
-![Create Derived Asset](media/archetypes-create-derived-asset.png)
+Game Studio adds a new derived asset to the project. The new asset derives all its properties from the archetype.
 
-**3)** In **Asset View**, select the **Derived Asset**.
+With the derived asset selected, in the **Property Grid**, the archetype asset is listed under **Archetype**.
 
-**4)** In **Property Grid**, you can see this **Asset** has an **Archetype**.
+![Derived asset in Property Grid](media/archetypes-archetype-in-property-grid.png)
 
-![Derived Asset in Property Grid](media/archetypes-archetype-in-property-grid.png)
+> [!Tip] 
+> You can right-click the archetype asset in the Property Grid and select **Select the referenced asset** to select the archetype asset.]
 
-**5)** In **Asset View**, you can click **Archetype** image to locate **Archetype Asset**.
+## How archetypes and derived assets work
 
-## Manage archetypes
-Suppose, you override a certain _Property_ of the **Derived Asset**.
+Derived assets are useful when you want to create exceptions to assets.
+
+You can override individual properties of derived assets.
+
+For example, imagine we have three sphere entities that use a single material.
+
+If we change the color in the material to orange, all the spheres change, because they share a single asset.
+
+Now imagine we want *one* sphere to have a different color.
+
+
 If later on you change the _Same Property_ in **Archetype**, it won't affect the **Derived Asset**.
 Any changes you make to an **Archetype** affect only properties of the **Derived Assets** that are identical to this **Archetype**.
 
@@ -52,39 +55,37 @@ Suppose, you do the following actions:
 5. **Color** of the **Derived Asset** will not be affected, as you've already customized this property.
 
 ### Reset to base values
+
 In **Property Grid**, you can see which properties of the **Derived Asset** differ from the **Archetype**: 
 
-* **Overridden** and **unique** properties appear **white**.
+* **Overridden** and **unique** properties are **white**:
 
-    ![Overriden properties appear white](media/archetypes-overriden-properties-appear-white.png) 
+    ![Overriden properties are white](media/archetypes-overriden-properties-appear-white.png) 
 
-* **Identical** properties appear **gray**.
+* **Identical** properties are **gray**:
 
-    ![Identical properties appear gray](media/archetypes-identical-properties-appear-gray.png) 
+    ![Identical properties are gray](media/archetypes-identical-properties-appear-gray.png) 
 
-In **Property Grid**, you can also press **Display only overriden properties** to display only properties that differ from an **Archetype**:
+In the **Property Grid**, you can select **Display only overridden properties** to display only properties that differ from the **archetype**:
 
-![Display only overriden properties](media/archetypes-display-only-overriden-properties.png) 
+![Display only overridden properties](media/archetypes-display-only-overriden-properties.png) 
 
-You can always reset overridden or unique properties of the **Derived Asset** to base values of the parent **Archetype**.
+You can reset overridden or unique properties of a derived asset to the values in the archetype. To do this, right-click the overriden property and select **Reset to base value**.
 
-To do so, right-click the property and click _Peset to base value_.
-
-![Peset to base value](media/archetypes-reset-property-to-base-value.png)
+![Reset to base value](media/archetypes-reset-property-to-base-value.png)
 
 ### Clear an archetype
-You can always break link between the Derived Asset and Archetype:
 
-1. In **Asset View**, right-click the Derived asset.
-2. Click _Clear archetype_.
+You can remove the link between the archetype and the derived asset. In the **Asset View**, right-click the derived asset and select **Clear archetype**. The derived asset is now independent of the archetype.
 
-![Clear Archetype](media/archetypes-clear-archetypes.png)
+![Clear archetype](media/archetypes-clear-archetypes.png)
 
 ## Use archetypes
 
-You can create a whole hierarchy of **Archetypes** and **Derived** assets.
+You can create a hierarchy of **Archetypes** and **Derived** assets.
+
 You can derive an **Asset** from an **Archetype**, and then derive another **Asset** from that **Derived Asset**.
-This way you can create different layers of _Asset Properties_ to keep your game project consistent and well-structured:
+This way you can create different layers of _Asset Properties_ to keep your project organized:
 
 ```cs
 Archetype
@@ -94,5 +95,5 @@ Archetype
 
 ## See also
 
-1. [Prefabs](prefabs.md).
-2. [Manage prefabs](manage-prefabs.md).
+1. [Prefabs](prefabs.md)
+2. [Manage prefabs](manage-prefabs.md)

@@ -3,7 +3,7 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the Scene:
+After you [create a prefab](create-and-manage-prefabs.md), you can use it in the scene:
 
 1. Instantiate.
 2. Modify these **Instances**.
@@ -13,42 +13,45 @@ Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the 
 
 ## Create a prefab instance
 To instantiate a prefab, drag and drop it from the **Asset View** to the **Scene**.
+> To create a **Nested Prefab**, you can also drag and drop it from **Asset View** to **Prefab Editor**.
 
-In the Scene Editor entity tree, the prefab instance is displayed as a **parent entity** and the entities it contains as its children.
-
-![Prefab Instance in Scene Editor](media/prefabs-in-scene-editor.png)
+![Prefab instance in entity tree](media/prefabs-in-scene-editor.png)
 
 You can re-arrange entities the instance just like you do with other entities:
 
-* Create **Child** and **Parent** entities.
-* Drag **Entities** to add them to the **Prefab Instance**.
-* Drag **Entities** away from the **Prefab Instance** to make them independent entities.
+* create child and parent entities
+* drag **Entities** to add them to the **Prefab Instance**.
+* Drag entities from the prefab instance to make them independent entities.
 
 Sometimes, you instantiate a Prefab, modify it, and then want to re-use this modified **Prefab**.
 
 In that case, simply create a new **Prefab** from the **Prefab Instance**. You can further re-use it like a separate Prefab.
 
 ## Modify prefab instances
+
 ### Adjust in scene editor
-Once you create **Prefab Instance**, customize it like any other **Entity**:
+
+After you create a prefab instance, you can use it like any other entity:
 
 * Use transformation gizmos to _Translate_, _Rotate_ and _Scale_.
 * Change **Materials** and **Textures**.
 * **Add Components**, e.g. **Scripts**, **Animations**, etc.
 
-You can customize **Prefab Instance** as a single unit, or edit any of its **Child Entities** independently.
-For more information on **Entities** and their components, see [Populate a Scene](../get-started/populate-a-scene.md).
+You can use a prefab instance as a single entity, or edit any of its child entities independently.
 
-> [!Note] When you modify **Prefab Instances**, the **Prefab** itself **is unaffected**.
+For more information about entities and their components, see [Populate a Scene](../get-started/populate-a-scene.md).
 
-### Access prefab from its instance
+> [!Note] 
+> When you modify a prefab instances, the prefab itself is unaffected.
 
-You can access **Prefab** from its **Instances**.
+### Access a prefab from an instance
+
 In **Scene Editor**, right-click any child of a **Prefab Instance** and select _Open Prefab in Editor_.
 
 ![Open Prefab in Editor](media/use-prefabs-prefab-open-prefab-from-prefab-instance.png)
 
 ### Reset properties to base values
+
 In **Property Grid**, you can see which properties of the **Prefab instance** differ from the **Prefab**: 
 
 * **Overridden** and **unique** properties appear **white**.
@@ -61,9 +64,9 @@ In **Property Grid**, you can see which properties of the **Prefab instance** di
 
 In **Property Grid**, you can also press **Display only overriden properties** to display only properties that differ from the **Prefab**:
 
-![Display only overriden properties](media/use-prefabs-display-only-overriden-properties.png) 
+![Display only overridden properties](media/use-prefabs-display-only-overriden-properties.png) 
 
-You can always reset overridden or unique properties of the **Prefab Instance** to base values of the parent **Prefab**.
+You can reset overridden properties of the **Prefab Instance** to base values of the parent **Prefab**.
 
 To do so, right-click the property and click _Peset to base value_.
 
@@ -80,9 +83,9 @@ In the **Scene Editor** entity tree, right-click a child entity of the prefab in
 
 After you break link, the selected **Entities** of the **Prefab Instance** are no longer affected by the changes you make to the **Prefab**.
 
-## Code samples
-Suppose you have a **Prefab** called _'MyBulletPrefab'_.
-It is in the root folder of your project, and you want to instantiate that **Prefab** in your **Scene**.
+## Example code
+
+Imagine you have the prefab _'MyBulletPrefab'_ in the root folder of your project, and you want to instantiate that it in your scene.
 
 Use the following code samples:
 
@@ -107,7 +110,7 @@ private void InstantiateBulletPrefab()
 ```
 
 ## See also
-1. [Prefabs](prefabs.md).
-2. [Create prefabs](create-prefabs.md).
-3. [Manage prefabs](manage-prefabs.md).
-4. [Modify prefabs](modify-prefabs.md).
+1. [Prefabs](prefabs.md)
+2. [Create prefabs](create-prefabs.md)
+3. [Manage prefabs](manage-prefabs.md)
+4. [Modify prefabs](modify-prefabs.md)

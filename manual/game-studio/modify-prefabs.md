@@ -47,7 +47,7 @@ These changes won't affect **Instances** of the **Prefab** that were spawned bef
 Yet, all **New Instances** of the forest prefab **will be red**.
 
 ## See also
-1. [Prefabs](prefabs.md).
-2. [Create prefabs](create-prefabs.md).
-3. [Manage prefabs](manage-prefabs.md).
-4. [Use prefabs](use-prefabs.md).
+1. [Prefabs](prefabs.md)
+2. [Create prefabs](create-prefabs.md)
+3. [Manage prefabs](manage-prefabs.md)
+4. [Use prefabs](use-prefabs.md)

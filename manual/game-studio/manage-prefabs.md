@@ -1,4 +1,5 @@
 # Manage prefabs
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
@@ -40,7 +41,7 @@ Every **Prefab** is a special **Asset** that you can instantiate by dragging and
 For more information, see [Use Prefabs](use-prefabs.md).
 
 ## See also
-1. [Prefabs](prefabs.md).
-2. [Create prefabs](create-prefabs.md).
-3. [Modify prefabs](modify-prefabs.md).
-4. [Use prefabs](use-prefabs.md).
+* [Prefabs](prefabs.md)
+* [Create prefabs](create-prefabs.md)
+* [Modify prefabs](modify-prefabs.md)
+* [Use prefabs](use-prefabs.md)
