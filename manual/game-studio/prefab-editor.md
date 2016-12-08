@@ -25,7 +25,7 @@ This video demonstrates what happens when we make changes to the prefab. The Sce
    <source src="media/edit-prefab-and-update-instances.mp4" type="video/mp4">
 </video>
 
-When you edit an instance of a prefab in the scene, the prefab isn't affected. For example, if change the color of a texture on an instance of a prefab, only that instance is affected.
+When you edit an instance of a prefab in the scene, the prefab isn't affected. For example, if you add an entity to a prefab instance, only that instance is affected.
 
 In the following video, the **Lamp** prefab contains several box entities that belong to the **Boxes** parent. When we delete the boxes from the instance, only that instance is affected. The prefab (shown on the right) is unchanged.
 

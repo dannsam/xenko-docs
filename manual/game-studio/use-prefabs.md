@@ -11,23 +11,21 @@ Once you [Create a Prefab](create-and-manage-prefabs.md), you can use it in the 
 4. Break link to prefab.
 5. Use **Scripts** to animate **Prefab Instances** at runtime.
 
-## Create prefab instances
-To instantiate a **Prefab**, drag and drop it from **Asset View** to the **Scene**.
+## Create a prefab instance
+To instantiate a prefab, drag and drop it from the **Asset View** to the **Scene**.
 
-> [!Tip] To create a **Nested Prefab**, you can also drag and drop it from **Asset View** to **Prefab Editor**.
-
-When you add a **Prefab** to a scene, you create its **Instance**.
-In Scene Editor, **Prefab Instance** is displayed as **Parent Entity** and **Prefab Elements** as its **Children**.
+In the Scene Editor entity tree, the prefab instance is displayed as a **parent entity** and the entities it contains as its children.
 
 ![Prefab Instance in Scene Editor](media/prefabs-in-scene-editor.png)
 
-You can re-arrange **Entities** of the **Prefab Instance** just like you do with other **Entities**:
+You can re-arrange entities the instance just like you do with other entities:
 
 * Create **Child** and **Parent** entities.
 * Drag **Entities** to add them to the **Prefab Instance**.
 * Drag **Entities** away from the **Prefab Instance** to make them independent entities.
 
 Sometimes, you instantiate a Prefab, modify it, and then want to re-use this modified **Prefab**.
+
 In that case, simply create a new **Prefab** from the **Prefab Instance**. You can further re-use it like a separate Prefab.
 
 ## Modify prefab instances
@@ -59,7 +57,7 @@ In **Property Grid**, you can see which properties of the **Prefab instance** di
 
 * **Identical** properties appear **gray**.
 
-    ![Identical properties appear gray](media/use-prefabs-identical-properties-appear-gray.png) 
+    ![Identical properties appear gray](media/use-prefabs-identical-properties-appear-gray.png)
 
 In **Property Grid**, you can also press **Display only overriden properties** to display only properties that differ from the **Prefab**:
 
@@ -71,12 +69,12 @@ To do so, right-click the property and click _Peset to base value_.
 
 ![Peset to base value](media/use-prefabs-reset-property-to-base-value.png)
 
-### break link to prefab
+### Break link to prefab
 
-You can break link between a **Prefab** and **Child Entities** of the **Prefab Instance**:
+You can break the link between a the prefab and its child entities.
 
-1. In **Scene Editor**, right-click any child entity of the prefab instance. You can select multiple children and break link to all of them at once.
-2. Click _Break Link to Prefab_.
+In the **Scene Editor** entity tree, right-click a child entity of the prefab instance and select **Break link to prefab**. You can select multiple children and break link to all of them at once.
+2. Select _Break Link to Prefab_.
 
 ![Break Link to Prefab](media/use-prefabs-break-link-to-prefab.gif)
 
