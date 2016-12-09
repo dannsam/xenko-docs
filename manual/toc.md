@@ -37,12 +37,12 @@
 ## [Set an audio device](audio/set-an-audio-device.md)
 
 # [Game Studio](game-studio/index.md)
-## [Prefabs](game-studio/prefabs.md)
-### [Create Prefabs](game-studio/create-prefabs.md)
-### [Manage Prefabs](game-studio/manage-prefabs.md)
-### [Modify Prefabs](game-studio/modify-prefabs.md)
-### [Use Prefabs](game-studio/use-prefabs.md)
 ## [Archetypes](game-studio/archetypes.md)
+## [Prefabs](game-studio/prefabs.md)
+### [Create prefabs](game-studio/create-prefabs.md)
+### [Edit prefabs](game-studio/edit-prefabs.md)
+### [Nested prefabs](game-studio/nested-prefabs.md)
+### [Override prefabs](game-studio/override-prefabs.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)

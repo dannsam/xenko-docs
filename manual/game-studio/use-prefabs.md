@@ -3,91 +3,39 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-After you [create a prefab](create-and-manage-prefabs.md), you can use it in the scene:
-
-1. Instantiate.
-2. Modify these **Instances**.
-3. Reset properties to original values.
-4. Break link to prefab.
-5. Use **Scripts** to animate **Prefab Instances** at runtime.
+After you [create a prefab](create-prefabs.md), you can use it in the scene.
 
 ## Create a prefab instance
+
 To instantiate a prefab, drag and drop it from the **Asset View** to the **Scene**.
-> To create a **Nested Prefab**, you can also drag and drop it from **Asset View** to **Prefab Editor**.
 
-![Prefab instance in entity tree](media/prefabs-in-scene-editor.png)
-
-You can re-arrange entities the instance just like you do with other entities:
+You can re-arrange entities in the prefab instance just like you do with other entities:
 
 * create child and parent entities
-* drag **Entities** to add them to the **Prefab Instance**.
-* Drag entities from the prefab instance to make them independent entities.
+* drag entities to add them to the prefab instance
+* drag entities from the prefab instance to make them independent entities
 
-Sometimes, you instantiate a Prefab, modify it, and then want to re-use this modified **Prefab**.
+### Manage prefab parent entities
 
-In that case, simply create a new **Prefab** from the **Prefab Instance**. You can further re-use it like a separate Prefab.
+By default, Game Studio creates an empty parent entity with the prefab's entities as its children. The entity tree displays the prefab parent name in green next to the child entities.
 
-## Modify prefab instances
+![Prefab parent and children in entity tree](media/prefabs-in-scene-editor.png)
 
-### Adjust in scene editor
+This is useful because you can manage the prefab entities as a group and maintain their relative positions. For example, imagine you have a car prefab assembled from several entities (a body, seats, four wheels, etc). You probably want its component entities to stay grouped together as you move the car around the scene. You can do this by moving the prefab parent entity.
 
-After you create a prefab instance, you can use it like any other entity:
-
-* Use transformation gizmos to _Translate_, _Rotate_ and _Scale_.
-* Change **Materials** and **Textures**.
-* **Add Components**, e.g. **Scripts**, **Animations**, etc.
-
-You can use a prefab instance as a single entity, or edit any of its child entities independently.
-
-For more information about entities and their components, see [Populate a Scene](../get-started/populate-a-scene.md).
-
-> [!Note] 
-> When you modify a prefab instances, the prefab itself is unaffected.
-
-### Access a prefab from an instance
-
-In **Scene Editor**, right-click any child of a **Prefab Instance** and select _Open Prefab in Editor_.
-
-![Open Prefab in Editor](media/use-prefabs-prefab-open-prefab-from-prefab-instance.png)
-
-### Reset properties to base values
-
-In **Property Grid**, you can see which properties of the **Prefab instance** differ from the **Prefab**: 
-
-* **Overridden** and **unique** properties appear **white**.
-
-    ![Overriden properties appear white](media/use-prefabs-overriden-properties-appear-white.png) 
-
-* **Identical** properties appear **gray**.
-
-    ![Identical properties appear gray](media/use-prefabs-identical-properties-appear-gray.png)
-
-In **Property Grid**, you can also press **Display only overriden properties** to display only properties that differ from the **Prefab**:
-
-![Display only overridden properties](media/use-prefabs-display-only-overriden-properties.png) 
-
-You can reset overridden properties of the **Prefab Instance** to base values of the parent **Prefab**.
-
-To do so, right-click the property and click _Peset to base value_.
-
-![Peset to base value](media/use-prefabs-reset-property-to-base-value.png)
+If you don't want to create a parent entity with the prefab, hold **Alt** when you drop the prefab into the scene. This is useful if you don't care about the relative positions of the prefab's entities and don't need to move them together as a group. For example, imagine you have a prefab composed of several crate entities arranged in a random fashion. It's not important that the crates maintain their relative position after you place them; in fact, several identical stacks of "randomly" arranged crates would look odd. In this situation, a parent entity is unnecessary. You can create several instances of the prefab, then re-arrange their individual crate entities however you like.
 
 ### Break link to prefab
 
-You can break the link between a the prefab and its child entities.
+After you add a prefab instance, you can break the link between the prefab and any of its child entities. This means the child entity is no longer affected by changes you make to the prefab.
 
-In the **Scene Editor** entity tree, right-click a child entity of the prefab instance and select **Break link to prefab**. You can select multiple children and break link to all of them at once.
-2. Select _Break Link to Prefab_.
+To do this, in the **Scene Editor**, right-click a child entity or entities and select **Break link to prefab**.
 
-![Break Link to Prefab](media/use-prefabs-break-link-to-prefab.gif)
-
-After you break link, the selected **Entities** of the **Prefab Instance** are no longer affected by the changes you make to the **Prefab**.
+![Break link between child and prefab](media/use-prefabs-break-link-to-prefab.gif)
 
 ## Example code
 
-Imagine you have the prefab _'MyBulletPrefab'_ in the root folder of your project, and you want to instantiate that it in your scene.
-
-Use the following code samples:
+To use prefabs at runtime, you need to intantiate them. For example, if you have a prefab named _'MyBulletPrefab'_ in the root folder of your project, you can instantiate it with the following code:
 
 ```cs
 private void InstantiateBulletPrefab()
@@ -95,7 +43,7 @@ private void InstantiateBulletPrefab()
     // Note that "MyBulletPrefab" refers to the name and location of your prefab Asset.
     var myBulletPrefab = Asset.Load<Prefab>("MyBulletPrefab");
     
-    //Instantiate a Prefab.
+    //Instantiate a prefab.
     var bullet = myBulletPrefab.Instantiate();
 
     // Add the bullet to the scene.
@@ -108,6 +56,11 @@ private void InstantiateBulletPrefab()
     SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
 }
 ```
+
+>[!Note]
+>At runtime, changes made to prefabs (*myBulletPrefab* in the above example) don't affect existing prefab instances (*bullet* in the above example). Subsequent calls to ``Instantiate(Prefab)`` include the new changes.
+
+>For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at certain point at runtime. The script doesn't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs have the new color, but existing prefabs don't.
 
 ## See also
 1. [Prefabs](prefabs.md)
