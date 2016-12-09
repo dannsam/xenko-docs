@@ -411,8 +411,8 @@ Put this syntax in the .md file, replacing the directories and filenames with th
 
 ```
 <p>
-    <video autoplay loop class="responsive-video" poster="../../images/blog/2016-12-01-game-templates/templateFPS.jpg">
-       <source src="../../images/blog/2016-12-01-game-templates/templateFPS.mp4" type="video/mp4">
+    <video autoplay loop class="responsive-video" poster="folder/myvideo.jpg">
+       <source src="folder/myvideo.mp4" type="video/mp4">
     </video>
 </p>
 ```
