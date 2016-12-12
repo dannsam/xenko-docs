@@ -10,7 +10,7 @@ If you modify a nested prefab, all the dependent prefabs inherit the change auto
 
 ## Example
 
-This video demonstrates how nested prefabs work:
+This video demonstrates an example of nested prefabs:
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/create-nested-prefab.jpg">

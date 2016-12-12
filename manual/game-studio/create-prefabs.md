@@ -27,7 +27,6 @@ Game Studio creates a prefab asset from the entity or entities you selected. You
 You can create new prefabs from modified prefabs. For example, you can instantiate a prefab, override one of its properties, then use this modified prefab instance to create a new prefab.
 
 ## See also
-1. [Prefabs](prefabs.md)
-2. [Manage prefabs](manage-prefabs.md)
-3. [Modify prefabs](modify-prefabs.md)
-4. [Use prefabs](use-prefabs.md)
+* [Prefabs](prefabs.md)
+* [Manage prefabs](manage-prefabs.md)
+* [Use prefabs](use-prefabs.md)
