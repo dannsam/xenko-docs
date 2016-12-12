@@ -20,4 +20,12 @@ This video demonstrates an example of nested prefabs:
 </video>
 </p>
 
-In the center pane, we already have a prefab named **Lamp**, which comprises three entities. In the right pane, we create a new prefab named **Boxes**, comprising several box entities positioned together. We add the Boxes prefab to the Lamp prefab. Changes made to the Boxes prefab are reflected in the Lamp prefab. These are in turn reflected in the instances of the Lamp prefab in the scene (left pane).
+In the center pane, we already have a prefab named **Lamp**. In the right pane, we create a new prefab named **Boxes**, comprising several box entities positioned together. We add the Boxes prefab to the Lamp prefab. Changes made to the Boxes prefab are reflected in the Lamp prefab. These are in turn reflected in the instances of the Lamp prefab in the scene (left pane).
+
+## See also
+
+* [Prefab index](prefabs.md)
+* [Create prefabs](create-prefabs.md)
+* [Use prefabs](use-prefabs.md)
+* [Edit prefabs](edit-prefabs.md)
+* [Override prefab properties](override-prefab-properties.md)

@@ -63,7 +63,9 @@ private void InstantiateBulletPrefab()
 >For example, imagine you have a tree prefab that contains a script to change the tree color from green to red at certain point at runtime. The script doesn't affect existing instances of the prefab; it can only change the color of **future** instances. This means prefabs instantiated after the code runs have the new color, but existing prefabs don't.
 
 ## See also
-1. [Prefabs](prefabs.md)
-2. [Create prefabs](create-prefabs.md)
-3. [Manage prefabs](manage-prefabs.md)
-4. [Modify prefabs](modify-prefabs.md)
+
+* [Prefab index](game-studio/prefabs.md)
+* [Create prefabs](game-studio/create-prefabs.md)
+* [Edit prefabs](game-studio/edit-prefabs.md)
+* [Nested prefabs](game-studio/nested-prefabs.md)
+* [Override prefab properties](game-studio/override-prefab-properties.md)

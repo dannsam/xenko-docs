@@ -5,7 +5,9 @@
 
 A **prefab** is a "master" version of an object that you can reuse wherever you need. When you change the prefab, every instance of the prefab changes too.
 
-For example, imagine we make a simple tree object by assembling several entities. The entities contain components such as models, materials, physics colliders, and so on, which in turn reference assets. Now imagine we want to place several trees around the scene. We could simply duplicate the tree, but if we want to modify it later, we have to edit each one individually. This is time-consuming and leaves room for mistakes.
+For example, imagine we make a simple tree object by assembling several entities. The entities contain components such as models, materials, physics colliders, and so on, which in turn reference assets. 
+
+Now imagine we want to place several trees around the scene. We could simply duplicate the tree, but if we want to modify it later, we have to edit each one individually. This is time-consuming and leaves room for mistakes.
 
 The better approach is to make the a tree prefab. Then we can place as many trees as we like, and when we modify the prefab, every tree is instantly updated to match. This saves lots of time.
 
@@ -18,8 +20,9 @@ You can make any entity or combination of entities of a prefab; they can be as s
 You can also override specific prefab properties in each prefab instance.
 
 ## See also
-1. [Create prefabs](create-prefabs.md)
-2. [Manage prefabs](manage-prefabs.md)
-3. [Modify prefabs](modify-prefabs.md)
-4. [Use prefabs](use-prefabs.md)
-5. [Archetypes](archetypes.md)
+
+* [Create prefabs](create-prefabs.md)
+* [Use prefabs](use-prefabs.md)
+* [Edit prefabs](edit-prefabs.md)
+* [Nested prefabs](nested-prefabs.md)
+* [Override prefab properties](override-prefab-properties.md)

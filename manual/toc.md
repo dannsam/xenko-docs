@@ -40,9 +40,10 @@
 ## [Archetypes](game-studio/archetypes.md)
 ## [Prefabs](game-studio/prefabs.md)
 ### [Create prefabs](game-studio/create-prefabs.md)
+### [Use prefabs](game-studio/use-prefabs.md)
 ### [Edit prefabs](game-studio/edit-prefabs.md)
 ### [Nested prefabs](game-studio/nested-prefabs.md)
-### [Override prefabs](game-studio/override-prefabs.md)
+### [Override prefab properties](game-studio/override-prefab-properties.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)

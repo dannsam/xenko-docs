@@ -3,23 +3,33 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-When you change a property in an instance created from a prefab, it **overrides** the property in the prefab. This means you can create several instances of an object using the same base prefab, then adjust each instance to your needs.
+When you change a property in an instance created from a prefab, the prefab itself isn't affected - only that instance. This is called an **override**. 
 
-* If the property in the prefab and the prefab instance are **identical**, the instance inherits changes from the prefab.
+* If the property in the prefab and the prefab instance is **identical**, the instance inherits changes from the prefab for that property.
 
-* If the property in the prefab and the prefab instance are **different**, the instance doesn't inherit changes from the prefab.
+* If the property in the prefab and the prefab instance is **different**, the instance doesn't inherit changes from the prefab for that property.
 
 ![How prefabs work](media/create-manage-prefabs-how-prefabs-work.png)
 
+In the following video, the **Lamp** prefab contains several box entities that belong to the **Boxes** parent. When we delete the boxes from the instance, only that instance is affected. The prefab (shown on the right) is unchanged.
+
+If we add another box to the Boxes parent in the prefab, it doesn't appear in the overridden instance. That's because we deleted the Boxes parent from that instance.
+
+<p>
+<video autoplay loop class="responsive-video" poster="media/delete-boxes-from-prefab-instance.jpg">
+   <source src="media/delete-boxes-from-prefab-instance.mp4" type="video/mp4">
+</video>
+</p>
+
 ## View overridden properties
 
-In the **Property grid**, you can see which properties of the prefab instance differ from the prefab.
+In the **Property grid**, you can see which properties of the prefab instance differ from the base values in the prefab.
 
-* **Overridden** and **unique** properties are **white**.
+* **Overridden** and **unique** properties are **white**:
 
     ![Overriden properties are white](media/use-prefabs-overriden-properties-appear-white.png) 
 
-* **Identical** properties are **gray**.
+* **Identical** properties are **gray**:
 
     ![Identical properties are gray](media/use-prefabs-identical-properties-appear-gray.png)
 
@@ -62,3 +72,11 @@ Now let's see what happens when we go back to the Prefab Editor and change the c
 ![Changed colors](media/lamppost7.png)
 
 Four of the lampposts now have a green light. The fifth is still red, as overridden properties don't change when you modify the prefab.
+
+## See also
+
+* [Prefab index](prefabs.md)
+* [Create prefabs](create-prefabs.md)
+* [Use prefabs](use-prefabs.md)
+* [Edit prefabs](edit-prefabs.md)
+* [Nested prefabs](nested-prefabs.md)

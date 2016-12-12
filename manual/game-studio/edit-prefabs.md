@@ -6,7 +6,7 @@ You can edit prefabs in the **Prefab Editor**.
 
 ## Open the Prefab Editor ##
 
-From the **Asset View**:
+To open the Prefab Editor from the **Asset View**:
 
 * Right-click the prefab you want to edit and select **Edit asset**:
 
@@ -27,7 +27,7 @@ To open the Prefab Editor from the **Scene Editor**, right-click any child of a 
 The Prefab Editor works similarly to the Scene Editor. For example, you can:
 
 * add and delete entities
-* use [transformation gizmos](../get-started/arrange-entities.md) to translate, rotate and scale entities
+* use transformation gizmos to translate, rotate and scale entities
 * create parent-child relations between entities
 * add and modify entity components (scripts, materials, models, animations, etc)
 
@@ -45,14 +45,10 @@ This video demonstrates what happens when we make changes to the prefab. The Sce
 </video>
 </p>
 
-When you edit an instance of a prefab in the scene, the prefab itself isn't affected - only that instance. This is called an **override**.
+## See also
 
-In the following video, the **Lamp** prefab contains several box entities that belong to the **Boxes** parent. When we delete the boxes from the instance, only that instance is affected. The prefab (shown on the right) is unchanged.
-
-If we add another box to the Boxes parent in the prefab, it doesn't appear in the overridden instance. That's because we deleted the Boxes parent from that instance.
-
-<p>
-<video autoplay loop class="responsive-video" poster="media/delete-boxes-from-prefab-instance.jpg">
-   <source src="media/delete-boxes-from-prefab-instance.mp4" type="video/mp4">
-</video>
-</p>
+* [Prefab index](prefabs.md)
+* [Create prefabs](create-prefabs.md)
+* [Use prefabs](use-prefabs.md)
+* [Nested prefabs](nested-prefabs.md)
+* [Override prefab properties](override-prefab-properties.md)
