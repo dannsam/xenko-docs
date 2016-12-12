@@ -408,12 +408,14 @@ ffmpeg -i myvideo.mp4 -vframes 1 -f image2 -y myvideo.jpg
 
 Put this syntax in the .md file, replacing the directories and filenames with the files you want to use:
 
-```
-<video autoplay loop class="responsive-video" poster="folder/myvideo.jpg">
-   <source src="folder/myvideo.mp4" type="video/mp4">
-</video>
-```
 
+```
+<p>
+    <video autoplay loop class="responsive-video" poster="folder/myvideo.jpg">
+       <source src="folder/myvideo.mp4" type="video/mp4">
+    </video>
+</p>
+```
 
 # <a name="FilesStructure"> Pages & Files Structure </a>
 
@@ -515,7 +517,7 @@ Examples:
 
 In order to simplify the reading of the documentation, it is important that you properly use bold and italic styles.
 
-Put every important words or steps in bold using the **Text in bold** syntax.
+Put every important word or step in bold using the **Text in bold** syntax.
 
 Put every UI element or Window names in italic using the *Text in italic* syntax.
 
