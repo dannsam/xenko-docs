@@ -3,11 +3,7 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-After you [create a prefab](create-prefabs.md), you can use it in the scene.
-
-## Create a prefab instance
-
-To instantiate a prefab, drag and drop it from the **Asset View** to the **Scene**.
+To instantiate a prefab, drag and drop it from the **Asset View** to the scene.
 
 You can re-arrange entities in the prefab instance just like you do with other entities:
 
@@ -15,7 +11,7 @@ You can re-arrange entities in the prefab instance just like you do with other e
 * drag entities to add them to the prefab instance
 * drag entities from the prefab instance to make them independent entities
 
-### Manage prefab parent entities
+## Manage prefab parent entities
 
 By default, Game Studio creates an empty parent entity with the prefab's entities as its children. The entity tree displays the prefab parent name in green next to the child entities.
 
@@ -64,8 +60,8 @@ private void InstantiateBulletPrefab()
 
 ## See also
 
-* [Prefab index](game-studio/prefabs.md)
-* [Create prefabs](game-studio/create-prefabs.md)
-* [Edit prefabs](game-studio/edit-prefabs.md)
-* [Nested prefabs](game-studio/nested-prefabs.md)
-* [Override prefab properties](game-studio/override-prefab-properties.md)
+* [Prefab index](prefabs.md)
+* [Create prefabs](create-prefabs.md)
+* [Edit prefabs](edit-prefabs.md)
+* [Nested prefabs](nested-prefabs.md)
+* [Override prefab properties](override-prefab-properties.md)

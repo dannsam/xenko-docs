@@ -1,4 +1,4 @@
-# Archetypes and derived assets
+# Archetypes
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
@@ -17,6 +17,14 @@ The better approach is to derive a new asset from the archetype. The derived ass
 
 * If the property in the archetype and the derived asset is **different**, the derived asset doesn't inherit changes from the archetype for that property.
 
+You can derive an asset from an archetype, then in turn derive another asset from that derived asset. This way you can create different layers of assets to keep your project organized:
+
+```cs
+Archetype
+    Derived asset
+        Derived asset
+```
+
 ## Derive an asset from an archetype
 
 In the **Asset View**, right-click the asset you want to derive an asset from and select **Create derived asset**:
@@ -30,9 +38,11 @@ The derived asset's **Property Grid** displays the archetype asset under **Arche
 ![Derived asset in Property Grid](media/archetypes-archetype-in-property-grid.png)
 
 > [!Tip] 
-> You can right-click the archetype asset in the Property Grid and select **Select the referenced asset** to quickly select the archetype asset.]
+> You can right-click the archetype asset in the Property Grid and select **Select the referenced asset** to quickly select the archetype asset.
 
-In the **Property Grid**, you can see which properties of the **Derived Asset** differ from the **Archetype**: 
+### Overridden properties
+
+The **Property Grid** shows which properties of the derived asset differ from the archetype. 
 
 * **Overridden** and **unique** properties are **white**:
 
@@ -42,7 +52,7 @@ In the **Property Grid**, you can see which properties of the **Derived Asset** 
 
     ![Identical properties are gray](media/archetypes-identical-properties-appear-gray.png) 
 
-In the **Property Grid**, select **Display only overridden properties** to display only properties that differ from the **archetype**:
+To display only properties that differ from the **archetype**, in the **Property Grid**, select **Display only overridden properties**:
 
 ![Display only overridden properties](media/archetypes-display-only-overriden-properties.png) 
 
@@ -59,16 +69,6 @@ You can remove the link between the archetype and the derived asset. This means 
 To do this, in the **Asset View**, right-click the derived asset and select **Clear archetype**.
 
 ![Clear archetype](media/archetypes-clear-archetypes.png)
-
-## Create archetype hierarchies
-
-You can derive an asset from an archetype, then in turn derive another asset from that derived asset. This way you can create different layers of assets to keep your project organized:
-
-```cs
-Archetype
-    Derived asset
-        Derived asset
-```
 
 ## See also
 
