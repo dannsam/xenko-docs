@@ -33,7 +33,7 @@ In the **Property grid**, you can see which properties of the prefab instance di
 
     ![Identical properties are gray](media/use-prefabs-identical-properties-appear-gray.png)
 
-### Display only overriden properties
+### Display only overridden properties
 
 To display only overridden properties, in the **Property grid**, next to the **Search** field, click ![Display only overridden properties icon](media/display-only-overriden-properties-icon.png) (**Display only overriden properties**):
 
@@ -49,27 +49,27 @@ To reset an overridden property to the value in the parent prefab, right-click t
 
 In this example, we have a prefab of a futuristic lamppost.
 
-![Lamppost](media/lamppost.png)
+![Lamppost](media/lamppost-prefab.png)
 
 The lamppost prefab is composed of three entities: a column, a pillar, and a spot light. These are listed in the entity tree in the Prefab Editor.
 
-![Add entities](media/lamppost2.png)
+![Add entities](media/lamppost-prefab-entities.png)
 
 Let's add five instances of the lamppost prefab to our scene.
 
-![Five lampposts](media/lamppost3.png)
+![Five lampposts](media/lamppost-prefab-instances.png)
 
-Now let's modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Properties Grid displays the modified **Color** property in **bold**. This means it's overriding the prefab property.
+Now we'll modify one of the instances. In the Scene Editor, we select one **spot light** entity and, in the spot light component properties, change its color to red. The Properties Grid displays the modified **Color** property in **bold**. This means it's overriding the prefab property.
 
-![Overridden property](media/lamppost5.png)
+![Overridden property](media/override-prefab-property.png)
 
 We can see this in the scene view.
 
-![Pink spotlight](media/lamppost4.png)
+![Pink spotlight](media/pink-lamppost-prefab.png)
 
 Now let's see what happens when we go back to the Prefab Editor and change the color of the spot light in the prefab to green.
 
-![Changed colors](media/lamppost7.png)
+![Changed colors](media/lamppost-prefab-instances-with-override.png)
 
 Four of the lampposts now have a green light. The fifth is still red, as overridden properties don't change when you modify the prefab.
 

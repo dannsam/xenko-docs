@@ -11,7 +11,7 @@ Now imagine we want to place several trees around the scene. We could simply dup
 
 The better approach is to make the a tree prefab. Then we can place as many trees as we like, and when we modify the prefab, every tree is instantly updated to match. This saves lots of time.
 
-![Creating trees with prefabs](media/use-prefabs-compressed.gif)
+![Creating trees with prefabs](media/create-prefab-trees.gif)
 
 The most common use for prefabs is to create a small piece of your scene - like a car, NPC, or item of furniture - and duplicate it as many times as you need. When you need to modify it - for example, if you want to change its model - you can change it in one place and apply the change everywhere at once.
 
