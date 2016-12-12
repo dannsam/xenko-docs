@@ -4,7 +4,7 @@
 	}
 </style>
 
-# Xenko Documentation
+# Xenko documentation
 <ul class="documentation_list col-md-5 col-sm-10">
 	<li>
 		<a href="manual/index.html">
@@ -12,27 +12,27 @@
 				Manual
 			</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius recusandae cupiditate quidem maxime, vitae quibusdam, inventore, ut eaque odit amet tempora.
+				Learn how to build projects and complete tasks in Xenko, including step-by-step tutorials
 			</p>
 		</a>
 	</li>
 	<li>
 		<a href="api/SiliconStudio.Xenko.Engine.yml">
 			<h2>
-				API Reference
+				API reference
 			</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius recusandae cupiditate quidem maxime, vitae quibusdam, inventore, ut eaque odit amet tempora.
+				Xenko's API, with methods, properties, and other relevant information
 			</p>
 		</a>
 	</li>
 	<li>
 		<a href="ReleaseNotes/index.html">
 			<h2>
-				Release Notes
+				Release notes
 			</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius recusandae cupiditate quidem maxime, vitae quibusdam, inventore, ut eaque odit amet tempora.
+				What's in the latest version of Xenko (and older versions too)
 			</p>
 		</a>
 	</li>
