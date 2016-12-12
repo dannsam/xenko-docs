@@ -14,10 +14,10 @@ After that you can learn more about Game Studio, project structure, and find out
 
 In this section we will show you the basics of the Game Studio, and how to use them to create your first game. 
 
-This section will discuss the following subjects:
+This section discusses the following subjects:
 
 * [Install Xenko](install-xenko.md) - how to install Xenko and Game Studio
-* [Xenko Launcher](xenko-launcher.md) - how to use the Xenko Launcher
+* [Launch Xenko](launch-Xenko.md) - how to launch Xenko for the first time
 * [Create a project](create-a-project.md) - create your first project in Game Studio
 * [Game Studio](game-studio.md) - how to use Game Studio
 * [Project structure](project-structure.md) - learn about project structures

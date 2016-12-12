@@ -66,6 +66,6 @@ You can download Xenko installer from the [Xenko website](http://xenko.com/downl
  
     ![Installation status](media/install-xenko-installation-status.png)
 
-After the installation has finished, the [Xenko launcher](xenko-launcher.md) opens. Shortcuts are created for Xenko in the selected locations.
+After the installation finishes, the [Xenko launcher](xenko-launcher.md) opens. Shortcuts are created for Xenko in the selected locations.
 
-Now, you're ready to start using the [Xenko launcher](xenko-launcher.md).
+Now you're ready to start using the [Xenko launcher](xenko-launcher.md).

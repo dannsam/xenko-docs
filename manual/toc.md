@@ -1,6 +1,6 @@
 # [Get started](get-started/index.md)
 ## [Install Xenko](get-started/install-xenko.md)
-## [Xenko Launcher](get-started/xenko-launcher.md)
+## [Launch Xenko](get-started/launch-xenko.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Game Studio](get-started/game-studio.md)
 ## [Project structure](get-started/project-structure.md)

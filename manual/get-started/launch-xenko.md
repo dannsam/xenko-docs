@@ -1,12 +1,12 @@
-# Xenko Launcher
+# Launch Xenko
 
 <span class="label label-doc-level">Beginner</span>
 
-After you install Xenko, the first window you'll see is the Xenko launcher. 
+After you install Xenko, the first window you'll see is the **Xenko launcher**.
 
-The launcher lets you **manage and run the different versions** that have been installed on your system. 
+The launcher lets you **manage and run the different versions of Xenko** that have been installed on your system. 
 
-This page will show you how to use the launcher.
+This page shows you how to use the launcher.
 
 ![Xenko launcher](media/xenko-launcher-interface.png)
 
@@ -54,6 +54,6 @@ in the *Switch/update version* section.
 
 ![Start button of Xenko launcher](media/xenko-launcher-start-button.png)
 
-For more details about the Xenko launcher see [Xenko launcher](../xenko-launcher/index.md).
+For more details about the Xenko launcher, see [Xenko launcher](../xenko-launcher/index.md).
 
 Now, you’re ready to create your first project in Game Studio. For information on how to create a project, see [Create a project](create-a-project.md).
