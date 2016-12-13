@@ -327,6 +327,8 @@ Release date 2016/12/13
 #### Engine
 
 * Fix an issue in the code detecting when a second component of the same type is added to an entity that should accept only one component of that type.
+* Spotlights with shadows bug fix where multiple spotlights would reference the wrong shadowmap.
+* Normal maps property names changed and some shader crashes fixed.
 
 # Known Issues
 
