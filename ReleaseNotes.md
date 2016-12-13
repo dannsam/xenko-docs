@@ -333,7 +333,12 @@ Release date 2016/12/13
 * Fix an issue in the code detecting when a second component of the same type is added to an entity that should accept only one component of that type.
 * Spotlights with shadows bug fix where multiple spotlights would reference the wrong shadowmap.
 * Normal maps property names changed and some shader crashes fixed.
-
+* Fixed compressed normal maps having different signedness on different platforms; they are now always unsigned
+* Fixed Z component of normal maps when Scale & Offset is enabled
+* Fixed NaN values in normal mapping which caused glitches in post effects
+* Fixed shadow map range computation that caused parts of the scene not to be lit
+* Reenabled shadow cascade blending when automatic depth range computation is enabled and reduce the region of blending
+* Fixed invalid IL that prevented building UWP apps in release mode
 
 # Known Issues
 
