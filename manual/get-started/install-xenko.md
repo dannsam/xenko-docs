@@ -10,7 +10,7 @@ Xenko is a **powerful cross-platform Game Engine** which helps to **build games*
 * Physics Simulation
 * Audio Engine
 
-To work with Xenko Game Engine, you must first **download the installer**, and then **install Xenko**.
+To work with Xenko Game Engine, first **download the installer**, and then **install Xenko**.
 
 This page shows the steps to download and install Xenko Game Engine on your system.
 
@@ -66,6 +66,6 @@ You can download Xenko installer from the [Xenko website](http://xenko.com/downl
  
     ![Installation status](media/install-xenko-installation-status.png)
 
-After the installation finishes, the [Xenko launcher](xenko-launcher.md) opens. Shortcuts are created for Xenko in the selected locations.
+After the installation finishes, Xenko Launcher opens. Shortcuts are created for Xenko in the selected locations.
 
-Now you're ready to start using the [Xenko launcher](xenko-launcher.md).
+Now you're ready to [launch Xenko](launch-xenko.md).

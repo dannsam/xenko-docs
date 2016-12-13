@@ -10,7 +10,7 @@ It makes it easy to work in a team with the same asset management experience.
 
 For game developers, the editor is also integrated with your Visual Studio projects, so you can seamlessly sync and switch back and forth.
 
-![media/Editor.jpg](media/Editor.jpg) 
+![media/Editor.jpg](media/Editor.jpg)
 
 # Interface
 
