@@ -286,7 +286,7 @@ Release date 2016/11/29
 
 ### Issues fixed
 
-### Game Studio
+#### Game Studio
 
 * Moving or renaming an asset that has overridden properties (eg. a scene using prefabs) was loosing override information once saved.
 
@@ -299,6 +299,34 @@ Release date 2016/11/29
 
 * Missing normal maps on some samples have been restored
 
+## Version 1.9.1-beta
+
+Release date 2016/12/13
+
+### Enhancements
+
+#### Game Studio
+
+* Maintaining ALT key down when dropping a prefab into a scene won't create a container entity for the prefab instance.
+* Creation of prefabs from entities that are already instances of other prefabs and contains overridden properties will maintain prefab links and overrides in the newly created prefab.
+
+### Issues fixed
+
+#### Game Studio
+
+* Duplicating an entity that was linked to a prefab was not maintaining the prefab link to the copy in some scenarios.
+* Adding a new or existing package to a solution was causing a crash.
+* Fix hashing of source files to detect if an source file has changed.
+* Adding a component that requires unicity to a prefab when one of the instance already had an instance of this prefab was crashing.
+* Fix a crash that could occurs when removing an animation or a sound from an Animation Component or an Audio Emitter Component while the Game Studio was still compiling the asset.
+* Render stages are now properly re-evaluated when a property affecting rendering is modified (eg. casting shadows, adding transparency to a material...)
+* Fix insert position when dropping multiple assets into a scene at the same time
+* Fix opening a scene from a package project that is not a game was crashing.
+* Fx a crash that was occurring when adding a new Override in the GameSettings asset
+
+#### Engine
+
+* Fix an issue in the code detecting when a second component of the same type is added to an entity that should accept only one component of that type.
 
 # Known Issues
 
