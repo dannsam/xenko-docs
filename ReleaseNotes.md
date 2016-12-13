@@ -299,7 +299,7 @@ Release date 2016/11/29
 
 * Missing normal maps on some samples have been restored
 
-## Version 1.9.1-beta
+## Version 1.9.2-beta
 
 Release date 2016/12/13
 
