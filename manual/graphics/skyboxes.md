@@ -77,7 +77,7 @@ You can modify the following [Skybox component](xref:SiliconStudio.Xenko.Engine.
 
 ## Use a skybox as a light source
 
-You can set the skybox as the light type in a a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+You can set the skybox as the light type in a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
 For more information, see [Skybox lights](lighting-and-shadows/skybox-lights.md).
 
