@@ -5,8 +5,6 @@
 - [Asset](asset/index.md)
 - [Entity-component model](entity-component-model/index.md)
 - [File system](file-system.md)
-- [Prefabs](prefabs/index.md)
-
 
 # See also
 
