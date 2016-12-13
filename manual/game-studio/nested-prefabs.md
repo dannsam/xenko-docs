@@ -25,7 +25,7 @@ In the center pane, we already have a prefab named **Lamp**. In the right pane, 
 ## See also
 
 * [Prefab index](prefabs.md)
-* [Create prefabs](create-prefabs.md)
+* [Create prefabs](create-a-prefab.md)
 * [Use prefabs](use-prefabs.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Override prefab properties](override-prefab-properties.md)

@@ -5,7 +5,13 @@
 
 An **archetype** is a master asset that controls the properties of assets you **derive** from it. Derived assets are useful when you want to create a "remixed" version of an asset.
 
-For example, imagine we have three sphere entities that share a material asset. The asset has properties including color, glossiness, and so on. If we change a property in the asset, it applies to all three spheres. So, for example, if we change the color property, all three spheres change color.
+For example, imagine we have three sphere entities that share a material asset named *Metal*. The Metal asset has properties including color, glossiness, and so on.
+
+![Three metal spheres](media/archetypes-three-spheres-metal.png)
+
+If we change a property in the **Metal** asset, it applies to all three spheres. So, for example, if we change the color property, all three spheres change color.
+
+![Three gold spheres](media/archetypes-three-spheres-gold.png)
 
 Now imagine we want to change the color of only *one* sphere, but keep its other properties the same. We could duplicate the material asset, change its color, and then apply the new asset to only one sphere. But if we later want to change a different property across *all* the spheres, we have to modify both assets. This is time-consuming and leaves room for mistakes.
 
@@ -48,9 +54,9 @@ The **Property Grid** shows which properties of the derived asset differ from th
 
     ![Overriden properties are white](media/archetypes-overriden-properties-appear-white.png) 
 
-* **Identical** properties are **gray**:
+* **Inherited** (identical) properties are **gray**:
 
-    ![Identical properties are gray](media/archetypes-identical-properties-appear-gray.png) 
+    ![Inherited properties are gray](media/archetypes-identical-properties-appear-gray.png) 
 
 To display only properties that differ from the **archetype**, in the **Property Grid**, select **Display only overridden properties**:
 

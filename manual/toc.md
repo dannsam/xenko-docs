@@ -39,7 +39,7 @@
 # [Game Studio](game-studio/index.md)
 ## [Archetypes](game-studio/archetypes.md)
 ## [Prefabs](game-studio/prefabs.md)
-### [Create prefabs](game-studio/create-prefabs.md)
+### [Create a prefab](game-studio/create-a-prefab.md)
 ### [Use prefabs](game-studio/use-prefabs.md)
 ### [Edit prefabs](game-studio/edit-prefabs.md)
 ### [Nested prefabs](game-studio/nested-prefabs.md)
