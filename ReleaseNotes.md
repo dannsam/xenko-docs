@@ -280,6 +280,7 @@ Release date 2016/11/24
 
 * Fix a bug where an empty animation clip caused a crash
 
+
 ## Version 1.9.1-beta
 
 Release date 2016/11/29
@@ -298,6 +299,7 @@ Release date 2016/11/29
 #### Samples
 
 * Missing normal maps on some samples have been restored
+
 
 ## Version 1.9.2-beta
 
@@ -322,13 +324,16 @@ Release date 2016/12/13
 * Render stages are now properly re-evaluated when a property affecting rendering is modified (eg. casting shadows, adding transparency to a material...)
 * Fix insert position when dropping multiple assets into a scene at the same time
 * Fix opening a scene from a package project that is not a game was crashing.
-* Fx a crash that was occurring when adding a new Override in the GameSettings asset
+* Fix a crash that was occurring when adding a new Override in the GameSettings asset
+* Fix an issue when copy/pasting a component that requires unicity to an entity that already has one. Now the user will be correctly prompted whether this component should be replaced by the copy.
+* Fix incorrect filter list of asset types in the asset view.
 
 #### Engine
 
 * Fix an issue in the code detecting when a second component of the same type is added to an entity that should accept only one component of that type.
 * Spotlights with shadows bug fix where multiple spotlights would reference the wrong shadowmap.
 * Normal maps property names changed and some shader crashes fixed.
+
 
 # Known Issues
 
