@@ -1,6 +1,6 @@
 # [Get started](get-started/index.md)
 ## [Install Xenko](get-started/install-xenko.md)
-## [Xenko Launcher](get-started/xenko-launcher.md)
+## [Launch Xenko](get-started/launch-xenko.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Game Studio](get-started/game-studio.md)
 ## [Project structure](get-started/project-structure.md)
@@ -37,7 +37,13 @@
 ## [Set an audio device](audio/set-an-audio-device.md)
 
 # [Game Studio](game-studio/index.md)
-## [Prefabs](game-studio/prefabs/index.md)
+## [Archetypes](game-studio/archetypes.md)
+## [Prefabs](game-studio/prefabs.md)
+### [Create a prefab](game-studio/create-a-prefab.md)
+### [Use prefabs](game-studio/use-prefabs.md)
+### [Edit prefabs](game-studio/edit-prefabs.md)
+### [Nested prefabs](game-studio/nested-prefabs.md)
+### [Override prefab properties](game-studio/override-prefab-properties.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
@@ -94,6 +100,7 @@
 ### [Render features](graphics/rendering-pipeline/render-features.md)
 ### [Render stages](graphics/rendering-pipeline/render-stages.md)
 ## [Sprite fonts](engine/sprite-fonts.md)
+## [Skyboxes](graphics/skyboxes.md)
 ## [Tutorials](graphics/tutorials/index.md)
 ### [Set up an HDR pipeline with post-effects](graphics/tutorials/set-up-an-hdr-pipeline-with-posteffects.md)
 

@@ -44,13 +44,13 @@ Since we don't need the trigger to move, we'll make it a static collider.
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
-7. Let's make the trigger a larger area. In the **Property grid**, under **Transform**, set the **scale** to: *X:2, Y:2, Z:2*
+7. Let's make the trigger a larger area. In the **Property grid**, under the **Transform** component properties, set the **scale** to: *X:2, Y:2, Z:2*
 
     ![Scale a trigger](media/physics-tutorials-create-a-trigger-scale-trigger.png)
 
 We need to position the trigger between the ground and the sphere, so the ball falls through it.
     
-8. With the trigger entity selected, in the **Property grid**, under **Transform**, set the **Position** to: *X:0, Y:3, Z:0*
+1. In the **Property grid**, under the **Transform** component properties, set the **Position** to: *X:0, Y:3, Z:0*
 
     Now the trigger entity is between the ground and the sphere:
 
@@ -74,7 +74,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
     
     2b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
 
-3. Open the script, add the following code, and build your solution:
+3. Open the script, replace its content with the following code, and build your solution:
 
     ```
     using SiliconStudio.Xenko.Engine;
@@ -122,7 +122,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
 Finally, let's add this script to the trigger entity as a component.
 
-4. Back in **Game Studio**, select the trigger entity.
+4. Back in **Game Studio**, select the *Trigger* entity.
 
 5. In the **Property grid**, click **Add component** and select the **Trigger** script.
 

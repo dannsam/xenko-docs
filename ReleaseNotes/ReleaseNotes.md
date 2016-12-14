@@ -280,7 +280,68 @@ Release date 2016/11/24
 
 * Fix a bug where an empty animation clip caused a crash
 
+
+## Version 1.9.1-beta
+
+Release date 2016/11/29
+
+### Issues fixed
+
+#### Game Studio
+
+* Moving or renaming an asset that has overridden properties (eg. a scene using prefabs) was loosing override information once saved.
+
+#### Engine
+
+* Normal maps issue fixed where z-component was wrongly assumed to be 1 (it's now equal to sqrt(1 - x^2 - y^2))
+* Depth of Field halo around foreground objects issue resolved
+
+#### Samples
+
+* Missing normal maps on some samples have been restored
+
+
+## Version 1.9.2-beta
+
+Release date 2016/12/13
+
+### Enhancements
+
+#### Game Studio
+
+* Maintaining ALT key down when dropping a prefab into a scene won't create a container entity for the prefab instance.
+* Creation of prefabs from entities that are already instances of other prefabs and contains overridden properties will maintain prefab links and overrides in the newly created prefab.
+
+### Issues fixed
+
+#### Game Studio
+
+* Duplicating an entity that was linked to a prefab was not maintaining the prefab link to the copy in some scenarios.
+* Adding a new or existing package to a solution was causing a crash.
+* Fix hashing of source files to detect if an source file has changed.
+* Adding a component that requires unicity to a prefab when one of the instance already had an instance of this prefab was crashing.
+* Fix a crash that could occurs when removing an animation or a sound from an Animation Component or an Audio Emitter Component while the Game Studio was still compiling the asset.
+* Render stages are now properly re-evaluated when a property affecting rendering is modified (eg. casting shadows, adding transparency to a material...)
+* Fix insert position when dropping multiple assets into a scene at the same time
+* Fix opening a scene from a package project that is not a game was crashing.
+* Fix a crash that was occurring when adding a new Override in the GameSettings asset
+* Fix an issue when copy/pasting a component that requires unicity to an entity that already has one. Now the user will be correctly prompted whether this component should be replaced by the copy.
+* Fix incorrect filter list of asset types in the asset view.
+
+#### Engine
+
+* Fix an issue in the code detecting when a second component of the same type is added to an entity that should accept only one component of that type.
+* Spotlights with shadows bug fix where multiple spotlights would reference the wrong shadowmap.
+* Normal maps property names changed and some shader crashes fixed.
+* Fixed compressed normal maps having different signedness on different platforms; they are now always unsigned
+* Fixed Z component of normal maps when Scale & Offset is enabled
+* Fixed NaN values in normal mapping which caused glitches in post effects
+* Fixed shadow map range computation that caused parts of the scene not to be lit
+* Reenabled shadow cascade blending when automatic depth range computation is enabled and reduce the region of blending
+* Fixed invalid IL that prevented building UWP apps in release mode
+
 # Known Issues
 
 * On Linux, when switching the underlying Graphics Platform, rendering will not occur or fail. Delete the cache, local and roaming folder on the Linux host and restarting the game should fix the issue.
 * Performance issues on mobile (being worked on)
+* On iOS if `Enable device-specific builds` is toggled on (from the project properties) it won't be possible to debug game code. Please manually select the architecture of your device from the Advanced tab to speed up your development.

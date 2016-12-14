@@ -380,7 +380,44 @@ because videos were too heavy is over. Nowadays Internet connections and compres
 are good enough to include short videos in the documentation and increase even more the ease of
 understanding.
 
-#  <a name="FilesStructure"> Pages & Files Structure </a>
+### How to encode videos
+
+To make sure videos play well in different browsers and on different devices, stick to a format with low requirements, such as H264 baseline profile (which works almost everywhere).
+
+To convert a video to this format, process the file using [fmpeg](https://ffmpeg.org/download.html).
+
+1. Download the Ffmpeg package for your operating system.
+
+2. Run the ff-prompt.bat file.
+
+3. In the ff-prompt.bat command line, browse to the folder with the video you want to convert.
+
+4. Run the following command, replacing ``myvideo_original.mp4`` with the filename of the video you want to convert, and ``myvideo.mp4`` with the filename of the output file you want to create:
+
+```
+ffmpeg -i myvideo_original.mp4 -profile:v baseline -level 3.0 -an myvideo.mp4
+```
+
+After you do this, generate a static thumbnail so that mobile users can preview the video before downloading. To do this, run:
+
+```
+ffmpeg -i myvideo.mp4 -vframes 1 -f image2 -y myvideo.jpg
+```
+
+### Embed videos
+
+Put this syntax in the .md file, replacing the directories and filenames with the files you want to use:
+
+
+```
+<p>
+    <video autoplay loop class="responsive-video" poster="folder/myvideo.jpg">
+       <source src="folder/myvideo.mp4" type="video/mp4">
+    </video>
+</p>
+```
+
+# <a name="FilesStructure"> Pages & Files Structure </a>
 
 The hierarchy of the documentation pages is specified in the [manual/toc.md](manual/toc.md) file
 and is independent from the file hierarchy of this repository. For example, a single article can
@@ -480,7 +517,7 @@ Examples:
 
 In order to simplify the reading of the documentation, it is important that you properly use bold and italic styles.
 
-Put every important words or steps in bold using the **Text in bold** syntax.
+Put every important word or step in bold using the **Text in bold** syntax.
 
 Put every UI element or Window names in italic using the *Text in italic* syntax.
 
