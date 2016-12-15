@@ -19,10 +19,6 @@ The better approach is to derive a new asset from the archetype. The derived ass
 
 ![Create derived asset](media/archetypes-three-spheres.png)
 
-* If the property in the archetype and the derived asset is **identical**, the derived asset inherits changes from the archetype for that property.
-
-* If the property in the archetype and the derived asset is **different**, the derived asset doesn't inherit changes from the archetype for that property.
-
 You can derive an asset from an archetype, then in turn derive another asset from that derived asset. This way you can create different layers of assets to keep your project organized:
 
 ```cs
@@ -39,24 +35,21 @@ In the **Asset View**, right-click the asset you want to derive an asset from an
 
 Game Studio adds a new **derived asset** to the project. This asset derives its properties from the **archetype** asset.
 
-The derived asset's **Property Grid** displays the archetype asset under **Archetype**:
+The derived asset properties display the archetype asset under **Archetype**:
 
 ![Derived asset in Property Grid](media/archetypes-archetype-in-property-grid.png)
 
-> [!Tip] 
-> You can right-click the archetype asset in the Property Grid and select **Select the referenced asset** to quickly select the archetype asset.
+You can right-click the archetype asset in the Property Grid and select **Select the referenced asset** to quickly select the archetype asset:
+
+![Select referenced asset](media/archetypes-select-the-referenced-asset.png)
 
 ### Overridden properties
 
-The **Property Grid** shows which properties of the derived asset differ from the archetype. 
+The **Property Grid** shows which properties of the derived asset differ from the archetype. **Overridden** and **unique** properties are **white**, and **inherited** (identical) properties are **gray**.
 
-* **Overridden** and **unique** properties are **white**:
+In this screenshot, the **Diffuse Map** property is overridden. The other properties are inherited:
 
-    ![Overriden properties are white](media/archetypes-overriden-properties-appear-white.png) 
-
-* **Inherited** (identical) properties are **gray**:
-
-    ![Inherited properties are gray](media/archetypes-identical-properties-appear-gray.png) 
+![Overriden properties are white](media/archetypes-overriden-properties-appear-white.png) 
 
 To display only properties that differ from the **archetype**, in the **Property Grid**, select **Display only overridden properties**:
 
@@ -70,7 +63,7 @@ You can reset overridden or unique properties of a derived asset to the values i
 
 ### Clear an archetype
 
-You can remove the link between the archetype and the derived asset. This means the derived asset won't inherit changes to the archetype; it becomes a completely independent.
+You can remove the link between the archetype and the derived asset. This means the derived asset no longer inherits changes to the archetype; it becomes a completely independent.
 
 To do this, in the **Asset View**, right-click the derived asset and select **Clear archetype**.
 

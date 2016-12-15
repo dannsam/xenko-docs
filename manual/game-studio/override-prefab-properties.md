@@ -3,11 +3,7 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-When you change a property in an instance created from a prefab, the prefab itself isn't affected - only that instance. This is called an **override**. 
-
-* If the property in the prefab and the prefab instance is **identical**, the instance inherits changes from the prefab for that property.
-
-* If the property in the prefab and the prefab instance is **different**, the instance doesn't inherit changes from the prefab for that property.
+If you modify a property in a prefab instance, the instance no longer inherits changes from the prefab for that property. This is called an **override**. 
 
 ![How prefabs work](media/create-manage-prefabs-how-prefabs-work.png)
 
