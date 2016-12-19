@@ -141,7 +141,8 @@
 ## [Tutorials](particles/tutorials/index.md)
 ### [Ribbons](particles/tutorials/ribbons.md)
 ### [Inheritance](particles/tutorials/inheritance.md)
-### [Lasers and lightnings](particles/tutorials/lasers.md)
+### [Lasers and lightning](particles/tutorials/lasers.md)
+### [Create a trail](particles/tutorials/create-a-trail.md)
 
 # [Physics](physics/index.md)
 ## [Colliders](physics/colliders.md)
