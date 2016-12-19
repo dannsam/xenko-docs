@@ -209,4 +209,4 @@ If you'd like to see how it works, [download the project file](media/ParticlesSp
 * [Particles](index.md)
 * [Tutorial: lasers](lasers.md)
 * [Tutorials: ribbons](ribbons.md)
-* [Prefabs](../../game-studio/prefabs.md).
+* [Prefabs](../../game-studio/prefabs.md)
