@@ -7,7 +7,7 @@
 This tutorial demonstrates how to use particles to create a trail effect for a sword swing.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-9.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-9.jpg">
    <source src="media/sword-slash-9.mp4" type="video/mp4">
 </video>
 </p>
@@ -61,7 +61,7 @@ This tutorial demonstrates how to use particles to create a trail effect for a s
 10. Let's see how everything looks so far. Click **Play** to run the game and check it out. Remember you can use the mouse and WASD keys to move the camera and see the animation from different perspectives.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-1.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-1.jpg">
    <source src="media/sword-slash-1.mp4" type="video/mp4">
 </video>
 </p>
@@ -123,7 +123,7 @@ First we'll build a basic trail, just to see how it looks.
 11. Run the game to see how the particles look with the sword-swinging animation.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-2.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-2.jpg">
    <source src="media/sword-slash-2.mp4" type="video/mp4">
 </video>
 </p>
@@ -154,7 +154,7 @@ Because the particles are rendered as billboards, the segments of the trail inte
 4. Run the game.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-3.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-3.jpg">
    <source src="media/sword-slash-3.mp4" type="video/mp4">
 </video>
 </p>
@@ -200,7 +200,7 @@ To fix the color, we'll give the particles a "swoosh" texture:
 7. Run the game.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-4.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-4.jpg">
    <source src="media/sword-slash-4.mp4" type="video/mp4">
 </video>
 </p>
@@ -290,7 +290,7 @@ We've created a sword trail effect prefab. Next we'll use a script to spawn the 
 12. Run the game.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-5.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-5.jpg">
    <source src="media/sword-slash-5.mp4" type="video/mp4">
 </video>
 </p>
@@ -310,7 +310,7 @@ Thanks to our script, the particle effect appears at the start of the sword swin
 4. Run the game to see how it looks.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-6.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-6.jpg">
    <source src="media/sword-slash-6.mp4" type="video/mp4">
 </video>
 </p>
@@ -328,7 +328,7 @@ You might notice our trail effect looks a little jagged, creating a "spiderweb" 
 2. Run the game.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-7.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-7.jpg">
    <source src="media/sword-slash-7.mp4" type="video/mp4">
 </video>
 </p>
@@ -348,7 +348,7 @@ We want to smooth the effect at the sword's edge, where it's more noticeable. To
 2. Run the game.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-8.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-8.jpg">
    <source src="media/sword-slash-8.mp4" type="video/mp4">
 </video>
 </p>
@@ -362,7 +362,7 @@ Now we have a new problem. Because we moved the particle effect to the tip of th
 7. Run the game.
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-9.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-9.jpg">
    <source src="media/sword-slash-9.mp4" type="video/mp4">
 </video>
 </p>
@@ -374,7 +374,7 @@ Congratulations! You created a trail effect from scratch. How you tweak it now i
 Here's a more elaborate trail that combines multiple particle effects:
 
 <p>
-<video autoplay loop class="responsive-video" poster="media/sword-slash-10.mp4">
+<video autoplay loop class="responsive-video" poster="media/sword-slash-10.jpg">
    <source src="media/sword-slash-10.mp4" type="video/mp4">
 </video>
 </p>
