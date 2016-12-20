@@ -44,7 +44,7 @@ namespace MyTrailEffect
         /// Set the time interval (in seconds) at which to spawn new instances. Set it to 0 to deactivate.
         /// </summary>
         [DataMember(50)]
-        [Display("Interval")]
+        [Display("Start time")]
         public float TimeInterval { get; set; } = 0f;
 
         public override async Task Execute()

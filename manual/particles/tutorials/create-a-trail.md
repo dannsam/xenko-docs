@@ -104,7 +104,7 @@ First we'll build a basic trail, just to see how it looks.
 
     This adds a velocity initializer to the emitter. 
 
-At this point, you can grab the mannequin and move it around the scene to see how the particles behave. They look like a cloud of blocky smoke.
+    At this point, you can grab the mannequin and move it around the scene to see how the particles behave. They look like a cloud of blocky smoke.
 
 8. Under the velocity initializer, set both the **Velocity min** and **Velocity max** values to **0, 5, 0**.
 
@@ -136,8 +136,8 @@ Because the particles are rendered as billboards, the segments of the trail inte
 
 1. In the SwordModel properties, under **Particle System > Source > Emitters**, next to **Initializers**, click the **green plus icon** and select **Spawn Order**.
 
->[!Note]
->Make sure you don't select **Spawn Order (Parent)** or **Spawn Order (Group)**.
+    >[!Note]
+    >Make sure you don't select **Spawn Order (Parent)** or **Spawn Order (Group)**.
 
     ![Add spawn-order initializer](media/add-spawn-order-initializer.png)
 
@@ -181,7 +181,7 @@ To fix the color, we'll give the particles a "swoosh" texture:
 
     ![Add a texture](media/add-texture.png)
 
-3. In the **SwordModel** properties, expand **Emitters > Material**. Click the hand icon (**Pick an asset up**) to open the Asset Picker, and select **swoosh.png**.
+3. In the **SwordModel** properties, expand **Emitters > Material**. Click the hand icon (**Pick an asset up**) to open the Asset Picker. Browse to the **Textures** folder and select **swoosh.png**.
 
     ![Add material texture](media/add-material.png)
 
@@ -305,7 +305,9 @@ Thanks to our script, the particle effect appears at the start of the sword swin
 
 2. Select the **SwordModel**.
 
-3. In the **SpawnTrail** properties, set the Start Time to 0.06. This means the trail effect won't spawn until 0.06 seconds into the swing animation, which looks a little more natural. Feel free to tweak this to your liking.
+3. In the **SpawnTrail** properties, set the **Start time** to 0.06. This means the trail effect won't spawn until 0.06 seconds into the swing animation, which looks a little more natural. Feel free to tweak this to your liking.
+
+4. Run the game to see how it looks.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/sword-slash-6.mp4">
@@ -337,9 +339,13 @@ The inner curve, at the sword hilt, is smoother. But the curve at the sword's ed
 
 We want to smooth the effect at the sword's edge, where it's more noticeable. To do that, we'll flip the particle direction.
 
-4. Still in the **SwordTrail** prefab, under **Transform**, change the **Position** to **0, 0, -1**. This moves the starting point of the particle effect to the tip of the sword.
+1. Still in the **SwordTrail** prefab, in the **Transform** component properties, change the **Position** to **0, 0, -1**.
 
-5. Run the game.
+    ![Swordtrail position](media/swordtrail-position.png)
+
+    This moves the starting point of the particle effect to the tip of the sword.
+
+2. Run the game.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/sword-slash-8.mp4">
@@ -362,6 +368,8 @@ Now we have a new problem. Because we moved the particle effect to the tip of th
 </p>
 
 Congratulations! You created a trail effect from scratch. How you tweak it now is up to you.
+
+## Sample project
 
 Here's a more elaborate trail that combines multiple particle effects:
 
