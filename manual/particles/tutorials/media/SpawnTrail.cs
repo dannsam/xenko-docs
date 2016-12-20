@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SiliconStudio.Core;
 using SiliconStudio.Xenko.Engine;
 
-namespace MyGame8
+namespace MyTrailEffect
 {
     /// <summary>
     /// A script which spawns a timed instance from a source prefab.
