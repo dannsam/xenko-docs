@@ -1,10 +1,10 @@
-# Editing Particle Effects
+# Edit particle effects
 
 ![media/particles-reference-editor-0.png](media/particles-reference-editor-0.png) 
 
 This document assumes you are already familiar with the [Terminology](terminology.md) regarding particles.
 
-## Creating Particle Systems
+## Create a particle system
 
 Particles can be created directly in the game studio by using the scene and the property grid windows.
 
@@ -20,7 +20,7 @@ Alternatively you can create the entity directly in the scene viewport by right-
 
 If you create an empty particle system it won't have any particles so you won't see anything but the icon. We suggest trying the preset systems first.
 
-## Editing a Particle System
+## Edit a particle system
 
 You can select an entity containing a particle system component and edit it using the Property Grid just like any other entity in the game studio.
 
@@ -28,7 +28,7 @@ You can select an entity containing a particle system component and edit it usin
 
 An entity requires the Transform component and the particle system component to contain a particle system. You can add a particle system component to any entity which doesn't have one already. If you want two particle systems to share the same transformation you can create two entities and add one of them as a child to the other.
 
-### Transform Component
+### Transform component
 
 The transform component provides a locator for the particle system. Think of it as the node in the scene where you attach the particle system. Some elements in the particle system may choose to ignore one or more locator elements, for example rotation or scaling. For example the gravity force should not depend on the rotation of the particle system and always ignores rotation, but a fountain particle system inherits the location for the purposes of initial particle velocity. For scaling, only uniform scaling is supported. If you have a non-uniform scale on the transform component, only the X axis will be used.
 
@@ -46,7 +46,7 @@ Contrary to the exposed values, the source is the low-level implementation of th
 
 When you first play the particle effect it will appear already running if you set this value to greater than 0. The units are in seconds, so if you set 1 as warm-up time the particle effect will appear as if it has already been active for 1 second.
 
-#### Bounding Shape
+#### Bounding shape
 
 Contains a user-defined shape used by the engine for culling and optimizations.
 
@@ -61,4 +61,3 @@ Exposed values are properties of the particle effect exposed to the user. When a
 There are two exposed values Color Shade, which controls the shade of the entire particle effect, and Speed Scale, which controls the simulation speed for the entire particle effect.
 
 *Note! These two properties are likely to be merged in a user-customizable property list in the future.*
-
