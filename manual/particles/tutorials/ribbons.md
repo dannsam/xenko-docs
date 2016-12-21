@@ -8,19 +8,31 @@ In this diagram, several particles (represented as red dots) are rendered as ind
 
 ![Diagram: individual quads](media/particles-diagram-quads.png)
 
-In this diagram, the same particles are rendered by connecting them to each other and rendering the quad between the adjacent particles. This appears as a continuous strip or "ribbon".
+In the diagram below, a "strip" is created by connecting the particles and rendering the quad between the adjacent particles.
 
 ![Diagram: ribbon of particles](media/particles-diagram-strip.png)
 
-To change the shape go to *Shape* and choose either *Ribbon* or *Trail*. They are both displayed as connected strips of quads, but the ribbon will try to render the strip facing the camera as much as possible. The trail on the other hand will display the strip fixed in 3D space, but it requires one additional attribute, Direction. With both the particle's position and direction a completely defined 3D surface can be built.
+## Ribbons vs trails
+
+Both ribbons and trails generate a flat surface which follows an axis connecting adjacent particles in a line. This line defines one of the axes of the surface.
+
+The difference between ribbons and trails is in the second axis used to build the shape. In case of ribbons, the second axis is positioned in camera space, facing the ribbon towards the camera at all times. This gives the illusion of volume to the ribbon, but the shape is not stable in 3D, as it changes when the camera moves.
+
+Trails read an extra attribute, **Direction**, from the particle data and use it as a second axis for the surface. This **fixes the surface in 3D space**, so trails don't change with the camera position. 
+
+The gif below shows the different behavior of ribbons (red) and trails (yellow) when viewed from different camera angles. Note how the ribbon doesn't change as the camera moves.
+
+![Ribbons vs trails](media/ribbons-vs-trails.gif)
 
 ## Order particles
 
-If you switched from a billboard shape to a ribbon or a trails you may experience the following problem. 
+Ribbons and trails usually need the particles to be sorted into an order to work as expected.
+
+This diagram shows how unordered particles in a strip connect:
 
 ![Diagram: unordered particles/particles-tutorials-ribbons-2.png](media/particles-diagram-unordered.png)
 
-Rather than connecting the particles in order, the strip erratically jumps between particles, seemingly at random. This is the same problem alpha-blended quads have when they are not properly sorted. To fix this, we need to sort the particles.
+Rather than the particles connecting in order, the strip erratically jumps between particles. This is the same problem alpha-blended quads have when they are not properly sorted.
 
 To sort the particles, under **Particle System > Source > Emitters**, change the **Sorting** property.
 
@@ -36,23 +48,11 @@ In such cases you want to sort the particles by order. Order is an new particle 
 
 Sorting by depth might work in niche cases, but this doesn't preserve the order between different frames. We don't recommend it for most situations.
 
-## Ribbons vs trails
-
-Both ribbons and trails generate a flat surface which follows an axis connecting adjacent particles in a line. This line defines one of the axes of the surface.
-
-The difference between ribbons and trails is in the second axis used to build the shape. In case of ribbons, the second axis is positioned in camera space, facing the ribbon towards the camera at all times. This gives the illusion of volume to the ribbon, but the shape is not stable in 3D, as it changes when the camera moves.
-
-Trails read an extra attribute, **Direction**, from the particle data and use it as a second axis for the surface. This **fixes the surface in 3D space**, so trails don't change with the camera position. 
-
-The image below shows the different behavior of ribbons (red) and trails (yellow) when viewed from different camera angles. Note how the ribbon doesn't change as the camera moves.
-
-![media/particles-tutorials-ribbons-3.gif](media/particles-tutorials-ribbons-3.gif)
-
 ## Texture coordinates
 
 Unlike billboards, which are individual quads, ribbons and trails have a single surface across all particles. To define how textures are mapped across the surface, under **Particle System > Source > Emitters > Shape**, change the **UV Coords** property.
 
-![UV c0ords property](media/uv-coords.png)
+![UV coords property](media/uv-coords.png)
 
  - **AsIs**: The texture is mapped per segment, essentially copying the same quad stretched between every two particles. This is sometimes useful when combined with flipbook animations (in the Material settings).
 
@@ -70,20 +70,22 @@ Unlike billboards, which are individual quads, ribbons and trails have a single 
 
 You can add extra segments between adjacent particles to smooth the lines between particles. To do this, under **Particle System > Source > Emitters > Shape**, change the **Smoothing** property.
 
- * **None** - No smoothing means there is only one segment joining two particles. Sharp angles along the central axis are apparent.
+ * **None** - No smoothing means there is only one segment joining two particles. This creates a sharp-angled trail or ribbon.
 
     ![Diagram: particle smoothing](media/diagram-smoothing-none.png)
  
- * **Fast** - This uses [Catmull-Rom interpolation (Wikipedia)](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline) to add control points between particles. You can set the number of segments between every two particles with the **Segments** property.
+ * **Fast** - This uses [Catmull-Rom interpolation (Wikipedia)](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline) to add extra segments between particles. You can set the number of segments with the **Segments** property.
 
      ![Diagram: particle smoothing](media/diagram-smoothing-fast.png)
  
- * **Best** - This matches a circumcircle around every three sequential particles along the control axis and then adds extra control points on the circle, keeping the segments in an arc. For the first and the last segment there is only one arc to be followed, but for mid-sections there are two different arcs from two different circles. In this case, the control points are interpolated from the first arc to the second, as the point approaches the second particle. The Best setting generally creates the smoothest effect, but requires more CPU. You can set the number of segments between every two particles with the **Segments** property.
+ * **Best** - The Best setting generally creates the smoothest effect, but requires more CPU. It calculates a circumcircle around every three sequential particles along the control axis, then adds extra control points on the circle, keeping the segments in an arc. For the first and the last segment, there is only one arc to be followed, but for mid-sections, two different arcs from two different circles overlap; Xenko interpolates the control points from the first arc and the second as the point approaches the second particle. You can set the number of segments between every two particles with the **Segments** property.
 
     ![Diagram: particle smoothing](media/diagram-smoothing-best.png)
 
-This video shows the difference between the smoothing methods (left: none, center: fast, right: best).
+This video shows the difference between the three smoothing methods. Note that the rightmost trail (using the **Best** method) has a more circular shape, closer to the actual path of the sword swing.
 
 ![media/particles-tutorials-ribbons-6.gif](media/particles-tutorials-ribbons-6.gif)
 
-You can check the **Ribbon Particles Sample** if you need a quick look at a project which already uses ribbons and trails.
+## Sample project
+
+For an example of a project that uses ribbons and trails, try the **Ribbon Particles Sample** included with Xenko.
