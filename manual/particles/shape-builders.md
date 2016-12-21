@@ -28,13 +28,13 @@ This sprite is a billboard which is aligned and stretched to the particle's dire
 
 The ribbon is a special kind of shape builder which draws several particles together, as a connected strip rather than individually. The ribbon is always camera-facing.
 
-For more information check the [Ribbons and Trails](../tutorials/ribbons.md) page.
+For more information, see the [Ribbons and Trails](tutorials/ribbons.md) page.
 
 ## Trail
 
 The trail is a special kind of shape builder which draws several particles together, as a connected strip rather than individually. The trail is not camera-facing, but fixed in space.
 
-For more information check the [Ribbons and Trails](../tutorials/ribbons.md) page.
+For more information, see the [Ribbons and Trails](tutorials/ribbons.md) page.
 
 ## More
 

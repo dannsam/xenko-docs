@@ -3,10 +3,10 @@
 ![media/particles-reference-terminology-0.png](media/particles-reference-terminology-0.png) 
 
 - `Entity`
-	[Entity](../../engine/entity-component-model/index.md) is the base class for objects that are managed by the high-level engine.
+	[Entity](../engine/entity-component-model/index.md) is the base class for objects that are managed by the high-level engine.
 	
 - `Particle System Component`
-	[Component](../../engine/entity-component-model/index.md) is a modular element contained in the entity which provides functionality based on its type. The Particle System Component is a wrapper which provides a Particle System for the entity it is attached to.
+	[Component](../engine/entity-component-model/index.md) is a modular element contained in the entity which provides functionality based on its type. The Particle System Component is a wrapper which provides a Particle System for the entity it is attached to.
 	
 - `Particle System`
 	A Particle System is a low-level object and is the root for any particle effects. It acts as a container for all the different elements needed to simulate and draw a particle effect. A Particle System provides methods to draw, update, pause, stop and play a particle effect. From the game designer's point of view this is one logical unit, and what they use to create a particle effect. From the effects artist's point of view, this is the base on which the entire particle effect is built.

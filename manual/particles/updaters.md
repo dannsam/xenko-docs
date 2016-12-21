@@ -4,7 +4,7 @@
 
 Once a particle is spawned it can change over time before it disappears. Updaters act on all living particles over time, changing their attributes like position, velocity, color, etc. For example a gravity force is an updater which updates the particle's velocity with a constant value, making it accelerate faster towards the ground.
 
-There are several built-in updaters and more will be added in the future. The [Custom Particles](../samples/custom-particles.md) sample shows how you can add your own updaters to the engine.
+There are several built-in updaters and more will be added in the future. The [Custom Particles](samples/custom-particles.md) sample shows how you can add your own updaters to the engine.
 
 ## Common attributes
 
