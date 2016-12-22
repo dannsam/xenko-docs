@@ -340,7 +340,7 @@ h4{
 h5{
     font-size: 16px;
 }
-<<<<<<< HEAD
+
 /* Redesign Documentation main page (05.12.2016) */
 .submenu-navbar{
     margin: 5px 0;
@@ -368,6 +368,9 @@ h5{
     margin-left: 0;    
     position: relative;
     margin-bottom: 35px;
+    min-height: 160px;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 .documentation_list li a h2,
 .documentation_list li a p{
@@ -377,17 +380,24 @@ h5{
 .documentation_list li a h2:before{
     display: none;
 }
-.documentation_list li a p:after{
-    content: " ";
-    display: inline-block;
-    background: url(http://xenko.com/images/svg/arrow_red_8.svg) no-repeat 100% 50%;
-    position: absolute;
-    top: 15%;
-    right: -50px;
-    height: 70%;
-    width: 50px;
+.documentation_list li .xi_arrowLink{
+    width: 40px;
+    height: 78px;
+    float: right;
+    position: relative;
+    top: 0;
+    right: 0;
+    display: block;
+    overflow: hidden;
+    background: url(http://xenko.com/images/svg/arrow.svg) no-repeat -26px 50%;
+    background-size: 132px 200px;
 }
-
+.documentation_list li:hover .xi_arrowLink{
+    background-position: 100% 50%;
+}
+.documentation_list li:hover{
+    background-color: #E8E8E8;
+}
 .custom__breadcrumb{
     margin-top: 15px;
     padding: 15px 0 0 0;
@@ -415,7 +425,6 @@ h5{
         padding-left: 10px;
         padding-right: 10px;
     }
-=======
 @media only screen and (max-width: 1625px){
     .sidefilter, 
     .sidetoc{        
@@ -443,5 +452,4 @@ h5{
     .sidetoc{                
         width: 100%;
     } 
->>>>>>> 8f5ea6bdbf4d9c53978045ecb31e2312178bacd4
 }

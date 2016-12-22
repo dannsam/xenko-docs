@@ -1,5 +1,5 @@
 <style>
-	.sideaffix{
+	.sideaffix, h1{
 		display: none;
 	}
 </style>
@@ -11,6 +11,7 @@
 			<h2>
 				Manual
 			</h2>
+			<div class="xi_arrowLink"></div>
 			<p>
 				Learn how to build projects and complete tasks in Xenko, including step-by-step tutorials
 			</p>
@@ -21,6 +22,7 @@
 			<h2>
 				API reference
 			</h2>
+			<div class="xi_arrowLink"></div>
 			<p>
 				Xenko's API, with methods, properties, and other relevant information
 			</p>
@@ -31,6 +33,7 @@
 			<h2>
 				Release notes
 			</h2>
+			<div class="xi_arrowLink"></div>
 			<p>
 				What's in the latest version of Xenko (and older versions too)
 			</p>
