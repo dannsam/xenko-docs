@@ -7,7 +7,7 @@
 {{#children}}
   <h2 id="{{id}}">{{>partials/namespaceSubtitle}}</h2>
   <div class="table-responsive documentation__table">
-	  <table class="table">
+	  <table class="table table-bordered table-striped table-condensed">
   		{{#children}}  
 		    <tr>
 		    	<td>
