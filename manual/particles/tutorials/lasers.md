@@ -8,7 +8,7 @@ This tutorial explains in depth how to create lasers and lightnings using partic
 
 You can check the **Lasers and Lightnings Sample** if you need a quick look at a project which already implements most techniques described below.
 
-## Lightnings using particles
+## Lightning using particles
 
 Suppose we want to create a lightning arc like this one:
 
