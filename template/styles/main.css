@@ -38,10 +38,14 @@ ul li  img, ol li img {
 
 .sidefilter {
     top: 90px;
+    width: 390px;
+    margin-left: -130px;
 }
 
 .sidetoc {
     top: 156px;
+    width: 390px;
+    margin-left: -130px;
 }
 
 .breadcrumb {
@@ -336,6 +340,7 @@ h4{
 h5{
     font-size: 16px;
 }
+<<<<<<< HEAD
 /* Redesign Documentation main page (05.12.2016) */
 .submenu-navbar{
     margin: 5px 0;
@@ -410,4 +415,33 @@ h5{
         padding-left: 10px;
         padding-right: 10px;
     }
+=======
+@media only screen and (max-width: 1625px){
+    .sidefilter, 
+    .sidetoc{        
+        margin-left: 0;
+    } 
+    .article.grid-right{
+        margin-left: 410px;
+    }  
+}
+@media only screen and (max-width: 1275px){
+    .sidefilter, 
+    .sidetoc{        
+        margin-left: 0;
+        width: 260px;
+    } 
+    .article.grid-right{
+        margin-left: 280px;
+    }  
+}
+@media only screen and (max-width: 768px){
+    .article.grid-right{
+        margin-left: 0;
+    } 
+    .sidefilter, 
+    .sidetoc{                
+        width: 100%;
+    } 
+>>>>>>> 8f5ea6bdbf4d9c53978045ecb31e2312178bacd4
 }

@@ -2,7 +2,7 @@
 
 This walkthrough shows how you can create simple particle effects in the game studio.
 
-Please check the [Editing Particles](../reference/particle-editor.md) page if you are not familiar with how to edit the particles.
+Please check the [Editing Particles](../particle-editor.md) page if you are not familiar with how to edit the particles.
 
 ![media/particles-samples-material-0.png](media/particles-samples-simple-0.png) 
 
