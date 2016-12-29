@@ -238,6 +238,7 @@ article table {
     padding: 10px 10px 10px 36px;
     margin-top: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .TIP {
@@ -272,7 +273,7 @@ article table {
     font-family: 'Glyphicons Halflings';
     font-size: initial;
     margin-left: -22px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .TIP > :first-child::before {
