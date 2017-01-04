@@ -24,16 +24,27 @@ For example, imagine you develop a first-person shooter game and need to assign 
 public override void Start()
 {
     base.Start();
-    //Bind "M" key to a virtual button "MyButton".
-    VirtualButtonBinding b = new VirtualButtonBinding("MyButton", VirtualButton.Keyboard.M);
+
+    // Create a new VirtualButtonConfigSet if none exists. 
+    Input.VirtualButtonConfigSet = Input.VirtualButtonConfigSet ?? new VirtualButtonConfigSet();
+    
+    //Bind "M" key, GamePad "Start" button and left mouse button to a virtual button "MyButton".
+    VirtualButtonBinding b1 = new VirtualButtonBinding("MyButton", VirtualButton.Keyboard.M);
+    VirtualButtonBinding b2 = new VirtualButtonBinding("MyButton", VirtualButton.GamePad.Start);
+    VirtualButtonBinding b3 = new VirtualButtonBinding("MyButton", VirtualButton.Mouse.Left);
 
     VirtualButtonConfig c = new VirtualButtonConfig();
 
-    c.Add(b);
+    c.Add(b1);
+    c.Add(b2);
+    c.Add(b3);
 
     Input.VirtualButtonConfigSet.Add(c);
-   
-    float button = Input.GetVirtualButton(1, "MyButton");
+}
+
+public override void Update() {
+    float button = Input.GetVirtualButton(0, "MyButton");
+}
 ```
 
 > [!Note]
