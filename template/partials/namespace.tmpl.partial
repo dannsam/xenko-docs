@@ -7,17 +7,17 @@
 {{#children}}
   <h2 id="{{id}}">{{>partials/namespaceSubtitle}}</h2>
   <div class="table-responsive documentation__table">
-	  <table class="table table-bordered table-striped table-condensed">
-  		{{#children}}  
-		    <tr>
-		    	<td>
-		    		<p><xref href="{{uid}}" altProperty="fullName" displayProperty="name"/></p>
-		    	</td>
-		    	<td>
-		    		<section>{{{summary}}}</section>
-		    	</td>
-		    </tr>	  
-  		{{/children}}
-  	</table>
-	</div>
+    <table class="table table-bordered table-striped table-condensed">
+        {{#children}}  
+        <tr>
+            <td>
+                <p><xref href="{{uid}}" altProperty="fullName" displayProperty="name"/></p>
+            </td>
+            <td>
+                <section>{{{summary}}}</section>
+            </td>
+        </tr>  
+        {{/children}}
+    </table>
+  </div>
 {{/children}}
