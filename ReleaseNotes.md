@@ -345,6 +345,12 @@ Release date 2016/12/13
 
 Release date 2017/1/11
 
+### Enhancement
+
+#### Engine
+
+* Animation: UpdateEngine (used by animation system to update values) will skip updating values if target is an array or list (i.e. list of bones) whose size is not big enough. This was previously leading to memory corruption.
+
 ### Issues fixed
 
 #### Game Studio
@@ -362,6 +368,10 @@ Release date 2017/1/11
 #### Game Studio
 
 * Normal maps and Grayscale textures will now appear as 3-channel textures in the thumbnails and the preview.
+
+#### Connection Router
+
+* Due to the way adb was spawning a daemon process, connection router port was locked due to socket handle inheritability. This is now properly disabled.
 
 # Known Issues
 
