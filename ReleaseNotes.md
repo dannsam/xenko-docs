@@ -350,7 +350,18 @@ Release date 2017/1/11
 #### Game Studio
 
 * Fix issues with collection properties in the property grid.
+* Fix an issue where thumbnail backgrounds get dark when in Gamma rendering pipeline.
 
+#### Particles
+
+* Fix a bug where Edge and Center definitions for trail shape renderer were swapped
+* Fix a bug where None for particle material still displays color
+
+### Improvements
+
+#### Game Studio
+
+* Normal maps and Grayscale textures will now appear as 3-channel textures in the thumbnails and the preview.
 
 # Known Issues
 
