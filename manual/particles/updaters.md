@@ -4,7 +4,7 @@ After a particle spawns, it can change over time before it disappears. **Updater
 
 For example, a gravity force updates the particle's velocity at a constant rate, accelerating it toward the ground.
 
-Xenko features several built-in updaters. The [custom particles](samples/custom-particles.md) sample demonstrates how you can add your own updaters to the engine.
+Xenko features several built-in updaters. The [custom particles](tutorials/custom-particles.md) sample demonstrates how you can add your own updaters to the engine.
 
 ## Common properties
 

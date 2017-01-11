@@ -2,7 +2,7 @@
 
 This walkthrough shows how you can create custom extensions for the particle system, providing functionality not available in the core engine.
 
-The sample is focused primarily on the particle simulation. For rendering, please check the [Custom Particle Material](particle-material.md) sample walkthrough.
+The sample is focused primarily on the particle simulation. For rendering, check the [Custom Particle Material](particle-materials.md) sample walkthrough.
 
 Please check the [Editing Particles](../create-particles.md) page if you are not familiar with how to edit the particles.
 
