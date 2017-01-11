@@ -347,6 +347,13 @@ Release date 2017/1/11
 
 ### Enhancement
 
+#### Game Studio
+
+* Maintaining ALT key down while moving an entity to a different parent will now keep its absolute position/orientation/scale
+* Display the current version of Xenko in the Project Selection window
+* Add more logging messages when creating a new project
+* Improve tab header presentation, allow to see all open editors at once
+
 #### Engine
 
 * Animation: UpdateEngine (used by animation system to update values) will skip updating values if target is an array or list (i.e. list of bones) whose size is not big enough. This was previously leading to memory corruption.
@@ -357,6 +364,13 @@ Release date 2017/1/11
 
 * Fix issues with collection properties in the property grid.
 * Fix an issue where thumbnail backgrounds get dark when in Gamma rendering pipeline.
+* Fix some broken cases when clearing the archetype of an asset
+* Fix a crash when dropping an object into the viewport
+* Fix many crashes and issues occurring when moving or duplicating entities and folders in the entity tree of a scene or a prefab
+* Fix some issues with selection of entities
+* Fix issues with some pane of the editor not being visible while they were checked as visible in the View menu
+* Prevent TreeViews to change scroll position when selecting an item if they were scrolled to another position while they didn't have the focus
+* Fix properties that were all grayed when selecting multiple objects.
 
 #### Particles
 
