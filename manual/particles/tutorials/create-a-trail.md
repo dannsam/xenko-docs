@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-This tutorial demonstrates how to use particles to create a trail effect for a sword swing.
+This tutorial demonstrates how to use particles to create a [trail effect](../ribbons-and-trails.md) for a sword swing.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/sword-slash-9.mp4">
@@ -382,7 +382,7 @@ Here's a more elaborate trail that combines multiple particle effects:
 If you'd like to see how it works, [download the project file](media/MyTrailEffect.zip) and take a look.
 
 ## See also
-* [Particles](index.md)
-* [Tutorial: lasers](lasers.md)
-* [Tutorials: ribbons](ribbons.md)
+* [Particles](../index.md)
+* [Tutorial: lasers](lasers-and-lightning.md)
+* [Ribbons and trails](../ribbons-and-trails.md)
 * [Prefabs](../../game-studio/prefabs.md)

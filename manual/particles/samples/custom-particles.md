@@ -4,7 +4,7 @@ This walkthrough shows how you can create custom extensions for the particle sys
 
 The sample is focused primarily on the particle simulation. For rendering, please check the [Custom Particle Material](particle-material.md) sample walkthrough.
 
-Please check the [Editing Particles](../reference/particle-editor.md) page if you are not familiar with how to edit the particles.
+Please check the [Editing Particles](../create-particles.md) page if you are not familiar with how to edit the particles.
 
 This walkthrough will require some scripting. Make sure you have an IDE installed (the [Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) version of Visual Studio is free).
 
@@ -16,13 +16,13 @@ Start by creating a new Custom Particles Sample from the New project menu. There
 
 There are four custom elements in this emitter which we will cover in depth.
 
-The custom spawner is a [Spawner](../reference/spawners.md) which is similar to the Spawn per second spawner, but also emits a burst of particles every time it loops.
+The custom spawner is a [Spawner](../spawners.md) which is similar to the Spawn per second spawner, but also emits a burst of particles every time it loops.
 
-The custom initializer is an [Initializer](../reference/initializers.md) which initially positions the particles in a cone shape and sets their velocity accordingly.
+The custom initializer is an [Initializer](../initializers.md) which initially positions the particles in a cone shape and sets their velocity accordingly.
 
-The custom updater is an [Updater](../reference/updaters.md) which operates on a newly created particle field which we have named "RactangleXY", allowing the shape builder to use non-uniform sizes in addition to the uniform scale when building the billboards.
+The custom updater is an [Updater](../updaters.md) which operates on a newly created particle field which we have named "RactangleXY", allowing the shape builder to use non-uniform sizes in addition to the uniform scale when building the billboards.
 
-The custom shape is a [Shape Builder](../reference/shape-builders.md) similar to the billboard with two additions. It can create non-uniform rectangles, rather than the standard squares, and it can align (fix) the rectangle's Y axis to the world's Y axis rather than the camera space.
+The custom shape is a [Shape Builder](../shapes.md) similar to the billboard with two additions. It can create non-uniform rectangles, rather than the standard squares, and it can align (fix) the rectangle's Y axis to the world's Y axis rather than the camera space.
 
 ## Spawner
 

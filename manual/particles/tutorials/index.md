@@ -2,7 +2,6 @@
 
 ## In this section 
 
-* [Ribbons](ribbons.md)
 * [Inheritance](inheritance.md)
-* [Lasers and lightning](lasers.md)
+* [Lasers and lightning](lasers-and-lightning.md)
 * [Create a trail](create-a-trail.md)

@@ -4,7 +4,7 @@ This walkthrough shows how you can create custom shaders and materials for a par
 
 The sample is focused primarily on shaders and rendering. For simulation, please check the [Custom Particles](custom-particles.md) sample walkthrough.
 
-Please check the [Editing Particles](../reference/particle-editor.md) page if you are not familiar with how to edit the particles.
+Please check the [Editing Particles](../create-particles.md) page if you are not familiar with how to edit the particles.
 
 This walkthrough will require some scripting. Make sure you have an IDE installed (the [Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) version of Visual Studio is free).
 
