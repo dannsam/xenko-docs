@@ -6,7 +6,7 @@
 <div class="markdown level0 remarks">{{{remarks}}}</div>
 {{#children}}
   <h2 id="{{id}}">{{>partials/namespaceSubtitle}}</h2>
-  <div class="table-responsive documentation__table">
+  <div class="table-responsive xk-documentation-table">
     <table class="table table-bordered table-striped table-condensed">
         {{#children}}  
         <tr>
