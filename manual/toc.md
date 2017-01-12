@@ -126,6 +126,7 @@
 
 # [Particles](particles/index.md)
 ## [Create particles](particles/create-particles.md)
+## [Emitters](particles/emitters.md)
 ### [Shapes](particles/shapes.md)
 #### [Ribbons and trails](particles/ribbons-and-trails.md)
 ### [Materials](particles/materials.md)
