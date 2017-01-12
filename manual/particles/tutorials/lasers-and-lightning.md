@@ -18,7 +18,7 @@ Because the lightning is a single-line strip, we can render it using the ribbon 
 * appear on a single line or arc, but with semi-randomized positions to give the illusion of lightning
 * should reappear very quickly
 
-## 1. Simultaneous spawning
+## Simultaneous spawning
 
 We can create a looping Spawner by frame which spawns a certain number of particles (lets say 50) **every** frame.
 

@@ -138,7 +138,6 @@
 ### [Inheritance](particles/tutorials/inheritance.md)
 ### [Lasers and lightning](particles/tutorials/lasers-and-lightning.md)
 ### [Create a trail](particles/tutorials/create-a-trail.md)
-### [Simple particles](particles/tutorials/simple-particles.md)
 ### [Custom particles](particles/tutorials/custom-particles.md)
 
 # [Physics](physics/index.md)
