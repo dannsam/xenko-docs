@@ -1,5 +1,9 @@
 # Particle materials
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Materials** define how the expanded shape should be rendered. It defines color, textures, and other parameters.
 
 **Particle materials** are simplified versions of [materials used for meshes](../graphics/materials/index.md). There is only one type of material currently, the Dynamic Emissive material.

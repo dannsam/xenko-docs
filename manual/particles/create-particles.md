@@ -1,5 +1,9 @@
 # Create particles
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 To create a particle system, right-click the scene or entity tree, select **Particle System**, and choose a preset (**Empty**, **Simple**, **Fountain**, or **Ribbon**).
 
 ![media/particles-reference-editor-1.png](media/particles-reference-editor-1.png)

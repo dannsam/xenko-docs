@@ -1,5 +1,9 @@
 # Particle spawners
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Particle spawners** control when, how many, and how quickly particles are emitted. Emitters need at least one spawner, but can contain multiple spawners with different settings.
 
 ## Per second

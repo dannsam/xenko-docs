@@ -1,7 +1,7 @@
 
 # Create a trail
 <span class="label label-doc-level">Intermediate</span>
-<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
 This tutorial demonstrates how to use particles to create a [trail effect](../ribbons-and-trails.md) for a sword swing.

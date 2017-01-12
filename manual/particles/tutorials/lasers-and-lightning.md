@@ -1,5 +1,9 @@
 # Lasers and lightning
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 This tutorial explains how to create lasers and lightnings using particles and custom materials.
 
 Imagine we want to create a lightning arc like this one:

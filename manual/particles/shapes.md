@@ -1,5 +1,9 @@
 # Particle shapes
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 Because particles are essentially only points in space, they have no defined shape. Xenko can draw shapes between the points of the kind of specify.
 
 Currently, emitters can only emit one type of shape at a time.

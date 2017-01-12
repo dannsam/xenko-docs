@@ -1,5 +1,9 @@
 # Emitters
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Particle emitters** manage how many particles are in an effect, how they appear, move, and disappear, and how they are drawn. For example, a fire effect might be composed of three separate particle effects: flames, embers, and smoke. Each of these effects is managed by a separate particle emitter.
 
 Emitters contain further controls such as [spawners](spawners.md), [initializers](initializers.md), and [updaters](updaters.md).

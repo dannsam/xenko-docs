@@ -1,5 +1,9 @@
 # Ribbons and trails
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 To create **ribbons** and **trails**, Xenko builds the mesh data as a strip connecting the particles, rather than individual quads. Ribbons and trails are often used to create visual effects such as sword slashes.
 
 ![media/particles-tutorials-ribbons-0.jpg](media/ribbons-and-trails.jpg)
