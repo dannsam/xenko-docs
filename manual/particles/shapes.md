@@ -1,6 +1,6 @@
-# Shapes
+# Particle shapes
 
-Because particles are essentially only points in space, they have no defined shape. Xenko draws shapes between in the points. You can choose what kind of shape to draw.
+Because particles are essentially only points in space, they have no defined shape. Xenko can draw shapes between the points of the kind of specify.
 
 Currently, emitters can only emit one type of shape at a time.
 
@@ -32,7 +32,7 @@ For more information, see [Ribbons and trails](ribbons-and-trails.md).
 
 ## Trail
 
-Trails are identical to ribbons except that they are not camera-facing, but fixed in 3D space.
+Trails are identical to ribbons except that they don't always face the camera; they're fixed in 3D space.
 
 For more information, see [Ribbons and trails](ribbons-and-trails.md).
 
