@@ -8,7 +8,7 @@ In the diagram below, several particles (represented as red dots) are rendered a
 
 ![Diagram: individual quads](media/particles-diagram-quads.png)
 
-In the diagram below, a strip is created by connecting the particles and rendering the quad between the adjacent particles:
+In the diagram below, a strip is created by connecting the particles and rendering quads between the adjacent particles:
 
 ![Diagram: ribbon of particles](media/particles-diagram-strip.png)
 
@@ -61,7 +61,7 @@ Unlike billboards, which are individual quads, ribbons and trails have a single 
 
 ![UV coords property](media/uv-coords.png)
 
- - **AsIs**: The texture is mapped per segment, copying the same quad stretched between every two particles. This is sometimes useful when combined with flipbook animations (in the Material settings).
+ - **AsIs**: The texture is mapped per segment, copying the same quad stretched between every two particles. This is sometimes useful with flipbook animations (in the [Material](materials.md) settings).
 
     ![As-is texture mapping](media/particles-diagram-asis.png)
  
@@ -99,5 +99,6 @@ For an example of a project that uses ribbons and trails, try the **Ribbon Parti
 
 ## See also
 
+* [Shapes](shapes.md)
 * [Tutorial: Create a trail](tutorials/create-a-trail.md)
 * [Tutorial: Lasers and lightning](tutorials/lasers-and-lightning.md)
