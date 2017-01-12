@@ -333,12 +333,59 @@ Release date 2016/12/13
 * Fix an issue in the code detecting when a second component of the same type is added to an entity that should accept only one component of that type.
 * Spotlights with shadows bug fix where multiple spotlights would reference the wrong shadowmap.
 * Normal maps property names changed and some shader crashes fixed.
-* Fixed compressed normal maps having different signedness on different platforms; they are now always unsigned
-* Fixed Z component of normal maps when Scale & Offset is enabled
-* Fixed NaN values in normal mapping which caused glitches in post effects
-* Fixed shadow map range computation that caused parts of the scene not to be lit
-* Reenabled shadow cascade blending when automatic depth range computation is enabled and reduce the region of blending
-* Fixed invalid IL that prevented building UWP apps in release mode
+* Fix compressed normal maps having different signedness on different platforms; they are now always unsigned
+* Fix Z component of normal maps when Scale & Offset is enabled
+* Fix NaN values in normal mapping which caused glitches in post effects
+* Fix shadow map range computation that caused parts of the scene not to be lit
+* Reenable shadow cascade blending when automatic depth range computation is enabled and reduce the region of blending
+* Fix invalid IL that prevented building UWP apps in release mode
+
+
+## Version 1.9.3-beta
+
+Release date 2017/1/11
+
+### Enhancement
+
+#### Game Studio
+
+* Maintaining ALT key down while moving an entity to a different parent will now keep its absolute position/orientation/scale
+* Display the current version of Xenko in the Project Selection window
+* Add more logging messages when creating a new project
+* Improve tab header presentation, allow to see all open editors at once
+
+#### Engine
+
+* Animation: UpdateEngine (used by animation system to update values) will skip updating values if target is an array or list (i.e. list of bones) whose size is not big enough. This was previously leading to memory corruption.
+
+### Issues fixed
+
+#### Game Studio
+
+* Fix issues with collection properties in the property grid.
+* Fix an issue where thumbnail backgrounds get dark when in Gamma rendering pipeline.
+* Fix some broken cases when clearing the archetype of an asset
+* Fix a crash when dropping an object into the viewport
+* Fix many crashes and issues occurring when moving or duplicating entities and folders in the entity tree of a scene or a prefab
+* Fix some issues with selection of entities
+* Fix issues with some pane of the editor not being visible while they were checked as visible in the View menu
+* Prevent TreeViews to change scroll position when selecting an item if they were scrolled to another position while they didn't have the focus
+* Fix properties that were all grayed when selecting multiple objects.
+
+#### Particles
+
+* Fix a bug where Edge and Center definitions for trail shape renderer were swapped
+* Fix a bug where None for particle material still displays color
+
+### Improvements
+
+#### Game Studio
+
+* Normal maps and Grayscale textures will now appear as 3-channel textures in the thumbnails and the preview.
+
+#### Connection Router
+
+* Due to the way adb was spawning a daemon process, connection router port was locked due to socket handle inheritability. This is now properly disabled.
 
 # Known Issues
 
