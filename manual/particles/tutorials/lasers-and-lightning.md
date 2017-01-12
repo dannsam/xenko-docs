@@ -6,7 +6,7 @@ Imagine we want to create a lightning arc like this one:
 
 ![media/particles-tutorials-lasers-1.gif](media/particles-tutorials-lasers-1.gif)
 
-This effect is a strip:
+This effect is a strip which:
 
 * connects two fixed points
 * changes positions very quickly
