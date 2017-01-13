@@ -1,32 +1,35 @@
-# Particle Initializers
+# Particle initializers
 
-![media/particles-reference-initializers-0.png](media/particles-reference-initializers-0.png) 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
 
-The initializers manage the initial values for all particle fields when they first spawn. They have no function on particles which have been spawned on previous frames.
+**Initializers** control the states of particles such as position, velocity, size, and so on when the particles are first spawned. They have no effect on particles spawned on previous frames.
 
-Note! Some updaters act as post-updaters, changing the particle's value at the *end* of the frame. They will effectively overwrite any initial values set by a similar initializer. Such is the case with all animations. They operate on the particle's lifetime and a color animation updater will overwrite any initial values from a color initializer.
+> [!Note] 
+Some [updaters](updaters.md) act change the particle's value at the *end* of the frame. They effectively overwrite any initial values set by a similar initializer. Such is the case with all animations. They operate on the particle's lifetime and a color animation updater will overwrite any initial values from a color initializer.
 
-Similarly, initializers which operate on the same field are exclusive and only the bottom one will have any effect, since they are executed in order. For example if you assign two color initializer, only the second one will have any effect.
+Similarly, initializers which operate on the same field are exclusive and only the bottom one will have any effect, since they are executed in order. For example if you assign two color initializer, only the second one will have any effect.]
 
-## Common Properties
+## Common properties
 
-There are several properties common for many initializers. Depending on the initializer some or all of them may be missing, if they are irrelevant. The common properties are explained below:
+Several properties are common across many initializers.
 
 ![media/particles-reference-initializers-1.png](media/particles-reference-initializers-1.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Debug Draw                  | A debug wireframe shape will be drawn to show the boundaries for this initializer. This feature only works for the editor and is ignored when you run your game.        |
-| Position inheritance        | If checked, this module will inherit the particle system component's position, as defined in the Transform field. |
-| Position offset             | Additional translation of the module. If it inherits the parent's position, this is applied on top of the inherited one. |
-| Rotation inheritance        | If checked, this module will inherit the particle system component's rotation, as defined in the Transform field. |
-| Rotation offset             | Additional rotation of the module. If it inherits the parent's rotation, this is applied on top of the inherited one. |
-| Scale inheritance           | If checked, this module will inherit the particle system component's uniform scale, as defined in the Transform field. |
-| Scale offset                | Additional scaling of the module. If it inherits the parent's scale, this is applied on top of the inherited one. |
+| Debug draw                  | Draws a debug wireframe in the scene to show the boundaries of the initializer. This is only visible in the scene editor, not at runtime.        |
+| Position inheritance        | If checked, this module inherits the particle system component position, as defined in the particle entity's Transform component. |
+| Position offset             | Additional translation of the module. If it inherits the parent position, this is applied on top of the inherited position. |
+| Rotation inheritance        | If checked, this module inherits the particle system component's rotation, as defined in the Transform component. |
+| Rotation offset             | Additional rotation of the module. If it inherits the parent's rotation, this is applied on top of the inherited rotation. |
+| Scale inheritance           | If checked, this module inherits the particle system component's uniform scale, as defined in the Transform component. |
+| Scale offset                | Additional scaling of the module. If it inherits the parent's scale, this is applied on top of the inherited scale. |
 
 For example, a velocity initializer can change its direction depending on the parent's rotation or decide to ignore it and always shoot particles in a fixed direction.
 
-A size initializer on the other hand can't change based on the parent's rotation, so the rotation fields won't appear at all.
+On the other hand, size initializers don't change based on the parent's rotation, so the rotation fields won't appear at all.
 
 ## Position
 
@@ -44,16 +47,15 @@ This image shows the bounding box where particles initially appear for this emit
 
 ![media/particles-reference-initializers-3.png](media/particles-reference-initializers-3.png) 
 
-
 ## Velocity
 
-Particles are spawned with initial velocity which ranges between the defined values. The velocity is independant in all three directions between X, Y and Z.
+Particles spawn with initial velocity which ranges between the defined values. The velocity is independent in all three directions between X, Y and Z.
 
 ![media/particles-reference-initializers-4.png](media/particles-reference-initializers-4.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independant from other fields.               |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.               |
 | Velocity min                | Left lower back corner for the box.                                                                     |
 | Velocity max                | Right upper front corner for the box.                                                                   |
 
@@ -65,7 +67,7 @@ Initial size sets the particle's uniform size when it's spawned for the first ti
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the size to be coupled with other particle fields which have 1 property, like color for example. Make them different to force the size to be unique and independant from other fields.                   |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the size to be coupled with other particle fields which have 1 property, like color for example. Make them different to force the size to be unique and independent from other fields.                   |
 | Random size                 | Shows the minimum and maximum size a particle can have at spawn time.                                   |
 
 ## Rotation
@@ -76,7 +78,7 @@ Initial rotation sets the particle's angular rotation when facing the camera. Po
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the angle to be coupled with other particle fields which have 1 property, like color for example. Make them different to force the angle to be unique and independant from other fields.                  |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the angle to be coupled with other particle fields which have 1 property, like color for example. Make them different to force the angle to be unique and independent from other fields.                  |
 | Angle (degrees)             | The minimum and maximum value, in degrees, for the initial rotation.                                    |
 
 
@@ -89,19 +91,19 @@ Initial color sets the particle's initial color at spawn time. It goes into the 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the color to be coupled with other particle fields which have 1 property, like size for example. Make them different to force the color to be unique and independant from other fields.                  |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the color to be coupled with other particle fields which have 1 property, like size for example. Make them different to force the color to be unique and independent from other fields.                  |
 | Color A                     | The first value, in hexadecimal code. The color will be a random tint between this and the second color.|
 | Color B                     | The second value, in hexadecimal code. The color will be a random tint between this and the first color.|
 
 ## 3D Orientation
 
-Initial 3D orientation sets the orientation for 3d aware particles when they first spawn. The editable fields use euclidean rotation which is packed into a quaternion orientation by the engine. The interpolated value is on the shortest path  between the two orientations, rather than interpolating each value separately.
+Initial 3D orientation sets the orientation for 3D-aware particles when they first spawn. The editable fields use euclidean rotation which is packed into a quaternion orientation by the engine. The interpolated value is on the shortest path  between the two orientations, rather than interpolating each value separately.
 
 ![media/particles-reference-initializers-8.png](media/particles-reference-initializers-8.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the orientation to be coupled with other particle fields which have 1 property, like size for example. Make them different to force the orientation to be unique and independant from other fields.            |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the orientation to be coupled with other particle fields which have 1 property, like size for example. Make them different to force the orientation to be unique and independent from other fields.            |
 | Orientation A               | The first oriented position.                                                                            |
 | Orientation B               | The second oriented position.                                                                           |
 
@@ -111,7 +113,7 @@ This initializer creates the *Direction* field in the particle properties and se
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the direction to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independant from other fields.               |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the direction to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.               |
 | Direction min               | Left lower back corner for the box.                                                                     |
 | Direction max               | Right upper front corner for the box.                                                                   |
 
@@ -127,7 +129,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independant from other fields.               |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.               |
 | Position min                | Left lower back corner for the box.                                                                     |
 | Position max                | Right upper front corner for the box.                                                                   |
 | Target                      | Allows you to pick up an Entity for the end of the arc. If no Entity is set, Fallback Target will be used, which is an offset from the emitter's location. |
@@ -135,7 +137,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 | Arc Height                  | The height of the arc at its highest point (middle of the distance between the two points). By default it's the Y-up vector, but can be rotated with rotation offset and rotation inheritance. |
 | Ordered                     | If checked, new particles will appear in order from the emitter towards the target. If unchecked, new particles will appear randomly on the arc anywhere between the emitter and the target. If you plan to visualize the particles as a ribbon or a trail you should set this box to checked. |
 | Fixed count                 | By default particles will appear on the arc at distances enough for the maximum number of particles to fit exactly on the line. If you want to control spawn rate and distance, you can set how many fixed "positions" are there on the arc. For example, with a fixed count of 10 and Ordered spawning, the first 10 particles will appear in order, then the 11th particle will appear from the beginning, at the same position as the first, and so on. |
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independant from other fields.               |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.               |
 | Position min                | Left lower back corner for the box. This is an offset in addition to the arc position.                  |
 | Position max                | Right upper front corner for the box. This is an offset in addition to the arc position.                |
 
@@ -143,7 +145,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independant from other fields.               |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other other particle fields which have 3 properties (X, Y, Z), like velocity for example. Make them different to force the position to be unique and independent from other fields.               |
 | Position min                | Left lower back corner for the box.                                                                     |
 | Position max                | Right upper front corner for the box.                                                                   |
 | Parent emitter              | You have to type the name of the parent emitter. Child particles' positions will match the parent emitter's particles' positions. |
@@ -154,7 +156,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independant from other fields.               |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other other particle fields which have 3 properties (x, Y, Z), like position for example. Make them different to force the velocity to be unique and independent from other fields.               |
 | Velocity min                | Left lower back corner for the box.                                                                     |
 | Velocity max                | Right upper front corner for the box.                                                                   |
 | Parent emitter              | You have to type the name of the parent emitter. Child particles' positions will match the parent emitter's particles' positions. |
@@ -165,7 +167,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the size to be coupled with other particle fields which have 1 property, like color for example. Make them different to force the size to be unique and independant from other fields.                   |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the size to be coupled with other particle fields which have 1 property, like color for example. Make them different to force the size to be unique and independent from other fields.                   |
 | Random size                 | Shows the minimum and maximum size a particle can have at spawn time.                                   |
 | Parent emitter              | You have to type the name of the parent emitter. Child particles' positions will match the parent emitter's particles' positions. |
 | Parent Offset               | Random seed used to couple or decouple the way a parent particle is chosen. For example, if you want to pick position *and* color from seemingly random particles, you can use the same offset. If you want to avoid such connection, you can use different offsets for position and color initializers. |
@@ -175,7 +177,7 @@ The arc position initializer positions the particles in an arc (or a straight li
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it to the same value to force the color to be coupled with other particle fields which have 1 property, like size for example. Make them different to force the color to be unique and independant from other fields.                  |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the color to be coupled with other particle fields which have 1 property, like size for example. Make them different to force the color to be unique and independent from other fields.                  |
 | Color A                     | The first value, in hexadecimal code. The color will be a random tint between this and the second color.|
 | Color B                     | The second value, in hexadecimal code. The color will be a random tint between this and the first color.|
 | Parent emitter              | You have to type the name of the parent emitter. Child particles' positions will match the parent emitter's particles' positions. |
@@ -192,3 +194,11 @@ This initializer requires the parent emitter to also have a Spawn Order initiali
 | Parent Offset               | Random seed used to couple or decouple the way a parent particle is chosen. For example, if you want to pick position *and* color from seemingly random particles, you can use the same offset. If you want to avoid such connection, you can use different offsets for position and color initializers. |
 | Spawn Control Group         | When None, parents will be picked randomly. When set to one of the four groups, only particles from a specific parent will be initialized. It should match a control group from the *Spawn from Parent* spawner to work properly. |
 
+## See also
+
+* [Create particles](create-particles.md)
+* [Emitters](emitters.md)
+* [Shapes](shapes.md)
+* [Materials](materials.md)
+* [Spawners](spawners.md)
+* [Updaters](updaters.md)
