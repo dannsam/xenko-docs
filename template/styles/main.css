@@ -340,6 +340,11 @@ h4{
 h5{
     font-size: 16px;
 }
+.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 @media only screen and (max-width: 1625px){
     .sidefilter, 
     .sidetoc{        
@@ -367,4 +372,5 @@ h5{
     .sidetoc{                
         width: 100%;
     } 
+
 }
