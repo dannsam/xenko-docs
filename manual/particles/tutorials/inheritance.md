@@ -1,5 +1,9 @@
 # Inheritance
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 This tutorial explains in depth how to create particles which inherit one or more attributes, like position or color, from other particles.
 
 ## Sample

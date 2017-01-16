@@ -1,14 +1,18 @@
-# Particle Updaters
+# Particle updaters
 
-![media/particles-reference-updaters-0.png](media/particles-reference-updaters-0.png) 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
 
-Once a particle is spawned it can change over time before it disappears. Updaters act on all living particles over time, changing their attributes like position, velocity, color, etc. For example a gravity force is an updater which updates the particle's velocity with a constant value, making it accelerate faster towards the ground.
+After a particle spawns, it can change over time before it disappears. **Updaters** act on all living particles over time, changing attributes such as position, velocity, color, and so on.
 
-There are several built-in updaters and more will be added in the future. The [Custom Particles](samples/custom-particles.md) sample shows how you can add your own updaters to the engine.
+For example, a gravity force updates the particle's velocity at a constant rate, accelerating it toward the ground.
 
-## Common attributes
+Xenko features several built-in updaters. The [custom particles](tutorials/custom-particles.md) sample demonstrates how you can add your own updaters to the engine.
 
-There are several properties common for many updaters. Depending on the updater some or all of them may be missing, if they are irrelevant. The common properties are explained below:
+## Common properties
+
+Several properties are common across many updaters.
 
 ![media/particles-reference-updaters-11.png](media/particles-reference-updaters-11.png) 
 
@@ -30,27 +34,21 @@ A collider is an updater which changes the particle's position and velocity when
 
 ![media/particles-reference-updaters-3.png](media/particles-reference-updaters-3.png) 
 
-
 | Property              | Description                                                                                                                      |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------              |
 | Shape                 | The shape against which the particles will collide, which can be sphere, cylinder, box or a torus.                               |
 | Is hollow             | If unchecked, the shape is solid and the particles will bounce off it, staying outside. If checked, the shape is hollow, like a container, and the particles will be restricted to the inside volume only.                |
 | Kill Particles        | If checked, the particles will be killed immediately when they first collide with the shape.                                     |
 | Restitution           | The coefficient of restitution is the speed the particle retains in comparison to its speed before the collision. In this updater we use restitution as a *vertical only* speed. It doesn't affect the speed along the surface.                    |
-| Friction              | Friction is the amount of horizontal speed the particle loses upon collision with the shape. It only affects the speed along the surface, and doesn't change the height at which the particle will bounce.                    |
-
-
+| Friction              | The amount of horizontal speed the particle loses on collision with the shape. It only affects the speed along the surface, and doesn't change the height at which the particle will bounce.                    |
 
 ## Force Field
 
 ![media/particles-reference-updaters-6.gif](media/particles-reference-updaters-6.gif) 
 
-
 The force field is defined by a bounding shape and several force vectors which operate on the particles based on their relative position to the bounding shape.
 
 ![media/particles-reference-updaters-1.png](media/particles-reference-updaters-1.png) 
-
- 
 
 | Property              | Description                                                                                                                      |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------              |
@@ -62,24 +60,23 @@ The force field is defined by a bounding shape and several force vectors which o
 | Repulsive Force       | The force which moves the particle away from the field's center or towards it, if negative.                                   |
 | Fixed Force           | The force which moves the particle along a fixed non-rotating and non-scaling axis.                                           |
 
-
 ### Falloff
 
-The falloff is the changes in the forces' strength based on the distance pf the particle from the shape's center.
+The falloff is the change in the forces' strength based on the distance pf the particle from the shape's center.
 
-The falloff is a function of the relative distance, where distance of 0 is the center, 1 is the shape's boundaries, and more 1 means the particle is outside the shape.
+The falloff is a function of the relative distance, where distance of 0 is the center, 1 is the shape's boundaries, and more than 1 means the particle is outside the shape.
 
-Particles closer than falloff start will always be affected with the coefficient Strength Inside.
+Particles closer than falloff start are always affected with the coefficient Strength Inside.
 
-Particles farther than falloff end will always be affected with the coefficient Strength Outside.
+Particles farther than falloff end are always affected with the coefficient Strength Outside.
 
-Coefficient for particles in between changes linearly as shown below:
+Coefficient for particles in between changes linearly, as shown below:
 
 ![media/particles-reference-updaters-2.png](media/particles-reference-updaters-2.png) 
 
-For example, if the bounding shape is a sphere with a radius 10m, particles within 1m from its center (0.1 x 10m) will be moved with full strength. After the 1m distance the strength will linearly decrease until it reaches zero at 9m distance (0.9 x 10m). After that point the forces won't affect the particle.
+For example, if the bounding shape is a sphere with a radius 10m, particles within 1m from its center (0.1 x 10m) will be moved with full strength. After the 1m distance the strength linearly decreases until it reaches zero at 9m distance (0.9 x 10m). After that point, the forces don't affect the particle.
 
-### Bounding Shapes
+### Bounding shapes
 
 #### Sphere
 
@@ -107,7 +104,6 @@ The repulsive force vector is pointing out from the center to the particle.
 
 The vortex force vector goes around the box's Y axis at the particle's position (using the right-hand rule for rotation).
 
-
 #### Cylinder
 
 ![media/particles-reference-updaters-9.png](media/particles-reference-updaters-9.png) 
@@ -120,7 +116,6 @@ The repulsive force vector is pointing out from the cylinder's local Y axis to t
 
 The vortex force vector goes around the cylinder's Y axis at the particle's position (using the right-hand rule for rotation).
 
-
 #### Torus
 
 ![media/particles-reference-updaters-10.png](media/particles-reference-updaters-10.png) 
@@ -131,26 +126,25 @@ When the bounding shape is a torus, the field's nature changes completely. The f
 
 The directed force vector is tangent to the axis of revolution at the point closest to the particle.
 
-The repulsive force vector is pointing out from the axis to the particle.
+The repulsive force vector points out from the axis to the particle.
 
 The vortex force vector goes around the directed force vector using the particle's position relative to the axis (using the right-hand rule for rotation).
 
-While the math is a little complicated, using the torus force field is not, and we encourage you to try it out for better understanding.
+While the math is a little complicated, using the torus force field isn't. We encourage you to try it out for better understanding.
 
 ## Gravity
 
-The gravity updater is a very simplified force which affects all particles regardless of their position, with a constant force vector which doesn't scale or rotate.
+The gravity updater is a simplified force which affects all particles regardless of their position, with a constant force vector which doesn't scale or rotate.
 
-It's editable so that it can be used in games with different scales and behavior.
+It's editable, so it can be used in projects with different scales and behavior.
 
 ![media/particles-reference-updaters-4.png](media/particles-reference-updaters-4.png) 
 
-The gravity force ignores most properties like offset and inheritance, and only uses the following attributes:
+The gravity force ignores most properties such as offset and inheritance, and only uses the following attributes:
 
 | Property                   | Description                                                                         |
 | -------------------------- | ----------------------------------------------------------------------------------- |
-| Gravitational Acceleration | The gravity force vector which defines the acceleration for all affected particles. The default value matches the average gravity on Earth, but it's editable.          |
-
+| Gravitational Acceleration | The gravity force vector which defines the acceleration for all affected particles. The default value matches the average gravity on Earth.          |
 
 ## Direction from Speed
 
@@ -189,3 +183,10 @@ This is strictly an uniform size!
 Size animation updates the particle's Size field by sampling a curve over the particle's normalized lifetime (0 to 1). You can set a secondary curve in which case the particles will have slightly varied sizes.
 
 Size animation overwrites any previous Size parameters, such as Initial Size. If you need additive kind of animation check if the Shape Builder supports it (found in the Shape Builder's properties). Additive animations are not preserved in particle fields and do not persist, but can be applied in addition to any fields the particles already have.
+
+* [Create particles](create-particles.md)
+* [Emitters](emitters.md)
+* [Shapes](shapes.md)
+* [Materials](materials.md)
+* [Spawners](spawners.md)
+* [Initializers](initializers.md)
