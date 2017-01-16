@@ -191,7 +191,6 @@ th, td img{
     margin-left: 15px;
     font-size: 12px;
 }
-
 .toc .level5 {
     font-weight: normal;
     margin-left: 15px;
@@ -238,6 +237,7 @@ article table {
     padding: 10px 10px 10px 36px;
     margin-top: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .TIP {
@@ -272,7 +272,7 @@ article table {
     font-family: 'Glyphicons Halflings';
     font-size: initial;
     margin-left: -22px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .TIP > :first-child::before {
@@ -339,6 +339,13 @@ h4{
 }
 h5{
     font-size: 16px;
+}
+
+
+.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 1625px){
@@ -456,13 +463,8 @@ h5{
         padding-left: 10px;
         padding-right: 10px;
     }
-}
-.xk-documentation-table{
-    font-size: 16px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
 
+}
 @media only screen and (max-width: 1625px){
     .sidefilter, 
     .sidetoc{        
