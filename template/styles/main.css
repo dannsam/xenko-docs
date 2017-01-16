@@ -399,8 +399,11 @@ h5{
     position: relative;
     margin-bottom: 35px;
     min-height: 160px;
-    padding: 10px 20px;
+    padding: 10px 0 10px 20px;
     border-radius: 5px;
+}
+.documentation_list li a p{
+    margin-right: 60px;
 }
 .documentation_list li a h2,
 .documentation_list li a p{

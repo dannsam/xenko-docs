@@ -1,11 +1,11 @@
 <style>
-	.sideaffix, h1{
+	.sideaffix, style+h1{
 		display: none;
 	}
 </style>
 
 # Xenko documentation
-<ul class="documentation_list col-md-5 col-sm-10">
+<ul class="documentation_list col-md-6 col-sm-10">
 	<li>
 		<a href="manual/index.html">
 			<h2>
