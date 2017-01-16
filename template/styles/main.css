@@ -93,7 +93,11 @@ th, td img{
     width:360px;
     margin-right:10px;
 }
-.video_container_right{
+.video_contain.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}er_right{
     float:left;
     width:360px;
     margin-left:30px;
@@ -129,7 +133,11 @@ th, td img{
 }
 
 /* Don't try to make a collapsable navbar, even on smaller devices */
-.navbar-nav {
+.navbar-nav {.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -164,7 +172,11 @@ th, td img{
 
 /* make container auto adjust up to 1370px */
 .container {
-  width: initial;
+  width: initial.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+};
   max-width: 1370px;
 }
 
@@ -191,7 +203,11 @@ th, td img{
     margin-left: 15px;
     font-size: 12px;
 }
-
+.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 .toc .level5 {
     font-weight: normal;
     margin-left: 15px;
@@ -289,7 +305,11 @@ article table {
     color: #cf4336;
     content: "\e101";
 }
-
+.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 .doc-incomplete::before {
     color: #cf4336;
     content: "\e136";
@@ -340,9 +360,13 @@ h4{
 h5{
     font-size: 16px;
 }
-<<<<<<< HEAD
 
-=======
+.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 1625px){
     .sidefilter, 
     .sidetoc{        
@@ -482,4 +506,5 @@ h5{
     .sidetoc{                
         width: 100%;
     } 
+
 }
