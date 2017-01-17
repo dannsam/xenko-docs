@@ -12,7 +12,8 @@ You can add and remove platforms to and from projects.
 
 2. Select the platforms you want to support and click **OK**.
 
-3. Reload the assemblies.
+3. Reload the assemblies by clicking the **Reload game assembles** button in the toolbar.
+    
     ![Reload assemblies](media/reload-assemblies.png)
 
 The supported platforms are updated. To refresh the platforms list in the toolbar, restart Game Studio.
