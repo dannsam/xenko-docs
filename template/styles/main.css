@@ -191,7 +191,6 @@ th, td img{
     margin-left: 15px;
     font-size: 12px;
 }
-
 .toc .level5 {
     font-weight: normal;
     margin-left: 15px;
@@ -238,6 +237,7 @@ article table {
     padding: 10px 10px 10px 36px;
     margin-top: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .TIP {
@@ -272,7 +272,7 @@ article table {
     font-family: 'Glyphicons Halflings';
     font-size: initial;
     margin-left: -22px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .TIP > :first-child::before {
@@ -340,6 +340,14 @@ h4{
 h5{
     font-size: 16px;
 }
+
+
+.xk-documentation-table{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 1625px){
     .sidefilter, 
     .sidetoc{        
@@ -367,4 +375,122 @@ h5{
     .sidetoc{                
         width: 100%;
     } 
+}
+/* Redesign Documentation main page (05.12.2016) */
+.submenu-navbar{
+    margin: 5px 0;
+}
+.submenu-navbar li{
+    display: inline-block;
+    border-right: 1px solid #e7e7e7;
+}
+.submenu-navbar li:last-child{
+    border-right: none;
+}
+.submenu-navbar li a{
+    display: inline-block;
+    color: #111111;
+    font-size: 1.4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.documentation_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.documentation_list li{
+    margin-left: 0;    
+    position: relative;
+    margin-bottom: 35px;
+    min-height: 160px;
+    padding: 10px 0 10px 20px;
+    border-radius: 5px;
+}
+.documentation_list li a p{
+    margin-right: 60px;
+}
+.documentation_list li a h2,
+.documentation_list li a p{
+    color: #000;
+    position: relative;
+}
+.documentation_list li a h2:before{
+    display: none;
+}
+.documentation_list li .xi_arrowLink{
+    width: 40px;
+    height: 78px;
+    float: right;
+    position: relative;
+    top: 0;
+    right: 0;
+    display: block;
+    overflow: hidden;
+    background: url(http://xenko.com/images/svg/arrow.svg) no-repeat -26px 50%;
+    background-size: 132px 200px;
+}
+.documentation_list li:hover .xi_arrowLink{
+    background-position: 100% 50%;
+}
+.documentation_list li:hover{
+    background-color: #E8E8E8;
+}
+.custom__breadcrumb{
+    margin-top: 15px;
+    padding: 15px 0 0 0;
+}
+.custom__breadcrumb ul{
+    padding: 5px 0 0 0;
+    margin: 0;
+    background: transparent;
+}
+.custom__breadcrumb + article.content h1,
+.custom__breadcrumb + article.content h2,
+.custom__breadcrumb + article.content h3,
+.custom__breadcrumb + article.content h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px){
+    .documentation_list li a p:after{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px){
+    .submenu-navbar li a{
+        font-size: 1.2rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+@media only screen and (max-width: 1625px){
+    .sidefilter, 
+    .sidetoc{        
+        margin-left: 0;
+    } 
+    .article.grid-right{
+        margin-left: 410px;
+    }  
+}
+@media only screen and (max-width: 1275px){
+    .sidefilter, 
+    .sidetoc{        
+        margin-left: 0;
+        width: 260px;
+    } 
+    .article.grid-right{
+        margin-left: 280px;
+    }  
+}
+@media only screen and (max-width: 768px){
+    .article.grid-right{
+        margin-left: 0;
+    } 
+    .sidefilter, 
+    .sidetoc{                
+        width: 100%;
+    } 
+
 }

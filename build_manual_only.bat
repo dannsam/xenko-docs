@@ -1,2 +1,2 @@
 rmdir /s /q api
-deps\docfx\docfx.exe build > build.log
+timecmd deps\docfx\docfx.exe build > build.log
