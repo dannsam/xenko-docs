@@ -22,7 +22,7 @@ While there are still several features on the roadmap, the current implementatio
 
 <img src="media/ReleaseNotes-1.6/particle1.gif" align="center" />
 
-Feel free to visit our [particle documentation](../manual/particles/index.html).
+Feel free to visit our [particle documentation](../manual/particles/index.md).
 
 ### Features
 
@@ -33,7 +33,7 @@ The particle engine supports many features out of the box:
 - Collisions
 - Animated attributes such as size, color, rotation
 - Flip books, UV animation and support for the Xenko Shading Language
-- Ribbons and trails renderers added to the engine. Check out our [tutorial](../manual/particles/particles-tutorials/particles-tutorials-ribbons/index.html) for more details.
+- Ribbons and trails renderers added to the engine. Check out our [tutorial](../manual/particles/ribbons-and-trails.md) for more details.
 
 ### Modular system
 
@@ -284,7 +284,7 @@ Release date: 2016/03/30
 
 ### Particles
 
-- Ribbons and trails renderers added to the engine. Check out our [tutorial](/manual/particles/particles-tutorials/particles-tutorials-ribbons/index.html) for more details.
+- Ribbons and trails renderers added to the engine. Check out our [tutorial](/manual/particles/particles-tutorials/particles-tutorials-ribbons/index.md) for more details.
 
 ### Game Studio
 
