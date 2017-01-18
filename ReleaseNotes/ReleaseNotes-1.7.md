@@ -67,7 +67,7 @@ Deployment to a remote Linux box is done via SSH when running your project from 
 
 ![Platform Selector](media/ReleaseNotes-1.7/Platform_selector.png)
 
-To know more about our Linux support, read the [Linux documentation](manual/platforms/linux/index.md)
+To know more about our Linux support, read the [Linux documentation](/manual/platforms/linux/index.md)
 
 ## Audio
 
@@ -223,7 +223,7 @@ This release brings many improvements to the particle engine.
 - Improved OpenGL support: texture buffers, more texture formats, debug markers, etc.
 - Unified OpenTK: we now compile our own OpenTK for Windows, iOS and Android. This means our OpenGL renderer code is now unified and should have fewer bugs
 - Camera is not affected anymore by scaling
-- Implemented the required changes to allow rendering to Oculus Rift devices. Also, we have already begun including the native interfaces in the API for the Oculus Rift SDK. Check this [link](http://doc.xenko.com/latest/manual/graphics/oculus/index.html) for more info.
+- Implemented the required changes to allow rendering to Oculus Rift devices. Also, we have already begun including the native interfaces in the API for the Oculus Rift SDK. Check this [link](../manual/graphics/oculus/index.html) for more info.
 
 #### Input
 
