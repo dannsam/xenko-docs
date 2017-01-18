@@ -17,7 +17,7 @@ There are two ways to create assets:
  	
 	Game Studio displays a list of asset templates. These are assets configured for a specific use.
 	
- 3. Select the template closest to your needs.
+ 3. Select the right template for your asset.
 
     Game Studio adds the asset to the asset view:
 

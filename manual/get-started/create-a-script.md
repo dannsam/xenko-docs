@@ -3,96 +3,22 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You’ve created a game and have added some entities to the game. 
-Now, you have to **add some scripts** to your game to make your game more dynamic and interesting. 
-There are two ways to add a script in Xenko: using **Visual Studio**, and using the **Game Studio**. 
-We'll describe both below.
-
-## Create a script in Visual Studio
-
-The first method consists in adding a new script class in the game project from Visual Studio. 
-Start by **opening** your game **solution** in Visual Studio by clicking the ![](media/create-a-script-ide-icon.png)(Open in IDE) icon.
-
-You will notice that your game solution is composed of several projects. 
-The project ending in **.Game** is **the main project** of your game and should contain all your **game logic and scripts**. 
-The **other projects** are the projects containing **platform specific code**. 
-Typically you will find in those project the main entry point of your game for the given platform and possibly some OS related code.
-The **final extension** name of the projects specify the **targeted platform** (e.g. *.Linux*, *.Android*, *.Windows*, etc).
-
-**To create a script in Visual Studio:**
-
-1. **Add a new class file** in the ```.Game``` project of your game solution. To add a new class, **right-click** on the project, 
-   then click **Add** in the context menu, and finally click **New Item**.
-
-2. In *Visual C#* items, select *Class*, **type the name** of your script and then click **Add**.
-
-   A new class is added to your game.
-
-4. **Open the file** that you have created. 
-   Make the script is **public** and **derive** from either **AsyncScript** or **SyncScript** manually. 
-   Finally **implement** the needed **abstract method(s)**. 
-   
-Here is an example of what your file might look like when you've done that:
-
-```
-	using System;
-	using System.Text;
-	using System.Threading.Tasks;
-	using SiliconStudio.Core.Mathematics;
-	using SiliconStudio.Xenko.Input;
-	using SiliconStudio.Xenko.Engine;
-	
-	namespace MyGame
-	{
-		public class SampleSyncScript : SyncScript
-		{			
-			public override void Update()
-			{
-				if (Game.IsRunning)
-				{
-					// Do some stuff every frame
-				}
-			}
-		}
-	}
-```
-
-**Load your new script in Game Studio**
-
-Because your project has been modified outside of Game Studio, Game Studio needs to **reload the new game assembly** to show the changes.
-
-1. **Save your project** and script files
-2. Go to the Game Studio.
-   
-   A popup prompting you for reload of the assemblies.
-   
-      ![Confirmation message](media/create-a-script-confirmation-message.png)
-
-3. Select **Yes** in the displayed dialog.
-
-   The Game Studio adds your class script to your component list.
-
-3. **Select the assembly** where you have added your script in the *Solution Explorer*.
-   You should find your script in the Asset view window, ready to be used.
+You can create and add scripts using Game Studio or Visual Studio.
 
 ## Create a script in Game Studio
 
-The second method is to create a script from Game Studio without using any other application.
+In the **asset view**, click **Add asset > Scripts** and select a script type.
 
-**To create a script in Game Studio:**
+![Select script type window](media/create-a-script-script-asset-selection.png)
 
-1. On the **Asset view** tab, click **New Assets**, and then click **Scripts**.
+Game Studio adds a script to the project. You can see it in the asset view.
 
-   ![New asset button in Asset view tab](media/create-a-script-new-asset.png)
-
-2. Select a script type from the **Script Types** list. The new script is added to the **Asset view** tab.
-
-   ![Select script type window](media/create-a-script-script-asset-selection.png)
-
-   ![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
+![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
   
+You can see the new script in Visual Studio.
 
-Save your project and go to Visual Studio. You should be able to see the new script that has been added to your project.
+> [!Tip]
+> Open your solution in Visual Studio by clicking the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
 
 ```
 using System;
@@ -117,6 +43,69 @@ namespace MyGame
 	}
 }
 ```
+
+## Create a script in Visual Studio
+
+The first method consists in adding a new script class in the game project from Visual Studio. 
+
+1. In Game Studio, open your solution in Visual Studio by clicking the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the toolbar.
+
+	Your game solution is composed of several projects. 
+	
+	* The project ending in *.Game* is the main project, and should contain all your game logic and scripts. 
+	* Other projects (eg *MyGame.Windows*, *MyGame.Android* etc) contain platform-specific code.
+
+	For more information about project structure, see [Project structure](project-structure.md).
+
+2. Add a new class file to the `.Game` project. To do this, right-click the project ands elect **Add > New Item**.
+
+	The **Add New Item** dialog opens.
+
+3. Select **Class**, **type a name** for your script, and click **Add**.
+
+   Visual Studio adds a new class to your game.
+
+4. In the file you created, make sure the script is public and derives from either **AsyncScript** or **SyncScript**.
+
+5. Implement the necessary abstract methods. 
+
+	The following script is an example:
+
+	```
+		using System;
+		using System.Text;
+		using System.Threading.Tasks;
+		using SiliconStudio.Core.Mathematics;
+		using SiliconStudio.Xenko.Input;
+		using SiliconStudio.Xenko.Engine;
+		
+		namespace MyGame
+		{
+			public class SampleSyncScript : SyncScript
+			{			
+				public override void Update()
+				{
+					if (Game.IsRunning)
+					{
+						// Do some stuff every frame
+					}
+				}
+			}
+		}
+	```
+
+6. Save the project and script files.
+
+7. Because you modified the script outside Game Studio, Game Studio needs to reload the assembly to show the changes. In Game Studio, a dialog asks if you want to reload the assemblies:
+   
+	![Confirmation message](media/create-a-script-confirmation-message.png)
+
+	Click **Yes**.
+
+   Game Studio adds your class script to your component list.
+
+8. In the solution explorer, select the assembly that contains your script.
+   Game Studio displays the script in the asset view, ready to be used.
 
 ## What's next?
 

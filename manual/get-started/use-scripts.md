@@ -3,85 +3,77 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-In this page, you’ll learn how to attach a script to an entity, how to test a script, and how to debug a script.
+This page explains how to attach a script to an entity, how to test a script, and how to debug a script.
 
 ## Attach a script
 
-To **add behaviors** to your **entities**, you should **attach a script** to them.
+To add behaviors to entities, attach a script to them.
 
-In Xenko, a single script can be attached to one or more entities. 
-Reciprocally, multiple scripts can also be attached to a single entity. 
-If you attach a script to multiple entities, multiple **instances** of that script are created. 
-This allows for the same script to have different values for its public properties. 
+In Xenko, you can attach a single script as many entities as you need.
 
-You can **attach a script** to your entity either from the **Game Studio** or through **code**.
+You can also attach multiple scripts to single entities. In this case, Game Studio creates multiple **instances** of the script. This means the same script can have different values in its public properties. 
 
-### Attach a script from the Game Studio
+You can attach a script to entities in Game Studio or in code.
 
-1. **Open your scene** in the scene editor
-2. **Select the assembly** in which your script is contained in the solution explorer.
+### Attach a script from Game Studio
+
+There are two ways to attach scripts in Game Studio: by dragging and dropping the script from the asset view to the entity properties, or by adding a script component to the entity.
+
+#### Drag and drop
+
+1. **Open the scene** in the scene editor.
+2. In the **solution explorer**, select the assembly which contains your script.
    Your script appears in the asset view.
-3. **Select the entity** to which you want to attach a script.
-4. **Drag-and-drop** your script from the **Asset view** into the **Property grid** of the selected entity.
-   The script is attached to the entity.
-  
-> [!TIP]
-> It is also possible to attach a script to a new entity or an entity of the entity hierarchy by drag-and-dropping
-> the script directly inside the main view of the scene editor or in the entity hierarchy view.
+3. Select the entity you want to attach the script to.
+4. Drag and drop the script from the **asset view** to the **property grid**.
    
-> [!TIP] 
-> If you don't like drag-and-drop, alternatively it is also possible to attach a script by using 
-> the **Add component** button in the *Property grid*.
+   Game Studio attaches the script to the entity.
+
+#### Add a script component
+
+> [!TIP]
+> You can also attach scripts to new entity or an entity of the entity hierarchy by drag-and-dropping
+> the script directly inside the main view of the scene editor or in the entity hierarchy view.
 
 ### Attach a script from code
 
-You can also use code to instantiate and attach a script to an entity.
+You can use code to instantiate and attach a script to an entity.
 
-1. In Visual studio, create a script called **BasicAsyncScript** and save it.
+1. In Visual studio, create a script and save it.
 
-2. In order to attach the **BasicAsyncScript** script to an entity called **myEntity**, 
-   you can use the following code snippet from any other executed script.
+2. In another executed script, use the following code, where *myAsyncScript* is the script name and *myEntity* is the entity you want to attach it to:
 
-```Code: 
-// myEntity being an existing entity in the scene
-myEntity.Add(new BasicAsyncScript());
-```
+    ```Code: 
+    // myEntity being an existing entity in the scene
+    myEntity.Add(new myAsyncScript());
+    ```
 
 ## Test a script
 
-You can test your script by **running the game**. 
-Your script gets **executed automatically** when the entity to which you attached your script is **loaded in the active scene**.
+To test your script, run the game. Xenko executes scripts when the entity they are attached to is loaded in the scene.
 
-**To test a script:**
+1. **Click** ![](media/use-a-script-play-icon.png) to run your game.
 
-1. **Click** ![](media/use-a-script-play-icon.png)to run your game.
-
-If your code is working correctly, you'll see it's output in the running game. 
- something is not working correctly, you need to **debug your script**.
+If your code is working correctly, you'll see its output in the running game. 
 
 ## Debug a script
 
-You need to debug your script if the script is **not running** properly or you are getting **unexpected results**.
+If your script isn't running correctly, you need to debug it.
 
-**To debug a script:**
+1. Open the script in Visual Studio.
 
-1. Open Visual Studio
+2. Press **F9** to add a break point at the required place(s).
 
-2. Open your script
+4. In Visual Studio, press **F5** or click **Start** to run the game in debug mode.
 
-3. Press **F9** to add a break point at the required place(s).
-
-4. In Visual Studio, press **F5** or click the **Start** button to run the game in debug mode.
-
-   Your game starts in a new window. In Visual Studio, on the script page, the first break-point highlights and stops the execution.
+   Your game starts in a new window. In Visual Studio, on the script page, the first break point highlights and stops the execution.
    
-5. **Verify** the state of your variables
+5. Verify the state of your variables.
 
-6. Press **F10** (step over) if you want to execute the code line-by-line or press **F5** to continue code execution.
+6. Press **F10** (step over) if you want to execute the code line by line, or press **F5** to continue code execution.
 
-> [!TIP]
-> If Visual Studio never stops to your break point check that your script has properly been attached 
-> to an entity of the active scene.
+> [!Note]
+> If Visual Studio doesn't stop at the break point, make sure you attached the script to an entity in the active scene.
 
 ## What's next?
 

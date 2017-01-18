@@ -68,7 +68,7 @@ The scale gizmo resizes entities along a single axis ("stretching" or "squashing
 </video>
 
 > [!Note] 
-> The scale gizmo only works with the **local** coordinate system.
+> The scale gizmo only works with the **local** coordinate system (see below). When you select the scale gizmo, Game Studio switches to local coordinates.
 
 ## Change gizmo coordinate system
 
