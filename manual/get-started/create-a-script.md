@@ -118,6 +118,6 @@ namespace MyGame
 }
 ```
 
-Now that you have learned how to create a script in Xenko, 
-you can learn how to attach your script to entities to add behavior to them.
-For information on how to use a script, see [Use a script](use-a-script.md).
+## What's next?
+
+* [Use scripts](use-scripts.md)

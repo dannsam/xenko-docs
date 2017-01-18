@@ -83,5 +83,6 @@ You need to debug your script if the script is **not running** properly or you a
 > If Visual Studio never stops to your break point check that your script has properly been attached 
 > to an entity of the active scene.
 
-Now, you know how to attach, test, and debug a script. You can try to launch your game. 
-For information on how to launch your game, see [Launch your game](launch-a-game.md).
+## What's next?
+
+* [Launch your game](launch-a-game.md)

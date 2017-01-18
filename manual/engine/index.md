@@ -8,6 +8,6 @@
 
 # See also
 
-- [Introduction to assets](../get-started/introduction-to-assets.md)
+- [Introduction to assets](../get-started/assets.md)
 - [Introduction to scripts](../get-started/introduction-to-scripts.md)
 

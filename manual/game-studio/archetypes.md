@@ -71,5 +71,5 @@ To do this, in the **Asset View**, right-click the derived asset and select **Cl
 
 ## See also
 
-* [Introduction to assets](../get-started/introduction-to-assets.md)
+* [Introduction to assets](../get-started/assets.md)
 * [Prefabs](prefabs.md)

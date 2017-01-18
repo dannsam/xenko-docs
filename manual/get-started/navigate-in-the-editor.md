@@ -1,103 +1,75 @@
-# Navigate inside the scene editor
+# Navigate in the scene editor
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Level Designer</span>
 
-When building scenes of your game in the Scene Editor, you **need to move around** a scene to accurately visualize and place entities in the scene.
+You can move around the scene and change the perspective of the editor camera. The XYZ axes in the bottom left show your orientation in 3D space.
 
-This page will show you how to quickly and easily navigate in the Scene Editor as well as how to use the navigation controls, and navigation gizmos.
+   ![Scene orientation gizmo](media/navigate-in-a-scene-scene-orientation-gizmo.png)
 
-## Navigation controls
-
-### Walk in a scene
-
-You can use the **walk navigation** mode by pressing the **left mouse button** and **moving the mouse** in the corresponding direction. 
-The Walk Navigation mode lets you freely move along the X and Z dimensions of the scene.
+## Move around in the scene
+There are several ways to move the camera editor around the scene editor. 
 
 > [!TIP]
-> In any navigation mode, holding down the **Shift** key will speed up the action. 
-> This applies for all movement and rotation actions described in this chapter
+> Holding the **Shift** key speeds up movement.
 
-The following video shows how to walk in a scene.
+### Walk
+
+You can "walk" by holding the **left mouse button** and **moving the mouse**. This moves along the X and Z dimensions.
+
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-walk-in-the-scene.mp4" type="video/mp4">
 </video>
 
-_Video: Walk in a scene_
+### Fly
 
-### Fly in a Scene
-
-The **fly navigation** mode, allows you to **move freely** in all 3 dimensions. 
-Just click and hold the **right mouse button** to activate the fly mode.
-
-My moving the mouse you change the view angle of the camera. 
-And you can use the **A**, **S**, **D**, **Q**, **W**, and **E** keys to move in different directions.
+To fly around the scene, hold the **right mouse button**, then **move the mouse** to change the camera direction and use the **WASD keys** to move. This is similar to the controls of many action games.
 
 Action                          | Effect
 --------------------------------|--------------
-Right mouse button              | Rotate the camera
-**A** key + Right mouse button  | Camera moves to the left
-**D** key + Right mouse button  | Camera moves to the right
-**S** key + Right mouse button  | Camera moves backward
-**W** key + Right mouse button  | Camera moves forward
-**Q** key + Right mouse button  | Camera moves downward
-**E** key + Right mouse button  | Camera moves upward
-
-
-The following video shows the sample actions and effects as listed in the above table.
+**Right mouse button + move mouse**              | Rotate editor camera
+**A key + right mouse button**  | Move left
+**D key + right mouse button**  | Move right
+**S key + right mouse button**  | Move backward
+**W key + right mouse button**  | Move forward
+**Q key + right mouse button**  | Move down
+**E key + right mouse button**  | Move up
  
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-fly-in-the-scene.mp4" type="video/mp4">
 </video>
  
-_Video: Fly in a scene_
+### Rotate around a point
 
-### Orbital rotation
+You can rotate around a center point by holding **Alt** and the **left mouse button** together and moving the **mouse**.
 
-When you want to **rotate around objects** of your scene, you can use the orbital rotation by pressing the **Alt** key and the **left mouse button**.
+The point of rotation is always the center of the screen. You can adjust the distance to the center with the **mouse wheel**.
 
-![Orbital rotation schema](media/navigate-in-scene-orbital-rotation-schema.png)
-
-The **point of rotation** is always the **center** of the screen and the **distance** to the center can be adjusted with the **mouse wheel**.
+![Rotation](media/navigate-in-scene-orbital-rotation-schema.png)
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-orbital-rotation.mp4" type="video/mp4">
 </video>
  
-_Video: Orbital rotation _
-
 ### Focus on an entity
 
-While editing the properties of an entity, you may need to view it in a **full screen mode **
-so that you can see all the subtle changes that you make to that entity. 
-To do this, you can press the **F** key after selecting the entity. 
-This action automatically zooms in on the entity and adjusts the position of the editor camera.
-
-Alternatively, you can click the ![](media/navigate-in-a-scene-magnifier-icon.png) icon
-from the entity hierarchy view to focus on the entity without having to select it first.
-
-The following animations display focusing on an entity using the Magnifier icon and using the **F** key.
-
-<video controls autoplay loop height="240" width="320">
-                <source src="media/navigate-in-scene-focus-on-entity-using-magnifier-icon.mp4" type="video/mp4">
-</video>
-
-_Focus on an entity using Magnifier icon_
+After you select an entity, press the **F** key. This zooms in on the entity and centers it in the camera editor.
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
 </video>
 
-_Focus on an entity using F key_
+Alternatively, in the **entity tree**, click the ![focus icon](media/navigate-in-a-scene-magnifier-icon.png) icon next to an entity. You don't have to select the entity first.
+
+<video controls autoplay loop height="240" width="320">
+                <source src="media/navigate-in-scene-focus-on-entity-using-magnifier-icon.mp4" type="video/mp4">
+</video>
 
 > [!TIP] 
-> Focusing on an entity automatically adjust the radius of rotation for orbital rotation.
-> The **combination focus + orbital rotation** is perfect to inspect and **turn around** an entity
+> Focusing and then rotating with **Alt + left mouse button** is useful for inspecting entities.
 
-### Controls summary
-
-The following table shows a summary of all navigation actions and their controls.
+### Controls
 
 Action                 | Controls
 -----------------------|--------------
@@ -109,63 +81,42 @@ Zoom in or zoom out    | Rotate mouse wheel, Alt key + Right mouse button
 Pan                    | Press middle mouse button
 Focus                  | Select an entity and press the F button
 
-## Navigation gizmos
+## Change camera editor perspective
 
-Navigation gizmos are small objects present on the Scene Editor that **help you navigate** inside a scene.
-
-By using the **view camera gizmo**, you can change the **camera view angle** and switch **projection modes**.
-You can use the scene orientation gizmo to know the current orientation of your scene.
-
-### View camera gizmo
-
-You can use the view camera gizmo cube to **change the orientation** of the camera. 
-The view camera gizmo is present on the top-right corner of the Scene Editor. 
-The following image displays the view camera gizmo.
+You can change the camera editor perspective using the **view camera gizmo** in the top-right of the scene editor.
 
 ![View camera gizmo](media/navigate-in-a-scene-view-camera-gizmo.png)
 
-By using this gizmo, you can easily set the camera view angle to the preset values and switch between Perspective and Orthographic projections.
+### Snap camera to position
 
-#### Change camera view angle
+To change the angle of the editor camera, click the corresponding face, edge, or corner of the **view camera gizmo**.
 
-To **change the view angle** of the editor camera, simply **click the corresponding face or edge or corner** of the view camera gizmo cube.
-
-The following table shows the actions and the corresponding changes in the camera orientations.
-
-Click    | To change orientation of camera so that
+Click    | Camera position
 ---------|--------------
-Face     | It faces the selected face
-Edge     | It faces the two adjacent faces with a 45° angle
-Corner   | It faces the three adjacent faces with a 45° angle
-
-The following video shows how to change a camera view angle using the view camera gizmo.
+Face     | Faces the selected face
+Edge     | Faces the two adjacent faces at a 45° angle
+Corner   | Faces the three adjacent faces at a 45° angle
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-change-view-angle.mp4" type="video/mp4">
 </video>
 
-_Video: Change view angle using view camera gizmo_
+### Switch between perspective and orthographic views
 
-#### Switch projection modes
+**Perspective view** is a "real-world" perspective of the objects in your scene. In this view, lines of identical lengths appear different due to foreshortening, as in reality.
 
-You can **switch the projection** modes to view the objects in your scene from different dimensions. 
-To switch between perspective and orthographic projection modes, **click the view camera gizmo cube** while you are facing it.
+In **orthographic view**, lines of identical length appear the same length. Parallel lines never touch, and there's no vanishing point. It's easy to tell, for example, if objects are lined up exactly.
 
-The following animation shows how to switch between perspective and orthographic projection modes.
+   ![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
+
+   ![Perspective and orthographic views](media/perspective-and-orthographic-views.png)
+
+To switch between perspective and orthographic views, click the **view camera gizmo** as you face it.
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-switch-projection-mode.mp4" type="video/mp4">
 </video>
 
-   _Switch between perspective and orthographic projections_
+## What's next?
 
-### Scene orientation gizmo
-
-The scene orientation gizmo is displayed in the bottom-left corner of the Scene Editor.
-
-This gizmo indicates the **current orientation** of the scene.
-
-   ![Scene orientation gizmo](media/navigate-in-a-scene-scene-orientation-gizmo.png)
-
-The next step is to make your scene more dynamic. To do this, you need to use scripts. For information about using scripts, see [Introduction to scripting](introduction-to-scripts.md).
-
+* [Introduction to scripting](introduction-to-scripts.md)

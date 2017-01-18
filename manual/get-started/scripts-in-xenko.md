@@ -140,6 +140,7 @@ use the [DataMemberIgnore](xref:SiliconStudio.Core.DataMemberIgnoreAttribute) at
 ```
 
 ![Public property has been hidden with ```[DataMemberIgnore]```](media/scripts-in-xenko-public-property-with-datamemberignore.png)
-   
-Now that you've learned about the basics of scripting in Xenko, let's continue to [Create a script](create-a-script.md)
- 
+
+## What's next? 
+
+* [Create a script](create-a-script.md)

@@ -2,107 +2,93 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-After adding an new asset to your game project, you may need to **make some changes** to the asset in order to make it suitable to your game.
+This page explains how to edit and manage your assets.
 
-This page will show you how to configure, edit and manage your assets.
+## Edit assets in the property grid
 
-## Configure assets using the property grid
+You can edit most assets using the **property grid**. By default, this is in the top-right of Game Studio.
 
-You can make **simple asset modifications** and configurations using the **Property Grid** tab in the top-right corner of Game Studio.
+For example, to change the color of a material asset::
 
-As an example, we will show you how to change the color of a Material.
-
- 1. **Select a material** in the *Asset View* tab. 
+ 1. In the asset view (bottom tab), select the material. 
  
-	![Material on the Asset view tab](media/edit-asset-sphere-material-asset-view-tab.png)
-	
-	The properties of the selected material appear in the 'Property Grid' tab.
+	![Select material in the asset view](media/edit-asset-sphere-material-asset-view-tab.png)
 
- 2. In the *Property Grid* tab, find the **Diffuse** property under *Shading*.
+ 2. In the property grid, under **Shading > Diffuse**, next to **Diffuse Map**, click the **colored box**, which displays the asset color (yellow in this example).
  
- 3. **Click the colored box** indicating the current color (yellow in this example), the color picker is displayed, allowing for easy selection of the diffuse color.
+	The color picker opens.
  
 	![Color picker and Palette](media/edit-asset-color-picker-palette-diffuse.png)
 	
- 4. Click the **Color picker** and select a red hue color or enter the hexadecimal value.
+ 4. Select a new color for the asset.
 	
-	After you set the color for the material, the color of the asset changes. 
-	
-	![Asset appears in new color](media/edit-asset-color-change-selected-asset.png)
+	![Asset is now red](media/edit-asset-color-change-selected-asset.png)
 
 > [!TIP]
-> At all times, you can see your **changes in real-time** in the asset **preview** window.
+> The **asset preview** (bottom right by default) displays asset changes in real time.
 	
 ## Edit assets using dedicated editors
 
-Some assets are **too complex** to be modified from a property grid.
-In this case, a **specific editor** is provided to edit and modify the asset in an **intuitive way**.
-This is for example the case of the Scene, Sprite sheet and UI Page assets.
+Game Studio has dedicated editors for the following asset types:
 
-To **open the editor** of an asset, **double click** on the desired asset, right-click and select "Edit asset..." in the context menu,
-or select the asset and type **Ctrl+Enter**.
+* prefabs
+* scenes
+* sprite sheets
+* UI pages
+* UI libraries
+* scripts
 
-> [!NOTE]
-> Some asset types are simple enough to be entirely configured from property grid and doesn't have dedicated editors.
+For example, you edit scenes in the **scene editor**.
 
-Here is the example of the Scene Editor.
+![Scene editor](media/manage-assets-scene-editor.png)
 
-![Scene Editor](media/manage-assets-scene-editor.png)
+To open the dedicated editor for these types of asset:
 
-_Scene Editor_
-
-For more information about the specific editors, see the corresponding sections in the manual reference.
+* double-click the asset, or
+* right-click the asset and select **Edit asset**, or
+* select the asset and type **Ctrl + Enter**
 
 ## Organize assets
 
-As soon as your game starts getting big, you will need to organize your asset into **folders**. 
-For that you can use the *Solution Explorer* view at the bottom-left of the Game Studio.
+We recommend you organize your assets into subfolders by type. This makes projects much easier to manage, especially as they become large.
 
-**All the assets** of your package are contained under the *Assets* folder. Expand this folder to see all the sub-folders of your game.
+![Organized project](media/manage-assets-organized-project.png)
 
-To create a new sub-folder:
-1. Select the **parent folder**
-2. Click on the **create folder icon** or right-click and choose 'Create Folder' in the context menu.
-3. **Enter the name** of the new folder and press enter.
+Assets are contained in the **Assets** folder of your project package. You can see the project in the **solution explorer** (by default shown in the bottom left).
 
-To move asset to your new folder, select assets in the asset view and simply **drag-and-drop** them in the appropriate folder.
+* To create a subfolder, right-click the parent folder and select **Create subfolder**.
+* To move an asset, select one or more assets in the **asset view** and drag and drop them to the folder.
 
 > [!NOTE]
-> When moving assets, all reference to other assets contained inside the asset are automatically updated.
-
-![Organized Project](media/manage-assets-organized-project.png)
-
-_Game project organized into sub-folders_
+> When you move an asset, Game Studio updates all references to other assets inside the asset.
 
 > [!TIP]
-> You can see the URL, Type, and other details of an asset by keeping the mouse over the asset thumbnail a short time.
+> To see the URL and type of an asset, move the mouse over the asset thumbnail.
 > ![Details of new asset in Asset view tab](media/asset-creation-solution-explorer.png)
-
-> [!TIP]
-> By default the asset view shows only the asset contained in the folder currently selected in the solution explorer.
-> This behavior can be changed. For more information, see the reference manual of the Asset View.
  
-## Include assets in build
+## Include assets in the build
 
-The Game Studio doesn't include all your assets in the game database by default.
+By default, Game Studio doesn't include every asset when you build the game. This is because you might not need every asset at runtime (eg if the asset is incomplete).
 
-**An asset** is compiled and **included** into your game database only if one or more of the following conditions is fulfilled:
-- you **explicitly marked** the asset to be included into the game build. 
-- the asset is **used by another asset** that has to be included to the game build.
+Game Studio only includes assets which:
 
-You can see which assets will be included to the game database by looking at the **color of the top-left point** on the thumbnail.
+* you've specifically marked for inclusion (**root assets**), or 
+* are **referenced** by a root asset
+
+Whether an asset is included is indicated in the top-left of the asset thumbnail.
 
 Color | Status
 ------|--------
-![](media/manage-assets-reference-asset.png) | Blue: The Asset has been marked as root asset and is included in the build.
-![](media/manage-assets-include-asset.png) | Green: The Asset is included in the build, because it was referenced by another asset that is included in the build.
-![](media/manage-assets-exclude-asset.png) | Gray: The Asset is not included in the build
+![](media/manage-assets-reference-asset.png) | Blue: The asset is a root asset and is included in the build.
+![](media/manage-assets-include-asset.png) | Green: the asset is referenced by a root asset and is included in the build.
+![](media/manage-assets-exclude-asset.png) | Gray: the asset isn't included in the build.
 
-Whenever you are planning to load and use your asset at run-time using scripts, 
-start by checking that your asset is properly included your game database.
+If you plan to load and use your asset at runtime using scripts, make sure the asset is included in the build.
 
-**To mark an asset to be included** in the game database, proceed as follow:
-- Click on the **gray point** on the thumbnail, or
-- Right-click and choose **Include in build as root asset**
-	
-You’ve learned how to edit and manage assets. In the next section you'll learn how to use assets in your game, see [Use assets](use-assets.md)
+To make an asset a root asset (always included in the build):
+* click the **gray dot** in the top-left of the thumbnail, or
+* right-click the asset and select **Include in build as root asset**
+
+## What's next?
+
+* [Learn how to use assets](use-assets.md)

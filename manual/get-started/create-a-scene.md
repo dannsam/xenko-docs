@@ -3,55 +3,51 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Level Designer</span>
 
-Scenes are complex assets that cannot be edited directly from the property grid.
-To edit a scene use the **scene editor**, a specialized tool to edit scenes.
+You can create scenes like any other asset. As they are complex assets, they have a dedicated editor, the **scene editor**.
 
-In this page, we will explain the basics of the scene editor and see how to create and open new scenes.
+When you create a new project, Game Studio creates an initial scene and opens it in the scene editor (center):
 
-## The scene editor
+![Initial scene in the scene editor](media/create-a-scene-default-scene.png)
 
-After creating a new project, an initial scene is automatically created and opened in the editor.
-You can see the content of your scene in the **central region** of the Game Studio.
+## Create a scene
 
-![Initial Scene opened in the Scene Editor](media/create-a-scene-default-scene.png)
+1. In the **asset view** (by default in the bottom pane), click **Add asset** and select **Scenes**.
 
-You can find the name of the scene that you are currently editing in the scene editor tab.
-This is useful when you have several scenes opened at the same time.
+    ![Add a scene](media/add-scene.png)
 
-The **left part** of the editor shows you the **hierarchy of the entities** included in your scene.
-The same entity hierarchy is applied at runtime. This panel is useful to browse, select, rename and reorganize your entities.
+2. Select the appropriate **scene template**.
 
-The **right part** of the editor shows the entities of your scene in a **visual manner**.
-Entities that have a shape are naturally represented in the editor using their shape. 
-For the entities that **don't have any shape**, the editor uses **2D gizmos** to represent them.
-At the top of the view is the tool bar that can be used to modify entities of the scene and change display options.
+    Template | Result
+    ---------|--------
+    Empty scene | An empty scene with no entities or preconfigured rendering pipeline
+    Scene with HDR pipeline | A scene containing basic entities and preconfigured for HDR rendering
+    Scene with LDR pipeline | A scene containing basic entities and preconfigured for LDR rendering
 
-![Scene Editor Interface](media/create-a-scene-default-scene-editor.png)
+## Open a scene in the scene editor
 
-## Create a new scene
+In the **asset view**:
 
-As soon as you want to create another level for your game, you will need to **create a new scene**.
+![Select a scene in the asset view](media/open-scene-from-asset-view.png)
 
-To create a new scene:
-
-1. Click on the **Add Asset** button in asset view
-2. Go under the *Scenes* category and select the appropriate **scene template**
-
-The following templates are available by default in Xenko.
-
-Template | Result
----------|--------
-Empty Scene | An empty scene containing no entity and with no pre-configured rendering pipeline
-Scene with HDR pipeline | A scene containing basic elements and pre-configured for HDR rendering
-Scene with LDR pipeline | A scene containing basic elements and pre-configured for LDR rendering
-
-## Open a new scene
-
-To open your new scene, simply **double click** on new scene asset or press **Ctrl+Enter** after selecting it.
+* double-click the scene asset, or
+* right-click the asset and select **Edit asset**, or 
+* select the asset and type **Ctrl + Enter**
 
 > [!TIP]
-> You can open several scene editors at the same time. 
-> To switch between the different scenes use the upper-left tabs.
+> You can have several scenes open simultaneously.
 
-Now that you know the basics about the scene editor, let's see in more details how to build a scene. 
-First let's see how to [Populate your scene with entities](populate-a-scene.md).
+## Use the scene editor
+
+![Scene editor](media/create-a-scene-default-scene-editor.png)
+
+The **scene editor tabs** (A) display the open scenes. You can switch between open scenes using the tabs.
+
+The **entity tree** (B) shows the hierarchy of the entities included in the scene. The same entity hierarchy is applied at runtime. You can use the entity tree to browse, select, rename, and reorganize your entities.
+
+You can use the **tool bar** (C) to modify entities and change the scene editor display.
+
+The **main window** (D) shows a simplified representation of your scene, with your entities positioned inside it. For entities that have no shape (E), Game Studio represents them with **2D gizmos**; for example, cameras are represented with camera icons.
+
+## What's next?
+
+* [Add entities to the scene](add-entities.md)

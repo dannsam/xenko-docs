@@ -44,14 +44,14 @@ To debug a script use Visual Studio and simply put a break point in the desired 
 
 ## The basics
 
-This section will explain the following subjects:
-
 * [Scripting in Xenko](scripts-in-xenko.md) - Basic concepts about scripting in Xenko.
 * [Create a script](create-a-script.md) - How to create a script in both Visual Studio and Game Studio
-* [Use a script](use-a-script.md) - How to attach and test scripts
+* [Use a script](use-scripts.md) - How to attach and test scripts
 
 <!--
 For more advanced topics, please refer to [Scripting](/manual/game-studio/scripting.md) in the Game Studio documentation
 -->
 
-Let's continue to learn more about basic scripting concepts, see [Scripting in Xenko](scripts-in-xenko.md).
+## What's next?
+
+* [Scripts in Xenko](scripts-in-xenko.md)
