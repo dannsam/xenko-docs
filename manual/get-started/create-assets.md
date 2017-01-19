@@ -7,7 +7,7 @@ There are two ways to create assets:
  * Use the **Add asset** button in the **Asset View**
  * Drag and drop **resource files** (such as image or audio files) to the **Asset view** tab
  
-## Use the 'Add asset' button
+## Use the **Add asset** button
 
  1. In the *Asset View*, click ![](media/create-and-add-assets-add-new-asset-button.png)
 
