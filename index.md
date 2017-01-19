@@ -20,7 +20,7 @@
 	<li>
 		<a href="api/SiliconStudio.Xenko.Engine.yml">
 			<h2>
-				API reference
+				API 
 			</h2>
 			<div class="xi_arrowLink"></div>
 			<p>
