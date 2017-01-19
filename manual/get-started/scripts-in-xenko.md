@@ -3,49 +3,38 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A script is a unit of code that lets you to add behaviors to entities. 
-
-In this page, you'll learn what a script is, the different types of scripts in Xenko, 
-and how to make certain properties of your script appear in the Game Studio so that artists can configure script parameters.
-
-## Scripting and C&#35;
-
-In Xenko, all scripting is done in **C#**, an advanced and efficient programming language. Scripts are edited and debugged in **Visual Studio**.
+A script is a unit of code that lets you add behaviors to entities. In Xenko, scripts are written in **C#**. Scripts are edited and debugged in **Visual Studio**.  
 
 > [!NOTE]
-> These pages don't teach you C#. Good luck!
+> Explaining C# is out of the scope of this documentation.
 
-However, not all the C# code in your game are scripts.
+A script is a C# class that inherits from the [ScriptComponent](xref:SiliconStudio.Xenko.Engine.ScriptComponent) class. You can attach scripts to entities. They have access to the [IScriptContext](xref:SiliconStudio.Xenko.Engine.IScriptContext), which gives you access to the main modules of the Xenko engine:
 
-A script is a C# class that inherits from the [ScriptComponent](xref:SiliconStudio.Xenko.Engine.ScriptComponent) class. You can attach scripts to entities. They have access to the [ScriptContext](xref:SiliconStudio.Xenko.Engine.IScriptContext). The script context gives access to the main modules of the Xenko engine:
+* [Audio](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Audio): the audio system
+* [Content](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Content): loads and saves content from assets
+* [EffectSystem](xref:SiliconStudio.Xenko.Engine.ScriptComponent.EffectSystem): loads and compiles effects and shaders
+* [Game](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Game): accesses all information related to your game
+* [GraphicsDevice](xref:SiliconStudio.Xenko.Engine.ScriptComponent.GraphicsDevice): low-level graphics device to create GPU resources
+* [Input](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Input): keyboard, mouse and gamepad states and events
+* [Services](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Services): a registry of services that you can use to register your own services
+* [SceneSystem](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SceneSystem): the currently displayed scene
+* [Script](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Script): accesses the script manager to schedule or wait for the termination of scripts
+* [SpriteAnimation](xref:SiliconStudio.Xenko.Engine.ScriptComponent.SpriteAnimation): animates sprites
+* [Log](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Log): logs messages and errors from scripts
 
-* **Audio**: Gives access to the audio system.
-* **Content**: Lets you load and save content from assets.
-* **EffectSystem**: Lets you load and compile effects and shaders.
-* **Entity**: The entity the script is attached to.
-* **Game**: Gives access to all information related to your game.
-* **GraphicsDevice**: Gives advanced access to low-level graphics device to create GPU resources.
-* **Input**: Gives access to keyboard, mouse and joypad states and events.
-* **Services**: A registry of services that you can use to register your own services.
-* **SceneSystem**: Gives access to the currently displayed scene, where you can manage entities.
-* **Script**: Gives access to the script manager to schedule or wait for the termination of scripts.
-* **Log**: Gives you access to the logging system to log messages and errors from scripts.
+You can still use standard C# classes in Xenko, but these aren't called scripts and you can't attach them to entities in Game Studio.
 
-These objects are described in more detail in the Xenko API reference.
+## Types of script
 
-Of course, you can still use standard C# classes in Xenko, but these aren't called scripts and you can't attach them to entities in Game Studio.
+There are three main types of script in Xenko: **startup scripts**, **synchronous scripts**, and **asynchronous scripts**. 
 
-## Script types
-
-There are three main types of script in Xenko, each with a precise function: **startup scripts**, **synchronous scripts**, and **asynchronous scripts**. 
-
-When you write your script, inherit from the script type that provides the proper behavior.
+When you write your script, inherit from the type of script with the behavior that best fits your needs.
 
 ### Startup scripts
 
-Startup scripts are called at load time and unload time (ie when the attached entity is loaded and unloaded). They're mostly used to initialize game elements and destroy them when the scene is unloaded. 
+Startup scripts are called at load time and unload time (ie when the attached entity is loaded and unloaded). They're mostly used to initialize game elements and destroy them when the scene is unloaded. They have a [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method for initialization and a [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method. You can override both methods if you need to.
 
-They have a [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method for initialization and a [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method for cancellation that should be overridden.
+Example:
 
 ```
 public class StartUpScriptExample : StartupScript
@@ -61,11 +50,9 @@ public class StartUpScriptExample : StartupScript
 
 Synchronous scripts are initialized, then updated every frame, and finally canceled.
 
-The initialization code, if any, goes in the [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method.
-
-The code performing the update goes in the [Update](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) method.
-
-The code performing the cancellation goes in the [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method.
+* The initialization code, if any, goes in the [Start](xref:SiliconStudio.Xenko.Engine.StartupScript.Start) method.
+* The code performing the update goes in the [Update](xref:SiliconStudio.Xenko.Engine.SyncScript.Update) method.
+* The code performing the cancellation goes in the [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method.
 
 The following script performs updates every frame, no matter what:
 
@@ -83,9 +70,8 @@ public class SampleSyncScript : SyncScript
 
 Asynchronous scripts are executed only once, then canceled when removed from the scene. 
 
-The asynchronous code goes in the [Execute](xref:SiliconStudio.Xenko.Engine.AsyncScript.Execute) function.
-
-The code performing the cancellation goes in the [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method.
+* The asynchronous code goes in the [Execute](xref:SiliconStudio.Xenko.Engine.AsyncScript.Execute) function.
+* The code performing the cancellation goes in the [Cancel](xref:SiliconStudio.Xenko.Engine.ScriptComponent.Cancel) method.
 
 The following script performs actions that depend on events and triggers:
 

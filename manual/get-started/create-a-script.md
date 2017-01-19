@@ -7,18 +7,24 @@ You can create and add scripts using Game Studio or Visual Studio.
 
 ## Create a script in Game Studio
 
-In the **asset view**, click **Add asset > Scripts** and select a script type.
+1. In the **asset view**, click **Add asset > Scripts** and select a script type.
 
-![Select script type window](media/create-a-script-script-asset-selection.png)
+	![Select script type window](media/create-a-script-script-asset-selection.png)
+
+2. In the **Script wizard** dialog, specify a class name and namespace for the script and click **OK**.
+
+	![Script wizard](media/script-wizard.png)
 
 Game Studio adds a script to the project. You can see it in the asset view.
+
+
 
 ![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
   
 You can see the new script in Visual Studio.
 
 > [!Tip]
-> Open your solution in Visual Studio by clicking the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
+> To open your solution in Visual Studio, click the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
 
 ```
 using System;
@@ -46,11 +52,9 @@ namespace MyGame
 
 ## Create a script in Visual Studio
 
-The first method consists in adding a new script class in the game project from Visual Studio. 
-
 1. In Game Studio, open your solution in Visual Studio by clicking the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the toolbar.
 
-	Your game solution is composed of several projects. 
+	The game solution is composed of several projects. 
 	
 	* The project ending in *.Game* is the main project, and should contain all your game logic and scripts. 
 	* Other projects (eg *MyGame.Windows*, *MyGame.Android* etc) contain platform-specific code.
@@ -61,7 +65,7 @@ The first method consists in adding a new script class in the game project from 
 
 	The **Add New Item** dialog opens.
 
-3. Select **Class**, **type a name** for your script, and click **Add**.
+3. Select **Class**, type a name for your script, and click **Add**.
 
    Visual Studio adds a new class to your game.
 
@@ -69,7 +73,7 @@ The first method consists in adding a new script class in the game project from 
 
 5. Implement the necessary abstract methods. 
 
-	The following script is an example:
+	Example:
 
 	```
 		using System;
@@ -96,7 +100,7 @@ The first method consists in adding a new script class in the game project from 
 
 6. Save the project and script files.
 
-7. Because you modified the script outside Game Studio, Game Studio needs to reload the assembly to show the changes. In Game Studio, a dialog asks if you want to reload the assemblies:
+7. Because you modified the script outside Game Studio, Game Studio needs to reload the assembly to show the changes.
    
 	![Confirmation message](media/create-a-script-confirmation-message.png)
 
