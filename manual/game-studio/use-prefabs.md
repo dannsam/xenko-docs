@@ -43,11 +43,11 @@ private void InstantiateBulletPrefab()
     var instance = myBulletPrefab.Instantiate();
     var bullet = instance[0];
 
-    // Add the bullet to the scene
-    SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
-
     // Change the X coordinate
     bullet.Transform.Position.X = 20.0f;
+
+    // Add the bullet to the scene
+    SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
 }
 ```
 
