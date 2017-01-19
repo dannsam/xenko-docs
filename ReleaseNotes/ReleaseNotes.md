@@ -371,11 +371,24 @@ Release date 2017/1/11
 * Fix issues with some pane of the editor not being visible while they were checked as visible in the View menu
 * Prevent TreeViews to change scroll position when selecting an item if they were scrolled to another position while they didn't have the focus
 * Fix properties that were all grayed when selecting multiple objects.
+* Fix a case where Script assets would not open in the external text editor.
 
 #### Particles
 
 * Fix a bug where Edge and Center definitions for trail shape renderer were swapped
 * Fix a bug where None for particle material still displays color
+
+#### Physics
+
+* Fix 2D boxes shapes collisions.
+* Fix drawing of Characters debug shapes at run-time.
+* Throwing if mass is negative.
+* Fixed an issue with scaling and single collider shapes
+
+#### Audio
+
+* Fix XAudio audio clipping when sounds were not looped.
+* Fix OpenSLES multiple play of non looped sound.
 
 ### Improvements
 
