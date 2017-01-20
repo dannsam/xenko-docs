@@ -30,6 +30,9 @@ There are two ways to create assets:
 
 You can drag compatible resource files directly into Game Studio to create assets from them. Game Studio is compatible with common file formats.
 
+> [!NOTE]
+> * You can't use this method to create assets that don't use resource files (eg prefabs, materials, or scenes).
+
 | Asset type                    | Compatible resource file formats                                           |
 |-------------------------------|--------------------------------------------------------------|
 | Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
@@ -56,9 +59,6 @@ Game Studio automatically imports all dependencies in the resource files and cre
 
 > [!TIP]
 > You can drag multiple files simultaneously. If you drop multiple files of different types at the same time, Game Studio only adds only files that match your template selection. For example, if you add an image file and a sound file, then select the Sound asset template, only the sound file is added.
-
-> [!NOTE]
-> * By dragging and dropping, you can only create assets from single resource files. You can't create assets that don't use resource files, such as prefabs, materials, or scenes.
 
 ## What's next?
 
