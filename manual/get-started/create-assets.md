@@ -28,15 +28,27 @@ There are two ways to create assets:
 
 ## Drag and drop resource files
 
-1. Drag and drop a resource file from Explorer to the asset view:
+You can drag compatible resource files directly into Game Studio to create assets from them. Game Studio is compatible with common file formats.
+
+| Asset type                    | Compatible resource file formats                                           |
+|-------------------------------|--------------------------------------------------------------|
+| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
+| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
+| Audio assets                  | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc       |
+
+To create an asset by dragging and dropping a resource file:
+
+1. (Optional) If it isn't there already, move the resource file you want to use in the **Resources** folder of your project. You don't have to do this, but it's good practice to keep resource files organized and makes projects easier to share. For more information, see [Project structure](project-structure.md).
+
+2. Drag the resource file from Explorer to the asset view:
 
 	![Drap and drop a resource file to the asset view](media/create-assets-drop-resource.png)
 
-2. After you drop the resource file, select the template closest to your needs:
+3. Select the kind of asset you want to create:
    
 	![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
 
-3. Game Studio adds the asset to the asset view:
+4. Game Studio adds the asset to the asset view:
 
 	![Texture asset created](media/create-assets-drag-drop-asset-created.png)
 
@@ -47,7 +59,6 @@ Game Studio automatically imports all dependencies in the resource files and cre
 
 > [!NOTE]
 > * By dragging and dropping, you can only create assets from single resource files. You can't create assets that don't use resource files, such as prefabs, materials, or scenes.
-> * When you add a resource file, Game Studio doesn't add a copy of the file to the project Resources folder. This is to stop Game Studio creating unnecessary copies and to let you manage your files how you want. To keep all your project files in one place, we recommend you **add a copy of the resource file to the project Resources folder first**, then use this copy in your project.
 
 ## What's next?
 
