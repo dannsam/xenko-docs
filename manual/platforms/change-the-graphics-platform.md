@@ -4,6 +4,9 @@
 
 You can select which graphics platform your game uses, and add overrides for different platforms (eg Windows, Android, etc).
 
+> [!Note]
+> Make sure you have the latest drivers for the graphics platforms you want to use.
+
 1. In the **asset view**, select the **GameSettings** asset.
 
     ![Game settings asset](media/games-settings-asset.png)
