@@ -8,7 +8,7 @@
 ### [Create assets](get-started/create-assets.md)
 ### [Manage assets](get-started/manage-assets.md)
 ### [Use an asset](get-started/use-assets.md)
-## [Scenes](get-started/introduction-to-scenes.md)
+## [Introduction to scenes](get-started/introduction-to-scenes.md)
 ### [Create a scene](get-started/create-a-scene.md)
 ### [Add entities](get-started/add-entities.md)
 ### [Arrange entities](get-started/arrange-entities.md)
@@ -158,6 +158,7 @@
 ## [Linux](platforms/linux/index.md)
 ### [Setup and requirements](platforms/linux/setup.md)
 ## [Add or remove a platform](platforms/add-or-remove-a-platform.md)
+## [Change the graphics platform](platforms/change-the-graphics-platform.md)
 
 # [Scripts](scripts/index.md)
 ## [Preprocessor variables](scripts/preprocessor-variables.md)

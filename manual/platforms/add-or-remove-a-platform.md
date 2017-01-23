@@ -1,5 +1,7 @@
 # Add or remove a platform
 
+<span class="label label-doc-level">Beginner</span>
+
 You can add and remove platforms to and from projects.
 
 1. In the **solution explorer** (default bottom left), right-click the project and select **Update package > Update platforms**.
