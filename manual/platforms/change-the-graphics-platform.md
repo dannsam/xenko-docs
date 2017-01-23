@@ -2,7 +2,7 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-You can select which graphics platform your game uses, and add overrides for different platforms (eg Windows, Android, etc).
+The **graphics platform** controls the graphics hardware in the device you run your project on. Different devices support different graphics platforms; for example, iOS supports the OpenGL ES graphics platform. You can select which graphics platform your game uses, and add overrides for different platforms (eg Windows, Android, etc).
 
 > [!Note]
 > Make sure you have the latest drivers for the graphics platforms you want to use.
