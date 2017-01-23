@@ -49,8 +49,10 @@ Xenko overrides the graphics platform for the platforms you selected.
 
 ## Check which graphics platform your project uses
 
-Add a break point to your game code (such as in a script) and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
+1. Add a break point to your game code (eg in a script).
+2. Run the project. 
+3. Check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
 
-For example, this project is using Vulkan:
+    For example, this project is using Vulkan:
 
-![Select graphics platform](media/check-platform-at-runtime.png)
+    ![Select graphics platform](media/check-platform-at-runtime.png)
