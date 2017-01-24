@@ -26,6 +26,6 @@ To develop for mobile platforms, you also need:
 | iOS | Mac computer, Xamarin license* |
 
 > [!Note]
-> If you use Visual Studio, you already have a Xamarin license.
+> *If you use Visual Studio, you already have a Xamarin license.
 
 For information about supported platforms, see [Platforms](../platforms/index.md).
