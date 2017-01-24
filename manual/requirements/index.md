@@ -5,7 +5,7 @@ To develop projects with Xenko, you need:
 | Requirement | Specifications |
 |-------|-------|
 |Hard drive space|5GB|
-| Operating system | Windows 7, 8.1, 10) |
+| Operating system | Windows 7, 8.1, 10 |
 | IDE for writing code | Visual Studio 2013, 2015|
 | CPU | x64|
 | GPU | DirectX 10+ compatible GPU |
