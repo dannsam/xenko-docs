@@ -4,12 +4,12 @@ To develop projects with Xenko, you need:
 
 | Requirement | Specifications |
 |-------|-------|
-|Hard drive space|1.5GB|
-| Operating system | Windows Desktop (7/8/8.1/10) |
-| IDE for writing code | Visual Studio 2012/2013/2015<br> Xamarin Studio |
-| CPU | x64 Quad Core<br> x64 Dual Core Hyper-threaded |
+|Hard drive space|5GB|
+| Operating system | Windows 7, 8.1, 10) |
+| IDE for writing code | Visual Studio 2013, 2015|
+| CPU | x64|
 | GPU | DirectX 10+ compatible GPU |
-| RAM | 1.5GB (minimum), 8GB (recommended) |
+| RAM | 4GB (minimum), 8GB (recommended) |
 
 RAM requirements vary depending on your project:
 
@@ -22,7 +22,7 @@ To develop for mobile platforms, you also need:
 
 | Platform | Requirements |
 |-------|-------|
-| Andriod | Xamarin license* |
+| Android | Xamarin license* |
 | iOS | Mac computer, Xamarin license* |
 
 > [!Note]
