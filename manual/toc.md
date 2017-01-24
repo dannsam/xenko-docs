@@ -1,3 +1,6 @@
+
+# [Requirements](requirements/index.md)
+
 # [Get started](get-started/index.md)
 ## [Install Xenko](get-started/install-xenko.md)
 ## [Launch Xenko](get-started/launch-xenko.md)

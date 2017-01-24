@@ -14,9 +14,6 @@ This page will show you the details of what you can do with the launcher.
 
 ![Xenko launcher interface](media/xenko-launcher-interface.png)
 
-_Xenko launcher_
-
-
 ## Installing Xenko and starting the Game Studio
 
 The launcher prompts you initially to the install latest version of Xenko as well as the Visual Studio plugin. Using this plugin, you can edit your [shaders](xref:shaders) directly from Visual Studio. This plugin provides the features of syntax highlighting, live-code-analysis with validation, error-checking, and navigation. It is not mandatory to install this plugin, however we recommend to install it.
@@ -24,9 +21,6 @@ The launcher prompts you initially to the install latest version of Xenko as wel
 You can start the active version of Game Studio by clicking the Start button. To change the active version, click a version in the **Switch/update** version section to make the selected version, your active version.
 
 ![Xenko launcher: Start button](media/xenko-launcher-start-button.png)
-
-_Start button of Xenko launcher_
-
 
 ## Version management
 
@@ -51,11 +45,8 @@ In the **Switch/update version** section, you can:
  * Click the Release Notes button to view the release notes of a Xenko version.
  * Click the Download and Install button to install a Xenko version
  * Click the Uninstall button to uninstall a Xenko version.
- 
 
 ![Various versions of Xenko](media/xenko-launcher-various versions.png)
-
-_Various versions of Xenko_
 
 
 ## Visual Studio plugin
@@ -73,9 +64,6 @@ This plugin provides the following:
 
 ![Visual Studio plugin](media/xenko-launcher-visual-studio-plugin.png)
 
-_Visual Studio plugin_
-
-
 ## Recent projects
 
 You can open your recent Xenko projects from this section just by clicking the name of a project. This section also allows you to convert a project to a newer version of Xenko, as displayed in the screenshot below.
@@ -83,5 +71,3 @@ You can open your recent Xenko projects from this section just by clicking the n
 >**Note:** When converting projects to a newer version of Xenko, the project might stop working after conversion. Manual changes might be needed to get the project working for a newer version. **Be sure to make a backup of your project and all related files before upgrading.**
 
 ![Projects section](media/xenko-launcher-projects-section.png)
-
-_Projects section_
