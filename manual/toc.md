@@ -176,6 +176,7 @@
 ## [Oculus Rift](virtual-reality/oculus/index.md)
 
 # [Troubleshooting](troubleshooting/index.md)
+## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 
 # [Xenko Launcher](xenko-launcher/index.md)
