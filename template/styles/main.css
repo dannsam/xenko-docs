@@ -452,6 +452,10 @@ h5{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.custom__breadcrumb + article.content h2,
+.custom__breadcrumb + article.content h3{
+    margin-top: 28px;
+}
 @media screen and (max-width: 768px){
     .documentation_list li a p:after{
         display: none;
