@@ -31,10 +31,5 @@ $(function() {
     });
   }
   resizableTOC();
-
-  // $(window).on('resize', function(){
-  //   $('#sidetoggle').resizable( "destroy" );
-  //   resizableTOC();
-  // })
 });
 
