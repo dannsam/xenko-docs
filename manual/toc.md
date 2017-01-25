@@ -20,7 +20,7 @@
 ### [Scripts in Xenko](get-started/scripts-in-xenko.md)
 ### [Create a script](get-started/create-a-script.md)
 ### [Use scripts](get-started/use-scripts.md)
-## [Launch a project](get-started/launch-a-game.md)
+## [Launch a game](get-started/launch-a-game.md)
 
 <!---
 # [Animation](animation/index.md)
