@@ -1,5 +1,7 @@
 # Physics
 
+![Physics in Xenko](media/physics-index-physics-in-xenko.png)
+
 Xenko simulates real-world physics such as gravity and collisions.
 This section explains how physics components work, how to add them to your project, and how to use them with scripts.
 
@@ -13,7 +15,7 @@ This section explains how physics components work, how to add them to your proje
     * [Triggers](triggers.md): Use triggers to detect passing objects
     * [Constraints](constraints.md): Create appealing and realistic physics
 * [Raycasting](raycasting.md): Trace intersecting objects
-* [Simulation](simulation.md): See how Xenko controls physics
+* [Simulation](simulation.md): How Xenko controls physics
 
 ### Tutorials
 * [Create a bouncing ball](create-a-bouncing-ball.md): Use the static collider and rigid body components to create a ball bouncing on a floor
@@ -21,5 +23,4 @@ This section explains how physics components work, how to add them to your proje
 
 ## Further reference
 
-Xenko uses the open-source [Bullet Physics](http://bulletphysics.org/wordpress/) engine.
-For detailed information, see the [Bullet User Manual](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf).
+Xenko uses the open-source [Bullet Physics](http://bulletphysics.org/wordpress/) engine. For detailed information, see the [Bullet User Manual](https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf).

@@ -324,6 +324,11 @@ article table {
 .doc-incomplete::after {
     content: "This documentation is under construction";
 }
+
+.label-doc-highlight {
+    background-color: #5cb85c;
+}
+
 /* Set new font-sizes for heading */
 h1{
     font-size: 35px;
