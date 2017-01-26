@@ -7,7 +7,7 @@ Xenko is a free open-source C# game engine. You can use its robust toolset to cr
 
 * <span class="label label-doc-highlight">New</span> [Change the graphics platform](platforms/change-the-graphics-platform.md)
 * <span class="label label-doc-highlight">New</span> [Profiling](troubleshooting/profiling.md)
-* <span class="label label-doc-highlight">Updated</span> [Get started](get-started.md)
+* <span class="label label-doc-highlight">Updated</span> [Get started](get-started/index.md)
 
 ## Improve this documentation
 

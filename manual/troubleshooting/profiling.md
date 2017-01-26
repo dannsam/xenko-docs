@@ -1,7 +1,11 @@
+## Profiling
+
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
 You can **profile** your project to check its runtime performance and find problems. You can use the Xenko profiler or an external profiling tool such as the Performance Profiler in Visual Studio.
+
+![Profiling](media/profiling.png)
 
 ## Profile with Xenko
 
