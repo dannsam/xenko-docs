@@ -41,6 +41,7 @@ You can profile your project by adding a script to your scene.
     >You can change the type of data the profiler displays. For more information, see the [Xenko profiler API documentation](xref:SiliconStudio.Core.Diagnostics.Profiler).
 
 ## Use external profiling tools
+
 You can use external profiling tools to profile your project.
 
 | Profiler | Type | Platforms |
@@ -74,23 +75,22 @@ For more information about the Visual Studio profiler, see the [MSDN documentati
 
 ## Common bottlenecks
 
-As CPU and GPU process different types of data in the rendering pipeline, it's usually easy to identify which unit is causing a bottleneck.
-Most GPU problems arise when the application has to process too many pixels per frame. Tessellation, lighting and shadows are among the most common causes of per-pixel bottlenecks.
+As CPU and GPU process different types of data, it's usually easy to identify which part is causing a bottleneck.
 
-Try running the application at a lower graphics resolution and see if this improves performance. If this doesn't help, the issue is probably caused by vertex processing. Some common problems are:
+Most GPU problems arise when the application uses expensive rendering techniques, such as post-effects, lighting, shadows, and tessellation. To identify the problem, disable rendering features. 
 
-* Excessive tessellation requires large computational resources.
-* The engine has to process too many vertices every frame.
+If instead there seems to be a CPU bottleneck, reduce the complexity of the scene.
 
-If profiling indicates that the bottleneck isn't caused by GPU, the problem is likely the CPU. The unit is probably dealing with too many draw calls.
+For graphics:
 
-### Graphics
+* Decrease the resolution of your game.
+* Reduce the quality of your post-effects.
+* Reduce the number of lights and size of shadow maps.
+* Reduce shadow map sizes.
+* Use culling techniques to reduce the number of objects and vertices rendered.
 
-* Use culling techniques to reduce the number of vertices rendered at runtime.
-* Reduce HDR rendering and realistic lighting effects, which use lots of hardware resources.
-
-### Textures
+For textures:
 
 * Use compressed textures on slower devices.
-+ Use sprite sheets, not individual images.
-+ Use texture atlases, not separate textures.
+* Use sprite sheets, not individual images.
+* Use texture atlases, not separate textures.
