@@ -1,8 +1,6 @@
-{Create and setup new game}{Create a new empty game or create a game from a sample.}{page:manual/get-started/create-a-project.html}
-{Introduction to scenes}{page:manual/get-started/introduction-to-scenes.html}
-{Setup a basic scene}{Create entities, move around the scene and graphics pipeline setup.}{page:manual/get-started/create-a-scene.html}
-{Introduction to assets}{Learn how to represent an element of your game inside the Game Studio.}{page:manual/get-started/introduction-to-assets.html}
-{Create or import asset}{Create a procedural model, material and put them in a scene.}{page:manual/get-started/create-assets.html}
-{Introduction to scripting}{Scripting allows you to make your static game interactive by adding gameplay mechanics to it.}{page:/manual/get-started/introduction-to-scripting.html}
-{Use scripting}{How to use scripting to animate an entity or add gameplay logic.}{page:manual/get-started/create-a-script.html} 
-{Execute a game}{Let's run our game from either Xenko Studio or Visual Studio}{page:manual/get-started/xenko-docs/manual/launch-a-game.md}
+{Create a project }{Create an empty project, or create one based on a template or sample.}{page:manual/get-started/create-a-project.html}
+{Game Studio}{Understand the central tool for game production in Xenko}{page:manual/get-started/game-studio.html}
+{Introduction to assets}{Create and manage images, models, sounds, and other assets.}{page:manual/get-started/assets.html}
+{Set up a scene}{Set up a graphics pipeline, add entities, and move around the scene.}{page:manual/get-started/introduction-to-scenes.html}
+{Introduction to scripts}{Create scripts to make your game interactive.}{page:manual/get-started/introduction-to-scripts.html}
+{Launch a game}{Run your game from Game Studio or Visual Studio.}{page:manual/get-started/launch-a-game.html}
