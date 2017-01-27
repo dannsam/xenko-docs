@@ -29,7 +29,7 @@ You might need to use an older version of Xenko to work with old projects. Newer
 For minor versions, only the last number of the version number changes (1.9.0, 1.9.1, 1.9.2, etc). Minor versions don't contain breaking changes, so they're safe to install and use with your existing projects.
 
 >![Note]
->You can't revert to earlier minor versions. For example, you can move from Xenko 1.9 to 1.8, but you can't move from Xenko 1.9.2 to Xenko 1.9.1.
+>You can't revert to earlier minor versions. For example, you can install both Xenko 1.9 and 1.8 side by side, but you can't revert from Xenko 1.9.2 to Xenko 1.9.1.
 
 * To see the release notes for a particular version, click the **note icon** next to the version name.
 
