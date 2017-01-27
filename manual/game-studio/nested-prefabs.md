@@ -8,10 +8,6 @@ For example, imagine you have a table prefab, a chair prefab, and a television p
 
 If you modify a nested prefab, all the dependent prefabs inherit the change automatically. For example, if you change the shape of the table prefab, it changes in the living room and house prefabs too.
 
-![Open prefab in editor](media/nested-prefabs-russian-dolls.png)
-
-## Example
-
 This video demonstrates an example of nested prefabs:
 
 <p>
