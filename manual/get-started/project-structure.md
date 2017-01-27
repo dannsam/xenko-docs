@@ -1,6 +1,6 @@
 # Project structure
 
-Xenko saves your projects as [Visual Studio solution files](https://msdn.microsoft.com/en-us/library/bb165951.aspx?f=255&MSPPError=-2147217396). You can open the projects with Xenko Game Studio or Visual Studio.
+Xenko saves your projects as [Visual Studio solution files](https://msdn.microsoft.com/en-us/library/bb165951.aspx?f=255&MSPPError=-2147217396). You can open the projects with Xenko Game Studio or any IDE such as Visual Studio.
 
 Xenko projects use many kinds of file, including source code, images, models, sounds, and others. The files fall into one of two categories:
 
@@ -19,15 +19,15 @@ Xenko organizes the project into **packages**, .xkpkg files contained in dedicat
 
 Packages have the following directory structure:
 
-![Package folder structure](media/folder-structure.png)
+![Folder structure](media/folder-structure.png)
 
 * **Assets** contains the asset files which represent elements in your game.
 
 * **Bin** contains the compiled binaries and data. Xenko creates the folder when you build the project, with a subdirectory for each platform.
 
-* **MyPackage.Game** contains your source code.
+* **MyGame.Game** contains your source code.
 
-*	**MyPackage.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (eg *MyPackage.Windows*, *MyPackage.Linux*, etc). These folders are usually small, and only contain the entry point of the program.
+*	**MyGame.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (eg *MyPackage.Windows*, *MyPackage.Linux*, etc). These folders are usually small, and only contain the entry point of the program.
 
 * **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
 
@@ -68,7 +68,7 @@ Following these suggestions about resource files and content creation files, an 
     - Assets
         - texture.ktex
     - Bin
-    - MyPackage.Game
+    - MyGame.Game
     - MyGame.Platform
     - obj
     - Resources
