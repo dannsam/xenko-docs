@@ -43,11 +43,11 @@ Some examples:
 
 ### Draw
 
-During Draw, we fill GPU command list.
+During Draw, the [Graphics Compositor](../graphics-compositor/index.md) will control rendering flow.
 
 This includes:
 * Setting up render targets
-* Drawing combinations of render stage with render view.
+* Drawing combinations of render stage with render view using @'SiliconStudio.Xenko.Rendering.RenderSystem.Draw' (cf [Example](#example))
 
 ### Example
 

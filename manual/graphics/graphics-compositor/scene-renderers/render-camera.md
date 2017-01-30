@@ -1,6 +1,8 @@
 # Render Camera
 
-Render all renderable entity components from the scene. 
+Create and setup a [Render View](../rendering-pipeline/index.md#render-views) using a camera slot.
+
+It will then perform rendering using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
 
 ![media/render-camera-1.png](media/render-camera-1.png) 
 
@@ -8,21 +10,5 @@ Render all renderable entity components from the scene.
 
 | Property      | Description                                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Mode          | Select the rendering mode for this camera:                                                                                |
-|               |                                                                                                                           |
-|               | - Forward                                                                                                                 |
-|               | - Wireframe                                                                                                               |
-|               | - Forward+/Deferred (*these will be added in a future release*)                                                           |
-|               |                                                                                                                           |
-|               |                                                                                                                           |
+| Child         | Select a renderer for this camera, such as ForwardRenderer or any of your custom renderers                                |
 | Camera        | Specify a Camera slot defined at the level of the Scene Graphics Compositor                                               |
-| Culling Mask  | Allow to filter the entities that will be rendered by this instance                                                       |
-| Output        | See Common properties in [Scene Renderers](index.md)                                                                      |
-| Viewport      | The viewport where the rendering will occur on the render frame. By default, it takes the whole space (Width/Height 100%) |
-| Viewport in % | If set to **true**, the **Viewport** is interpreted in percentage, otherwise in absolute.                                 |
-
-
- 
-
- 
-
