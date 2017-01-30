@@ -100,7 +100,7 @@ namespace MyGame
 
 6. Save the project and script files.
 
-7. Because you modified the script outside Game Studio, Game Studio needs to reload the assembly to show the changes.
+7. Because you modified the script, Game Studio needs to reload the assembly to show the changes.
    
 	![Confirmation message](media/create-a-script-confirmation-message.png)
 
