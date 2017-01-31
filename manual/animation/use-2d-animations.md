@@ -9,20 +9,20 @@ After you [set the properties of a sprite sheet](edit-sprites.md), use scripts t
 ```cs
 public class Animation : SyncScript
 {
-   // Declared public member fields and properties will show in the Game Studio.
+   // Declared public member fields and properties are displayed in Game Studio.
    private SpriteFromSheet sprite;
    private DateTime lastFrame;
 
    public override void Start()
    {
-       // Initialize of the script.
+       // Initialize the script.
        sprite = Entity.Get<SpriteComponent>().SpriteProvider as SpriteFromSheet;
        lastFrame = DateTime.Now;
    }
 
    public override void Update()
    {
-      // Do dpmething every new frame.
+      // Do something every new frame.
       if ((DateTime.Now - lastFrame) > new TimeSpan(0, 0, 1))
       {
          sprite.CurrentFrame += 1;

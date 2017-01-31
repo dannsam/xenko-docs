@@ -7,11 +7,11 @@ You can import sprite sheets created in Photoshop or similar software. You can a
 
 1. Drag the sprite sheet file from Windows Explorer to the Game Studio **asset view**.
 
-<p>
+    <p>
     <video autoplay loop class="responsive-video" poster="media/drag-and-drop-sprite-sheet.jpg">
-       <source src="media/drag-and-drop-sprite-sheet.mpg" type="video/mp4">
+    <source src="media/drag-and-drop-sprite-sheet.mp4" type="video/mp4">
     </video>
-</p>
+    </p>
 
     Alternatively, in the **asset view**, click **Add asset**.
 

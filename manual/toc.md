@@ -26,6 +26,15 @@
 # [Animation](animation/index.md)
 --->
 
+# [Game Studio](game-studio/index.md)
+## [Archetypes](game-studio/archetypes.md)
+## [Prefabs](game-studio/prefabs.md)
+### [Create a prefab](game-studio/create-a-prefab.md)
+### [Use prefabs](game-studio/use-prefabs.md)
+### [Edit prefabs](game-studio/edit-prefabs.md)
+### [Nested prefabs](game-studio/nested-prefabs.md)
+### [Override prefab properties](game-studio/override-prefab-properties.md)
+
 # [Audio](audio/index.md)
 ## [Import audio as a sound asset](audio/import-audio-as-a-sound-asset.md)
 ## [Sound asset properties](audio/sound-asset-properties.md)
@@ -38,15 +47,6 @@
 ## [Play a range within an audio file](audio/play-a-range-within-an-audio-file.md)
 ## [Custom audio data](audio/custom-audio-data.md)
 ## [Set an audio device](audio/set-an-audio-device.md)
-
-# [Game Studio](game-studio/index.md)
-## [Archetypes](game-studio/archetypes.md)
-## [Prefabs](game-studio/prefabs.md)
-### [Create a prefab](game-studio/create-a-prefab.md)
-### [Use prefabs](game-studio/use-prefabs.md)
-### [Edit prefabs](game-studio/edit-prefabs.md)
-### [Nested prefabs](game-studio/nested-prefabs.md)
-### [Override prefab properties](game-studio/override-prefab-properties.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
@@ -126,6 +126,21 @@
 ## [Pointers](input/pointers.md)
 ## [Sensors](input/sensors.md)
 ## [Virtual buttons](input/virtual-buttons.md)
+
+# [Animation](animation/index.md)
+## [3D animation](animation/3d-animation.md)
+### [Import mesh and skeleton](animation/import-mesh-and-skeleton.md)
+### [Import animations](animation/import-animations.md)
+### [Preview animations](animation/preview-animations.md)
+### [Set up animations](animation/set-up-animations.md)
+### [Use 3D animations](animation/use-3d-animations.md)
+### [Procedural animation](animation/procedural-animation.md)
+### [Additive animation](animation/additive-animation.md)
+### [Custom blending trees](animation/custom-blending-trees.md)
+## [2D animation](animation/2d-animation.md)
+### [Import sprite sheets](animation/import-sprite-sheets.md)
+### [Edit sprites](animation/edit-sprites.md)
+### [Use 2D animations](animation/use-2d-animations.md)
 
 # [Particles](particles/index.md)
 ## [Create particles](particles/create-particles.md)
