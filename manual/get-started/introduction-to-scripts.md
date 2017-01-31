@@ -5,6 +5,9 @@
 
 Scripts handle game events, respond to user inputs and control the behavior of your entities. In short, scripts make games interactive by adding gameplay.
 
+![Scripting](media/scripting_intro.png)
+
+
 
 ```cs
 public class BasicAsyncScript : AsyncScript
