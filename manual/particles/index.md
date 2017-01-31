@@ -2,11 +2,7 @@
 
 **Particles** are used to create non-solid effects such as liquid, fire, explosions, smoke, lightning, motion trails, magic effects, and so on.
 
-<p>
-<video autoplay loop class="responsive-video" poster="media/particles.jpg">
-   <source src="media/particles.mp4" type="video/mp4">
-</video>
-</p>
+![Particles](media/particles.png)
 
 ## In this section
 

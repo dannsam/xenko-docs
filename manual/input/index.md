@@ -3,9 +3,9 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Users interact with games and applications using **input devices** such as gamepad, mouse, and keyboard. Every interactive application must support at least one input device.
+Users interact with games and applications using **input devices** such as gamepads, mice, and keyboards. Every interactive application must support at least one input device.
 
-![Input devices](media/input-device-icons.png)
+![Input devices](media/input_intro.png)
 
 Xenko handles input entirely via scripts. There are low-level and high-level APIs to handle different input types:
 

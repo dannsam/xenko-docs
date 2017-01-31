@@ -2,6 +2,8 @@
 
 <div class="doc-incomplete"/>
 
+![Scripting](media/scripting_intro.png)
+
 For basic information about scripting, see [Introduction to Scripting](../get-started/introduction-to-scripts.md)
 
 ## Various
