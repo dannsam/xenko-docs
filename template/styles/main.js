@@ -25,7 +25,7 @@ $(function() {
         });
         // Wait, while filter is aviable
         var filterTimer = setInterval(function(){
-          if($($('.sidefilter')[0]).length > 0){            
+          if($($('.sidefilter')[0]).length > 0){
             // Set filter width
             $($('.sidefilter')[0]).css('width', sizes.sidebarWidth);
             $($('.sidefilter')[0]).show();
@@ -71,6 +71,13 @@ $(function() {
       // If user on the one of the doc page (API, Manual, ReleaseNotes)
     if($('#sidetoggle').length > 0){
       resizableTOC();
+      var filterTimer = setInterval(function(){
+        if($($('.sidefilter')[0]).length > 0){
+          $($('.sidefilter')[0]).show();
+          // Clear inteval for filter
+          clearInterval(filterTimer);
+        }
+      }, 100);
       // If user on start page or somewhere else
     } else {
       $('.container.body-content.hide-when-search').show();
