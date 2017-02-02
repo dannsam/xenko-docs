@@ -40,7 +40,7 @@ Game Studio adds the sprite to the entity.
 
 You can use scripts to render sprites at runtime. To do this, attach the script to an entity with a sprite component.
 
-For information about how to add scripts to entities, see [Use a script](../get-started/use-a-script.md).
+For information about how to add scripts to entities, see [Use a script](../get-started/use-scripts.md).
 
 ### Code sample
 
