@@ -91,7 +91,6 @@ $(function() {
         clearInterval(tocInterval);
         if(localStorage.getItem('sidebarStructure') != null){
           getActiveItems();
-          localStorage.clear();
         }
         setActiveItems();
       }
