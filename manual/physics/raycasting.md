@@ -3,12 +3,14 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Raycasting** traces an invisible line through the scene to find intersecting physics objects.
-Raycasting is useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
+**Raycasting** traces an invisible line through the scene to find intersecting [colliders](colliders.md). This is useful, for example, to check which objects are in a gun's line of fire, or are under the mouse cursor when the user clicks.
 
-To raycast, in the current [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation), use [Simulation.Raycast](xref:SiliconStudio.Xenko.Physics.Simulation.Raycast\(SiliconStudio.Core.Mathematics.Vector3,SiliconStudio.Core.Mathematics.Vector3\)).
+>[!Note]
+>Raycasting uses **colliders** to calculate intersections. It ignores entities that have no collider component. For more information, see [Colliders](colliders.md).
 
-Raycasting is showcased in the **Physics Sample** project.
+To use a raycast, in the current [Simulation](xref:SiliconStudio.Xenko.Physics.Simulation), use [Simulation.Raycast](xref:SiliconStudio.Xenko.Physics.Simulation.Raycast\(SiliconStudio.Core.Mathematics.Vector3,SiliconStudio.Core.Mathematics.Vector3\)).
+
+For an example of raycasting, see the **Physics Sample** project included with Xenko.
 
 ## Example code
 
