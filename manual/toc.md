@@ -26,6 +26,15 @@
 # [Animation](animation/index.md)
 --->
 
+# [Game Studio](game-studio/index.md)
+## [Archetypes](game-studio/archetypes.md)
+## [Prefabs](game-studio/prefabs.md)
+### [Create a prefab](game-studio/create-a-prefab.md)
+### [Use prefabs](game-studio/use-prefabs.md)
+### [Edit prefabs](game-studio/edit-prefabs.md)
+### [Nested prefabs](game-studio/nested-prefabs.md)
+### [Override prefab properties](game-studio/override-prefab-properties.md)
+
 # [Audio](audio/index.md)
 ## [Import audio as a sound asset](audio/import-audio-as-a-sound-asset.md)
 ## [Sound asset properties](audio/sound-asset-properties.md)
@@ -39,14 +48,11 @@
 ## [Custom audio data](audio/custom-audio-data.md)
 ## [Set an audio device](audio/set-an-audio-device.md)
 
-# [Game Studio](game-studio/index.md)
-## [Archetypes](game-studio/archetypes.md)
-## [Prefabs](game-studio/prefabs.md)
-### [Create a prefab](game-studio/create-a-prefab.md)
-### [Use prefabs](game-studio/use-prefabs.md)
-### [Edit prefabs](game-studio/edit-prefabs.md)
-### [Nested prefabs](game-studio/nested-prefabs.md)
-### [Override prefab properties](game-studio/override-prefab-properties.md)
+# [Sprites](sprites/index.md)
+## [Import sprite sheets](sprites/import-sprite-sheets.md)
+## [Edit sprites](sprites/edit-sprites.md)
+### [Set sprite borders](sprites/set-sprite-borders.md)
+## [Use sprites](sprites/use-sprites.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
