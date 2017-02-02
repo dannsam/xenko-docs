@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-After you [import a sprite sheet](import-sprite-sheets), you can use the dedicated **Sprite Editor** to select sprites within the sprite sheet.
+After you [import a sprite sheet](import-sprite-sheets.md), you can use the dedicated **Sprite Editor** to select sprites within the sprite sheet.
 
 You can also edit sprite properties in the **property grid** like any other asset.
 
@@ -17,7 +17,7 @@ The sprite sheet opens in the Sprite Editor.
 
 ### Set sprite sheet type
 
-You can set whether the sprite sheet contains gameplay sprites (**Sprite2D**) or UI sprites (**UI**). This has no effect on how the sprite is rendered at runtime, but lets you set slightly different properties, described under **Properties** below. You can change the sprite sheet type any time.
+You can set whether the sprite sheet contains gameplay sprites (**Sprite2D**) or UI sprites (**UI**). This has no effect on how the sprite is rendered at runtime, but lets you set slightly different properties, described under **Sprite properties** below. You can change the sprite sheet type any time.
 
 ![Choose Sprite 2D or UI](media/sprite2D-UI.png)
 
@@ -49,8 +49,6 @@ To rename a sprite in the list, double-click it and type a new name.
 ### Set the texture region
 
 You create sprites by defining rectangular **texture regions** in the sprite sheet.
-
-![Sprite sheet](media/SpriteEntity.png)
 
 ![Select a sprite region](media/select-sprite.png)
 
@@ -84,9 +82,9 @@ You can drag the edges of the texture region and reposition the region manually.
 
 #### Set the texture region in the property grid
 
-You can define the XYWH pixel coordinates of the sprite borders in **property grid** under **Texture Region**.
+You can define the pixel coordinates of the texture region in **property grid** under **Texture Region**. X is the left border, Y is the top, Z is the right, and W is the bottom.
 
-![Select sprites from sprite sheet](media/set-sprite-borders-in-property-grid.png)
+![Set texture region in property grid](media/set-texture-region-in-property-grid.png)
 
 #### Use entire sprite sheet for the sprite
 
