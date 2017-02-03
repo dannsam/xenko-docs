@@ -36,7 +36,7 @@
 ### [Override prefab properties](game-studio/override-prefab-properties.md)
 
 # [Audio](audio/index.md)
-## [Import audio as a sound asset](audio/import-audio-as-a-sound-asset.md)
+## [Import audio](audio/import-audio.md)
 ## [Sound asset properties](audio/sound-asset-properties.md)
 ## [Non-spatialized audio](audio/non-spatialized-audio.md)
 ## [Spatialized audio](audio/spatialized-audio.md)
@@ -47,12 +47,6 @@
 ## [Play a range within an audio file](audio/play-a-range-within-an-audio-file.md)
 ## [Custom audio data](audio/custom-audio-data.md)
 ## [Set an audio device](audio/set-an-audio-device.md)
-
-# [Sprites](sprites/index.md)
-## [Import sprite sheets](sprites/import-sprite-sheets.md)
-## [Edit sprites](sprites/edit-sprites.md)
-### [Set sprite borders](sprites/set-sprite-borders.md)
-## [Use sprites](sprites/use-sprites.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
@@ -148,6 +142,12 @@
 ### [Lasers and lightning](particles/tutorials/lasers-and-lightning.md)
 ### [Create a trail](particles/tutorials/create-a-trail.md)
 ### [Custom particles](particles/tutorials/custom-particles.md)
+
+# [Sprites](sprites/index.md)
+## [Import sprite sheets](sprites/import-sprite-sheets.md)
+## [Edit sprites](sprites/edit-sprites.md)
+### [Set sprite borders](sprites/set-sprite-borders.md)
+## [Use sprites](sprites/use-sprites.md)
 
 # [Physics](physics/index.md)
 ## [Colliders](physics/colliders.md)

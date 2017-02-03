@@ -4,7 +4,7 @@ You can import sound files and use them in your games and applications. Xenko su
 ![Audio in Xenko](media/audio-index-intro-picture.png)
 
 ## Pages in this section
-* [Import audio as a sound asset](import-audio-as-a-sound-asset.md)
+* [Import audio](import-audio.md)
 * [Sound asset properties](sound-asset-properties.md)
 * [Non-spatialized audio](non-spatialized-audio.md)
 * [Spatialized audio](spatialized-audio.md)
