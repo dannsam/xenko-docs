@@ -1,13 +1,13 @@
-# Custom Scene Renderer
+# Custom scene renderer
 
-You can create custom renderer by implementing directly the @'SiliconStudio.Xenko.Rendering.ISceneRenderer' or by using a delegate through the @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer'
+You can create a custom renderer by directly implementing the @'SiliconStudio.Xenko.Rendering.ISceneRenderer' or using a delegate through the @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer'
 
-# Implementing an ISceneRenderer
+## Implement an ISceneRenderer
 
-You can use a base implementation of this interface
+You can use a base implementation of this interface:
 
-- @'SiliconStudio.Xenko.Rendering.SceneRendererBase': Provides a default implementation of @'SiliconStudio.Xenko.Rendering.ISceneRenderer' and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
-- @'SiliconStudio.Xenko.Rendering.SceneRendererViewportBase': Inherits from @'SiliconStudio.Xenko.Rendering.SceneRendererBase' and add the ability to configure a specific viewport 
+* @'SiliconStudio.Xenko.Rendering.SceneRendererBase': Provides a default implementation of @'SiliconStudio.Xenko.Rendering.ISceneRenderer' and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
+* @'SiliconStudio.Xenko.Rendering.SceneRendererViewportBase': Inherits from @'SiliconStudio.Xenko.Rendering.SceneRendererBase' and add the ability to configure a specific viewport 
 
  
 
@@ -28,10 +28,9 @@ public sealed class MyCustomRenderer : SceneRendererBase
 }
 ```
 
+## Use a delegate
 
-# Using a delegate
-
-In some scenarios, you simply want to develop a renderer and attach it to a method directly. You can use a @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer' for this usage:
+In some situations, you simply want to develop a renderer and attach it to a method directly. You can use @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer':
 
 ```cs
 var sceneDelegateRenderer = new SceneDelegateRenderer(

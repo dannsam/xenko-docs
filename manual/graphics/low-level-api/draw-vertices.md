@@ -2,7 +2,7 @@
 
 When loading a scene, Xenko automatically handles the draw calls to display the scene throughout the entity system. In this page, manual drawing will be introduced.
 
-# Primitives
+## Primitives
 
 The engine provides the following set of built-in primitives:
 
@@ -31,7 +31,7 @@ myCube.Draw(CommandList, EffectInstance);
 
 They have no effect associated with them, so the user has to provide an @'SiliconStudio.Xenko.Rendering.EffectInstance' when drawing. For information on loading effects, please see [Effects and shaders](../effects-and-shaders/index.md).
 
-# Custom drawing
+## Custom drawing
 
 Outside of built-in primitives, any geometry can be drawn by creating custom vertex buffers. To create a vertex buffer, first a @'SiliconStudio.Xenko.Graphics.VertexDeclaration' has to be defined. A vertex declaration describes the elements of each vertex and their layout.
 For details, see the @'SiliconStudio.Xenko.Graphics.VertexElement' reference page.

@@ -18,9 +18,8 @@ The more layers are used, the better the quality is, but at some performance cos
 
 ![media/depth-of-field-2.png](media/depth-of-field-2.png) 
 
-# Properties
+## Properties
 
- 
 
 | Property   | Description                                                                                                                                                            |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

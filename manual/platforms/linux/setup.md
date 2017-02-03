@@ -6,7 +6,7 @@ All setup instructions will be written assuming you have Ubuntu 16.04 installed,
 
 You will also need a Windows PC to build your projects for Linux using GameStudio.
 
-# Setup
+## Setup
 
 You will need the following packages:
 * [FreeType](#freetype)
@@ -14,7 +14,7 @@ You will need the following packages:
 * [SDL2](#sdl2)
 * Mono or .NET Core: one of them needs to be installed and it is ok to install both
 
-##FreeType
+## FreeType
 
 To render font, we use the [FreeType](https://www.freetype.org/) library. The minimum required version is 2.6 and can be installed via:
 
@@ -22,7 +22,7 @@ To render font, we use the [FreeType](https://www.freetype.org/) library. The mi
 sudo apt-get install libfreetype6-dev
 ```
 
-##OpenAL
+## OpenAL
 
 To play sounds and music, we use the [OpenAL](https://www.openal.org/) library. It can be installed via:
 
@@ -30,7 +30,7 @@ To play sounds and music, we use the [OpenAL](https://www.openal.org/) library. 
 sudo apt-get install libopenal-dev
 ```
 
-##SDL2
+## SDL2
 
 To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which provides us the ability to create windows, handle mouse, keyboard and joystick events. The minimum required version is 2.0.4 and can be installed via:
 
@@ -38,7 +38,7 @@ To run games on Linux, we use the [SDL2](https://www.libsdl.org/) library which 
 sudo apt-get install libsdl2-dev
 ```
 
-##Mono
+## Mono
 
 To install Mono, please refer to the [Mono Project](http://www.mono-project.com/docs/getting-started/install/linux/#debian-ubuntu-and-derivatives) installation instructions for Debian/Ubuntu. Make sure version 4.4 is installed. You can verify this by typing after installing it:
 
@@ -47,7 +47,7 @@ mono --version
 ```
 
 
-###.NET Code
+### .NET Code
 
 To install .NET Core, please refer to the [.NET Core](https://www.microsoft.com/net/core#ubuntu) installation instructions for Debian/Ubuntu. Make sure version 1.0 is installed. You can verify this by typing after installing it:
 

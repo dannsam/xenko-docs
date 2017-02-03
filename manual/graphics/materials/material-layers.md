@@ -1,4 +1,4 @@
-# Material Layers
+# Material layers
 
 Material layers gives a powerful way to combine multiple materials to build more complex materials. 
 

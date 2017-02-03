@@ -1,4 +1,4 @@
-# Bright Filter
+# Bright filter
 
 The bright filter extracts the areas of an image which are the brightest. 
 
@@ -6,7 +6,7 @@ So the bright pass in itself is not a post-effect, but its result is used later 
 
 ![media/bright-filter-1.png](media/bright-filter-1.png) 
 
-# Properties
+## Properties
 
 | Property  | Description                                                                                                                                    |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |

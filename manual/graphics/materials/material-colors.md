@@ -37,7 +37,7 @@ Sample the color/scalar from a given texture.
 | Offset             | An offset applied to (u,v)                                                                                                                                                    |
 
 
-# Constant Value
+## Constant Value
 
 The color is provided directly as a constant value over the whole material. In case of a scalar value, a simple slider is provided instead of a color picker.
 
@@ -48,7 +48,7 @@ The color is provided directly as a constant value over the whole material. In c
 | Color/Scalar | A RGBA or scalar value. |
 
 
-# Binary Operator
+## Binary Operator
 
 Perform a binary operation from 2 color/scalar value providers.
 
@@ -63,7 +63,7 @@ Perform a binary operation from 2 color/scalar value providers.
 | Right    | The right color/scalar involved in the operation |
 
 
-# Advanced Providers
+## Advanced Providers
 
 You can also use:
 

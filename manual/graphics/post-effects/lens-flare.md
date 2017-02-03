@@ -8,7 +8,7 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 ![media/lens-flare-2.png](media/lens-flare-2.png) 
 
-# Properties
+## Properties
 
 | Property                  | Description                                                                                                                                           |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |

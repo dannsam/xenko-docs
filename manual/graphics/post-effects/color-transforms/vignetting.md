@@ -8,7 +8,7 @@ This is an artifact which can appear with real-world cameras, you can use it in 
 
 ![media/vignetting-2.png](media/vignetting-2.png) 
 
-# Properties
+## Properties
 
 | Property | Description                                                                                                                      |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
