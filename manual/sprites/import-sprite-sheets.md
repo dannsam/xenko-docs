@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-You can import sprite sheets created in Photoshop or similar software. You add sprite sheets just like any other kind of asset.
+You can import sprite sheets (image files containing sprites) just like any other kind of asset.
 
 1. Drag the sprite sheet file from Explorer to the Game Studio **asset view**.
 

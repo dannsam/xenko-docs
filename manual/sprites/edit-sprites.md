@@ -52,7 +52,7 @@ You create sprites by defining rectangular **texture regions** in the sprite she
 
 ![Select a sprite region](media/select-sprite.png)
 
-There are three ways to do this: by using the Magic Wand tool, by setting the borders manually, or by specifying the pixel coordinates in the sprite properties.
+There are three ways to do this: by using the Magic Wand tool, by setting the edges of the region manually, or by specifying the pixel coordinates in the sprite properties.
 
 #### Use the Magic Wand
 
@@ -82,7 +82,7 @@ You can drag the edges of the texture region and reposition the region manually.
 
 #### Set the texture region in the property grid
 
-You can define the pixel coordinates of the texture region in **property grid** under **Texture Region**. X is the left border, Y is the top, Z is the right, and W is the bottom.
+You can define the pixel coordinates of the texture region in **property grid** under **Texture Region**. X is the left edge, Y is the top, Z is the right, and W is the bottom.
 
 ![Set texture region in property grid](media/set-texture-region-in-property-grid.png)
 
