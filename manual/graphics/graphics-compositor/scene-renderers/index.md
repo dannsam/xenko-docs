@@ -2,11 +2,9 @@
 
 ![media/scene-renderers-1.png](media/scene-renderers-1.png) 
 
- 
-
 Renderers can be added to a layer to perform a specific rendering operation in the scene graphics compositor pipeline.
 
-# Common Properties
+## Common properties
 
 | Property | Description                                                                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,13 +17,9 @@ Renderers can be added to a layer to perform a specific rendering operation in t
 |          |                                                                                                                                                               |
 |          |                                                                                                                                                               |
 
-
-# Renderers
+## Renderers
 
 In the following table are the default renderer that are available:
-
-
-
 
 - [Clear RenderFrame](clear-renderframe.md)
 - [Render Camera](render-camera.md)

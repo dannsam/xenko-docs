@@ -14,7 +14,7 @@ You can select the provider by clicking on the blue drop-down of a Diffuse Map/S
 
 ![media/material-colors-1.png](media/material-colors-1.png) 
 
-# Texture
+## Texture
 
 Sample the color/scalar from a given texture.
 

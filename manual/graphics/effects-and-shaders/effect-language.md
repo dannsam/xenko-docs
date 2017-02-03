@@ -1,6 +1,6 @@
-# Effect Language
+# Effect language
 
-# Create shaders in C&#35;
+## Create shaders in C&#35;
 
 You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. They come in three variations:
 

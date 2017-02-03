@@ -33,7 +33,7 @@ The properties of the graphics compositor are editable in the Property Editor:
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png) 
 
-# 3: Add a camera slot and Select a Camera
+## 3: Add a camera slot and Select a Camera
 
 Click on the ![media/add.png](media/add.png)  on the Cameras category:
 
@@ -43,7 +43,7 @@ And then click on the finger point to select a Camera in a Scene (If you don't h
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png) 
 
-# 4 : Add a layer and create a HDR RenderFrame Output
+## 4 : Add a layer and create a HDR RenderFrame Output
 
 - Then add a new layer. Change the name to HDR Layer
 - In the Output, select **RenderFrame**
@@ -51,7 +51,7 @@ And then click on the finger point to select a Camera in a Scene (If you don't h
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png) 
 
-# 5: Add Renderers to the HDR Layer
+## 5: Add Renderers to the HDR Layer
 
 Then on the HDR Layer, you can click on the Renderers ![media/add.png](media/add.png)  and add the following renderers:
 
@@ -60,7 +60,7 @@ Then on the HDR Layer, you can click on the Renderers ![media/add.png](media/add
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png) 
 
-# 6: Add a Render Effect to the Master (LDR) Layer
+## 6: Add a Render Effect to the Master (LDR) Layer
 
 Now we need to transform the HDR output of the HDR Layer to the renderframe LDR of the Windows output
 
@@ -69,7 +69,7 @@ Now we need to transform the HDR output of the HDR Layer to the renderframe LDR 
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png) 
 
-# 7: Configure the Post Processing Effects with a Tone Map operator
+## 7: Configure the Post Processing Effects with a Tone Map operator
 
 On the Post-Processing Effects
 

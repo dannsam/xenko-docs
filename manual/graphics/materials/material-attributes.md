@@ -406,8 +406,6 @@ Additive transparency allows to render a model from a purely additive - taking i
 
 ![media/material-attributes-47.png](media/material-attributes-47.png) 
 
- 
-
 The Alpha property has a particular meaning:
 
 - If Alpha <= 0.5, the material is rendered in additive mode without the diffuse component (only specular highlights)

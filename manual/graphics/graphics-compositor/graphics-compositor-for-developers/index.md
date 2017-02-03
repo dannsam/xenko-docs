@@ -1,4 +1,4 @@
-# Graphics Compositor For Developers
+# Graphics compositor For developers
 
 The following diagram shows the Scene Graphics Compositor by Layers interfaces and implementation classes:
 
@@ -9,7 +9,7 @@ The following diagram shows the Scene Graphics Compositor by Layers interfaces a
 
 ![media/graphics-compositor-for-developers-1.png](media/graphics-compositor-for-developers-1.png) 
 
-# Renderers
+## Renderers
 
 The default renderers implementing the @'SiliconStudio.Xenko.Rendering.ISceneRenderer'
 
