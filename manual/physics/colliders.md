@@ -7,15 +7,15 @@ To use physics in your project, add a **collider** component to an entity. Colli
 
 There are three types of collider:
 
-* [Static colliders](static-colliders.md) don't move.
-* [Rigid bodies](rigid-bodies.md) are moved around by forces such as gravity and collisions.
-* [Characters](characters.md) are controlled by user input.
+* [static colliders](static-colliders.md) don't move
+* [rigid bodies](rigid-bodies.md) are moved around by forces such as collision and gravity
+* [characters](characters.md) are controlled by user input
 
 You can also: 
 
-* Set the [shape of collider components](collider-shapes.md).
-* Make [trigger](triggers.md) colliders, and use them to script events when objects pass through them.
-* Constrict collider movement with [constraints](constraints.md).
+* set the [shape of collider components](collider-shapes.md)
+* make [trigger](triggers.md) colliders, and use them to script events when objects pass through them
+* constrict collider movement with [constraints](constraints.md)
 
 ## See also
 * [Collider shapes](collider-shapes.md)
