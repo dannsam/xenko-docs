@@ -5,7 +5,7 @@
 </style>
 
 # Xenko documentation
-<ul class="documentation_list col-md-6 col-sm-10">
+<ul class="xk-documentation-list col-md-6 col-sm-10">
 	<li>
 		<a href="manual/index.html">
 			<h2>
