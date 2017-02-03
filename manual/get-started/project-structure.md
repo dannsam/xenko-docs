@@ -62,7 +62,7 @@ Following these suggestions, an example folder structure might look like this:
     - texture.psd
   ```
 
-You could even create separate folders for different kinds of content creation files:
+You could even create separate folders for different kinds of content creation file:
 
   ```
 - MyGame
