@@ -4,7 +4,7 @@
 
 ![Sprite sheet](media/SpriteEntity.png)
 
-Because loading lots of separate images takes up memory, it's more efficient to put sprites into a **sprite sheet**, a single image. You can then define regions of the sprite sheet as different sprites in Game Studio's Sprite Editor. After you define sprites, you can use scripts to render them.
+The most efficient way to render sprites is to add them all to a **sprite sheet**, a single image. You can then define regions of the sprite sheet as different sprites in Game Studio's Sprite Editor. After you define sprites, you can add them to entities using sprite components and render them with scripts.
 
 ## In this section
 

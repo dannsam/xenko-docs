@@ -3,9 +3,9 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-To add a sprite to a scene, add a **sprite component** to an entity.
+To add a sprite to a scene, add a **sprite component** to an entity. Afterwards, you can control the sprite with a script.
 
-## Add a sprite to a scene
+## Add a sprite component
 
 1. In the **Scene Editor**, select the entity you want to add a sprite to.
 
