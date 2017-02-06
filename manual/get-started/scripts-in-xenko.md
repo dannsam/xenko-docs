@@ -66,7 +66,7 @@ public class SampleSyncScript : SyncScript
 }
 ```
 
-## Asynchronous scripts
+### Asynchronous scripts
 
 Asynchronous scripts are executed only once, then canceled when removed from the scene. 
 
@@ -94,7 +94,7 @@ public class SampleAsyncScript : AsyncScript
 }
 ```
 
-## Using public properties and fields
+## Public properties and fields
 
 You can set public properties and fields from the script component properties in Game Studio. This means people on your team can configure each instance of a script attached to entities differently.
 
