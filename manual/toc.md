@@ -16,10 +16,6 @@
 ### [Add entities](get-started/add-entities.md)
 ### [Arrange entities](get-started/arrange-entities.md)
 ### [Navigate in the editor](get-started/navigate-in-the-editor.md)
-## [Introduction to scripts](get-started/introduction-to-scripts.md)
-### [Scripts in Xenko](get-started/scripts-in-xenko.md)
-### [Create a script](get-started/create-a-script.md)
-### [Use scripts](get-started/use-scripts.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Game Studio](game-studio/index.md)
@@ -160,10 +156,16 @@
 # [Platforms](platforms/index.md)
 ## [Linux](platforms/linux/index.md)
 ### [Setup and requirements](platforms/linux/setup.md)
+## [UWP](platforms/uwp/index.md)
+### [Xbox Live](platforms/uwp/xbox-live.md)
 ## [Add or remove a platform](platforms/add-or-remove-a-platform.md)
 ## [Change the graphics platform](platforms/change-the-graphics-platform.md)
 
 # [Scripts](scripts/index.md)
+## [Types of script](scripts/types-of-script.md)
+## [Create a script](scripts/create-a-script.md)
+## [Public properties and fields](scripts/public-properties-and-fields.md)
+## [Use scripts](scripts/use-scripts.md)
 ## [Preprocessor variables](scripts/preprocessor-variables.md)
 
 # [UI](ui/index.md)
