@@ -18,7 +18,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="api/SiliconStudio.Xenko.Engine.yml">
+		<a href="api/index.html">
 			<h2>
 				API 
 			</h2>
