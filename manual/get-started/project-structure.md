@@ -12,11 +12,11 @@ Xenko organizes project files into **packages**, .xkpkg files contained in dedic
 
 * **Bin** contains the compiled binaries and data. Xenko creates the folder when you build the project, with a subdirectory for each platform.
 
-* **MyGame.Game** contains your source code.
+* **MyGame.Game** contains the source code of your game as a cross-platform Visual Studio project (.csproj). You can add multiple projects to the same game.
 
 *	**MyGame.Platform** contains additional code for the platforms your project supports. Game Studio creates folders for each platform (eg *MyPackage.Windows*, *MyPackage.Linux*, etc). These folders are usually small, and only contain the entry point of the program.
 
-* **obj** contains cached files. Game Studio creates this folder when you build your project. To force a complete asset and code rebuild, delete this folder and build the project again.
+* **obj** contains cached files. Game Studio creates this folder when you build your project.
 
 * **Resources** is a suggested location for files such as images and audio files used by your assets.
 
@@ -28,7 +28,7 @@ How you organize and share your files is up to you, but there are some things to
 
 ### **Bin** and **obj** folders
 
-We don't recommend you add the **Bin** or **obj** folders to version control. Game Studio builds these folders every time you run the game, so you don't need to keep a history of them. They just take up space.
+We don't recommend you add the **Bin** or **obj** folders to version control. Game Studio builds these folders every time you run the game, so you don't need to keep a history of them. They take up space, slow down version control synchronization, and are dangerous because you can't see if they match the source files they were generated from in a given commit.
 
 Likewise, Visual Studio puts additional **.obj** folders inside each code folder; for the same reason, we don't recommend you add these to version control.
 
@@ -36,13 +36,15 @@ Likewise, Visual Studio puts additional **.obj** folders inside each code folder
 
 Resource files are files imported into Game Studio and used by assets. They include image files (eg .png, .jpg), audio files (eg .mp3, .wav), and models (eg .fbx). We recommend you save these files in the **Resources** folder in your project folder.
 
-We don't recommend you save resource files in the Asset folder. You might be used to organizing files this way if you use Unity, as Unity requires resource files and asset files to be in the same folder. Xenko doesn't require this, and doing so has some downsides. For example, imagine an artist has edited 10GB of textures and committed them to source control. At the same time, a designer needs to edit an asset quickly. To do this, the designer gets the latest version of the asset from source control. However, because the assets and resource files are in the same folder, the designer is forced to get the 10gb of files at the same time, which slows things down. If the files are in a separate folder, however, there's no problem; the designer only gets the folder they need.
+We don't recommend you save resource files in the Asset folder. You might be used to organizing files this way if you use Unity, as Unity requires resource files and asset files to be in the same folder. Xenko doesn't require this, and doing so has some downsides. 
+
+For example, imagine an artist has edited 10GB of textures and committed them to source control. At the same time, a designer needs to edit an asset quickly. To do this, the designer gets the latest version of the asset from source control. However, because the assets and resource files are in the same folder, the designer is forced to get the 10gb of files at the same time, which slows things down. If the files are in a separate folder, however, the designer only has to get the folder they need. Additionally, as asset files are much smaller than resource files, it's much faster to navigate the asset history in a dedicated asset folder.
 
 ### Content creation files
 
 Content creation files are created with external content creation tools, such as .psd files (Photoshop) or .max files (3D Studio Max).
 
-We don't recommend you save content creation files in your project folder. This is because the files are often large and aren't used in the project. Instead, we recommend you save the files in a different version control repository - or, if your version control system supports partial checkouts (such as SVN or Perforce), a different root folder. This means team members only get the files they need.
+We don't recommend you save content creation files in your project folder. This is because the files are often large and aren't used in the project directly. Instead, we recommend you save the files in a different version control repository - or, if your version control system supports partial checkouts (such as SVN or Perforce), a different root folder. This means team members only get the files they need.
 
 ### Suggested directory structure
 
@@ -51,7 +53,7 @@ Following these suggestions, an example folder structure might look like this:
 ```
 - MyGame
     - Assets
-        - texture.ktex
+        - texture.xktex
     - Bin
     - MyGame.Game
     - MyGame.Platform
@@ -67,8 +69,8 @@ You could even create separate folders for different kinds of content creation f
   ```
 - MyGame
     - Assets
-        - texture.ktex
-        - model.ktex
+        - texture.xktex
+        - model.xktex
     - Bin
     - MyGame.Game
     - MyGame.Platform
