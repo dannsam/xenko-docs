@@ -15,9 +15,7 @@ You can create and add scripts using Game Studio or Visual Studio.
 
 	![Script wizard](media/script-wizard.png)
 
-Game Studio adds a script to the project. You can see it in the asset view.
-
-
+Game Studio adds a script to the project. You can see it in the **asset view**.
 
 ![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
   
@@ -59,7 +57,7 @@ namespace MyGame
 	* The project ending in *.Game* is the main project, and should contain all your game logic and scripts. 
 	* Other projects (eg *MyGame.Windows*, *MyGame.Android* etc) contain platform-specific code.
 
-	For more information about project structure, see [Project structure](project-structure.md).
+	For more information about project structure, see [Project structure](../get-started/project-structure.md).
 
 2. Add a new class file to the `.Game` project. To do this, right-click the project ands elect **Add > New Item**.
 
@@ -71,7 +69,7 @@ namespace MyGame
 
 4. In the file you created, make sure the script is public and derives from either **AsyncScript** or **SyncScript**.
 
-5. Implement the necessary abstract methods. 
+5. Implement the necessary abstract methods.
 
 	Example:
 
@@ -111,6 +109,10 @@ namespace MyGame
 8. In the solution explorer, select the assembly that contains your script.
    Game Studio displays the script in the asset view, ready to be used.
 
-## What's next?
+## See also
 
-* [Use scripts](use-scripts.md)
+* [Create a script](create-a-script.md)
+* [Types of script](types-of-script.md)
+* [Add a script](add-a-script.md)
+* [Create a script](create-a-script.md)
+* [Debugging](debugging.md)
