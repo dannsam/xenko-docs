@@ -156,7 +156,7 @@ Now you can expose the `xbox_live_user` functionality and other classes in your 
 
 ## Sample project
 
-This sample project features Xbox Live login functionality: [download]
+This sample project features Xbox Live login functionality: [download][XboxLiveSample.zip]
 
 ![Picture: References](xboxlive08.png)
 
