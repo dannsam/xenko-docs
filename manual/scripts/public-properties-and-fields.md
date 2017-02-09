@@ -1,6 +1,6 @@
 # Public properties and fields
 
-When you declare a public property in a script, the property becomes accessible in Game Studio from the script component properties.
+When you declare a public property or field in a script, the property becomes accessible in Game Studio from the script component properties.
 
 ![Property in Game Studio](media/property-shown-in-game-studio.png)
 
@@ -26,7 +26,7 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 ![Public property appears in the property grid](media/scripts-in-xenko-change-value-public-property.png)
 
 >[!Note]
->As a general rule, getters and setters should do as little as possible. For example, the getter or setter shouldn't try to call methods or access Xenko runtime API.
+>As a general rule, if you want to display the property or field in Game Studio, getters and setters should do as little as possible. For example, the getter or setter shouldn't try to call methods or access Xenko runtime API.
 
 >The following code will create problems, as it tries to access `Entity.Components`, which is only available at runtime:
 
@@ -46,8 +46,9 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 >	}
 >}
 >```
+>If you want to include code like this, hide it so it Game Studio doesn't display it (see below). 
 
-## Hide properties in the property grid
+## Hide properties or fields in the property grid
 
 If you don't want Game Studio to show a property in the property grid, you can:
 
