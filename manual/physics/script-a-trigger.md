@@ -137,7 +137,7 @@ The ball falls through the trigger, doubles in size, exits the trigger, and retu
      ![Ball passes through trigger](media/physics-tutorials-create-a-trigger-ball-passes-trigger.gif)
 
 ## See also
+* [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
 * [Colliders](colliders.md)
 * [Collider shapes](collider-shapes.md)
-* [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
 * [Scripts](../scripts/index.md)
