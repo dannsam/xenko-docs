@@ -127,7 +127,7 @@ You need to enable Xbox Live capability in your game project without exposing th
 Game.Services.AddService(typeof(IAccountManager), new XboxLiveAccountManager());
 ```
 
-	![Picture: References](xboxlive04.png)
+![Picture: References](xboxlive04.png)
 
 The final script would look like this at minimum:
 
@@ -150,7 +150,7 @@ The final script would look like this at minimum:
     }
 ```
 
-	![Picture: References](xboxlive05.png)
+![Picture: References](xboxlive05.png)
 
 Now you can expose the `xbox_live_user` functionality and other classes in your game.
 
