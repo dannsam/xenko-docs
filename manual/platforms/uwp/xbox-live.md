@@ -37,6 +37,8 @@ This page explains how to configure your project to work with Xbox Live.
 
 3. In the **Default project** field, select your UWP project (eg *MyGame.UWP*).
 
+	![Picture: References](xboxlive01.png)
+
 4. In the console, type:
 
     ``PM > Install-Package Microsoft.Xbox.Live.SDK.WinRT.UWP``
@@ -44,6 +46,8 @@ This page explains how to configure your project to work with Xbox Live.
     Visual Studio adds the NuGet package to your project. 
 
 5. Make sure the package appears in the **References** list.
+
+	![Picture: References](xboxlive02.png)
 
 ## 3. Configure the UWP project
 
@@ -65,6 +69,8 @@ This page explains how to configure your project to work with Xbox Live.
     If you want to publish your game, update xboxservices.config.
     
 3. In the *xboxservices.config* properties, under **Build Action**, select **Content**, and under **Copy to Output Directory**, select **Always**.
+
+	![Picture: References](xboxlive03.png)
 
 4. Edit *Package.appxmanifest* with details relevant to your project.
 
@@ -121,6 +127,8 @@ You need to enable Xbox Live capability in your game project without exposing th
 Game.Services.AddService(typeof(IAccountManager), new XboxLiveAccountManager());
 ```
 
+![Picture: References](xboxlive04.png)
+
 The final script would look like this at minimum:
 
 ```
@@ -142,11 +150,15 @@ The final script would look like this at minimum:
     }
 ```
 
+![Picture: References](xboxlive05.png)
+
 Now you can expose the `xbox_live_user` functionality and other classes in your game.
 
 ## Sample project
 
 This sample project features Xbox Live login functionality: [download]
+
+![Picture: References](xboxlive08.png)
 
 ## See also
 
