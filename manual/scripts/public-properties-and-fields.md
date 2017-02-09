@@ -46,7 +46,7 @@ Game Studio shows the `DelayTimeOut` property in the script component properties
 >	}
 >}
 >```
->If you want to include code like this, hide it so it Game Studio doesn't display it (see below). 
+>If you want to include code like this, hide it so Game Studio doesn't display it (see below). 
 
 ## Hide properties or fields in the property grid
 
