@@ -7,16 +7,16 @@ Xenko doesn't run scripts simultaneously; they run one at a time. Where scripts 
 
 Priorities apply to all kinds of scripts. This means that, for example, [synchronous and asynchronous scripts](types-of-script.md) don't have separate priority lists. They both join the same queue.
 
-Lower numbers have higher priorities. For example, a script with priority 1 runs before a script with priority 2, and a script with priority -1 runs before a script with priority 1.
+Scripts with lower priority numbers have higher priorities. For example, a script with priority 1 runs before a script with priority 2, and a script with priority -1 runs before a script with priority 1. By default, scripts have a priority of 0.
 
-By default, scripts have a priority of 0. If scripts have the same priority, the order in which Xenko runs them isn't deterministic. You might give scripts the same priority if you don't care which order they run in.
+If scripts have the same priority, the order in which Xenko runs them isn't deterministic. You might give scripts the same priority if you don't care which order they run in.
 
 > [!Note]
 > Currently, there's no way to see a list of priorities in one place. You have to set each priority of each script individually in the script component properties.
 
 ## Set a script priority
 
-To set a script priority, first add the script to an entity as a component, then set it in the component properties.
+Priorities aren't set in the scripts themselves. Instead, they're set in the script component properties on the entity the script is attached to.
 
 1. Attach the script to an entity. For information about how to do this, see [Add a script](add-a-script.md).
 
@@ -29,7 +29,7 @@ To set a script priority, first add the script to an entity as a component, then
 * [Create a script](create-a-script.md)
 * [Types of script](types-of-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
-* [Scheduling-and-priorities](scheduling-and-priorities.md)
+* [Scheduling and priorities](scheduling-and-priorities.md)
 * [Add a script](add-a-script.md)
 * [Create a script](create-a-script.md)
 * [Debugging](debugging.md)

@@ -1,4 +1,4 @@
-# Script a triggered event
+# Script a trigger
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
@@ -63,6 +63,9 @@ If we run the project now (**F5**), the ball falls through the trigger, but noth
 ![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
 
 Let's write a script to change the size of the ball when it enters the trigger.
+
+>[!Note]
+>For more information about scripts, see [Scripts](../scripts/index.md).
 
 1. In the **Asset view**, click **Add asset** and select **Scripts** > **Async Script**.
 
@@ -137,3 +140,4 @@ The ball falls through the trigger, doubles in size, exits the trigger, and retu
 * [Colliders](colliders.md)
 * [Collider shapes](collider-shapes.md)
 * [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
+* [Scripts](../scripts/index.md)

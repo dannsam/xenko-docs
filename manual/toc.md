@@ -151,7 +151,7 @@
 ## [Simulation](physics/simulation.md)
 ## [Tutorials](physics/tutorials.md)
 ### [Create a bouncing ball](physics/create-a-bouncing-ball.md)
-### [Script a triggered event](physics/script-a-triggered-event.md)
+### [Script a trigger](physics/script-a-trigger.md)
 
 # [Platforms](platforms/index.md)
 ## [Linux](platforms/linux/index.md)
@@ -165,7 +165,7 @@
 ## [Types of script](scripts/types-of-script.md)
 ## [Create a script](scripts/create-a-script.md)
 ## [Public properties and fields](scripts/public-properties-and-fields.md)
-## [Scheduling-and-priorities](scripts/scheduling-and-priorities.md)
+## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
 ## [Add a script](scripts/add-a-script.md)
 ## [Preprocessor variables](scripts/preprocessor-variables.md)
 ## [Debugging](scripts/debugging.md)
