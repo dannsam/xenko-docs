@@ -39,11 +39,15 @@ This page explains how to configure your project to work with Xbox Live.
 
 4. In the console, type:
 
+	![Picture: References](xboxlive01.png)
+
     ``PM > Install-Package Microsoft.Xbox.Live.SDK.WinRT.UWP``
 
     Visual Studio adds the NuGet package to your project. 
 
 5. Make sure the package appears in the **References** list.
+
+	![Picture: References](xboxlive02.png)
 
 ## 3. Configure the UWP project
 
@@ -147,6 +151,8 @@ Now you can expose the `xbox_live_user` functionality and other classes in your 
 ## Sample project
 
 This sample project features Xbox Live login functionality: [download]
+
+	![Picture: References](xboxlive08.png)
 
 ## See also
 
