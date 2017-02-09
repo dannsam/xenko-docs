@@ -11,7 +11,7 @@ Non-spatialized audio requires no [audio emitters](audio-emitters.md) or [audio 
 
 ## 1. Import audio and include it in the build
 
-1. [Import the audio as a sound asset](import-audio-as-a-sound-asset.md).
+1. [Import the audio as a sound asset](import-audio.md).
 
 2. Make sure the sound asset is a **root asset**. Root assets are assets that Xenko includes in the build so they can be used at runtime.
 
@@ -130,6 +130,6 @@ public class MySoundScript : SyncScript
     ![Select a sound asset](media/audio-play-audioemitter-component-add-select-audio-asset.png)
 
 ## See also
-* [Import audio as a sound asset](Import-audio-as-a-sound-asset.md)
+* [Import audio](import-audio.md)
 * [Global audio settings](global-audio-settings.md)
 * [Spatialized audio](spatialized-audio.md)

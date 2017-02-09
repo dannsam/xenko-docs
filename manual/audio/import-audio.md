@@ -1,4 +1,4 @@
-# Import audio as a sound asset
+# Import audio
 
 You can import audio files to use as **sound assets** in your project. You can import file types including .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, and .mpc.
 

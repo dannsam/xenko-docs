@@ -10,7 +10,7 @@ After you select a sound asset in the **Asset view**, you can configure its prop
 * **Spatialized**: Specify that this sound asset is [spatialized audio](spatialized-audio.md).
 
 ## See also
-* [Import audio as a sound asset](import-audio-as-a-sound-asset.md)
+* [Import audio](import-audio.md)
 * [Global audio settings](global-audio-settings.md)
 * [Spatialized audio](spatialized-audio.md)
 * [Non-spatialized audio](non-spatialized-audio.md)

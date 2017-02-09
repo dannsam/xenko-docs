@@ -3,8 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Sprite borders** are areas that don't deform when you scale the sprite. These are often useful for sprites used for UI elements such as menu buttons.
-
+**Sprite borders** are areas that don't deform when you scale the sprite. These are often useful for sprites used for UI elements such as menu buttons. You can only set sprite borders for sprites set to the **UI** sheet type.
 
 | Original sprite | Scaled without borders  | Scaled with borders  |
 |----------|---|---|
