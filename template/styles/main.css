@@ -523,33 +523,39 @@ h5{
     .sidetoc{
         width: 100%;
     }
+    .toc .level2 > li{
+        min-width: 49%;
+    }
 }
-/* Create resizable TOC section (issue #138) */
-#sidetoggle{
-    position: fixed;
-    top: 90px;
-    z-index: 999;
-    width: 280px;
-    min-height: 100vh;
-}
-.sidefilter + .sidetoc{
-    position: static;
-    margin-top: 65px;
-}
-.ui-resizable-handle.ui-resizable-e{
-    width: 2px;
-    user-select: none;
-    background: #afadad;
-    box-shadow: -1px 0px 1px 0px #CCC;
-    right: -2px;
-}
-#sidetoc{
-    height: 100vh;
-    overflow: auto;
-    background-color: #f1f1f1;
-}
-/*Hide elemnts while script doesn't set the sizes to it*/
-.container.body-content.hide-when-search,
-.sidefilter{
-    display: none;
+
+@media only screen and (min-width: 767px){
+     /* Create resizable TOC section (issue #138) */
+     /*Hide elemnts while script doesn't set the sizes to it*/
+    .container.body-content.hide-when-search,
+    .sidefilter{
+        display: none;
+    }
+    #sidetoggle{
+        position: fixed;
+        top: 90px;
+        z-index: 999;
+        width: 280px;
+        min-height: 100vh;
+    }
+    .sidefilter + .sidetoc{
+        position: static;
+        margin-top: 65px;
+    }
+    .ui-resizable-handle.ui-resizable-e{
+        width: 2px;
+        user-select: none;
+        background: #afadad;
+        box-shadow: -1px 0px 1px 0px #CCC;
+        right: -2px;
+    }
+    #sidetoc{
+        height: 100vh;
+        overflow: auto;
+        background-color: #f1f1f1;
+    }
 }

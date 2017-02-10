@@ -125,7 +125,33 @@ $(function() {
       }
       $('#sidetoc').scrollTop(sidebarStructureOut.scroll)
     }
-    apiDocSizeControl();
-    apiSidebarStructureControl();
+    if($(window).width() > 769){
+      apiDocSizeControl();
+      apiSidebarStructureControl();
+    } else {
+      localStorage.clear();
+    }
+    $(window).on('resize', function(){
+      removeResizable();
+      if($(window).width() > 769){
+        $('.container.body-content.hide-when-search').show();
+      } else {
+        localStorage.clear();
+      }
+    })
+    function removeResizable(){
+      if($(window).width() <= 769){
+       $($('.article.grid-right')[0]).removeAttr('style');
+       $($('#sidetoggle')[0]).removeAttr('style');
+       var filterTimer = setInterval(function(){
+            if($($('.sidefilter')[0]).length > 0){
+              var filter = $($('.sidefilter')[0])
+              filter.removeAttr('style');
+              // Clear inteval for filter
+              clearInterval(filterTimer);
+            }
+          }, 100);
+      }
+    }
 });
 
