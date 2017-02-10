@@ -33,7 +33,7 @@ To create an empty project:
 
 The **Create a new game** dialog opens.
 
-    ![Create a new game dialog](media/create-project-create-new-game.png)
+![Create a new game dialog](media/create-project-create-new-game.png)
 
 5. In the **Namespace** field, specify the namespace you want to use. If you don't know what your namespace should be, leave it as default.
 

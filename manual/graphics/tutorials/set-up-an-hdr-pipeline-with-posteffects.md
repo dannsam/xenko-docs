@@ -13,11 +13,9 @@ The principle of HDR rendering is to render to a scene to a HDR render target an
 > 
 > As part of the Graphics Compositor, we will provide a set of default pre-configured rendering paths including a HDR to LDR rendering path as described here.    
 
-# Step0: Visualize the pipeline
+## 1: Visualize the pipeline
 
-We would like to setup the following pipeline:
-
- 
+We want to set up the following pipeline:
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png) 
 
@@ -25,7 +23,7 @@ Without a HDR to LDR rendering path, a scene illuminated with several lights wit
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png) 
 
-# Step1: Go to the Graphics Compositor Properties
+## 2: Go to the Graphics Compositor Properties
 
 In the current scene, select the root entity
 
@@ -35,7 +33,7 @@ The properties of the graphics compositor are editable in the Property Editor:
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png) 
 
-# Step2: Add a camera slot and Select a Camera
+## 3: Add a camera slot and Select a Camera
 
 Click on the ![media/add.png](media/add.png)  on the Cameras category:
 
@@ -45,7 +43,7 @@ And then click on the finger point to select a Camera in a Scene (If you don't h
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png) 
 
-# Step3 : Add a layer and create a HDR RenderFrame Output
+## 4 : Add a layer and create a HDR RenderFrame Output
 
 - Then add a new layer. Change the name to HDR Layer
 - In the Output, select **RenderFrame**
@@ -53,7 +51,7 @@ And then click on the finger point to select a Camera in a Scene (If you don't h
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png) 
 
-# Step 4: Add Renderers to the HDR Layer
+## 5: Add Renderers to the HDR Layer
 
 Then on the HDR Layer, you can click on the Renderers ![media/add.png](media/add.png)  and add the following renderers:
 
@@ -62,7 +60,7 @@ Then on the HDR Layer, you can click on the Renderers ![media/add.png](media/add
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png) 
 
-# Step 5: Add a Render Effect to the Master (LDR) Layer
+## 6: Add a Render Effect to the Master (LDR) Layer
 
 Now we need to transform the HDR output of the HDR Layer to the renderframe LDR of the Windows output
 
@@ -71,7 +69,7 @@ Now we need to transform the HDR output of the HDR Layer to the renderframe LDR 
 
 ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png) 
 
-# Step 6: Configure the Post Processing Effects with a Tone Map operator
+## 7: Configure the Post Processing Effects with a Tone Map operator
 
 On the Post-Processing Effects
 
@@ -82,13 +80,4 @@ On the Post-Processing Effects
 
 The scene should now look more natural instead of a saturated white:
 
-![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png) 
-
- 
-
- 
-
- 
-
- 
-
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png)

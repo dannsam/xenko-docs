@@ -4,7 +4,7 @@ Render all renderable entity components from the scene.
 
 ![media/render-camera-1.png](media/render-camera-1.png) 
 
-# Properties
+## Properties
 
 | Property      | Description                                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------- |

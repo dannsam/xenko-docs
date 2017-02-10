@@ -1,10 +1,6 @@
-# Directional Lights
+# Directional lights
 
-# Overview
-
-A directional light is a light coming uniformly from one direction and is often used for simulating the sun or a light coming from a far distance.
-
- 
+A **directional light** is a light coming uniformly from one direction and is often used for simulating the sun or a light coming from a far distance.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 
@@ -12,39 +8,11 @@ In the studio, the directional light appears with the following icon:
 
 ![media/DirectionalLight.png](media/DirectionalLight.png) 
 
- 
-
- 
-
- 
-
- 
-
- 
-
 Once selected, the gizmo of the directional light displays its main direction:
 
 ![media/DirectionalLightSelected.png](media/DirectionalLightSelected.png) 
 
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-# Properties
+## Properties
 
 Properties that defines a directional light:
 
@@ -65,7 +33,7 @@ Properties that defines a directional light:
 | Culling Mask | Defines which entity groups are affected by this light. By default, all groups are affected.                        |
 
 
-# Shadows
+## Shadows
 
 Shadows bring significant information and realism to a scene.
 
@@ -76,13 +44,11 @@ Shadows bring significant information and realism to a scene.
 
 In the case of a directional light, shadows effect in a scene can spawn on a large view range hence requiring a special treatment to improve their realism.
 
-## Cascades
+### Cascades
 
 The technique used for directional light shadows is called cascaded shadow mapping and consist in rendering depth of occluders objects from the point-of-view of the light to a texture and then rendering the scene taking into account this occluder information.
 
 The cascade term implies that multiple textures are used to slice the depth range from the camera point-of-view, allocating more pixels for the view space closer to the camera.
-
- 
 
 ![media/ShadowMappingCascades.png](media/ShadowMappingCascades.png) 
 
@@ -92,10 +58,9 @@ If the debug property is set on the shadow, you can visualize the cascades. In t
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | ![media/directional-lights-8.png](media/directional-lights-8.png)  | ![media/directional-lights-9.png](media/directional-lights-9.png)  |
 
-
 The colors shows the selected cascade texture for each distance range (Green:0, Blue:1, Purple: 2, Red: 3)
 
-## Properties
+### Properties
 
 | Property            | Description                                                                                                                                                                                                                       |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

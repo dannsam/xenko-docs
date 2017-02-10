@@ -1,6 +1,4 @@
-# Spot Lights
-
-# Overview
+# Spot lights
 
 A spot light is a light producing a cone light positioned in space oriented to a specific direction.
 
@@ -14,13 +12,12 @@ Once selected, the gizmo of the spot light displays its main direction, range an
 
 ![media/SpotLightSelected.png](media/SpotLightSelected.png) 
 
-# Properties
+## Properties
 
 Properties that defines a spot light:
 
 ![media/SpotLightProperties.png](media/SpotLightProperties.png) 
 
- 
 
 | Property            | Description                                                                                                                                                           |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

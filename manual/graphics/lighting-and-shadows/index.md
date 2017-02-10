@@ -1,4 +1,4 @@
-# Lighting and Shadows
+# Lighting and shadows
 
 Lights and Shadows are essential components to increase reality of your scene.
 

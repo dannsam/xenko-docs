@@ -2,7 +2,7 @@
 
 the @'SiliconStudio.Xenko.Graphics.SpriteFont' class offers an convenient way to draw text. It works with the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class.
 
-# Loading a SpriteFont
+# Loading a spriteFont
 
 After a font asset is compiled it can be loaded as a @'SiliconStudio.Xenko.Graphics.SpriteFont' instance using the @'SiliconStudio.Core.Serialization.Assets.ContentManager'. It contains all the options to display a text (bitmaps, kerning, line spacing etc.).
 
@@ -13,7 +13,7 @@ var myFont = Content.Load<SpriteFont>("MyFont");
 ```
 
 
-# Writing text on screen
+## Writing text on screen
 
 Once the font is loaded, the user can display any text on screen with a @'SiliconStudio.Xenko.Graphics.SpriteBatch'. To learn more about the SpriteBatch, read the [related documentation page](spritebatch.md). The @'SiliconStudio.Xenko.Graphics.SpriteBatch.DrawString' method performs the draw.
 

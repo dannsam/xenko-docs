@@ -1,4 +1,4 @@
-# Color Transforms
+# Color transforms
 
 Color transform is a special kind of effect designed to be combined in a chain at runtime. 
 

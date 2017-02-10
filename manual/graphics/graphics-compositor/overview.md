@@ -1,4 +1,4 @@
-# Graphics Compositor Overview
+# Graphics compositor overview
 
 ![media/graphics-compositor-overview-1.png](media/graphics-compositor-overview-1.png) 
 
@@ -20,13 +20,10 @@ The graphics compositor is accessible by clicking on the scene root object and t
 
 ![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png) 
 
- 
-
-> **Note**
-> 
+> [!Note]
 > Note that while the Scene Graphics Compositor is currently editable only through the property editor, we will add in a future release a dedicated editor to considerably ease the use of it    
 
-# Concepts
+## Concepts
 
 The graphics compositor is a pluggable system (you can write your own compositor) and currently comes with a default **compositor by layers**.
 
@@ -41,13 +38,13 @@ It is based on the following concepts:
 - Layers
 - Renderers
 
-## Camera Slots
+### Camera Slots
 
 Because a camera can be setup in different renderers and different layers, it is more practical to define a set of Camera at the scene graphics compositor level, and reference the camera in the renderers via a slot.
 
 It allows to change/set the actual camera for a particular slot just once at the graphics compositor level, while many renderers may reference the same camera slot.
 
-## RenderFrame
+### RenderFrame
 
 A Render Frame defines:
 
@@ -58,7 +55,7 @@ A Render Frame defines:
 
 A default render frame is always created for the output window and is setup by default for the top root scene graphics compositor.
 
-## Layers
+### Layers
 
 A layer contains:
 
@@ -73,7 +70,7 @@ The graphics compositor is defined by:
 - Each layers are rendered in the order they are defined.
 - The output of the Master layer is always bound to the default output of scene graphics compositor and cannot be changed (See advanced composition for more details)
 
-## Renderers
+### Renderers
 
 A renderer defines a specific rendering action. Several renderers are provided by default:
 

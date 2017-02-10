@@ -4,20 +4,20 @@
 
 # Assets
 
-After creating your assets in GameStudio, @'SiliconStudio.Core.Serialization.Assets.AssetManager' is the class responsible for loading, unloading and saving assets.
+After creating your assets in Game Studio, @'SiliconStudio.Core.Serialization.Assets.AssetManager' is the class responsible for loading, unloading and saving assets.
 
 ## Creating
 
-You usually create assets directly in the GameStudio.
+You usually create assets directly in Game Studio.
 
-Their URL will match the name (including folder) in the GameStudio.
+Their URL will match the name (including folder) in Game Studio.
 
 Examples of URLs:
 
 - knight (user imports knight.fbx directly in main asset folder)
 - level1/room1 (user creates level1 and import room1.fbx inside)
 
-Please check [Introduction to Assets](../../get-started/assets.md) for more details.
+For more information, see [Assets](../../get-started/assets.md) for more details.
 
 ## Loading
 
@@ -74,7 +74,7 @@ Asset.Get<Texture>("MyTexture"); // return the loaded asset without increasing t
 // the texture can still be used here
 Asset.Unload(secondReference); // decrease the reference counter and unload the asset (ref count = 0)
  
-// The texture has been unloaded, it cannot be used here anymore.
+// The texture has been unloaded, it cannot be used here any more.
 ```
 
 

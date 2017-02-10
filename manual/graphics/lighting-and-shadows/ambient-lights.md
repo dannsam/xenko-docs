@@ -1,6 +1,4 @@
-# Ambient Lights
-
-# Overview
+# Ambient lights
 
 An ambient light is a uniform light with no direction.
 
@@ -14,14 +12,11 @@ An object is lit uniformly:
 |                                                      |
 | Material Pure Diffuse                                |
 
-
-# Properties
+## Properties
 
 Properties that defines a ambient light:
 
 ![media/AmbientLightProperties.png](media/AmbientLightProperties.png) 
-
- 
 
 | Property     | Description                                                                                                                                                                                    |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,7 +30,7 @@ Properties that defines a ambient light:
 |              |                                                                                                                                                                                                |
 |              | `final Color = Skybox Sampler Color * Light Skybox Intensity * Skybox Intensity`                                                                                                               |
 |              |                                                                                                                                                                                                |
-|              | *Note: Currently, this value has no units as it is dependent on the values coming from the skybox.*                                                                                            |
+|              | Note: Currently, this value has no units as it is dependent on the values coming from the skybox.                                                                                            |
 | Culling Mask | Defines which entity groups are affected by this light. By default, all groups are affected.                                                                                                   |
 
 

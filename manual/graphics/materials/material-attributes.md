@@ -19,13 +19,7 @@ A material needs to have at least one attribute shading model declared in order 
 
 Attributes are organized in 3 categories: Geometry, Shading and Misc.
 
-.. contents::
-
-
-
- 
-
-# Geometry Attributes
+## Geometry attributes
 
 They define the shape of the material:
 
@@ -199,7 +193,7 @@ In the screenshots below, using a material with the following attributes, we can
 |                |                                                                                 |
 
 
-# Shading Attributes
+## Shading Attributes
 
 The shading attributes define the main color characteristics of the material and how it reacts to the lights.
 
@@ -207,7 +201,7 @@ The shading attributes define the main color characteristics of the material and
 > 
 > At least one shading model - diffuse, specular or emissive model -  must be selected in order to display a material.    
 
-## Diffuse Color
+### Diffuse Color
 
 The diffuse final contribution is calculated from:
 
@@ -218,7 +212,7 @@ Currently, the Diffuse attribute supports only a **Diffuse Map** and the shading
 
 ![media/material-attributes-23.png](media/material-attributes-23.png) 
 
-## Diffuse Model
+### Diffuse Model
 
 The default diffuse model supported is the **Lambert** model.
 
@@ -242,14 +236,14 @@ In the screenshot below, we can see a pure diffuse material with Lambert lightin
 | Diffuse Model | The shading model for diffuse lighting. Currently, only Lambert is supported |
 
 
-## Specular Color
+### Specular Color
 
 The specular color can be defined using two popular workflow:
 
 - Metalness workflow: The specular color is calculated by using the diffuse color as a base color.
 - Specular workflow: The specular color is defined separately from the diffuse color.
 
-### Metalness Map
+#### Metalness Map
 
 The metalness workflow is easy to use as it simplifies parametrization between the diffuse and specular color.
 
@@ -280,7 +274,7 @@ In the screenshots below, using a material with the following attributes, we can
 | ![media/material-attributes-30.png](media/material-attributes-30.png)   | ![media/material-attributes-31.png](media/material-attributes-31.png)  | ![media/material-attributes-32.png](media/material-attributes-32.png)  |
 
 
-### Specular Map
+#### Specular Map
 
 The specular workflow provides more control on the actual specular color but requires to carefully modify the diffuse color accordingly.
 
@@ -290,7 +284,7 @@ Unlike the metalness workflow, It allows to have a different specular color from
 > 
 > With the layering system, it is still possible to combine into a same material a metalness and specular workflow.    
 
-## Specular Model
+### Specular Model
 
 A pure specular surface is producing an highlight of a light in a mirror direction. In practice, there is a broad range of specular materials, not entirely smooth that can reflect the light not in a single direction.
 
@@ -335,7 +329,7 @@ The microfacet is defined by the following formula, where Rs is the resulting sp
 |                     |                                                                                                                                                                            |
 
 
-## Emissive Model
+### Emissive Model
 
 An emissive material is a surface emitting a light.
 
@@ -354,7 +348,7 @@ With a HDR rendering and a bloom post-processing effect, we can observe the infl
 | Use Alpha    | When enabled, the alpha of the emissive map is used as the main alpha color of the material (instead of using by default the alpha of the diffuse map) |
 
 
-# Misc Attributes
+## Misc Attributes
 
 ## Occlusion
 
@@ -389,9 +383,9 @@ The following screenshots gives an example of usage of occlusion maps and cavity
 | Specular Cavity           | A factor for specular lighting influence of the cavity map. A value of 1.0 means that the cavity map fully influence the specular lighting.            |
 
 
-## Transparency
+### Transparency
 
-### Cuttoff
+#### Cuttoff
 
 Renders a material when the current alpha color is above a threshold.
 
@@ -406,13 +400,11 @@ The following screenshots show the influence of the cutoff Alpha value.
 | ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)  |
 
 
-### Additive
+#### Additive
 
 Additive transparency allows to render a model from a purely additive - taking into account only the specular material part - to a semi-opaque material - taking into account the diffuse and diffuse/emissive alpha.
 
 ![media/material-attributes-47.png](media/material-attributes-47.png) 
-
- 
 
 The Alpha property has a particular meaning:
 

@@ -8,7 +8,7 @@ Renders a child scene to a render frame.
 
 # ![media/render-child-scene-1.png](media/render-child-scene-1.png)
 
-# Properties
+## Properties
 
 | Property    | Description                                                          |
 | ----------- | -------------------------------------------------------------------- |

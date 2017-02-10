@@ -1,6 +1,4 @@
-# Point Lights
-
-# Overview
+# Point lights
 
 A point light is emitting light in all directions within a sphere region.
 
@@ -14,19 +12,15 @@ Once selected, the gizmo of the point light displays its sphere influence:
 
 ![media/PointLightSelected.png](media/PointLightSelected.png) 
 
- 
-
-> **Note**
-> 
+> [!Note]
 > Shadows for point lights are not yet supported in 1.1.x-beta versions    
 
-# Properties
+## Properties
 
 Properties that defines a point light:
 
 ![media/PointLightProperties.png](media/PointLightProperties.png) 
 
- 
 
 | Property            | Description                                                                                                                                         |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |

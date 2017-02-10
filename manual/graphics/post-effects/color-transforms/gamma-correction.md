@@ -1,4 +1,4 @@
-# Gamma Correction
+# Gamma correction
 
 All the post-effect calculations are made in a linear-space (also called RGB space). Which means doubling the color value of a pixel will double the light it emits. 
 
@@ -16,7 +16,7 @@ A buffer in the sRGB space will be be displayed correctly on a monitor or a TV s
 
 ![media/gamma-correction-2.png](media/gamma-correction-2.png) 
 
-# Properties
+## Properties
 
 | Property | Description                                     |
 | -------- | ----------------------------------------------- |

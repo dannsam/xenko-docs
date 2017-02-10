@@ -2,7 +2,7 @@
 
 A sprite batch is a collection of sprites (2D textured planes).
 
-# Creating a sprite batch
+## Creating a sprite batch
 
 Xenko offers a easy way to deal will batches of sprites through the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class. The user can use this class to regroup all of his sprites, update them and display them efficiently.
 
@@ -12,7 +12,6 @@ Xenko offers a easy way to deal will batches of sprites through the @'SiliconStu
 var spriteBatch = new SpriteBatch(GraphicsDevice);
 ```
 
-
 The user can specify the size of his batch size. It is not the maximum number of sprites the SpriteBatch is able to display, but simply the maximum number of sprites it can store before drawing.
 
 **Code:** Setting the batch size
@@ -21,10 +20,9 @@ The user can specify the size of his batch size. It is not the maximum number of
 var spriteBatch = new SpriteBatch(GraphicsDevice, 2000);
 ```
 
-
 It is also possible to set various states like the ones discussed in the [pipeline state](pipeline-state.md) documentation page.
 
-# Drawing a sprite batch
+## Drawing a sprite batch
 
 The @'SiliconStudio.Xenko.Graphics.SpriteBatch' class has multiple draw methods to set various parameters. For a comprehensive list of all the features, please refer to the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class reference documentation.
 
@@ -40,7 +38,6 @@ spriteBatch.Draw(myTexture, new Vector2(10, 20));
 // end the sprite batch operations
 spriteBatch.End();
 ```
-
 
 There are five modes to draw a sprite batch. They are enumerated in the @'SiliconStudio.Xenko.Graphics.SpriteSortMode' enum:
 
@@ -64,7 +61,6 @@ spriteBatch.Draw(myTexture, new Vector2(10, 20));
 // end the sprite batch operations, draw all the sprites
 spriteBatch.End();
 ```
-
 
 It is possible to set several parameters on the sprite, for example:
 

@@ -47,7 +47,6 @@ class BaseClass
 };
 ```
 
-
 The compositions are compiled in their own context, meaning that the non stage variables are only accessible within the composition. It is also possible to have compositions inside compositions.
 
 If you want to access the root compilation context, you can use the following format.
@@ -66,10 +65,9 @@ class CompositionClassC : CompositionBase
 };
 ```
 
+This is error-prone, since `CompositionClassC` expects `BaseClass` to be available in the root context.
 
-This is really error prone since `CompositionClassC` expects `BaseClass` to be available in the root context.
-
-It is also possible to create an array of compositions the same way you use an array of values. Since there is no way to know beforehand the number of compositions, you should iterate using a `foreach` statement.
+You can also create an array of compositions the same way you use an array of values. Since there is no way to know beforehand the number of compositions, you should iterate using a `foreach` statement.
 
 **Code:** Array of compositions
 
@@ -92,8 +90,7 @@ class BaseClassArray
 };
 ```
 
-
-# Stage behavior
+## Stage behavior
 
 The behavior of the `stage` keyword is quite straightforward: only one instance of the variable or method is produced.
 
@@ -121,7 +118,6 @@ class TestClass
 	float comp1_NonStageValue;
 };
 ```
-
 
 **Code:** Stage member behavior
 
@@ -168,12 +164,11 @@ class TestClass
 };
 ```
 
-
 Keep in mind that even in composition, you can call for base methods, override them etc. Overriding happens in the same order than the compositions.
 
 This behavior is useful when you need a value in multiple composition but you only need to compute it once (for example the normal in view space).
 
-# Clone behavior
+## Clone behavior
 
 The `clone` keyword has a less trivial behavior. It prevents the `stage` keyword to produce a unique method.
 
@@ -243,7 +238,6 @@ class TestClass
 	}
 };
 ```
-
 
 This behavior is useful when you want to repeat a simple function but with different parameters (like adding color on top of another).
 

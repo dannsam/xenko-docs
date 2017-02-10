@@ -8,7 +8,7 @@ It creates star-pattern beams from the light point.
 
 ![media/light-streaks-2.png](media/light-streaks-2.png) 
 
-# Properties
+## Properties
 
 | Property                  | Description                                                                                                                                                        |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

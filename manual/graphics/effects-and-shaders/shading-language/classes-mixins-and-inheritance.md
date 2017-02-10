@@ -1,6 +1,6 @@
 # Classes, mixins and Inheritance
 
-# Concept
+## Concept
 
 Xenko Shading Language (XKSL) is an extension of HLSL which makes it closer to C# syntax and concepts. As a result, the language is object oriented :
 
@@ -15,7 +15,7 @@ In addition to these straightforward concepts, XKSL uses a original way to handl
 - if a mixin appears several times in the inheritance, only the first occurrence will be taken into account (as well as its members and methods)
 - it is possible to call the previous implementation of a method using `base.<method name>(<arguments>)`
 
-# Keywords
+## Keywords
 
 XKSL uses the same set of keywords than HLSL but adds some new ones:
 
@@ -30,11 +30,11 @@ XKSL uses the same set of keywords than HLSL but adds some new ones:
 - `Input2`: for tessellation shader. [See this page](shader-stages.md).
 - `Constants`: for tessellation shader. [See this page](shader-stages.md).
 
-# Abstract methods
+## Abstract methods
 
 Abstract methods are available in XKSL. They should be prefixed with the `abstract` keyword. You can inherit from a class with abstract methods without having to implement them. The compiler will simply produce a harmless warning. However, it should be implemented in your final shader to prevent a compilation error.
 
-# Annotations
+## Annotations
 
 Like in HLSL, annotations are available in XKSL. Here are some the most useful ones:
 
@@ -58,8 +58,7 @@ class BaseClass
 };
 ```
 
-
-# Inheritance example
+## Inheritance example
 
 **Code:** Example of inheritance
 
@@ -94,7 +93,6 @@ class ClassB : BaseClass
 	}
 };
 ```
-
 
 Now let's look at what happens when we change the inheritance order between `ClassA` and `ClassB`.
 
@@ -148,10 +146,9 @@ class MixBA : BaseInterface, BaseClass, ClassB, ClassA
 };
 ```
 
+## Static calls
 
-# Static calls
-
-It is also possible to use a variable or call a method from a class without having to inherit from it. Simply use `<class_name>.<variable or method_name>` in your code. It behaves the same way than a static call. However you should be aware that if you statically call a method that uses class variables, the shader will not compile. This is convenient way to only use a part of a shader but you shouldn't think this is an optimization. The shader compiler already automatically remove any unnecessary variables.
+You can also use a variable or call a method from a class without having to inherit from it. Just use `<class_name>.<variable or method_name>` in your code. It behaves the same way than a static call. However you should be aware that if you statically call a method that uses class variables, the shader will not compile. This is convenient way to only use a part of a shader but you shouldn't think this is an optimization. The shader compiler already automatically remove any unnecessary variables.
 
 **Code:** Static calls
 

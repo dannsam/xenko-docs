@@ -1,6 +1,6 @@
-# Automatic Shader Stage Input/Output
+# Automatic shader stage input/output
 
-# Current state of shaders
+## Current state of shaders
 
 When you write a HLSL shader, you have to precisely define your vertex attributes and carefully pass them across the stage of your final shader.
 
@@ -94,7 +94,6 @@ technique10 Render
 }
 ```
 
-
 This example is quite simple but in a real project situation, the number of shaders is way higher and a single change might mean rewriting tons of shader, structures etc.
 
 Schematically, adding a new attribute requires to update all the stages and intermediate structures from the vertex input to the last stage you want to use the attribute.
@@ -153,8 +152,7 @@ class ShaderA : BaseShader, StreamShader
 }
 ```
 
-
-# Example of XKSL shader
+## Example of XKSL shader
 
 Let's look at the same HLSL shader as the first example but in XKSL.
 
