@@ -3,20 +3,20 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-Xenko runs scripts when the entity they are attached to is loaded in the scene. This page explains how to attach scripts to entities.
+To use a script, you have to attach it to an entity. Xenko runs scripts when the entity they are attached to is loaded in the scene.
 
-## Attach a script
+You can attach a single script to as many entities as you need. You can also attach multiple scripts to single entities; in this case, Game Studio creates multiple instances of the script. This means the same script can have different values in its [public properties and fields](public-properties-and-fields.md).
 
-To use scripts, attach them to entities as components. You can do this in Game Studio or in code.
+## Attach a script to an entity
 
-You can attach a single script to as many entities as you need. You can also attach multiple scripts to single entities; in this case, Game Studio creates multiple **instances** of the script. This means the same script can have different values in its public properties.
+You can attach a script in Game Studio or in code.
 
 ### Attach a script in Game Studio
 
 There are two ways to attach scripts in Game Studio: 
 
-* dragging the script from the asset view to the entity properties
-* adding the script in the property grid
+* drag the script from the asset view to the entity properties
+* add the script in the property grid
 
 They both have the same result.
 
