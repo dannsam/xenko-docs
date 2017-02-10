@@ -32,7 +32,7 @@
     "content": [
       {
         "files": [
-          "toc.yml", "*.md", "manual/**/*.md", "api/*.md", "api/*.yml", "api/*.md", "ReleaseNotes/*.md"
+          "toc.yml", "*.md", "manual/**/*.md", "api/*.md", "api/*.yml", "ReleaseNotes/*.md"
         ],
         "case": false,
         "noNegate": false,
