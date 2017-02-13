@@ -167,6 +167,7 @@
 ## [Add a script](scripts/add-a-script.md)
 ## [Public properties and fields](scripts/public-properties-and-fields.md)
 ## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
+## [Events](scripts/events.md)
 ## [Debugging](scripts/debugging.md)
 ## [Preprocessor variables](scripts/preprocessor-variables.md)
 
