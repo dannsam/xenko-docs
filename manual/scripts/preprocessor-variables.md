@@ -47,10 +47,10 @@ If you need different code depending on the platforms and the graphics APIs, you
 
 ## See also
 
-* [Create a script](create-a-script.md)
 * [Types of script](types-of-script.md)
+* [Create a script](create-a-script.md)
+* [Add a script](add-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
-* [Add a script](add-a-script.md)
-* [Create a script](create-a-script.md)
+* [Events](events.md)
 * [Debugging](debugging.md)

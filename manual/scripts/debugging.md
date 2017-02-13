@@ -31,6 +31,9 @@ If your script isn't producing the result you expect at runtime, you can debug i
 * [Debugging in Visual Studio (MSDN documentation)](https://msdn.microsoft.com/en-us/library/sc65sadd.aspx)
 * [Types of script](types-of-script.md)
 * [Create a script](create-a-script.md)
-* [Public properties and fields](public-properties-and-fields.md)
 * [Add a script](add-a-script.md)
+* [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
+* [Preprocessor variables](preprocessor-variables.md)
+

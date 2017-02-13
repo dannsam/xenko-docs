@@ -129,5 +129,8 @@ You can see the script in the **asset view**.
 
 * [Types of script](types-of-script.md)
 * [Add a script](add-a-script.md)
-* [Create a script](create-a-script.md)
+* [Public properties and fields](public-properties-and-fields.md)
+* [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
 * [Debugging](debugging.md)
+* [Preprocessor variables](preprocessor-variables.md)

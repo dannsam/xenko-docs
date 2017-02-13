@@ -56,4 +56,6 @@ This code adds a script to an entity, where *myAsyncScript* is the script you wa
 * [Create a script](create-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
 * [Debugging](debugging.md)
+* [Preprocessor variables](preprocessor-variables.md)

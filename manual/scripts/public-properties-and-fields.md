@@ -72,8 +72,10 @@ Game Studio no longer shows the property:
 
 ## See also
 
-* [Create a script](create-a-script.md)
 * [Types of script](types-of-script.md)
-* [Scheduling and priorities](scheduling-and-priorities.md)
+* [Create a script](create-a-script.md)
 * [Add a script](add-a-script.md)
+* [Scheduling and priorities](scheduling-and-priorities.md)
+* [Events](events.md)
 * [Debugging](debugging.md)
+* [Preprocessor variables](preprocessor-variables.md)

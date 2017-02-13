@@ -30,8 +30,6 @@ public static class GlobalEvents
 }
 ```
 
-Example script:
-
 ## Create a receiver
 
 Receivers in the Xenko API are of type [EventReceiver](xref:SiliconStudio.Xenko.Engine.Events.EventReceiver).
@@ -46,16 +44,12 @@ var gameIsOver = gameOverListener.TryReceive();
 var gameIsOver = await gameOverListener.ReceiveAsync();
 ```
 
-For example:
-
-<actual script>
-
 ## See also
 
-* [Create a script](create-a-script.md)
 * [Types of script](types-of-script.md)
+* [Create a script](create-a-script.md)
+* [Add a script](add-a-script.md)
 * [Public properties and fields](public-properties-and-fields.md)
 * [Scheduling and priorities](scheduling-and-priorities.md)
-* [Add a script](add-a-script.md)
-* [Create a script](create-a-script.md)
 * [Debugging](debugging.md)
+* [Preprocessor variables](preprocessor-variables.md)
