@@ -1,9 +1,12 @@
-# Debug a script
+# Debugging
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-If your script isn't producing the result you expect at runtime, you can debug it. For more information about debugging in Visual Studio, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/sc65sadd.aspx).
+If your script isn't producing the expected result at runtime, you can debug it in an IDE such as Visual Studio.
+
+>[!Note]
+>[There are lots of ways to debug code. This page suggests one method, using Visual Studio.]
 
 1. Open the script in Visual Studio.
 
@@ -25,6 +28,7 @@ If your script isn't producing the result you expect at runtime, you can debug i
 > [!Note]
 > If Visual Studio doesn't stop at the break point, make sure you attached the script to an entity in the active scene.
 
+For more information about debugging in Visual Studio, see the [MSDN documentation](https://msdn.microsoft.com/en-us/library/sc65sadd.aspx).
 
 ## See also
 
@@ -36,4 +40,3 @@ If your script isn't producing the result you expect at runtime, you can debug i
 * [Scheduling and priorities](scheduling-and-priorities.md)
 * [Events](events.md)
 * [Preprocessor variables](preprocessor-variables.md)
-
