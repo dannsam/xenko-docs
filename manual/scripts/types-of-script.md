@@ -1,5 +1,8 @@
 # Types of script
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Programmer</span>
+
 There are three main types of script in Xenko: **startup scripts**, **synchronous scripts**, and **asynchronous scripts**. 
 
 When you write your script, inherit from the type of script with the behavior that best fits your needs.
