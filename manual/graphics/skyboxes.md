@@ -38,7 +38,6 @@ The cubemap is now available as an asset in your project. You can use the cubema
 ## Add a skybox asset to a project
 
 1. In the **Asset view**, click ![Add new asset](media/engine-skybox-add-new-asset-button.png)
-
 2. Select **Miscellaneous**, and choose **Skybox**.
 
     ![Choose asset type](media/engine-skybox-choose-asset-type.png)
@@ -53,7 +52,7 @@ The skybox asset properties affect how the skybox lights the scene. For informat
 
 ## Add a skybox component to an entity
 
-Xenko includes an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko loads the first only.
+Xenko includes an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko loads the first. 
 
 You can add [Skybox components](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need. You might want to include more than one skybox, for example, if you want to switch between them at runtime.
 

@@ -3,52 +3,60 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-To use a script, add it to an entity as a component. Xenko runs scripts when the entity they are attached to is loaded. You can add a script in Game Studio or in code.
+To use a script, you have to attach it to an entity. Xenko runs scripts when the entity they are attached to is loaded in the scene.
 
-You can add a single script to as many entities as you need. You can also add multiple scripts to single entities; in this case, Game Studio creates multiple instances of the script. This means the same script can have different values in its [public properties and fields](public-properties-and-fields.md).
+You can attach a single script to as many entities as you need. You can also attach multiple scripts to single entities; in this case, Game Studio creates multiple instances of the script. This means the same script can have different values in its [public properties and fields](public-properties-and-fields.md).
 
-## Add a script in Game Studio
+## Attach a script to an entity
 
-There are two ways to add scripts to entities in Game Studio: 
+You can attach a script in Game Studio or in code.
+
+### Attach a script in Game Studio
+
+There are two ways to attach scripts in Game Studio: 
 
 * drag the script from the asset view to the entity properties
 * add the script in the property grid
 
 They both have the same result.
 
-### Drag and drop
+#### Drag and drop
 
-1. In the **entity tree** (on the left by default), or in the scene, select the entity you want to add the script to.
+1. In the **entity tree** (on the left by default), or in the scene, select the entity you want to attach the script to.
 
 2. In the **solution explorer** (in the bottom left by default), select the assembly which contains your script. Game Studio shows your script in the **asset view**.
 
     >[!Note]
-    > Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in your .Game folder. For more information, see [Project structure](../get-started/project-structure.md).
+    > Although scripts are a kind of asset, they're not saved in the Assets folder. This is because code assets usually aren't saved in the same folder as other kinds of asset. For more information, see [Project structure](../get-started/project-structure.md).
 
 3. Drag the script from the **asset view** to the **property grid**.
    
-   Game Studio adds the script to the entity.
+   Game Studio attaches the script to the entity.
 
-### Add the script in the property grid
+#### Add the script in the property grid
 
-1. In the **entity tree** (on the left by default), or in the scene, select the entity you want to add the script to.
+1. In the **entity tree** (on the left by default), or in the scene, select the entity you want to attach the script to.
 
     ![Select an entity](media/select-entity.png)
 
-2. In the **property grid** (on the right by default), click **Add component** and select the script you want to add.
+2. In the **property grid** (on the right by default), click **Add component** and select the script you want to attach.
 
     ![Add script component](media/add-script-component.png)
 
-    Game Studio adds the script to the entity.
+    Game Studio attaches the script to the entity.
 
-## Add a script from code
+### Attach a script from code
 
-This code adds a script to an entity, where *myAsyncScript* is the script you want to add and *myEntity* the entity you want to add it to:
+You can use code to instantiate and attach a script to an entity.
+
+1. In Visual Studio, create a script and save it.
+
+2. In another executed script, use the following code, where *myAsyncScript* is the script name and *myEntity* is the entity you want to attach it to:
 
     ```Code: 
-    // myEntity being an existing entity in the scene; myAsyncScript is the script you want to add
+    // myEntity being an existing entity in the scene
     myEntity.Add(new myAsyncScript());
-    ``` 
+    ```
 
 ## See also
 
