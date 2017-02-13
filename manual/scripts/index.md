@@ -6,7 +6,7 @@ You use scripts by adding them to entities in the scene as components. Xenko loa
 
 Xenko scripts are written in **C#**. You can edit scripts in Game Studio or another IDE (such as visual Studio). Scripts are debugged in Visual Studio.
 
-![Scripting](media/scripting_intro.png)
+![Scripts](media/scripting_intro.png)
 
 ```cs
 public class BasicAsyncScript : AsyncScript
