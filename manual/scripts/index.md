@@ -2,7 +2,7 @@
 
 **Scripts** are units of code that handle game events, respond to user input, and control entities. In short, scripts make games interactive by adding gameplay.
 
-You add scripts to projects by attaching them to entities. Xenko loads a script when the entity it is attached to is loaded in the scene.
+You use scripts by adding them to entities in the scene as components. Xenko loads a script when the entity it is added to is loaded in the scene.
 
 Xenko scripts are written in **C#**. You can edit scripts in Game Studio or another IDE (such as visual Studio). Scripts are debugged in Visual Studio.
 
