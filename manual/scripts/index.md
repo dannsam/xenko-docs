@@ -1,4 +1,4 @@
-# Scripting
+# Scripts
 
 **Scripts** are units of code that handle game events, respond to user input, and control entities. In short, scripts make games interactive by adding gameplay.
 
