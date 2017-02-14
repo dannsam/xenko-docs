@@ -85,7 +85,8 @@ Let's write a script to change the size of the ball when it enters the trigger.
     using System.Threading.Tasks;
     using SiliconStudio.Core.Mathematics;
 
-    namespace VolumeTrigger
+    namespace TransformTrigger
+    // You can use any namespace you like for this script.
     {
         public class Trigger : AsyncScript
         {

@@ -41,7 +41,7 @@ var gameOverListener = new EventReceiver(GlobalEvents.GameOverEventKey);
 var gameIsOver = gameOverListener.TryReceive();
 
 //Or in Async
-var gameIsOver = await gameOverListener.ReceiveAsync();
+await gameOverListener.ReceiveAsync();
 ```
 
 ## See also
