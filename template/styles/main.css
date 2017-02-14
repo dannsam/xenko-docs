@@ -524,7 +524,16 @@ h5{
         width: 100%;
     }
     .toc .level2 > li{
-        min-width: 49%;
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+    }
+    .toc .level2 > li:after{
+        display: none;
+    }
+    article h1, article h2, article h3, article h4{
+        word-break: break-word;
+        word-wrap: break-word;
     }
 }
 
