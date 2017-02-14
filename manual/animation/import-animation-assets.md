@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-This page explains how to import skinned meshes and skeletons to your project. For information about how to create procedural models, see [Create assets](../get-started/create-assets.md).
+This page explains how to import skinned meshes, skeletons, and animations to your project. For information about how to create procedural models, see [Create assets](../get-started/create-assets.md).
 
 >[!Note]
 >Make sure you skin your mesh correctly to the skeleton. If you don't, you won't be able to animate your model correctly.

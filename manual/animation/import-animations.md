@@ -1,28 +1,21 @@
-# Import 3D animations
+# Animation properties
 
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-Xenko supports the following animation file types:
+After you [import an animation](import-animations.md), you can select it in the **asset view** (in the bottom pane by default) and view its properties in the **property grid** (on the right by default).
 
-``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
-
->[!Note]
->Currently, you can't import multiple animations from the same file.
-
-## Properties
-
-In the **Property grid**, you can set up the following properties for the animation asset:
+![Select animation in asset view](media/select-animation-in-asset-view.png)
 
 ![Properties](media/animations-properties.png)
 
 ### Source
 
-This is the source file used by the animation asset. If you change this here, Game Studio re-imports the animation.
+This is the source file used by the animation asset. If you change this, Game Studio re-imports the animation.
 
 ### Clip duration
 
-By default, clip duration is disabled. This means your animation starts at frame 0 and runs to the last written keyframe in the file.
+By default, clip duration is disabled. This means the animation starts at frame 0 and runs to the last written keyframe in the file.
 
 However, single animation tracks sometimes include several animations. In this case, you have to split the track. To do this, enable **Clip duration** and adjust the **start** and **end** frames to match the duration of each animation.
 
@@ -44,7 +37,7 @@ You can choose **PlayOnce** or **LoopInfinite**. This is just a hint for the eng
  
 ### Type
 
-Xenko supports two types of clip. Regular animations default to **Animation clip** and are used with linear blending if mixed. For **Difference clip**, there are few more settings. For more information, see [**Additive animation**](additive-animation.md).
+Xenko supports two types of animation clip. Regular animations default to **Animation clip** and are used with linear blending if mixed. For **Difference clip**, there are few more settings. For more information, see [**Additive animation**](additive-animation.md).
 
 ### Skeleton
 
@@ -59,6 +52,6 @@ When root motion is enabled, main motion is applied to [TrasfromComponent](xref:
 
 ## See also
 
-* [3D animation](animation.md)
+* [Animation](animation.md)
 * [Import animation assets](import-animation-assets.md)
 * [Use animation assets](set-up-animations.md)

@@ -1,20 +1,19 @@
 # Procedural animations
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Procedural animation** is an alternative method of animation that doesn't require you to create animations yourself. Instead, you can use engine components to animate 3D models at runtime. In some cases, this creates more effective and efficient animations.
+**Procedural animation** is an alternative method of animation. Instead of creating animations yourself, you can use engine components to animate 3D models at runtime. 
 
-For example, imagine a shrink effect that happens when the player shoots a monster with a shrink weapon. Instead of creating a complex shrinking animation, you can access the entity [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) and simply scale the enemy down to the required size.
+In some cases, this creates more effective and efficient animations. For example, imagine a shrink effect that happens when the player shoots a monster with a shrink weapon. Instead of creating a complex shrinking animation, you can access the entity [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent) and simply scale the enemy down to the required size.
 
 You can access multiple components to animate your models at runtime, including:
 
-* [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent);
-* [LightComponent](xref:SiliconStudio.Xenko.Engine.LightComponent);
-* [RigidBodyComponent](xref:SiliconStudio.Xenko.Physics.RigidbodyComponent), etc.
+* [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent)
+* [LightComponent](xref:SiliconStudio.Xenko.Engine.LightComponent)
+* [RigidBodyComponent](xref:SiliconStudio.Xenko.Physics.RigidbodyComponent)
 
 ## Code sample
-
-This code sample demonstrates how you can use simple procedural animations on your models.
 
 ```cs
 public class AnimationScript : StartupScript
