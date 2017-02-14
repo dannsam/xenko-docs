@@ -8,7 +8,7 @@ For information on how to create **Procedural Models** see [Create Assets](../ge
 >[!Note]
 >Keep in mind, you have to skin your mesh correctly to the **Skeleton**, otherwise you won't be able to animate your model correctly.
 
-Xenko supports the following **3D Model** resource files:
+Xenko supports the following 3D model file types:
 
 ``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
 
@@ -23,7 +23,7 @@ Here's how you can import **mesh and skeleton** to your project.
 
     ![Choose Asset Type](media/create-and-add-assets-drag-and-drop-model.png)
 
-2. Alternatively, in **Asset View**, click ![Add Asset](media/create-and-add-assets-add-new-asset-button.png) and select ![Import Directly from File](media/create-and-add-assets-import-directly-from-file.png)
+2. Alternatively, in **Asset View**, click ![Add Asset](media/create-and-add-assets-add-new-asset-button.png) and select **Import directly from files**.
 
     ![Choose Asset Type](media/create-and-add-assets-add-new1.png)
 

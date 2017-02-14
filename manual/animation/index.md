@@ -1,8 +1,8 @@
 # Animation
 
-Xenko lets you animate 3D models by adding skeletons, skinned meshes, and animations.
+You can animate 3D models by adding skeletons, skinned meshes, and animations.
 
-For information about 2D animation, see [Sprites](../sprites.md).
+For information about 2D animation, see [Sprites](../sprites/index.md).
 
 ## Animation sample
 
@@ -12,7 +12,7 @@ For an example of how animations work in Xenko, load the **Animation** sample pr
 
 ## In this section
 
-* [3D animation](animation.md)
+* [Animation](animation.md)
     * [Import animation assets](import-mesh-and-skeleton.md)
     * [Setup animation assets](import-animations.md)
       * [Additive animation](additive-animation.md)

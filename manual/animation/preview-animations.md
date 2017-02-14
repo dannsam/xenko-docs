@@ -2,19 +2,30 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-After you [import an animation](import-animations.md), your can set up its preview model:
+After you [import an animation](import-animations.md), your preview in the **asset preview**.
 
-1. In the **asset view**, select the animation asset.
+1. In the **asset view** (at the bottom by default), select the animation asset.
 
-2. In the **property grid**, under **Preview model**, click **Pick an asset up**. 
+    ![Select asset](media/select-asset.png)
 
-3. Select the model you want to use. Make sure the model and the animation share identical skeletons.
+2. In the **property grid** (on the right by default), under **Preview model**, click the hand icon (**Pick an asset up**).
+
+    ![Pick an asset up](media/pick-an-asset-up.png)
+
+    The **asset picker** opens.
+
+3. Select the model you want to use to preview the animation.
 
     ![Pick an asset up](media/animations-import-animations-preview-animation-pick-an-asset.png)
 
-4. In the **asset view**, click the animation to preview. By default, the **asset preview** tab is to the right of the **asset view**.
+    >[!Note]
+    >[Make sure the model and the animation share identical skeletons.]
+
+4. In the **asset view**, click the animation you want to preview. By default, the **asset preview** tab is to the right of the **asset view**.
 
     ![Asset preview tab](media/animations-import-animations-asset-preview-tab.png)
+
+    If you can't see the asset preview, make sure you've selected the **Asset preview** tab at the bottom.
 
     <p>
     <video autoplay loop class="responsive-video" poster="media\animations-import-animations-animation-preview.jpg">

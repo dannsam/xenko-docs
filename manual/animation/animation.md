@@ -12,11 +12,11 @@ For 3D animation, you need three assets:
 
 ### Skeletons
 
-**Skeletons** are digital structures which describe deformation patterns of 3D models. 
+**Skeletons** are digital structures which describe deformation patterns of 3D models.
 
-Skeletons are made of bones that form a hierarchy. When parent bones change their position, they also affect the positions of child bones. For example, a hand bone might have five child bones (the fingers and thumb); when the hand moves up and down, the fingers and thumb move with it. 
+Skeletons are made of bones that form a hierarchy. When parent bones change their position, they also affect the positions of child bones. For example, a hand bone might have five child bones (the fingers and thumb); when the hand moves up and down, the fingers and thumb move with it.
 
-Skeletons don't have to resemble the skeletons of real humans or animals. You can use them to animate any 3D model.
+Skeletons don't have to resemble the skeletons of real humans or animals. You can make skeletons to animate any 3D model.
 
 >[!NOTE]
 >There's currently no way to visualize skeletons in Game Studio.

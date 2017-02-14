@@ -10,8 +10,6 @@ Xenko supports the following animation file types:
 >[!Note]
 >Currently, you can't import multiple animations from the same file.
 
-[Import](import-mesn-and-skeleton.md) your animation asset and refer to its properties in the **Property grid**.
-
 ## Properties
 
 In the **Property grid**, you can set up the following properties for the animation asset:
@@ -24,7 +22,7 @@ This is the source file used by the animation asset. If you change this here, Ga
 
 ### Clip duration
 
-By default, clip durating is disabled. This means your animation starts at frame 0 and runs to the last written keyframe in the file.
+By default, clip duration is disabled. This means your animation starts at frame 0 and runs to the last written keyframe in the file.
 
 However, single animation tracks sometimes include several animations. In this case, you have to split the track. To do this, enable **Clip duration** and adjust the **start** and **end** frames to match the duration of each animation.
 

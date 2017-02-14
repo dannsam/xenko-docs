@@ -2,7 +2,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can add [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity and [set up its parameters](set-up-animations.md) in the Game Studio. The [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) class is designed to be used mainly from a script. 
+You can add an [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity and [set up its parameters](set-up-animations.md) in the Game Studio. The [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) class is designed to be used mainly from a script. 
 
 Some of the more useful properties include:
 
@@ -12,11 +12,11 @@ Some of the more useful properties include:
 | [BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent\(BlendTreeBuilder\)) | Gets or sets animation blend tree builder. Note you can create custom blending trees; see [Custom blend tree](custom-blending-trees.md) for more information. |	
 | [PlayingAnimations](xref:SiliconStudio.Xenko.Engine.AnimationComponent\(PlayingAnimations\)) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful or avoid entirely changing the list or keeping a reference to a playing animation. |
 
-## Code sample 1
+## Code sample
 
-[Setting up](set-up-animations.md) animations already explains how to attach the pre-built AnimationStart script.
+[Setting up](set-up-animations.md) animations already explains how to attach the pre-built *AnimationStart* script.
 
-The code below shows how to assign a simple animation on a character based on their walking speed:
+The code below shows how to assign a simple animation on a character based on its walking speed:
 
 ```cs
 public class AnimationClipExample : SyncScript
