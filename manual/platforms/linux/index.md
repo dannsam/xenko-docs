@@ -1,10 +1,10 @@
-# Xenko On Linux
+# Linux
 
 ## Setup
 
 Make sure to first follow the [requirements and setup instructions](setup.md)
 
-##Creating a Linux Game
+## Create a Linux game
 
 Create a new game in GameStudio and make sure to select Linux as one of the target platform.
 
@@ -46,9 +46,10 @@ In addition to the credentials information you will have 2 additional settings t
 * Use CoreCLR: force execution using .NET Core.
 * X Display: force execution on a specific X display of your Linux host.
 
-## Compiling outside of GameStudio
+## Compile outside Game Studio
 
 Like any Xenko projects, you can also compile them directly from Visual Studio or from the command line. In both cases, you need to select a valid configuration:
+
 * Debug
 * Release
 * CoreCLR_Debug
@@ -60,8 +61,7 @@ The first two will target Mono, while the last two will target .NET Core.
 
 Once your project is loaded in Visual Studio, select the Linux project. In the Solution Configurations drop down, you will have the choice among many choices and select one among the valid Linux configurations:
 
-![Configuration Selection](media/vs_configuration_selection.png)
-
+![Configuration selection](media/vs_configuration_selection.png)
 
 ### MSBuild
 
@@ -73,9 +73,10 @@ msbuild /p:Platform=Linux /p:Configuration=CONFIG YourGame.sln
 
 Where you will replace **CONFIG** with one of the valid Linux configurations.
 
-## Known Limitations
+## Limitations
 
 * No debugging facility yet
+
 * Switching the rendering graphics platform might cause the game to hang on startup. As a workaround, delete on the Linux host the following directories *cache*/*local*/*roaming* in the directory where the game was deployed.
 
 

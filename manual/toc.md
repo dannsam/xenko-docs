@@ -16,10 +16,6 @@
 ### [Add entities](get-started/add-entities.md)
 ### [Arrange entities](get-started/arrange-entities.md)
 ### [Navigate in the editor](get-started/navigate-in-the-editor.md)
-## [Introduction to scripts](get-started/introduction-to-scripts.md)
-### [Scripts in Xenko](get-started/scripts-in-xenko.md)
-### [Create a script](get-started/create-a-script.md)
-### [Use scripts](get-started/use-scripts.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Game Studio](game-studio/index.md)
@@ -155,15 +151,24 @@
 ## [Simulation](physics/simulation.md)
 ## [Tutorials](physics/tutorials.md)
 ### [Create a bouncing ball](physics/create-a-bouncing-ball.md)
-### [Script a triggered event](physics/script-a-triggered-event.md)
+### [Script a trigger](physics/script-a-trigger.md)
 
 # [Platforms](platforms/index.md)
 ## [Linux](platforms/linux/index.md)
 ### [Setup and requirements](platforms/linux/setup.md)
+## [UWP](platforms/uwp/index.md)
+### [Xbox Live](platforms/uwp/xbox-live.md)
 ## [Add or remove a platform](platforms/add-or-remove-a-platform.md)
 ## [Change the graphics platform](platforms/change-the-graphics-platform.md)
 
 # [Scripts](scripts/index.md)
+## [Types of script](scripts/types-of-script.md)
+## [Create a script](scripts/create-a-script.md)
+## [Add a script](scripts/add-a-script.md)
+## [Public properties and fields](scripts/public-properties-and-fields.md)
+## [Scheduling and priorities](scripts/scheduling-and-priorities.md)
+## [Events](scripts/events.md)
+## [Debugging](scripts/debugging.md)
 ## [Preprocessor variables](scripts/preprocessor-variables.md)
 
 # [UI](ui/index.md)
@@ -180,10 +185,3 @@
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 
 # [Xenko Launcher](xenko-launcher/index.md)
-
-<!---
-Future documentation
-# Xenko for Unity Developers
-# Xenko for Unreal Engine 4 Developers
-# [Sprites](sprites/index.md)
--->

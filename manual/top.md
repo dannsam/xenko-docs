@@ -1,10 +1,18 @@
 
 # Xenko manual
 
-Xenko is a free open-source C# game engine. You can use its robust toolset to create, manage and modify everything in your game.
+These pages contain information about how to use Xenko, a free open-source C# game engine.
+
+>[!Note]
+>This manual is under construction. Follow [Xenko on Twitter](https://twitter.com/xenko3d?lang=en) for news about documentation updates.
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">Updated</span> [Scripts](scripts/index.md)
+    * <span class="label label-doc-highlight">New</span> [Scripts - Events](scripts/events.md)
+    * <span class="label label-doc-highlight">New</span> [Scripts - Scheduling and priorities](scripts/scheduling-and-priorities.md)
+* <span class="label label-doc-highlight">New</span> [Xbox Live](platforms/uwp/xbox-live.md)
+* <span class="label label-doc-highlight">Updated</span> [Project structure](get-started/project-structure.md)
 * <span class="label label-doc-highlight">New</span> [Sprites](sprites/index.md)
 * <span class="label label-doc-highlight">New</span> [Change the graphics platform](platforms/change-the-graphics-platform.md)
 * <span class="label label-doc-highlight">New</span> [Profiling](troubleshooting/profiling.md)
