@@ -60,5 +60,5 @@ When root motion is enabled, main motion is applied to [TrasfromComponent](xref:
 ## See also
 
 * [3D animation](animation.md)
-* [Import animation assets](import-mesh-and-skeleton.md)
+* [Import animation assets](import-animation-assets.md)
 * [Use animation assets](set-up-animations.md)

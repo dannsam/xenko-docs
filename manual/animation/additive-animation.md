@@ -62,7 +62,7 @@ Now, you can use additive animation with the another motion that uses the same s
     
 ## See also
 
-* [3D animations overview page](import-mesh-and-skeleton.md)
+* [3D animations overview page](import-animation-assets.md)
 * [Import animation assets](use-animations.md)
 * [Set up animation assets](import-animations.md)
 * [Procedural animations](procedural-animation.md)

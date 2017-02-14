@@ -2,7 +2,7 @@
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-The Animation component has a property called [AnimationComponent.BlendTreeBuilder](xref:SiliconStudio.Xenko.Animations.AnimationComponent\(BlendTreeBuilder\)). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which inherits from the `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
+The Animation component has the property [AnimationComponent.BlendTreeBuilder](xref:SiliconStudio.Xenko.Animations.AnimationComponent\(BlendTreeBuilder\)). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which inherits from `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
 
 When the animation component is updated, it calls `void BuildBlendTree(FastList<AnimationOperation> animationList)` on your script instead of updating the animations itself. This allows you to choose any combination of animation clips, speeds and blends, but also increases the difficulty, because all the heavy lifting is now on the script side.
 

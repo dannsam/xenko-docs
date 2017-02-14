@@ -13,7 +13,7 @@ For an example of how animations work in Xenko, load the **Animation** sample pr
 ## In this section
 
 * [Animation](animation.md)
-    * [Import animation assets](import-mesh-and-skeleton.md)
+    * [Import animation assets](import-animation-assets.md)
     * [Setup animation assets](import-animations.md)
       * [Additive animation](additive-animation.md)
       * [Procedural animation](procedural-animation.md)
