@@ -13,23 +13,19 @@ In this tutorial, we'll create a **trigger** that doubles the size of a ball whe
 
 ## 2. Set the restitution
 
-For this tutorial, we'll set the restitution of both the ground and the sphere to 1, so the ball bounces forever without losing energy. This isn't strictly necessary, but makes it easier to see the effect of the trigger later.
+For this tutorial, we'll set the restitution of both the ground and the sphere to 0.9, which makes the ball very bouncy. This isn't strictly necessary, but makes it easier to see the effect of the trigger later.
 
 1. Select the **Sphere** entity.
 
-2. In the **Property grid**, under **Rigidbody**, set the **Restitution** to *1*.
+2. In the **Property grid**, under **Rigidbody**, set the **Restitution** to *0.9*.
 
     ![Set restitution for a sphere](media/physics-tutorials-rigidbody-restitution.png)
 
 3. Select the **Ground** entity.
 
-4. In the **Property grid**, under **Static Collider**, set the **Restitution** to *1*.
+4. In the **Property grid**, under **Static Collider**, set the **Restitution** to *0.9*.
 
     ![Set restitution for the ground](media/physics-tutorials-static-collider-restitution.png)
-
-This creates a ball that bounces indefinitely, losing no energy:
-
-![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
 
 ## 3. Add a trigger 
 
@@ -61,11 +57,65 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
     This creates a box-shaped trigger in the scene.
 
+    ![Added trigger](media/physics-tutorials-added-trigger-area.png)
+
 7. Let's make the trigger a larger area. In the **Property grid**, under the **Transform** component properties, set the **scale** to: *X:2, Y:2, Z:2*
 
     ![Scale a trigger](media/physics-tutorials-create-a-trigger-scale-trigger.png)
 
-## 4. Position the trigger 
+    This doubles the size of the trigger.
+
+    ![Added trigger](media/physics-tutorials-added-trigger-doubled-area.png)
+
+## 4. Give the trigger a model
+
+Right now, the trigger is invisible at runtime. To better show the effect of the trigger, we'll make it a transparent box. This has no effect on how the trigger works; it just means we can easily see where it is at runtime.
+
+1. Create a new procedural model asset. To do this, in the **Asset view**, click **Add asset**, and select **Models > Cube**.
+
+    ![Add a model asset](media/physics-tutorials-create-a-trigger-add-a-model.png)
+
+2. Create a new empty material asset. To do this, in the **Asset view**, click **Add asset**, and select **Materials > Material**.
+
+    ![Add a material asset](media/physics-tutorials-create-a-trigger-add-a-material-asset.png)
+
+3. Let's rename the material to make it easy to identify. To do this, right-click, select **Rename**, and type a new name (eg *Transparent*).
+
+4. Select the **Trigger** entity. In the **Property grid**, click **Add component** and select **Model**.
+
+    ![Add a model component](media/physics-tutorials-create-a-trigger-add-a-model-component.png)
+
+    Game Studio adds a model component to the entity.
+
+5. Under **Model**, click the hand icon (**Pick asset up**) to open the **Asset picker**.
+
+    ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
+
+6. Select the **Cube** model we created in step 1 and click **OK**.
+
+    ![Select Cube model](media/physics-tutorials-select-cube-model.png)
+
+7. In the **Property grid**, under **Model > Materials**, click the hand icon (**Pick asset up**) to open the **Asset picker**.
+
+    ![Select material](media/physics-tutorials-material-asset-picker.png)
+
+8. Select the *Transparent** material we created in step 2 and click **OK**.
+
+    ![Select material in Asset Picker](media/physics-tutorials-select-transparent-material.png)
+
+9. In the **Asset view**, select the **Transparent** material asset.
+
+    ![Select material in Asset View](media/physics-tutorials-select-material-asset.png)
+
+10. In the **Property grid**, under **Misc > Transparency**, select **Blend**.
+
+    ![Select Blend](media/physics-tutorials-set-blend.png)
+
+11. By default, the Alpha is set to 1. This makes the material completely opaque. To set it to 50% opacity, set the **Alpha** to 0.5.
+
+    ![Select Blend](media/physics-tutorials-set-blend-alpha.png)
+
+## 5. Position the trigger 
 
 We need to position the trigger between the ground and the sphere, so the ball falls through it.
     
@@ -75,9 +125,9 @@ Now the trigger entity is between the ground and the sphere:
 
 ![Trigger between ground and sphere](media/physics-tutorials-create-a-trigger-trigger-between-ground-and-sphere.png)
 
-## 5. Change the sphere size with script
+## 6. Change the sphere size with script
 
-If we run the project now (**F5**), the ball falls through the trigger, but nothing happens. Note that the trigger is invisible, as we didn't give it a graphical component.
+If we run the project now (**F5**), the ball falls through the trigger, but nothing happens.
 
 ![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
 
@@ -96,7 +146,7 @@ Let's write a script to change the size of the ball when it enters the trigger.
     
     2b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
 
-3. Open the script, replace its content with the following code, and build your solution:
+3. Open the script, replace its content with the following code, and save the file:
 
     ```
     using SiliconStudio.Xenko.Engine;
@@ -143,7 +193,9 @@ Let's write a script to change the size of the ball when it enters the trigger.
 
     This code doubles the size (scale) of any entity that enters the trigger. When the entity exits the trigger, it returns to its original size.
 
-## 6. Add the script
+4. Reload the assemblies.
+
+## 7. Add the script
 
 Finally, let's add this script to the trigger entity as a component.
 
@@ -153,13 +205,79 @@ Finally, let's add this script to the trigger entity as a component.
 
     ![Add script component to entity](media/physics-tutorials-create-a-trigger-add-script-component-to-entity.png)
 
-## 7. Run the project
+## 8. Run the project
 
 Run the project (**F5**) to see the trigger in action.
 
 The ball falls through the trigger, doubles in size, exits the trigger, and returns to its normal size.
 
 ![Ball passes through trigger](media/physics-tutorials-create-a-trigger-ball-passes-trigger.gif)
+
+## More ideas
+
+You can alter the script to make other changes when the sphere enters the trigger. 
+
+For example, you can switch the material on the sphere entity. This script switches the material on the Sphere entity from the **Sphere Material** to the **Ground Material** and back again:
+
+```
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
+using System.Threading.Tasks;
+using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Xenko.Rendering;
+
+namespace TransformTrigger
+// You can use any namespace you like for this script.
+{
+    public class Trigger : AsyncScript
+    {
+        private Material material1;
+        private Material material2;
+    
+        public override async Task Execute()
+        {
+            var trigger = Entity.Get<PhysicsComponent>();
+            trigger.ProcessCollisions = true;
+            
+            // Make sure the materials are loaded 
+            material1 = Content.Load<Material>("Sphere Material");
+            material2 = Content.Load<Material>("Ground Material");
+
+            // Start state machine
+            while (Game.IsRunning)
+            {
+                // 1. Wait for an entity to collide with the trigger
+                var firstCollision = await trigger.NewCollision();
+
+                var otherCollider = trigger == firstCollision.ColliderA ? firstCollision.ColliderB : firstCollision.ColliderA;
+                    
+                // 2. Change the material on the entity
+                otherCollider.Entity.Get<ModelComponent>().Materials[0] = material2;
+                
+                // 3. Wait for the entity to exit the trigger
+                Collision collision;
+
+                do
+                {
+                    collision = await trigger.CollisionEnded();
+                }
+                while (collision != firstCollision);
+
+                // 4. Change the material back to the original one
+                otherCollider.Entity.Get<ModelComponent>().Materials[0] = material1;
+            }
+        }
+        
+        public override void Cancel()
+        {
+            Content.Unload(material1);
+            Content.Unload(material2);
+        }
+    }
+}
+```
+
+![Material changes](media/bouncing-ball-with-material-change.gif)
 
 ## See also
 
