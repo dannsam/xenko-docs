@@ -12,8 +12,6 @@ Imagine your game has a "Game Over" state that occurs when the player dies. To h
 
 ## Create and broadcast an event
 
-(xref:SiliconStudio.Xenko.Engine.SkyboxComponent)
-
 Broadcasters in the Xenko API are of type [EventKey](xref:SiliconStudio.Xenko.Engine.Events.EventKey). They use the method [Broadcast](xref:SiliconStudio.Xenko.Engine.Events.EventKey#SiliconStudio_Xenko_Engine_Events_EventKey_Broadcast) to broadcast events to receivers.
 
 For example, this code creates a "Game Over" event:
