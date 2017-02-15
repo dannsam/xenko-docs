@@ -1,8 +1,9 @@
 # Preview animations
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-After you [import an animation](import-animations.md), your preview in the **asset preview**.
+After you [import an animation](import-animations.md), you can preview it in the **asset preview**.
 
 1. In the **asset view** (at the bottom by default), select the animation asset.
 
@@ -35,6 +36,5 @@ After you [import an animation](import-animations.md), your preview in the **ass
 
 ## See also
 
-* [3D animations overview page](animation.md)
 * [Import animations](import-animations.md)
 * [Set up animations](set-up-animations.md)

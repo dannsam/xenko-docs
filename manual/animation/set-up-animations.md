@@ -1,38 +1,63 @@
-# Set up animations in Game Studio
+# Set up animations
+
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
 To set up animations for a 3D model:
 
-1. Add [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity.
+1. Add an [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity.
 
 2. Add animations to the [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent).
 
 3. Create scripts to animate your models at runtime.
 
-## Add animations to an entity
+## 1. Add animations to an entity
 
 To use animations in the script, first add them to the entity in Game Studio.
 
-1. To display an animated model, the entity needs a model component and an animation component. In the **scene view**, select the entity you want to animate. In the **property grid**, click **Add animation component** and choose `Animations`.
+To display an animated model, the entity needs a model component and an animation component. 
 
-    ![Select an entity](media/animations-setup1.png)
+1. In the **scene view**, select the entity you want to animate.
+
+    ![Select an entity](media/select-entity.png)
+
+2. In the **property grid**, click **Add component** and choose **Animations**.
+
+    ![Select an entity](media/select-animation-component.png)
 
     Game Studio adds an animation component to the entity.
 
-2. In the animation component properties, in the **Animations** field, click the green **+** button and type a name for your animation. When you play animations from scripts later, you use this name, not the name of the asset.
+2. In the animation component properties, next to **Animations**, click the green plus button, type a name for the animation, and press Enter.
 
->[!TIP]
->We recommend you give your animation the same name as the asset.
+    ![Add animation](media/add-animation.png)
 
-![Select an entity](media/animations-setup2.png)
+    >[!Note]
+    >When you play animations from scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset. 
     
-3. Add all the animations you want to use on this model and assign the required animation assets for each one. They appear in alphabetical order, as shown above.
+3. Click the hand icon (**Pick an asset up**).
 
-## Create a script to play the animations
+    ![Pick asset up](media/pick-asset-up.png)
 
-Your script can be as simple as:
+    The **Asset picker** opens.
+
+4. Browse to the animation asset you want to add and click **OK**.
+
+    ![Asset picker](media/asset-picker.png)
+
+    Game Studio adds the animation asset to the entity.
+
+    ![Animation asset added](media/animation-asset-added.png)
+
+You can add as many animations to the entity as you need. The property grid lists them in alphabetical order.
+
+![Animations list](media/animations-list.png)
+
+## 2. Create a script to play the animations
+
+After you add animations to an entity, you need to play them with a script. For more information about scripts, see [Scripts](../scripts/index.md).
+
+### Example script
 
 ```
     public class SimpleAnimationScript : StartupScript
@@ -46,9 +71,9 @@ Your script can be as simple as:
 
 This script looks for an animation component on the entity where you attach it, and plays the "Walk" animation. This means it looks for a key with the name "Walk" in the Animations dictionary under the animation component where you added your animation clips in the previous step.
 
-### Using the pre-built AnimationStart script
+### Use the prebuilt **AnimationStart** script
 
-Alternatively, you can use the pre-built AnimationScript asset:
+Xenko includes a pre-built **AnimationScript** script.
 
 ![Select an entity](media/animations-setup3.png)
 
@@ -57,7 +82,7 @@ Choose **Add asset > Scripts > Animation Start** and give it a name. Then recomp
 You can edit the script and expand the properties. Refer to the Animation component API for the full list of options.
 
 ## See also
-* [3D animations overview page](animation.md)
+
 * [Use 3D animations](use-animations.md)
 * [Custom blending trees](custom-blending-trees.md)
 * [Preview animations](preview-animations.md)

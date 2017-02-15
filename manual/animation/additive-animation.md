@@ -2,7 +2,7 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Additive animation clips**, also known as **difference clips**, let you **add** the same animation to different base animations.
+**Additive animation clips**, also known as **difference clips**, let you add the same animation to different base animations.
 
 ![Additive animations](media/animations-additive-sample.gif)
 
@@ -46,7 +46,7 @@ Now, you can use additive animation with the another motion that uses the same s
 
 1. In **Asset View** right click to create a new asset and add **Scripts -> Animation Start**. AnimationStart is a Startup script which you can use to load a list of playing animations into your model. Recompile your project to apply the changes and make the script available.
 
-    ![Animation Start](media/animations-additive-animations-animation-start.png)
+    ![Animation start](media/animations-additive-animations-animation-start.png)
 
 2. In **Scene view**, select the desired entity. 
 
@@ -58,7 +58,7 @@ Now, you can use additive animation with the another motion that uses the same s
 
 4. Still on the selected entity, add another new component and choose the newly added script _Animation Start_. You will notice there is a list of animations which will be loaded into your entity. Add at least two since additive animations can't be played alone. Select the default animation for your character with **Linear Blend** and then add a second animation with **Add** for blending animation. For the clip of the second animation choose the difference clip you created earlier.
 
-    ![Animation Start](media/animations-additive-animations-start2.png)
+    ![Animation start](media/animations-additive-animations-start2.png)
     
 ## See also
 

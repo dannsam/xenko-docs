@@ -48,10 +48,9 @@ If you want to use your animation with a skinned mesh, it needs a skeleton. Make
 When root motion is enabled, main motion is applied to [TrasfromComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent). If disabled, it's applied inside the skeleton nodes.
     
 >[!Note]
->If there is no skeleton, the motion is always applied to [TrasfromComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent).
+>If there's no skeleton, the motion is always applied to [TrasfromComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent).
 
 ## See also
 
-* [Animation](animation.md)
 * [Import animation assets](import-animation-assets.md)
 * [Use animation assets](set-up-animations.md)

@@ -1,12 +1,13 @@
 # Custom blend trees
+
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
 
-The Animation component has the property [AnimationComponent.BlendTreeBuilder](xref:SiliconStudio.Xenko.Animations.AnimationComponent\(BlendTreeBuilder\)). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which inherits from `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
+The [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) has the property [AnimationComponent.BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_BlendTreeBuilder). If you want absolute control over which animations are played, how are they blended and what weights they have, you can create a script which inherits from `IBlendTreeBuilder` and assign it to the BlendTreeBuilder under your animation component.
 
-When the animation component is updated, it calls `void BuildBlendTree(FastList<AnimationOperation> animationList)` on your script instead of updating the animations itself. This allows you to choose any combination of animation clips, speeds and blends, but also increases the difficulty, because all the heavy lifting is now on the script side.
+When the animation component is updated, it calls `void BuildBlendTree(FastList<AnimationOperation> animationList)` on your script instead of updating the animations itself. This allows you to choose any combination of animation clips, speeds and blends, but is also more difficult, as all the heavy lifting is now on the script side.
 
-The three game templates included with Xenko (First-person shooter, Third-person platformer and Top-down RPG) are good examples of how to use the custom blend trees.
+The templates *First-person shooter*, *Third-person platformer* and *Top-down RPG*, included with Xenko, are examples of how to use custom blend trees.
 
 ## Code sample
 
@@ -98,6 +99,5 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
 
 ## See also
 
-* [3D animations overview page](animation.md)
 * [Use animation assets](set-up-animations.md)
 * [Code sample](use-animations.md)

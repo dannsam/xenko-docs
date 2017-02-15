@@ -1,4 +1,5 @@
 # Use 3D animations
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
 
@@ -74,13 +75,10 @@ namespace AdditiveAnimation
 
 ## Animation blend tree
 
-There is also the option to override the [animation blend tree](custom-blending-trees.md) and do all animation blending in the script.
-
-The three game templates, which require more advanced techniques, are a good example of how to do this.
+There is also the option to override the animation blend tree and do all animation blending in the script. The three game templates, which require more advanced techniques, are a good example of how to do this. For more information, see [custom blend trees](custom-blending-trees.md).
 
 ## See also
 
-* [3D animations overview page](animation.md)
 * [Set up animations](set-up-animations.md)
 * [Procedural animations](procedural-animation.md)
 * [Additive animations](additive-animation.md)

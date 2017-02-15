@@ -65,7 +65,6 @@ public class AnimationScript : StartupScript
 
 ## See also
 
-* [3D animations overview page](animation.md)
 * [Use 3D animations](use-animations.md)
 * [Set up animations](set-up-animations.md)
 * [Additive animations](additive-animation.md)
