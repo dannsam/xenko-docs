@@ -1,4 +1,4 @@
-# Custom blend trees
+# Custom-blend trees
 
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
@@ -44,14 +44,14 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
         // pass the new animation state (stack = blend tree) to the animation system.
         AnimationComponent.BlendTreeBuilder = this;
 
-        // As we override the animation system, we must create an AnimationClipEvaluator for each clip we want to use.
+        // As we override the animation system, we need to create an AnimationClipEvaluator for each clip we want to use.
         animEvaluatorWalk = AnimationComponent.Blender.CreateEvaluator(AnimationWalk);
         animEvaluatorRun = AnimationComponent.Blender.CreateEvaluator(AnimationRun);
     }
 
     public override void Cancel()
     {
-        // When the script gets cancelled, don't forget to release all animation resources created in Start() - AnimationClipEvaluators
+        // When the script is cancelled, don't forget to release all animation resources created in Start() - AnimationClipEvaluators
         AnimationComponent.Blender.ReleaseEvaluator(animEvaluatorWalk);
         AnimationComponent.Blender.ReleaseEvaluator(animEvaluatorRun);
     }
@@ -61,7 +61,7 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
         // Use DrawTime rather than UpdateTime because the animations are updated only when they are drawn.
         var time = Game.DrawTime;
 
-        // This update function will account for animation with different durations,
+        // This update function accounts for animation with different durations,
         // keeping a current time relative to the blended maximum duration.
         long blendedMaxDuration = (long)MathUtil.Lerp(AnimationWalk.Duration.Ticks, AnimationRun.Duration.Ticks, LerpFactor);
 
@@ -87,12 +87,12 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
         blendStack.Add(AnimationOperation.NewBlend(AnimationBlendOperation.LinearBlend, LerpFactor));   // Will POP the last two states, blend them with the factor and PUSH back the result.
 
         // NOTE
-        // Because the blending operations are laid out in a stack you have to pack the operations in this manner
-        // In general traversing a binary tree depth-first and adding operations as you *leave* precessed nodes should be sufficient
-        // For non-binary trees you have to properly weight the blending factors as well
+        // Because the blending operations are laid out in a stack you have to pack the operations in this manner.
+        // In general, traversing a binary tree depth-first and adding operations as you *leave* precessed nodes should be sufficient.
+        // For non-binary trees, you have to properly weight the blending factors as well
 
         // DONE
-        // The top of the stack now contains the final state which will be use for the animated model
+        // The top of the stack now contains the final state used for the animated model
     }
 }
 ```

@@ -4,13 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-To set up animations for a 3D model:
-
-1. Add an [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity.
-
-2. Add animations to the [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent).
-
-3. Create scripts to animate your models at runtime.
+To set up animations for a 3D model, you need to add an [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity, add animations to the component, and play the animations at runtime.
 
 ## 1. Add animations to an entity
 
@@ -33,7 +27,7 @@ To display an animated model, the entity needs a model component and an animatio
     ![Add animation](media/add-animation.png)
 
     >[!Note]
-    >When you play animations from scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset. 
+    >When you play animations from scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
     
 3. Click the hand icon (**Pick an asset up**).
 
@@ -69,17 +63,25 @@ After you add animations to an entity, you need to play them with a script. For 
     }
 ```
 
-This script looks for an animation component on the entity where you attach it, and plays the "Walk" animation. This means it looks for a key with the name "Walk" in the Animations dictionary under the animation component where you added your animation clips in the previous step.
+This script looks for an animation with the name "Walk" under the animation component on the entity.
 
-### Use the prebuilt **AnimationStart** script
+### Use the pre-built **AnimationStart** script
 
 Xenko includes a pre-built **AnimationScript** script.
 
 ![Select an entity](media/animations-setup3.png)
 
-Choose **Add asset > Scripts > Animation Start** and give it a name. Then recompile the project and add the script as a new component on your entity. It will appear with the name you assigned. The script offers to load one or more animations when it's run the first time, adding them to the list of playing animations of the entity.
+To use this script:
 
-You can edit the script and expand the properties. Refer to the Animation component API for the full list of options.
+1. Choose **Add asset > Scripts > Animation Start** and give it a name.
+
+2. Recompile the project.
+
+3. Add the script as a new component on your entity.
+
+The first time the animation runs, it offers to load one or more animations, adding them to the list of playing animations on the entity.
+
+You can edit the script and expand the properties. For the list of options, see the [AnimationComponent API page](xref:SiliconStudio.Xenko.Animations.AnimationComponent).
 
 ## See also
 
