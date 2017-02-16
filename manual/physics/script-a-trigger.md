@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-In this tutorial, we'll create a **trigger** that doubles the size of a ball when the ball passes through it.
+In this tutorial, we'll create a [trigger](../physics/triggers.md) that doubles the size of a ball when the ball passes through it.
 
 ## 1. Create a bouncing ball
 
