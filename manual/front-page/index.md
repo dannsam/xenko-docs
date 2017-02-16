@@ -1,21 +1,22 @@
 
 # Xenko manual
 
-These pages contain information about how to use Xenko, a free open-source C# game engine.
+![Manual](media/manual.png)
+
+These pages contain information about how to use Xenko, an open-source C# game engine.
 
 >[!Note]
->This manual is under construction. Follow [Xenko on Twitter](https://twitter.com/xenko3d?lang=en) for news about documentation updates.
+>The Xenko manual is under construction and updated regularly with new content. Follow [Xenko on Twitter](https://twitter.com/xenko3d?lang=en) for updates.
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">Updated</span> [Physics - Tutorial: Script a trigger](physics/script-a-trigger.md)
 * <span class="label label-doc-highlight">Updated</span> [Scripts](scripts/index.md)
     * <span class="label label-doc-highlight">New</span> [Scripts - Events](scripts/events.md)
     * <span class="label label-doc-highlight">New</span> [Scripts - Scheduling and priorities](scripts/scheduling-and-priorities.md)
-* <span class="label label-doc-highlight">New</span> [Xbox Live](platforms/uwp/xbox-live.md)
+* <span class="label label-doc-highlight">New</span> [Platforms - Xbox Live](platforms/uwp/xbox-live.md)
 * <span class="label label-doc-highlight">Updated</span> [Project structure](get-started/project-structure.md)
 * <span class="label label-doc-highlight">New</span> [Sprites](sprites/index.md)
-* <span class="label label-doc-highlight">New</span> [Change the graphics platform](platforms/change-the-graphics-platform.md)
-* <span class="label label-doc-highlight">New</span> [Profiling](troubleshooting/profiling.md)
 
 ## Improve this documentation
 
