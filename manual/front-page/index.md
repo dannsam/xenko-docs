@@ -10,13 +10,13 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
-* <span class="label label-doc-highlight">Updated</span> [Physics - Tutorial: Script a trigger](physics/script-a-trigger.md)
-* <span class="label label-doc-highlight">Updated</span> [Scripts](scripts/index.md)
-    * <span class="label label-doc-highlight">New</span> [Scripts - Events](scripts/events.md)
-    * <span class="label label-doc-highlight">New</span> [Scripts - Scheduling and priorities](scripts/scheduling-and-priorities.md)
-* <span class="label label-doc-highlight">New</span> [Platforms - Xbox Live](platforms/uwp/xbox-live.md)
-* <span class="label label-doc-highlight">Updated</span> [Project structure](get-started/project-structure.md)
-* <span class="label label-doc-highlight">New</span> [Sprites](sprites/index.md)
+* <span class="label label-doc-highlight">Updated</span> [Physics - Tutorial: Script a trigger](../physics/script-a-trigger.md)
+* <span class="label label-doc-highlight">Updated</span> [Scripts](../scripts/index.md)
+    * <span class="label label-doc-highlight">New</span> [Scripts - Events](../scripts/events.md)
+    * <span class="label label-doc-highlight">New</span> [Scripts - Scheduling and priorities](../scripts/scheduling-and-priorities.md)
+* <span class="label label-doc-highlight">New</span> [Platforms - Xbox Live](../platforms/uwp/xbox-live.md)
+* <span class="label label-doc-highlight">Updated</span> [Project structure](../get-started/project-structure.md)
+* <span class="label label-doc-highlight">New</span> [Sprites](../sprites/index.md)
 
 ## Improve this documentation
 
