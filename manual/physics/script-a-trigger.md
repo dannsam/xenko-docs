@@ -7,13 +7,11 @@ In this tutorial, we'll create a **trigger** that doubles the size of a ball whe
 
 ## 1. Create a bouncing ball
 
-1. Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial. This gives us a simple scene in which a ball falls from mid-air, hits the ground, and bounces.
-
-    ![Bouncing effect](media/physics-tutorials-create-a-bouncing-ball-falling-and-bouncing-ball.gif)
+Follow the instructions in the [Create a bouncing ball](create-a-bouncing-ball.md) tutorial. This creates a simple scene in which a ball falls from mid-air, hits the ground, and bounces.
 
 ## 2. Set the restitution
 
-For this tutorial, we'll set the restitution of both the ground and the sphere to 0.9, which makes the ball very bouncy. This isn't strictly necessary, but makes it easier to see the effect of the trigger later.
+For this tutorial, we'll set the restitution of both the ground and the sphere to 0.9, which makes the ball very bouncy. This makes it easier to see the effect of the trigger later, as the ball will bounce in and out of the trigger area repeatedly.
 
 1. Select the **Sphere** entity.
 
@@ -45,17 +43,17 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
 4. In the **Property grid**, expand the **Static Collider component** to view its properties.
 
-5. Check the **Is Trigger** checkbox.
+5. Select the **Is Trigger** checkbox.
 
     ![Check 'Is trigger'](media/physics-tutorials-create-a-trigger-is-trigger-checkbox.png)
 
-    This makes the object a trigger. Objects can pass through the collider, but are still detected in the code.
+    This makes the collider a trigger. This means objects can pass through it, but are still detected in the code.
 
 6. We need to give the trigger a shape. Next to **Collider Shapes**, click the **green plus icon** and select **Box**.
 
     ![Add collider shape](media/physics-tutorials-create-a-trigger-add-box-shape-to-a-trigger.png)
 
-    This creates a box-shaped trigger in the scene.
+    This gives the trigger a box shape.
 
     ![Added trigger](media/physics-tutorials-added-trigger-area.png)
 
@@ -69,7 +67,7 @@ Now we'll add a trigger between the ball and the ground, so the ball passes thro
 
 ## 4. Give the trigger a model
 
-Right now, the trigger is invisible at runtime. To better show the effect of the trigger, we'll make it a transparent box. This has no effect on how the trigger works; it just means we can easily see where it is at runtime.
+Right now, the trigger is invisible at runtime. To better show how the trigger works, we'll make it a transparent box. This has no effect on how the trigger works; it just means we can easily see where it is at runtime.
 
 1. Create a new procedural model asset. To do this, in the **Asset view**, click **Add asset**, and select **Models > Cube**.
 
@@ -129,7 +127,11 @@ Now the trigger entity is between the ground and the sphere:
 
 If we run the project now (**F5**), the ball falls through the trigger, but nothing happens.
 
-![Infinite bounce](media/physics-tutorials-create-a-bouncing-ball-infinitely-bouncing-ball.gif)
+<p>
+<video autoplay loop class="responsive-video" poster="media/bouncing-ball-with-trigger-no-effect.png">
+   <source src="media/bouncing-ball-with-trigger-no-effect.mp4" type="video/mp4">
+</video>
+</p>
 
 Let's write a script to change the size of the ball when it enters the trigger.
 
@@ -211,7 +213,11 @@ Run the project (**F5**) to see the trigger in action.
 
 The ball falls through the trigger, doubles in size, exits the trigger, and returns to its normal size.
 
-![Ball passes through trigger](media/physics-tutorials-create-a-trigger-ball-passes-trigger.gif)
+<p>
+<video autoplay loop class="responsive-video" poster="media/bouncing-ball-with-trigger-scaled_first_frame.png">
+   <source src="media/bouncing-ball-with-trigger-scaled.mp4" type="video/mp4">
+</video>
+</p>
 
 ## More ideas
 
@@ -277,7 +283,11 @@ namespace TransformTrigger
 }
 ```
 
-![Material changes](media/bouncing-ball-with-material-change.gif)
+<p>
+<video autoplay loop class="responsive-video" poster="media/bouncing-ball-with-trigger-material_first_frame.png">
+   <source src="media/bouncing-ball-with-trigger-material.mp4" type="video/mp4">
+</video>
+</p>
 
 ## See also
 

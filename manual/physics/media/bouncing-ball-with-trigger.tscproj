@@ -2,7 +2,7 @@
   "title" : "",
   "description" : "",
   "author" : "",
-  "width" : 472.0,
+  "width" : 360.0,
   "height" : 456.0,
   "version" : "0.5",
   "editRate" : 30,
@@ -14,29 +14,101 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 02-15-17 8.trec",
-      "rect" : [0, 0, 1280, 720],
-      "lastMod" : "20170215T071703",
+      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 02-16-17 4.trec",
+      "rect" : [0, 0, 360, 456],
+      "lastMod" : "20170216T024232",
       "sourceTracks" : [
         {
-          "range" : [0, 134],
+          "range" : [0, 236],
           "type" : 0,
           "editRate" : 30,
-          "trackRect" : [0, 0, 1280, 720],
+          "trackRect" : [0, 0, 360, 456],
           "sampleRate" : 30,
           "bitDepth" : 0,
           "numChannels" : 0,
-          "metaData" : "Rec 02-15-17 8.trec;"
+          "metaData" : "Rec 02-16-17 4.trec;"
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 02-16-17 5.trec",
+      "rect" : [0, 0, 360, 456],
+      "lastMod" : "20170216T025610",
+      "sourceTracks" : [
+        {
+          "range" : [0, 187],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 360, 456],
+          "sampleRate" : 30,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 02-16-17 5.trec;"
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 02-16-17 7.trec",
+      "rect" : [0, 0, 360, 456],
+      "lastMod" : "20170216T025745",
+      "sourceTracks" : [
+        {
+          "range" : [0, 390],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 360, 456],
+          "sampleRate" : 30,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 02-16-17 7.trec;"
+        }
+      ]
+    },
+    {
+      "id" : 4,
+      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 02-16-17 8.trec",
+      "rect" : [0, 0, 360, 456],
+      "lastMod" : "20170216T025911",
+      "sourceTracks" : [
+        {
+          "range" : [0, 401],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 360, 456],
+          "sampleRate" : 30,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 02-16-17 8.trec;"
+        }
+      ]
+    },
+    {
+      "id" : 5,
+      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 02-16-17 9.trec",
+      "rect" : [0, 0, 360, 456],
+      "lastMod" : "20170216T035323",
+      "sourceTracks" : [
+        {
+          "range" : [0, 185],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 360, 456],
+          "sampleRate" : 30,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 02-16-17 9.trec;"
         }
       ]
     }
   ],
   "timeline" : {
-    "id" : 2,
+    "id" : 6,
     "sceneTrack" : {
       "scenes" : [
         {
-          "duration" : 3.43333333333333,
+          "duration" : 2.3,
           "title" : "",
           "type" : "",
           "csml" : {
@@ -45,24 +117,14 @@
                 "trackIndex" : 0,
                 "medias" : [
                   {
-                    "id" : 3,
+                    "id" : 7,
                     "_type" : "ScreenVMFile",
-                    "src" : 1,
+                    "src" : 5,
                     "trackNumber" : 0,
                     "attributes" : {
-                      "ident" : "Rec 02-15-17 8"
+                      "ident" : "Rec 02-16-17 9"
                     },
                     "parameters" : {
-                      "scale0" : {
-                        "type" : "double",
-                        "defaultValue" : 0.36875,
-                        "interp" : "eioe"
-                      },
-                      "scale1" : {
-                        "type" : "double",
-                        "defaultValue" : 0.36875,
-                        "interp" : "eioe"
-                      },
                       "sourceCrop0" : {
                         "type" : "double",
                         "defaultValue" : 0.0,
@@ -122,10 +184,10 @@
                     "effects" : [
 
                     ],
-                    "start" : 73,
-                    "duration" : 30,
-                    "mediaStart" : 41,
-                    "mediaDuration" : 30,
+                    "start" : 0,
+                    "duration" : 69,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 69,
                     "scalar" : 1,
                     "metadata" : {
                       "AutoAppliedSmartFocus" : "False",
@@ -140,11 +202,6 @@
               },
               {
                 "trackIndex" : 1,
-                "medias" : [
-                ]
-              },
-              {
-                "trackIndex" : 2,
                 "medias" : [
                 ]
               }
@@ -171,21 +228,12 @@
           "IsLocked" : "False",
           "WinTrackHeight" : "56"
         }
-      },
-      {
-        "ident" : "",
-        "audioMuted" : false,
-        "videoHidden" : false,
-        "metadata" : {
-          "IsLocked" : "False",
-          "WinTrackHeight" : "56"
-        }
       }
     ],
     "captionAttributes" : {
       "enabled" : true,
       "fontName" : "Arial",
-      "fontSize" : 17,
+      "fontSize" : 13,
       "backgroundColor" : [ 0, 0, 0, 191],
       "foregroundColor" : [ 255, 255, 255, 255],
       "lang" : "en",
@@ -198,14 +246,14 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\james.duffy\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\bouncing-ball-forever798243.autosave.tscproj",
+    "AutoSaveFile" : "C:\\Users\\james.duffy\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\bouncing-ball-with-trigger4b1f53b.autosave.tscproj",
     "CanvasZoom" : 100,
-    "Date" : "2017-02-15 02:12:56 PM",
+    "Date" : "2017-02-16 11:41:58 AM",
     "IsAutoSave" : "0",
     "Language" : "ENU",
-    "ProfileName" : "",
+    "ProfileName" : "Xenko documentation videos",
     "ProjectDimensionsChanged" : "1",
-    "Title" : "bouncing-ball-forever",
+    "Title" : "bouncing-ball-with-trigger",
     "audioNarrationNotes" : "",
     "calloutStyle" : "Basic",
     "canvasDetached" : "False",
