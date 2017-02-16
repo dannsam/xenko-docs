@@ -97,7 +97,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
-8. Select the *Transparent** material we created in step 2 and click **OK**.
+8. Select the **Transparent** material we created in step 2 and click **OK**.
 
     ![Select material in Asset Picker](media/physics-tutorials-select-transparent-material.png)
 
@@ -112,6 +112,8 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 11. By default, the Alpha is set to 1. This makes the material completely opaque. To set it to 50% opacity, set the **Alpha** to 0.5.
 
     ![Select Blend](media/physics-tutorials-set-blend-alpha.png)
+
+    Now the trigger area will be visible at runtime.
 
 ## 5. Position the trigger 
 
