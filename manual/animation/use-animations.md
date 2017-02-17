@@ -73,9 +73,9 @@ namespace AdditiveAnimation
 }
 ```
 
-## Animation blend tree
+## Override the animation blend tree
 
-There is also the option to override the animation blend tree and do all animation blending in the script. The three game templates, which require more advanced techniques, are a good example of how to do this. For more information, see [custom blend trees](custom-blending-trees.md).
+You an also override the animation blend tree and do all animation blending in the script. The templates *First-person shooter*, *Third-person platformer* and *Top-down RPG*, which use some advanced techniques, are examples of how to do this. For more information, see [custom blend trees](custom-blending-trees.md).
 
 ## See also
 

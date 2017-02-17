@@ -6,12 +6,12 @@
 
 This page explains how to add an [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity, add animations to the component, and play the animations at runtime using a script.
 
-## 1. Add animations to an entity
+For information about how to import animation assets, see [Import animations](import-animations.md).
 
-To use animations, first add them to the entity in Game Studio. 
+## 1. Add animation assets to an entity
 
 >[!Note]
->[If you want to animate an entity, the entity must also have a model component.]
+>[If you want to animate an entity, the entity must have a model component.]
 
 1. In the **scene editor**, select the entity you want to animate.
 
@@ -23,20 +23,22 @@ To use animations, first add them to the entity in Game Studio.
 
     Game Studio adds an animation component to the entity.
 
-3. In the animation component properties, next to **Animations**, click the green plus button, type a name for the animation, and press Enter.
+3. In the animation component properties, next to **Animations**, click the green plus button to add a new animation to the library.
+
+4. Type a name for the animation and press Enter.
 
     ![Add animation](media/add-animation.png)
 
-    >[!Note]
-    >When you play animations from scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
+    >[!Tip]
+    >When you play animations using scripts later, you use this name, **not** the name of the animation asset. To make identification easy, we recommend you give your animation the same name as the animation asset.
     
-4. Click the hand icon (**Pick an asset up**).
+5. Click the hand icon (**Pick an asset up**).
 
     ![Pick asset up](media/pick-asset-up.png)
 
     The **Asset picker** opens.
 
-5. Browse to the animation asset you want to add and click **OK**.
+6. Browse to the animation asset you want to add and click **OK**.
 
     ![Asset picker](media/asset-picker.png)
 
@@ -44,13 +46,15 @@ To use animations, first add them to the entity in Game Studio.
 
     ![Animation asset added](media/animation-asset-added.png)
 
-You can add as many animations to the entity as you need. The property grid lists them in alphabetical order.
+You can add as many animations to the animation component as you need. The property grid lists them in alphabetical order.
 
 ![Animations list](media/animations-list.png)
 
 ## 2. Create a script to play the animations
 
-After you add animations to an entity, you need to play them with a script. For more information about scripts, see [Scripts](../scripts/index.md).
+After you add animations to an entity, you need to play them with a [script](../scripts/index.md).
+
+For the list of options you can use in animation scripts, see the [AnimationComponent API page](xref:SiliconStudio.Xenko.Animations.AnimationComponent).
 
 ### Example script
 
@@ -68,11 +72,9 @@ This script looks for an animation with the name "Walk" under the animation comp
 
 ### Use the pre-built **AnimationStart** script
 
-Xenko includes a pre-built **AnimationStart** script.
+Xenko includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation script.
 
-![Select an entity](media/animations-setup3.png)
-
-To use this script:
+To use the **AnimationStart** script:
 
 1. In the **asset view** (bottom pane by default), click **Add asset**. 
 
@@ -88,7 +90,7 @@ To use this script:
     
     3b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
 
-4. Edit the script as necessary and save it. For the list of options, see the [AnimationComponent API page](xref:SiliconStudio.Xenko.Animations.AnimationComponent).
+4. Edit the script as necessary and save it. 
 
 ## 3. Add the script to the entity
 
@@ -100,11 +102,9 @@ To use this script:
 
     ![Select an entity](media/add-animation-script-component.png)
 
-Game Studio adds the script as a component.
+Game Studio adds the script as a component. You can adjust public variables you define in the script in the **property grid** under the script component properties.
 
-You can adjust public variables you define in the script in the property grid under the script component properties.
-
-The first time the animation runs, it offers to load one or more animations, adding them to the list of playing animations on the entity.
+![Select an entity](media/animations-setup3.png)
 
 ## See also
 

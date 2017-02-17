@@ -3,9 +3,9 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-After you [import an animation](import-animations.md), you can select it in the **asset view** (in the bottom pane by default) and view its properties in the **property grid** (on the right by default).
+After you [import an animation](import-animations.md), you can select it in the **asset view** (in the bottom pane by default) and view and edit its properties in the **property grid** (on the right by default).
 
-![Select animation in asset view](media/select-animation-in-asset-view.png)
+![Assets in asset view](media/assets-in-asset-view2.png)
 
 ![Properties](media/animations-properties.png)
 
@@ -21,7 +21,7 @@ However, single animation tracks sometimes include several animations. In this c
 
 The start and end frames are still limited by the keyframes exported in the file. For example, if you originally exported frames 20 to 40 from the animation tool, the start frame cannot be lower than 20 and the end frame cannot be higher than 40.
 
-By default, Game Studio assumes the framerate is 30. You can change this in the **Game settings** asset properties under **Editor settings > Animation frame rate**.
+By default, Game Studio assumes the frame rate is 30. You can change this in the **Game settings** asset properties under **Editor settings > Animation frame rate**.
  
 ### Pivot position
 
@@ -37,7 +37,7 @@ You can choose **PlayOnce** or **LoopInfinite**. This is just a hint for the eng
  
 ### Type
 
-Xenko supports two types of animation clip. Regular animations default to **Animation clip** and are used with linear blending if mixed. For **Difference clip**, there are few more settings. For more information, see [**Additive animation**](additive-animation.md).
+Xenko supports two types of animation clip. Regular animations default to **Animation clip** and are used with linear blending if mixed. For **Difference clip**, there are few more settings. For more information, see [Additive animation](additive-animation.md).
 
 ### Skeleton
 
@@ -45,10 +45,10 @@ If you want to use your animation with a skinned mesh, it needs a skeleton. Make
 
 ### Root motion
 
-When root motion is enabled, main motion is applied to [TrasfromComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent). If disabled, it's applied inside the skeleton nodes.
+When root motion is enabled, main motion is applied to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent). If disabled, it's applied inside the skeleton nodes.
     
 >[!Note]
->If there's no skeleton, the motion is always applied to [TrasfromComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent).
+>If there's no skeleton, the motion is always applied to [TransformComponent](xref:SiliconStudio.Xenko.Engine.TransformComponent).
 
 ## See also
 

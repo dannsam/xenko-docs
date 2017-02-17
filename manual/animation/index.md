@@ -3,15 +3,10 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can animate 3D models by adding skeletons, skinned meshes, and animations.
+You animate 3D models by adding skeletons, skinned meshes, and animations.
 
-For information about 2D animation, see [Sprites](../sprites/index.md).
-
-## Animation sample
-
-For an example of how animations work in Xenko, load the **Animation** sample project.
-
-![Animations](media/animations-index1.png) 
+>[!Note]
+>For information about 2D animation, see [Sprites](../sprites/index.md).
 
 ## Animation assets
 
@@ -46,12 +41,19 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 
 **Animation clips** describe the pose of a **skeleton** at a particular moment. The skeleton moves according to the animation. The mesh vertices transform (skin) to match the current pose.
 
+## Animation samples
+
+For an example of how animations work in Xenko, load the **Animation** sample project.
+
+![Animations](media/animations-index1.png)
+
+The templates *First-person shooter*, *Third-person platformer* and *Top-down RPG* also include some advanced animation techniques.
+
 ## In this section
 
 * [Import animation assets](import-animation-assets.md)
-  * [Set up animation assets](import-animations.md)
+  * [Set up animation assets](import-animation-assets.md)
       * [Additive animation](additive-animation.md)
-      * [Procedural animation](procedural-animation.md)
-  * [Use animation assets](set-up-animations.md)
+* [Procedural animation](procedural-animation.md)
       * [Code sample](use-animations.md)
       * [Custom blend trees](custom-blending-trees.md)

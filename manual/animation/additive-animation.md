@@ -1,4 +1,5 @@
-# Additive animations
+# Additive animation
+
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
@@ -6,33 +7,36 @@
 
 ![Additive animations](media/animations-additive-sample.gif)
 
-In the example above, the leftmost animation is the walking animation. The rightmost animation is the idle animation. The two animations in the middle are walking and idle respectively, but have the reload animation added to them. Instead of creating different reload motions, we can create a single reloading animation additive clip and apply it to the walking and idle animations.
+In the example above, the leftmost animation is the *Walk* animation. 
+The rightmost animation is the *Idle* animation. The two animations in the center are the *Walk* and *Idle* animations respectively, but have the *Reload* animation added to them. 
 
-Let's say you want to create an additive animation, **ReloadAdditive**, which makes the character reload her weapon. You want to apply this animation to many different base animations, such as *Idle*, *Walk*, *Run*, *Crouch* and so on. 
+To create this example, we could have created four separate animations. Instead, we created a the *Walk* and *Idle* animations, then created a *Reload* additive clip. We added the *Reload* additive clip to the other animations to create new combinations.
 
-To do this, create a difference clip, which adds the difference between your **target** (the pose you want to display) and your **base** (the pose you start from). If you apply this difference clip to another base animation, you get animation similar to the target pose, but adjusted for the new base pose.
+Instead of creating different reload motions, we can create a single reloading animation additive clip and apply it to the walking and idle animations.
 
-In the example above, we created the difference clip by creating two animations, *Idle* and *IdleReload*, and rebasing the reload motion on the idle motion by removing the matching motions and only keeping the unique ones. The result is an animation which only contains the motion for reloading the weapon. If we apply it on top of _Idle_ we get the _IdleReload_ motion, because these two clips were used to create the difference clip. If we apply it to _Walk_ however we get a new result where the character walks and reloads her weapon at the same time. 
+Imagine we create an additive animation, *ReloadAdditive*, which makes the character reload her weapon. You want to apply this animation to many different base animations, such as *Idle*, *Walk*, *Run*, *Crouch* and so on. 
+
+To do this, we create a difference clip, which adds the difference between your **target** (the pose you want to display) and your **base** (the pose you start from). If you apply this difference clip to another animation, it creates an animation similar to the target pose, but adjusted to fit the new base pose.
+
+To create the difference clip used in the example above, we created two animations, *Idle* and *IdleReload*. Then we rebased the reload motion on the idle motion by removing the matching motions and only keeping the unique ones. The result is an animation which only contains the motion for reloading the weapon. If we apply it to *_Idle_* we get the *IdleReload* motion, because these two clips were used to create the difference clip. If we apply it to *Walk*, the character walks and reloads her weapon at the same time. 
 
 Not any base animation can be combined with any additive animation, but if the base motions are similar enough, the result is good.
 
-## Set up additive animations
-
-You can create a difference clip in the following way:
+## Add a difference clip
 
 ![Properties](media/animations-additive-animations-0.png)
 
-1. Create an **Animation** asset and add the **Source** (for example, _IdleReload_). If you play this animation out your character will stand and reload her weapon.
+1. Create an **Animation** asset and add the **Source** (for example, *IdleReload*). If you play this animation out your character will stand and reload her weapon.
 
     ![Choose source file](media/animations-additive-animations-1.png)
 
-2. In **Type** choose **Difference Clip**. Expand the settings and you will find **Reference** where you can add your base clip. The _difference clip_ will be created by referencing _against_ the base clip, effectively resulting in _difference = source - base_. In the example above our base is the _Idle_ animation.
+2. In **Type** choose **Difference Clip**. Expand the settings and you will find **Reference** where you can add your base clip. The **difference clip** will be created by referencing _against_ the base clip, effectively resulting in _difference = source - base_. In the example above our base is the *Idle* animation.
 
     ![Choose base file](media/animations-additive-animations-2.png)
 
 3. Under **Difference Clip** you can also choose **Mode**. **Animation** will play out the base animation, referencing it frame by frame. **First Frame** will create the difference clip by only referencing the first frame from the base animation as a still pose. If you only need the base pose as a reference, set this attribute to **First Frame**.
 
-4. Set up a skeleton apprppriate for both the original animations which you used and your model.
+4. Set up a skeleton appropriate for both the original animations which you used and your model.
 
     ![Choose play mode](media/animations-additive-animations-3.png)
 
@@ -40,19 +44,21 @@ You can create a difference clip in the following way:
 
     ![Choose play mode](media/animations-additive-animations-4.png)
 
-## Apply additive animations to your model
+    For more information about previewing animations, see [Preview animations](preview-animations.md).
+
+## 2. Apply additive animations to your model
 
 Now, you can use additive animation with the another motion that uses the same skeleton and skinned mesh:
 
-1. In **Asset View** right click to create a new asset and add **Scripts -> Animation Start**. AnimationStart is a Startup script which you can use to load a list of playing animations into your model. Recompile your project to apply the changes and make the script available.
+1. In the **Asset View** right click to create a new asset and add **Scripts -> Animation Start**. AnimationStart is a Startup script which you can use to load a list of playing animations into your model. Recompile your project to apply the changes and make the script available.
 
     ![Animation start](media/animations-additive-animations-animation-start.png)
 
-2. In **Scene view**, select the desired entity. 
+2. In the **Scene view**, select the desired entity. 
 
     ![Select an entity](media/animations-use-3d-animations-select-entity.png)
 
-3. In **Property grid**, click _Add animation component_ and choose **Animations**. You need animation component on your entity in order to animate it.
+3. In the **Property grid**, click _Add animation component_ and choose **Animations**. You need animation component on your entity in order to animate it.
 
     ![Add animation component](media/animations-use-3d-animations-add-animation-component.png)
 
@@ -61,10 +67,5 @@ Now, you can use additive animation with the another motion that uses the same s
     ![Animation start](media/animations-additive-animations-start2.png)
     
 ## See also
-
-* [3D animations overview page](import-animation-assets.md)
-* [Import animation assets](use-animations.md)
-* [Set up animation assets](import-animations.md)
-* [Procedural animations](procedural-animation.md)
 
 
