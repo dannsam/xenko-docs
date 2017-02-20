@@ -52,5 +52,11 @@ When root motion is enabled, main motion is applied to [TransformComponent](xref
 
 ## See also
 
-* [Import animation assets](import-animation-assets.md)
-* [Use animation assets](set-up-animations.md)
+* [Animation index](index.md)
+* [Import animations](import-animations.md)
+* [Set up animations](set-up-animations.md)
+* [Preview animations](preview-animations.md)
+* [Animation scripts](animation-scripts.md)
+* [Additive animation](additive-animation.md)
+* [Procedural animation](procedural-animation.md)
+* [Custom blend trees](custom-blend-trees.md)

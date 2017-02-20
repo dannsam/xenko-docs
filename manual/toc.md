@@ -104,6 +104,16 @@
 ## [Tutorials](graphics/tutorials/index.md)
 ### [Set up an HDR pipeline with post-effects](graphics/tutorials/set-up-an-hdr-pipeline-with-posteffects.md)
 
+# [Animation](animation/index.md)
+## [Import animations](animation/import-animations.md)
+## [Animation properties](animation/animation-properties.md)
+## [Set up animations](animation/set-up-animations.md)
+## [Preview animations](animation/preview-animations.md)
+## [Animation scripts](animation/animation-scripts.md)
+## [Additive animation](animation/additive-animation.md)
+## [Procedural animation](animation/procedural-animation.md)
+## [Custom blend trees](animation/custom-blend-trees.md)
+
 # [Particles](particles/index.md)
 ## [Create particles](particles/create-particles.md)
 ## [Emitters](particles/emitters.md)

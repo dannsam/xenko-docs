@@ -20,13 +20,11 @@ After you [import an animation](import-animations.md), you can preview it in the
     ![Pick an asset up](media/animations-import-animations-preview-animation-pick-an-asset.png)
 
     >[!Note]
-    >[Make sure the model and the animation share identical skeletons.]
+    >Make sure the model and the animation share identical skeletons.
 
 4. In the **asset view**, click the animation you want to preview. By default, the **asset preview** tab is to the right of the **asset view**.
 
     ![Asset preview tab](media/animations-import-animations-asset-preview-tab.png)
-
-    If you can't see the asset preview, make sure you've selected the **Asset preview** tab at the bottom.
 
     <p>
     <video autoplay loop class="responsive-video" poster="media\animations-import-animations-animation-preview.jpg">
@@ -34,7 +32,16 @@ After you [import an animation](import-animations.md), you can preview it in the
     </video>
     </p>
 
+    >[!Note]
+    >If you can't see the asset preview, make sure you've selected the **Asset preview** tab at the bottom.
+
 ## See also
 
+* [Animation index](index.md)
 * [Import animations](import-animations.md)
+* [Animation properties](animation-properties.md)
 * [Set up animations](set-up-animations.md)
+* [Animation scripts](animation-scripts.md)
+* [Additive animation](additive-animation.md)
+* [Procedural animation](procedural-animation.md)
+* [Custom blend trees](custom-blend-trees.md)

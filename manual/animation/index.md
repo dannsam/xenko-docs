@@ -3,18 +3,14 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You animate 3D models by adding skeletons, skinned meshes, and animations.
-
->[!Note]
->For information about 2D animation, see [Sprites](../sprites/index.md).
-
-## Animation assets
-
-For 3D animation, you need three assets:
+3D models are animated by adding three kinds of asset: 
 
 * a skeleton
 * a skinned model
 * an animation clip
+
+>[!Note]
+>For information about 2D animation, see [Sprites](../sprites/index.md).
 
 ### Skeletons
 
@@ -30,9 +26,6 @@ Skeletons don't have to resemble the skeletons of real humans or animals. You ca
 **Skinning** is the process of assigning weights to vertices and bones they depend on. Each vertex usually depends on one to four bones.
 
 **Skinned models** are models that have been skinned to match a skeleton. The **skin** describes how vertices of the mesh transform when bones move. 
-
->[!Note]
->Meshes and skeletons have to match. If you don't skin the mesh properly to the skeleton, you can't animate the model correctly.
 
 >[!NOTE]
 >In Game Studio, you can only create simple 3D models such as spheres and cubes. For information about how to do this, see [Create assets](../get-started/create-assets.md). To create more complex models, use dedicated software like 3DS Max, Maya, or Blender, then [import the model into Game Studio](import-animations.md).
@@ -51,9 +44,11 @@ The templates *First-person shooter*, *Third-person platformer* and *Top-down RP
 
 ## In this section
 
-* [Import animation assets](import-animation-assets.md)
-  * [Set up animation assets](import-animation-assets.md)
-      * [Additive animation](additive-animation.md)
+* [Import animations](import-animations.md)
+* [Animation properties](animation-properties.md)
+* [Set up animations](set-up-animations.md)
+* [Preview animations](preview-animations.md)
+* [Animation scripts](animation-scripts.md)
+* [Additive animation](additive-animation.md)
 * [Procedural animation](procedural-animation.md)
-      * [Code sample](use-animations.md)
-      * [Custom blend trees](custom-blending-trees.md)
+* [Custom blend trees](custom-blend-trees.md)

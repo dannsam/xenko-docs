@@ -4,18 +4,16 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-This page explains how to add an [AnimationComponent](xref:SiliconStudio.Xenko.Animations.AnimationComponent) to an entity, add animations to the component, and play the animations at runtime using a script.
-
-For information about how to import animation assets, see [Import animations](import-animations.md).
+After you [import animation assets](import-animations.md), you need add them to an entity and play them with a script.
 
 ## 1. Add animation assets to an entity
-
->[!Note]
->[If you want to animate an entity, the entity must have a model component.]
 
 1. In the **scene editor**, select the entity you want to animate.
 
     ![Select an entity](media/select-entity.png)
+
+    >[!Note]
+    >To animate an entity, the entity must have a model component.
 
 2. In the **property grid**, click **Add component** and choose **Animations**.
 
@@ -54,8 +52,6 @@ You can add as many animations to the animation component as you need. The prope
 
 After you add animations to an entity, you need to play them with a [script](../scripts/index.md).
 
-For the list of options you can use in animation scripts, see the [AnimationComponent API page](xref:SiliconStudio.Xenko.Animations.AnimationComponent).
-
 ### Example script
 
 ```
@@ -68,29 +64,9 @@ For the list of options you can use in animation scripts, see the [AnimationComp
     }
 ```
 
-This script looks for an animation with the name "Walk" under the animation component on the entity.
+This script looks for an animation with the name *Walk* under the animation component on the entity.
 
-### Use the pre-built **AnimationStart** script
-
-Xenko includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation script.
-
-To use the **AnimationStart** script:
-
-1. In the **asset view** (bottom pane by default), click **Add asset**. 
-
-2. Choose **Add asset > Scripts > Animation Start**.
-
-    ![Add animation script](media/add-animation-script.png)
-
-3. In the **Script wizard**, specify a name for the script, and click **OK**.
-
-    ![Script wizard](media/name-animation-script.png)
-
-    3a. If Game Studio asks if you want to save your script, click **Yes**.
-    
-    3b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
-
-4. Edit the script as necessary and save it. 
+For more information about creating animation scripts, see [animation scripts](animation-scripts.md).
 
 ## 3. Add the script to the entity
 
@@ -102,13 +78,17 @@ To use the **AnimationStart** script:
 
     ![Select an entity](media/add-animation-script-component.png)
 
-Game Studio adds the script as a component. You can adjust public variables you define in the script in the **property grid** under the script component properties.
+Game Studio adds the script as a component. You can adjust [public variables you define in the script](../scripts/public-properties-and-fields.md) in the **property grid** under the script component properties.
 
 ![Select an entity](media/animations-setup3.png)
 
 ## See also
 
-* [Use 3D animations](use-animations.md)
-* [Custom blending trees](custom-blending-trees.md)
+* [Animation index](index.md)
+* [Import animations](import-animations.md)
+* [Animation properties](animation-properties.md)
 * [Preview animations](preview-animations.md)
-* [Scripts](../scripts/index.md)
+* [Animation scripts](animation-scripts.md)
+* [Additive animation](additive-animation.md)
+* [Procedural animation](procedural-animation.md)
+* [Custom blend trees](custom-blend-trees.md)

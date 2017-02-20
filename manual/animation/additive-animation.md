@@ -3,69 +3,137 @@
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Additive animation clips**, also known as **difference clips**, let you add the same animation to different base animations.
+**Additive animation** is the process of combining animations using **difference clips** (also known as **additive animation clips**).
 
 ![Additive animations](media/animations-additive-sample.gif)
 
-In the example above, the leftmost animation is the *Walk* animation. 
-The rightmost animation is the *Idle* animation. The two animations in the center are the *Walk* and *Idle* animations respectively, but have the *Reload* animation added to them. 
+In the example above, the leftmost animation is the *Walk* animation. The rightmost animation is the *Idle* animation. The two animations in the center are the *Walk* and *Idle* animations respectively, but have the *Reload* animation added to them. 
 
-To create this example, we could have created four separate animations. Instead, we created a the *Walk* and *Idle* animations, then created a *Reload* additive clip. We added the *Reload* additive clip to the other animations to create new combinations.
+This means we only had to create three animations: *Walk*, *Idle*, and *Reload*. Additionally, we can add the *Reload* animation to other animations.
 
-Instead of creating different reload motions, we can create a single reloading animation additive clip and apply it to the walking and idle animations.
+## Difference clips
 
-Imagine we create an additive animation, *ReloadAdditive*, which makes the character reload her weapon. You want to apply this animation to many different base animations, such as *Idle*, *Walk*, *Run*, *Crouch* and so on. 
+A **difference clip** describes the difference between two animation clips: a **source** and a **reference**.
 
-To do this, we create a difference clip, which adds the difference between your **target** (the pose you want to display) and your **base** (the pose you start from). If you apply this difference clip to another animation, it creates an animation similar to the target pose, but adjusted to fit the new base pose.
+Take the *Reload* animation above, which we want to add to other animation clips. This is our **source** clip (S). Because the *Reload* animation mainly involves the arms, it will blend well with animations that don't involve the arms (such as idling and crouching). We can use one of these animations - let's say the *Idle* animation - as our **reference** clip (R).
 
-To create the difference clip used in the example above, we created two animations, *Idle* and *IdleReload*. Then we rebased the reload motion on the idle motion by removing the matching motions and only keeping the unique ones. The result is an animation which only contains the motion for reloading the weapon. If we apply it to *_Idle_* we get the *IdleReload* motion, because these two clips were used to create the difference clip. If we apply it to *Walk*, the character walks and reloads her weapon at the same time. 
+Xenko calculates the difference between the source and reference clips to create the **difference clip** (D). The difference clip encodes the difference between the source and reference clips. We can express it as D = S - R.
 
-Not any base animation can be combined with any additive animation, but if the base motions are similar enough, the result is good.
+We can use use the difference clip to blend the source and reference animations. We can also use the same difference clip to blend the source animation with **other** animations. If the animation you add it to is sufficiently similar to the original reference clip, then the animations blend effectively. For example, you could use it to add the reload animation to any animation that doesn't use the arms, such as crouching.
 
-## Add a difference clip
+>![Note]
+>Additive animations should use the same skinned mesh and skeleton. 
 
-![Properties](media/animations-additive-animations-0.png)
+## Create a difference clip
 
-1. Create an **Animation** asset and add the **Source** (for example, *IdleReload*). If you play this animation out your character will stand and reload her weapon.
+1. In the **asset view** (at the bottom by default), click **Add asset** and select **Animations > Animation**. A browser dialog opens.
+
+2. As we don't need a source for this animation, click **Cancel**.
+
+    Game Studio asks if you want to create an animation without a source file. 
+
+    ![Create animation without source file](media/create-animation-without-source-file.png)
+
+3. Click **Yes**. Game Studio adds a new empty animation asset to the asset view.
+
+4. Give the asset a name that makes it easy to identify. For example, if you want to make a reload animation that can be used with other animations, you could name the asset *ReloadAdditive*.
+
+5. In the ***asset view** (bottom pane by default), select the animation asset you created.
+
+6. In the **property grid** (on the right by default), add the **Source** animation clip. This is the animation you want to apply to other animations.
 
     ![Choose source file](media/animations-additive-animations-1.png)
 
-2. In **Type** choose **Difference Clip**. Expand the settings and you will find **Reference** where you can add your base clip. The **difference clip** will be created by referencing _against_ the base clip, effectively resulting in _difference = source - base_. In the example above our base is the *Idle* animation.
+     >[!Note]
+     >Make sure you add the file that contains the animation itself (eg a model file such as .fbx), **not** the animation asset that references it. Animation files are usually saved in the **Resources** folder.
 
-    ![Choose base file](media/animations-additive-animations-2.png)
+7. Under **Type**, choose **Difference Clip**.
 
-3. Under **Difference Clip** you can also choose **Mode**. **Animation** will play out the base animation, referencing it frame by frame. **First Frame** will create the difference clip by only referencing the first frame from the base animation as a still pose. If you only need the base pose as a reference, set this attribute to **First Frame**.
+8. Under **Reference**, specify the animation you want to use as your **reference clip**. This is the animation Xenko references to create a difference clip.
 
-4. Set up a skeleton appropriate for both the original animations which you used and your model.
+    ![Choose reference file](media/animations-additive-animations-2.png)
 
-    ![Choose play mode](media/animations-additive-animations-3.png)
+9. Choose the **Mode** from the drop-down menu.
 
-5. If you want to preview the animation clip in the editor, set Preview model suitable for the animation.
+    * **Animation** creates a difference clip from the entire source animation, referencing it frame by frame.
+    * **FirstFrame** creates a difference clip from only the first frame of the source animation, as a still pose.
+
+10. Next to **Skeleton**, specify a skeleton for the difference clip.
+
+    ![Choose skeleton](media/animations-additive-animations-3.png)
+
+    This should be a skeleton that works for all the animations you want to blend with the difference clip. In most cases, you should use the same skeleton you used for the source and reference animations.
+
+11. If you want to [Preview the animation](preview-animations.md) in the asset preview,
+specify a **Preview model** suitable for the animation.
 
     ![Choose play mode](media/animations-additive-animations-4.png)
 
-    For more information about previewing animations, see [Preview animations](preview-animations.md).
+    >[!Note]
+    >The asset preview shows only the source animation you specify in the difference clip.
 
-## 2. Apply additive animations to your model
+## Use an additive animation
 
-Now, you can use additive animation with the another motion that uses the same skeleton and skinned mesh:
+You can use additive animations with animations that use the same skeleton and skinned mesh.
 
-1. In the **Asset View** right click to create a new asset and add **Scripts -> Animation Start**. AnimationStart is a Startup script which you can use to load a list of playing animations into your model. Recompile your project to apply the changes and make the script available.
+1. In the **asset view** (in the bottom pane by default), click **Add asset**.
+
+2. Select **Scripts > Animation Start**.
 
     ![Animation start](media/animations-additive-animations-animation-start.png)
 
-2. In the **Scene view**, select the desired entity. 
+     *AnimationStart* is a startup script you can use to load animations into your model, including additive animations. For more information, see [Animation scripts](animation-scripts.md).
+
+3. Recompile your project to apply the changes.
+
+4. In the **scene view**, select the entity you want to animate.
 
     ![Select an entity](media/animations-use-3d-animations-select-entity.png)
 
-3. In the **Property grid**, click _Add animation component_ and choose **Animations**. You need animation component on your entity in order to animate it.
+    >[!Note]
+    >To animate an entity, the entity must have a model component.
+
+5. In the **property grid** (on the right by default), click **Add component** and choose **Animations**.
 
     ![Add animation component](media/animations-use-3d-animations-add-animation-component.png)
 
-4. Still on the selected entity, add another new component and choose the newly added script _Animation Start_. You will notice there is a list of animations which will be loaded into your entity. Add at least two since additive animations can't be played alone. Select the default animation for your character with **Linear Blend** and then add a second animation with **Add** for blending animation. For the clip of the second animation choose the difference clip you created earlier.
+    Game Studio adds an animation component to the entity.
+
+6. Click **Add component** and choose the **Animation Start** script.
+
+    ![Add animation start script](media/add-animation-start-script.png)
+
+    The script lets you customize a list of animations to be loaded into your entity.
+
+7. In the **Animation Start** properties, next to **Animations**, click the green plus icon to add an animation to the list.
+
+    ![Add animation to the list](media/add-animation-to-list.png)
+
+8. Next to **Clip**, specify the **source** animation you set in the difference clip.
+
+    ![Specify source](media/specify-clip-1.png)
+
+9. Next to **Add to Animations**, click the green plus icon to add another animation to the list.
+
+10. Expand the animation properties. Next to **Clip**, specify the **reference** animation you set in the difference clip.
+
+    ![Specify source](media/specify-clip-2.png)
+
+11. Under **Blend Operation**, select **Additive**.
+
+    ![Specify source](media/type-additive.png)
+
+12. Repeat the steps to add as many animations as you need.
 
     ![Animation start](media/animations-additive-animations-start2.png)
-    
+
 ## See also
 
-
+* [Animation index](index.md)
+* [Import animations](import-animations.md)
+* [Animation properties](animation-properties.md)
+* [Set up animations](set-up-animations.md)
+* [Preview animations](preview-animations.md)
+* [Animation scripts](animation-scripts.md)
+* [Procedural animation](procedural-animation.md)
+* [Custom blend trees](custom-blend-trees.md)

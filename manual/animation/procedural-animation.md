@@ -65,6 +65,11 @@ public class AnimationScript : StartupScript
 
 ## See also
 
-* [Use 3D animations](use-animations.md)
+* [Animation index](index.md)
+* [Import animations](import-animations.md)
+* [Animation properties](animation-properties.md)
 * [Set up animations](set-up-animations.md)
-* [Additive animations](additive-animation.md)
+* [Preview animations](preview-animations.md)
+* [Animation scripts](animation-scripts.md)
+* [Additive animation](additive-animation.md)
+* [Custom blend trees](custom-blend-trees.md)

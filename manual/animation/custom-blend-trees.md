@@ -99,5 +99,11 @@ public class AnimationBlendTree : SyncScript, IBlendTreeBuilder
 
 ## See also
 
-* [Use animation assets](set-up-animations.md)
-* [Code sample](use-animations.md)
+* [Animation index](index.md)
+* [Import animations](import-animations.md)
+* [Animation properties](animation-properties.md)
+* [Set up animations](set-up-animations.md)
+* [Preview animations](preview-animations.md)
+* [Animation scripts](animation-scripts.md)
+* [Additive animation](additive-animation.md)
+* [Procedural animation](procedural-animation.md)
