@@ -563,7 +563,7 @@ h5{
         right: -2px;
     }
     #sidetoc{
-        height: 100vh;
+        height: calc(100vh - 90px);
         overflow: auto;
         background-color: #f1f1f1;
     }
