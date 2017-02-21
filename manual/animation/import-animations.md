@@ -50,7 +50,7 @@ You can view and edit their properties in the **property grid** (on the right by
 
 ![Properties](media/animations-properties.png)
 
-## Use an animation assets
+## Use an animation asset
 
 To use an animation asset, add an [AnimationComponent](xref:SiliconStudio.Xenko.Engine.AnimationComponent) to an entity, then add the animation asset to the animation component. For more information, see [Set up animations](set-up-animations.md).
 
