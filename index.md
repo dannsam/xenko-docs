@@ -5,7 +5,7 @@
 </style>
 
 # Xenko documentation
-<ul class="documentation_list col-md-8 col-sm-12">
+<ul class="documentation_list col-md-8 col-sm-12 col-lg-7">
 	<li>
 		<div class="xk-documentation-image">
 			![Manual](media/xk-icon-manual.png "Manual")

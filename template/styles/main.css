@@ -443,8 +443,8 @@ h5{
     display: none;
 }
 .documentation_list li .xi_arrowLink{
-    width: 40px;
-    height: 78px;
+    width: 50px;
+    height: 100px;
     float: right;
     position: relative;
     top: -28px;
@@ -452,7 +452,7 @@ h5{
     display: block;
     overflow: hidden;
     background: url(http://xenko.com/images/svg/arrow.svg) no-repeat -26px 50%;
-    background-size: 132px 200px;
+    background-size: 140px 200px;
 }
 .documentation_list li:hover .xi_arrowLink{
     background-position: 100% 50%;
@@ -543,15 +543,12 @@ h5{
 }
 .documentation_list li:first-child .xk-documentation-image img{
     max-width: 137px;
-    margin-top: 20px;
 }
 .documentation_list li:nth-child(2) .xk-documentation-image img{
     max-width: 165px;
-    margin-top: 20px;
 }
 .documentation_list li:last-child .xk-documentation-image img{
     max-width: 165px;
-    margin-top: 5px;
 }
 @media only screen and (max-width: 768px){
     .documentation_list{
