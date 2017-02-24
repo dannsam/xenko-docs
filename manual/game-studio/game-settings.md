@@ -79,11 +79,12 @@ The editor settings control how Game Studio displays things. These settings have
 
 ![Physics settings](media/physics-settings.png)
 
-| Property        | Description |
-|-----------------|-------------|
-| Flags           |             |
-| Max Sub Steps   |             |
-| Fixed Time Step |             |
+| Property        | Description                                                                                                                                                                                                                                                                                  |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Flags           | **CollisionsOnly** disables physics except for collisions. For example, if this is enabled, objects aren't moved by gravity. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities.  Note: other flags listed here currently don't work. |
+| Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.                                                                                                                                                                                      |
+| Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second).                                                                                                                                                                                                                                       |       |
+
 
 ### Overrides
 
@@ -139,3 +140,7 @@ After you add a platform filter, you can select it as a **specific filter** unde
 
 >[!Note]
 >If the new filter isn't listed, remove the override and re-add it.
+
+## See also
+
+* [Assets](../get-started/assets.md)
