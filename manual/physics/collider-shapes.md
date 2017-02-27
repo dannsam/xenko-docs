@@ -3,11 +3,15 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-For [colliders](colliders.md) to interact, you need to select an entity and set its shape in the **Property grid**. The shape can be different from the entity's other components (such as its model). Components can have multiple intersecting shapes. Each shape has additional properties including size, orientation, offset, and so on.
+For [colliders](colliders.md) to interact, you need to select an entity and set its shape in the **Property grid**. You can specify a geometric shape, or use a collider shape asset.
 
-You can specify a geometric shape, or generate a shape based on a model you select.
+![Select a collider shape](media/select-collider-shape.png)
 
-## Box
+Components can have multiple intersecting shapes, and don't have to match the entity model, if it has one. Each shape has additional properties including size, orientation, offset, and so on.
+
+## Types of collider shape
+
+### Box
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -16,7 +20,7 @@ You can specify a geometric shape, or generate a shape based on a model you sele
 | Local offset     | The box position relative its entity.|
 | Local rotation      | The box rotation in XYZ values.|
 
-## Capsule
+### Capsule
 
 The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
 
@@ -29,7 +33,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Local offset     | The capsule position relative to its entity.|
 | Local rotation      | The capsule rotation in XYZ values.|
 
-## Cone
+### Cone
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -39,7 +43,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Local offset     | The cone position relative to its entity.|
 | Local rotation      | The cone rotation in XYZ values.|
 
-## Cylinder
+### Cylinder
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -49,7 +53,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Local offset     | The cylinder position relative to its entity.|
 | Local rotation      | The cylinder  rotation in XYZ values.|
 
-## Sphere
+### Sphere
 
 | Property       | Description |
 | -------------- |-------------| 
@@ -57,7 +61,7 @@ The capsule shape is especially useful for character components, as its curved b
 | Radius | The radius of the sphere.|
 | Local offset     | The sphere position relative to its entity.|
 
-## Infinite plane
+### Infinite plane
 
 The infinite plane covers an infinite distance across one dimension.
 Think of it like a wall or floor stretching into the distance for ever.
@@ -68,34 +72,56 @@ You can use several infinite planes together to box users in and stop them "tunn
 | Normal  | Which vector (X, Y, or Z) is perpendicular to the plane. For example, to make an infinite floor, set the normal property to: _X:0, Y:1, Z:0_. |
 | Offset     | The plane position relative to its entity.|
 
-## Asset
+### Asset
 
-This generates a collider shape from a model asset.
+Assigns a collider shape from a collider shape asset (see **Collider shape assets** below).
 
 | Property       | Description |
 | -------------- |-------------| 
-| Shape | The model asset used to generate the collider shape.|
+| Shape | The collider shape asset used to generate the collider shape.|
 
-## Show collider shapes at runtime
-You can make collider shapes visible at runtime, which is useful for debugging problems with physics. To do this, use:
+## Collider shape assets
 
-``
-this.GetSimulation().ColliderShapesRendering = true;
-``
+You can also create **collider shape assets** and use them as your collider shape. This means you can edit the collider shape asset and automatically update it in every entity that uses it.
 
-To show or hide collider shapes at runtime with a keyboard shortcut, use the **DebugPhysicsShapes** script.
+## Create a collider shape asset
 
-1. In the **Asset view**, click **Add asset**.
-2. Select **Scripts** > **Debug Physics Shapes**.
-3. Add the **Debug Physics Shapes** script as a component to an entity in the scene.
+1. In the **asset view** (bottom by default), click **Add asset**.
 
-The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**, so you can turn it on and off at runtime.
-You can edit the script to bind a different key combination.
+2. Select **Physics**, then select the shape you want to create.
 
-> [!Note]
-> Collider shapes for infinite planes are always invisible.
+    ![Create collider shape asset](media/create-collider-shape-asset.png)
+
+Game Studio creates the new collider shape asset in the **CollisionMeshes** folder.
+
+![Collider shape asset in asset view](media/collider-shape-in-asset-view.png)
+
+### Create a collider shape asset from a model
+
+This is useful to quickly create a collider shape that matches a model.
+
+1. In the **asset view** (bottom by default), click **Add asset**.
+
+2. Select **Physics** > **Convex hull**.
+
+    The **asset picker** opens.
+
+    ![Select model](media/select-model.png)
+
+3. Browse to the model asset you want to create a collider shape asset from and click **OK**.
+
+Game Studio creates a collider shape asset from the model.
+
+## Use a collider shape asset
+
+1. Under the **static collider** or **rigid body** properties, under **Collider Shapes**, select **Asset**. 
+
+    ![Select collider shape asset](media/select-asset-collider-shape.png)
+
+2. Drag the collider collider asset from the **Asset view** to the **Shape** field.
 
 ## See also
+
 * [Colliders](colliders.md)
 * [Tutorial: Create a bouncing ball](create-a-bouncing-ball.md)
 * [Tutorial: Script a trigger](script-a-trigger.md)
