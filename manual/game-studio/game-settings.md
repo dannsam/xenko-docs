@@ -4,11 +4,9 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-You can configure the global settings of your game in the **Game Settings** asset.
+You can configure the global settings of your game in the **Game Settings** asset. By default, this is stored in your project **Assets** folder.
 
 ## Edit Game Settings
-
-By default, the Game Settings asset is stored in your project **Assets** folder.
 
 1. In the **solution explorer** (the bottom-left pane by default), select the **Assets folder**.
 
@@ -55,10 +53,10 @@ For more information about scenes, see [Introduction to scenes](../get-started/i
 
 ### Editor settings
 
-The editor settings control how Game Studio displays things. These settings have no effect on your game at runtime.
+The editor settings control how Game Studio displays entities in the scene editor. These settings have no effect on your game at runtime.
 
 >[!Note]
->The **Color space** setting under **Rendering settings** also affects how Game Studio displays things.
+>The **Color space** setting under **Rendering settings** also affects how Game Studio displays entities in the scene editor.
 
 ![Editor settings](media/editor-settings.png)
 
@@ -81,7 +79,7 @@ The editor settings control how Game Studio displays things. These settings have
 
 | Property        | Description                                                                                                                                                                                                                                                                                  |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Flags           | **CollisionsOnly** disables physics except for collisions. For example, if this is enabled, objects aren't moved by gravity. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities.  Note: other flags listed here currently don't work. |
+| Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here aren't enabled yet, and will work in future versions. |
 | Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.                                                                                                                                                                                      |
 | Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second).                                                                                                                                                                                                                                       |       |
 
@@ -89,8 +87,6 @@ The editor settings control how Game Studio displays things. These settings have
 ### Overrides
 
 You can override settings for particular platforms, graphics APIs, and so on. For example, you can set different texture qualities for different platforms.
-
-#### Set an override
 
 1. With the **GameSettings** asset selected, in the **property grid**, under **Overrides**, click the **green plus icon**.
 
@@ -106,13 +102,13 @@ You can override settings for particular platforms, graphics APIs, and so on. Fo
 
     ![Specific filter](media/specific-filter.png)
 
-    You can add GPU platforms to this list under **Platform filters** (see below).
+    You can add GPU platforms to this list under **Platform filters** (see **Add a platform filter** below).
 
 4. In the **Configuration** drop-down menu, select the kind of setting you want to override (**Editor**, **Texture**, **Rendering** or **Physics**).
 
     ![Select graphics platform override](../platforms/media/select-override-configuration.png)
 
-5. Set the options you want to use in this override.
+5. Set the options you want to override.
 
 #### Add a platform filter
 
