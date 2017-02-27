@@ -143,6 +143,7 @@
 ## [Colliders](physics/colliders.md)
 ### [Static colliders](physics/static-colliders.md)
 ### [Rigid bodies](physics/rigid-bodies.md)
+### [Kinematic rigid bodies](physics/kinematic-rigid-bodies.md)
 ### [Characters](physics/characters.md)
 ### [Collider shapes](physics/collider-shapes.md)
 ### [Triggers](physics/triggers.md)
