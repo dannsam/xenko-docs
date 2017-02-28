@@ -12,7 +12,7 @@ To animate a model, you need to use three kinds of assets together:
 You can import these assets from 3D model files. Xenko supports the following model file types: ``.3ds``, ``.blend``, ``.dae``, ``.dxf``, ``.fbx``, ``.md2``, ``.md3``, ``.obj``, ``.x``
 
 > [!Tip]
-> If you need to import a custom file format, you can write a [custom asset](../engine/asset/create-a-custom-asset.md) compiler to support it.
+> If you need to import a custom file format, you can write a [custom asset](../engine/assets/create-a-custom-asset.md) compiler to support it.
 
 ## Import a model, skeleton, or animation from a model file
 
