@@ -37,7 +37,7 @@ To use the **AnimationStart** script:
 
 4. Edit the script as necessary and save it.
 
-## Write your own or modify the script file
+## Write your own script or modify existing one
 
 This sample code assigns a simple animation to a character based on its walking speed:
 
