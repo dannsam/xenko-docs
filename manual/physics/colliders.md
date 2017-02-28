@@ -55,5 +55,8 @@ The script binds the collider shape visibility to **Left Shift + Left Ctrl + P**
 ## See also
 
 * [Collider shapes](collider-shapes.md)
+* [Static colliders](static-colliders.md)
+* [Rigid bodies](rigid-bodies.md)
+* [Kinematic rigid bodies](kinematic-rigid-bodies.md)
 * [Simulation](simulation.md)
 * [Physics tutorials](tutorials.md)
