@@ -1,4 +1,4 @@
-# animation scripts
+# Animation scripts
 
 <span class="label label-doc-level">Intermediate</span>
 <span class="label label-doc-audience">Programmer</span>
