@@ -2,7 +2,7 @@
 
 This section explains how to use Game Studio and the Xenko API for graphics and rendering.
 
-* [Lighting and shadows](lighting-and-shadows/index.md)
+* [Lighting and shadows](lights-and-shadows/index.md)
 * [Graphics Compositor](graphics-compositor/index.md)
 * [Materials](materials/index.md)
 * [Post-effects](post-effects/index.md)

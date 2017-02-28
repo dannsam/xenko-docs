@@ -1,35 +1,33 @@
 # Directional lights
 
-A **directional light** is a light coming uniformly from one direction and is often used for simulating the sun or a light coming from a far distance.
+A **directional light** comes uniformly from one direction. This is often used for simulating distant lights such as the sun.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 
-In the studio, the directional light appears with the following icon:
+In Game Studio, directional lights are shown with the following icon:
 
 ![media/DirectionalLight.png](media/DirectionalLight.png) 
 
-Once selected, the gizmo of the directional light displays its main direction:
+When you select a directional light, the gizmo displays the light's main direction:
 
 ![media/DirectionalLightSelected.png](media/DirectionalLightSelected.png) 
 
 ## Properties
 
-Properties that defines a directional light:
+Directional lights have the following properties:
 
 ![media/DirectionalLightProperties.png](media/DirectionalLightProperties.png) 
-
- 
 
 | Property     | Description                                                                                                         |
 | ------------ | ------------------------------------------------------------------------------------------------------------------- |
 | Type         | Directional                                                                                                         |
 | Color        | The color of this directional light.                                                                                |
 |              |                                                                                                                     |
-|              | *Note Currently, the light support an RGB color but will provide also temperature colors.*                          |
+|              | *Note: Currently, the light supports an RGB color. Future versions of Xenko will also support temperature colors.*                          |
 | Shadows      | All shadows properties are detailed below                                                                           |
-| Intensity    | The intensity of this light. The color is basically multiplied by this value before sending the color to the shader |
+| Intensity    | The intensity of this light. The color is multiplied by this value before sending the color to the shader |
 |              |                                                                                                                     |
-|              | *Note: Currently, this value has no units but this will change in the future.*                                      |
+|              | *Note: Currently, this value has no units. This will change in future versions.*                                      |
 | Culling Mask | Defines which entity groups are affected by this light. By default, all groups are affected.                        |
 
 
@@ -41,12 +39,11 @@ Shadows bring significant information and realism to a scene.
 | -------------------------------------------------------- | ------------------------------------------------------------ |
 | ![media/SceneNoShadows.png](media/SceneNoShadows.png)  | ![media/SceneWithShadows.png](media/SceneWithShadows.png)  |
 
-
-In the case of a directional light, shadows effect in a scene can spawn on a large view range hence requiring a special treatment to improve their realism.
+In the case of a directional light, shadows effect in a scene can spawn on a large view range. This means they require special treatment to improve their realism.
 
 ### Cascades
 
-The technique used for directional light shadows is called cascaded shadow mapping and consist in rendering depth of occluders objects from the point-of-view of the light to a texture and then rendering the scene taking into account this occluder information.
+The technique used for directional light shadows is **cascaded shadow mapping**. This consists in rendering depth of occluders objects from the point of view of the light to a texture, then rendering the scene, taking the occluder information into account.
 
 The cascade term implies that multiple textures are used to slice the depth range from the camera point-of-view, allocating more pixels for the view space closer to the camera.
 
