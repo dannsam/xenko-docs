@@ -550,10 +550,11 @@ h5{
         z-index: 999;
         width: 280px;
         min-height: 100vh;
+        background-color: #f1f1f1;
     }
     .sidefilter + .sidetoc{
         position: static;
-        margin-top: 65px;
+        /*margin-top: 65px;*/
     }
     .ui-resizable-handle.ui-resizable-e{
         width: 2px;
@@ -563,8 +564,12 @@ h5{
         right: -2px;
     }
     #sidetoc{
-        height: calc(100vh - 90px);
+        height: calc(100vh - 166px);
+        margin-top: 66px;
         overflow: auto;
         background-color: #f1f1f1;
+    }
+    .toc .level1 > li{
+        text-align: left;
     }
 }
