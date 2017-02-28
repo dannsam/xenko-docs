@@ -17,11 +17,6 @@ With the graphics compositor you can:
 
 In the **Asset view**, click the **Graphics Compositor** asset.
 
-View and edit the graphics compositor properties in the **property grid**.
-
-> [!Note]
-> You can currently only edit the graphics compositor in the property grid. Future Xenko versions will include a dedicated editor.
-
 # Concepts
 
 The graphics compositor is a pluggable system, meaning you can write your own compositor. It's based on the following concepts:
@@ -44,7 +39,6 @@ Cameras in your scene have a *Slot* setting:
 The **enabled** cameras matching the appropriate slots are selected every frame.
 
 > [!Note]
->
 > If multiple enabled cameras in your scene are bound to the same camera slot, the result is undefined. Future version of Xenko will have a priority or a similar mechanism to avoid this.
 
 ## Render stage
