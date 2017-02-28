@@ -33,7 +33,7 @@ The scale import should be set to 1. Xenko detects the units in which your data 
 
 ### Repeat mode
 
-You can choose **PlayOnce** or **LoopInfinite**. This is just a hint for the engine. When you assign an animation asset to the model, you can specify differently. If you don't specify the mode later, Xenko uses the attribute you set here by default.
+You can choose **PlayOnce**, **LoopInfinite** or **PlayOnce&Hold**. This is just a *hint* for the engine. When you assign an animation asset to the model, you can specify differently. If you don't specify the mode later, Xenko uses the attribute you set here by default.
  
 ### Type
 
