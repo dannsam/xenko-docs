@@ -15,7 +15,27 @@ The more useful properties include:
 | [BlendTreeBuilder](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_BlendTreeBuilder) | Gets or sets animation blend tree builder. Note you can create custom blend trees; for more information, see [Custom blend tree](custom-blend-trees.md). |	
 | [PlayingAnimations](xref:SiliconStudio.Xenko.Engine.AnimationComponent#SiliconStudio_Xenko_Engine_AnimationComponent_PlayingAnimations) | Gets the list of active animations. Use it to customize your startup animations. The playing animations are updated automatically by the animation processor, so be careful when changing the list or keeping a reference to a playing animation. |
 
-Xenko also includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation scripts.
+## Use the pre-built **AnimationStart** script
+
+Xenko includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation scripts.
+
+To use the **AnimationStart** script:
+
+1. In the **asset view** (bottom pane by default), click **Add asset**.
+
+2. Choose **Add asset > Scripts > Animation Start**.
+
+    ![Add animation script](media/add-animation-script.png)
+
+3. In the **Script wizard**, specify a name for the script, and click **OK**.
+
+    ![Script wizard](media/name-animation-script.png)
+
+    3a. If Game Studio asks if you want to save your script, click **Yes**.
+    
+    3b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
+
+4. Edit the script as necessary and save it.
 
 ## Code sample
 
@@ -79,28 +99,6 @@ namespace AdditiveAnimation
 ## Override the animation blend tree
 
 You an also override the animation blend tree and do all animation blending in the script. The templates *First-person shooter*, *Third-person platformer* and *Top-down RPG*, which use some advanced techniques, are examples of how to do this. For more information, see [custom blend trees](custom-blend-trees.md).
-
-## Use the pre-built **AnimationStart** script
-
-Xenko includes a pre-built **AnimationStart** script. You can use this script as a template to write your own animation scripts.
-
-To use the **AnimationStart** script:
-
-1. In the **asset view** (bottom pane by default), click **Add asset**.
-
-2. Choose **Add asset > Scripts > Animation Start**.
-
-    ![Add animation script](media/add-animation-script.png)
-
-3. In the **Script wizard**, specify a name for the script, and click **OK**.
-
-    ![Script wizard](media/name-animation-script.png)
-
-    3a. If Game Studio asks if you want to save your script, click **Yes**.
-    
-    3b. If Game Studio asks if you want to reload the assemblies, click **Yes**.
-
-4. Edit the script as necessary and save it.
 
 ## See also
 
