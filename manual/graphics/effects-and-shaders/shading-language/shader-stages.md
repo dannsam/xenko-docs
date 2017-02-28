@@ -12,7 +12,7 @@ The function for each stage has a predefined name so you should stick with it.
 
 These are all void methods.
 
-The geometry and tessellation shaders need some kind of predefined structures as input and output. However, since our shaders are really generic, it is impossible to know beforehand what the structure will be. As a result, These shaders use `Input` and `Output` structures that will be automatically generated to fit the final shader.
+The geometry and tessellation shaders need some kind of predefined structures as input and output. However, since our shaders are very generic, it's impossible to know beforehand what the structure will be. As a result, these shaders use `Input` and `Output` structures that are automatically generated to fit the final shader.
 
 ## Vertex shader
 
@@ -100,8 +100,10 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 }
 ```
 
+`Input` and `Input2` both behave like streams. 
 
-`Input` and `Input2` both behave like streams. Don't forget to assign `output` to `streams` at the end of your stage.
+>[!Note]
+>Don't forget to assign `output` to `streams` at the end of your stage.
 
 ## Compute shader
 

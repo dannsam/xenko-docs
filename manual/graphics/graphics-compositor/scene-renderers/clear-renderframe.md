@@ -14,10 +14,10 @@ Clears a render frame.
 |               | - DepthOnly: Clears only the Depth                                                                                       |
 |               |                                                                                                                          |
 |               |                                                                                                                          |
-| Color         | A color used to clear the color texture of the render frame, only valid when **Clear Flags** property is set to `Color`. |
+| Color         | A color used to clear the color texture of the render frame. Only valid when **Clear Flags** property is set to `Color`. |
 | Depth Value   | The depth value used to clear the depth texture of the render frame.                                                     |
 | Stencil Value | The stencil value used to clear the stencil texture of the render frame                                                  |
-| Output        | See Common properties in [Scene Renderers](index.md)                                                                     |
+| Output        | See common properties in [Scene renderers](index.md)                                                                     |
 
 
  

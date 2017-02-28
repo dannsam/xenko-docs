@@ -1,8 +1,6 @@
-# Render Camera
+# Render camera
 
-Create and setup a [Render View](../rendering-pipeline/index.md#render-views) using a camera slot.
-
-It will then perform rendering using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
+Create and set up a [render view](../rendering-pipeline/index.md#render-views) using a camera slot. It render using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
 
 ![media/render-camera-1.png](media/render-camera-1.png) 
 

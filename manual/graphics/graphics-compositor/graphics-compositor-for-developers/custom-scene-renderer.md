@@ -8,7 +8,6 @@ You can use a base implementation of this interface:
 
 * @'SiliconStudio.Xenko.Rendering.SceneRendererBase': Provides a default implementation of @'SiliconStudio.Xenko.Rendering.ISceneRenderer' and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
 * @'SiliconStudio.Xenko.Rendering.SceneRendererViewportBase': Inherits from @'SiliconStudio.Xenko.Rendering.SceneRendererBase' and add the ability to configure a specific viewport 
-
  
 
 ```cs
@@ -30,7 +29,7 @@ public sealed class MyCustomRenderer : SceneRendererBase
 
 ## Use a delegate
 
-In some situations, you simply want to develop a renderer and attach it to a method directly. You can use @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer':
+In some situations, you just want to develop a renderer and attach it to a method directly. You can use @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer':
 
 ```cs
 var sceneDelegateRenderer = new SceneDelegateRenderer(

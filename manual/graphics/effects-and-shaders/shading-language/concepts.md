@@ -1,6 +1,6 @@
 # Concepts
 
-This part will introduce XKSL, a shading language extending HLSL. Its core concepts are:
+These pages introduce XKSL, a shading language extending HLSL. Its core concepts are:
 
 - [class inheritance](classes-mixins-and-inheritance.md)
 - [composition](composition.md)
