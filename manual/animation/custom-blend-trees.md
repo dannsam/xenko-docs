@@ -1,4 +1,4 @@
-# Custom-blend trees
+# Custom blend trees
 
 <span class="label label-doc-level">Advanced</span>
 <span class="label label-doc-audience">Programmer</span>
