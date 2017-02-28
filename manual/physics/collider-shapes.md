@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-For [colliders](colliders.md) to interact, you need to select an entity and set its shape in the **Property grid**. You can specify a geometric shape, or use a collider shape asset.
+For [colliders](colliders.md) to interact, you need to set their shape in the **Property grid**. You can specify a geometric shape, or use a collider shape asset.
 
 ![Select a collider shape](media/select-collider-shape.png)
 
@@ -13,6 +13,8 @@ Components can have multiple intersecting shapes, and don't have to match the en
 
 ### Box
 
+![Box](media/box.png)
+
 | Property       | Description |
 | -------------- |-------------| 
 | Is 2D | Makes the box infinitely flat in one dimension. |
@@ -21,6 +23,8 @@ Components can have multiple intersecting shapes, and don't have to match the en
 | Local rotation      | The box rotation in XYZ values.|
 
 ### Capsule
+
+![Capsule](media/capsule.png)
 
 The capsule shape is especially useful for character components, as its curved base lets the entity move to higher planes (eg when climbing staircases).
 
@@ -45,6 +49,8 @@ The capsule shape is especially useful for character components, as its curved b
 
 ### Cylinder
 
+![Cylinder](media/cylinder.png)
+
 | Property       | Description |
 | -------------- |-------------| 
 | Height | The length of the cylinder.|
@@ -55,6 +61,8 @@ The capsule shape is especially useful for character components, as its curved b
 
 ### Sphere
 
+![Sphere](media/sphere.png)
+
 | Property       | Description |
 | -------------- |-------------| 
 | Is 2D | Makes the sphere infinitely flat in one dimension. |
@@ -62,6 +70,8 @@ The capsule shape is especially useful for character components, as its curved b
 | Local offset     | The sphere position relative to its entity.|
 
 ### Infinite plane
+
+![Infinite plane](media/infinite-plane.png)
 
 The infinite plane covers an infinite distance across one dimension.
 Think of it like a wall or floor stretching into the distance for ever.
@@ -118,7 +128,11 @@ Game Studio creates a collider shape asset from the model.
 
     ![Select collider shape asset](media/select-asset-collider-shape.png)
 
-2. Drag the collider collider asset from the **Asset view** to the **Shape** field.
+2. Next to **Shape**, specify the collider shape asset you want to use.
+
+    ![Select collider shape asset](media/select-collider-shape-asset.png)
+
+    To do this, drag the asset from the **asset view** to the **Shape** field in the property grid. Alternatively, click the hand icon (**Pick asset up**) to open the **Asset picker** and browse to the asset.
 
 ## See also
 
