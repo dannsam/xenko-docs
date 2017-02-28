@@ -1,4 +1,4 @@
-# Post-Effects For Developers
+# Post-effects for developers
 
 The following diagram shows the ImageEffects interfaces and implementation classes used to develop the post-processing effects:
 

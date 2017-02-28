@@ -1,8 +1,10 @@
 # Platforms
 
+<div class="doc-incomplete"/>
+
 ![Platforms](media/game-engine-system-requirements-intro-pic.png)
 
-Xenko is cross-platform game engine. This means you can create your game once, then compile and deploy it on all the platforms Xenko supports. The engine converts C# and shaders to the different native languages and abstracts the concepts that differ between platforms, so you don't have to adapt your code for each platform.
+Xenko is cross-platform game engine. This means you can create your game once, then compile and deploy it on all the platforms Xenko supports. The engine converts C# and shaders to the different native languages, and abstracts the concepts that differ between platforms, so you don't have to adapt your code for each platform.
 
 ## Supported platforms
 
@@ -31,5 +33,8 @@ Xenko defines preprocessor variables if you want to write code that compiles onl
 
 ## In this section
 
+* [Linux](linux/index.md)
+* [UWP](uwp/index.md)
+    * [Xbox Live](uwp/xbox-live.md)
 * [Add or remove a platform](add-or-remove-a-platform.md)
 * [Change the graphics platform](change-the-graphics-platform.md)

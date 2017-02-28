@@ -49,7 +49,7 @@ The **Property Grid** shows which properties of the derived asset differ from th
 
 In this screenshot, the **Diffuse Map** property is overridden. The other properties are inherited:
 
-![Overriden properties are white](media/archetypes-overriden-properties-appear-white.png) 
+![Overridden properties are white](media/archetypes-overriden-properties-appear-white.png) 
 
 To display only properties that differ from the **archetype**, in the **Property Grid**, select **Display only overridden properties**:
 
@@ -71,5 +71,5 @@ To do this, in the **Asset View**, right-click the derived asset and select **Cl
 
 ## See also
 
-* [Introduction to assets](../get-started/assets.md)
+* [Assets](../get-started/assets.md)
 * [Prefabs](prefabs.md)

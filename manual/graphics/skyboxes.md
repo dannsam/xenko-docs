@@ -5,7 +5,7 @@
 
 **Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery.
 
-To create a skybox, Xenko encloses the scene in a cube and maps a texture, called a **cubemap**, on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lighting-and-shadows/skybox-lights.md).
+To create a skybox, Xenko encloses the scene in a cube and maps a texture, called a **cubemap**, on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lights-and-shadows/skybox-lights.md).
 
 ![Distant planet skybox](media/skybox-disassembled.png)
 
@@ -38,6 +38,7 @@ The cubemap is now available as an asset in your project. You can use the cubema
 ## Add a skybox asset to a project
 
 1. In the **Asset view**, click ![Add new asset](media/engine-skybox-add-new-asset-button.png)
+
 2. Select **Miscellaneous**, and choose **Skybox**.
 
     ![Choose asset type](media/engine-skybox-choose-asset-type.png)
@@ -48,11 +49,11 @@ The cubemap is now available as an asset in your project. You can use the cubema
     
     ![Choose texture](media/engine-skybox-select-skybox-texture.png)
 
-The skybox asset properties affect how the skybox lights the scene. For information about these properties, see [Skybox lights](lighting-and-shadows/skybox-lights.md).
+The skybox asset properties affect how the skybox lights the scene. For information about these properties, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
 ## Add a skybox component to an entity
 
-Xenko includes an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko loads the first. 
+Xenko includes an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko loads the first only.
 
 You can add [Skybox components](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need. You might want to include more than one skybox, for example, if you want to switch between them at runtime.
 
@@ -79,7 +80,7 @@ You can modify the following [Skybox component](xref:SiliconStudio.Xenko.Engine.
 
 You can set the skybox as the light type in a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
-For more information, see [Skybox lights](lighting-and-shadows/skybox-lights.md).
+For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
 ## Example code
 
@@ -102,5 +103,5 @@ public void ChangeSkyboxParameters()
 ```
 
 ## See also
-* [Skybox lights](lighting-and-shadows/skybox-lights.md)
-* [Lighting and shadows](lighting-and-shadows/index.md)
+* [Skybox lights](lights-and-shadows/skybox-lights.md)
+* [Lighting and shadows](lights-and-shadows/index.md)

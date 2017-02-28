@@ -12,7 +12,7 @@ The pattern locally modifies the luminance of the pixels affected.
 
 ![media/film-grain-2.png](media/film-grain-2.png) 
 
-# Properties
+## Properties
 
 | Property         | Description                                                                 |
 | ---------------- | --------------------------------------------------------------------------- |

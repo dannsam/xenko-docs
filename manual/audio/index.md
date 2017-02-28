@@ -1,10 +1,12 @@
 # Audio
+
 You can import sound files and use them in your games and applications. Xenko supports audio features including 3D spatialized audio, streaming, and low-latency playback.
 
 ![Audio in Xenko](media/audio-index-intro-picture.png)
 
-## Pages in this section
-* [Import audio as a sound asset](import-audio-as-a-sound-asset.md)
+## In this section
+
+* [Import audio](import-audio.md)
 * [Sound asset properties](sound-asset-properties.md)
 * [Non-spatialized audio](non-spatialized-audio.md)
 * [Spatialized audio](spatialized-audio.md)

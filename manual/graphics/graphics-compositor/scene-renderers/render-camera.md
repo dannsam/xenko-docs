@@ -6,7 +6,7 @@ It will then perform rendering using @'SiliconStudio.Xenko.Rendering.Compositing
 
 ![media/render-camera-1.png](media/render-camera-1.png) 
 
-# Properties
+## Properties
 
 | Property      | Description                                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------- |

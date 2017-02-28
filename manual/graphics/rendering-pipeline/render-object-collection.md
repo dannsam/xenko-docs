@@ -1,1 +1,0 @@
-# Render object collection

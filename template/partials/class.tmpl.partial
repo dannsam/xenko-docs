@@ -3,7 +3,7 @@
 {{^_disableContribution}}
 {{#sourceurl}}<a href="{{sourceurl}}" class="btn btn-primary pull-right mobile-hide">{{__global.viewSource}}</a>{{/sourceurl}}
 {{/_disableContribution}}
-<h1 id="{{id}}" data-uid="{{uid}}">{{>partials/title}}</h1>
+<h1 id="{{id}}" data-uid="{{uid}}" class="xk-margin-default">{{>partials/title}}</h1>
 <div class="markdown level0 summary">{{{summary}}}</div>
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
 {{#inheritance.0}}

@@ -4,7 +4,7 @@ Clears a render frame.
 
 ![media/clear-renderframe-1.png](media/clear-renderframe-1.png) 
 
-# Properties
+## Properties
 
 | Property      | Description                                                                                                              |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------ |

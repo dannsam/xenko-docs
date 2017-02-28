@@ -1,7 +1,5 @@
 # Shader stages
 
-# Stages overview
-
 The function for each stage has a predefined name so you should stick with it.
 
 - `HSMain` for hull shader
@@ -16,11 +14,11 @@ These are all void methods.
 
 The geometry and tessellation shaders need some kind of predefined structures as input and output. However, since our shaders are really generic, it is impossible to know beforehand what the structure will be. As a result, These shaders use `Input` and `Output` structures that will be automatically generated to fit the final shader.
 
-# Vertex shader
+## Vertex shader
 
 A vertex shader has to set the variable with the semantic `SV_Position`. In `ShaderBase`, it is `ShadingPosition`.
 
-**Code:** Example of vertex shader
+Example of vertex shader:
 
 ```cs
 override stage void VSMain()
@@ -31,12 +29,11 @@ override stage void VSMain()
 }
 ```
 
-
-# Pixel shader
+## Pixel shader
 
 A pixel shader has to set the variable with the semantic `SV_Target`. In `ShaderBase`, it is `ColorTarget`.
 
-**Code:** Example of pixel shader
+Example of a pixel shader:
 
 ```cs
 override stage void PSMain()
@@ -47,10 +44,9 @@ override stage void PSMain()
 }
 ```
 
+## Geometry shader
 
-# Geometry shader
-
-**Code:** Example of geometry shader
+Example of geometry shader:
 
 ```cs
 [maxvertexcount(1)]
@@ -67,14 +63,13 @@ void GSMain(triangle Input input[3], inout PointStream<Output> pointStream)
 }
 ```
 
-
 `Input` can be used in the method body. It behaves like the streams object and contains the same members.
 
 `Output` is only used in the declaration of the method. You should append the streams object to your geometry shader output stream.
 
-# Tessellation shader
+## Tessellation shader
 
-**Code:** Example of tessellation shader
+Example of a tessellation shader:
 
 ```cs
 [domain("tri")]
@@ -108,9 +103,9 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 
 `Input` and `Input2` both behave like streams. Don't forget to assign `output` to `streams` at the end of your stage.
 
-# Compute shader
+## Compute shader
 
-**Code:** Example of compute shader
+Example of a compute shader:
 
 ```cs
 [numthreads(2, 3, 5)]
@@ -120,6 +115,5 @@ void CSMain()
 }
 ```
 
-
-you can inherit from the `ComputeShaderBase` class and override the `Compute` method.
+You can inherit from the `ComputeShaderBase` class and override the `Compute` method.
 

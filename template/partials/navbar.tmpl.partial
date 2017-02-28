@@ -20,7 +20,7 @@
              <ul class="x_menu">
                 <li><a href="//xenko.com/features">Features</a></li>
                 <li><a href="//xenko.com/blog">Blog</a></li>
-                <li><a href="{{_rel}}.">Documentation</a></li>
+                <li class="active"><a href="{{_rel}}.">Documentation</a></li>
                 <li><a href="//xenko.com/community">Community</a></li>
             </ul>
 
