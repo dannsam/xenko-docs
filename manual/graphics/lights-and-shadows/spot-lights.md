@@ -1,10 +1,10 @@
 # Spot lights
 
-A spot light is a light producing a cone light positioned in space oriented to a specific direction.
+A **spot light** produces a cone of light positioned in space oriented to a specific direction.
 
 ![media/SpotLightOverview.png](media/SpotLightOverview.png) 
 
-In the studio, the spot light appears with the following icon:
+Game Studio represents the spot light with the following icon:
 
 ![media/SpotLight.png](media/SpotLight.png) 
 
@@ -18,20 +18,19 @@ Properties that defines a spot light:
 
 ![media/SpotLightProperties.png](media/SpotLightProperties.png) 
 
-
 | Property            | Description                                                                                                                                                           |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Type                | Spot                                                                                                                                                                  |
 | Color               | The color of this spot light                                                                                                                                          |
 |                     |                                                                                                                                                                       |
-|                     | *Note Currently, the light support an RGB color but will provide also temperature colors.*                                                                            |
+|                     | Note: Currently, the light supports an RGB color. Future versions of Xenko will also support temperature colors.                                                                            |
 | Range               | The range distance in meters. Above the range distance, the light doesn't affect models                                                                               |
 | Angle Inner         | The inner angle of the spot cone where the light intensity influence is at one                                                                                        |
 | Angle Outer         | The outer angle of the spot cone where the light intensity influence is zero                                                                                          |
 | Shadows             | All shadows properties are detailed below                                                                                                                             |
 | Filter              | Filtering allows to produce **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering)                   |
 |                     |                                                                                                                                                                       |
-|                     | *Note: Other techniques will be added*                                                                                                                                |
+|                     | Note: More techniques will be added in future versions.                                                                                                                                |
 | Size                | The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**.                                                 |
 |                     | See [shadow map atlas size calculation](shadow-optimization.md) for details.                                                                                        |
 |                     |                                                                                                                                                                       |
@@ -41,7 +40,7 @@ Properties that defines a spot light:
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal                                                                                                               |
 | Intensity           | The intensity of this light. The color is basically multiplied by this value before sending the color to the shader                                                   |
 |                     |                                                                                                                                                                       |
-|                     | *Note: Currently, this value has no units but this will change in the future.*                                                                                        |
+|                     | Note: Currently, this value has no units. This will change in future versions.                                                                                        |
 | Culling Mask        | Defines which entity groups are affected by this light. By default, all groups are affected.                                                                          |
 
 
