@@ -9,7 +9,7 @@
 
 In the example above, the leftmost animation is the *Walk* animation. The rightmost animation is the *Idle* animation. The two animations in the center are the *Walk* and *Idle* animations respectively, but have the *Reload* animation added to them. 
 
-This means we only had to create three animations: *Walk*, *Idle*, and *Reload*. Additionally, we can add the *Reload* animation to other animations.
+This means we only had to create three animations: *Walk*, *Idle*, and *Reload*. Additionally, we can add the *Reload* animation to other suitable animations (*Crouch*, *Strafe* or *Run* for example). This helps us keep the number of animations and memory budget low.
 
 ## Difference clips
 
