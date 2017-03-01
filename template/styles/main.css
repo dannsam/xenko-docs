@@ -410,7 +410,7 @@ h5{
 .documentation_list li{
     margin-left: 0;
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     min-height: 140px;
     border-radius: 5px;
     display: -webkit-box;
@@ -478,7 +478,7 @@ h5{
 }
 .xk-custom-breadcrumb + article.content h1,
 .xk-custom-breadcrumb + article.content h2{
-    margin-top: 36px;
+    margin-top: 46px;
     margin-bottom: 10px;
     max-width: calc(100% - 5px);
 }
@@ -550,7 +550,7 @@ h5{
     min-width: 165px;
 }
 .documentation_list li:first-child .xk-documentation-image img{
-    max-width: 137px;
+    max-width: 128px;
 }
 .documentation_list li:nth-child(2) .xk-documentation-image img{
     max-width: 165px;
