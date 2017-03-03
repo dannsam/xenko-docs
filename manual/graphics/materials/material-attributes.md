@@ -356,37 +356,21 @@ These screenshots give an example of usage of occlusion maps and cavity maps:
 
 ### Transparency
 
-#### Cuttoff
-
-Renders a material when the current alpha color is above a threshold.
-
-![media/material-attributes-43.png](media/material-attributes-43.png) 
-
- 
-
-The following screenshots show the influence of the cutoff Alpha value.
-
-| Alpha = 0.01                                                             | Alpha = 0.5                                                              | Alpha = 1.0                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)  |
-
 #### Additive
 
-Additive transparency lets you render a model from a purely additive transparent material (taking into account only the specular material part) to a semi-opaque material (taking into account the diffuse and diffuse/emissive alpha).
+The additive transparency takes into account the diffuse and diffuse/emissive alpha.
 
 ![media/material-attributes-47.png](media/material-attributes-47.png) 
 
-The Alpha property has a particular meaning:
-
-- If Alpha <= 0.5, the material is rendered in additive mode without the diffuse component (only specular highlights)
+- If the **Alpha** property is less than 0.5, only the specular highlights are visible. The material itself is completely invisible.
   
-  | Transparency Alpha = 0.25                                                | Alpha = 0.5                                                              |
+  | Alpha = 0.25                                                | Alpha = 0.5                                                              |
   | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
   | ![media/material-attributes-48.png](media/material-attributes-48.png)  | ![media/material-attributes-49.png](media/material-attributes-49.png)  |
   |                                                                          |                                                                          |
   | We only see the specular highlight in additive mode                      | Transparency is fully additive. Specular highlights at maximum           |
 
-- If Alpha <= 1.0, the material is rendered in semi-opaque mode with the diffuse/emissive component. If the diffuse component has an alpha, it will be displayed as transparent
+- If the **Alpha** <= 1.0, the material is semi-opaque with the diffuse/emissive component. If the diffuse component has an alpha, it's transparent.
   
   | Alpha = 0.75                                                             | Alpha = 1.0                                                              |
   | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -402,8 +386,19 @@ The Alpha property has a particular meaning:
 |          | - Alpha <= 1.0, the material is rendered in semi-opaque mode with the diffuse/emissive component. If the diffuse component has an alpha, it will be displayed as transparent |
 |          |                                                                                                                                                                              |
 |          |                                                                                                                                                                              |
-| Tint     | Apply a color tint to the transparency layer                                                                                                                                 |
+| Tint     | Apply a color tint to the transparency layer   
 
+#### Cuttoff
+
+Renders a material when the current alpha color is above the threshold you specify with the **Alpha** slider.
+
+![media/material-attributes-43.png](media/material-attributes-43.png) 
+
+The following screenshots show the influence of the cutoff Alpha value.
+
+| Alpha = 0.01                                                             | Alpha = 0.5                                                              | Alpha = 1.0                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)  |                                                                                                                              |
 
 ## See also
 
