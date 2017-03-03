@@ -4,7 +4,21 @@
 
 Players don't need special hardware to use HRTF. However, the effect works much better with headphones than speakers.
 
+This video demonstrates the effect of HRTF audio:
+
+<p>
+<video class="embed-responsive-item" poster="media/hrtf-first-frame.jpg" controls>
+   <source src="media/hrtf.mp4" type="video/mp4">
+</video>
+</p>
+
 ## Enable HRTF
+
+To use HRTF, first enable it globally in the **Game Settings** asset.
+
+
+
+1. 
 
 1. Select the entity with the audio emitter that contains the sound you want to enable for HRTF.
 
