@@ -43,7 +43,7 @@ For more information about the Game Settings asset, see [Game settings](../game-
     Sounds emitted from this entity will use HRTF.
 
     >[!Note]
-    >The HRTF option applies to every sound emitted from the entity.
+    >The HRTF option applies to every sound emitted from this audio emitter.
     
 For more information about audio emitters, including the properties you can change, see [Audio emitters](audio-emitters.md).
 
