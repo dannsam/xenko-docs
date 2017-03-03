@@ -14,50 +14,22 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 03-03-17 4.trec",
+      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 03-03-17 6.trec",
       "rect" : [0, 0, 1280, 720],
-      "lastMod" : "20170303T075823",
+      "lastMod" : "20170303T092604",
       "sourceTracks" : [
         {
-          "range" : [0, 196],
+          "range" : [0, 841],
           "type" : 0,
           "editRate" : 30,
           "trackRect" : [0, 0, 1280, 720],
           "sampleRate" : 30,
           "bitDepth" : 0,
           "numChannels" : 0,
-          "metaData" : "Rec 03-03-17 4.trec;"
+          "metaData" : "Rec 03-03-17 6.trec;"
         },
         {
-          "range" : [0, 288768],
-          "type" : 2,
-          "editRate" : 44100,
-          "trackRect" : [0, 0, 0, 0],
-          "sampleRate" : 44100,
-          "bitDepth" : 16,
-          "numChannels" : 2,
-          "metaData" : ""
-        }
-      ]
-    },
-    {
-      "id" : 2,
-      "src" : "C:\\Users\\james.duffy\\Documents\\Camtasia Studio\\Rec 03-03-17 5.trec",
-      "rect" : [0, 0, 1280, 720],
-      "lastMod" : "20170303T075942",
-      "sourceTracks" : [
-        {
-          "range" : [0, 1194],
-          "type" : 0,
-          "editRate" : 30,
-          "trackRect" : [0, 0, 1280, 720],
-          "sampleRate" : 29,
-          "bitDepth" : 0,
-          "numChannels" : 0,
-          "metaData" : "Rec 03-03-17 5.trec;"
-        },
-        {
-          "range" : [0, 1752064],
+          "range" : [0, 1232896],
           "type" : 2,
           "editRate" : 44100,
           "trackRect" : [0, 0, 0, 0],
@@ -70,11 +42,11 @@
     }
   ],
   "timeline" : {
-    "id" : 3,
+    "id" : 2,
     "sceneTrack" : {
       "scenes" : [
         {
-          "duration" : 35.3333333333333,
+          "duration" : 23.0,
           "title" : "",
           "type" : "",
           "csml" : {
@@ -83,16 +55,16 @@
                 "trackIndex" : 0,
                 "medias" : [
                   {
-                    "id" : 4,
+                    "id" : 3,
                     "_type" : "UnifiedMedia",
                     "video" : 
                         {
-                          "id" : 5,
+                          "id" : 4,
                           "_type" : "ScreenVMFile",
-                          "src" : 2,
+                          "src" : 1,
                           "trackNumber" : 0,
                           "attributes" : {
-                            "ident" : "Rec 03-03-17 5"
+                            "ident" : "Rec 03-03-17 6"
                           },
                           "parameters" : {
                             "sourceCrop0" : {
@@ -155,9 +127,9 @@
 
                           ],
                           "start" : 0,
-                          "duration" : 1060,
-                          "mediaStart" : 110,
-                          "mediaDuration" : 1060,
+                          "duration" : 690,
+                          "mediaStart" : 148,
+                          "mediaDuration" : 690,
                           "scalar" : 1,
                           "animationTracks" : {
 
@@ -165,9 +137,9 @@
                         },
                     "audio" : 
                         {
-                          "id" : 6,
+                          "id" : 5,
                           "_type" : "AMFile",
-                          "src" : 2,
+                          "src" : 1,
                           "trackNumber" : 1,
                           "attributes" : {
                             "ident" : "",
@@ -181,9 +153,9 @@
 
                           ],
                           "start" : 0,
-                          "duration" : 1060,
-                          "mediaStart" : 110,
-                          "mediaDuration" : 1060,
+                          "duration" : 690,
+                          "mediaStart" : 148,
+                          "mediaDuration" : 690,
                           "scalar" : 1,
                           "animationTracks" : {
 
@@ -191,9 +163,9 @@
                         }
 ,
                     "start" : 0,
-                    "duration" : 1060,
+                    "duration" : 690,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1191,
+                    "mediaDuration" : 838,
                     "scalar" : 1,
                     "metadata" : {
                       "AutoAppliedSmartFocus" : "False",
@@ -250,14 +222,15 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\james.duffy\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\Untitled Project136f028.autosave.tscproj",
+    "AutoSaveFile" : "",
     "CanvasZoom" : 85,
     "Date" : "2017-03-03 04:49:05 PM",
     "Fit" : 0,
     "IsAutoSave" : "0",
     "Language" : "ENU",
-    "ProfileName" : "",
+    "ProfileName" : "Xenko documentation videos",
     "ProjectDimensionsChanged" : "1",
+    "Title" : "hrtf",
     "audioNarrationNotes" : "",
     "calloutStyle" : "Basic",
     "canvasDetached" : "False",
