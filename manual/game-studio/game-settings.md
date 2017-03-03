@@ -50,7 +50,6 @@ For more information about scenes, see [Introduction to scenes](../get-started/i
 | Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.                                           |
 | Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).                                                                                    |
 | Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.                                                                                                   |
-
 ### Editor settings
 
 The editor settings control how Game Studio displays entities in the scene editor. These settings have no effect on your game at runtime.
@@ -82,6 +81,14 @@ The editor settings control how Game Studio displays entities in the scene edito
 | Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here aren't enabled yet, and will work in future versions. |
 | Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.                                                                                                                                                                                      |
 | Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second).                                                                                                                                                                                                                                       |       |
+
+### Audio
+
+![Audio settings](media/audio-settings.png)
+
+| Property     | Description                                              |
+|--------------|----------------------------------------------------------|
+| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](hrtf.md). |
 
 ### Overrides
 
