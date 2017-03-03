@@ -88,7 +88,7 @@ The editor settings control how Game Studio displays entities in the scene edito
 
 | Property     | Description                                              |
 |--------------|----------------------------------------------------------|
-| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](hrtf.md). |
+| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](../audio/hrtf.md). |
 
 ### Overrides
 
