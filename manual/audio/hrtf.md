@@ -1,6 +1,6 @@
 # Head-related transfer function (HRTF) audio
 
-**Head-related transfer function (HRTF)** is an advanced way of rendering audio so that sounds appear to come from a specific point in 3D space, synthesizing binaural audio. Whereas standard [spatialized audio](spatialized-audio.md) only simulates sound coming from the left-right and front-back positions, HRTF also simulates vertical sound. For example, with HRTF, the player can hear whether a character is above or below them. This is particularly useful for [VR applications](../virtual-reality/index.md), as it increases immersion.
+**Head-related transfer function (HRTF)** is an advanced way of rendering audio so that sounds appear to come from a specific point in 3D space, synthesizing binaural audio. It provides more realistic audio than standard [spatialized audio](spatialized-audio.md). For example, with HRTF, the player can hear whether a character is above or below them. This is particularly useful for [VR applications](../virtual-reality/index.md), as it increases immersion.
 
 Players don't need special hardware to use HRTF. However, the effect works much better with headphones than speakers.
 
@@ -11,6 +11,9 @@ This video demonstrates the effect of HRTF audio:
    <source src="media/hrtf.mp4" type="video/mp4">
 </video>
 </p>
+
+>[!Note]
+>For now, you can only use HRTF on Windows 10.
 
 ## Enable HRTF
 
