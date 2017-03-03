@@ -136,6 +136,8 @@ The **far plane**, also known as the draw distance, is the opposite: the point b
 
 Game Studio renders the area between the near and far planes.
 
+![Camera position](media/camera-position.png)
+
 ## What's next?
 
 * [Launch a game](launch-a-game.md)
