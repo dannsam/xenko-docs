@@ -123,4 +123,4 @@ To remove a filter, click the X icon in the filter tag.
 
 ## What's next?
 
-* [Learn how to use assets](use-assets.md)
+* [Use assets](use-assets.md)
