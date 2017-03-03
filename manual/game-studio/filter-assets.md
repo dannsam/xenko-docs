@@ -29,4 +29,3 @@ To toggle a filter on and off without removing it, click it. Disabled filters ha
 ## Remove a filter
 
 To remove a filter, click the X icon in the filter tag.
-
