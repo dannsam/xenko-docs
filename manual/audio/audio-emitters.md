@@ -81,10 +81,10 @@ Now we need to create a script to play and configure the sound asset.
 For example:
 
 ```
-mySound2Controller.IsLooping = true;
-mySound2Controller.Pitch = 2.0f;
-mySound2Controller.Volume = 0.5f;
-mySound2Controller.Play();
+mySound1Controller.IsLooping = true;
+mySound1Controller.Pitch = 2.0f;
+mySound1Controller.Volume = 0.5f;
+mySound1Controller.Play();
 ```
 
 This sound will loop at double the original pitch and half the original volume. For more information, see the [AudioEmitterSoundController Xenko API documentation](xref:SiliconStudio.Xenko.Audio.AudioEmitterSoundController).
