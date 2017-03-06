@@ -1,6 +1,6 @@
 # Xenko for Unity® developers
 
-These pages explain the differences between Xenko and another game engine, Unity®. As Xenko and Unity® both use C#, moving to Xenko isn't difficult.
+Xenko and Unity® both use C# and share many concepts, with a few major differences.
 
 ![Xenko for Unity® developers](media/xenko-vs-unity-opening-image.png)
 
