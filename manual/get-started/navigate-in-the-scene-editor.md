@@ -126,7 +126,7 @@ You can also switch between perspective and orthographic views by clicking the *
 
 #### Field of view
 
-You can change the camera field of view (). This changes the camera frustum, and has the effect of zooming in and out of the scene. At high settings (90 and above), the field of view creates stretched "fish-eye lens" views. The default setting is 45.
+You can change the camera field of view. This changes the camera frustum, and has the effect of zooming in and out of the scene. At high settings (90 and above), the field of view creates stretched "fish-eye lens" views. The default setting is 45.
 
 #### Near and far planes
 
