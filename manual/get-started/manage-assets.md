@@ -91,7 +91,11 @@ To make an asset a root asset (always included in the build):
 
 ## Filter assets
 
-When browsing assets in the **asset view** (in the bottom by default), you can by name, tag, type, or a combination.
+When browsing assets in the **asset view** (in the bottom by default), you can filter by name, tag, type, or a combination of all three.
+
+The tag and name filters are "and" filters. For example, if you filter by *tag:level* and *name:knight*, the asset view only displays assets with the tag "level" **and** the name "kight".
+
+Type filters are "or" filters. For example, if you filter by *type:animation* and *type:texture*, the asset view displays all assets that are animations **or** textures.
 
 ### Add a filter
 
