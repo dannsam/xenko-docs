@@ -196,4 +196,6 @@
 ## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 
+# [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
+
 # [Xenko Launcher](xenko-launcher/index.md)
