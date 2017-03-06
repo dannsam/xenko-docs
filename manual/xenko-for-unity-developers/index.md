@@ -529,11 +529,9 @@ If you want your script to be a startup or asynchronous, use the corresponding s
 
 ### Reload assemblies
 
-Unlike Unity®, after you create a script, you have to reload the assemblies manually. To do this, click **Reload assemblies**.
+Unlike Unity®, after you create a script, you have to reload the assemblies manually. To do this, click **Reload assemblies** in the Game Studio toolbar.
 
-![Reload assemblies](../scripts/media/reload-assemblies.png)
-
-The Reload assemblies button flashes to indicate when there are changes to reload.
+![Reload assemblies](../platforms/media/reload-assemblies.png)
 
 ### Add scripts to entities
 
