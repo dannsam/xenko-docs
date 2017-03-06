@@ -82,13 +82,6 @@ The editor settings control how Game Studio displays entities in the scene edito
 | Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.                                                                                                                                                                                      |
 | Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second).                                                                                                                                                                                                                                       |       |
 
-### Audio
-
-![Audio settings](media/audio-settings.png)
-
-| Property     | Description                                              |
-|--------------|----------------------------------------------------------|
-| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](../audio/hrtf.md). |
 
 ### Overrides
 

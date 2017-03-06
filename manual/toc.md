@@ -138,7 +138,6 @@
 ## [Spatialized audio](audio/spatialized-audio.md)
 ### [Audio emitters](audio/audio-emitters.md)
 ### [Audio listeners](audio/audio-listeners.md)
-### [HRTF](audio/hrtf.md)
 ## [Stream audio](audio/stream-audio.md)
 ## [Global audio settings](audio/global-audio-settings.md)
 ## [Play a range within an audio file](audio/play-a-range-within-an-audio-file.md)
