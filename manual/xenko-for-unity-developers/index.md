@@ -123,13 +123,11 @@ To add a component to entity in Game Studio:
 
 ### Transform component
 
-Like GameObjects in Unity®, each entity in Xenko has a [Transform component](xref:SiliconStudio.Xenko.Engine.TransformComponent) that sets its position, rotation, and scale in the world.
-
-Even empty entity have a Transform component, because every object in the scene must have a particular position.
-You can use transformation gizmos to position an entity correctly in the world.
-Alternatively, enter _position_, _rotation_, and _scale_ parameters in the **Property grid** under Transform component.
+Like GameObjects in Unity®, each entity in Xenko has a [Transform component](xref:SiliconStudio.Xenko.Engine.TransformComponent) which sets its position, rotation, and scale in the world.
 
 ![Transform component](media/xenko-vs-unity-entity-transform-component.png)
+
+Even empty entities have a Transform component, because every entity in the scene must have a position.
 
 ## Assets
 
