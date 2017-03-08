@@ -100,8 +100,8 @@ To change the asset view options, click the eye icon in the asset view toolbar.
 
 You can:
 
-* display assets in the selected folder only, the selected folder and subfolder, 
-* sort assets by name, type order, type name, dirtiness (assets with unsaved changes), and modification date
+* display assets in the selected folder only, the selected folder and subfolder 
+* sort assets by name, type, unsaved changes, and modification date
 * switch between tile view (default) and grid view
 
 ## Filter assets
