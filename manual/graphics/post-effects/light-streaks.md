@@ -1,6 +1,6 @@
 # Light streaks
 
-Similar to the [bloom effect](bloom.md), the light streak effect uses the result of the [bright filter](bright-filter.md) to make the bright areas bleed along some direction.
+Similar to the [bloom effect](bloom.md), the **light streak** effect uses the result of the [bright filter](bright-filter.md) to make the bright areas bleed along some direction.
 
 ![media/light-streaks-1.png](media/light-streaks-1.png) 
 
