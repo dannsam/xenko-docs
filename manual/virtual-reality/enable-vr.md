@@ -1,6 +1,6 @@
 # Enable VR
 
-Xenko supports virtual reality (VR) devices including Oculus Rift and Vive.
+This page explains how to add support for the Oculus Rift and Vive devices. Other devices will be supported in Xenko soon.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
@@ -24,11 +24,11 @@ Xenko supports virtual reality (VR) devices including Oculus Rift and Vive.
 
 5. From the **Item** drop-down menu, select a VR API you want your game to support. You can add as many as you need.
 
-| API    | Description                                                                       |
-|--------|-----------------------------------------------------------------------------------|
-| Oculus | Supports Oculus Rift devices (best support for Oculus Rift)                                                      |
-| OpenVR | Supports Vive and Oculus Rift devices (best support for Vive)                                             |
-| Dummy  | Displays the game on the screen with two "eye cameras" instead of the VR device (mainly useful for development) |
+    | API    | Description                                                                          |
+    |--------|  -----------------------------------------------------------------------------------|
+    | Oculus | Supports Oculus Rift devices (best support for Oculus Rift)                                                         |
+    | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive)                                               |
+    | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development) |
 
 6. Make sure the list order is correct.
 

@@ -1,6 +1,6 @@
 # Virtual reality (VR)
 
-Xenko supports virtual reality (VR) devices including Oculus Rift and Vive.
+Xenko supports the Oculus Rift and Vive virtual reality (VR) devices. Other devices will be supported soon.
 
 ![Virtual reality](media/virtual-reality.png)
 
