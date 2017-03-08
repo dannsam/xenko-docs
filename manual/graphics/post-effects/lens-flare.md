@@ -22,7 +22,7 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
-* [color transforms](color-transforms/index.md)
+* [Color transforms](color-transforms/index.md)
 * [Depth of field](depth-of-field.md)
 * [Light streaks](light-streaks.md)
 * [Post-effects for developers](post-effects-for-developers.md)

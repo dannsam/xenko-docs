@@ -33,7 +33,7 @@ It creates star-pattern beams from the light point.
 
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
-* [color transforms](color-transforms/index.md)
+* [Color transforms](color-transforms/index.md)
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Post-effects for developers](post-effects-for-developers.md)
