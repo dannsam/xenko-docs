@@ -1,9 +1,10 @@
-# Virtual reality
+# Virtual reality (VR)
 
-<div class="doc-incomplete"/>
+Xenko supports virtual reality (VR) devices including Oculus Rift and Vive.
 
 ![Virtual reality](media/virtual-reality.png)
 
-Full virtual reality support will be added to Xenko soon. 
+## In this section
 
-* [Oculus Rift (experimental support)](oculus/index.md)
+* [Enable VR](enable-vr.md)
+* [VR sickness](vr-sickness.md)
