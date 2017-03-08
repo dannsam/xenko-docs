@@ -13,6 +13,13 @@ So the bright pass in itself is not a post-effect, but its result is used later 
 | Threshold | Influences the threshold used to determine if a color passes or fails the bright filter.                                                       |
 | Color     | Color modulator: the result of the bright filter is modulated by this color value, then affecting the color of the bloom, the light streaks... |
 |           |                                                                                                                                                |
-|           | If set to white, the color is not modified.                                                                                                    |
+|           | If set to white, the color isn't modified.                                                                                                    |
 
+## In this section
 
+* [Bloom](bloom.md)
+* [color transforms](color-transforms/index.md)
+* [Depth of field](depth-of-field.md)
+* [Lens flare](lens-flare.md)
+* [Light streaks](light-streaks.md)
+* [Post-effects for developers](post-effects-for-developers.md)
