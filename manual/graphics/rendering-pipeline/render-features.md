@@ -20,8 +20,7 @@ The extract phase copies data from game states of previously collected objects t
 
 This should be as fast as possible and avoid heavy computations since game update and scripts are blocked (heavy computations should be deferred to [Prepare](#prepare)).
 
-> ![Note]
->
+> [!Note]
 > Currently, Xenko doesn't parallelize game updates and scripts, so they won't be resumed until Prepare and Draw are finished.
 
 Example tasks:
@@ -51,7 +50,7 @@ Example tasks:
 
 A typical example of views, stages created during **Collect** phase, and Xenko uses them during the **Draw** phase:
 
-![media/render-features-draw-example.svg](media/render-features-draw-example.svg)
+![media/render-features-draw-example.png](media/render-features-draw-example.png)
 
 ## See also
 
