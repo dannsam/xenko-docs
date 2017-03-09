@@ -382,14 +382,14 @@ Collider FindGOCameraIsLookingAt()
 {
     int distance = 50;
 
-    //Create a ray cast and set it to the mouses cursor position in the game.
+    // Cast a ray and set it to the mouse cursor position in the game
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
     RaycastHit hit;
     if (Physics.Raycast(ray, out hit, distance))
     {
-        //Draw invisible ray cast/vector.
+        // Draw invisible ray cast/vector
         Debug.DrawLine(ray.origin, hit.point);
-        //Log hit area to the console.
+        // Log hit area to the console
         Debug.Log(hit.point);
         return hit.collider;
     }
@@ -442,39 +442,36 @@ Alternatively, right-click the script in the **Asset view** and click **Open ass
 
 ### Event functions (Start, Update, Execute, etc)
 
-In Unity®, you work with MonoBehaviors where you have Start(), Update(), and other methods.
+In Unity®, you work with MonoBehaviours with Start(), Update(), and other methods.
 
-In Xenko, has three types of scripts: SyncScript, AsyncScript, StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
+Instead of MonoBehaviours, Xenko has three types of scripts: SyncScript, AsyncScript, StartupScript. For more information, see [Types of script](../scripts/types-of-script.md).
 
-### Unity® MonoBehavior
+### Unity® MonoBehaviour
 
 ```cs
-public class BasicEvents : MonoBehavior {
-
+public class BasicMethods : MonoBehaviour
+{
     void Start() { }
     void OnDestroy() { }
     void Update() { }
-
 }
 ```
 
 ### Xenko SyncScript
 
 ```cs
-public class BasicEvents : SyncScript
+public class BasicMethods : SyncScript
 {
-
-    public override void Start() { }    
+    public override void Start() { }
+    public override void Cancel() { }        
     public override void Update() { }
-    //There is no event similar to Destroy() in Xenko
-
 }
 ```
 
 ### Xenko AsyncScript
 
 ```cs
-public class BasicEvents : AsyncScript
+public class BasicMethods : AsyncScript
 {
     // Declared public member fields and properties that will appear in the game studio
     public override async Task Execute()
@@ -485,19 +482,29 @@ public class BasicEvents : AsyncScript
             await Script.NextFrame();
         }
     }
+
+    public override void Cancel()
+    {
+        // Cleanup of the script
+    }     
 }
 ```
 
 ### Xenko StartupScript
 
 ```cs
-public class BasicEvents : StartupScript
+public class BasicMethods : StartupScript
 {
-    // Declared public member fields and properties that will appear in the game studio.
+    // Declared public member fields and properties that will appear in the game studio
     public override void Start()
     {
-        // Initialization of the script.
+        // Initialization of the script
     }
+
+    public override void Cancel()
+    {
+        // Cleanup of the script
+    }     
 }
 ```
 
@@ -639,8 +646,6 @@ MyGameObject.SetActive(false);
 #### Xenko
 
 ```cs
-using SiliconStudio.Xenko.Extensions;
-.......
 Entity.EnableAll(false, true);
 ```
 
