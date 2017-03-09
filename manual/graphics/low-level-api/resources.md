@@ -6,7 +6,7 @@ When [drawing vertices](draw-vertices.md) using an [effect](../effects-and-shade
 - Samplers
 - Constant buffers
 
-# Automatic resource binding
+## Automatic resource binding
 
 For convenience the engine provides the @'SiliconStudio.Xenko.Rendering.EffectInstance' class to handle the details of enumerating these resources from a loaded effect as well as binding them.
 
@@ -25,7 +25,7 @@ pipelineStateDescription.RootSignature = effectInstance.RootSignature;
 effectInstance.Apply(context.GraphicsContext);
 ```
 
-# Manual resource binding
+## Manual resource binding
 
 When more optimized code is required, e.g. in many parts of Xenko's [rendering pipeline](../rendering-pipeline/index.md), constant buffers updates and resource binding can be done manually.
 

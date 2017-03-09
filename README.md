@@ -1,11 +1,10 @@
-Xenko Documentation
+Xenko documentation
 =======
 
-Welcome to the Xenko documentation repository.  
-This repository contains all the source of the Xenko Game Engine Documentation (http://doc.xenko.com/).
+Welcome to the Xenko documentation repository. This repository contains all the source files for the Xenko documentation (http://doc.xenko.com/). Anyone is welcome to contribute! 
 
-Anyone is very much welcome to contribute to this documentation. We strongly believe in the 
-power of our community and are convinced that it can make a better documentation for all.
+Before you start, please take the time to read the [guidelines](GUIDELINES.md). 
 
-You will find the minimum information needed to start in our [Getting Started](GETTINGSTARTED.md) manual.  
-Also before starting, please take the time to read our documentation [Guidelines](GUIDELINES.md).
+You can basic information about editing the documentation in [Getting Started](GETTINGSTARTED.md).
+
+Happy editing!

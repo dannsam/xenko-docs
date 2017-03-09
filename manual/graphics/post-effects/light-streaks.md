@@ -1,4 +1,4 @@
-# Light Streaks
+# Light streaks
 
 Similar to the [bloom effect](bloom.md), the light streak effect uses the result of the [bright filter](bright-filter.md) to make the bright areas bleed along some direction.
 
@@ -8,7 +8,7 @@ It creates star-pattern beams from the light point.
 
 ![media/light-streaks-2.png](media/light-streaks-2.png) 
 
-# Properties
+## Properties
 
 | Property                  | Description                                                                                                                                                        |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -29,8 +29,11 @@ It creates star-pattern beams from the light point.
 |                           |                                                                                                                                                                    |
 |                           | *This exact effect was achieved by using 2 light streaks with a phase of 0, enabling anamorphic mode and slightly distorting horizontally the bright pass result.* |
 
+## See also
 
- 
-
- 
-
+* [Bloom](bloom.md)
+* [Bright filter](bright-filter.md)
+* [color transforms](color-transforms/index.md)
+* [Depth of field](depth-of-field.md)
+* [Lens flare](lens-flare.md)
+* [Post-effects for developers](post-effects-for-developers.md)

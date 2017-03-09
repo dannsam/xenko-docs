@@ -2,58 +2,56 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-After you install Xenko, the first window you'll see is the **Xenko launcher**.
-
-The launcher lets you **manage and run the different versions of Xenko** that have been installed on your system. 
-
-This page shows you how to use the launcher.
+With the **Xenko launcher**, you can install, manage and run different versions of Xenko.
 
 ![Xenko launcher](media/xenko-launcher-interface.png)
 
-## Install last version of Xenko
+## Install the latest version of Xenko
 
-The launcher initially prompts to install the latest version of Xenko and the Xenko 
-Visual Studio plugin. 
+If you don't have Xenko installed, the Xenko Launcher prompts you to install the latest version.
 
-> [!NOTE]
-> Using Xenko VS plugin, you can edit your shaders directly from Visual Studio. 
-> It also provides **syntax highlighting**, live **code analysis** with validation, **error-checking**, 
-> and **navigation**. It is not mandatory to install this plugin, however we recommend to install it. 
+![No version installed](media/xenko-launcher-install-last-version.png)
 
-Accept the invitation and proceed to the installation.
+If you choose to install the latest version, the Xenko Launcher asks if you want to install the Visual Studio integration. 
 
-![Install last version of Xenko](media/xenko-launcher-install-last-version.png)
+![Install Visual Studio integration](media/install-VS-plug-in-prompt.png)
 
-## Version management
+The Visual Studio integration lets you edit shaders directly from Visual Studio and provides syntax highlighting, live code analysis with validation, error-checking, and navigation. Installing the integration isn't mandatory, but we recommend it.
 
-The Xenko launcher allows you to install **multiple versions** of Xenko. Typically you would be 
-working with the latest version of Xenko, however it is possible to install an older version 
-of Xenko in order to work with an old project. This is needed by the fact that different 
-versions of Xenko might contain changes that require old projects to be upgraded.
+## Manage different versions of Xenko
 
-For bug fix versions, only the last number in the version number is changed. 
-Bug fix versions do not contain breaking changes, meaning it is safe, and highly recommended 
-to install them. Note that currently these versions cannot be reverted.
-
-To install or upgrade to a new version click the *Download & Install* button on the right 
-of the version name. Before proceeding to the installation you can also view the list of changes 
-and fixes by clicking on the *Release Notes* button on the left.
+You can install multiple versions of Xenko and launch them from the Xenko Launcher.
 
 ![Manage versions of Xenko](media/xenko-launcher-various-versions.png)
 
-## Start the Game Studio
+You might need to use an older version of Xenko to work with old projects. Newer versions of Xenko might contain changes that require old projects to be upgraded.
 
-Now that you have installed Xenko, it's time to start the Game Studio and play with it.
+For minor versions, only the last number of the version number changes (1.9.0, 1.9.1, 1.9.2, etc). Minor versions don't contain breaking changes, so they're safe to install and use with your existing projects.
 
-1. **Select the version** of Xenko that you want to use by clicking on the version name 
-in the *Switch/update version* section. 
+>[!Note]
+>You can't revert to earlier minor versions. For example, you can install both Xenko 1.9 and 1.8 side by side, but you can't revert from Xenko 1.9.2 to Xenko 1.9.1.
 
-   The version number of the selected version is updated on the Start button.
+* To see the release notes for a particular version, click the **note icon** next to the version name.
 
-2. **Launch the Game Studio** by clicking the Start button. 
+* To install a particular version, click the **Download and install** icon next to the 
+version name.
 
-![Start button of Xenko launcher](media/xenko-launcher-start-button.png)
+## Start Game Studio
 
-For more details about the Xenko launcher, see [Xenko launcher](../xenko-launcher/index.md).
+Now you've installed Xenko, it's time to start Game Studio and build a project.
 
-Now, you’re ready to create your first project in Game Studio. For information on how to create a project, see [Create a project](create-a-project.md).
+1. Under **Switch/update version**, select the version of Xenko you want to use. 
+
+   The version number is updated on the **Start** button.
+
+   ![Start button](media/xenko-launcher-start-button.png)
+
+2. Click **Start** to launch Game Studio. 
+
+## What's next?
+
+* [Create your first project in Game Studio](create-a-project.md)
+
+## See also
+
+For more details about the Xenko launcher, see the [Xenko launcher](../xenko-launcher/index.md) page.

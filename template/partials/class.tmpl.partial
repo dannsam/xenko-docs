@@ -1,10 +1,9 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 
 {{^_disableContribution}}
-{{#docurl}}<a href="{{docurl}}" class="btn btn-primary pull-right mobile-hide">{{__global.improveThisDoc}}</a>{{/docurl}}
 {{#sourceurl}}<a href="{{sourceurl}}" class="btn btn-primary pull-right mobile-hide">{{__global.viewSource}}</a>{{/sourceurl}}
 {{/_disableContribution}}
-<h1 id="{{id}}" data-uid="{{uid}}">{{>partials/title}}</h1>
+<h1 id="{{id}}" data-uid="{{uid}}" class="xk-margin-default">{{>partials/title}}</h1>
 <div class="markdown level0 summary">{{{summary}}}</div>
 <div class="markdown level0 conceptual">{{{conceptual}}}</div>
 {{#inheritance.0}}
@@ -108,11 +107,6 @@
 </table>
 {{#children}}
 {{^_disableContribution}}
-{{#docurl}}
-<span class="small pull-right mobile-hide">
-  <span class="divider">|</span>
-  <a href="{{docurl}}">{{__global.improveThisDoc}}</a>
-</span>{{/docurl}}
 {{#sourceurl}}
 <span class="small pull-right mobile-hide">
   <a href="{{sourceurl}}">{{__global.viewSource}}</a>

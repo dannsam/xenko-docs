@@ -1,30 +1,26 @@
-# Effect Language
+# Effect language
 
-# Create shaders in C&#35;
+## Create shaders in C&#35;
 
-You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. They come in three variations:
+You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. Shaders come in three variations:
 
-- @'SiliconStudio.Xenko.Shaders.ShaderClassSource': corresponding to a unique class
-- @'SiliconStudio.Xenko.Shaders.ShaderMixinSource': mix several @'SiliconStudio.Xenko.Shaders.ShaderSource', setting preprocessor values, defining compositions
-- @'SiliconStudio.Xenko.Shaders.ShaderArraySource': used for arrays of compositions
+- @'SiliconStudio.Xenko.Shaders.ShaderClassSource' correspond to a unique class
+- @'SiliconStudio.Xenko.Shaders.ShaderMixinSource' mix several @'SiliconStudio.Xenko.Shaders.ShaderSource', set preprocessor values, define compositions
+- @'SiliconStudio.Xenko.Shaders.ShaderArraySource' are used for arrays of compositions
 
-This method will produce shaders at runtime. However, many platforms do not support HLSL and do not have the ability to compile shaders at runtime. Furthermore, this approach does not benefit from the reusability of mixins. 
+This method produces shaders at runtime. However, many platforms don't support HLSL and have no ability to compile shaders at runtime. Additionally, the approach doesn't benefit from the reusability of mixins.
 
-# Xenko Effects (XKFX)
+## Xenko Effects (XKFX)
 
-Many shaders are variations or combinations of pre-existing ones. For example, some meshes cast shadows, others receive them, still others need skinning.
-To reuse code, it is desirable to select which parts to use through conditions, such as "Skinning required".
+Many shaders are variations or combinations of pre-existing shaders. For example, some meshes cast shadows, others receive them, and others need skinning. To reuse code, it's a good idea to select which parts to use through conditions (eg "Skinning required"). This is often solved by "uber shaders": monolithic shaders configured by a set of preprocessor parameters.
 
-This is often solved by "uber shaders": Monolithic shaders, which are configured by a set of preprocessor parameters.
+Xenko offers the same kind of control, keeping extensibility and reusability in mind. The simple code blocks defined by XKSL classes can be mixed together by a shader mixer. This process can use more complex logic, described in Xenko Effect (*.XKFX) files.
 
-Our goal is to achieve the same kind of control, while keeping extensibility and reusability in mind.
-Therefore, the simple code blocks defined by XKSL classes, can be mixed together by a shader mixer. This mixing process can use more complex logic, which is described in Xenko Effect (*.XKFX) files.
+### General syntax
 
-## General syntax
+A .XKFX file is a small program used to generate shader permutations. It takes a set of parameters (key and value in a collection) and produces a `ShaderMixinSource` ready to be compiled.
 
-A *.XKFX file is a small program used to generate shader permutations. It takes a set of parameters (key and value in a collection) and produce a `ShaderMixinSource` ready to be compiled.
-
-**Code:** Example of XKFX file
+An XKFX example file:
 
 ```cs
 using SiliconStudio.Xenko.Effects.Data;
@@ -66,19 +62,18 @@ namespace XenkoEffects
 }
 ```
 
-
-## Adding mixins
+### Adding mixins
 
 To add a mixin, simply use `mixin <mixin_name>`.
 
-## Using parameters
+### Using parameters
 
 The syntax is similar to C#. The following rules are added:
 
-- when you use parameter keys, don't forget to add the using `params <class_name>`. Otherwise, keys will be treated as variables.
-- no need to tell the program where to check the values behind the keys. Just use the key.
+- When you use parameter keys, add the using `params <class_name>`. If you don't, keys will be treated as variables.
+- You don't need to to tell the program where to check the values behind the keys. Just use the key.
 
-**Code:** Parameters
+#### Parameters
 
 ```cs
 using params MaterialParameters;
@@ -89,14 +84,13 @@ if (MaterialParameters.AlbedoDiffuse != null)
 }
 ```
 
+The parameters behave like any variable. You can read and write their value, compare their values, and set template parameters. Since some parameters store mixins, they can be used for composition and inheritance, too.
 
-The parameters behave like any variable. You can read and write their value, compare their values and set template parameters. Since some parameters store mixins, they can be used for composition and inheritance, too.
+### Custom parameters
 
-## Custom parameters
+You can create your own set of parameters using a structure definition syntax. Even if they're defined in the XKFX file, don't forget the `using` statement when you want to use them.
 
-You can create your own set of parameters using a structure definition syntax. Even if they are defined in the XKFX file, don't forget the `using` statement when you want to use them.
-
-**Code:** Custom parameters
+#### Custom parameters
 
 ```cs
 params MyParameters
@@ -105,12 +99,11 @@ params MyParameters
 }
 ```
 
+### Compositions
 
-## Compositions
+To add a composition, assign the composition variable to your mixin with the syntax below.
 
-To add a composition, simply assign the composition variable to your mixin. This is done with the following syntax.
-
-**Code:** Compositions
+#### Compositions
 
 ```cs
 // albedoSpecular is the name of the composition variable in the mixin
@@ -121,12 +114,11 @@ or
 mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;
 ```
 
+### Partial shaders
 
-## Partial shaders
+You can also break the code into sub-mixins to reuse elsewhere with the syntax below.
 
-It is also possible to break the code into sub mixins that can be reused elsewhere. This is done through the following syntax.
-
-**Code:** Partial shader
+#### Partial shader
 
 ```cs
 partial shader MyPartialShader
@@ -141,6 +133,4 @@ mixin MyPartialShader;
 mixin compose myComposition = MyPartialShader;
 ```
 
-
-You can now use the `MyPartialShader` mixin like any other mixin in the code.
-
+You can use the `MyPartialShader` mixin like any other mixin in the code.

@@ -154,7 +154,7 @@ The blend factor is not part of the @'SiliconStudio.Xenko.Graphics.PipelineState
 CommandList.SetBlendFactor(Color4.White);
 ```
 
-# Effects
+## Effects
 
 The pipeline state also includes the shaders that you want to use for drawing.
 To bind an @'SiliconStudio.Xenko.Graphics.Effect' to the pipeline, simply set the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.EffectBytecode'
@@ -172,7 +172,7 @@ pipelineStateDescription.EffectBytecode = effectInstance.Effect.Bytecode;
 pipelineStateDescription.RootSignature = effectInstance.RootSignature;
 ```
 
-# Input layout
+## Input layout
 
 The pipeline state describes the layout in which vertices are sent to the device through the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.InputElements' and @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.PrimitiveType' properties.
 
@@ -186,7 +186,7 @@ pipelineStateDescription.InputElements = vertexDeclaration.CreateInputElements()
 pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
 ```
 
-# Output description
+## Output description
 
 Finally, the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.Output' property of the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription' defines the number and @'SiliconStudio.Xenko.Graphics.PixelFormat' of all bound render targets.
 

@@ -2,70 +2,64 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-To add content to your game, you need first to **create assets**. This page will show you how to create assets in Game Studio.
+There are two ways to create assets:
 
-Xenko provides two main ways to create assets for your game:
- * Create assets by using the **Add Asset** button from the *Asset View* tab.
- * Create assets by **dragging and dropping resource files** (images, audio, etc.) in the *Asset view* tab
+ * Use the **Add asset** button in the **Asset View**
+ * Drag and drop **resource files** (such as image or audio files) to the **Asset view** tab
  
-## Use the 'Add asset' button
+## Use the **Add asset** button
 
- 1. In the *Asset View* tab, **click** ![](media/create-and-add-assets-add-new-asset-button.png).
- 
-	A list of assets is displayed.
+ 1. In the *Asset View*, click ![](media/create-and-add-assets-add-new-asset-button.png)
 
- 2. **Select a type** of asset you would like to create.
+ 2. Select the type of asset you want to create.
 
-	![Add asset using the 'Add Asset' button](media/asset-creation-create-new-asset-asset-view-tab.png)
+	![Select asset type](media/asset-creation-create-new-asset-asset-view-tab.png)
  	
-	A list of template appears. An asset template is an asset that is already preset for a specific use.
+	Game Studio displays a list of asset templates. These are assets configured for a specific use.
 	
- 3. **Select the template** that that is the closest to your needs. In this sample we'll create a procedural model by selecting 'Cube':
+ 3. Select the right template for your asset.
 
-    The asset is added to the 'Asset View' tab.
+    Game Studio adds the asset to the asset view:
 
-	![Procedural Model added to 'Asset View' tab](media/asset-creation-asset-view-tab-procedural-model.png)
+	![Asset added to asset view' tab](media/asset-creation-asset-view-tab-procedural-model.png)
 
 > [!Note]
-> Some Assets require a source file, such as textures. When adding these Assets, 
-> you will be **prompted** to select the required resource file in order to continue.	
+> Some assets, such as textures, require a resource file. When you add these assets, Game Studio prompts you for a resource file.
 
-## Drag-and-drop resource files
+## Drag and drop resource files
 
-You can also create Assets by **dragging and dropping resource files** directly from Windows Explorer into the *Asset View* tab.
+You can drag compatible resource files directly into Game Studio to create assets from them. Game Studio is compatible with common file formats.
 
 > [!NOTE]
-> By drag-and-dropping, you can create only create assets that takes a single resource file as input.
+> * You can't use this method to create assets that don't use resource files (eg prefabs, materials, or scenes).
 
-**To create a asset file by drag-and-dropping:**
+| Asset type                    | Compatible resource file formats                                           |
+|-------------------------------|--------------------------------------------------------------|
+| Models, animations, skeletons | .dae, .3ds, obj, .blend, .x, .md2, .md3, .dxf, .fbx          |
+| Sprites, textures, skyboxes   | .dds, .jpg, .jpeg, .png, .gif, .bmp, .tga, .psd, .tif, .tiff |
+| Audio  	                 | .wav, .mp3, .ogg, .aac, .aiff, .flac, .m4a, .wma, .mpc       |
 
-1. **Open the folder** containing the resource file in Windows Explorer. 
-   In theory if you properly copy the resource beforehand, this should always be the *Resource* folder of your game.
+To create an asset by dragging and dropping a resource file:
+
+1. (Optional) If it isn't there already, move the resource file you want to use in the **Resources** folder of your project. You don't have to do this, but it's good practice to keep resource files organized and makes projects easier to share. For more information, see [Project structure](project-structure.md).
+
+2. Drag the resource file from Explorer to the asset view:
+
+	![Drap and drop a resource file to the asset view](media/create-assets-drop-resource.png)
+
+3. Select the kind of asset you want to create:
    
-2. **Drag-and-Drop the resource** file into *Asset View* tab of the Game Studio.
-  
-   ![Drap-and-drop resource in Game Studio](media/create-assets-drop-resource.png)
-  
-   A list of asset template appears.
-   
-   ![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
+	![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
 
-3. Select the **adequate template**.
+4. Game Studio adds the asset to the asset view:
 
-   The asset is added to the 'Asset View' tab.
-   
-   ![Texture asset created](media/create-assets-drag-drop-asset-created.png)
+	![Texture asset created](media/create-assets-drag-drop-asset-created.png)
 
-> [!Note] 
-> When dragging and dropping multiple files of different types (e.g. texture and sound files), 
-> only the files that match your selection in step 3 will be added. I.e.: when adding sound and texture files, 
-> and you select the 'Sound' Asset template, only the files that are sounds will be added.
+Game Studio automatically imports all dependencies in the resource files and creates corresponding assets. For example, you can add a model or animation resource file and Game Studio handles everything else.
 
 > [!TIP]
-> The Game Studio automatically **imports all dependencies** the input resource files and create corresponding assets.
-> So you can just drag-and-drop the main resource file (model, animation, etc), and Game Studio handles everything else.
+> You can drag multiple files simultaneously. If you drop multiple files of different types at the same time, Game Studio only adds only files that match your template selection. For example, if you add an image file and a sound file, then select the Sound asset template, only the sound file is added.
 
-For the detailed list of resource that can be imported and more information about asset types and templates, see the reference.
+## What's next?
 
-Now that you’ve seen how to create assets to your game project, let's see you how to adapt the assets to your game. 
-For information on asset edition and configuration, see [Manage assets](manage-assets.md).
+* [Learn how to manage assets](manage-assets.md)

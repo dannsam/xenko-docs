@@ -1,2 +1,1 @@
-rmdir /s /q api
-deps\docfx\docfx.exe build > build.log
+@PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& './build.ps1' %*"

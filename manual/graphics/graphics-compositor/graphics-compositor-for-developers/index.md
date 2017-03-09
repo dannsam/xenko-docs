@@ -1,4 +1,4 @@
-# Graphics Compositor For Developers
+# Graphics compositor For developers
 
 The following diagram shows the Scene Graphics Compositor by Layers interfaces and implementation classes:
 
@@ -9,7 +9,7 @@ The following diagram shows the Scene Graphics Compositor by Layers interfaces a
 
 ![media/graphics-compositor-for-developers-1.png](media/graphics-compositor-for-developers-1.png) 
 
-# Renderers
+## Renderers
 
 The default renderers implementing the @'SiliconStudio.Xenko.Rendering.ISceneRenderer'
 
@@ -18,8 +18,6 @@ The default renderers implementing the @'SiliconStudio.Xenko.Rendering.ISceneRen
 - @'SiliconStudio.Xenko.Rendering.ClearRenderFrameRenderer' to clear the colors/depth of a render frame
 - @'SiliconStudio.Xenko.Rendering.SceneEffectRenderer'to apply an image effect to a render frame
 - @'SiliconStudio.Xenko.Rendering.SceneChildRenderer'to render a child scene to a render frame
-
- 
 
 ![media/graphics-compositor-for-developers-2.png](media/graphics-compositor-for-developers-2.png) 
 

@@ -9,11 +9,19 @@
 		<div id="x_menuButton"><span>OPEN / CLOSE</span></div>
 		<div id="x_head_container">
 				
+          <!--  
             <ul class="x_menu">
                 <li><a href="{{_rel}}.">Documentation</a></li>
                 <li><a href="{{_rel}}manual">Manual</a></li>
                 <li><a href="{{_rel}}api/SiliconStudio.Xenko.Engine.html">API</a></li>
                 <li><a href="{{_rel}}ReleaseNotes.html">Release Notes</a></li>
+            </ul>
+            -->
+             <ul class="x_menu">
+                <li><a href="//xenko.com/features">Features</a></li>
+                <li><a href="//xenko.com/blog">Blog</a></li>
+                <li class="active"><a href="{{_rel}}.">Documentation</a></li>
+                <li><a href="//xenko.com/community">Community</a></li>
             </ul>
 
 			<div id="x_head_subContainer">

@@ -1,1 +1,1 @@
-deps\docfx\docfx.exe > build.log
+@PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& './build.ps1' -API %*"

@@ -2,46 +2,49 @@
 
 <span class="label label-doc-level">Beginner</span>
 
-When your game is ready, you will be curious to see what it looks like. 
+This page explains how to launch your game using Game Studio or Visual Studio.
 
-This page will show you how to start your game using either the **Game studio** or **Visual Studio**.
+## Launch a game from Game Studio
 
-## Launch your game from Game Studio
+> [!Note]
+> Game Studio can't launch games for the Windows Store or UWP (Universal Windows Platform) platforms. To launch a game for those platforms, use Visual Studio (see below).
 
-  1. First **select your target platform** in the top bar of Game Studio.
+  1. In the **toolbar**, select your target platform.
 
-  ![Platform selection](media/launch-your-game-game-studio-profiles.png)
+      ![Platform selection](media/launch-your-game-game-studio-profiles.png)
 
-  2. Click ![](media/launch-your-game-play-icon.png) to run or press **F5**.
+      > [!Note]
+      > You can only select platforms you selected in the **Create a new game** dialog when you created the project. To add additional platforms to the project, see [Add or remove a platform](../platforms/add-or-remove-a-platform.md).
 
-  You can see the build status in the *Output window*. 
-  When the build has finished, your game starts on the selected platform.
+  2. To run the game, click ![Play icon](media/launch-your-game-play-icon.png) in the toolbar or press **F5**.
 
-> [!WARNING]
-> Currently it is not possible to start your Game for the **Windows Store** and **Windows 10** platforms from Game Studio.
-> For those platform proceed from Visual Studio.
+      ![Game Studio play button](media/game-studio-toolbar-build-button.png)
 
-## Launch your game from Visual Studio
+  The **Output window** shows the build progress. 
 
-1. **Open Visual Studio** by clicking on ![](media/launch-your-game-ide-icon.png) icon in the Game Studio.
+  ![Output window](media/output-window.png)
 
-2. **Identify the project** corresponding to the platform you want to run your game to.
+  When the build is complete, your game starts on the selected platform.
 
+## Launch a game from Visual Studio
+
+1. In Game Studio, in the toolbar, click ![Open in IDE](media/launch-your-game-ide-icon.png) (**Open in IDE**) to launch Visual Studio.
+
+2. In the Visual Studio toolbar, set the appropriate project as the startup project.
+         
+	![Select build profile in Visual Studio](media/launch-your-game-visual-studio-profiles.png)
+   
+   The startup project configuration is updated automatically.
+ 
    > [!TIP]
-   > You can easily identify the adequate project by looking at the final extension of the project (e.g. *.Android*, *.iOS*, etc).
-   
-3. Set the **appropriate project** as startup project.
-   
-   The startup project configuration at the top Visual Studio are updated automatically. 
-      
-	![Select build profile Visual Studio](media/launch-your-game-visual-studio-profiles.png)
-   
-4. Check that the configuration and platform properly matches what you are expected.
-  
-5. To start the game with or without debugging:
-   * Press **Ctrl + F5** to start the game without debugging
-   * Click ![](media/launch-your-game-start-button.png) or press **F5** to start the game with debugging.
+   > You can see your projects in the Solution Explorer on the right. The project filename extensions identify the platform (eg *.Android*, *.iOS*, etc).
 
-   ![Your running game](media/launch-your-game-mygame-running.png)
+3. Check that the configuration and platform properly matches what you are expected.
+  
+4. * To start the game without debugging, press **Ctrl + F5**.
    
-**Congratulation!** You finished the get started pages. Continue your learning by reading the reference and tutorial pages.
+   * To start the game with debugging, click **Start** or press **F5**.
+
+      ![Visual Studio Start button](media/visual-studio-start-button.png)
+
+     ![Game running](media/launch-your-game-mygame-running.png)
