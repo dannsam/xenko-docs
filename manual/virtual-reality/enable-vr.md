@@ -1,10 +1,10 @@
 # Enable VR
 
-This page explains how to add support for the Oculus Rift and Vive devices. Other devices will be supported in Xenko soon.
+This page explains how to add support for the Oculus Rift and Vive devices to your game. Other devices will be supported in Xenko soon.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
-    ![Graphics compositor asset](media/graphics-compositor-asset.png)
+    ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
     The Graphics Compositor editor opens.
 
