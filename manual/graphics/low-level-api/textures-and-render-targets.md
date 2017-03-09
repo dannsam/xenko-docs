@@ -102,7 +102,23 @@ CommandList.SetViewport(viewport);
 
 ## Scissor
 
-The @'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangle(SiliconStudio.Core.Mathematics.Rectangle)' and @'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangles(SiliconStudio.Core.Mathematics.Rectangle[])' methods set the scissors. Unlike the viewport, you must provide the coordinates of the location of the vertices defining the scissor instead of its size.
+The @'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangle(SiliconStudio.Core.Mathematics.Rectangle)'
+
+@'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangles(SiliconStudio.Core.Mathematics.Rectangle)' 
+
+@'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangle(SiliconStudio.Core.Mathematics.Rectangle)'
+
+[cool](xref:SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangle\(SiliconStudio.Core.Mathematics.Rectangle\))
+
+[SetGamePadVibration](xref:SiliconStudio.Xenko.Input.InputManager.SetGamePadVibration\(System.Int32,System.Single,System.Single\)).
+
+and 
+
+@'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangles(SiliconStudio.Core.Mathematics.Rectangle)' 
+
+@'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangles(SiliconStudio.Core.Mathematics.Rectangle[])' 
+
+methods set the scissors. Unlike the viewport, you need to provide the coordinates of the location of the vertices defining the scissor instead of its size.
 
 ### Code: Setting the scissor
 

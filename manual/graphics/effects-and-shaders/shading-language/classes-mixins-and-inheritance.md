@@ -196,8 +196,8 @@ class IncorrectStaticCallClassFixed : StaticClass
 
 ## See also
 
-* [Effect language](effect-language.md)
-* [Shading language](shading-language/index.md)
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
     - [Composition](composition.md)
     - [Templating](template.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)

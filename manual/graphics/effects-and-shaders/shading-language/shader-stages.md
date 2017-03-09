@@ -102,7 +102,7 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 
 `Input` and `Input2` both behave like streams.
 
->![Note]
+>[!Note]
 >Don't forget to assign `output` to `streams` at the end of your stage.
 
 ## Compute shader
@@ -121,8 +121,8 @@ You can inherit from the `ComputeShaderBase` class and override the `Compute` me
 
 ## See also
 
-* [Effect language](effect-language.md)
-* [Shading language](shading-language/index.md)
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
     - [Class inheritance](classes-mixins-and-inheritance.md)
     - [Composition](composition.md)
     - [Templating](template.md)

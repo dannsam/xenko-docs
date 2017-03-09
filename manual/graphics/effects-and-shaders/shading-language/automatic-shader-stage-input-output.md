@@ -203,8 +203,8 @@ In XKSL, adding a new attribute is as simple as adding it to the pool of streams
 
 ## See also
 
-* [Effect language](effect-language.md)
-* [Shading language](shading-language/index.md)
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
     - [Class inheritance](classes-mixins-and-inheritance.md)
     - [Composition](composition.md)
     - [Templating](template.md)

@@ -33,8 +33,8 @@ TemplateClass<1.0f, Texturing.Texture0, Texturing.Sampler0, TEXCOORD0, MyColorLi
 
 ## See also
 
-* [Effect language](effect-language.md)
-* [Shading language](shading-language/index.md)
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
     - [Class inheritance](classes-mixins-and-inheritance.md)
     - [Composition](composition.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)

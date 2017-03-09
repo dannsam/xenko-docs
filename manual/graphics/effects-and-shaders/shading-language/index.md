@@ -12,5 +12,5 @@ Xenko Shading Language is automatically transformed to an existing shading langu
 
 - [Class inheritance](classes-mixins-and-inheritance.md)
 - [Composition](composition.md)
-- [Templating](template.md)
+- [Template](template.md)
 - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)

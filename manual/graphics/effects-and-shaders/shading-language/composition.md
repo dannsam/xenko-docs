@@ -243,8 +243,8 @@ This behavior is useful when you want to repeat a simple function but with diffe
 
 ## See also
 
-* [Effect language](effect-language.md)
-* [Shading language](shading-language/index.md)
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
     - [Class inheritance](classes-mixins-and-inheritance.md)
     - [Templating](template.md)
     - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
