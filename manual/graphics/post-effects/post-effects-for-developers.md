@@ -10,9 +10,8 @@ This diagram shows the ImageEffects interfaces and implementation classes used t
 - The @'SiliconStudio.Xenko.Rendering.Images.ImageEffect' is a base implementation of the @'SiliconStudio.Xenko.Rendering.Images.IImageEffect'. We recommend you derive from this class to develop custom effects.
 
 ## See also
-
-* [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
+* [Bloom](bloom.md)
 * [Color transforms](color-transforms/index.md)
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
