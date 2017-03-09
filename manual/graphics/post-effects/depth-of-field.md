@@ -2,11 +2,9 @@
 
 **Depth of field** effects simulate the behavior of a real camera lens focusing an object. 
 
-By default, the rendering of a game engine produces a very sharp image, which can look artificial. In movies it's common to have the camera focus a specific object of the scene, leaving the background blurred and making close objects appear blurry and out of focus as well.
+By default, rendering produces a very sharp image, which can look artificial. In movies it's common to have the camera focus a specific object of the scene, leaving the background and foreground objects blurred and out of focus.
 
 ![media/realworld_dof_agave_flowers.jpg](media/realworld_dof_agave_flowers.jpg) 
-
-The "depth of field effect" is designed to produce such images.
 
 Xenko achieves the effect by creating several versions of the original image, with different intensities of blur and interpolate between them. The more layers used, the better the quality, but at some performance cost. 
 
@@ -49,7 +47,7 @@ Xenko achieves the effect by creating several versions of the original image, wi
 
 * [Bloom](bloom.md)
 * [Bright filter](bright-filter.md)
-* [color transforms](color-transforms/index.md)
+* [Color transforms](color-transforms/index.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
 * [Post-effects for developers](post-effects-for-developers.md)

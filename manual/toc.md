@@ -61,7 +61,6 @@
 ## [Effects and shaders](graphics/effects-and-shaders/index.md)
 ### [Effect language](graphics/effects-and-shaders/effect-language.md)
 ### [Shading language](graphics/effects-and-shaders/shading-language/index.md)
-#### [Concepts](graphics/effects-and-shaders/shading-language/concepts.md)
 #### [Classes, mixins and inheritance](graphics/effects-and-shaders/shading-language/classes-mixins-and-inheritance.md)
 #### [Composition](graphics/effects-and-shaders/shading-language/composition.md)
 #### [Template](graphics/effects-and-shaders/shading-language/template.md)
