@@ -80,12 +80,12 @@ CommandList.Clear(GraphicsDevice.Presenter.DepthStencilBuffer, DepthStencilClear
 ```
 
 >[!Note]
->Don't forget to clear the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' and the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame. This can result in unexpected behavior depending on the device. If you want to keep the contents of a frame, use an intermediate render target.
+>Don't forget to clear the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' and the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame. If you don't, you might get unexpected behavior depending on the device. If you want to keep the contents of a frame, use an intermediate render target.
 
 ## Viewport
 
-@'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetAndViewport(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture)' will adjust the current @'SiliconStudio.Xenko.Graphics.Viewport' to the full size of the render target.
-If you want to render only to a subset of the texture, you can set render target and viewport separately using @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTarget(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture)' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport(SiliconStudio.Xenko.Graphics.Viewport)'.
+@'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetAndViewport(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture)' adjusts the current @'SiliconStudio.Xenko.Graphics.Viewport' to the full size of the render target.
+If you only want to render to a subset of the texture, you can set the render target and viewport separately using @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTarget(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture)' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport(SiliconStudio.Xenko.Graphics.Viewport)'.
 
 You can bind multiple viewports using @'SiliconStudio.Xenko.Graphics.CommandList.SetViewports(SiliconStudio.Xenko.Graphics.Viewport[])' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewports(System.Int32,SiliconStudio.Xenko.Graphics.Viewport[])' overloads for use with a geometry shader.
 
