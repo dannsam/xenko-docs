@@ -2,7 +2,7 @@
 
 Xenko 1.10β improves stability and performance and introduces changes in the asset serialization.
 
-## Performance
+## Tool performance
 
 This release comes packed with several performance improvements, especially in the Game Studio and Asset Compiler.
 
