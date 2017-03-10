@@ -1,4 +1,7 @@
 $(function() {
+
+  var MOBILECONS = 767;
+
   function showCaptionFromAlt(selector){
     $(selector).each(function() {
       $(this).after( '<span class="img-caption">' + $(this).attr('alt') + '</span>' );
@@ -125,7 +128,7 @@ $(function() {
       }
       $('#sidetoc').scrollTop(sidebarStructureOut.scroll)
     }
-    if($(window).width() > 769){
+    if($(window).width() > MOBILECONS){
       apiDocSizeControl();
       apiSidebarStructureControl();
     } else {
@@ -133,14 +136,14 @@ $(function() {
     }
     $(window).on('resize', function(){
       removeResizable();
-      if($(window).width() > 769){
+      if($(window).width() > MOBILECONS){
         $('.container.body-content.hide-when-search').show();
       } else {
         localStorage.clear();
       }
     })
     function removeResizable(){
-      if($(window).width() <= 769){
+      if($(window).width() <= MOBILECONS){
        $($('.article.grid-right')[0]).removeAttr('style');
        $($('#sidetoggle')[0]).removeAttr('style');
        var filterTimer = setInterval(function(){

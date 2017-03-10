@@ -539,9 +539,8 @@ h5{
 
 @media only screen and (min-width: 767px){
      /* Create resizable TOC section (issue #138) */
-     /*Hide elemnts while script doesn't set the sizes to it*/
-    .container.body-content.hide-when-search,
-    .sidefilter{
+     /*Hide elements while script doesn't set the sizes to it*/
+    .container.body-content.hide-when-search{
         display: none;
     }
     #sidetoggle{
