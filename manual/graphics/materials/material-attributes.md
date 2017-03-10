@@ -1,8 +1,8 @@
 # Material attributes
 
-Material attributes define the core characteristics of the material, such as diffuse color, diffuse shading model, and so on. 
+**Material attributes** define the core characteristics of the material, such as its diffuse color, diffuse shading model, and so on. 
 
-![media/material-attributes-1.png](media/material-attributes-1.png) 
+![media/material-attributes-1.png](media/material-attributes-1.png)
 
 There are two types of attributes:
 
