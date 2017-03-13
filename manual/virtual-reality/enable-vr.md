@@ -41,7 +41,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     >
     >* Item 1: OpenVR
     >
-    >This means your game will use the Oculus API if an Oculus Rift device is connected, and the OpenVR API if another device (such as a Vive) is connected.
+    >This means your game uses the Oculus API if an Oculus Rift device is connected, and the OpenVR API if another device (eg a Vive) is connected.
 
 7. Enable **VRRendererSettings**.
 
@@ -57,7 +57,7 @@ Your game is now ready to use VR.
 | Property             | Description                                                                                                             |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------|
 | Ignore camera rotation             | Disables camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)             |
-| Resolution scale | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU. |
+| Resolution scale | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU |
 
 ## Multisample anti-aliasing 
 
