@@ -69,7 +69,7 @@ Tessellates the mesh using the curvature provided by the normals of the mesh.
 
 ![media/material-attributes-8.png](media/material-attributes-8.png) 
 
-The following snapshot shows that the point normal tessellation is adding extra triangles to the existing triangles, while keeping the curvature of the mesh into account:
+The following image shows that the point normal tessellation is adding extra triangles to the existing triangles, while keeping the curvature of the mesh into account:
 
 | No tessellation                                                        | **→**  | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
@@ -123,13 +123,13 @@ The **surface** defines the macro surface normals.
 
 ![media/material-attributes-13.png](media/material-attributes-13.png) 
 
-### Normal Map
+### Normal map
 
 The **normal map** provides per-pixel normal perturbation of the normal of the mesh.
 
 ![media/material-attributes-14.png](media/material-attributes-14.png) 
 
-The [normal mapping](http://en.wikipedia.org/wiki/Normal_mapping) technique is widely used to enhance the realism of a low poly mesh:
+Normal mapping ([[Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping)) is widely used to enhance the realism of a low poly mesh:
 
 | Flat                                                                     | Using a Normal Map                                                       |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
