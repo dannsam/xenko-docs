@@ -1,5 +1,5 @@
 
-# Xenko 1.9 Beta manual
+# Xenko 1.10 Beta manual
 
 ![Manual](media/manual.png)
 
