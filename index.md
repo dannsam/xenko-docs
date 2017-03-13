@@ -5,7 +5,7 @@
 </style>
 
 # Xenko documentation
-<ul class="documentation_list col-md-8 col-sm-12 col-lg-7">
+<ul class="xk-documentation-list col-md-8 col-sm-12 col-lg-7">
 	<li>
 		<a href="manual/index.html">
 			<div class="xk-documentation-image">
@@ -23,7 +23,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="api/SiliconStudio.Xenko.Engine.yml">
+		<a href="api/index.html">
 			<div class="xk-documentation-image">
 				![API](media/xk-icon-api.png "API")
 			</div>
