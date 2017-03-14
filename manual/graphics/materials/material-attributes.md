@@ -4,10 +4,10 @@
 
 ![media/material-attributes-1.png](media/material-attributes-1.png)
 
-There are two types of attributes:
+There are two types of attribute:
 
 - attributes used as input values for a shading model (for example, the Diffuse attribute provides only color used by the diffuse shading model)
-- attributes that can change the shading model (for example, the Diffuse Shading Model (like Lambert) interprets the diffuse attribute color)
+- attributes that can change the shading model (for example, the Diffuse Shading Model [like Lambert] interprets the diffuse attribute color)
 
 Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered part of the first layer.
 
@@ -30,7 +30,7 @@ Geometry attributes define the shape of the material:
 
 ## Tessellation
 
-Real-time tessellation use a HW feature of the GPU to massively subdivide triangles in order to increase the realism and potential of deformations of the surface geometry.
+Real-time tessellation uses a HW feature of the GPU to massively subdivide triangles. This increases the realism and potential of deformations of the surface geometry.
 
 | No tessellation                                                        | Flat tessellation                                                      | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
