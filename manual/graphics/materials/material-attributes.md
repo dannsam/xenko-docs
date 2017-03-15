@@ -1,13 +1,13 @@
 # Material attributes
 
-Material attributes define the core characteristics of the material, such as diffuse color, diffuse shading model, and so on. 
+**Material attributes** define the core characteristics of the material, such as its diffuse color, diffuse shading model, and so on. 
 
-![media/material-attributes-1.png](media/material-attributes-1.png) 
+![media/material-attributes-1.png](media/material-attributes-1.png)
 
-There are two types of attributes:
+There are two types of attribute:
 
 - attributes used as input values for a shading model (for example, the Diffuse attribute provides only color used by the diffuse shading model)
-- attributes that can change the shading model (for example, the Diffuse Shading Model (like Lambert) interprets the diffuse attribute color)
+- attributes that can change the shading model (for example, the Diffuse Shading Model [like Lambert] interprets the diffuse attribute color)
 
 Attributes contribute to a layer of a material. If a material is directly used as a model material, all its root attributes are considered part of the first layer.
 
@@ -30,7 +30,7 @@ Geometry attributes define the shape of the material:
 
 ## Tessellation
 
-Real-time tessellation use a HW feature of the GPU to massively subdivide triangles in order to increase the realism and potential of deformations of the surface geometry.
+Real-time tessellation uses a HW feature of the GPU to massively subdivide triangles. This increases the realism and potential of deformations of the surface geometry.
 
 | No tessellation                                                        | Flat tessellation                                                      | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -69,7 +69,7 @@ Tessellates the mesh using the curvature provided by the normals of the mesh.
 
 ![media/material-attributes-8.png](media/material-attributes-8.png) 
 
-The following snapshot shows that the point normal tessellation is adding extra triangles to the existing triangles, while keeping the curvature of the mesh into account:
+The following image shows that the point normal tessellation is adding extra triangles to the existing triangles, while keeping the curvature of the mesh into account:
 
 | No tessellation                                                        | **→**  | Point normal tessellation                                              |
 | ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
@@ -123,13 +123,13 @@ The **surface** defines the macro surface normals.
 
 ![media/material-attributes-13.png](media/material-attributes-13.png) 
 
-### Normal Map
+### Normal map
 
 The **normal map** provides per-pixel normal perturbation of the normal of the mesh.
 
 ![media/material-attributes-14.png](media/material-attributes-14.png) 
 
-The [normal mapping](http://en.wikipedia.org/wiki/Normal_mapping) technique is widely used to enhance the realism of a low poly mesh:
+Normal mapping ([[Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping)) is widely used to enhance the realism of a low poly mesh:
 
 | Flat                                                                     | Using a Normal Map                                                       |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
