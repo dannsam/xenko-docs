@@ -19,8 +19,7 @@
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Game Studio](game-studio/index.md)
-## [Scenes](game-studio/scenes.md)
-### [Load scenes](game-studio/load-scenes.md)
+## [Game Settings](game-studio/game-settings.md)
 ## [Archetypes](game-studio/archetypes.md)
 ## [Prefabs](game-studio/prefabs.md)
 ### [Create a prefab](game-studio/create-a-prefab.md)
@@ -28,7 +27,6 @@
 ### [Edit prefabs](game-studio/edit-prefabs.md)
 ### [Nested prefabs](game-studio/nested-prefabs.md)
 ### [Override prefab properties](game-studio/override-prefab-properties.md)
-## [Game Settings](game-studio/game-settings.md)
 
 # [Engine](engine/index.md)
 ## [Assets](engine/assets/index.md)
