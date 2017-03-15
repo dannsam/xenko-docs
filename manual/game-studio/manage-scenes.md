@@ -6,6 +6,8 @@
 
 Scenes and entities are arranged in a hierarchy, with the **root scene** at the top. This hierarchy is displayed in the **entity tree** in the scene editor on the left.
 
+![Scene hierarchy tree](media/scene-hierarchy-tree.png)
+
 The root scene contains all the scenes and entities in your game. It should contain common entities that the other scenes and entities use, such as game logic scripts.
 
 ![Scene hierarchy diagram](media/scene-hierarchy-diagram.png)
@@ -54,11 +56,16 @@ For more information about the Game Settings asset, see [Game Settings](game-set
 
 You can lock scenes and entities so they can't be selected in the main window. This is useful when you have lots of things in your scene. You can still select scenes and entities in the entity tree.
 
-* To lock or unlock a scene or entity, in the entity tree, click the **padlock** icon.
+To lock or unlock a scene or entity, in the entity tree, click the **padlock** icon.
 
-* To lock or unlock a scene or entity **and** all its child scenes and entities, hold **Ctrl** and click the padlock item.
+![Padlock item](media/lock-scene-or-entity.png)
+
+>[!Tip]
+>When you lock a scene, all its child scenes and entities are locked too. To lock an entity along with its child entities, hold **Ctrl** and click the padlock item.
 
 Locked items have a **gold locked padlock** icon in the entity tree.
+
+![Locked entity](media/locked-entity.png)    
 
 ## Load and unload scenes in the scene editor
 

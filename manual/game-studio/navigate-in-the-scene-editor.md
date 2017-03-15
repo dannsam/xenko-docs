@@ -56,6 +56,10 @@ The point of rotation is always the center of the screen. You can adjust the dis
 
 After you select an entity, press the **F** key. This zooms in on the entity and centers it in the camera editor.
 
+You can also focus by clicking the **magnifying glass icon** next to the entity in in the entity tree.
+
+![Focus icon](media/focus-icon.png)
+
 <video controls autoplay loop height="240" width="320">
                 <source src="../get-started/media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
 </video>
