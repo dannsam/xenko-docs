@@ -1,6 +1,8 @@
 
 # [Requirements](requirements/index.md)
 
+# [Xenko Launcher](xenko-launcher/index.md)
+
 # [Get started](get-started/index.md)
 ## [Install Xenko](get-started/install-xenko.md)
 ## [Launch Xenko](get-started/launch-xenko.md)
@@ -208,5 +210,3 @@
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
 
 # [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
-
-# [Xenko Launcher](xenko-launcher/index.md)
