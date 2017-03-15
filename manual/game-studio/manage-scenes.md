@@ -79,6 +79,8 @@ The screenshots below show a root scene with child scenes loaded and unloaded. T
 
 To load or unload a scene, in the **scene editor**, in the **entity tree** on the left, next to the scene you want to load or unload, click the **eye icon**.
 
+![Load scene icon](media/load-unload-scene-icon.png)
+
 ## Scene offset
 
 As scenes are not entities in themselves, they don't have transform components. However, you can move scenes in the scene editor using the **offset** property.
