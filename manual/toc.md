@@ -20,7 +20,7 @@
 
 # [Game Studio](game-studio/index.md)
 ## [Scenes](game-studio/scenes.md)
-### [Load scenes](game/studio/load-scenes.md)
+### [Load scenes](game-studio/load-scenes.md)
 ## [Archetypes](game-studio/archetypes.md)
 ## [Prefabs](game-studio/prefabs.md)
 ### [Create a prefab](game-studio/create-a-prefab.md)
