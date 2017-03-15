@@ -58,16 +58,10 @@ After you select an entity, press the **F** key. This zooms in on the entity and
 
 You can also focus by clicking the **magnifying glass icon** next to the entity in in the entity tree.
 
-![Focus icon](../game-studio/media/focus-icon.png)
+![Focus icon](media/focus-icon.png)
 
 <video controls autoplay loop height="240" width="320">
-                <source src="media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
-</video>
-
-Alternatively, in the **entity tree**, click the ![focus icon](media/navigate-in-a-scene-magnifier-icon.png) icon next to an entity. You don't have to select the entity first.
-
-<video controls autoplay loop height="240" width="320">
-                <source src="media/navigate-in-scene-focus-on-entity-using-magnifier-icon.mp4" type="video/mp4">
+                <source src="../get-started/media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
 </video>
 
 > [!TIP] 
