@@ -1,6 +1,6 @@
 # Post-effects
 
-**Post-effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn.  They're used to tune or embellish an image; for example, by giving it a more natural, realistic look. They can also be used purely artistically to change the mood of a scene.
+**Post-effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. They're used to tune or embellish an image; for example, by giving it a more natural, realistic look. They can also be used purely artistically to change the mood of a scene.
 
 ![media/post-effects-reference-1.png](media/post-effects-reference-1.png) 
 
@@ -12,7 +12,19 @@ A post-effect is typically set up by specifying:
 - one or several output buffers
 - parameters to customize the behavior of the post-effect during its rendering pass
 
-Xenko provides several pre-defined post-effects. You can extend the system to create your own.
+Xenko provides several pre-defined post-effects. You can also extend the system to create your own.
+
+## Add a post-effect
+
+1. In the **Graphics Compositor**, right-click and select **PostProcessingEffects**.
+
+    Game Studio adds a post-effect layer to the pipeline.
+
+2. Connect the layer to the other layers in the pipeline.
+
+3. Select the **PostProcessingEffects** layer.
+
+4. In the **property grid** (on the right by default), enable the post-effects you want to use. For details about each post-effect and its setting, see the pages below.
 
 ## In this section
 
