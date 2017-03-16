@@ -4,19 +4,17 @@ The **lens flare** effect simulates the artifacts produced by the internal refle
 
 ![media/lens-flare-1.png](media/lens-flare-1.png) 
 
-The artifacts are generally aligned along the line defined by the original bright spot and the center of the screen.
+The artifacts are generally aligned along the line defined by the original bright spot and the center of the screen. The most noticeable artifact is often exactly symmetrical to the real spot light with respect to the center of the screen.
 
 ![media/lens-flare-2.png](media/lens-flare-2.png) 
 
 ## Properties
 
-| Property                  | Description                                                                                                                                           |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Amount                    | Amount/strength of the light streak.                                                                                                                  |
-| Halo Factor               | Strength of the main artifact.                                                                                                                        |
-|                           |                                                                                                                                                       |
-|                           | Among the lens flares artifacts the most noticeable one is often the exact symmetric to the real spot light with respect to the center of the screen. |
+| Property                  | Description                                                 |
+| ------------------------- | ------ |
+| Amount                    | Amount/strength of the light streak.                                                                                                                                                                            |
 | Color Aberration Strength | Strength of the color aberration artifacts.                                                                                                           |
+| Halo Factor               | Strength of the main artifact.                     
 
 ## See also
 

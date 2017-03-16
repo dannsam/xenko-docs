@@ -16,7 +16,7 @@ Non-gamma-corrected images have dark areas appear darker than they're supposed t
 
 | Property | Description                                     |
 | -------- | ----------------------------------------------- |
-| Value    | Gamma value. A traditional value is around 2.2. |
+| Value    | Gamma value. A typical value is around 2.2. |
 
 ## See also
 

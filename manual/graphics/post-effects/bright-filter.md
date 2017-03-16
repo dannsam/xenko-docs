@@ -9,9 +9,8 @@ The **bright filter** extracts the areas of an image which are the brightest. Th
 | Property  | Description                                                                                                                                    |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | Threshold | Influences the threshold used to determine if a color passes or fails the bright filter.                                                       |
-| Color     | Color modulator: the result of the bright filter is modulated by this color value, then affects the color other post-effects.  |
-|           |                                                                                                                                                |
-|           | If set to white, the color isn't modified.                                                                                                    |
+| Steepness     |  |
+| Color     | Color modulator: the result of the bright filter is modulated by this color value, then affects the color other post-effects. If set to white, the color isn't modified. |
 
 ## In this section
 
