@@ -1,9 +1,5 @@
 # Load and unload scenes at runtime
 
-You can load and unload scenes at runtime using code. Xenko also includes a scene streaming script you can use for this purpose.
-
-## Load a scene
-
 The following code loads the scene `myChildScene` and adds it as a child scene to `myParentScene`.
 
 ```
@@ -58,8 +54,8 @@ At runtime, when the trigger you created in step 1 is triggered, Xenko loads the
 
 | Property       | Description                                                                                                                                                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pre Load Depth | The point (in meters) at which the scene begins to load. For example, eg if 2.5, the scene begins to load when the player is 2.5 meters into the trigger area                                          |
-| Load Depth     | The point (in meters) at which the game freezes to finish loading the scene if it hasn't loaded already. For example, if 5, the game freezes when the player is 5 meters into the trigger area |
+| Pre Load Depth | The point (in meters) at which the scene begins to load. For example, if *2.5*, the scene begins to load when the player is 2.5 meters into the trigger area                                          |
+| Load Depth     | The point (in meters) at which the game freezes to finish loading the scene if it hasn't loaded already. For example, if *5*, the game freezes when the player is 5 meters into the trigger area |
 | Priority       | The script priority. For more information, see [Scheduling and priorities](../scripts/scheduling-and-priorities.md)                                                                                                              |
 ## See also
 

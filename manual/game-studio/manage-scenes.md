@@ -81,14 +81,17 @@ To load or unload a scene, in the **scene editor**, in the **entity tree** on th
 
 ![Load scene icon](media/load-unload-scene-icon.png)
 
-## Scene offset
+## Move a scene
 
-As scenes are not entities in themselves, they don't have transform components. However, you can move scenes in the scene editor using the **offset** property.
+As scenes aren't entities, they don't have transform components. However, you can move a scene using its **offset** property.
 
 ![Scene offset property](media/scene-offset.png)
 
->[!Note]
->The scene offset doesn't affect the position of the scene at runtime. It's purely to help you work in the scene editor.
+To move a scene at runtime, use:
+
+`myScene.Offset = new Vector3(x, y, z);`
+
+Replace `myScene` with the name of the scene, and `x,y,z` with the XYZ coordinates you want to move the scene to.
 
 ## See also
 
