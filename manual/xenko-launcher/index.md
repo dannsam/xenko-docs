@@ -38,25 +38,19 @@ You can install and uninstall multiple versions of Xenko from the **Switch/updat
 
 You might need to use an older version of Xenko to work with old projects. Newer versions of Xenko might contain changes that require old projects to be upgraded.
 
-The version number consists of two numbers. The first number refers to the major version. The second number refers to the minor version.
+The version number consists of two numbers. The first number refers to the **major** version, and the second number refers to the **minor** version. 
 
- * **Major**: This update to the software adds significant changes to the program. In a Major version, the first digit of the version is changed; for example, 1.x.x is changed to 2.x.x.
-
- * **Minor**: This update to the software adds minor changes to the program. In a Minor version, the second digit of the version is changed; for example, 1.1.x is changed to 1.2.x.
-
-For minor versions, only the last number of the version number changes (1.9.0, 1.9.1, 1.9.2, etc). Minor versions don't contain breaking changes, so they're safe to install and use with your existing projects.
-
->[!Note]
->You can't revert to earlier minor versions. For example, you can install both Xenko 1.9 and 1.8 side by side, but you can't revert from Xenko 1.9.2 to Xenko 1.9.1.
+Major updates add significant changes, and you might need to update your projects to use them. Minor updates don't contain breaking changes, so they're safe use with your existing projects.
 
 * To see the release notes for a particular version, click the **note icon** next to the version name (**A**).
 
 * To install a particular version, click the **Download and install** icon next to the 
 version name (**D**).
 
-## Start Game Studio
+>[!Note]
+>You can't revert to earlier minor versions. For example, you can install both Xenko 1.9 and 1.8 side by side, but you can't revert from Xenko 1.9.2 to Xenko 1.9.1.
 
-Now you've installed Xenko, it's time to start Game Studio and build a project.
+## Start Game Studio
 
 1. Under **Switch/update version**, select the version of Xenko you want to use. 
 
@@ -70,12 +64,16 @@ Now you've installed Xenko, it's time to start Game Studio and build a project.
 
 ![Projects section](media/xenko-launcher-projects-section.png)
 
-The Xenko Launcher displays your recent projects. To open a project, click on it.
+The **Projects** section displays your recent projects. To open a project, click it.
 
 ### Open a project with a newer version of Xenko
 
-The Projects section shows the Xenko version each project was made with in the top-right of each project button (**B**).
+The top right of each project button (**B**) shows which version of Xenko the project was made with.
 
-To open a project with a more recent version, click the upgrade icon in the bottom right (**D**), then select the Xenko version you want to open it with. Game Studio prompts you to upgrade the project when it opens.
+To open a project with a more recent version of Xenko: 
+
+1. On the project button, click the **upgrade** icon in the bottom right (**D**).
+
+2. Select the Xenko version you want to open the project with. Game Studio prompts you to upgrade the project when it opens.
 
 >[!Note] After you update a project to use a newer version of Xenko, you might need to make manual changes to get it to work. **Make sure you back up the project up and all its related files before you upgrade it.**
