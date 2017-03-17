@@ -1,4 +1,13 @@
-# Graphics compositor
+# Graphics compositor overview
+
+> [!Note]
+> This is an advanced page and requires an understanding of how rendering pipelines work in general.
+
+The graphics compositor organizes how a game scene is rendered. It also allows you to customize almost every aspect of the rendering pipeline.
+
+Starting from Xenko 2.0, the graphics compositor is an asset. There is a global graphics compositor setting in the Game Settings, where you can assign which compositor you want to use.
+
+The root scene asset and the graphics compositor are assigned in the game settings separately from each other, but they work together. You can swap out the root scene, or the graphics compositor, or both, but at any given frame you should make sure that they work together.
 
 With the graphics compositor you can:
 
@@ -30,7 +39,9 @@ The graphics compositor is a pluggable system, meaning you can write your own co
 
 ## Camera slots
 
-Because you can set up cameras in different renderers and layers, it's more practical to define a set of camera slots at the graphics compositor level, and reference the camera in the renderers via a slot. This lets you set the actual camera for a particular slot just once at the graphics compositor level, while many renderers may reference the same camera slot.
+Because the camera component exists on the scene side, and scenes as well as camera components can change, the graphics compositor uses an abstraction called camera slots. The camera slots are a list of named items which provide slots where camera objects from the scene can be inserted.
+
+In the scene, under the Camera component, you will find a Slot property. It is an index, but it matches the currently loaded graphics compositor and offers the camera slot names as a hint. It is not a requirement to provide a different slot for each camera. In fact, you can have fewer slots than cameras, and swap the actual camera objects inside each slot. The best practice is to disable the camera component of cameras you don't want rendered. It is allowed to have disabled cameras, but every camera slot which is being used must have exactly one active camera assigned to it. One camera component cannot be assigned to multiple slots. If this is the case, either duplicate the camera object or reduce the number of slots prior to running the game.
 
 Cameras in your scene have a *Slot* setting:
 
@@ -46,6 +57,8 @@ The **enabled** cameras matching the appropriate slots are selected every frame.
 Render stages define ways to render given objects (usually with their associated effects/shaders). They also offer ways to control advanced properties such as sorting and filtering of those objects. For more information, see [Render stage](../rendering-pipeline/render-stage.md).
 
 ## Render features
+
+Render features concern preparing, collecting and drawing all the data associated with a certain type of objects which can be rendered, such as meshes, visual effects, debug shapes, sprites etc. The render feature is responsible for collecting the correct vertex buffers, setting the materials and invoking the draw calls.
 
 ### Render stage selectors
 
