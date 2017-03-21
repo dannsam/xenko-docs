@@ -26,11 +26,11 @@ When you're ready to share your game, create a release build from Visual Studio,
 
 ## 2. Delete unnecessary files
 
-You can delete unnecessary files to make your game folder smaller.
+After you create a build, you can delete unnecessary files to make it smaller and easier to distribute.
 
-1. Delete all the folders except for *x64*, *x86*, and *Data*.
+1. In the main folder, delete all the files except the *.dll* files and the *.exe* file.
 
-2. In the main folder, delete all the files except the *.dll* files and the *.exe* file.
+2. Delete all the folders except for *x64*, *x86*, and *Data*.
 
 ## 3. Distribute your game
 
