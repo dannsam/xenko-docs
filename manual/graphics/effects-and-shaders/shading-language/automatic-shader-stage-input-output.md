@@ -4,7 +4,7 @@
 
 When you write a HLSL shader, you have to precisely define your vertex attributes and carefully pass them across the stage of your final shader.
 
-Here's an example of a shader that simply uses the color from the vertex:
+Here's an example of a shader that simply uses the color from the vertex.
 
 **Code:** Simple HLSL shader
 
@@ -93,7 +93,7 @@ technique10 Render
 }
 ```
 
-This example is quite simple; in a real project situation, the number of shaders is much higher and a single change might mean rewriting many shaders, structures, and so on.
+This example is simple, but in a real project, the number of shaders is much higher and a single change might mean rewriting lots of shaders, structures, and so on.
 
 Schematically, adding a new attribute requires you to update all the stages and intermediate structures from the vertex input to the last stage you want to use the attribute.
 
@@ -101,26 +101,25 @@ Schematically, adding a new attribute requires you to update all the stages and 
 
 # XKSL
 
-XKSL offers a convenient way to pass parameters across the different stages of your shader. The stream variables are:
+XKSL is convenient way to pass parameters across the different stages of your shader. The stream variables are:
 
 - variables
 - defined like any class member, with the stream keyword
-- invoked with the streams prefix. Forgetting it will result in a compilation error. When the stream is ambiguous (same name), you should provide the class name in front of the variable. streams.<my_class>.<my_variable>
+- invoked with the streams prefix. Forgetting it results in a compilation error. When the stream is ambiguous (same name), you should provide the class name in front of the variable. streams.<my_class>.<my_variable>
 
 Streams regroup the concept of attribute, varying and output in a single concept.
 
-- An attribute is a stream read in a vertex shader before being written.
-- An output is a stream assigned before being read.
-- A varying is a stream present across the stage of your shader.
+- an attribute is a stream that's read in a vertex shader before being written
+- an output is a stream that's assigned before being read
+- a varying is a stream that's present across the stage of your shader
 
 Think of streams as a global object that you can access everywhere without having to put it as a parameter of your functions.
 
->[!Note]
->You don't have to create a semantic for these variables; the compiler creates them automatically. However, keep in mind that **the variables sharing the same semantic will be merged in the final shader**, so be careful when using a semantic. This behavior can be useful when you want to use a stream variable locally without inheriting from the class where it was declared.
+You don't have to create a semantic for these variables. The compiler creates them automatically. However, keep in mind that **the variables sharing the same semantic will be merged in the final shader**. So be careful when using a semantic. This behavior can be useful when you want to use a stream variable locally without inheriting from the class where it was declared.
 
-Once you've declared a stream, you can access it at any stage of your shader. The shader compiler takes care of everything. The variable just has to be visible from the calling code (ie in the inheritance hierarchy) like any other variable.
+Once you've declared a stream, you can access it at any stage of your shader. The shader compiler takes care of everything. The variables just have to be visible from the calling code (ies in the inheritance hierarchy) like any other variable.
 
-**Code:** Stream definition and use
+**Code:** Stream definition and use:
 
 ```cs
 class BaseShader
@@ -175,7 +174,7 @@ class MyShader : ShaderBase
 };
 ```
 
-Now let's change it to add the normal computation.
+Now let's add the normal computation.
 
 **Code:** Modified shader in XKSL
 
@@ -198,6 +197,15 @@ class MyShader : ShaderBase
 };
 ```
 
-In XKSL, adding a new attribute is as simple as adding it to the pool of streams and using it where you want.
+In XKSL, adding a new attribute is as simple as adding it to the pool of streams and use it where you want!
 
-![media/xksl_add_normal.png](media/xksl_add_normal.png)
+![media/xksl_add_normal.png](media/xksl_add_normal.png) 
+
+## See also
+
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
+    - [Class inheritance](classes-mixins-and-inheritance.md)
+    - [Composition](composition.md)
+    - [Templating](template.md)
+	- [Shader stages](shader-stages.md)

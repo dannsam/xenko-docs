@@ -1,13 +1,13 @@
-# Graphics compositor
+# Graphics Compositor editor
 
-The scene graphics compositor renders a scene to one or multiple render targets.
+The Graphics Compositor editor displays the different layers of your graphics pipeline visually.
 
-![media/graphics-compositor-reference-1.png](media/graphics-compositor-reference-1.png) 
+# Open the Graphics Compositor editor
 
-A graphics compositor is defined at a scene level. It has a definition and runtime that describe how to compose a scene to a final render target.
+In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
-## See also
+![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
-- [Overview](overview.md)
-- [Scene renderers](scene-renderers/index.md)
-- [Graphics compositor for developers](graphics-compositor-for-developers/index.md)
+The Graphics Compositor editor opens.
+
+![Graphics Compositor editor](media/graphics-compositor-editor.png)

@@ -47,9 +47,9 @@ class BaseClass
 };
 ```
 
-The compositions are compiled in their own context, meaning that the non-stage variables are only accessible within the composition. You can also have compositions inside compositions.
+The compositions are compiled in their own context, meaning that the non-stage variables are only accessible within the composition. It's also possible to have compositions inside compositions.
 
-If you want to access the root compilation context, you can use the following format.
+If you want to access the root compilation context, you can use the following format:
 
 **Code:** Accessing root context
 
@@ -67,7 +67,7 @@ class CompositionClassC : CompositionBase
 
 This is error-prone, since `CompositionClassC` expects `BaseClass` to be available in the root context.
 
-You can also create an array of compositions the same way you use an array of values. Since there's no way to know the number of compositions beforehand, you should iterate using a `foreach` statement.
+You can also create an array of compositions the same way you use an array of values. Since there's no way to know beforehand how many compositions there are, you should iterate using a `foreach` statement.
 
 **Code:** Array of compositions
 
@@ -164,7 +164,7 @@ class TestClass
 };
 ```
 
-Keep in mind that even in composition, you can call for base methods, override them etc. Overriding happens in the same order than the compositions.
+Keep in mind that even in composition, you can call for base methods, override them, and so on. Overriding happens in the same order as the compositions.
 
 This behavior is useful when you need a value in multiple composition but you only need to compute it once (eg the normal in view space).
 
@@ -241,5 +241,11 @@ class TestClass
 
 This behavior is useful when you want to repeat a simple function but with different parameters (eg adding color on top of another).
 
- 
+## See also
 
+* [Effect language](../effect-language.md)
+* [Shading language index](index.md)
+    - [Class inheritance](classes-mixins-and-inheritance.md)
+    - [Templating](template.md)
+    - [Shader stage input/output automatic management](automatic-shader-stage-input-output.md)
+	- [Shader stages](shader-stages.md)
