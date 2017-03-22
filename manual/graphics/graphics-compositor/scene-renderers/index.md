@@ -8,6 +8,6 @@ Scene renderers let you customize the [Collect](../render-pipeline/render-featur
 
 The default renderers are:
 
-- [Clear RenderFrame](clear-renderframe.md)
+- [Clear RenderFrame](clear.md)
 - [Render Camera](render-camera.md)
 - @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer', which you can use before the [camera renderer](render-camera.md) to force aspect ratio.

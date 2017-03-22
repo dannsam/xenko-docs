@@ -20,6 +20,12 @@ You can configure the global settings of your game in the **Game Settings** asse
 
    ![Game settings](media/game-settings.png)
 
+### Graphics compositor
+
+You can have multiple graphics compositors in your project. The graphics compositor you specify in the game settings is the compositor Xenko uses at runtime.
+
+You can change the graphics compositor at runtime if you need to. For more information, see [Graphics compositor](../graphics/graphics-compositor.md).
+
 ### Default scene
 
 You can have multiple scenes in your project. The **default scene** is the scene Xenko loads at runtime.
@@ -34,7 +40,7 @@ To set the default scene:
 
 2. Select the default scene in the asset picker and click **OK**.
 
-For more information about scenes, see [Introduction to scenes](../get-started/introduction-to-scenes.md).
+You can change the default scene at runtime if you need to. For more information about scenes, see [Game Studio - Scenes](../game-studio/scenes.md).
 
 ### Rendering settings
 

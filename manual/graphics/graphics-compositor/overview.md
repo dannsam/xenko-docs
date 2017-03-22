@@ -1,56 +1,108 @@
 # Graphics compositor overview
 
-> [!Note]
-> This is an advanced page and requires an understanding of how rendering pipelines work in general.
+<span class="label label-doc-level">Advanced</span>
+<span class="label label-doc-audience">Programmer</span>
 
-The graphics compositor organizes how a game scene is rendered. It also allows you to customize almost every aspect of the rendering pipeline.
+>[!Note]
+>This page requires a basic understanding of graphics pipelines.
 
-Starting from Xenko 2.0, the graphics compositor is an asset. There is a global graphics compositor setting in the Game Settings, where you can assign which compositor you want to use.
+The **graphics compositor** organizes how a [scene](../game-studio/scenes.md) is rendered. You can use it to customize almost every part of the rendering pipeline.
 
-The root scene asset and the graphics compositor are assigned in the game settings separately from each other, but they work together. You can swap out the root scene, or the graphics compositor, or both, but at any given frame you should make sure that they work together.
+With the graphics compositor, you can:
 
-With the graphics compositor you can:
-
-- render a scene using
-  - one or multiple cameras
-  - filtering entities in the scene
-  - to one or multiple render targets with a different viewports
+  - use one or multiple cameras
+  - filter entities in the scene
+  - render to one or more render targets, with different viewport
 - render a scene with a camera to a render target used as the input texture of a Material/Effect in a scene (eg render the rear-view mirror point-of-view to a texture, and display it on the rear-view mirror model)
 - easily mix the rendering mode at the same time in the same graphics composition
 - easily mix HDR and LDR rendering
 - apply ImagePostProcessing Effects on a render target, selected before/after rendering a camera
-- let you easily clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or to render the UI)
+- easily clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or render the UI)
 - manipulate the compositor from scripts (or any animation system) in the scene to modify the composition, enable effects, etc
 
-## Access the graphics compositor
+## Set the graphics compositor
 
-In the **Asset view**, click the **Graphics Compositor** asset.
+You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](media/game-studio/game-settings.md).
 
-# Concepts
+The graphics compositor and the **root scene asset** work together. They're both defined in the...  
 
-The graphics compositor is a pluggable system, meaning you can write your own compositor. It's based on the following concepts:
+You can swap out the root scene or the graphics compositor, or both, but you should make sure that they work together at any given frame.
 
-- camera slots
-- render stages
-- render features, which contain
-  - render stage selectors
-  - pipeline processors
-- renderers
+## Open the graphics compositor
+
+As of Xenko 2.0, the graphics compositor is an asset. To open it, in the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+
+![Graphics Compositor asset](media/graphics-compositor-asset.png)
+
+The Graphics Compositor editor opens.
+
+![Graphics Compositor editor](media/graphics-compositor-editor.png)
+
+## Entry Points
+
+In the **Entry Points** node, you set where the entry points of your rendering pipeline are sent. There are three entry point outputs: **Game**, **SingleView**, and **Editor**.
+
+| Entry point output | Description                                                                                 |
+|--------------------|---------------------------------------------------------------------------------------------|
+| Game               | The renderer used by your game at runtime. You must have at least one camera in your scene. |
+| SingleView         | Renders only a single type of object.                                                       |
+| Editor             | The output from the Scene Editor in Game Studio.                                            |
+
+#### Add a step
+
+Next to **Game**, in the drop-down menu, select where you want to send the output from your game.
+
+The Entry Points node adds a *Child* after the *Game*.
+
+1. Under **Child**, select the renderer you want to send the entry point to.
+
+... add a camera slot...
+
+2. Set the properties of the renderer. For more details about each renderer, see...
+
+You can repeat steps 1 and 2 to add as many steps as you need. To remove a step, select **None** from the drop-down menu. 
+
+>[!Note]
+>When you remove a step, you also remove its child steps.
+
+## Forward Renderer
+
+The **Forward Renderer** node controls the additional effects applied to the inputs. 
+
+
 
 ## Camera slots
 
-Because the camera component exists on the scene side, and scenes as well as camera components can change, the graphics compositor uses an abstraction called camera slots. The camera slots are a list of named items which provide slots where camera objects from the scene can be inserted.
+**Camera slots** link the graphics compositor to the camera entities in your scene. This means you can change the root scene or graphics compositor without having to assign new cameras each time. You can create as many camera slots as you need.
 
-In the scene, under the Camera component, you will find a Slot property. It is an index, but it matches the currently loaded graphics compositor and offers the camera slot names as a hint. It is not a requirement to provide a different slot for each camera. In fact, you can have fewer slots than cameras, and swap the actual camera objects inside each slot. The best practice is to disable the camera component of cameras you don't want rendered. It is allowed to have disabled cameras, but every camera slot which is being used must have exactly one active camera assigned to it. One camera component cannot be assigned to multiple slots. If this is the case, either duplicate the camera object or reduce the number of slots prior to running the game.
+You don't have to create a different camera slot for each camera in your scene. In fact, you can have fewer slots than cameras, and just change which cameras use each slot. The best practice is to disable the camera component of cameras you don't want to render.
 
-Cameras in your scene have a *Slot* setting:
+> [!Note]
+> Each camera slot must have a camera assigned to it. If you have an unused camera slot, delete it.
+>
+> You can't assign a camera to more than one slot. If you need to do this, duplicate the camera entity and assign it to a different slot.
+
+### Create a camera slot
+
+In the graphics compositor editor, on the left, under **Camera slots**, click the **green plus** icon.
+
+To name a camera slot, double-click it in the list and type a new name.
+
+### Blind a camera to a camera slot
+
+1. In your scene, select the **entity** with the camera component you want to bind.
+
+2. In the **property grid** (on the right by default), under **Slot**, select the camera slot you want to bind the camera to.
+
+> [!Note]
+> The drop-down menu lists camera slots from the graphics compositor currently selected in the game settings.
 
 ![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png) 
 
-The **enabled** cameras matching the appropriate slots are selected every frame.
+The graphics compositor matches enabled cameras to their appropriate slots each frame. 
 
 > [!Note]
-> If multiple enabled cameras in your scene are bound to the same camera slot, the result is undefined. Future version of Xenko will have a priority or a similar mechanism to avoid this.
+> If multiple enabled cameras in your scene use the same camera slot, the result is undefined. Future versions of Xenko will have a priority system or similar to avoid this.
 
 ## Render stage
 
@@ -58,35 +110,46 @@ Render stages define ways to render given objects (usually with their associated
 
 ## Render features
 
-Render features concern preparing, collecting and drawing all the data associated with a certain type of objects which can be rendered, such as meshes, visual effects, debug shapes, sprites etc. The render feature is responsible for collecting the correct vertex buffers, setting the materials and invoking the draw calls.
+Render features prepare, collect, and draw all the data associated with types of objects which can be rendered (eg meshes, visual effects, debug shapes, sprites, etc). The render feature collects the correct vertex buffers, sets the materials, and invokes the draw calls.
 
 ### Render stage selectors
 
-Render stage selectors let you choose which objects are registered to which render stage, and choose which [effect](../effects-and-shaders/effect-language.md) to use when rendering a given object.
+Render stage selectors define which objects in your scene are sent to which render stage, and choose which [effect](../effects-and-shaders/effect-language.md) to use when rendering a given object.
 
 For example, this is the typical setup for meshes:
 
-- @'SiliconStudio.Xenko.Rendering.MeshTransparentRenderStageSelector' chooses either the `Main` or `Transparent` render stage depending on material properties
-  - The default effect is `XenkoForwardShadingEffect` defined by Xenko (you can create your own if you want)
-- @'SiliconStudio.Xenko.Rendering.ShadowMapRenderStageSelector' selects non-transparent meshes that cast shadows and add them to the `ShadowMapCaster` render stage
-  - The default effect is `XenkoForwardShadingEffect.ShadowMapCaster`, defined by Xenko
+- @'SiliconStudio.Xenko.Rendering.MeshTransparentRenderStageSelector' chooses either the `Main` or `Transparent` render stage, depending on the material properties. The default effect is `XenkoForwardShadingEffect` defined by Xenko (you can create your own if you want).
+- @'SiliconStudio.Xenko.Rendering.ShadowMapRenderStageSelector' selects opaqe meshes that cast shadows and adds them to the `ShadowMapCaster` render stage. The default effect is `XenkoForwardShadingEffect.ShadowMapCaster`, defined by Xenko.
 
 Either can filter by render group.
 
 ![media/graphics-compositor-overview-3.png](media/graphics-compositor-overview-3.png)
 
-Everything is customizable, so you can add another predefined render stage selectors (eg to add UI to a later fullscreen pass) or create your own selector specific to your game.
+You can customize everything, so you can add other predefined render stage selectors (eg to add UI to a later fullscreen pass), or create your own selector specific to your game.
 
 ### Pipeline processors
 
-Pipeline processors are classes that are called when creating the [Pipeline State](../low-level-api/pipeline-state.md). This lets you do things such as enable alpha blending or wireframe rendering on a specific render stage.
+Pipeline processors are classes called when creating the [pipeline state](../low-level-api/pipeline-state.md). This lets you do things such as enable alpha blending or wireframe rendering on a specific render stage.
 
-There are many predefined pipeline processors. You can also create your own.
+Xenko includes several predefined pipeline processors. You can also create your own.
 
 ## Renderers
 
-A renderer defines a specific rendering action. Several renderers are provided by default:
+Renderers define a specific rendering action. Xenko includes several renderers:
 
-- [Clear RenderFrame](scene-renderers/clear-renderframe.md)
+- [Clear](scene-renderers/clear.md)
 - [Render Camera](scene-renderers/render-camera.md)
 - [Render Effect](scene-renderers/render-effect.md)
+
+### Render Camera
+
+Create and set up a [render view](../rendering-pipeline/index.md#render-views) using a camera slot. It renders using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
+
+![media/render-camera-1.png](media/render-camera-1.png) 
+
+## Properties
+
+| Property      | Description                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Child         | Select a renderer for this camera, such as ForwardRenderer or any of your custom renderers                                |
+| Camera        | Specify a Camera slot defined at the level of the Scene Graphics Compositor                                               |

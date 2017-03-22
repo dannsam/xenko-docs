@@ -66,7 +66,7 @@
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
 ### [Overview](graphics/graphics-compositor/overview.md)
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers/index.md)
-#### [Clear RenderFrame](graphics/graphics-compositor/scene-renderers/clear-renderframe.md)
+#### [Clear RenderFrame](graphics/graphics-compositor/scene-renderers/clear.md)
 #### [Render camera](graphics/graphics-compositor/scene-renderers/render-camera.md)
 #### [Render effect](graphics/graphics-compositor/scene-renderers/render-effect.md)
 #### [Render child scene](graphics/graphics-compositor/scene-renderers/render-child-scene.md)
