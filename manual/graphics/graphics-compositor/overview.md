@@ -40,13 +40,13 @@ The Graphics Compositor editor opens.
 
 ## Entry Points
 
-In the **Entry Points** node, you set where the entry points of your rendering pipeline are sent. There are three entry point outputs: **Game**, **SingleView**, and **Editor**.
+In the **Entry Points** node, you set up the entry points for your rendering pipeline. There are three entry points: **Game**, **SingleView**, and **Editor**.
 
-| Entry point output | Description                                                                                 |
+| Entry point | Description                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------|
-| Game               | The renderer used by your game at runtime. You must have at least one camera in your scene. |
-| SingleView         | Renders only a single type of object.                                                       |
-| Editor             | The output from the Scene Editor in Game Studio.                                            |
+| Game               | The entry point from your game. You must have at least one camera in your scene. |
+| SingleView         | .                                                       |
+| Editor             | Entry point for the Scene Editor in Game Studio.                                            |
 
 #### Add a step
 
@@ -125,7 +125,7 @@ Either can filter by render group.
 
 ![media/graphics-compositor-overview-3.png](media/graphics-compositor-overview-3.png)
 
-You can customize everything, so you can add other predefined render stage selectors (eg to add UI to a later fullscreen pass), or create your own selector specific to your game.
+You can customize everything, so you can add other predefined render stage selectors (eg to add UI to a later full-screen pass), or create your own selector specific to your game.
 
 ### Pipeline processors
 
@@ -153,3 +153,18 @@ Create and set up a [render view](../rendering-pipeline/index.md#render-views) u
 | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | Child         | Select a renderer for this camera, such as ForwardRenderer or any of your custom renderers                                |
 | Camera        | Specify a Camera slot defined at the level of the Scene Graphics Compositor                                               |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 

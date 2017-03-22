@@ -1,5 +1,7 @@
 # Graphics compositor for developers
 
+**TO BE DELETED!**
+
 ## Renderers
 
 The default renderers implementing the @'SiliconStudio.Xenko.Rendering.Compositing.ISceneRenderer' are:

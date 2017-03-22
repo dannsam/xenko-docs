@@ -1,5 +1,7 @@
 # Custom scene renderer
 
+**TO BE DELETED!**
+
 You can create a custom renderer by directly implementing the @'SiliconStudio.Xenko.Rendering.ISceneRenderer' or using a delegate through the @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer'
 
 ## Implement an ISceneRenderer
