@@ -4,7 +4,7 @@ When you're ready to share your game, create a release build from Visual Studio,
 
 ## 1. Create a release build
 
-1. If you've built your game in Release mode before, in your project folder (eg *MyGame/Bin/MyPlatform/Release/*), delete the *Data* folder. (This folder might contain unnecessary files, so it's simplest to build it again from scratch.)
+1. If you've built your game in Release mode before, in your project folder (eg *MyGame/Bin/MyPlatform/Release/*), delete the *Data* folder. This folder might contain unnecessary files, such as old versions of assets, so it's simplest to build it again from scratch.
 
 2. Open your project in Game Studio.
 
@@ -24,16 +24,16 @@ When you're ready to share your game, create a release build from Visual Studio,
 
     Visual Studio creates a release build in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*).
 
->![Tip]
+>[!Tip]
 >You might want to rename the **Release** folder to something more descriptive (such as the title of your game).
 
 ## 2. Delete unnecessary files
 
 After you create a build, you can delete unnecessary files to make it smaller and easier to distribute.
 
-1. In the main folder, delete all the files except the *.dll* files and the *.exe* file.
+* In the main folder, delete all the files except the *.dll* files and the *.exe* file.
 
-2. Delete all the folders except for *x64*, *x86*, and *Data*.
+* Delete all the folders except for *x64*, *x86*, and *Data*.
 
 ## 3. Distribute your game
 
@@ -46,3 +46,8 @@ If you just want to create a file you can share, we recommend you zip it. The si
 This creates a zip file that other people can extract.
 
 ![Zipped file](media/zip-file.png)
+
+## See also
+
+* [Version control](version-control.md)
+* [Project structure](project-structure.md)
