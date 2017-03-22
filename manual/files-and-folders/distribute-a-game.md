@@ -29,11 +29,13 @@ When you're ready to share your game, create a release build from Visual Studio,
 
 ## 2. Delete unnecessary files
 
-After you create a build, you can delete unnecessary files to make it smaller and easier to distribute.
+After you create a build, you can delete files that are unnecessary to play the game. This makes the game smaller and easier to distribute.
 
 * In the main folder, delete all the files except the *.dll* files and the *.exe* file.
 
 * Delete all the folders except for *x64*, *x86*, and *Data*.
+
+If you have other unnecessary files, such as custom configuration files (ie files not created with Xenko), we recommend you delete these too.
 
 ## 3. Distribute your game
 
