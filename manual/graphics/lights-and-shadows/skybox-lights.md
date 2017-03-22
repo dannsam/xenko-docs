@@ -4,14 +4,11 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes.md).  Xenko analyzes the skybox cubemap and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
+A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](../skyboxes.md). Xenko analyzes the skybox cubemap and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
 
-![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png) 
+![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
-To use a skybox light, an entity must have both:
-
-* a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent) of type **Skybox**
-* a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent)
+You don't need actually display the skybox in the scene to use it as a light source. For example, you might not want to use the skybox to light the scene if the sky is only partly visible from an interior location (eg through windows of a room). As skybox lights aren't affected by shadows, they light every part of the scene, including interior spaces.
 
 ## How skyboxes light the scene
 
@@ -32,7 +29,7 @@ Notice how the skybox texture colours are reflected.
 
 To set up a skybox light, you first need a skybox asset and an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent). For information about how to add these, see the [Skybox](../skyboxes.md) page.
 
-1. Select the entity that has the [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent).
+1. Select the entity you want to be the skybox light.
 
 2. In the entity **Properties grid**, click **Add component** and select [Light](xref:SiliconStudio.Xenko.Engine.LightComponent).
 
@@ -42,22 +39,20 @@ To set up a skybox light, you first need a skybox asset and an entity with a [Sk
 
     ![Light component property](media/light-component-property.png)
 
-The [Light componenet](xref:SiliconStudio.Xenko.Engine.LightComponent) uses the skybox asset to light the scene.
+The [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent) uses the skybox asset to light the scene.
 
 ## Skybox asset properties
 
-The skybox asset properties affect how the skybox lights the scene.
+When you use a skybox as a light, Xenko uses it both in compressed form ([spherical harmonics (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)) and as a texture to light different kinds of material. In the **Properties grid**, you can control the detail of both.
 
-When you use a skybox as a light, Xenko uses it both in compressed form ([spherical harmonics (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)), and as a texture, to light different kinds of material. In the **Properties grid**, you can control the detail of both.
-
-![Skybox lighting properties](media/skybox-lighting-and-background.png)
+![Skybox lighting properties](media/UPDATE WITH GUS'S NEW CHECKBOX UI.png)
 
 | Property     | Description                                                                                                                                                                                    |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cube Map |  The cubemap asset used for the skybox. 
-| Usage        |  Specify whether the skybox is visible at runtime (**Lighting and Background**) or only used for lighting (**Lighting**). Note that the **Background** option is deprecated and will be removed in a future release.
+| Ambient lighting      |  Use the skybox for ambient lighting as well as specular lighting
 | Diffuse SH Order  | The level of detail of the compressed skybox, used for diffuse lighting (dull materials). `Order5` is more detailed than `Order3`. |
-| Specular Cubemap Size | The texture size used for specular lighting (shiny materials). Larger textures have more detail. |
+| Specular Cubemap Size | The texture size used for specular lighting. Larger textures have more detail. |
 
 ## Skybox light properties
 
@@ -65,12 +60,8 @@ When you use a skybox as a light, Xenko uses it both in compressed form ([spheri
 
 | Property     | Description   |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type         | Skybox                                                                                                                                                                                         |
-| Intensity    | The light intensity. The value has no units, as it is dependent on the Skybox component values (see the note below). |
-| Culling Mask | Which entity groups are affected by the light. By default, all groups are affected.                                                                                                   |
-
->[!Note]
->The **Intensity** properties in the Skybox and Light components are linked. To calculate the Light component [intensity](xref:SiliconStudio.Xenko.Engine.LightComponent.Intensity), Xenko multiplies it by the Skybox component [intensity](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Intensity). The final color is defined as: `final Color = Skybox Sampler Color * Light Skybox Intensity * Skybox Intensity`
+| Intensity    | The light intensity |
+| Culling Mask | Which entity groups are affected by the light. By default, all groups are affected                                                                                                   |
 
 ## See also
 

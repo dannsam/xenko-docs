@@ -23,7 +23,7 @@ Currently, Game Studio can't convert image files to `.dds` files. Use another ap
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
 
-### Add a cubemap asset to a project
+### Add a cubemap to a project
 
 * In the **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png), select **Textures** > **Texture**, and browse to the `.dds` file.
 
@@ -35,7 +35,7 @@ Currently, Game Studio can't convert image files to `.dds` files. Use another ap
 
 The cubemap is now available as an asset in your project. You can use the cubemap asset in your skybox asset.
 
-## Add a skybox asset to a project
+## Add a skybox to a project
 
 1. In the **Asset view**, click ![Add new asset](media/engine-skybox-add-new-asset-button.png)
 
@@ -51,36 +51,33 @@ The cubemap is now available as an asset in your project. You can use the cubema
 
 The skybox asset properties affect how the skybox lights the scene. For information about these properties, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
-## Add a skybox component to an entity
+## Use a skybox
 
-Xenko includes an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko loads the first only.
+To use a skybox, add it to a **background component**.
 
-You can add [Skybox components](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to as many entities as you need. You might want to include more than one skybox, for example, if you want to switch between them at runtime.
+Xenko includes an entity with a background component in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko only loads the first only.
 
-To add a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) to an entity:
+You can add background component to as many entities as you need. You might want to include more than one background, for example, if you want to switch skyboxes at runtime.
+
+To add a skybox to an entity:
 
 1. In the **Scene view**, select the entity you want to add the component to.
 
     This can be an empty entity. Its position in the scene doesn't matter.
 
-2. In the **Property grid**, click **Add component** and select **Skybox component**.
+2. In the **Property grid**, click **Add component** and select **Background**.
 
-    ![Add skybox component](media/engine-skybox-add-skybox-component.png)
+    ![Add background component](media/engine-skybox-add-background-component.png)
 
-3. Specify the **skybox asset** you want to use.
+3. Under **texture**, specify the skybox asset you want to use.
 
-    ![Skybox component properties](media/engine-skybox-skybox-components-properties.png)
+    ![Background component properties](media/engine-skybox-background-component-properties.png)
 
-You can modify the following [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent) settings:
-
-* [Background](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Background): how to display the skybox.
-* [Intensity](xref:SiliconStudio.Xenko.Engine.SkyboxComponent.Intensity): the skybox background radiation intensity, from 0 (none) to 100 (maximum).
+Xenko displays the skybox in the scene.
 
 ## Use a skybox as a light source
 
-You can set the skybox as the light type in a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting).
-
-For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
+You can set the skybox as the light type in a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
 ## Example code
 
