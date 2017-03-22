@@ -208,7 +208,8 @@
 ## [Editor](ui/editor/index.md)
 
 # [Virtual reality](virtual-reality/index.md)
-## [Oculus Rift](virtual-reality/oculus/index.md)
+## [Enable VR](virtual-reality/enable-vr.md)
+## [VR sickness](virtual-reality/vr-sickness.md)
 
 # [Troubleshooting](troubleshooting/index.md)
 ## [Profiling](troubleshooting/profiling.md)
