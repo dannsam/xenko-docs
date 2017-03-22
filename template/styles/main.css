@@ -670,3 +670,14 @@ h5{
         text-align: left;
     }
 }
+
+/*Hide filter area at the Manual amd ReleaseNotes pages*/
+#sidetoc.xk-page-Manual,
+#sidetoc.xk-page-ReleaseNotes{
+    height: calc(100vh - 90px);
+    margin-top: 0;
+}
+#sidetoc.xk-page-Manual .sidefilter,
+#sidetoc.xk-page-ReleaseNotes .sidefilter{
+    display: none !important;
+}
