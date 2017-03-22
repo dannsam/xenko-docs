@@ -24,6 +24,9 @@ When you're ready to share your game, create a release build from Visual Studio,
 
     Visual Studio creates a release build in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*).
 
+>![Tip]
+>You might want to rename the **Release** folder to something more descriptive (such as the title of your game).
+
 ## 2. Delete unnecessary files
 
 After you create a build, you can delete unnecessary files to make it smaller and easier to distribute.
@@ -35,8 +38,6 @@ After you create a build, you can delete unnecessary files to make it smaller an
 ## 3. Distribute your game
 
 After you create a release build, how you distribute it is up to you. 
-
-Before you distribute it, you might want to rename the **Release** folder to something more descriptive (such as the title of your game).
 
 If you just want to create a file you can share, we recommend you zip it. The simplest way to do this is on Windows to right-click the folder and select **Send to > Compressed (zipped) folder**.
 
