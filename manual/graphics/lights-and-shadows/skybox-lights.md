@@ -63,6 +63,28 @@ When you use a skybox as a light, Xenko uses it both in compressed form ([spheri
 | Intensity    | The light intensity |
 | Culling Mask | Which entity groups are affected by the light. By default, all groups are affected                                                                                                   |
 
+## Example code
+
+The following code changes the skybox light and its intensity:
+
+```cs
+public Skybox skybox;
+public void ChangeSkyboxParameters()
+{
+    // Get the light component from an entity
+	var light = Entity.Get<LightComponent>();
+
+	// Get the Skybox Light settings from the light component
+	var skyboxLight = light.Type as LightSkybox;
+
+	// Replace the existing skybox
+	skyboxLight.Skybox = skybox;
+
+	// Change the skybox light intensity
+	light.Intensity = 1.5f;
+}
+``
+
 ## See also
 
 * [Skyboxes](../skyboxes.md)

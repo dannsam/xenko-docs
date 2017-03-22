@@ -81,23 +81,22 @@ You can set the skybox as the light type in a [Light component](xref:SiliconStud
 
 ## Example code
 
+The following code changes the skybox background:
+
 ```cs
-public Skybox skybox;
-public void ChangeSkyboxParameters()
+public Texture cubemapTexture;
+public void ChangeBackgroundParameters()
 {
-    //Add a Skybox component to an entity:
-    var skyboxComponent = Entity.Get<SkyboxComponent>();
+    // Get the background component from an entity
+	var background = directionalLight.Get<BackgroundComponent>();
 
-    //Replace the existing skybox:
-    skyboxComponent.Skybox = skybox;
-    
-    //Change the skybox light intensity:
-    skyboxComponent.Intensity = 1.5f;
+	// Replace the existing background
+	background.Texture = cubemapTexture;
 
-    //Change the skybox background to Color:
-    skyboxComponent.Background = SkyboxBackground.Color;
+	// Change the background intensity
+	background.Intensity = 1.5f;
 }
-```
+``
 
 ## See also
 * [Skybox lights](lights-and-shadows/skybox-lights.md)
