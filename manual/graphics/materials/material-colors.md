@@ -26,15 +26,9 @@ Sample the color/scalar from a given texture.
 | Channel            | Selects the channel (R, G, B, A) that will be used to extract the scalar value (Only valid for scalar texture)                                                                |
 | Texcoord Index     | The texture coordinates (u,v) to use from the mesh with this texture                                                                                                          |
 | Filtering          | The sampling method: Linear, Point, Anisotropic...etc.                                                                                                                        |
-| Address Mode U / V | Defines how (u,v) coordinates are addressed                                                                                                                                   |
-|                    |                                                                                                                                                                               |
-|                    | - **Wrap**: Tiles (u,v) at integer junctions. For example: u is ranging from 0.0 to 3.0, the texture will repeat 3 times on u axis                                            |
-|                    | - **Mirror**: Flips (u,v) at integer junctions. For example: for u ranging from 0.0 to 1.0, the texture is displayed as expected but from 1.0 to 2.0, the texture is mirrored |
-|                    | - **Clamp**: Clamps (u,v) to the range (0.0, 1.0)                                                                                                                             |
-|                    |                                                                                                                                                                               |
-|                    |                                                                                                                                                                               |
-| Scale              | A scale applied to (u,v)                                                                                                                                                      |
-| Offset             | An offset applied to (u,v)                                                                                                                                                    |
+| Address Mode U / V | <br>Defines how (u,v) coordinates are addressed</br> <br> **Wrap**: Tiles (u,v) at integer junctions. For example, if u ranges from 0.0 to 3.0, the texture repeats three times on the U axis</br> <br>**Mirror**: Flips (u,v) at integer junctions. For example, if u ranges from 0.0 to 1.0, the texture is displayed as expected; but from 1.0 to 2.0, the texture is mirrored </br> <br> **Clamp**: Clamps (u,v) to the range (0.0, 1.0)</br> |                                                                                
+| Scale | A scale applied to (u,v) |
+| Offset  | An offset applied to (u,v) |
 
 ## Constant value
 
@@ -44,7 +38,7 @@ The color is provided directly as a constant value over the whole material. In t
 
 | Property     | Description             |
 | ------------ | ----------------------- |
-| Color/Scalar | A RGBA or scalar value. |
+| Color/Scalar | A RGBA or scalar value |
 
 ## Binary operator
 
@@ -56,7 +50,7 @@ Perform a binary operation from two color/scalar value providers.
 
 | Property | Description                                      |
 | -------- | ------------------------------------------------ |
-| Operator | A binary operator (Add, Multiply...etc.)         |
+| Operator | A binary operator (eg add, multiply, etc)         |
 | Left     | The left color/scalar involved in the operation  |
 | Right    | The right color/scalar involved in the operation |
 
