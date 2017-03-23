@@ -35,7 +35,7 @@ To set up a skybox light, you first need a skybox asset and an entity with a [Sk
 
     ![Skybox component properties](media/skybox-add-light-component.png)
 
-3. In the **Light** component properties, under **Usage**, select **Skybox**.
+3. In the **Light** component properties, under **Light**, select **Skybox**.
 
     ![Light component property](media/light-component-property.png)
 
