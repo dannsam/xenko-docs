@@ -14,16 +14,12 @@ Once selected, the gizmo of the spot light displays its main direction, range an
 
 ## Properties
 
-Properties that defines a spot light:
-
 ![media/SpotLightProperties.png](media/SpotLightProperties.png) 
 
 | Property            | Description                                                                                                                                                           |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Type                | Spot                                                                                                                                                                  |
-| Color               | The color of this spot light                                                                                                                                          |
-|                     |                                                                                                                                                                       |
-|                     | Note: Currently, the light supports an RGB color. Future versions of Xenko will also support temperature colors.                                                                            |
+| Color               | The color of the spot light. Note that currently, the light supports an RGB color. Future versions of Xenko will also support temperature colors       
 | Range               | The range distance in meters. Above the range distance, the light doesn't affect models                                                                               |
 | Angle Inner         | The inner angle of the spot cone where the light intensity influence is at one                                                                                        |
 | Angle Outer         | The outer angle of the spot cone where the light intensity influence is zero                                                                                          |
