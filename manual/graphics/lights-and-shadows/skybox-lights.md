@@ -65,9 +65,9 @@ The [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent) uses the s
 
 ## Skybox asset properties
 
-When you use a skybox as a light, Xenko uses it both in compressed form ([spherical harmonics (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)) and as a texture to light different kinds of material. In the **Properties grid**, you can control the detail of both.
+When you use a skybox as a light, Xenko uses it both in compressed form ([spherical harmonics (Wikipedia)](https://en.wikipedia.org/wiki/Spherical_harmonics)) and as a texture to light different kinds of material. You can control the detail of both in the skybox asset properties.
 
-![Skybox lighting properties](media/UPDATE WITH GUS'S NEW CHECKBOX UI.png)
+![Skybox lighting properties](media/skybox-asset-properties.png)
 
 | Property     | Description                                                                                                                                                                                    |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -105,7 +105,7 @@ public void ChangeSkyboxParameters()
 	// Change the skybox light intensity
 	light.Intensity = 1.5f;
 }
-``
+```
 
 ## See also
 
