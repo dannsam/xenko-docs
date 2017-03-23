@@ -8,7 +8,7 @@ A skybox light is an [ambient light](ambient-lights.md) emitted by a [skybox](..
 
 ![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png)
 
-You don't need actually display the skybox in the scene to use it as a light source. For example, you might not want to use the skybox to light the scene if the sky is only partly visible from an interior location (eg through windows of a room). As skybox lights aren't affected by shadows, they light every part of the scene, including interior spaces.
+You don't need to actually display the skybox in the scene to use it as a light source. For example, you might not want to use the skybox to light the scene if the sky is only partly visible from an interior location (eg through windows of a room). As skybox lights aren't affected by shadows, they light every part of the scene, including interior spaces.
 
 ## How skyboxes light the scene
 
@@ -35,7 +35,7 @@ To set up a skybox light, you first need a skybox asset and an entity with a [Sk
 
     ![Skybox component properties](media/skybox-add-light-component.png)
 
-3. In the **Light** component properties, under **Usage**, select **Skybox**.
+3. In the **Light** component properties, under **Light**, select **Skybox**.
 
     ![Light component property](media/light-component-property.png)
 
