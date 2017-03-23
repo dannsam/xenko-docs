@@ -28,7 +28,7 @@ Once selected, the gizmo of the spot light displays its main direction, range an
 |                     |                                                                                                                                                                       |
 |                     | Note: More techniques will be added in future versions.                                                                                                                                |
 | Size                | The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**.                                                 |
-|                     | See [shadow map atlas size calculation](shadow-optimization.md) for details.                                                                                        |
+|                     | See [Shadow optimization](shadow-optimization.md) for details.                                                                                        |
 |                     |                                                                                                                                                                       |
 |                     |  For a spot light, this value is by default **medium**, as a spot light has usually a medium visual impact.                                                           |
 | Bias Parameters     | These parameters are used to avoid some artifacts of the shadow map technique                                                                                         |
