@@ -20,6 +20,11 @@
 ### [Navigate in the scene editor](get-started/navigate-in-the-scene-editor.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
+# [Files and folders](files-and-folders/index.md)
+## [Project structure](files-and-folders/project structure)
+## [Version control](files-and-folders/version-control.md)
+## [Distribute a game](files-and-folders/distribute-a-game.md)
+
 # [Game Studio](game-studio/index.md)
 ## [Scenes](game-studio/scenes.md)
 ### [Create a scene](game-studio/create-a-scene.md)
@@ -201,7 +206,8 @@
 ## [Editor](ui/editor/index.md)
 
 # [Virtual reality](virtual-reality/index.md)
-## [Oculus Rift](virtual-reality/oculus/index.md)
+## [Enable VR](virtual-reality/enable-vr.md)
+## [VR sickness](virtual-reality/vr-sickness.md)
 
 # [Troubleshooting](troubleshooting/index.md)
 ## [Profiling](troubleshooting/profiling.md)

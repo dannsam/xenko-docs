@@ -51,7 +51,7 @@ To create an asset by dragging and dropping a resource file:
    
 	![List of asset templates](../get-started/media/create-assets-drag-drop-select-asset-template.png)
 
-4. Game Studio adds the asset to the asset view:
+	Game Studio adds the asset to the asset view:
 
 	![Texture asset created](../get-started/media/create-assets-drag-drop-asset-created.png)
 
