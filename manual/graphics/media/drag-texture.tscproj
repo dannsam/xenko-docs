@@ -36,7 +36,7 @@
     "sceneTrack" : {
       "scenes" : [
         {
-          "duration" : 4.5,
+          "duration" : 3.63333333333333,
           "title" : "",
           "type" : "",
           "csml" : {
@@ -127,7 +127,7 @@
                     "effects" : [
 
                     ],
-                    "start" : 26,
+                    "start" : 0,
                     "duration" : 109,
                     "mediaStart" : 26,
                     "mediaDuration" : 109,
@@ -192,13 +192,14 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\james.duffy\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\Untitled Project274a7341.autosave.tscproj",
+    "AutoSaveFile" : "C:\\Users\\james.duffy\\AppData\\Local\\TechSmith\\Camtasia Studio\\9.0\\Auto-Saves\\drag-texture274ac152.autosave.tscproj",
     "CanvasZoom" : 100,
     "Date" : "2017-03-23 11:15:04 AM",
     "IsAutoSave" : "0",
     "Language" : "ENU",
     "ProfileName" : "",
     "ProjectDimensionsChanged" : "1",
+    "Title" : "drag-texture",
     "audioNarrationNotes" : "",
     "calloutStyle" : "Basic",
     "canvasDetached" : "False",
