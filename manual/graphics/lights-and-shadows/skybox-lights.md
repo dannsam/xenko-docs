@@ -27,17 +27,39 @@ Notice how the skybox texture colours are reflected.
 
 ## Set up a skybox light
 
-To set up a skybox light, you first need a skybox asset and an entity with a [Skybox component](xref:SiliconStudio.Xenko.Engine.SkyboxComponent). For information about how to add these, see the [Skybox](../skyboxes.md) page.
+To use a skybox as a light, you need to add a skybox asset, then select it in a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent).
 
-1. Select the entity you want to be the skybox light.
+1. In the **Asset view**, click ![Add asset](media/engine-skybox-add-new-asset-button.png)
 
-2. In the entity **Properties grid**, click **Add component** and select [Light](xref:SiliconStudio.Xenko.Engine.LightComponent).
+2. Select **Miscellaneous** > **Skybox**.
 
-    ![Skybox component properties](media/skybox-add-light-component.png)
+    ![Choose asset type](media/engine-skybox-choose-asset-type.png)
 
-3. In the **Light** component properties, under **Light**, select **Skybox**.
+    The **Asset picker** opens.
+
+3. Choose a skybox texture (`.dds` file) from the project assets and click **OK**.
+    
+    ![Choose texture](media/engine-skybox-select-skybox-texture.png)
+
+	Game Studio adds the skybox asset with the texture you specified.
+
+4. Select the entity you want to be the skybox light.
+
+5. In the **Properties grid** (on the right by default), click **Add component** and select [Light](xref:SiliconStudio.Xenko.Engine.LightComponent).
+
+    ![Background component properties](media/skybox-add-light-component.png)
+
+6. In the **Light** component properties, under **Light**, select **Skybox**.
 
     ![Light component property](media/light-component-property.png)
+
+7. Click the hand icon to open the **Asset picker**.
+
+	![No skybox asset selected](media/no-skybox-asset-selected.png)
+
+8. Select the skybox asset you want to use as a light source and click **OK**.
+
+	![Asset picker](media/select-skybox-asset.png)
 
 The [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent) uses the skybox asset to light the scene.
 

@@ -25,13 +25,13 @@ Currently, Game Studio can't convert image files to `.dds` files. Use another ap
 
 ### Add a cubemap to a project
 
-* In the **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png), select **Textures** > **Texture**, and browse to the `.dds` file.
+* In the **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the `.dds` file.
 
     ![Select texture as asset type](media/engine-skybox-select-asset-type.png)
 
-* Alternatively, drag and drop a `.dds` file from **Windows Explorer** to the **Asset view**, then select **Texture**.
+* Alternatively, drag and drop a `.dds` file from **Windows Explorer** to the **Asset view**, then select **Color texture**.
 
-    ![Drag and drop background texture](media/engine-skybox-drag-and-drop-background-texture.gif)
+    ![Drag and drop background texture](media/drag-texture.gif)
 
 The cubemap is now available as an asset in your project. You can use the cubemap asset in your skybox asset.
 
@@ -49,33 +49,31 @@ The cubemap is now available as an asset in your project. You can use the cubema
     
     ![Choose texture](media/engine-skybox-select-skybox-texture.png)
 
-The skybox asset properties affect how the skybox lights the scene. For information about these properties, see [Skybox lights](lights-and-shadows/skybox-lights.md).
+## Use a skybox texture
 
-## Use a skybox
+To use a skybox texture, add it to a **background component**.
 
-To use a skybox, add it to a **background component**.
+Xenko includes an entity with a background component in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko only loads the first.
 
-Xenko includes an entity with a background component in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko only loads the first only.
+You can add background components to as many entities as you need. You might want to include more than one background, for example, if you want to switch skyboxes at runtime.
 
-You can add background component to as many entities as you need. You might want to include more than one background, for example, if you want to switch skyboxes at runtime.
-
-To add a skybox to an entity:
+To add a skybox texture to an entity:
 
 1. In the **Scene view**, select the entity you want to add the component to.
 
     This can be an empty entity. Its position in the scene doesn't matter.
 
-2. In the **Property grid**, click **Add component** and select **Background**.
+2. In the **Property grid** (on the right by default), click **Add component** and select **Background**.
 
     ![Add background component](media/engine-skybox-add-background-component.png)
 
-3. Under **texture**, specify the skybox asset you want to use.
+3. Under **texture**, specify the skybox texture you want to use.
 
     ![Background component properties](media/engine-skybox-background-component-properties.png)
 
 Xenko displays the skybox in the scene.
 
-## Use a skybox as a light source
+## Use a skybox texture as a light source
 
 You can set the skybox as the light type in a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
@@ -96,8 +94,9 @@ public void ChangeBackgroundParameters()
 	// Change the background intensity
 	background.Intensity = 1.5f;
 }
-``
+```
 
 ## See also
+
 * [Skybox lights](lights-and-shadows/skybox-lights.md)
 * [Lighting and shadows](lights-and-shadows/index.md)
