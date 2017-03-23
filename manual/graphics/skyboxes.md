@@ -1,20 +1,21 @@
 # Skyboxes
+
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery.
-
-To create a skybox, Xenko encloses the scene in a cube and maps a texture, called a **cubemap**, on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lights-and-shadows/skybox-lights.md).
-
-![Distant planet skybox](media/skybox-disassembled.png)
-
-![Merged skybox](media/skybox-assembled.png)
+**Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lights-and-shadows/skybox-lights.md).
 
 > [!Note]
 > Currently, Xenko doesn't support skydomes.
 
 ## Cubemaps
+
+To create a skybox, Xenko encloses the scene in a cube and maps a **cubemap** (a six-sided texture) on the cube's inner faces. This simulates three-dimensional surroundings that appear spacious.
+
+![Distant planet skybox](media/skybox-disassembled.png)
+
+![Merged skybox](media/skybox-assembled.png)
 
 Cubemaps are composed of six images, one for each face of the skybox cube. Xenko uses cubemaps with the extension `.dds`.
 
@@ -33,31 +34,17 @@ Currently, Game Studio can't convert image files to `.dds` files. Use another ap
 
     ![Drag and drop background texture](media/drag-texture.gif)
 
-The cubemap is now available as an asset in your project. You can use the cubemap asset in your skybox asset.
+The cubemap is now available as an asset in your project.
 
-## Add a skybox to a project
+## Use a cubemap as a skybox
 
-1. In the **Asset view**, click ![Add new asset](media/engine-skybox-add-new-asset-button.png)
+To use a cubemap as a skybox, add it to a **background component**.
 
-2. Select **Miscellaneous**, and choose **Skybox**.
-
-    ![Choose asset type](media/engine-skybox-choose-asset-type.png)
-
-    The **Asset picker** opens.
-
-3. Choose a skybox texture (`.dds` file) from the project assets and click **OK**.
-    
-    ![Choose texture](media/engine-skybox-select-skybox-texture.png)
-
-## Use a skybox texture
-
-To use a skybox texture, add it to a **background component**.
-
-Xenko includes an entity with a background component in the project by default. Only one skybox can be active in a scene at a time. If there are multiple skyboxes, Xenko only loads the first.
+Xenko includes an entity with a background component in the project by default. Only one background can be active in a scene at a time. If there are multiple backgrounds, Xenko only loads the first.
 
 You can add background components to as many entities as you need. You might want to include more than one background, for example, if you want to switch skyboxes at runtime.
 
-To add a skybox texture to an entity:
+To add a cubemap to an entity:
 
 1. In the **Scene view**, select the entity you want to add the component to.
 
@@ -67,19 +54,19 @@ To add a skybox texture to an entity:
 
     ![Add background component](media/engine-skybox-add-background-component.png)
 
-3. Under **texture**, specify the skybox texture you want to use.
+3. Under **texture**, specify the cubemap you want to use to create the skybox.
 
     ![Background component properties](media/engine-skybox-background-component-properties.png)
 
 Xenko displays the skybox in the scene.
 
-## Use a skybox texture as a light source
+## Use a skybox as a light source
 
-You can set the skybox as the light type in a [Light component](xref:SiliconStudio.Xenko.Engine.LightComponent). Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
+You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
 ## Example code
 
-The following code changes the skybox background:
+The following code changes the cubemap in a background:
 
 ```cs
 public Texture cubemapTexture;
