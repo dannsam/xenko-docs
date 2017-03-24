@@ -1,6 +1,10 @@
 # Material layers
 
-You can combine multiple materials to build more complex materials. 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
+You can combine layers of materials to build more complex materials. 
 
 ![media/material-layers-1.png](media/material-layers-1.png)  
 
@@ -14,13 +18,23 @@ This diagram shows the definition of the materials blended in the screenshot abo
 
 ## Blend maps
 
-**Blend maps** are textures that determine how Game Studio blends layers.
+**Blend maps** are [material maps](material-maps.md) that determine how Game Studio blends layers. For example, you can use a texture as a blend map:
 
 ![Blend map diagram](media/blend-map-diagram.png)
 
 ![Blend map diagram](media/blend-map-diagram2.png)
 
 Note how the blend map texture corresponds to the patterning on the result.
+
+Blend maps work the same way as any other kind of material map. For more information, see [Material maps](material-maps.md).
+
+## Shading models
+
+Xenko blends materials differently depending on whether their shading models (eg diffuse models, specular models, etc) are different.
+
+If you blend materials that have **identical** shading models, Xenko collects the **attributes** of the materials, then applies the shading models to all of them. This saves GPU.
+
+If the materials have **different** shading models, Xenko applies each material's shading models to that material's attributes, then blends the results. This uses more GPU.
 
 ## Add a layer
 
@@ -34,7 +48,7 @@ Note how the blend map texture corresponds to the patterning on the result.
 
     ![Empty layer](media/empty-layer.png)
 
-3. Next to **Layer 0**, click the hand icon.
+3. Next to the layer, click the hand icon.
 
     The **asset picker** opens.
 
@@ -46,31 +60,22 @@ Note how the blend map texture corresponds to the patterning on the result.
     
     ![Added layer](media/added-layer.png)
 
-5. Next to **Blend Map**, click the **hand icon**.
+5. Next to **Blend Map**, click the **blue arrow** and select the type of blend map you want to use to blend the layers. For more information about blend maps, see [Material maps](material-maps.md).
 
-    The **asset picker** opens.
+    ![Select blend map](media/select-blend-map.png)
 
-    ![Asset picker](media/texture-asset-picker.png)
-
-6. Select the texture you want to use as a blend map for this layer.
-
-Game Studio blends the material layers using the blend map you specified.
-
-<br>A blend map [scalar provider](material-colors.md) that defines how much the current material is blend to the previous one (upper layer).</br> <br>A value of 0 means that the previous material in the layer is fully used.</br> <br>A value of 1 means that the material referenced by this layer is fully used.</br> <br>Values between 0 and 1 generate a blend of a parameters of the previous material with the material defined by this layer</br>
+Game Studio blends the material layers using the blend map you specified. You can add as many layers as you need.
 
 ## Layer properties
 
 | Property        | Description |
 | --------------- | --------------- | 
 | Material        | The material blended in this layer|
-| Blend Map       | The blend map used to blend this layer with the layer above                                  |
-| Layer Overrides |  **UV Scale** : A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map) |
-
-> [!Note] 
-> Xenko blends individual layer attributes if they have the same shading model; otherwise, Xenko blends the shading model.
+| Blend Map       | The [blend map](material-maps.md) used to blend this layer with the layer above|
+| Layer Overrides |  **UV Scale**: A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map) |
 
 ## See also
 
-- [Material colors](material-colors.md)
-- [Material attributes](material-attributes.md)
-- [Materials for developers](materials-for-developers.md)
+* [Material maps](material-maps.md)
+* [Material attributes](material-attributes.md)
+* [Materials for developers](materials-for-developers.md)

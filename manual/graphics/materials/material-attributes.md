@@ -1,5 +1,9 @@
 # Material attributes
 
+<span class="label label-doc-level">Intermediate</span>
+<span class="label label-doc-audience">Artist</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Material attributes** define the core characteristics of the material, such as its diffuse color, diffuse shading model, and so on. 
 
 ![media/material-attributes-1.png](media/material-attributes-1.png)
@@ -87,7 +91,7 @@ Depending on the stage the displacement is applied, the results can be very diff
 
 | Property         | Description                                                                                                                                                               |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Displacement Map | The displacement texture as a [Material Color Provider](material-colors.md)                                                                                              |
+| Displacement Map | The displacement texture as a [Material Color Provider](material-maps.md)                                                                                              |
 | Intensity        | The intensity of displacement                                                                                                                                             |
 | Scale & Bias     | When enabled, the value coming from the texture is considered as a positive value ranging from 0.0 to 1.0 and the shader will apply a scale to get the range -1.0 to 1.0. |
 | Shader Stage     | Specify which shader stage the displacement map should be applied to, Vertex Shader or Domain Shader (used with Tessellation)                                                                                                                                                                                          |
@@ -328,6 +332,6 @@ The following screenshots show the influence of the cutoff Alpha value.
 
 ## See also
 
-* [Material colors](material-colors.md)
+* [Material maps](material-maps.md)
 * [Material layers](material-layers.md)
 * [Materials for developers](materials-for-developers.md)

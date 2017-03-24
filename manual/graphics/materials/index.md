@@ -14,7 +14,7 @@ In practice, materials generate partial definitions of shaders integrated as par
 
 ## In this section
 
-- [Material colors](material-colors.md)
+- [Material maps](material-maps.md)
 - [Material attributes](material-attributes.md)
 - [Material layers](material-layers.md)
 - [Materials for developers](materials-for-developers.md)
