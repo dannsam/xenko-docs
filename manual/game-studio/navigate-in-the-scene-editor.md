@@ -135,6 +135,9 @@ Game Studio renders the area between the near and far planes.
 
 ![Camera position](../get-started/media/camera-position.png)
 
-## What's next?
+## See also
 
-* [Launch a game](launch-a-game.md)
+* [Create and open a scene](create-a-scene.md)
+* [Load scenes](load-scenes.md)
+* [Add entities](add-entities.md)
+* [Manage entities](manage-entities.md)

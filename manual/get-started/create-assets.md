@@ -41,7 +41,7 @@ You can drag compatible resource files directly into Game Studio to create asset
 
 To create an asset by dragging and dropping a resource file:
 
-1. (Optional) If it isn't there already, move the resource file you want to use in the **Resources** folder of your project. You don't have to do this, but it's good practice to keep resource files organized and makes projects easier to share. For more information, see [Project structure](project-structure.md).
+1. (Optional) If it isn't there already, move the resource file you want to use in the **Resources** folder of your project. You don't have to do this, but it's good practice to keep resource files organized and makes projects easier to share. For more information, see [Project structure](../files-and-folders/project-structure.md).
 
 2. Drag the resource file from Explorer to the asset view:
 

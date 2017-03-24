@@ -8,7 +8,6 @@
 ## [Launch Xenko](get-started/launch-xenko.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Game Studio](get-started/game-studio.md)
-## [Project structure](get-started/project-structure.md)
 ## [Assets](get-started/assets.md)
 ### [Create assets](get-started/create-assets.md)
 ### [Manage assets](get-started/manage-assets.md)
@@ -21,7 +20,7 @@
 ## [Launch a game](get-started/launch-a-game.md)
 
 # [Files and folders](files-and-folders/index.md)
-## [Project structure](files-and-folders/project structure)
+## [Project structure](files-and-folders/project-structure.md)
 ## [Version control](files-and-folders/version-control.md)
 ## [Distribute a game](files-and-folders/distribute-a-game.md)
 
@@ -120,8 +119,6 @@
 ### [Render features](graphics/rendering-pipeline/render-features.md)
 ## [Sprite fonts](graphics/sprite-fonts.md)
 ## [Skyboxes](graphics/skyboxes.md)
-## [Tutorials](graphics/tutorials/index.md)
-### [Set up an HDR pipeline with post-effects](graphics/tutorials/set-up-an-hdr-pipeline-with-posteffects.md)
 
 # [Animation](animation/index.md)
 ## [Import animations](animation/import-animations.md)

@@ -14,7 +14,7 @@ To disable camera movement from inputs other than VR devices:
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
-    ![Graphics compositor asset](media/graphics-compositor-asset.png)
+    ![Graphics compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
     The Graphics Compositor editor opens.
 

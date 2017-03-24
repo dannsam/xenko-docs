@@ -28,4 +28,4 @@ You can also resize and move parts of the UI.
 
 ## What's next?
 
-* [Organize your project](project-structure.md)
+* [Introduction to assets](assets.md)

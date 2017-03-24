@@ -26,7 +26,7 @@ Currently, Game Studio can't convert image files to `.dds` files. Use another ap
 
 ### Add a cubemap to a project
 
-* In the **Asset view**, click ![](media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the `.dds` file.
+* In the **Asset view**, click ![Add asset](lights-and-shadows/media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the `.dds` file.
 
     ![Select texture as asset type](media/engine-skybox-select-asset-type.png)
 

@@ -49,4 +49,4 @@ You can also resize and move parts of the UI.
     * [Use prefabs](use-prefabs.md)
     * [Edit prefabs](edit-prefabs.md)
     * [Nested prefabs](nested-prefabs.md)
-    * [Override prefab properties](game-studio/override-prefab-properties.md)
+    * [Override prefab properties](override-prefab-properties.md)
