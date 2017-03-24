@@ -10,7 +10,7 @@ A project can contain one package or several. You can share packages between pro
 
 ![Folder structure](media/folder-structure.png)
 
-* **Assets** contains the [asset](assets.md) files which represent elements in your game.
+* **Assets** contains the [asset](../game-studio/assets.md) files which represent elements in your game.
 
 * **Bin** contains the compiled binaries and data. Xenko creates the folder when you build the project, with a subdirectory for each platform.
 

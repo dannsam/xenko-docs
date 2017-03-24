@@ -77,7 +77,3 @@ Alternatively, right-click the entity and select **Duplicate selected entities**
 2.	Type a name for the entity, and then press **Enter**.
 
    ![Renamed entity in a scene](../get-started/media/add-entities-to-a-scene-renamed-entity.png)
-
-## What's next?
-
-* [Arrange entities](arrange-entities.md)

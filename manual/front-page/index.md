@@ -20,8 +20,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
     * <span class="label label-doc-highlight">New</span> [Scripts - Events](../scripts/events.md)
     * <span class="label label-doc-highlight">New</span> [Scripts - Scheduling and priorities](../scripts/scheduling-and-priorities.md)
 * <span class="label label-doc-highlight">New</span> [Platforms - Xbox Live](../platforms/uwp/xbox-live.md)
-* <span class="label label-doc-highlight">Updated</span> [Project structure](../get-started/project-structure.md)
-* <span class="label label-doc-highlight">New</span> [Sprites](../sprites/index.md)
 
 ## Improve this documentation
 
