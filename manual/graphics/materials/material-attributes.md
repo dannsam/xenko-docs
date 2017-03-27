@@ -48,9 +48,9 @@ Tessellates the mesh uniformly with a flat tessellation.
 
 The following snapshot shows that the flat tessellation is adding extra triangles to the existing triangles, while the curve isn't taken into account:
 
-| No tessellation                                                        | **→**  | Flat tessellation                                                      |
-| ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
-| ![media/material-attributes-6.png](media/material-attributes-6.png)  |        | ![media/material-attributes-7.png](media/material-attributes-7.png)  | 
+| No tessellation                                                        | Flat tessellation                                                      |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![media/material-attributes-6.png](media/material-attributes-6.png)  | ![media/material-attributes-7.png](media/material-attributes-7.png)  | 
 
 | Property               | Description                                                                   |
 | ---------------------- | ----------------------------------------------------------------------------- |
