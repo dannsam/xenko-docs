@@ -385,7 +385,7 @@ h5{
 }
 /* Redesign Documentation main page (05.12.2016) */
 .submenu-navbar{
-    margin: 5px 0 5px 50px;
+    margin: 5px 0 5px 10px;
 }
 .submenu-navbar li{
     display: inline-block;
@@ -669,4 +669,17 @@ h5{
     .toc .level1 > li{
         text-align: left;
     }
+}
+#xk-current-version.form-control{
+    width: auto;
+    height: auto;
+    padding: 3px 0px;
+}
+.xk-flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
 }

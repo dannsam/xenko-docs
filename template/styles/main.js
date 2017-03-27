@@ -156,5 +156,24 @@ $(function() {
           }, 100);
       }
     }
+    function redirectToCurrentDocVersion(){
+      $('#xk-current-version').on('change', function(){
+        // console.log($("#xk-current-version" ).val())
+        var hostVersion = window.location.host;
+        var pathVersion = window.location.pathname;
+        var sectionVersion;
+        if(/manual/.test(pathVersion)){
+          sectionVersion = 'manual'
+        } else if(/api/.test(pathVersion)){
+          sectionVersion = 'api'
+        } else if (/ReleaseNotes/.test(pathVersion)){
+          sectionVersion = 'ReleaseNotes'
+        }
+        var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + sectionVersion
+        console.log(newAddress);
+        $(window).attr('location', newAddress);
+      })
+    }
+    redirectToCurrentDocVersion();
 });
 
