@@ -41,6 +41,7 @@ ul li  img, ol li img {
 .sidefilter {
     top: 90px;
     width: 280px;
+    display: none !important;
 }
 
 .sidetoc {
@@ -677,7 +678,7 @@ h5{
     height: calc(100vh - 90px);
     margin-top: 0;
 }
-#sidetoc.xk-page-Manual .sidefilter,
-#sidetoc.xk-page-ReleaseNotes .sidefilter{
-    display: none !important;
+#sidetoc.xk-page-Api .sidefilter,
+#sidetoc.xk-page-Default .sidefilter{
+    display: block !important;
 }

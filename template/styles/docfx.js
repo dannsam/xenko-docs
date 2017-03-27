@@ -99,8 +99,41 @@ $(function () {
   (function () {
     var query;
     var relHref = $("meta[property='docfx\\:rel']").attr("content");
-    var searchChapter = $('#search-query').data('page').toLowerCase();
-
+    var searchChapterSrc = $('#search-query').data('page').toLowerCase();
+    var chapterNameElem = $('#sidetoc');
+    if(searchChapterSrc.indexOf('manual') >= 0){
+      searchChapter = 'manual';
+      var tocInterval = setInterval(function(){
+          if(chapterNameElem.length > 0){
+            clearInterval(tocInterval);
+            chapterNameElem.addClass('xk-page-Manual')
+          }
+      }, 100);
+    } else if(searchChapterSrc.indexOf('releasenotes') >= 0){
+      searchChapter = 'releasenotes';
+      var tocInterval = setInterval(function(){
+          if(chapterNameElem.length > 0){
+            clearInterval(tocInterval);
+            chapterNameElem.addClass('xk-page-ReleaseNotes')
+          }
+      }, 100);
+    } else if(searchChapterSrc.indexOf('api') >= 0){
+      searchChapter = 'api';
+      var tocInterval = setInterval(function(){
+          if(chapterNameElem.length > 0){
+            clearInterval(tocInterval);
+            chapterNameElem.addClass('xk-page-Api')
+          }
+      }, 100);
+    } else {
+      searchChapter = 'manual';
+      var tocInterval = setInterval(function(){
+          if(chapterNameElem.length > 0){
+            clearInterval(tocInterval);
+            chapterNameElem.addClass('xk-page-Default')
+          }
+      }, 100);
+    }
     if (typeof relHref != 'undefined') {
       var search = searchFactory();
       search();
