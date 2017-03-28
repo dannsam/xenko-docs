@@ -9,4 +9,4 @@ Lights and shadows are essential components to increase reality of your scene.
 - [Point lights](point-lights.md)
 - [Ambient lights](ambient-lights.md)
 - [Skybox lights](skybox-lights.md)
-- [Shadow optimization](shadow-optimization.md)
+- [Shadows](shadows.md)

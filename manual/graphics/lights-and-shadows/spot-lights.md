@@ -1,6 +1,6 @@
 # Spot lights
 
-A **spot light** produces a cone of light positioned in space oriented to a specific direction.
+**Spot lights** produce a cone of light in a specific direction. They're useful for simulating light from objects such as lampposts and flashlights. They cast shadows. You can control them with scripts or animation to create dramatic lighting effects.
 
 ![media/SpotLightOverview.png](media/SpotLightOverview.png) 
 
@@ -22,11 +22,11 @@ Once selected, the gizmo of the spot light displays its main direction, range an
 | Range               | The range in meters. Beyond the this range, the light doesn't affect models                                                                               |
 | Angle Inner         | The inner angle of the spot cone where the light intensity influence is at one                                                                                        |
 | Angle Outer         | The outer angle of the spot cone where the light intensity influence is zero                                                                                          |
-| Shadows             | <br>**Filter**: Produces soft shadows instead of hard shadows. Currently, the implemented technique is PCF (Percentage Closer Filtering). More techniques will be added in future versions</br> <br>**Size**: The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**. See [Shadow optimization](shadow-optimization.md) for details</br> <br>For spot lights, the default value is **medium**, as a spot light has usually a medium visual impact</br>  
-| Bias Parameters     | <br>These parameters are used to avoid some artifacts of the shadow map technique</br> <br>**Depth Bias:** The amount of depth to add to the sampling depth to avoid shadow acne </br> <br>**Normal Offset Scale**: A factor multiplied by the depth bias toward the normal</br> |
-| Intensity           | The intensity of the light. The color is basically by this value before being sent to the shader. Currently, this value has no units. This will change in future versions   | 
+| Shadows             | <br>If enabled, the light casts shadows</br><br>**Filter**: Produces soft shadows instead of hard shadows. Currently, the implemented technique is PCF (Percentage Closer Filtering). More techniques will be added in future versions</br> <br>**Size**: The size of texture to use for shadowing mapping. Larger textures produce better shadows edges, but are much more costly. For more information, see [Shadows](shadows.md)</br> <br>For spot lights, the default value is **medium**, as a spot light has usually a medium visual impact</br>  
+| Bias Parameters     | <br>These parameters are used to avoid some artifacts of the shadow map technique.</br> <br>**Depth Bias:** The amount of depth to add to the sampling depth to avoid shadow acne </br> <br>**Normal Offset Scale**: A factor multiplied by the depth bias toward the normal</br> |
+| Intensity           | The intensity of the light. The color is multiplied by this value before being sent to the shader. Currently, this value has no units. This will change in future versions   | 
 Culling Mask        | Defines which entity groups are affected by this light. By default, all groups are affected.   |
 
 ## See also
 
-* [Shadow optimization](shadow-optimization.md)
+* [Shadows](shadows.md)

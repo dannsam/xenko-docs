@@ -1,20 +1,16 @@
 # Ambient lights
 
-An ambient light is a uniform light with no direction.
+**Ambient lights** are uniform lights that illuminate the entire scene. Because they don't come from any specific direction or source, ambient lights illuminate everything equally, even objects in shadow or obscured by other objects. They don't cast shadows. 
+
+Ambient lights aren't realistic light sources. Instead, they contribute to the overall brightness and aesthetic of a scene.
 
 ![media/AmbientLightOverview.png](media/AmbientLightOverview.png) 
 
-An example of an object lit uniformly:
+An example of an object lit uniformly with ambient lighting (with a pure diffuse material):
 
-| Ambient Lighting                                     |
-| ---------------------------------------------------- |
 | ![media/AmbientLight.png](media/AmbientLight.png)  |
-|                                                      |
-| Material Pure Diffuse                                |
 
 ## Properties
-
-Ambient lights have the following properties:
 
 ![media/AmbientLightProperties.png](media/AmbientLightProperties.png) 
 

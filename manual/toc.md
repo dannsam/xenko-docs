@@ -90,7 +90,7 @@
 ### [Point lights](graphics/lights-and-shadows/point-lights.md)
 ### [Skybox lights](graphics/lights-and-shadows/skybox-lights.md)
 ### [Ambient lights](graphics/lights-and-shadows/ambient-lights.md)
-### [Shadow optimization](graphics/lights-and-shadows/shadow-optimization.md)
+### [Shadows](graphics/lights-and-shadows/shadows.md)
 ## [Low-level API](graphics/low-level-api/index.md)
 ### [Textures and render targets](graphics/low-level-api/textures-and-render-targets.md)
 ### [Pipeline state](graphics/low-level-api/pipeline-state.md)

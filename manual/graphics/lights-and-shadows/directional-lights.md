@@ -1,6 +1,8 @@
 # Directional lights
 
-A **directional light** comes uniformly from one direction. This is often used for simulating distant lights such as the sun.
+**Directional lights** come uniformly from one direction. This is often used for simulating large, distant light sources such as the sun. By default, new scenes you create in Xenko contain a single directional light.
+
+Directional lights cast shadows.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 
@@ -18,7 +20,7 @@ When you select a directional light, the gizmo displays the light's main directi
 
 | Property     | Description                                                                                                         |
 | ------------ | ------------------------------------------------------------------------------------------------------------------- |
-| Color        | The color of the directional light. Note that currently, the light supports an RGB color. Future versions of Xenko will also support temperature colors.
+| Color        | The color of the directional light. Currently the light supports an RGB color. Future versions of Xenko will also support temperature colors.
 | Shadow      | See **Shadow properties** below
 |Intensity| The intensity of the light. The color is multiplied by this value before being sent to the shader. Note that currently this value has no units. This will change in future versions                                      |
 | Culling Mask | Defines which entity groups are affected by this light. By default, all groups are affected                        |
@@ -54,8 +56,8 @@ The colors shows the selected cascade texture for each distance range (Green:0, 
 | Property            | Description                                                                                                                                                                                                                       |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Filter              | Filtering produces **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering). Other techniques will be implemented in future versions
-| Size                | The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**. See [Shadow optimization](shadow-optimization.md) for more information. For a directional light, this value is by default **large**, as a directional light has more visual impact than a range limited light                                                                                            |
-| Cascade Count       | The number of cascades used for slicing the range of depth covered by the light. Values are 1, 2 or 4 cascades, though a typical scene would use 4 cascades.                                                                      |
+| Size                | The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**. See [Shadows](shadows.md) for more information. For a directional light, this value is by default **large**, as a directional light has more visual impact than a range limited light                                                                                            |
+| Cascade Count       | The number of cascades used for slicing the range of depth covered by the light. Values are 1, 2 or 4 cascades, though a typical scene uses 4 cascades                                                                      |
 | Stabilization mode  | <br>Defines the technique used to lower the effect of shadow map flickering. Shadow map flickering is a result of the potential aliasing introduced by the shadow map technique, Whenever a texel from the point-of-view of the light covers more space than a texel from the camera's point of view</br> <br> **Projection snapping** tries to snap the projection matrix of the light to snap it on a texel dependent on the resolution of the shadow map texture</br> <br>**View snapping** tries to snap the target of the view matrix of the light (center of the camera view cascade frustum)</br> <br>Both projection and view snapping force the shadow matrix to cover a larger region, increasing the aliasing of the shadow map texture. Note that when using depth range camera is set to automatic, the stabilization mode is ignored</br>                                                                                                                                   |
 | Depth Range         | Defines how is calculated the visible depth range from the camera point-of-view. This directly affects how near and how far cascades splits occur                                                                                |
 | Automatic           | If enabled, the visible depth range is read back from the actual depth buffer and the min and max view distance is calculated automatically                                                                                      |
@@ -63,11 +65,11 @@ The colors shows the selected cascade texture for each distance range (Green:0, 
 | Manual Min Distance | The minimum depth in meters, valid when the automatic mode is disabled                                                                                                                                                  |
 | Manual Max Distance | The maximum depth in meters, valid when the automatic mode is disabled                                                                                                                                                  |
 | Blend Cascades      | Determines whether to smooth the transition between cascades from the point of view. If set to false, there's no transition when the shadow is rendered with a different cascade                                                |
-| Partition mode      | <br>Determines how cascades split distance is determined</br> <br> **Manual**: the split is defined manually for each cascade, in percentage of the visible depth range. A value of 0.1 for a cascade means that the cascade is rendered on the distance 0.1 * (VisibleDepthMax - VisibleDepthMin)<br> <br> **Logarithmic**: the split is automatically calculated using a logarithmic scale <br> The PSSM factor lets you blend from a pure logarithmic scale (0.0f) to a pure uniform scale (1.0f)<br>                                                                                            |
+| Partition mode      | <br>Determines how cascade split distance is determined</br> <br> **Manual**: the split is defined manually for each cascade, in percentage of the visible depth range. A value of 0.1 for a cascade means that the cascade is rendered on the distance 0.1 * (VisibleDepthMax - VisibleDepthMin)<br> <br> **Logarithmic**: the split is automatically calculated using a logarithmic scale <br> The PSSM factor lets you blend from a pure logarithmic scale (0.0f) to a pure uniform scale (1.0f)<br>                                                                                            |
 | Bias Parameters     | Used to avoid some artifacts of the shadow map technique                                                                                                                                                     |
 | Depth Bias          | The amount of depth to add to the sampling depth to avoid the phenomenon of shadow acne                                                                                                                                          |
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal                                                                                                                                                                           |
-| Debug               | For debugging purposes. If set to true, the shadow map displays a color per cascade                                                                                                                                           |
+| Debug               | For debugging purposes. If enabled, the shadow map displays a color per cascade in the scene editor                                                                                                                                          |
 ## See also
 
-* [Shadow optimization](shadow-optimization.md)
+* [Shadows](shadows.md)
