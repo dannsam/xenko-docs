@@ -683,3 +683,13 @@ h5{
     display: flex;
     align-items: center;
 }
+#xk-current-version.form-control{
+    border-radius: 0;
+    padding: 5px 10px 5px 2px;
+    margin: 10px 0;
+}
+#xk-current-version.form-control:active,
+#xk-current-version.form-control:focus,
+#xk-current-version.form-control:hover{
+    outline: none;
+}
