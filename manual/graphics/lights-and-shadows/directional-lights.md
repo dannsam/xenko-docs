@@ -45,7 +45,7 @@ To see shadow cascades in the scene editor, in the property grid, under the **Sh
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | ![media/directional-lights-8.png](media/directional-lights-8.png)  | ![media/directional-lights-9.png](media/directional-lights-9.png)  |
 
-The different colors indicate the cascade for each distance range (Green:0, Blue:1, Purple: 2, Red: 3).
+The different colors indicate the cascade for each distance range (Green: 0, Blue: 1, Purple: 2, Red: 3).
 
 ### Directional light shadow properties
 
@@ -57,7 +57,7 @@ The different colors indicate the cascade for each distance range (Green:0, Blue
 | Stabilization mode  | <br>The technique used to reduce shadow map flickering. Flickering is a result of the potential aliasing introduced by the shadow map when a texel from the perspective of the light covers more space than a texel from the camera's perspective.</br> <br> **Projection snapping** tries to snap the projection matrix of the light to a texel dependent on the resolution of the shadow map texture</br> <br>**View snapping** tries to snap the target of the view matrix of the light (center of the camera view cascade frustum)</br> <br>Both projection and view snapping force the shadow matrix to cover a larger region, increasing the aliasing of the shadow map texture. Note that when using depth range camera is set to automatic, the stabilization mode is ignored</br>
 | Depth Range         | How the visible depth range from the camera's perspective is calculated. This directly affects how near and how far cascades splits occur
 | Automatic           | If enabled, the visible depth range is read back from the actual depth buffer and the min and max view distance is calculated automatically
-| Guard Distance      | A guard distance in meters per rendering frame, added to make sure that when the camera is moving, the visible depth range is still valid. This property is only valid for the automatic depth range mode. <br>For example, if the game is running at 60FPS and the guard distance is 1m, the camera shouldn't move faster than 1m per 1/60s
+| Guard Distance      | Adds a margin distance to the extent of the shadow map boundary. **Note: This feature is deprecated and will be removed soon. We recommend you ignore it.**
 | Manual Min Distance | The minimum depth in meters, valid when the automatic mode is disabled
 | Manual Max Distance | The maximum depth in meters, valid when the automatic mode is disabled
 | Blend Cascades      | Smooths the transition between cascades  
