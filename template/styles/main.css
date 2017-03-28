@@ -39,7 +39,7 @@ ul li  img, ol li img {
 /********************************************/
 
 .sidefilter {
-    top: 90px;
+    top: 100px;
     width: 280px;
 }
 
@@ -385,7 +385,7 @@ h5{
 }
 /* Redesign Documentation main page (05.12.2016) */
 .submenu-navbar{
-    margin: 5px 0 5px 10px;
+    margin: 5px 0 5px 50px;
 }
 .submenu-navbar li{
     display: inline-block;
@@ -662,7 +662,7 @@ h5{
     }
     #sidetoc{
         height: calc(100vh - 166px);
-        margin-top: 66px;
+        margin-top: 76px;
         overflow: auto;
         background-color: #f1f1f1;
     }
@@ -692,4 +692,7 @@ h5{
 #xk-current-version.form-control:focus,
 #xk-current-version.form-control:hover{
     outline: none;
+}
+#xk-current-version + .submenu-navbar{
+    margin-left: 10px;
 }
