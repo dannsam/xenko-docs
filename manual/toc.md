@@ -91,6 +91,7 @@
 ### [Directional lights](graphics/lights-and-shadows/directional-lights.md)
 ### [Skybox lights](graphics/lights-and-shadows/skybox-lights.md)
 ### [Spot lights](graphics/lights-and-shadows/spot-lights.md)
+### [Light probes](graphics/lights-and-shadows/light-probes.md)
 ### [Shadows](graphics/lights-and-shadows/shadows.md)
 ## [Low-level API](graphics/low-level-api/index.md)
 ### [Textures and render targets](graphics/low-level-api/textures-and-render-targets.md)
