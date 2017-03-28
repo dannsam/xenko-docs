@@ -1,6 +1,6 @@
 # Add a light
 
-To add a light to a scene, add a [light component](xref:SiliconStudio.Xenko.Engine.LightComponent) component to an entity.
+To add a light to a scene, add a [light component](xref:SiliconStudio.Xenko.Engine.LightComponent) to an entity.
 
 1. Select the entity you want to be a light.
 
