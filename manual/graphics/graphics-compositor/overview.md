@@ -20,9 +20,6 @@ The graphics compositor is accessible by clicking on the scene root object and t
 
 ![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png) 
 
-> [!Note]
-> You can currently only edit the graphics compositor through the property editor. Future versions of Game Studio will have a dedicated editor.
-
 ## Concepts
 
 The graphics compositor is a pluggable system, so you can write your own compositor. It currently comes with a default **compositor by layers**.
