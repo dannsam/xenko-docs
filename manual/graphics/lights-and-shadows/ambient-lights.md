@@ -8,7 +8,7 @@ Ambient lights aren't realistic light sources. Instead, they contribute to the o
 
 An example of an object lit uniformly with ambient lighting (with a pure diffuse material):
 
-| ![media/AmbientLight.png](media/AmbientLight.png)  |
+![media/AmbientLight.png](media/AmbientLight.png)
 
 ## Properties
 
