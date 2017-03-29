@@ -32,7 +32,7 @@ Geometry attributes define the shape of the material:
 - surface (macro surface definition like normal maps)
 - microSurface (micro surface definition like gloss maps)
 
-## Tessellation
+### Tessellation
 
 Real-time tessellation uses a HW feature of the GPU to massively subdivide triangles. This increases the realism and potential of deformations of the surface geometry.
 
@@ -40,7 +40,7 @@ Real-time tessellation uses a HW feature of the GPU to massively subdivide trian
 | --------------  | -------------- | -------------------- 
 | ![media/material-attributes-2.png](media/material-attributes-2.png)  | ![media/material-attributes-3.png](media/material-attributes-3.png)  | ![media/material-attributes-4.png](media/material-attributes-4.png)
 
-### Flat tessellation
+#### Flat tessellation
 
 Tessellates the mesh uniformly with a flat tessellation.
 
@@ -57,7 +57,7 @@ The following snapshot shows that the flat tessellation is adding extra triangle
 | Triangle Size          | The size of a tessellated triangle in screen-space units        
 | Adjacent Edges Average | Adjust the **triangle size** values from the average of adjacent edges values 
 
-### Point normal tessellation
+#### Point normal tessellation
 
 Tessellates the mesh using the curvature provided by the normals of the mesh.
 
@@ -73,8 +73,6 @@ The following image shows that the point normal tessellation is adding extra tri
 | ---------------------- | ------------
 | Triangle Size          | The size of a tessellated triangle in screen-space units        
 | Adjacent Edges Average | Adjust the **triangle size** and **normal curvature** values from the average of adjacent edges values 
-
-## Displacement
 
 ### Displacement map
 
@@ -119,11 +117,11 @@ Normal mapping ([Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping)) i
 | Scale & Bias | When enabled, the value coming from the texture is considered as a positive value ranging from 0.0 to 1.0 and the shader will apply a scale to get the range -1.0 to 1.0. 
 | Normal xy    | When enabled, assume that only the (x,y) are valid and z = 1.0
 
-## MicroSurface
+### MicroSurface
 
-An attribute that defines the behavior of the micro surface fine grained normals.
+Defines the behavior of the micro surface fine grained normals.
 
-### Glossiness Map
+#### Glossiness Map
 
 A map that provides per-pixel information for glossiness.
 
@@ -147,7 +145,6 @@ In the screenshots below, using a material with the following attributes, we see
 | Glossiness Map | The glossiness map color provider 
 | Invert         | When enabled, considers the map as a roughness map instead of a glossiness map. A roughness value of 1.0 means a glossiness value of 0.0. A roughness value of 0.0 means a glossiness value of 1.0 
 
-
 ## Shading attributes
 
 The **shading attributes** define the main color characteristics of the material and how it reacts to the lights.
@@ -155,7 +152,7 @@ The **shading attributes** define the main color characteristics of the material
 > [!Note]
 > At least one shading model - diffuse, specular or emissive model -  must be selected in order to display a material.    
 
-### Diffuse Color
+### Diffuse
 
 The diffuse final contribution is calculated from:
 
@@ -166,7 +163,7 @@ Currently, the Diffuse attribute supports only a **Diffuse Map** and the shading
 
 ![media/material-attributes-23.png](media/material-attributes-23.png) 
 
-### Diffuse Model
+#### Diffuse Model
 
 The default supported diffuse model is the **Lambert** model.
 
@@ -174,7 +171,7 @@ A Lambert diffuse material implies that the light is reflected equally in all di
 
 ![media/material-attributes-24.png](media/material-attributes-24.png)
 
-In the screenshot below, we see a pure diffuse material with Lambert lighting:
+The screenshot below shows a pure diffuse material with Lambert lighting:
 
 ![media/material-attributes-25.png](media/material-attributes-25.png) 
 
@@ -186,7 +183,9 @@ In the screenshot below, we see a pure diffuse material with Lambert lighting:
 | Diffuse Map   | The diffuse map color provider                                           
 | Diffuse Model | The shading model for diffuse lighting
 
-### Specular Color
+### Specular
+
+#### Specular Color
 
 The specular color can be defined using two common workflows:
 
@@ -229,7 +228,7 @@ Unlike the metalness workflow, It allows to have a different specular color from
 > [!Note]
 > With the layering system, it's still possible to combine a metalness and specular workflow into the same material.
 
-### Specular Model
+#### Specular Model
 
 A pure specular surface produces a highlight of a light in a mirror direction. In practice,a broad range of specular materials, not entirely smooth, can reflect the light not in a single direction.
 
@@ -247,9 +246,9 @@ The microfacet is defined by the following formula, where Rs is the resulting sp
 | Visibility          | Defines the visibility between of the microfacets between (0, 1). Also known as the geometry attenuation - Shadowing and Masking - in the original Cook-Torrance. Xenko simplifies the formula to use the visibility term instead : <br>![media/material-attributes-35.png](media/material-attributes-35.png)</br>      <br>and <br>![media/material-attributes-36.png](media/material-attributes-36.png)</br>        <br>**Schlick GGX** (default)</br> <br> **Implicit**: The microsurface is always visible and doesn't generate any shadowing or masking</br> <br>**Cook-Torrance**</br>  <br>**Kelemen**</br> <br>**Neumann**</br> <br>**Smith-Beckmann**</br> <br>**Smith-GGX correlated**</br>  <br>**Schlick-Beckmann**</br> 
 | Normal Distribution | <br>Defines how the normal is distributed. The glossiness attribute is used by this part of the function to modify the distribution of the normal.</br> <br>**GGX** (default) </br> <br>**Beckmann**</br>  <br>**Blinn-Phong**</br> 
 
-### Emissive Model
+### Emissive
 
-An emissive material is a surface that emits a light.
+An **emissive** material is a surface that emits a light.
 
 ![media/material-attributes-37.png](media/material-attributes-37.png) 
 
@@ -323,7 +322,11 @@ The following screenshots show the influence of the cutoff Alpha value.
 
 | Alpha = 0.01 | Alpha = 0.5     | Alpha = 1.0    
 | -------------| ---- | ------ 
-| ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)                       
+| ![media/material-attributes-44.png](media/material-attributes-44.png)  | ![media/material-attributes-45.png](media/material-attributes-45.png)  | ![media/material-attributes-46.png](media/material-attributes-46.png)
+
+## Layers
+
+See [Material layers](material-layers.md).           
 
 ## See also
 
