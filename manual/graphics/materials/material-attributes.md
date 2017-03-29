@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Artist</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Material attributes** define the core characteristics of the material, such as its diffuse color, diffuse shading model, and so on. 
+**Material attributes** define the core characteristics of the material, such as its diffuse color, diffuse shading model, and so on.
 
 ![media/material-attributes-1.png](media/material-attributes-1.png)
 
@@ -95,7 +95,7 @@ Depending on the stage the displacement is applied, the results can be very diff
 
 ## Surface
 
-The **surface** defines the macro surface normals.
+The **surface** defines the **macro** surface normals.
 
 ![media/material-attributes-13.png](media/material-attributes-13.png) 
 
@@ -119,18 +119,18 @@ Normal mapping ([Wikipedia page](http://en.wikipedia.org/wiki/Normal_mapping)) i
 
 ### MicroSurface
 
-Defines the behavior of the micro surface fine grained normals.
+Defines the behavior of the micro surface fine-grained normals.
 
 #### Glossiness Map
 
 A map that provides per-pixel information for glossiness.
 
-- A value of 1.0 means that the surface is highly glossy (the coarse normal is not perturbed)
-- A value of 0.0 means that the surface is very rough (the coarse normal is highly perturbed in several directions)
+- A value of 1.0 means the surface is highly glossy (the coarse normal isn't perturbed)
+- A value of 0.0 means the surface is very rough (the coarse normal is highly perturbed in several directions)
 
 ![media/material-attributes-17.png](media/material-attributes-17.png)
 
-In the screenshots below, using a material with the following attributes, we see the result of the glossiness factor on the material:
+The screenshots below show different levels of glossiness on a material:
 
 - Diffuse = #848484, Lambert
 - Specular Metalness = 1.0, GGX
@@ -139,44 +139,43 @@ In the screenshots below, using a material with the following attributes, we see
 | -- | --- | ------- | ----------- | ----- |
 | ![media/material-attributes-18.png](media/material-attributes-18.png)  | ![media/material-attributes-19.png](media/material-attributes-19.png)  | ![media/material-attributes-20.png](media/material-attributes-20.png)  | ![media/material-attributes-21.png](media/material-attributes-21.png)  | ![media/material-attributes-22.png](media/material-attributes-22.png)  
 
-
 | Property       | Description
 | -------------- | -- |
-| Glossiness Map | The glossiness map color provider 
-| Invert         | When enabled, considers the map as a roughness map instead of a glossiness map. A roughness value of 1.0 means a glossiness value of 0.0. A roughness value of 0.0 means a glossiness value of 1.0 
+| Glossiness Map | The glossiness map color provider
+| Invert         | Inverts the glossiness value (eg a value of 1.0 produces zero glossiness instead of maximum). This effectively turns the glossiness attribute into a **roughness** attribute, similar to other game engines
 
 ## Shading attributes
 
 The **shading attributes** define the main color characteristics of the material and how it reacts to the lights.
 
 > [!Note]
-> At least one shading model - diffuse, specular or emissive model -  must be selected in order to display a material.    
+>To display a material, you need to select at least one shading model (diffuse, specular or emissive model) in the model attributes.
 
 ### Diffuse
 
-The diffuse final contribution is calculated from:
-
-- The Diffuse defines the color used by the diffuse model
-- The Diffuse Model defines which shading model is used for rendering the diffuse component
-
-Currently, the Diffuse attribute supports only a **Diffuse Map** and the shading model only the **Lambert** model.
-
-![media/material-attributes-23.png](media/material-attributes-23.png) 
-
-#### Diffuse Model
-
-The default supported diffuse model is the **Lambert** model.
-
-A Lambert diffuse material implies that the light is reflected equally in all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
-
-![media/material-attributes-24.png](media/material-attributes-24.png)
-
-The screenshot below shows a pure diffuse material with Lambert lighting:
+The **diffuse** is the basic color of the material. A pure diffuse material is completely non-reflective and "flat" in appearance.
 
 ![media/material-attributes-25.png](media/material-attributes-25.png) 
 
+The final diffuse contribution is calculated like this:
+
+- the **diffuse** defines the color used by the diffuse model
+- the **diffuse model** defines which shading model is used for rendering the diffuse component
+
+Currently, the Diffuse attribute supports only a **Diffuse Map**.
+
+![media/material-attributes-23.png](media/material-attributes-23.png)
+
+#### Diffuse Model
+
+The **diffuse model** determines how the diffuse material reacts to light. 
+
+Currently, the only supported diffuse model is the **Lambert** model. Under this model, light is reflected equally in all directions with an intensity following a cosine angular distribution (angle between the normal and the light):
+
+![media/material-attributes-24.png](media/material-attributes-24.png)
+
 > [!Note]
-> A pure Lambertian material doesn't exist in practice. A material has always a little specular reflection. This effect is more visible at grazing angles (a mostly diffuse surface becomes shiny at grazing angle).    
+> A pure Lambertian material doesn't exist in reality. A material has always a little specular reflection. This effect is more visible at grazing angles (a mostly diffuse surface becomes shiny at grazing angle).
 
 | Property      | Description  
 | ------------- | ----------- 
@@ -184,6 +183,8 @@ The screenshot below shows a pure diffuse material with Lambert lighting:
 | Diffuse Model | The shading model for diffuse lighting
 
 ### Specular
+
+A **specular** is a point of light reflected in a material.
 
 #### Specular Color
 
@@ -266,7 +267,7 @@ With HDR and a bloom post-processing effect, we can observe the influence of an 
 
 ### Occlusion
 
-The Occlusion Map is the default occlusion attribute. The occlusion map use geometry occlusion information backed into a texture in order to modulate the ambient and direct lighting.
+The Occlusion Map is the default occlusion attribute. The occlusion map use geometry occlusion information baked into a texture to modulate the ambient and direct lighting.
 
 ![media/material-attributes-39.png](media/material-attributes-39.png) 
 
@@ -275,11 +276,11 @@ These screenshots demonstrate the use of occlusion maps and cavity maps:
 | Occlusion Map  | Cavity Map    | Final Composition    
 | ------- | ------ | ------- 
 | ![media/material-attributes-40.png](media/material-attributes-40.png)  | ![media/material-attributes-41.png](media/material-attributes-41.png)  | ![media/material-attributes-42.png](media/material-attributes-42.png)  
-| Coarse occlusion of the ambient light  | Fine grained occlusion of direct light  | Result                       
+| Coarse occlusion of the ambient light  | Fine-grained occlusion of direct light  | Result                       
 
 | Property  | Description 
 | --------- | ---- 
-| Occlusion Map             | The occlusion map scalar provider that determines how much ambient light is accessible on the material. A value of 1.0 means that the material is fully lighted by ambient lighting. A value of 0.0 means that the material is not lighted by the ambient lighting 
+| Occlusion Map             | The occlusion map scalar provider that determines how much ambient light is accessible on the material. A value of 1.0 means that the material is fully lit by ambient lighting. A value of 0.0 means that the material is not lighted by the ambient lighting 
 | Direct Lighting Influence | Applies to Occlusion Map and influences direct lighting  |
 | Cavity Map                | The cavity map scalar provider is multiplied with direct lighting. It lets you define very fine grained cavity where direct light can't enter. The cavity map is usually defined for thin concave cavity
 | Diffuse Cavity            | A factor for diffuse lighting influence of the cavity map. A value of 1.0 means the cavity map fully influences the diffuse lighting 
