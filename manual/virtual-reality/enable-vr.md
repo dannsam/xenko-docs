@@ -28,7 +28,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     |--------|  --------
     | Oculus | Supports Oculus Rift devices (best support for Oculus Rift) 
     | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive) 
-    | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the forward editor is connected to the **Editor**.
+    | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
 
 6. Make sure the list order is correct.
 
