@@ -24,11 +24,11 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
 5. From the **Item** drop-down menu, select a VR API you want your game to support. You can add as many as you need.
 
-    | API    | Description                                                                          |
-    |--------|  -----------------------------------------------------------------------------------|
-    | Oculus | Supports Oculus Rift devices (best support for Oculus Rift)                                                         |
-    | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive)                                               |
-    | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the forward editor is connected to the **Editor**.|
+    | API    | Description 
+    |--------|  --------
+    | Oculus | Supports Oculus Rift devices (best support for Oculus Rift) 
+    | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive) 
+    | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the forward editor is connected to the **Editor**.
 
 6. Make sure the list order is correct.
 
@@ -54,10 +54,10 @@ Your game is now ready to use VR.
 
 ## VR properties
 
-| Property             | Description                                                                                                             |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Ignore camera rotation             | Disables camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)             |
-| Resolution scale | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU |
+| Property             | Description      
+|----------------------|--------
+| Ignore camera rotation  | Disables camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)   
+| Resolution scale | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU 
 
 ## Multisample anti-aliasing 
 
