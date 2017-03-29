@@ -77,4 +77,4 @@ To open a project with a more recent version of Xenko:
 2. Select the Xenko version you want to open the project with. Game Studio prompts you to upgrade the project when it opens.
 
 >[!Note]
->After you update a project to use a newer version of Xenko, you might need to make manual changes to get it to work. **Make sure you back up the project up and all its related files before you upgrade it.**
+>After you update a project to use a newer version of Xenko, you might need to make manual changes to get it to work. **Make sure you back up the project and all its related files before you upgrade it.**
