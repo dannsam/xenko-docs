@@ -6,9 +6,15 @@
 
 ## How light probes work
 
-Each light probe you place in a scene captures snapshots of the area around it, creating a six-sided image (a cubemap). This captures information about the surrounding colors. This information is used in the lighting engine to...
-
 Each time you click the button, it "bounces" light again, simulating the effect of light bouncing back and forth between surfaces and building an increasingly realistic capture around the light probe. You can click the bounce button as many times as you want without slowing performance. However, this has diminishing returns; after a few bounces, the changes become unnoticeable. Five or six bounces should be sufficient.
+
+## Create a light probe
+
+Light probes are entities.
+
+* Right-click the scene or entity tree and select 
+
+![Add light probe](media/add-light-probe.png)
 
 ## Create and place light probes
 
