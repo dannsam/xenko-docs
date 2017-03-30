@@ -9,7 +9,7 @@ There are two ways to create assets:
  
 ## Use the **Add asset** button
 
- 1. In the *Asset View*, click ![](../get-started/media/create-and-add-assets-add-new-asset-button.png)
+ 1. In the *Asset View*, click ![](media/create-and-add-assets-add-new-asset-button.png)
 
  2. Select the type of asset you want to create.
 
@@ -45,15 +45,15 @@ To create an asset by dragging and dropping a resource file:
 
 2. Drag the resource file from Explorer to the asset view:
 
-	![Drap and drop a resource file to the asset view](../get-started/media/create-assets-drop-resource.png)
+	![Drap and drop a resource file to the asset view](media/create-assets-drop-resource.png)
 
 3. Select the kind of asset you want to create:
    
-	![List of asset templates](../get-started/media/create-assets-drag-drop-select-asset-template.png)
+	![List of asset templates](media/create-assets-drag-drop-select-asset-template.png)
 
 	Game Studio adds the asset to the asset view:
 
-	![Texture asset created](../get-started/media/create-assets-drag-drop-asset-created.png)
+	![Texture asset created](media/create-assets-drag-drop-asset-created.png)
 
 Game Studio automatically imports all dependencies in the resource files and creates corresponding assets. For example, you can add a model or animation resource file and Game Studio handles everything else.
 

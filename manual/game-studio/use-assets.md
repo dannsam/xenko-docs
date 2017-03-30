@@ -12,15 +12,15 @@ There are three ways to use assets:
 
 Many kinds of component reference assets. For example, model components use model assets. Components that require assets have **asset picker** docks.
 
-![Asset Picker](../get-started/media/use-assets-asset-picker-dock.png)
+![Asset Picker](media/use-assets-asset-picker-dock.png)
 
 To add an asset to an entity component, drag the asset to the **asset picker** in the component properties (in the **property grid**). You can drop assets in the text field or the empty thumbnail.
 
-![Drag and drop an asset](../get-started/media/use-assets-drag-and-drop.png)
+![Drag and drop an asset](media/use-assets-drag-and-drop.png)
 
-Alternatively, click the **hand icon** ![](../get-started/media/use-assets-hand-icon.png) to open the **asset picker** and select the asset from the list.
+Alternatively, click the **hand icon** ![](media/use-assets-hand-icon.png) to open the **asset picker** and select the asset from the list.
 
-![Asset picker](../get-started/media/use-assets-asset-picker.png)
+![Asset picker](media/use-assets-asset-picker.png)
 
 > [!NOTE]
 > The asset picker only displays assets of types expected by the property. For example, if the property is an audio listener, the asset picker only displays audio assets.
@@ -35,7 +35,7 @@ You can add asset references to assets the same way you add them to entity compo
 
 ## Clear a reference
 
-To clear a reference to an asset, use the ![eraser](../get-started/media/use-assets-eraser.png) icon in the asset picker dock.
+To clear a reference to an asset, use the ![eraser](media/use-assets-eraser.png) icon in the asset picker dock.
 
 ## Examine references
 
@@ -44,7 +44,7 @@ You can examine the references in a selected asset in the **References** in the 
 * The **Referencees** tab displays the assets referenced by the selected asset. 
 * The **Referencers** tab displays the assets that reference the selected asset.
 
-![References tab](../get-started/media/use-assets-references-tab.png)
+![References tab](media/use-assets-references-tab.png)
 
 > [!Tip]
 > If you can't see the References tab, make sure it's displayed under **View > References**.

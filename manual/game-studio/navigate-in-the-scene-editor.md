@@ -5,7 +5,7 @@
 
 You can move around the scene and change the perspective of the editor camera. The XYZ axes in the bottom left show your orientation in 3D space.
 
-   ![Scene orientation gizmo](../get-started/media/navigate-in-a-scene-scene-orientation-gizmo.png)
+   ![Scene orientation gizmo](media/navigate-in-a-scene-scene-orientation-gizmo.png)
 
 ## Move around in the scene
 
@@ -19,7 +19,7 @@ There are several ways to move the editor camera around the scene editor.
 To walk around the scene, hold the **left mouse button** and move the **the mouse**. This moves the editor camera along the X and Z dimensions.
 
 <video controls autoplay loop height="240" width="320">
-                <source src="../get-started/media/navigate-in-scene-walk-in-the-scene.mp4" type="video/mp4">
+                <source src="media/navigate-in-scene-walk-in-the-scene.mp4" type="video/mp4">
 </video>
 
 ### Fly
@@ -37,7 +37,7 @@ Action                          | Effect
 **E key + right mouse button**  | Move up
  
 <video controls autoplay loop height="240" width="320">
-                <source src="../get-started/media/navigate-in-scene-fly-in-the-scene.mp4" type="video/mp4">
+                <source src="media/navigate-in-scene-fly-in-the-scene.mp4" type="video/mp4">
 </video>
  
 ### Rotate around a point
@@ -46,10 +46,10 @@ You can rotate around a center point by holding **Alt** and the **left mouse but
 
 The point of rotation is always the center of the screen. You can adjust the distance to the center with the **mouse wheel**.
 
-![Rotation](../get-started/media/navigate-in-scene-orbital-rotation-schema.png)
+![Rotation](media/navigate-in-scene-orbital-rotation-schema.png)
 
 <video controls autoplay loop height="240" width="320">
-                <source src="../get-started/media/navigate-in-scene-orbital-rotation.mp4" type="video/mp4">
+                <source src="media/navigate-in-scene-orbital-rotation.mp4" type="video/mp4">
 </video>
  
 ### Focus on an entity
@@ -61,7 +61,7 @@ You can also focus by clicking the **magnifying glass icon** next to the entity 
 ![Focus icon](media/focus-icon.png)
 
 <video controls autoplay loop height="240" width="320">
-                <source src="../get-started/media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
+                <source src="media/navigate-in-scene-focus-on-entity-using-f-key.mp4" type="video/mp4">
 </video>
 
 > [!TIP] 
@@ -83,7 +83,7 @@ Focus                  | Select an entity and press the F button
 
 You can change the camera editor perspective using the **view camera gizmo** in the top-right of the scene editor.
 
-![View camera gizmo](../get-started/media/navigate-in-a-scene-view-camera-gizmo.png)
+![View camera gizmo](media/navigate-in-a-scene-view-camera-gizmo.png)
 
 ### Snap camera to position
 
@@ -96,7 +96,7 @@ Edge     | Faces the two adjacent faces at a 45° angle
 Corner   | Faces the three adjacent faces at a 45° angle
 
 <video controls autoplay loop height="240" width="320">
-                <source src="../get-started/media/navigate-in-scene-change-view-angle.mp4" type="video/mp4">
+                <source src="media/navigate-in-scene-change-view-angle.mp4" type="video/mp4">
 </video>
 
 ## Camera options
@@ -111,14 +111,14 @@ To display the camera options, click the **camera icon** in the top-right of the
 
 In **orthographic view**, lines of identical length appear the same length. Parallel lines never touch, and there's no vanishing point. It's easy to tell if objects are lined up exactly.
 
-   ![Perspective and orthographic diagram](../get-started/media/perspective-orthographic-diagram.png)
+   ![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
 
-   ![Perspective and orthographic views](../get-started/media/perspective-and-orthographic-views.png)
+   ![Perspective and orthographic views](media/perspective-and-orthographic-views.png)
 
 You can also switch between perspective and orthographic views by clicking the **view camera gizmo** as it faces you.
 
 <video controls autoplay loop height="240" width="320">
-              <source src="../get-started/media/navigate-in-scene-switch-projection-mode.mp4" type="video/mp4">
+              <source src="media/navigate-in-scene-switch-projection-mode.mp4" type="video/mp4">
 </video>
 
 #### Field of view
