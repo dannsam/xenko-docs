@@ -21,10 +21,11 @@ if ($API)
 }
 else
 {
-    If(Test-Path api)
+    If(Test-Path api/.manifest)
     {
         Write-Host "Erasing API documentation..."
-        Remove-Item api -recurse
+        Remove-Item api/*yml -recurse
+        Remove-Item api/.manifest 
     }
 }
 
