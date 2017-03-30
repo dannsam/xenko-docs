@@ -10,6 +10,8 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">Updated</span> [Lights and shadows](../graphics/lights-and-shadows/index.md)
+* <span class="label label-doc-highlight">New</span>[Distribute a game](../files-and-folders/distribute-a-game.md)
 * <span class="label label-doc-highlight">Updated</span> [Materials](../graphics/materials/index.md)
 * <span class="label label-doc-highlight">Updated</span> [Skyboxes](../graphics/skyboxes.md)
 * <span class="label label-doc-highlight">Updated</span> [Skybox lights](../graphics/lights-and-shadows/skybox-lights.md)
