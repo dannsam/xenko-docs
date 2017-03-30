@@ -59,7 +59,7 @@ The **Create a new game** dialog opens.
 
 10. Click **OK**.
 
-Xenko creates the project and opens it in Game Studio. For information, see [Game Studio](game-studio.md).
+Xenko creates the project and opens it in Game Studio. For more information, see [Game Studio](../game-studio/index.md).
 
 ## Create a project from a sample
 
@@ -90,4 +90,4 @@ Xenko creates the project and opens it in Game Studio.
 
 ## What's next?
 
-* [Get familiar with Game Studio](game-studio.md)
+* [Get familiar with Game Studio](../game-studio/index.md)

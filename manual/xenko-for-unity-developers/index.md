@@ -14,7 +14,7 @@ The Xenko editor is **Game Studio**. This is the equivalent of the Unity® Edito
 
 You can customize the Game Studio layout by dragging tabs, similar to Visual Studio. 
 
-For more information about Game Studio, see the [Game Studio](../get-started/game-studio.md) page.
+For more information about Game Studio, see the [Game Studio](../game-studio/index.md) page.
 
 ## Terminology
 
@@ -100,7 +100,7 @@ To set the default scene:
 
 2. Select the default scene in the asset picker and click **OK**.
 
-For more information about scenes, see [Introduction to scenes](../get-started/introduction-to-scenes.md).
+For more information about scenes, see [Introduction to scenes](../game-studio/scenes.md).
 
 ## Entities vs GameObjects
 
@@ -182,7 +182,7 @@ Like Unity®, Xenko supports file formats including:
 | Videos | .mov, .mp4, .wmv | 
 | Fonts | .ttf, .otf |
 
-For more information about assets, see [Introduction to assets](../get-started/assets.md).
+For more information about assets, see [Introduction to assets](../game-studio/assets.md).
 
 ## Prefabs
 

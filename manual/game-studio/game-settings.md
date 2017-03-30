@@ -34,7 +34,7 @@ To set the default scene:
 
 2. Select the default scene in the asset picker and click **OK**.
 
-For more information about scenes, see [Introduction to scenes](../get-started/introduction-to-scenes.md).
+For more information about scenes, see [Introduction to scenes](../game-studio/scenes.md).
 
 ### Rendering settings
 
@@ -136,4 +136,4 @@ After you add a platform filter, you can select it as a **specific filter** unde
 
 ## See also
 
-* [Assets](../get-started/assets.md)
+* [Assets](../game-studio/assets.md)

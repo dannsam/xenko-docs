@@ -71,5 +71,5 @@ To do this, in the **Asset View**, right-click the derived asset and select **Cl
 
 ## See also
 
-* [Assets](../get-started/assets.md)
+* [Assets](../game-studio/assets.md)
 * [Prefabs](prefabs.md)
