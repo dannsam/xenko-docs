@@ -57,7 +57,7 @@ Xenko and Unity® differ in the following ways:
 
 * Xenko doesn't require resource files and asset files to be in the same folder. You can save resource files in the Assets folder if you want, but instead we recommend you save them in the **Resources** folder. This makes sharing your project via version control easier.
 
-For more information about project structure in Xenko, including advice about how to organize and share your files, see the [Project structure](../get-started/project-structure.md) page.
+For more information about project structure in Xenko, including advice about how to organize and share your files, see the [Project structure](../files-and-folders/project-structure.md) page.
 
 ### Open the project directory from Game Studio
 

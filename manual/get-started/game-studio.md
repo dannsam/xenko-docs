@@ -25,7 +25,3 @@ You can show and hide different parts of the Game Studio in the View menu.
 ![Game Studio](media/game-studio-view-menu.png)
 
 You can also resize and move parts of the UI.
-
-## What's next?
-
-* [Organize your project](project-structure.md)
