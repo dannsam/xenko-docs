@@ -1,12 +1,13 @@
 # Lights and shadows
 
-Lights and shadows are essential components to increase reality of your scene.
+Lights in Xenko are provided by [light components](xref:SiliconStudio.Xenko.Engine.LightComponent). There are several kinds of light.
 
 ## In this section
 
-- [Directional lights](directional-lights.md)
-- [Spot lights](spot-lights.md)
-- [Point lights](point-lights.md)
-- [Ambient lights](ambient-lights.md)
-- [Skybox lights](skybox-lights.md)
-- [Shadow optimization](shadow-optimization.md)
+* [Add a light](add-a-light.md)
+* [Point lights](point-lights.md)
+* [Ambient lights](ambient-lights.md)
+* [Directional lights](directional-lights.md)
+* [Skybox lights](skybox-lights.md)
+* [Spot lights](spot-lights.md)
+* [Shadows](shadows.md)
