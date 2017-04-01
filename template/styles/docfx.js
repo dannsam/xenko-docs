@@ -190,17 +190,19 @@ $(function () {
 
         worker.onmessage = function (oEvent) {
           switch (oEvent.data.e) {
-            case 'index-ready':
-              indexReady.resolve();
-              break;
             case 'query-ready':
               var hits = oEvent.data.d;
               handleSearchResults(hits);
+              break;
+            case 'index-ready':
+              indexReady.resolve();
+              $("body").trigger("queryReady");
               break;
           }
         }
 
         indexReady.promise().done(function () {
+          // $('#search-query').show();
           $("body").bind("queryReady", function () {
             worker.postMessage({ q: query, chapter: searchChapter});
           });
@@ -279,6 +281,7 @@ $(function () {
     }
 
     function handleSearchResults(hits) {
+      $('#floatingBarsG').hide();
       var numPerPage = 10;
       $('#pagination').empty();
       $('#pagination').removeData("twbs-pagination");
