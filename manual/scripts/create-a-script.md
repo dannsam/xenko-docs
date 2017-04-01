@@ -25,7 +25,7 @@ You can create scripts using Game Studio or an IDE such as Visual Studio.
 Game Studio creates a script. You can see it in the **asset view**.
 
 >[!Note]
-> Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../get-started/project-structure.md).
+> Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
   
 You can also see the new script in Visual Studio.
 
@@ -71,7 +71,7 @@ namespace MyGame
 	
 	* Other projects (eg *MyGame.Windows*, *MyGame.Android* etc) contain platform-specific code.
 
-	For more information, see [Project structure](../get-started/project-structure.md).
+	For more information, see [Project structure](../files-and-folders/project-structure.md).
 
 2. Add a new class file to the `.Game` project. To do this, right-click the project and select **Add > New Item**.
 
@@ -123,7 +123,7 @@ You can see the script in the **asset view**.
 ![New script on Asset view tab](media/create-a-script-new-script-asset-view.png)
 
 >[!Note]
-> Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../get-started/project-structure.md).
+> Although scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in the relevant assembly folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
 
 ## See also
 

@@ -10,7 +10,7 @@ The trigger detects when colliders enter it, which you can use to script events.
 >[!Note]
 >[Character colliders](characters.md) can't be used as triggers.
 
-To make a trigger: 
+## Create a trigger 
 
 1. Create a [collider](colliders.md).
 

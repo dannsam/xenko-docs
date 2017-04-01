@@ -7,7 +7,7 @@
 
 ![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-2. Add a static collider
+## Add a static collider
    
 1. Select the entity you want to make a static collider.
 
