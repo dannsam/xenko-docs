@@ -167,5 +167,27 @@ $(function() {
           }, 100);
       }
     }
+    function redirectToCurrentDocVersion(){
+      // Set current doc version at start of page
+      if($('#xk-current-version').length > 0){
+        var urlVersion = window.location.pathname.split('/')[1];
+        $("#xk-current-version").val(urlVersion);
+      }
+      $('#xk-current-version').on('change', function(){
+        var hostVersion = window.location.host;
+        var pathVersion = window.location.pathname;
+        var sectionVersion;
+        if(/manual/.test(pathVersion)){
+          sectionVersion = 'manual'
+        } else if(/api/.test(pathVersion)){
+          sectionVersion = 'api'
+        } else if (/ReleaseNotes/.test(pathVersion)){
+          sectionVersion = 'ReleaseNotes'
+        }
+        var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + sectionVersion
+        $(window).attr('location', newAddress);
+      })
+    }
+    redirectToCurrentDocVersion();
 });
 
