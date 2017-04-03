@@ -7,7 +7,7 @@
 **Skyboxes** are backgrounds that create the illusion of space and distance. They're also reflected in reflective surfaces in your scene. Typical skybox backgrounds include skies, clouds, mountains, and other scenery. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lights-and-shadows/skybox-lights.md).
 
 > [!Note]
-> Currently, Xenko doesn't support skydomes.
+> Currently, Xenko doesn't support skydomes or local skyboxes.
 
 ## Cubemaps
 
