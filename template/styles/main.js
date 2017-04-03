@@ -159,44 +159,8 @@ $(function() {
     function redirectToCurrentDocVersion(){
       // Set current doc version at start of page
       if($('#xk-current-version').length > 0){
-        var urlVersion = window.location.pathname.split('/')[1]
-        switch(urlVersion){
-          case 'latest':
-            console.log('latest');
-            $("#xk-current-version").val("latest");
-            break;
-          case '1.10':
-            console.log('1.10');
-            $("#xk-current-version").val("1.10");
-            break;
-          case '1.9':
-            console.log('1.9');
-            $("#xk-current-version").val("1.9");
-            break;
-          case '1.8':
-            console.log('1.8');
-            $("#xk-current-version").val("1.8");
-            break;
-          case '1.7':
-            console.log('1.7');
-            $("#xk-current-version").val("1.7");
-            break;
-          case '1.6':
-            console.log('1.6');
-            $("#xk-current-version").val("1.6");
-            break;
-          case '1.5':
-            console.log('1.5');
-            $("#xk-current-version").val("1.5");
-            break;
-          case '1.4':
-            console.log('1.4');
-            $("#xk-current-version").val("1.4");
-            break;
-          default:
-            console.log('default');
-            $("#xk-current-version").val("latest");
-        }
+        var urlVersion = window.location.pathname.split('/')[1];
+        $("#xk-current-version").val(urlVersion);
       }
       $('#xk-current-version').on('change', function(){
         // console.log($("#xk-current-version" ).val())
@@ -211,7 +175,6 @@ $(function() {
           sectionVersion = 'ReleaseNotes'
         }
         var newAddress = '//' + hostVersion + '/' + $("#xk-current-version" ).val() + '/' + sectionVersion
-        console.log(newAddress);
         $(window).attr('location', newAddress);
       })
     }
