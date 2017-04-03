@@ -18,11 +18,7 @@ In the diagram below, a strip is created by connecting the particles and renderi
 
 ## Ribbons vs trails
 
-Both ribbons and trails generate a flat surface which follows an axis connecting adjacent particles in a line. This line defines one of the axes of the surface. The difference between ribbons and trails is in the second axis used to build the shape.
-
-In the case of ribbons, the second axis is positioned in camera space, facing the ribbon towards the camera at all times. This gives the illusion of volume to the ribbon, but the shape isn't stable in 3D, as it changes when the camera moves.
-
-Trails read an extra attribute, **Direction**, from the particle data and use it as a second axis for the surface. This **fixes the surface in 3D space**, so trails don't change with the camera position. 
+Both ribbons and trails generate a flat surface which follows an axis connecting adjacent particles in a line. This line defines one of the axes of the surface. The difference is that ribbons always face the camera, and trails don't.
 
 The gif below shows the different behavior of ribbons (red) and trails (yellow) when viewed from different camera angles. Note how the ribbon doesn't change as the camera moves; it's fixed in space.
 
