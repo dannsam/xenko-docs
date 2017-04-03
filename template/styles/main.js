@@ -163,7 +163,6 @@ $(function() {
         $("#xk-current-version").val(urlVersion);
       }
       $('#xk-current-version').on('change', function(){
-        // console.log($("#xk-current-version" ).val())
         var hostVersion = window.location.host;
         var pathVersion = window.location.pathname;
         var sectionVersion;
