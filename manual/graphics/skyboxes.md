@@ -75,11 +75,7 @@ To add a cubemap to an entity:
 
 Xenko displays the skybox in the scene.
 
-## Use a skybox as a light source
-
-You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
-
-## Example code
+#### Change a the skybox at runtime
 
 The following code changes the cubemap in a background:
 
@@ -97,6 +93,10 @@ public void ChangeBackgroundParameters()
 	background.Intensity = 1.5f;
 }
 ```
+
+## Use a skybox as a light source
+
+You can use a skybox to light the scene. Xenko analyzes the skybox texture and generates lighting using [image-based lighting (Wikipedia)](https://en.wikipedia.org/wiki/Image-based_lighting). For more information, see [Skybox lights](lights-and-shadows/skybox-lights.md).
 
 ## See also
 
