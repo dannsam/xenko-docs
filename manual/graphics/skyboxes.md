@@ -24,6 +24,8 @@ Currently, Game Studio can't convert image files to `.dds` files. Use another ap
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
 
+You can create a cubemap from the current scene in Game Studio. For more information, see [Create a cubemap](../game-studio/create-a-cubemap.md).
+
 ### Add a cubemap to a project
 
 * In the **Asset view**, click ![Add asset](lights-and-shadows/media/engine-skybox-add-new-asset-button.png), select **Textures** > **Color texture**, and browse to the `.dds` file.
@@ -87,3 +89,4 @@ public void ChangeBackgroundParameters()
 
 * [Skybox lights](lights-and-shadows/skybox-lights.md)
 * [Lighting and shadows](lights-and-shadows/index.md)
+* [Game Studio - Create a cubemap](../game-studio/create-a-cubemap.md)
