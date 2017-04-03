@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Skyboxes** are backgrounds that create the illusion of space and distance. Typical skybox backgrounds include skies, clouds, mountains, and other scenery. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lights-and-shadows/skybox-lights.md).
+**Skyboxes** are backgrounds that create the illusion of space and distance. They're also reflected in reflective surfaces in your scene. Typical skybox backgrounds include skies, clouds, mountains, and other scenery. Skyboxes are pre-rendered, so require little GPU and CPU. You can also [use skyboxes to light a scene](lights-and-shadows/skybox-lights.md).
 
 > [!Note]
 > Currently, Xenko doesn't support skydomes.
@@ -17,14 +17,27 @@ To create a skybox, Xenko encloses the scene in a cube and maps a **cubemap** (a
 
 ![Merged skybox](media/skybox-assembled.png)
 
-Cubemaps are composed of six images, one for each face of the skybox cube. Xenko uses cubemaps with the extension `.dds`.
-
 Currently, Game Studio can't convert image files to `.dds` files. Use another application to create a cubemap from separate image files, such as:
 
 * [Nvidia conversion tool](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop)
 * [ATI conversion tool](http://developer.amd.com/tools-and-sdks/archive/games-cgi/cubemapgen)
 
-You can create a cubemap from the current scene in Game Studio. For more information, see [Create a cubemap](../game-studio/create-a-cubemap.md).
+### Create a cubemap in Game Studio
+
+You can capture a cubemap from a position in your scene.
+
+1. In the **scene editor**, position the camera at the point where you want to capture the cubemap. The direction the camera faces doesn't matter, only the position.
+
+    Typically, you should capture cubemaps at the center of your scene to create the best all-round view.
+
+2. In the scene editor toolbar, click **Generate cubemap**.
+
+3. Browse to the location on disk you want to save the cubemap, specify a name, and click **Save**.
+
+>![Tip]
+>We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../files-and-folders/version-control.md).
+
+Game Studio creates a cubemap `.dds` file in the location you specified.
 
 ### Add a cubemap to a project
 
@@ -38,7 +51,7 @@ You can create a cubemap from the current scene in Game Studio. For more informa
 
 The cubemap is now available as an asset in your project.
 
-## Use a cubemap as a skybox
+### Use a cubemap as a skybox
 
 To use a cubemap as a skybox, add it to a **background component**.
 
@@ -89,4 +102,3 @@ public void ChangeBackgroundParameters()
 
 * [Skybox lights](lights-and-shadows/skybox-lights.md)
 * [Lighting and shadows](lights-and-shadows/index.md)
-* [Game Studio - Create a cubemap](../game-studio/create-a-cubemap.md)
