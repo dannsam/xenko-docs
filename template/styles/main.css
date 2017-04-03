@@ -801,14 +801,22 @@ h5{
     }
 }
 /*Hide filter area at the Manual amd ReleaseNotes pages*/
-#sidetoc.xk-page-Manual,
-#sidetoc.xk-page-ReleaseNotes{
-    height: calc(100vh - 90px);
+#sidetoggle.xk-page-Manual #sidetoc,
+#sidetoggle.xk-page-ReleaseNotes #sidetoc{
+    height: calc(100vh - 105px);
     margin-top: 0;
 }
-#sidetoc.xk-page-Api .sidefilter,
-#sidetoc.xk-page-Default .sidefilter{
+#sidetoggle.xk-page-Manual,
+#sidetoggle.xk-page-ReleaseNotes{
+    top: 105px;
+}
+#sidetoggle.xk-page-Api .sidefilter,
+#sidetoggle.xk-page-Default .sidefilter{
     display: block !important;
+}
+#sidetoggle.xk-page-Manual .sidetoc,
+#sidetoggle.xk-page-ReleaseNotes .sidetoc{
+    padding-top: 10px;
 }
 /*Preloader*/
 #floatingBarsG{

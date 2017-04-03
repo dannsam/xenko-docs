@@ -100,7 +100,7 @@ $(function () {
     var query;
     var relHref = $("meta[property='docfx\\:rel']").attr("content");
     var searchChapterSrc = $('#search-query').data('page').toLowerCase();
-    var chapterNameElem = $('#sidetoc');
+    var chapterNameElem = $('#sidetoggle');
     if(searchChapterSrc.indexOf('manual') >= 0){
       searchChapter = 'manual';
       var tocInterval = setInterval(function(){
@@ -135,10 +135,12 @@ $(function () {
       }, 100);
     }
     if (typeof relHref != 'undefined') {
-      var search = searchFactory();
-      search();
-      highlightKeywords();
-      addSearchEvent();
+      $('#search-query').on('focus', function(){
+        var search = searchFactory();
+        search();
+        highlightKeywords();
+        addSearchEvent();
+      })
     }
 
     // Search factory
