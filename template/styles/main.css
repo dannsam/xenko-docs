@@ -799,28 +799,6 @@ h5{
         text-align: left;
     }
 }
-.bs-docs-sidenav li>a[href="#namespaces"]{
-    display: none;
-}
-.xk-namespaces-list li>a{
-    color: #da0830;
-    font-size: 20px;
-    font-family: "cabinsemibold",Verdana,Helvetica,Arial,sans-serif;
-}
-.xk-namespaces-list li>a:hover{
-    color: #f19118;
-}
-.xk-namespaces-list li> .nav li a{
-    color: #000;
-    padding: 5px 15px;
-    font-family: "cabinsemibold",Verdana,Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-family: Arial,sans-serif;
-}
-.xk-namespaces-list li> .nav li a:hover{
-    background: transparent;
-    text-decoration: underline;
-}
 #xk-current-version.form-control{
     width: auto;
     height: auto;
@@ -851,4 +829,5 @@ h5{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
