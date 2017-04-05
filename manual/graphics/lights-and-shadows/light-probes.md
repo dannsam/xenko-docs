@@ -2,7 +2,7 @@
 
 **Light probes** simulate the effect of light bouncing off surfaces and illuminating other surfaces in your scene.
 
-![Light probes on and off](media/light-probes-on-and-off.png)
+![Light probes on and off](media/light-probes-on-and-off.jpg)
 
 Light probes create areas in which light is reflected between surfaces. The screenshot below shows a [point light](point-lights.md) surrounded by light probes.
 
@@ -28,7 +28,7 @@ Game Studio adds a light probe to the scene.
 
 Light probes appear as spheres in the scene editor. Before you capture a light bounce for the the first time, they have a completely black surface.
 
-![Light](media/light-probes-black.png)
+![Light](media/light-probes-black.jpg)
 
 >[!Tip]
 >You can quickly duplicate light probes just like other entities. To do this, select a light probe, hold Ctrl, and move it with the mouse.
@@ -47,9 +47,9 @@ Light probes must be placed in a way that creates a **3D volume**. Light is refl
 
 A typical strategy is to place light probes in a grid across your scene covering a general area, as in the screenshots below:
 
-![Grid layout](media/light-probes-grid-layout.png)
+![Grid layout](media/light-probes-grid-layout.jpg)
 
-![Light probes in the editor](media/light-probes-in-editor.png)
+![Light probes in the editor](media/light-probes-in-editor.jpg)
 
 ## 3. Capture light bounces
 
@@ -75,4 +75,4 @@ You can still see the effect of the light probes in the scene editor.
 
 To change the visibility of the light probe grid in the scene editor, under the gizmo options in the scene editor toolbar, use the **Light probe grid** checkbox.
 
-![Light probe grid on](media/light-probe-grid-on.png)
+![Light probe grid on](media/light-probe-grid-on.jpg)
