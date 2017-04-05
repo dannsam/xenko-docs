@@ -39,7 +39,7 @@ ul li  img, ol li img {
 /********************************************/
 
 .sidefilter {
-    top: 90px;
+    top: 100px;
     width: 280px;
 }
 
@@ -462,7 +462,7 @@ h5{
     right: 40px;
     display: block;
     overflow: hidden;
-    background: url(http://xenko.com/images/svg/arrow.svg) no-repeat -26px 50%;
+    background: url(http://xenko.com/media/api-icons/svg/arrow.svg) no-repeat -26px 50%;
     background-size: 140px 200px;
 }
 .xk-documentation-list li:hover .xi_arrowLink{
@@ -654,7 +654,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Class-icon.png");
+    background: url("/media/api-icons/xk-Class-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -666,7 +666,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Enum-icon.png");
+    background: url("/media/api-icons/xk-Enum-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -677,7 +677,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Method-icon.png");
+    background: url("/media/api-icons/xk-Method-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -689,7 +689,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Interface-icon.png");
+    background: url("/media/api-icons/xk-Interface-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -700,7 +700,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Field-icon.png");
+    background: url("/media/api-icons/xk-Field-icon.png");
     margin-right: 5px;
      position: absolute;
     top: 4px;
@@ -712,7 +712,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Struct-icon.png");
+    background: url("/media/api-icons/xk-Struct-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -723,7 +723,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Property-icon.png");
+    background: url("/media/api-icons/xk-Property-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -734,7 +734,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Construct-icon.png");
+    background: url("/media/api-icons/xk-Construct-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -745,7 +745,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Events-icon.png");
+    background: url("/media/api-icons/xk-Events-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -791,13 +791,61 @@ h5{
     }
     #sidetoc{
         height: calc(100vh - 166px);
-        margin-top: 66px;
+        margin-top: 76px;
         overflow: auto;
         background-color: #f1f1f1;
     }
     .toc .level1 > li{
         text-align: left;
     }
+}
+.bs-docs-sidenav li>a[href="#namespaces"]{
+    display: none;
+}
+.xk-namespaces-list li>a{
+    color: #da0830;
+    font-size: 20px;
+    font-family: "cabinsemibold",Verdana,Helvetica,Arial,sans-serif;
+}
+.xk-namespaces-list li>a:hover{
+    color: #f19118;
+}
+.xk-namespaces-list li> .nav li a{
+    color: #000;
+    padding: 5px 15px;
+    font-family: "cabinsemibold",Verdana,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-family: Arial,sans-serif;
+}
+.xk-namespaces-list li> .nav li a:hover{
+    background: transparent;
+    text-decoration: underline;
+}
+#xk-current-version.form-control{
+    width: auto;
+    height: auto;
+    padding: 3px 0px;
+}
+.xk-flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+#xk-current-version.form-control{
+    border-radius: 0;
+    padding: 5px 10px 5px 2px;
+    margin: 10px 0;
+}
+#xk-current-version.form-control:active,
+#xk-current-version.form-control:focus,
+#xk-current-version.form-control:hover{
+    outline: none;
+}
+#xk-current-version + .submenu-navbar{
+    margin-left: 10px;
 }
 .nav > li, .toc .nav > li > a{
     white-space: nowrap;
