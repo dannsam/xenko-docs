@@ -654,7 +654,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/media/api-icons/xk-Class-icon.png");
+    background: url("../media/api-icons/xk-Class-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -666,7 +666,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/media/api-icons/xk-Enum-icon.png");
+    background: url("../media/api-icons/xk-Enum-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -677,7 +677,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/media/api-icons/xk-Method-icon.png");
+    background: url("../media/api-icons/xk-Method-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -689,7 +689,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/media/api-icons/xk-Interface-icon.png");
+    background: url("../media/api-icons/xk-Interface-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -700,7 +700,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/media/api-icons/xk-Field-icon.png");
+    background: url("../media/api-icons/xk-Field-icon.png");
     margin-right: 5px;
      position: absolute;
     top: 4px;
@@ -712,7 +712,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/media/api-icons/xk-Struct-icon.png");
+    background: url("../media/api-icons/xk-Struct-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -723,7 +723,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/media/api-icons/xk-Property-icon.png");
+    background: url("../media/api-icons/xk-Property-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -734,7 +734,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/media/api-icons/xk-Construct-icon.png");
+    background: url("../media/api-icons/xk-Construct-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -745,7 +745,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/media/api-icons/xk-Events-icon.png");
+    background: url("../media/api-icons/xk-Events-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
