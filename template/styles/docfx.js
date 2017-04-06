@@ -135,12 +135,8 @@ $(function () {
       }, 100);
     }
     if (typeof relHref != 'undefined') {
-      $('#search-query').on('focus', function(){
-        var search = searchFactory();
-        search();
-        highlightKeywords();
-        addSearchEvent();
-      })
+      highlightKeywords();
+      addSearchEvent();
     }
 
     // Search factory
@@ -204,6 +200,7 @@ $(function () {
         }
 
         indexReady.promise().done(function () {
+          
           // $('#search-query').show();
           $("body").bind("queryReady", function () {
             worker.postMessage({ q: query, chapter: searchChapter});
@@ -232,7 +229,12 @@ $(function () {
           return e.which !== 13;
         });
 
-        $('#search-query').keyup(function () {
+        $('#search-query').on('keyup', function () {
+          if(!$(this).hasClass('xk-uploded')){
+            $(this).addClass('xk-uploded');
+            var search = searchFactory();
+            search();
+          }
           query = $(this).val();
           if (query.length < 3) {
             flipContents("show");
