@@ -229,7 +229,7 @@ $(function () {
           return e.which !== 13;
         });
 
-        $('#search-query').on('keyup', function () {
+        $('#search-query').on('input', function () {
           if(!$(this).hasClass('xk-uploded')){
             $(this).addClass('xk-uploded');
             var search = searchFactory();

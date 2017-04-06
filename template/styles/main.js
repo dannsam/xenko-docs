@@ -17,7 +17,7 @@ $(function() {
        e.returnValue = false; 
     }
     // Activation keys are pressed, which causes the search function
-    $('#search-query').trigger('keyup');
+    $('#search-query').trigger('input');
   })
   // Captions are not automatically shown anymore by default; uncomment to reenable them
   //showCaptionFromAlt("article img");
