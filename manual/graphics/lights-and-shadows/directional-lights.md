@@ -1,5 +1,9 @@
 # Directional lights
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Artist</span>
+
 **Directional lights** come uniformly from one direction. This is often used for simulating large, distant light sources such as the sun. By default, new scenes you create in Xenko contain a single directional light.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
@@ -73,4 +77,5 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 * [Ambient lights](ambient-lights.md)
 * [Skybox lights](skybox-lights.md)
 * [Spot lights](spot-lights.md)
+* [Light probes](light-probes.md)
 * [Shadows](shadows.md)

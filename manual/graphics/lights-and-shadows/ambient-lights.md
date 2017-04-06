@@ -1,5 +1,9 @@
 # Ambient lights
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Artist</span>
+
 **Ambient lights** are uniform lights that illuminate the entire scene. Because they don't come from any specific direction or source, ambient lights illuminate everything equally, even objects in shadow or obscured by other objects. They don't cast shadows. 
 
 Ambient lights aren't realistic light sources. Instead, they contribute to the overall brightness and aesthetic of a scene.
@@ -27,4 +31,5 @@ An example of an object lit uniformly with ambient lighting (with a pure diffuse
 * [Directional lights](directional-lights.md)
 * [Skybox lights](skybox-lights.md)
 * [Spot lights](spot-lights.md)
+* [Light probes](light-probes.md)
 * [Shadows](shadows.md)

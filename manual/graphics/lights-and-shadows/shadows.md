@@ -1,5 +1,9 @@
 # Shadows
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Artist</span>
+
 Shadows bring significant information and realism to a scene.
 
 | Shadows **off**                                          | Shadows **on**                                               |

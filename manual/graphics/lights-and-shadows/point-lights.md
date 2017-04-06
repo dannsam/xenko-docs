@@ -1,5 +1,9 @@
 # Point lights
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Artist</span>
+
 **Point lights** emit light in all directions within a sphere. They're useful for simulating sources of local light, such as lamps and lightbulbs, and cast shadows.
 
 ![media/PointLightOverview.png](media/PointLightOverview.png) 
@@ -32,4 +36,5 @@ Once selected, the point light gizmo displays the sphere in which it projects li
 * [Ambient lights](ambient-lights.md)
 * [Skybox lights](skybox-lights.md)
 * [Spot lights](spot-lights.md)
+* [Light probes](light-probes.md)
 * [Shadows](shadows.md)
