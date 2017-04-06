@@ -4,7 +4,9 @@
 
 ![Light probes on and off](media/light-probes-on-and-off.jpg)
 
-Light probes create areas in which light is reflected between surfaces. The screenshot below shows a [point light](point-lights.md) surrounded by light probes.
+Light probes capture the lighting at the position you place them.
+
+The screenshot below shows a [point light](point-lights.md) surrounded by light probes.
 
 ![Cornell box](media/light-probes-cornell.png)
 
@@ -35,7 +37,7 @@ Light probes appear as spheres in the scene editor. Before you capture a light b
 
 ## 2. Place light probes
 
-Light probes must be placed in a way that creates a **3D volume**. Light is reflected in this area. This means:
+Light probes must be placed in a way that creates a **3D volume**. This means:
 
 * you need at least four light probes in the scene - enough to create the four points of a tetrahedron, as below:
 
@@ -71,8 +73,8 @@ To change the visibility of the light probes in the scene editor, under the **gi
 
 You can still see the effect of the light probes in the scene editor.
 
-## Show and hide light probe grid
+## Show and hide light probe wireframe
 
-To change the visibility of the light probe grid in the scene editor, under the gizmo options in the scene editor toolbar, use the **Light probe grid** checkbox.
+To change the visibility of the light probe wireframe in the scene editor, under the gizmo options in the scene editor toolbar, use the **Light probe grid** checkbox.
 
-![Light probe grid on](media/light-probe-grid-on.jpg)
+![Light probe wireframe on](media/light-probe-wireframe-on.jpg)

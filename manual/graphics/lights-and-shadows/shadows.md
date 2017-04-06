@@ -12,7 +12,7 @@ Only [directional lights](directional-lights.md), [point lights](point-lights.md
 
 Xenko uses **shadow mapping** to render shadows. To understand shadow maps, imagine a camera in the center of the sun, so you're looking down from the sun's perspective.
 
-[Light and shadow](media/light-and-shadow.png)
+![Light and shadow](media/light-and-shadow.png)
 
 Everything the sun sees is in light. Everything hidden from the sun (ie behind **occluders**) is in shadow.
 
