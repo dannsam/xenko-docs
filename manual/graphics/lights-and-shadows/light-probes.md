@@ -1,16 +1,20 @@
 # Light probes
 
-**Light probes** simulate the effect of light bouncing off surfaces and illuminating other surfaces in your scene.
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Artist</span>
+
+**Light probes** capture the lighting at the position you place them. They simulate **indirect light**, the effect of light bouncing off surfaces and illuminating other surfaces. They can make a dramatic difference to the mood and appearance of your scene.
 
 ![Light probes on and off](media/light-probes-on-and-off.jpg)
 
-Light probes capture the lighting at the position you place them.
-
-The screenshot below shows a [point light](point-lights.md) surrounded by light probes.
+The screenshot below shows a [point light](point-lights.md) surrounded by light probes in the scene editor. The probes form 3D areas (shown in the scene editor by the yellow wireframe connecting the probes).
 
 ![Cornell box](media/light-probes-cornell.png)
 
-The light from the point light bounces off surfaces in and around the light probe area, and is reflected onto other surfaces. For example, in the screenshot below, notice how the red of the wall is reflected on the other objects.
+Xenko colors pixels within a light probe area to simulate the effect of light bouncing from nearby surfaces. To find a color for a given pixel, Xenko interpolates from the lighting captured by the four surrounding light probes.
+
+For example, in the screenshot below, notice how the red of the wall is reflected on the other objects. In the scene editor, this is also visible on the surface of the light probes themselves.
 
 ![Light probes - more reflection](media/light-probes-illumination.png)
 
@@ -25,8 +29,6 @@ Right-click the scene or entity tree and select **Light > Light probe**.
 Alternatively, create an empty entity and add a **Light probe component** in the property grid.
 
 ![Add light probe component](media/add-light-probe-component.png)
-
-Game Studio adds a light probe to the scene. 
 
 Light probes appear as spheres in the scene editor. Before you capture a light bounce for the the first time, they have a completely black surface.
 
@@ -67,14 +69,24 @@ After you create the first light bounce, click the **generate additional light b
 
 You can click the bounce button as many times as you want without affecting performance. However, this has diminishing returns; after a few bounces, the changes become unnoticeable. Three or four bounces should be enough.
 
-## Show and hide light probes
+## Show and hide light probes in the scene editor
 
-To change the visibility of the light probes in the scene editor, under the **gizmo options** in the scene editor toolbar, use the **Light probes** checkbox.
+Under the **gizmo options** in the scene editor toolbar, use the **Light probes** checkbox.
 
 You can still see the effect of the light probes in the scene editor.
 
-## Show and hide light probe wireframe
+## Show and hide light probe wireframe in the scene editor
 
-To change the visibility of the light probe wireframe in the scene editor, under the gizmo options in the scene editor toolbar, use the **Light probe grid** checkbox.
+Under the gizmo options in the scene editor toolbar, use the **Light probe wireframe** checkbox.
 
 ![Light probe wireframe on](media/light-probe-wireframe-on.jpg)
+
+## See also
+
+* [Add a light](add-a-light.md)
+* [Point lights](point-lights.md)
+* [Ambient lights](ambient-lights.md)
+* [Directional lights](directional-lights.md)
+* [Skybox lights](skybox-lights.md)
+* [Spot lights](spot-lights.md)
+* [Shadows](shadows.md)
