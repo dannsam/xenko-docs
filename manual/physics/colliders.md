@@ -14,8 +14,27 @@ There are three types of collider:
 You can also: 
 
 * set the [shape of collider components](collider-shapes.md)
-* make [trigger](triggers.md) colliders, and use them to script events when objects pass through them
+* make [triggers](triggers.md), and use them to script events when objects pass through them
 * constrict collider movement with [constraints](constraints.md)
+
+## How colliders interract
+
+Physics colliders interact according to the table below.
+
+* "Collisions" refers to collision information and events only. 
+
+* "Dynamic" means both collision information and events, plus dynamic response (ie the colliders bump into each other instead of passing through each other).
+
+|   | Kinematic objects   | Kinematic triggers   | Rigid body colliders   | Rigid body triggers   | Static colliders        | Static triggers   
+|---|-------------|---------------------|-------------|---------------------|----------|------------------
+| Kinematic objects        | Collisions           | Collisions  | Collisions and dynamic| Collisions   | Collisions    | Collisions     
+| Kinematic triggers | Collisions           | Collisions   |Collisions           | Collisions     | Collisions     | Collisions   
+| Rigid body colliders          | Collisions and dynamic     | Collisions     | Collisions and dynamic     | Collisions     | Collisions and dynamic| Collisions
+| Rigid body triggers | Collisions         | Collisions  | Collisions | Collisions     | Collisions     | Collisions
+| Static colliders| Collisions| Collisions| Collisions and dynamic | Collisions   | Nothing   | Nothing
+|Static triggers     | Collisions     | Collisions     | Collisions     | Collisions    | Nothing    | Nothing
+
+For example, rigid body colliders dynamically collide with static colliders (ie bump into them). However, no objects dynamically collide with triggers. The collision is detected in the code, but the object will pass through.
 
 ## Show colliders in the scene editor
 
