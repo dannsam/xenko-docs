@@ -37,7 +37,7 @@ For more information about the Game Settings asset, see [Game settings](../game-
 
 ### 2. Enable HRTF on the entities
 
-1. Select the entity with the audio emitter that contains the sound you want to enable for HRTF.
+1. Select the entity with the [audio emitter](audio-emitters.md) that contains the sound you want to enable for HRTF.
 
 2. In the **property grid** (on the right by default), under **Audio emitter**, select **Use HRTF**.
 
@@ -56,4 +56,4 @@ For more information about audio emitters, including the properties you can chan
 * [Spatialized audio](spatialized-audio.md)
 * [Audio emitters](audio-emitters.md)
 * [Audio listeners](audio-listeners.md)
-* [Game settings](../game-studio/game-settings.md).
+* [Game settings](../game-studio/game-settings.md)
