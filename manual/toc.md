@@ -80,6 +80,7 @@
 #### [Automatic shader stage input/output](graphics/effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)
 #### [Shader stages](graphics/effects-and-shaders/shading-language/shader-stages.md)
 ## [Lights and shadows](graphics/lights-and-shadows/index.md)
+### [Add a light](graphics/lights-and-shadows/add-a-light.md)
 ### [Directional lights](graphics/lights-and-shadows/directional-lights.md)
 ### [Spot lights](graphics/lights-and-shadows/spot-lights.md)
 ### [Point lights](graphics/lights-and-shadows/point-lights.md)
