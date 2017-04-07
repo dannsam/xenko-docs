@@ -27,7 +27,7 @@ When you select a directional light, the gizmo displays the light's main directi
 |Intensity| The intensity of the light. The color is multiplied by this value before being sent to the shader. Note that currently this value has no units. This will change in future versions
 | Culling Mask | Defines which entity groups are affected by this light. By default, all groups are affected
 
-## Directional light shadows
+## Shadows cast by directional lights
 
 Like [point lights](point-lights.md) and [spot lights](spot-lights.md), directional lights cast shadows. However, shadows cast by directional lights can spawn across a large view range, so they require special treatment to improve their realism.
 
@@ -40,6 +40,10 @@ This method slices the the depth range from the camera's point of view into diff
 Put simply, the closer shadows are to the camera, the better quality they are. This means you can spend more memory on shadows closer to the camera, where you can see them, and less on distant shadows.
 
 You can have one, two, or four cascades. The more cascades you use, the more memory you save, but the lower resolution your shadows become over distance.
+
+This an example of a shadow map generated from a directional light, using four cascades:
+
+![FPS scene shadow map](media/shadow-atlas-2x.png)
 
 #### See shadow cascades
 

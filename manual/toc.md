@@ -214,5 +214,6 @@
 # [Troubleshooting](troubleshooting/index.md)
 ## [Profiling](troubleshooting/profiling.md)
 ## [Default value changes ignored at runtime](troubleshooting/default-value-changes-ignored-at-runtime.md)
+## [Lights don't cast shadows](troubleshooting/lights-dont-cast-shadows.md)
 
 # [Xenko for Unity® developers](xenko-for-unity-developers/index.md)
