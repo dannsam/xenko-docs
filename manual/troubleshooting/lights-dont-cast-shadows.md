@@ -7,7 +7,7 @@ If you've enabled shadows on a light in your scene, but it isn't casting shadows
 | Size: 2x     | Size: 1x
 | ---------------------------------------------------------------- | -------------------------------------------------------------
 | ![FPS scene shadow map](../graphics/lights-and-shadows/media/shadow-atlas-2x.png)               | ![FPS scene shadow map](../graphics/lights-and-shadows/media/shadow-atlas-1x.png)
-| <br>This light source uses the entirety of the shadow atlas. <br>This means other lights won't cast shadows, as there's no room left in the atlas.</br> | <br>This light source uses half the shadow atlas.</br> <br>The other half is unused and can be allocated to other light sources.</br>
+| This light source uses the entirety of the shadow atlas. This means other lights won't cast shadows, as there's no room left in the atlas.| This light source uses half the shadow atlas. The other half is unused and can be allocated to other light sources.
 
 ## See also
 
