@@ -41,6 +41,7 @@ ul li  img, ol li img {
 .sidefilter {
     top: 100px;
     width: 280px;
+    display: none !important;
 }
 
 .sidetoc {
@@ -462,7 +463,7 @@ h5{
     right: 40px;
     display: block;
     overflow: hidden;
-    background: url(http://xenko.com/images/svg/arrow.svg) no-repeat -26px 50%;
+    background: url(http://xenko.com/media/api-icons/svg/arrow.svg) no-repeat -26px 50%;
     background-size: 140px 200px;
 }
 .xk-documentation-list li:hover .xi_arrowLink{
@@ -654,7 +655,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Class-icon.png");
+    background: url("../media/api-icons/xk-Class-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -666,7 +667,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Enum-icon.png");
+    background: url("../media/api-icons/xk-Enum-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -677,7 +678,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Method-icon.png");
+    background: url("../media/api-icons/xk-Method-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -689,7 +690,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Interface-icon.png");
+    background: url("../media/api-icons/xk-Interface-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -700,7 +701,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Field-icon.png");
+    background: url("../media/api-icons/xk-Field-icon.png");
     margin-right: 5px;
      position: absolute;
     top: 4px;
@@ -712,7 +713,7 @@ h5{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url("/images/xk-Struct-icon.png");
+    background: url("../media/api-icons/xk-Struct-icon.png");
     margin-right: 5px;
     background-size: 100% 100%;
     position: relative;
@@ -723,7 +724,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Property-icon.png");
+    background: url("../media/api-icons/xk-Property-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -734,7 +735,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Construct-icon.png");
+    background: url("../media/api-icons/xk-Construct-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -745,7 +746,7 @@ h5{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("/images/xk-Events-icon.png");
+    background: url("../media/api-icons/xk-Events-icon.png");
     margin-right: 5px;
     position: absolute;
     top: 4px;
@@ -798,6 +799,239 @@ h5{
     .toc .level1 > li{
         text-align: left;
     }
+}
+/*Hide filter area at the Manual amd ReleaseNotes pages*/
+#sidetoggle.xk-page-Manual #sidetoc,
+#sidetoggle.xk-page-ReleaseNotes #sidetoc{
+    height: calc(100vh - 105px);
+    margin-top: 0;
+}
+#sidetoggle.xk-page-Manual,
+#sidetoggle.xk-page-ReleaseNotes{
+    top: 105px;
+}
+#sidetoggle.xk-page-Api .sidefilter,
+#sidetoggle.xk-page-Default .sidefilter{
+    display: block !important;
+}
+#sidetoggle.xk-page-Manual .sidetoc,
+#sidetoggle.xk-page-ReleaseNotes .sidetoc{
+    padding-top: 10px;
+}
+/*Preloader*/
+#floatingBarsG{
+    position:relative;
+    width:60px;
+    height:60px;
+    margin:40px auto -40px auto;
+
+}
+
+.blockG{
+    position:absolute;
+    background-color:rgb(255,255,255);
+    width:10px;
+    height:5px;
+    transform:scale(0.4);
+        -o-transform:scale(0.4);
+        -ms-transform:scale(0.4);
+        -webkit-transform:scale(0.4);
+        -moz-transform:scale(0.4);
+    animation-name:fadeG;
+        -o-animation-name:fadeG;
+        -ms-animation-name:fadeG;
+        -webkit-animation-name:fadeG;
+        -moz-animation-name:fadeG;
+    animation-duration:1.2s;
+        -o-animation-duration:1.2s;
+        -ms-animation-duration:1.2s;
+        -webkit-animation-duration:1.2s;
+        -moz-animation-duration:1.2s;
+    animation-iteration-count:infinite;
+        -o-animation-iteration-count:infinite;
+        -ms-animation-iteration-count:infinite;
+        -webkit-animation-iteration-count:infinite;
+        -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+        -o-animation-direction:normal;
+        -ms-animation-direction:normal;
+        -webkit-animation-direction:normal;
+        -moz-animation-direction:normal;
+}
+
+#rotateG_01{
+    left:0;
+    top:27px;
+    animation-delay:0.45s;
+        -o-animation-delay:0.45s;
+        -ms-animation-delay:0.45s;
+        -webkit-animation-delay:0.45s;
+        -moz-animation-delay:0.45s;
+    transform:rotate(-90deg);
+        -o-transform:rotate(-90deg);
+        -ms-transform:rotate(-90deg);
+        -webkit-transform:rotate(-90deg);
+        -moz-transform:rotate(-90deg);
+}
+
+#rotateG_02{
+    left:8px;
+    top:10px;
+    animation-delay:0.6s;
+        -o-animation-delay:0.6s;
+        -ms-animation-delay:0.6s;
+        -webkit-animation-delay:0.6s;
+        -moz-animation-delay:0.6s;
+    transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+}
+
+#rotateG_03{
+    left:25px;
+    top:3px;
+    animation-delay:0.75s;
+        -o-animation-delay:0.75s;
+        -ms-animation-delay:0.75s;
+        -webkit-animation-delay:0.75s;
+        -moz-animation-delay:0.75s;
+    transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+}
+
+#rotateG_04{
+    right:8px;
+    top:10px;
+    animation-delay:0.9s;
+        -o-animation-delay:0.9s;
+        -ms-animation-delay:0.9s;
+        -webkit-animation-delay:0.9s;
+        -moz-animation-delay:0.9s;
+    transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+}
+
+#rotateG_05{
+    right:0;
+    top:27px;
+    animation-delay:1.05s;
+        -o-animation-delay:1.05s;
+        -ms-animation-delay:1.05s;
+        -webkit-animation-delay:1.05s;
+        -moz-animation-delay:1.05s;
+    transform:rotate(90deg);
+        -o-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+}
+
+#rotateG_06{
+    right:8px;
+    bottom:7px;
+    animation-delay:1.2s;
+        -o-animation-delay:1.2s;
+        -ms-animation-delay:1.2s;
+        -webkit-animation-delay:1.2s;
+        -moz-animation-delay:1.2s;
+    transform:rotate(135deg);
+        -o-transform:rotate(135deg);
+        -ms-transform:rotate(135deg);
+        -webkit-transform:rotate(135deg);
+        -moz-transform:rotate(135deg);
+}
+
+#rotateG_07{
+    bottom:0;
+    left:25px;
+    animation-delay:1.35s;
+        -o-animation-delay:1.35s;
+        -ms-animation-delay:1.35s;
+        -webkit-animation-delay:1.35s;
+        -moz-animation-delay:1.35s;
+    transform:rotate(180deg);
+        -o-transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        -moz-transform:rotate(180deg);
+}
+
+#rotateG_08{
+    left:8px;
+    bottom:7px;
+    animation-delay:1.5s;
+        -o-animation-delay:1.5s;
+        -ms-animation-delay:1.5s;
+        -webkit-animation-delay:1.5s;
+        -moz-animation-delay:1.5s;
+    transform:rotate(-135deg);
+        -o-transform:rotate(-135deg);
+        -ms-transform:rotate(-135deg);
+        -webkit-transform:rotate(-135deg);
+        -moz-transform:rotate(-135deg);
+}
+
+
+
+@keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes fadeG{
+    0%{
+        background-color:rgb(0,0,0);
+    }
+
+    100%{
+        background-color:rgb(255,255,255);
+    }
+}
+#search-results>.search-list{
+    margin-bottom: 20px;
 }
 #xk-current-version.form-control{
     width: auto;
