@@ -34,7 +34,7 @@ You can also see the new script in Visual Studio.
 > [!Tip]
 > To open your solution in Visual Studio from Game Studio, click the ![Open in IDE](media/create-a-script-ide-icon.png) (**Open in IDE**) icon in the Game Studio toolbar.
 
-```
+```cs
 using System;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,27 +87,27 @@ namespace MyGame
 
 	For example:
 
-	```
-		using System;
-		using System.Text;
-		using System.Threading.Tasks;
-		using SiliconStudio.Core.Mathematics;
-		using SiliconStudio.Xenko.Input;
-		using SiliconStudio.Xenko.Engine;
+	```cs
+	using System;
+	using System.Text;
+	using System.Threading.Tasks;
+	using SiliconStudio.Core.Mathematics;
+	using SiliconStudio.Xenko.Input;
+	using SiliconStudio.Xenko.Engine;
 		
-		namespace MyGame
-		{
-			public class SampleSyncScript : SyncScript
-			{			
-				public override void Update()
+	namespace MyGame
+	{
+		public class SampleSyncScript : SyncScript
+		{			
+			public override void Update()
+			{
+				if (Game.IsRunning)
 				{
-					if (Game.IsRunning)
-					{
-						// Do something every frame
-					}
+					// Do something every frame
 				}
 			}
 		}
+	}
 	```
 
 6. Save the project and script files.
