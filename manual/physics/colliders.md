@@ -17,7 +17,7 @@ You can also:
 * make [triggers](triggers.md), and use them to script events when objects pass through them
 * constrict collider movement with [constraints](constraints.md)
 
-## How colliders interract
+## How colliders interact
 
 Physics colliders interact according to the table below.
 

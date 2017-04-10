@@ -171,7 +171,11 @@ $(function() {
       // Set current doc version at start of page
       if($('#xk-current-version').length > 0){
         var urlVersion = window.location.pathname.split('/')[1];
-        $("#xk-current-version").val(urlVersion);
+        if($('#xk-current-version option[value="' + urlVersion + '"]').length <= 0){
+          $("#xk-current-version").val('latest');
+        } else {
+          $("#xk-current-version").val(urlVersion);
+        }
       }
       $('#xk-current-version').on('change', function(){
         var hostVersion = window.location.host;
