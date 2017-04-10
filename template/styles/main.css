@@ -661,6 +661,17 @@ h5{
     position: relative;
     top: 8px;
 }
+.xk-Delegate:before{
+    content: " ";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    margin-right: 5px;
+    background-size: 100% 100%;
+    position: relative;
+    top: 8px;
+}
 .xk-Enum:before,
 .xk-enum-icon{
     content: " ";
