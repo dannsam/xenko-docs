@@ -10,6 +10,7 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Create a model from code](../scripts/create-a-model-from-code.md)
 * <span class="label label-doc-highlight">New</span> [Troubleshooting - Lights don't cast shadows](../troubleshooting/lights-dont-cast-shadows.md)
 * <span class="label label-doc-highlight">New</span> [HRTF](../audio/hrtf.md)
 * <span class="label label-doc-highlight">Updated</span> [Skyboxes](../graphics/skyboxes.md)
@@ -23,6 +24,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Improve this documentation
 
-The Xenko documentation is open-source, so anyone can edit it. If you find a mistake, you can correct it or comment in GitHub.
+The Xenko documentation is open-source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/SiliconStudio/xenko-docs).
 
 To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/SiliconStudio/xenko-docs/blob/master-2.0/GUIDELINES.md).

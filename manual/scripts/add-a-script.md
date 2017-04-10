@@ -21,7 +21,7 @@ There are two ways to add scripts to entities in Game Studio:
 2. In the **solution explorer** (in the bottom left by default), select the assembly which contains your script. Game Studio shows your script in the **asset view**.
 
     >[!Note]
-    >Though scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in your .Game folder. For more information, see [Project structure](../get-started/project-structure.md).
+    >Though scripts are a kind of asset, they're not saved in the Assets folder. Instead, they're saved in your .Game folder. For more information, see [Project structure](../files-and-folders/project-structure.md).
 
 3. Drag the script from the **asset view** to the **property grid**.
    
