@@ -31,7 +31,7 @@ For example, these are shadow maps from the First-Person Shooter sample included
 >[!Note]
 >Note that the directional light in the example above creates four shadow maps, one for each cascade. For more information, see the [Directional lights](directional-lights.md) page.
 
-### Shadow atlases
+### The shadow atlas
 
 Shadow maps for each light that casts a shadow are saved in a region of the **shadow atlas** texture. You can choose how much of the shadow atlas each light uses. The larger the shadow map, the better the shadow quality, but the less space you have for shadow maps from other light sources. 
 
