@@ -78,18 +78,18 @@ Game Studio only includes assets which:
 * you've specifically marked for inclusion (**root assets**), or 
 * are **referenced** by a root asset
 
-Whether an asset is included is indicated in the top-left of the asset thumbnail.
+Game Studio indicates whether an asset is included in the top-left of the asset thumbnail.
 
 Color | Status
 ------|--------
-![](media/manage-assets-reference-asset.png) | Blue: The asset is a root asset and is included in the build.
-![](media/manage-assets-include-asset.png) | Green: the asset is referenced by a root asset and is included in the build.
-![](media/manage-assets-exclude-asset.png) | Gray: the asset isn't included in the build.
+Blue <br>![Blue](media/manage-assets-reference-asset.png)</br> | The asset is a root asset and included in the build.
+Green <br>![Green](media/manage-assets-include-asset.png)</br> | The asset is referenced by a root asset and included in the build.
+Gray <br>![Gray](media/manage-assets-exclude-asset.png)</br> | The asset isn't included in the build.
 
-If you plan to load and use your asset at runtime using scripts, make sure the asset is included in the build.
+If you plan to load an asset at runtime using scripts, make it a root asset. To do this:
 
-To make an asset a root asset (always included in the build):
 * click the **gray dot** in the top-left of the thumbnail, or
+
 * right-click the asset and select **Include in build as root asset**
 
 ## Asset view options
