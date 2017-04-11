@@ -126,7 +126,7 @@ $(function () {
           }
       }, 100);
     } else {
-      searchChapter = 'manual';
+      searchChapter = '';
       var tocInterval = setInterval(function(){
           if(chapterNameElem.length > 0){
             clearInterval(tocInterval);
