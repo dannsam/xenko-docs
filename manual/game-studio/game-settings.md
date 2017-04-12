@@ -40,14 +40,14 @@ For more information about scenes, see [Introduction to scenes](../game-studio/s
 
 ![Rendering settings](media/rendering-settings.png)
 
-| Property                    | Description                                                                                                                                                                     |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Default back buffer width   | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. |
-| Default back buffer height  | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. |
-| Adapt back buffer to screen | If enabled, this option adapts the ratio of the back buffer to fit the screen ratio.                                                                                            |
-| Default graphics profile    | The graphics feature level required by the project.                                                                                                                             |
-| Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.                                           |
-| Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).                                                                                    |
+| Property                    | Description  
+|-----------------------------|----------------
+| Default back buffer width   | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. 
+| Default back buffer height  | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. 
+| Adapt back buffer to screen | If enabled, this option adapts the ratio of the back buffer to fit the screen ratio.                                                                       
+| Default graphics profile    | The graphics feature level required by the project.                                                                                                        
+| Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.                      
+| Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).                                                               
 | Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.                                                                                                   |
 ### Editor settings
 
@@ -58,36 +58,35 @@ The editor settings control how Game Studio displays entities in the scene edito
 
 ![Editor settings](media/editor-settings.png)
 
-| Property            | Description                                                                           |
-|---------------------|---------------------------------------------------------------------------------------|
-| Rendering mode      | How Game Studio renders thumbnails and asset previews.                                |
-| Animation framerate | The framerate of animations shown in Game Studio. This doesn't affect animation data. |
+| Property            | Description    
+|---------------------|--------------
+| Rendering mode      | How Game Studio renders thumbnails and asset previews. 
+| Animation framerate | The framerate of animations shown in Game Studio. This doesn't affect animation data. 
 
 ### Texture settings
 
 ![Texture settings](media/texture-settings.png)
 
-| Property        | Description                                                                                                                                                    |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform. |
+| Property        | Description  
+|-----------------|--------------
+| Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform. 
 
 ### Physics settings
 
 ![Physics settings](media/physics-settings.png)
 
-| Property        | Description                                                                                                                                                                                                                                                                                  |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here aren't enabled yet, and will work in future versions. |
-| Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.                                                                                                                                                                                      |
-| Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second).                                                                                                                                                                                                                                       |       |
-
+| Property        | Description         
+|-----------------|----------------
+| Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here aren't enabled yet, and will work in future versions. 
+| Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.                                                                
+| Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second). 
 ### Audio
 
 ![Audio settings](media/audio-settings.png)
 
-| Property     | Description                                              |
-|--------------|----------------------------------------------------------|
-| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](../audio/hrtf.md). |
+| Property     | Description  
+|--------------|--------------
+| HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](../audio/hrtf.md).
 
 ### Overrides
 
