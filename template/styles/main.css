@@ -1076,3 +1076,6 @@ h5{
     text-overflow: ellipsis;
 
 }
+#wrapper #x_wrap {
+    padding-bottom: 0;
+}
