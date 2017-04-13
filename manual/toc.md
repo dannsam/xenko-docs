@@ -80,6 +80,7 @@
 ### [Nested prefabs](game-studio/nested-prefabs.md)
 ### [Override prefab properties](game-studio/override-prefab-properties.md)
 ## [Game settings](game-studio/game-settings.md)
+### [Splash screen](game-studio/splash-screen.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
