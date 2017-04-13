@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Programmer</span>
 <span class="label label-doc-audience">Designer</span>
 
-You can configure the global settings of your game in the **Game Settings** asset. By default, this is stored in your project **Assets** folder.
+You can configure the global settings of your game in the **Game Settings** asset. By default, the Game Settings asset is stored in your project's **Assets** folder.
 
 ## Edit Game Settings
 
@@ -20,7 +20,7 @@ You can configure the global settings of your game in the **Game Settings** asse
 
    ![Game settings](media/game-settings.png)
 
-### Default scene
+## Default scene
 
 You can have multiple scenes in your project. The **default scene** is the scene Xenko loads at runtime.
 
@@ -34,9 +34,22 @@ To set the default scene:
 
 2. Select the default scene in the asset picker and click **OK**.
 
-For more information about scenes, see [Introduction to scenes](../game-studio/scenes.md).
+For more information about scenes, see [Manage scenes](../game-studio/manage-scenes.md).
 
-### Rendering settings
+## Splash screen
+
+The **splash screen** is the displayed when your game starts. The default is the Xenko splash screen.
+
+![Settings](media/splash-screen.png)
+
+| Property | Description
+|----------|------------
+| Texture  | The image (eg company logo) displayed as the splash screen. By default, this is *XenkoDefaultSplashScreen*. 
+| Color    | The color the splash screen fades in on top of. By default, this is black  (*#FF000000*).
+
+For more information, see [Splash screen](/splash-screen.md).
+
+## Rendering settings
 
 ![Rendering settings](media/rendering-settings.png)
 
@@ -44,17 +57,18 @@ For more information about scenes, see [Introduction to scenes](../game-studio/s
 |-----------------------------|----------------
 | Default back buffer width   | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. 
 | Default back buffer height  | This might be overridden depending on the ratio and/or resolution of the device. On Windows, this is the window size. On Android/iOS, this is the off-screen target resolution. 
-| Adapt back buffer to screen | If enabled, this option adapts the ratio of the back buffer to fit the screen ratio.                                                                       
-| Default graphics profile    | The graphics feature level required by the project.                                                                                                        
-| Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.                      
-| Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).                                                               
-| Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.                                                                                                   |
-### Editor settings
+| Adapt back buffer to screen | If enabled, this option adapts the ratio of the back buffer to fit the screen ratio.
+| Default graphics profile    | The graphics feature level required by the project.
+| Color space                 | The color space (gamma or linear) used for rendering. This affects the game at runtime and how elements are displayed in Game Studio.
+| Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
+| Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.
+
+## Editor settings
 
 The editor settings control how Game Studio displays entities in the scene editor. These settings have no effect on your game at runtime.
 
 >[!Note]
->The **Color space** setting under **Rendering settings** also affects how Game Studio displays entities in the scene editor.
+>How Game Studio displays entities is also affected by the **Color space** setting under **Rendering settings**.
 
 ![Editor settings](media/editor-settings.png)
 
@@ -63,7 +77,7 @@ The editor settings control how Game Studio displays entities in the scene edito
 | Rendering mode      | How Game Studio renders thumbnails and asset previews. 
 | Animation framerate | The framerate of animations shown in Game Studio. This doesn't affect animation data. 
 
-### Texture settings
+## Texture settings
 
 ![Texture settings](media/texture-settings.png)
 
@@ -71,16 +85,17 @@ The editor settings control how Game Studio displays entities in the scene edito
 |-----------------|--------------
 | Texture quality | The texture quality when encoding textures. **Fast** uses the least CPU, but has the lowest quality. Higher settings might result in slower builds, depending on the target platform. 
 
-### Physics settings
+## Physics settings
 
 ![Physics settings](media/physics-settings.png)
 
 | Property        | Description         
 |-----------------|----------------
 | Flags           | **CollisionsOnly** disables [physics](../physics/index.md) except for collisions. For example, if this is enabled, objects aren't moved by gravity, but will still collide if you move them manually. **ContinuousCollisionDetection** prevents fast-moving entities erroneously moving through other entities. Note: other flags listed here aren't enabled yet, and will work in future versions. 
-| Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.                                                                
+| Max sub steps   | The maximum number of simulations the the physics engine can run in a frame to compensate for slowdown.
 | Fixed time step | The length in seconds of a physics simulation frame. The default is 0.016667 (one sixtieth of a second). 
-### Audio
+
+## Audio settings
 
 ![Audio settings](media/audio-settings.png)
 
@@ -88,7 +103,11 @@ The editor settings control how Game Studio displays entities in the scene edito
 |--------------|--------------
 | HRTF support | Enable HRTF audio. Note that only audio emitters with HRTF enabled will produce HRTF audio. For more details, see [HRTF](../audio/hrtf.md).
 
-### Overrides
+## Navigation settings
+
+![Navigation settings](media/navigation-settings.png)
+
+## Overrides
 
 You can override settings for particular platforms, graphics APIs, and so on. For example, you can set different texture qualities for different platforms.
 
@@ -114,7 +133,7 @@ You can override settings for particular platforms, graphics APIs, and so on. Fo
 
 5. Set the options you want to override.
 
-#### Add a platform filter
+### Add a platform filter
 
 You can choose items in the **Platform Filters** list as a specific platform filter when you set an override (see above).
 
