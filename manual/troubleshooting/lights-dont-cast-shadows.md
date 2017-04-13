@@ -21,7 +21,7 @@ For more information about shadows and the shadow atlas, see [Graphics - Shadows
 
     Alternatively, disable shadows on the light entirely by clearing the **Shadows** checkbox.
 
-3. Repeat step 2 for as many other light entities as you need to create space in the shadow atlas.
+Repeat these steps for as many light entities as you need to create space in the shadow atlas.
 
 ## See also
 
