@@ -79,13 +79,15 @@ To reset the captured lighting, in the **lighting options** menu, click **Reset*
 
 Under the **gizmo options** in the scene editor toolbar, use the **Light probes** checkbox.
 
-You can still see the effect of the light probes in the scene editor.
+![Hide light probes](media/light-probes-checkbox.png)
 
-## Show and hide light probe wireframe in the scene editor
+## Show and hide light probe volumes in the scene editor
 
-Under the gizmo options in the scene editor toolbar, use the **Light probe wireframe** checkbox.
+Under the **gizmo options** in the scene editor toolbar, use the **Light probe volumes** checkbox.
 
-![Light probe wireframe on](media/light-probe-wireframe-on.jpg)
+![Hide light probe volumes](media/light-probe-volumes-checkbox.png)
+
+![Light probe volumes on and off](media/light-probe-wireframe-on.jpg)
 
 ## See also
 
