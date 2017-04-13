@@ -55,19 +55,25 @@ A typical strategy is to place light probes in a grid across your scene covering
 
 ![Light probes in the editor](media/light-probes-in-editor.jpg)
 
-## 3. Capture light bounces
+## 3. Capture lighting
 
-In the scene editor toolbar, click the **new light bounce** button. This:
+1. In the scene editor toolbar, click the **lighting options** button to open the lighting options menu.
 
-* clears existing light bounces
-* generates a new light bounce
+    ![Lighting options](media/lighting-options-menu.png)
 
->[!Tip]
->If you change the light sources in your scene, click **new light bounce** again to remove the old lighting and capture the new lighting.
+2. Next to **Number of bounces**, set the number of light bounces you want to capture. 
+    
+    Multiple bounces simulate the effect of light bouncing between surfaces multiple times. This generally has the effect of brightening the lighting. Three or four bounces should be enough; beyond this, changes are almost unnoticeable. The number of bounces has no impact on runtime performance. 
 
-After you create the first light bounce, click the **generate additional light bounce** button. This bounces the light again, simulating the effect of light bouncing back and forth between surfaces multiple times, and increasing the realism of the light bounces.
+3. To capture the lighting, click **Compute**.
 
-You can click the bounce button as many times as you want without affecting performance. However, this has diminishing returns; after a few bounces, the changes become unnoticeable. Three or four bounces should be enough.
+    You can see the lighting on the surface of the light probes in the scene editor.
+
+    ![Light probe surface](media/light-probes-illumination-on-surface.png)
+
+## Reset lighting
+
+To reset the captured lighting, in the **lighting options** menu, click **Reset**. This is useful after you change the light sources in your scene.
 
 ## Show and hide light probes in the scene editor
 

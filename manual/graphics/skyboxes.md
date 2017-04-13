@@ -30,9 +30,13 @@ You can capture a cubemap from a position in your scene.
 
     Typically, you should capture cubemaps at the center of your scene to create the best all-round view.
 
-2. In the scene editor toolbar, click **Generate cubemap**.
+2. In the scene editor toolbar, open the **Lighting options** menu.
 
-3. Browse to the location on disk you want to save the cubemap, specify a name, and click **Save**.
+    ![Lighting options](../graphics/lights-and-shadows/media/lighting-options-menu.png)
+
+3. Under **Cubemap**, click **Generate**.
+
+4. Browse to the location on disk you want to save the cubemap, specify a name, and click **Save**.
 
 >![Tip]
 >We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../files-and-folders/version-control.md).
