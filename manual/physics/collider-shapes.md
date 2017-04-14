@@ -39,6 +39,8 @@ The capsule shape is especially useful for character components, as its curved b
 
 ### Cone
 
+![Cone](media/cone.png)
+
 | Property       | Description |
 | -------------- |-------------| 
 | Height | The height of the cone.|
