@@ -73,9 +73,7 @@ You can load and unload scenes (with all their child scenes and entities) in the
 
 The screenshots below show a root scene with child scenes loaded and unloaded. The root scene contains entities that all the scenes use, including the [skybox](../graphics/skyboxes.md), [scripts](../scripts/index.md), asteroids, and player character. The child scenes are sections of level.
 
-![Unloaded](media/scenes-unloaded.png)
-
-![Scenes loaded](media/scenes-loaded.png)
+![Unloaded and loaded scenes](media/scenes-unloaded.jpg)
 
 To load or unload a scene, in the **scene editor**, in the **entity tree** on the left, next to the scene you want to load or unload, click the **eye icon**.
 

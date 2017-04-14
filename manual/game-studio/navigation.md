@@ -15,7 +15,7 @@ You can use the **navigation** system to control how characters and other object
 
 **Navigation groups** define different navigation properties for the entities you add to them. 
 
-You should create different navigation groups for different kinds of entities that require navigation. For example, if your game features vehicles controlled by scripts, you might create different navigation groups for different sizes of vehicle, each with different rules: a car group, a bus group, a motorcycle group, etc.
+You can create different navigation groups for different kinds of entities that use navigation. For example, if your game features vehicles controlled by scripts, you might create different navigation groups for different sizes of vehicle, each with different rules: a car group, a bus group, a motorcycle group, etc.
 
 1. In the **solution explorer** (the bottom-left pane by default), select the **Assets folder**.
 
@@ -43,13 +43,9 @@ You should create different navigation groups for different kinds of entities th
 |----------------------|------------
 | Item                 | The name of the group
 | Height               | The height of the entities in this group. Entities can't enter areas with ceilings lower than this value.
-| Maximum climb height | The maximum height that entities in this group can climb. In most cases, this should be approximately the same value as the **step height** property in the physics component of the entities in this group, if they have one.
-| Maximum slope        | The maximum incline (in degrees) that entities in this group can climb. Entities can't go up or down slopes higher than this value. In most cases, this should be approximately the same value as the **max slope** property in the physics component of the entities in this group, if they have one.
-| Radius               | The size of the entities in this group
-
-As a general rule, you should match the properties for each group to the physics components of the entities in the group, if they have one.
-
-For example, if you're creating a navigation group for a soldier entity, and the soldier entity also has a physics 
+| Maximum climb height | The maximum height that entities in this group can climb. In most cases, this should be approximately the same value as the **step height** property in the [character component](../physics/characters.md) of the entities in this group, if they have one.
+| Maximum slope        | The maximum incline (in degrees) that entities in this group can climb. Entities can't go up or down slopes higher than this value. In most cases, this should be approximately the same value as the **max slope** property in the [character component](../physics/characters.md) of the entities in this group, if they have one.
+| Radius               | The size of the entities in this group. The larger this value, the larger the area of the navigation mesh they use.
 
 ## 2. Add a navigation mesh
 
@@ -107,7 +103,7 @@ The **navigation bounding box** defines the area the navigation mesh covers. You
 
 ## 5. Use navigation in a script
 
-
+Entities can't use navigation until you set it up with a script.
 
 ## Sample project
 
