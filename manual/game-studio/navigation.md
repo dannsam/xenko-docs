@@ -134,7 +134,25 @@ To create a navigation bounding box, add it to an entity as a component.
 
 ## 5. Use navigation in a script
 
-Entities can't use navigation until you set it up with a script.
+Use the navigation components in your scripts. For example:
+
+```cs
+void Move(Vector3 from, Vector3 to)
+{
+	var navigationComponent = Entity.Get<NavigationComponent>();
+	List<Vector3> path = new List<Vector3>();
+	if(navigationComponent.TryFindPath(from, to, path))
+	{
+		// Follow the points in path
+	}
+	else
+	{
+		// A path couldn't be found using this navigation mesh
+	}
+}
+```
+
+For more information, see the [NavigationComponent API documentation](xref:SiliconStudio.Xenko.Engine.NavigationComponent).
 
 ## Show or hide navigation meshes in the scene editor
 
