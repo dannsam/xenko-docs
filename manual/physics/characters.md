@@ -3,10 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Designer</span>
 
-**Character** colliders respond to user [input](../input/index.md) (eg player characters), but also interact with other colliders (eg bump into things). Player characters without the [character component](xref:SiliconStudio.Xenko.Physics.CharacterComponent) pass through objects.
-
-> [!Note]
-> Entities with the [CharacterComponent](xref:SiliconStudio.Xenko.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(SiliconStudio.Core.Mathematics.Vector3\)), [Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump), and [Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(SiliconStudio.Core.Mathematics.Vector3\)).
+**Character** colliders are used for player and AI-controlled characters. Entities with [character components](xref:SiliconStudio.Xenko.Physics.CharacterComponent) can only be moved with [SetVelocity](xref:SiliconStudio.Xenko.Physics.CharacterComponent.SetVelocity\(SiliconStudio.Core.Mathematics.Vector3\)), [Jump](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Jump), and [Teleport](xref:SiliconStudio.Xenko.Physics.CharacterComponent.Teleport\(SiliconStudio.Core.Mathematics.Vector3\)).
 
 ## Add a character component to an entity
 
@@ -33,7 +30,7 @@ Restitution           | Sets the amount of kinetic energy lost or gained after a
 Friction              | Sets the surface friction.
 Rolling Friction      | Sets the rolling friction.
 CCD Motion Threshold  | Sets the velocity at which continuous collision detection (CCD) takes over. CCD prevents fast-moving entities (such as bullets) erroneously passing through other entities.
-CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection.              
+CCD Swept Sphere Radius | Sets the radius of the bounding sphere containing the position between two physics frames during continuous collision detection. 
 Gravity               | For rigid bodies, sets a custom gravity vector applied if Override Gravity is selected. For characters, specifies how much gravity affects the character.
 Step Height           | The maximum height the character can step onto.
 Fall Speed            | The maximum fall speed.
