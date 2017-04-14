@@ -72,7 +72,6 @@
 ### [Manage assets](game-studio/manage-assets.md)
 ### [Use assets](game-studio/use-assets.md)
 ### [Archetypes](game-studio/archetypes.md)
-## [Samples and templates](game-studio/samples-and-templates.md)
 ## [Prefabs](game-studio/prefabs.md)
 ### [Create a prefab](game-studio/create-a-prefab.md)
 ### [Use prefabs](game-studio/use-prefabs.md)
@@ -81,6 +80,8 @@
 ### [Override prefab properties](game-studio/override-prefab-properties.md)
 ## [Game settings](game-studio/game-settings.md)
 ### [Splash screen](game-studio/splash-screen.md)
+## [Navigation](game-studio/navigation.md)
+## [Samples and templates](game-studio/samples-and-templates.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
