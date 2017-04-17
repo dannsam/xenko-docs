@@ -6,8 +6,6 @@
 		<option value="latest">Latest version (1.10)</option>
 		<option value="1.9">Version 1.9</option>
 		<option value="1.8">Version 1.8</option>
-		<option value="1.7">Version 1.7</option>
-		<option value="1.6">Version 1.6</option>
 	</select>
 		<ul class="submenu-navbar"> 	 	
 			<li><a href="{{_rel}}manual/index.html">Manual</a></li>
