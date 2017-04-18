@@ -93,6 +93,14 @@ The **navigation mesh** is the area that entities can navigate. Xenko creates a 
 
 ### Show or hide navigation meshes in the scene editor
 
+Game Studio displays navigation meshes as colored overlays in your scene. The overlay shows where entities in the navigation group can move. The mesh updates in real time as you edit your scene.
+
+<p>
+<video autoplay loop class="responsive-video" poster="media/withOutlineAE.jpg">
+   <source src="media/withOutlineAE.mp4" type="video/mp4">
+</video>
+</p>
+
 To show or hide a navigation mesh in the scene editor, use the **navigation visibility** menu in the scene editor toolbar.
 
 ![Navigation group visibility](media/navigation-group-visibility.png)
@@ -183,11 +191,17 @@ void Move(Vector3 from, Vector3 to)
 }
 ```
 
-For more information, see the [NavigationComponent API documentation](xref:SiliconStudio.Xenko.Engine.NavigationComponent).
+For more information, see the [NavigationComponent API documentation](xref:SiliconStudio.Xenko.Navigation.NavigationComponent).
 
 ## Sample project
 
 For an example of how to implement navigation, see the **top-down RPG** sample project included with Xenko.
+
+<p>
+<video autoplay loop class="responsive-video" poster="media/NoOutlineAE.jpg">
+   <source src="media/NoOutlineAE.mp4" type="video/mp4">
+</video>
+</p>
 
 ## See also
 
