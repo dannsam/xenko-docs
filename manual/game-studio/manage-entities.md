@@ -17,7 +17,7 @@ There are three types of transformation gizmo:
 
 - ![Translation gizmo icon](media/manage-entities-in-scene-translation-gizmo.png) The **translation gizmo** moves entities
 - ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) The **rotation gizmo** rotates entities
-- ![Scale gizmo icon]media/manage-entities-in-scene-scale-gizmo.png) The **scale gizmo** resizes entities
+- ![Scale gizmo icon](media/manage-entities-in-scene-scale-gizmo.png) The **scale gizmo** resizes entities
 
 Game Studio displays the selected transformation gizmo at the origin of the entity.
 
@@ -80,7 +80,7 @@ You can change how the gizmo coordinates work.
 | Coordinate system | Function |
 | ------  |  ------  |
 | ![World coordinates](media/manage-entities-in-scene-wsc.png) World coordinates | Uses world coordinates for transformations. The X, Y, and Z axes are the same for every entity. |
-| ![Local coordinates](/media/manage-entities-in-scene-osc.png) Local coordinates | Uses local coordinates for transformations. The axes are oriented in the same direction as the selected entity. |
+| ![Local coordinates](media/manage-entities-in-scene-osc.png) Local coordinates | Uses local coordinates for transformations. The axes are oriented in the same direction as the selected entity. |
 | ![Camera coordinates](media/manage-entities-in-scene-csc.png) Camera coordinates | Uses the current camera coordinates for transformations. The axes are oriented in the same direction as the editor camera. |
 
 ## Snap transformations to grid
@@ -99,6 +99,6 @@ You can change the snap values for each gizmo in the scene view toolbar. Snap va
 
 * [Create and open a scene](create-a-scene.md)
 * [Navigate in the scene editor](navigate-in-the-scene-editor.md)
-* [Load scenes](load-scenes.md)
+* [Load scenes](load-scenes.md)s
 * [Add entities](add-entities.md)
 * [Manage entities](manage-entities.md)

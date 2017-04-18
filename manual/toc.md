@@ -10,12 +10,11 @@
 ## [Game Studio](game-studio/index.md)
 ## [Assets](game-studio/assets.md)
 ### [Create assets](game-studio/create-assets.md)
-### [Manage entities](game-studio/manage-entities.md)
 ### [Use assets](game-studio/use-assets.md)
 ## [Scenes](game-studio/scenes.md)
 ### [Create a scene](game-studio/create-a-scene.md)
 ### [Add entities](game-studio/add-entities.md)
-### [Arrange entities](game-studio/arrange-entities.md)
+### [Manage entities](game-studio/manage-entities.md)
 ### [Navigate in the scene editor](game-studio/navigate-in-the-scene-editor.md)
 ## [Launch a game](get-started/launch-a-game.md)
 
