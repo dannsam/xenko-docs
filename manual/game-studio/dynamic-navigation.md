@@ -29,6 +29,8 @@ You can enable and disable dynamic navigation in the global [game settings](game
 
 5. Select the **Enable dynamic navigation** checkbox.
 
+    ![Enable dynamic navigation checkbox](media/enable-dynamic-navigation.png)
+
 6. On the entities you want to use dynamic navigation component.
 
 EXAMPLE SCRIPT
