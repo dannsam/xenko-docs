@@ -45,21 +45,21 @@ You can create different navigation groups for different kinds of entities. For 
 | Height               | The height of the entities in this group. Entities can't enter areas with ceilings lower than this value.
 | Maximum climb height | The maximum height that entities in this group can climb. In most cases, this should be approximately the same value as the **step height** property in the [character component](../physics/characters.md) of the entities in this group, if they have one.
 | Maximum slope        | The maximum incline (in degrees) that entities in this group can climb. Entities can't go up or down slopes higher than this value. In most cases, this should be approximately the same value as the **max slope** property in the [character component](../physics/characters.md) of the entities in this group, if they have one.
-| Radius               | The size of the entities in this group. The larger this value, the larger the area of the navigation mesh they use.
+| Radius               | The larger this value, the larger the area of the navigation mesh entities use. Entities can't pass through gaps of less than twice the radius.
 
 ## 2. Add a navigation mesh
 
-The **navigation mesh** is the area that entities can navigate.
+The **navigation mesh** is the area that entities can navigate. Xenko creates a separate navigation mesh for each group you create.
 
 1. In the **asset view** (bottom by default), click **Add asset > Navigation > Navigation mesh**.
 
     ![Select Game Settings asset](media/add-navigation-mesh.png)
 
-    Game Studio adds a navigation mesh asset to your project.
+    Game Studio adds a **navigation mesh asset** to your project. The asset contains all the navigation meshes for a scene.
 
     ![Navigation mesh asset](media/navigation-mesh-in-asset-view.png)
 
-2. With the navigation mesh selected in the **asset view**, in the **property grid**, set the **scene** the navigation mesh applies to.
+2. With the navigation mesh selected in the **asset view**, in the **property grid**, set the **scene** the navigation meshes in this asset apply to.
 
     ![Set navigation mesh properties](media/navigation-mesh-properties.png)
 
@@ -67,7 +67,7 @@ The **navigation mesh** is the area that entities can navigate.
 
 3. Under **Selected groups**, click the **green plus** icon.
 
-    Game Studio adds a new item to the list of navigation groups that use the navigation mesh.
+    Game Studio adds a new item to the list of groups.
 
     ![Add navigation group to navigation mesh](media/add-navigation-group-to-navigation-mesh.png)
 
@@ -75,22 +75,29 @@ The **navigation mesh** is the area that entities can navigate.
 
     ![Choose navigation group](media/choose-navigation-group-in-navigation-mesh.png)
 
-    The group uses this navigation mesh.
+    Xenko builds a navigation mesh for this group.
 
-5. Repeat steps 3 and 4 for as many groups as you want to use the navigation mesh.
+5. Repeat steps 3 and 4 for as many groups as you want to use the navigation mesh. 
+
+    >[!Note]
+    >If you want to create a navigation mesh for a different scene, create another navigation mesh asset and select the scene in the asset properties.
 
 ### Navigation mesh properties
 
 | Property                  | Description                                                    
 |---------------------------|--------------
 | Scene                     | The scene this navigation mesh applies to
-| Included collision groups |  Set which collision groups the navigation mesh uses. The default is **Custom Filter 1**
+| Included collision groups | Set which collision groups the navigation mesh uses. By default, meshes use all collision groups
 | Build settings            | Advanced settings for the navigation mesh
 | Groups                    | The groups that use this navigation mesh
 
 ## 3. Add a navigation bounding box
 
 The **navigation bounding box** defines the area the navigation mesh covers. You can use it to create smaller navigation areas in your scene, rather than having the mesh cover the entire scene.
+
+The scene editor displays the bounding as a blue outline.
+
+![Bounding box shown](media/navigation-bounding-box-on.jpg) 
 
 To create a navigation bounding box, add it to an entity as a component.
 
