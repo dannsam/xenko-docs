@@ -80,7 +80,12 @@
 ## [Game settings](game-studio/game-settings.md)
 ### [Splash screen](game-studio/splash-screen.md)
 ## [Navigation](game-studio/navigation.md)
-## [Samples and templates](game-studio/samples-and-templates.md)
+### [Navigation groups](game-studio/navigation-groups.md)
+### [Navigation meshes](game-studio/navigation-meshes.md)
+### [Navigtation bounding boxes](game-studio/navigation-bounding-boxes.md)
+### [Navigation components](game-studio/navigation-components.md)
+### [Dynamic navigation](game-studio/dynamic-navigation.md)
+## [Samples and templates](game-studio/game-studio/samples-and-templates.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
