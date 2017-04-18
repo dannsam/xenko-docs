@@ -17,7 +17,7 @@ It creates star-pattern beams from the light point.
 | Attenuation               | How fast the light attenuates along a streak (0 for immediate attenuation, 1 for no attenuation)  
 | Phase                     | Phase (angle) of the star-like pattern
 | Color Aberration Strength | Strength of the color aberration along the streaks. <br>![media/light-streaks-3.png](media/light-streaks-3.png) <br>Notice the streaks involve multiple colours (yellow, purple, green, pink).                                        
-| Is Anamorphic             | Simulates the behavior of anamorphic lenses, widely used in Hollywood productions.                                               <br>  ![media/light-streaks-4.png](media/light-streaks-4.png) <br> The efect above is achieved by using two light streaks with a phase of 0, enabling anamorphic mode, and slightly distorting the bright pass result horizontally.
+| Is Anamorphic             | Simulates the behavior of anamorphic lenses, widely used in Hollywood productions.                                               <br>  ![media/light-streaks-4.png](media/light-streaks-4.png) <br> The effect above is achieved by using two light streaks with a phase of 0, enabling anamorphic mode, and slightly distorting the bright pass result horizontally.
 
 ## See also
 
