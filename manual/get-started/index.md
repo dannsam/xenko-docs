@@ -7,7 +7,7 @@ uid: ../toc.md
 
 This chapter explains everything you need to start using Xenko from scratch. 
 
-![Game Studio](media/get-started.png)
+![Game Studio](media/get-started.jpg)
 
 ## In this section
 
