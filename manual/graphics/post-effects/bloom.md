@@ -24,7 +24,7 @@ It uses the result of the [bright filter](bright-filter.md) effect as input.
 ## See also
 
 * [Bright filter](bright-filter.md)
-* [color transforms](color-transforms/index.md)
+* [Color transforms](color-transforms/index.md)
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
