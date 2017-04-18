@@ -91,11 +91,25 @@ The **navigation mesh** is the area that entities can navigate. Xenko creates a 
 | Build settings            | Advanced settings for the navigation mesh
 | Groups                    | The groups that use this navigation mesh
 
+### Show or hide navigation meshes in the scene editor
+
+To show or hide a navigation mesh in the scene editor, use the **navigation visibility** menu in the scene editor toolbar.
+
+![Navigation group visibility](media/navigation-group-visibility.png)
+
+Use the checkboxes to show or hide navigation meshes belonging to different groups. The colored boxes indicate the color of the groups displayed in the scene editor.
+
+| Navigation mesh hidden   | Navigation mesh shown
+|----------------------|------------
+|![Bounding box shown](media/navigation-mesh-invisible.jpg) | ![Bounding box hidden](media/navigation-mesh-visible.jpg)
+
+These options have no effect on runtime behavior.
+
 ## 3. Add a navigation bounding box
 
 The **navigation bounding box** defines the area the navigation mesh covers. You can use it to create smaller navigation areas in your scene, rather than having the mesh cover the entire scene.
 
-The scene editor displays the bounding as a blue outline.
+The scene editor displays the bounding box as a blue outline.
 
 ![Bounding box shown](media/navigation-bounding-box-on.jpg) 
 
@@ -114,6 +128,16 @@ To create a navigation bounding box, add it to an entity as a component.
     ![Navigation bounding box properties](media/navigation-bounding-box-properties.png)
 
 4. Use the entity's **transform component** to position the bounding box in your scene.
+
+### Show or hide the bounding box in the scene editor
+
+In the scene editor toolbar, open the **gizmo options** menu and use the **Navigation bounding box** checkbox.
+
+![Navigation bounding box checkbox](media/navigation-bounding-box-checkbox.png)
+
+| Bounding box hidden | Bounding box shown (note blue box outline) 
+|----------------------|------------
+|![Bounding box hidden](media/navigation-bounding-box-off.jpg)| ![Bounding box shown](media/navigation-bounding-box-on.jpg) 
 
 ## 4. Add a navigation component
 
@@ -160,30 +184,6 @@ void Move(Vector3 from, Vector3 to)
 ```
 
 For more information, see the [NavigationComponent API documentation](xref:SiliconStudio.Xenko.Engine.NavigationComponent).
-
-## Show or hide navigation meshes in the scene editor
-
-To show or hide a navigation mesh in the scene editor, use the **navigation visibility** menu in the scene editor toolbar.
-
-![Navigation group visibility](media/navigation-group-visibility.png)
-
-Use the checkboxes to show or hide navigation meshes belonging to different groups. The colored boxes indicate the color of the groups displayed in the scene editor.
-
-| Navigation mesh hidden   | Navigation mesh shown
-|----------------------|------------
-|![Bounding box shown](media/navigation-mesh-invisible.jpg) | ![Bounding box hidden](media/navigation-mesh-visible.jpg)
-
-These options have no effect on runtime behavior.
-
-## Show or hide the bounding box in the scene editor
-
-In the scene editor toolbar, open the **gizmo options** menu and use the **Navigation bounding box** checkbox.
-
-![Navigation bounding box checkbox](media/navigation-bounding-box-checkbox.png)
-
-| Bounding box hidden | Bounding box shown (note blue box outline) 
-|----------------------|------------
-|![Bounding box hidden](media/navigation-bounding-box-off.jpg)| ![Bounding box shown](media/navigation-bounding-box-on.jpg) 
 
 ## Sample project
 
