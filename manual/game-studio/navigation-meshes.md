@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Level designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Navigation meshes** form the area that entities with navigation components can navigate. Xenko creates a separate navigation mesh for each [navigation group](navigation-group.md) you create.
+**Navigation meshes** form the area that entities with navigation components can navigate. Xenko creates a separate navigation mesh for each [navigation group](navigation-groups.md) you create.
 
 Game Studio displays navigation meshes as colored overlays in your scene. The overlay shows where entities in the navigation group for that mesh can move. The mesh updates in real time as you edit your scene.
 

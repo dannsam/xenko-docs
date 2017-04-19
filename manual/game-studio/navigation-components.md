@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Level designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Navigation components** allow entities to use [navigation meshes](navigation-mesh.md) to find paths through the scene. Alternatively, if you enable [dynamic navigation](dynamic-navigation.md) in Game Settings, entities can generate their own navigation meshes.
+**Navigation components** allow entities to use [navigation meshes](navigation-meshes.md) to find paths through the scene. Alternatively, if you enable [dynamic navigation](dynamic-navigation.md) in Game Settings, entities can generate their own navigation meshes.
 
 # Add a navigation component
 
@@ -20,7 +20,7 @@
 
     ![Open asset picker](media/open-asset-picker.png)
 
-4. In the asset picker, select the [navigation mesh](navigation-mesh.md) you want the entity to use and click **OK**.
+4. In the asset picker, select the [navigation mesh](navigation-meshes.md) you want the entity to use and click **OK**.
 
     ![Choose navigation mesh](media/choose-navigation-mesh.png)
 
