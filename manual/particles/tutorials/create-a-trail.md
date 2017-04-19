@@ -177,7 +177,7 @@ To fix the color, we'll give the particles a "swoosh" texture:
 
 1. Save the texture image above (**swoosh.png**) to disk.
 
-2. Import it into the project. To do this, in the **Asset view**, in the **Textures** folder, click **Add asset > Textures > Texture** and select **swoosh.png**.
+2. Import it into the project. To do this, in the **Asset view**, click **Add asset > Textures > Color** and select **swoosh.png**.
 
     ![Add a texture](media/add-texture.png)
 
