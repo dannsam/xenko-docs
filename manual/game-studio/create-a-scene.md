@@ -38,7 +38,7 @@ In the **asset view**:
 
 ## Use the scene editor
 
-![Scene editor](media/create-a-scene-default-scene-editor.png)
+![Scene editor](media/create-a-scene-default-scene-editor.jpg)
 
 The **scene editor tabs** (A) display the open scenes. You can switch between open scenes using the tabs.
 
