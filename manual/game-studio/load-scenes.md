@@ -31,7 +31,7 @@ Game Studio adds a scene streaming script to your project assets.
 
 2. Create an entity and position it where you want the scene to load.
 
-3. With the entity selected, in the **property grid** (on the righy by default), click **Add component** and select the **scene streaming script**.
+3. With the entity selected, in the **property grid** (on the righy by default), click **Add component** and select the **scene streamer** script.
 
     ![Add script](media/add-scene-streaming-script.png)
 
