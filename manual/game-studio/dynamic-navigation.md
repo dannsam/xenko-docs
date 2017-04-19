@@ -48,10 +48,34 @@ You can enable and disable dynamic navigation in the global [game settings](game
 
 ## Enable and disable dynamic navigation from a script
 
-You can enable and disable dynamic navigation from scripts. 
+Example code:
 
->![Note]
->When the script disabled dynamic navigation, it should also clear the navigation mesh from the navigation component.
+```cs
+// Find and enable the dynamic navigation mesh system
+dynamicNavigationMeshSystem = Game.GameSystems.OfType<DynamicNavigationMeshSystem>().FirstOrDefault();
+dynamicNavigationMeshSystem.Enabled = true;
+
+// This stops the dynamic navigation mesh system from automatically rebuilding in the folowing cases:
+//  - loading/Unloading scenes
+//  - adding/removing static collider components
+//  - adding/removing navigation mesh bounding boxes
+dynamicNavigationMeshSystem.AutomaticRebuild = false;
+
+// ...
+
+if (/* any condition that should cause the navigation mesh to update (eg open/close door) */)
+{
+	// Start an asynchronous rebuild of the navigation mesh
+	var rebuildTask = dynamicNavigationMeshSystem.Rebuild();
+	rebuildTask.ContinueWith((x) =>
+	{
+		if (x.Result.Success)
+		{
+			// The navigation mesh is successfully rebuilt
+		}
+	});
+}
+```
 
 ## See also
 
