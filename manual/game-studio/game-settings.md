@@ -38,7 +38,7 @@ For more information about scenes, see [Manage scenes](../game-studio/manage-sce
 
 ## Splash screen
 
-The **splash screen** is the displayed when your game starts. The default is the Xenko splash screen.
+The **splash screen** is displayed when your game starts. The default is the Xenko splash screen.
 
 ![Settings](media/splash-screen.png)
 
