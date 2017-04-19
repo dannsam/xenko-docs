@@ -27,17 +27,28 @@ You can enable and disable dynamic navigation in the global [game settings](game
 
     ![Select Game Settings asset](media/select-game-settings-asset.png)
 
-4. In the **property grid** (the right-hand pane by default), expand **Navigation Settings**.
+4. In the **property grid** (the right-hand pane by default), under **Navigation Settings**, expand **Dynamic navigation mesh**.
 
-   ![Game settings](media/navigation-settings.png)
+   ![Game settings](media/expand-dynamic-navigation-mesh.png)
 
 5. Select the **Enable dynamic navigation** checkbox.
 
     ![Enable dynamic navigation checkbox](media/enable-dynamic-navigation.png)
 
+## Dynamic navigation mesh properties
+
+| Property                  | Description                                                    
+|---------------------------|--------------
+| Enabled                   | Enable dynamic navigation on navigation components that don't have scenes
+| Included collision groups | Set which collision groups dynamically-generated navigation meshes use. By default, meshes use all collision groups
+| Build settings            | Advanced settings for dynamically-generated navigation meshes
+
 ## Enable and disable dynamic navigation from a script
 
-You can enable and disable dynamic navigation from scripts. As part of this process, the script should also clear the navigation mesh from the navigation component.
+You can enable and disable dynamic navigation from scripts. 
+
+>![Note]
+>When the script disabled dynamic navigation, it should also clear the navigation mesh from the navigation component.
 
 ## See also
 

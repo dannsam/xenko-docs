@@ -109,6 +109,18 @@ For more details about audio, see [Audio](../audio/index.md).
 
 ![Navigation settings](media/navigation-settings.png)
 
+### Dynamic navigation mesh properties
+
+| Property                  | Description                                                    
+|---------------------------|--------------
+| Enabled                   | Enable dynamic navigation on navigation components that don't have scenes
+| Included collision groups | Set which collision groups dynamically-generated navigation meshes use. By default, meshes use all collision groups
+| Build settings            | Advanced settings for dynamically-generated navigation meshes
+
+For more details, see [Dynamic navigation](dynamic-navigation.md).
+
+### Navigation group properties
+
 | Property             | Description
 |----------------------|------------
 | Item                 | The name of the group.
