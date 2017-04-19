@@ -21,7 +21,6 @@ These pages contain information about how to use Xenko, an open-source C# game e
 * <span class="label label-doc-highlight">New</span> [Xenko for Unity® developers](../xenko-for-unity-developers/index.md)
 * <span class="label label-doc-highlight">Updated</span> [Get started - Manage assets](../game-studio/manage-assets.md)
 * <span class="label label-doc-highlight">Updated</span> [Get started - Navigate in the scene editor](../game-studio/navigate-in-the-scene-editor.md)
-* <span class="label label-doc-highlight">New</span> [Animation](../animation/index.md)
 
 ## Improve this documentation
 
