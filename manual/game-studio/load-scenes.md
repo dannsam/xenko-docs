@@ -2,7 +2,7 @@
 
 The following code loads the scene `myChildScene` and adds it as a child scene to `myParentScene`.
 
-```
+```cs
 var myChildScene = Content.Load<Scene>(url); (edited)
   
 myParentScene.Children.Add(myChildScene);
@@ -17,13 +17,13 @@ Xenko also includes a scene streaming script that uses a [trigger](../physics/tr
 
 ### Add a scene streaming script
 
-To add a scene streaming script, in the **Asset view** (bottom pane by default), click **Add asset** and select **Scripts > Scene streaming**.
+To add a scene streaming script, in the **Asset view** (bottom pane by default), click **Add asset** and select **Scripts > Scene streamer**.
 
-![Scene streaming script](media/scene-streaming-script.png)
+![Scene streamer script](media/scene-streaming-script.png)
 
 Game Studio adds a scene streaming script to your project assets.
 
-### Use the scene streaming script
+### Use the scene streamer script
 
 1. Create a trigger entity. When this is triggered at runtime, Xenko loads the scene. For more information about creating triggers, see [Triggers](../physics/triggers.md).
 
@@ -36,11 +36,11 @@ Game Studio adds a scene streaming script to your project assets.
     ![Add script](media/add-scene-streaming-script.png)
 
     >[!Note]
-    >If the scene streaming script doesn't appear in the list of components, reload the assemblies.
+    >If the scene streamer script doesn't appear in the list of components, reload the assemblies.
 
     Game Studio adds the script to the entity as a component.
 
-    ![Scene streaming properties](media/scene-streaming-script-properties.png)
+    ![Scene streamer properties](media/scene-streaming-script-properties.png)
 
 4. Under **Url**, specify the URL of the scene you want to load.
 
@@ -48,9 +48,9 @@ Game Studio adds a scene streaming script to your project assets.
 
 At runtime, when the trigger you created in step 1 is triggered, Xenko loads the scene you specified in step 4.
 
-### Scene streaming script properties
+### Scene streamer script properties
 
-![Scene streaming properties](media/scene-streaming-script-properties.png)
+![Scene streamer properties](media/scene-streaming-script-properties.png)
 
 | Property       | Description                                                                                                                                                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
