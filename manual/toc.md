@@ -85,7 +85,6 @@
 ### [Navigtation bounding boxes](game-studio/navigation-bounding-boxes.md)
 ### [Navigation components](game-studio/navigation-components.md)
 ### [Dynamic navigation](game-studio/dynamic-navigation.md)
-## [Samples and templates](game-studio/game-studio/samples-and-templates.md)
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
