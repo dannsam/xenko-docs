@@ -15,7 +15,7 @@ You can create models in scripts at runtime. You can do this in several differen
 
 1. Create a new, empty synchronous script. For full instructions, see [Create a script](../scripts/create-a-script.md).
 
-    ![Add new script](media/create-model-from-code-add-new-script.gif)
+    ![Create a script](media/create-a-script-script-asset-selection.png)
 
 2. In the script, load the model using its asset URL. For example:
 
