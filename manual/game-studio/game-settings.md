@@ -113,7 +113,7 @@ For more details about audio, see [Audio](../audio/index.md).
 
 | Property                  | Description                                                    
 |---------------------------|--------------
-| Enabled                   | Enable dynamic navigation on navigation components that don't have scenes
+| Enabled                   | Enable dynamic navigation on navigation components that have no assigned navigation mesh
 | Included collision groups | Set which collision groups dynamically-generated navigation meshes use. By default, meshes use all collision groups
 | Build settings            | Advanced settings for dynamically-generated navigation meshes
 

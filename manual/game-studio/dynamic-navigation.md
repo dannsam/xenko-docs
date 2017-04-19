@@ -19,6 +19,9 @@ You can enable and disable dynamic navigation in the global [game settings](game
 
     For more information about the navigation component, see [Navigation components](navigation-components.md).
 
+    >![Note]
+    >Navigation components assigned navigation meshes use the navigation mesh instead of dynamic navigation.
+
 2. In the **solution explorer** (the bottom-left pane by default), select the **Assets folder**.
 
     ![Select Assets folder asset](media/select-asset-folder.png)
@@ -39,7 +42,7 @@ You can enable and disable dynamic navigation in the global [game settings](game
 
 | Property                  | Description                                                    
 |---------------------------|--------------
-| Enabled                   | Enable dynamic navigation on navigation components that don't have scenes
+| Enabled                   | Enable dynamic navigation on navigation components that have no assigned navigation mesh
 | Included collision groups | Set which collision groups dynamically-generated navigation meshes use. By default, meshes use all collision groups
 | Build settings            | Advanced settings for dynamically-generated navigation meshes
 
