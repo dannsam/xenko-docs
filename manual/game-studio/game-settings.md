@@ -125,8 +125,8 @@ For more details, see [Dynamic navigation](dynamic-navigation.md).
 |----------------------|------------
 | Item                 | The name of the group.
 | Height               | The height of the entities in this group. Entities can't enter areas with ceilings lower than this value.
-| Maximum climb height | The maximum height that entities in this group can climb. In most cases, this should be approximately the same value as the **step height** property in the [character component](../physics/characters.md) of the entities in this group, if they have one.
-| Maximum slope        | The maximum incline (in degrees) that entities in this group can climb. Entities can't go up or down slopes higher than this value. In most cases, this should be approximately the same value as the **max slope** property in the [character component](../physics/characters.md) of the entities in this group, if they have one.
+| Maximum climb height | The maximum height that entities in this group can climb.
+| Maximum slope        | The maximum incline (in degrees) that entities in this group can climb. Entities can't go up or down slopes higher than this value.
 | Radius               | The larger this value, the larger the area of the navigation mesh entities use. Entities can't pass through gaps of less than twice the radius.
 
 For more details, see [Navigation](navigation.md).
