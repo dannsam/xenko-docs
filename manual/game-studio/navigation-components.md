@@ -30,7 +30,7 @@
 
     ![Choose navigation group](media/choose-navigation-group.png)
 
-# Use navigation components in scripts
+## Use navigation components in scripts
 
 For example:
 
