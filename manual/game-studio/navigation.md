@@ -4,9 +4,9 @@
 <span class="label label-doc-audience">Level designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-You can use the **navigation** system to control how characters and other objects navigate scenes. The navigation system comprises several elements:
+You can use the **navigation** system to control how characters and other objects navigate scenes.
 
-## Set up navigation in your scene
+## Set up navigation
 
 1. [Create a navigation group](navigation-groups.md)
 
@@ -18,7 +18,7 @@ You can use the **navigation** system to control how characters and other object
 
 ## Sample project
 
-For an example of how to implement navigation, see the **top-down RPG** sample project included with Xenko.
+For an example of how to implement navigation, including enabling and disabling [dynamic navigation](dynamic-navigation.md) at runtime, see the **top-down RPG** sample project included with Xenko.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/NoOutlineAE.jpg">

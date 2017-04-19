@@ -1,6 +1,10 @@
 # Navigation components
 
-**Navigation components** allow entities to use [navigation meshes](navigation-mesh.md) to find paths through your scene.
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Level designer</span>
+<span class="label label-doc-audience">Programmer</span>
+
+**Navigation components** allow entities to use [navigation meshes](navigation-mesh.md) to find paths through the scene. Alternatively, if you enable [dynamic navigation](dynamic-navigation.md) in Game Settings, entities can generate their own navigation meshes.
 
 # Add a navigation component
 
@@ -28,7 +32,7 @@
 
 # Use navigation components in scripts
 
-Use the navigation components in your scripts. For example:
+For example:
 
 ```cs
 void Move(Vector3 from, Vector3 to)

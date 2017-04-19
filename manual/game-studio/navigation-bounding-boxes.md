@@ -1,5 +1,9 @@
  # Navigation bounding boxes
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Level designer</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Navigation bounding boxes** define the area that [navigation meshes](navigation-meshes.md) cover. You can use them to create smaller navigation areas in your scene, rather than having a mesh cover the entire scene.
 
 The scene editor displays the bounding box as a blue outline.

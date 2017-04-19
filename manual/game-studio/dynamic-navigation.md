@@ -1,9 +1,13 @@
 # Dynamic navigation
 
-If you enable **dynamic navigation**, entities with navigation components don't need a navigation mesh asset. Instead, the entities generate navigation meshes dynamically based on the loaded scenes.
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Level designer</span>
+<span class="label label-doc-audience">Programmer</span>
+
+If you enable **dynamic navigation**, entities with navigation components don't need a [navigation mesh](navigation-meshes.md) asset. Instead, the entities generate navigation meshes dynamically.
 
 > [!Note]
-> Make sure that the scenes you want the entities to navigate have [navigation bounding boxes](navigation-bounding-boxes.md).
+> Make sure that the scenes you want the entities to navigate dynamically have [navigation bounding boxes](navigation-bounding-boxes.md).
 
 ## Enable dynamic navigation
 
@@ -13,7 +17,7 @@ You can enable and disable dynamic navigation in the global [game settings](game
 
     ![No navigation mesh selected](media/no-navigation-mesh-selected.png)
 
-    For more information, see [Navigation components](navigation-components.md).
+    For more information about the navigation component, see [Navigation components](navigation-components.md).
 
 2. In the **solution explorer** (the bottom-left pane by default), select the **Assets folder**.
 
@@ -31,9 +35,9 @@ You can enable and disable dynamic navigation in the global [game settings](game
 
     ![Enable dynamic navigation checkbox](media/enable-dynamic-navigation.png)
 
-6. On the entities you want to use dynamic navigation component.
+## Enable and disable dynamic navigation from a script
 
-EXAMPLE SCRIPT
+You can enable and disable dynamic navigation from scripts. As part of this process, the script should also clear the navigation mesh from the navigation component.
 
 ## See also
 

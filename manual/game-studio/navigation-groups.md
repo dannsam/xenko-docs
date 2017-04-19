@@ -1,5 +1,9 @@
 # Navigation groups
 
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Level designer</span>
+<span class="label label-doc-audience">Programmer</span>
+
 **Navigation groups** define different navigation properties for the entities you add to them. These are defined in the project **game settings**.
 
 You can create different navigation groups for different kinds of entities. For example, if your game features vehicles controlled by scripts, you might create different navigation groups for different sizes of vehicle, each with different properties: a car group, a bus group, a motorcycle group, and so on.
@@ -22,7 +26,7 @@ You can create different navigation groups for different kinds of entities. For 
 
     Game Studio adds a new item to the list of navigation groups.
 
-    ![Navigation group properites](media/navigation-group-properties.png)
+    ![Navigation group properties](media/navigation-group-properties.png)
 
 5. Set the properties for the navigation group. Entities you add to this group use these properties.
 
