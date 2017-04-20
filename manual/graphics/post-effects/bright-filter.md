@@ -19,4 +19,3 @@ The **bright filter** extracts the areas of an image which are the brightest. Th
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
-* [Post-effects for developers](post-effects-for-developers.md)
