@@ -61,7 +61,9 @@ After you create a constraint, add it to the simulation from a script by calling
 ```cs
 this.GetSimulation().AddConstraint(constraint);
 ```
+
 or:
+
 ```cs
 var disableCollisionsBetweenLinkedBodies = true;
 this.GetSimulation().AddConstraint(constraint, disableCollisionsBetweenLinkedBodies);
