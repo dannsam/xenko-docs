@@ -20,7 +20,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     ![Select Game Settings asset](media/add-navigation-mesh.png)
 
-    Game Studio adds a **navigation mesh asset** to your project. The asset contains all the navigation meshes for a scene.
+    Game Studio adds a **navigation mesh asset** to your project.
 
     ![Navigation mesh asset](media/navigation-mesh-in-asset-view.png)
 
@@ -40,9 +40,9 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     ![Choose navigation group](media/choose-navigation-group-in-navigation-mesh.png)
 
-    Xenko builds a navigation mesh for this group.
+    Xenko builds a navigation mesh for this group. For more information about groups, including how to create them, see [Navigation groups](navigation-groups.md).
 
-5. Repeat steps 3 and 4 for as many groups as you want to use the navigation mesh. 
+5. Repeat steps 3 and 4 for as many groups as you want to use the navigation mesh.
 
     >[!Note]
     >If you want to create a navigation mesh for a different scene, create another navigation mesh asset and select the scene in the asset properties.
@@ -65,7 +65,7 @@ To show or hide a navigation mesh in the scene editor, use the **navigation visi
 Use the checkboxes to show or hide navigation meshes belonging to different groups. The colored boxes indicate the color of the groups displayed in the scene editor.
 
 | Navigation mesh hidden   | Navigation mesh shown
-|----------------------|------------
+|--------------------------| ------------
 |![Bounding box shown](media/navigation-mesh-invisible.jpg) | ![Bounding box hidden](media/navigation-mesh-visible.jpg)
 
 These options have no effect on runtime behavior.
