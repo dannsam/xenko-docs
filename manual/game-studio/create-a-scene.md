@@ -7,13 +7,11 @@ When you create a new project, Game Studio creates an initial scene and populate
 
 You can create scenes like any other asset. As they are complex assets, they have a dedicated editor, the **scene editor**.
 
-![Initial scene in the scene editor](../get-started/media/create-a-scene-default-scene.png)
-
 ## Create a scene
 
 1. In the **asset view** (by default in the bottom pane), click **Add asset** and select **Scenes**.
 
-    ![Add a scene](../get-started/media/add-scene.png)
+    ![Add a scene](media/add-scene.png)
 
 2. Select the appropriate **scene template**.
 
@@ -27,7 +25,7 @@ You can create scenes like any other asset. As they are complex assets, they hav
 
 In the **asset view**:
 
-![Select a scene in the asset view](../get-started/media/open-scene-from-asset-view.png)
+![Select a scene in the asset view](media/open-scene-from-asset-view.png)
 
 * double-click the scene asset, or
 * right-click the asset and select **Edit asset**, or 
@@ -38,7 +36,7 @@ In the **asset view**:
 
 ## Use the scene editor
 
-![Scene editor](../get-started/media/create-a-scene-default-scene-editor.png)
+![Scene editor](media/create-a-scene-default-scene-editor.png)
 
 The **scene editor tabs** (A) display the open scenes. You can switch between open scenes using the tabs.
 

@@ -1,53 +1,40 @@
 # Point lights
 
-A point light is emitting light in all directions within a sphere region.
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Designer</span>
+<span class="label label-doc-audience">Artist</span>
+
+**Point lights** emit light in all directions within a sphere. They're useful for simulating sources of local light, such as lamps and lightbulbs. They cast shadows.
 
 ![media/PointLightOverview.png](media/PointLightOverview.png) 
 
-In the studio, the point light appears with the following icon:
+In Game Studio, point lights have the following icon:
 
 ![media/PointLight.png](media/PointLight.png) 
 
-Once selected, the gizmo of the point light displays its sphere influence:
+Once selected, the point light gizmo displays the sphere in which it projects light:
 
 ![media/PointLightSelected.png](media/PointLightSelected.png)
 
 ## Properties
 
-Properties that defines a point light:
-
 ![media/PointLightProperties.png](media/PointLightProperties.png) 
 
+| Property            | Description                                                        
+| ------------------- | ------------------ 
+| Color               | The color of the light (RGB)
+| Radius              | The sphere influence radius in meters. Beyond this range, the light doesn't affect models
+| Shadow             | <br>If shadows are enabled, the light casts shadows.</br><br> **Filter:** Produces soft shadows instead of hard shadows via PCF (Percentage Closer Filtering) </br> <br>**Size:** The size of texture to use for shadowing mapping. Larger textures produce better shadows edges, but are much more costly. For more information, see [Shadows](shadows.md)</br>
+| Bias Parameters     | <br>These parameters are used to avoid some artifacts of the shadow map technique.</br> <br>**Depth Bias:** The amount of depth to add to the sampling depth to avoid shadow acne</br> <br>**Normal Offset Scale**: A factor multiplied by the depth bias toward the normal </br>
+| Intensity           | The intensity of the light. The color is multiplied by this value before being sent to the shader. Note: negative values produce darkness and have unpredictable effects
+| Culling Mask        | Which entity groups are affected by this light. By default, all groups are affected
 
-| Property            | Description                                                                                                                                         |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Type                | Point                                                                                                                                               |
-| Color               | The color of this point light                                                                                                                       |
-|                     |                                                                                                                                                     |
-|                     | Note: Currently, the light supports an RGB color. Future versions of Xenko will also support temperature colors.                                                         |
-| Radius              | The sphere influence radius distance in meters. Above the range distance, the light doesn't affect models                                           |
-| Shadows             | All shadows properties are detailed below                                                                                                           |
-| Filter              | Filtering allows to produce **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering) |
-|                     |                                                                                                                                                     |
-|                     | Note: Other techniques will be added in future versions.                                                                                                              |
-| Size                | The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**.                               |
-|                     | See [shadow map atlas size calculation](shadow-optimization.md) for details.                                                                      |
-|                     |                                                                                                                                                     |
-|                     | For a point light, this value defaults to **small**.                                                                                        |
-| Bias Parameters     | These parameters are used to avoid some artifacts of the shadow map technique.                                                                       |
-| Depth Bias          | The amount of depth to add to the sampling depth to avoid the phenomenon of shadow acne.                                                            |
-| Normal Offset Scale | A factor multiplied by the depth bias toward the normal                                                                                             |
-| Intensity           | The intensity of this light. The color is multiplied by this value before sending the color to the shader                                 |
-|                     |                                                                                                                                                     |
-|                     | Note: Currently, this value has no units. This will change in future versions.                                                                      |
-| Culling Mask        | Defines which entity groups are affected by this light. By default, all groups are affected.                                                        |
+## See also
 
-
- 
-
- 
-
- 
-
- 
-
+* [Add a light](add-a-light.md)
+* [Point lights](point-lights.md)
+* [Ambient lights](ambient-lights.md)
+* [Skybox lights](skybox-lights.md)
+* [Spot lights](spot-lights.md)
+* [Light probes](light-probes.md)
+* [Shadows](shadows.md)

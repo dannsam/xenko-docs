@@ -43,7 +43,7 @@ Game Studio has dedicated editors for the following asset types:
 
 For example, you edit scenes in the **scene editor**.
 
-![Scene editor](../get-started/media/manage-assets-scene-editor.png)
+![Scene editor](media/manage-assets-scene-editor.png)
 
 To open the dedicated editor for these types of asset:
 
@@ -55,7 +55,7 @@ To open the dedicated editor for these types of asset:
 
 We recommend you organize your assets into subfolders by type. This makes projects much easier to manage, especially as they become large.
 
-![Organized project](../get-started/media/manage-assets-organized-project.png)
+![Organized project](media/manage-assets-organized-project.png)
 
 Assets are contained in the **Assets** folder of your project package. You can see the project in the **solution explorer** (by default shown in the bottom left).
 
@@ -78,18 +78,18 @@ Game Studio only includes assets which:
 * you've specifically marked for inclusion (**root assets**), or 
 * are **referenced** by a root asset
 
-Whether an asset is included is indicated in the top-left of the asset thumbnail.
+Game Studio indicates whether an asset is included in the top-left of the asset thumbnail.
 
 Color | Status
 ------|--------
-![](../get-started/media/manage-assets-reference-asset.png) | Blue: The asset is a root asset and is included in the build.
-![](../get-started/media/manage-assets-include-asset.png) | Green: the asset is referenced by a root asset and is included in the build.
-![](../get-started/media/manage-assets-exclude-asset.png) | Gray: the asset isn't included in the build.
+Blue <br>![Blue](media/manage-assets-reference-asset.png)</br> | The asset is a root asset and included in the build.
+Green <br>![Green](media/manage-assets-include-asset.png)</br> | The asset is referenced by a root asset and included in the build.
+Gray <br>![Gray](media/manage-assets-exclude-asset.png)</br> | The asset isn't included in the build.
 
-If you plan to load and use your asset at runtime using scripts, make sure the asset is included in the build.
+If you plan to load an asset at runtime using scripts, make it a root asset. To do this:
 
-To make an asset a root asset (always included in the build):
 * click the **gray dot** in the top-left of the thumbnail, or
+
 * right-click the asset and select **Include in build as root asset**
 
 ## Asset view options
@@ -118,7 +118,7 @@ Type filters are "or" filters. For example, if you filter by *type:animation* an
 
     Game Studio displays a list of matching filters (name, type, or tag).
 
-    ![add-filter.png](../get-started/media/add-filter.png)
+    ![add-filter.png](media/add-filter.png)
 
 2. * To filter by name, press Enter.
 
@@ -128,7 +128,7 @@ Type filters are "or" filters. For example, if you filter by *type:animation* an
     
 You can add multiple filters. Name filters are green, tag filters are blue, and type filters are orange.
 
-![filter-tags](../get-started/media/filter-tags.png)
+![filter-tags](media/filter-tags.png)
     
 ### Toggle filters on and off
 

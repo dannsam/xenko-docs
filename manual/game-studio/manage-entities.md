@@ -9,23 +9,23 @@ To build the levels of your game, you need to translate (move), rotate, and resi
 
 You can select the transformation gizmos from **scene editor toolbar**.
 
-![Transformation gizmo toolbox](../get-started/media/manage-entities-in-scene-gizmos.png)
+![Transformation gizmo toolbox](media/manage-entities-in-scene-gizmos.png)
 
 Alternatively, press **Space** to switch between gizmos.
 
 There are three types of transformation gizmo:
 
-- ![Translation gizmo icon](../get-started/media/manage-entities-in-scene-translation-gizmo.png) The **translation gizmo** moves entities
-- ![Rotation gizmo icon](../get-started/media/manage-entities-in-scene-rotation-gizmo.png) The **rotation gizmo** rotates entities
-- ![Scale gizmo icon](../get-started/media/manage-entities-in-scene-scale-gizmo.png) The **scale gizmo** resizes entities
+- ![Translation gizmo icon](media/manage-entities-in-scene-translation-gizmo.png) The **translation gizmo** moves entities
+- ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) The **rotation gizmo** rotates entities
+- ![Scale gizmo icon](media/manage-entities-in-scene-scale-gizmo.png) The **scale gizmo** resizes entities
 
 Game Studio displays the selected transformation gizmo at the origin of the entity.
 
-![Transformation gizmos in the scene](../get-started/media/manage-entities-transformation-gizmo.png)
+![Transformation gizmos in the scene](media/manage-entities-transformation-gizmo.png)
 
 ### Translation gizmo
 
-To select the translation gizmo, click the ![Translation gizmo icon](../get-started/media/manage-entities-in-scene-translation-gizmo.png) icon in the scene editor toolbar or press **W**.
+To select the translation gizmo, click the ![Translation gizmo icon](media/manage-entities-in-scene-translation-gizmo.png) icon in the scene editor toolbar or press **W**.
 
 The translation gizmo moves (**translates**) entities in the scene along the axis you select.
 
@@ -35,12 +35,12 @@ The translation gizmo moves (**translates**) entities in the scene along the axi
 * To move the entity in free 3D, drag it by the central sphere.
 
 <video controls autoplay loop height="360" width="480">
-                <source src="../get-started/media/manage-entities-in-scene-translation-gizmo.mp4" type="video/mp4">
+                <source src="media/manage-entities-in-scene-translation-gizmo.mp4" type="video/mp4">
 </video>
 
 ### Rotation gizmo
 
-To select the rotation gizmo, click the ![Rotation gizmo icon](../get-started/media/manage-entities-in-scene-rotation-gizmo.png) icon in the scene editor toolbar or press **R**.
+To select the rotation gizmo, click the ![Rotation gizmo icon](media/manage-entities-in-scene-rotation-gizmo.png) icon in the scene editor toolbar or press **R**.
 
 The rotation gizmo rotates entities in the scene along the axis you select.
 
@@ -49,12 +49,12 @@ The rotation gizmo rotates entities in the scene along the axis you select.
 * To rotate the entity along the Z axis (roll), drag it by the **blue** ring.
 
 <video controls autoplay loop height="360" width="480">
-                <source src="../get-started/media/manage-entities-in-scene-rotation-gizmo.mp4" type="video/mp4">
+                <source src="media/manage-entities-in-scene-rotation-gizmo.mp4" type="video/mp4">
 </video>
 
 ### Scale gizmo
 
-To select the scale gizmo, click the ![Scale gizmo icon](../get-started/media/manage-entities-in-scene-scale-gizmo.png) icon in the scene editor toolbar or press **R**.
+To select the scale gizmo, click the ![Scale gizmo icon](media/manage-entities-in-scene-scale-gizmo.png) icon in the scene editor toolbar or press **R**.
 
 The scale gizmo resizes entities along a single axis ("stretching" or "squashing" them) or all axes (making them larger or smaller without changing their proportions).
 
@@ -64,7 +64,7 @@ The scale gizmo resizes entities along a single axis ("stretching" or "squashing
 * To resize the entity in all axes, drag it by the central sphere.
 
 <video controls autoplay loop height="360" width="480">
-                <source src="../get-started/media/manage-entities-in-scene-scale-gizmo.mp4" type="video/mp4">
+                <source src="media/manage-entities-in-scene-scale-gizmo.mp4" type="video/mp4">
 </video>
 
 > [!Note] 
@@ -79,9 +79,9 @@ You can change how the gizmo coordinates work.
 
 | Coordinate system | Function |
 | ------  |  ------  |
-| ![World coordinates](../get-started/media/manage-entities-in-scene-wsc.png) World coordinates | Uses world coordinates for transformations. The X, Y, and Z axes are the same for every entity. |
-| ![Local coordinates](../get-started/media/manage-entities-in-scene-osc.png) Local coordinates | Uses local coordinates for transformations. The axes are oriented in the same direction as the selected entity. |
-| ![Camera coordinates](../get-started/media/manage-entities-in-scene-csc.png) Camera coordinates | Uses the current camera coordinates for transformations. The axes are oriented in the same direction as the editor camera. |
+| ![World coordinates](media/manage-entities-in-scene-wsc.png) World coordinates | Uses world coordinates for transformations. The X, Y, and Z axes are the same for every entity. |
+| ![Local coordinates](media/manage-entities-in-scene-osc.png) Local coordinates | Uses local coordinates for transformations. The axes are oriented in the same direction as the selected entity. |
+| ![Camera coordinates](media/manage-entities-in-scene-csc.png) Camera coordinates | Uses the current camera coordinates for transformations. The axes are oriented in the same direction as the editor camera. |
 
 ## Snap transformations to grid
 
@@ -91,9 +91,9 @@ You can change the snap values for each gizmo in the scene view toolbar. Snap va
 
 | Icon | Function |
 | --- | ---- |
-| ![](../get-started/media/manage-entities-in-scene-snap-translation.png) | Snap translation to multiple of 1 |
-| ![](../get-started/media/manage-entities-in-scene-snap-rotation.png) | Snap rotation to multiple of 22.5 |
-| ![](../get-started/media/manage-entities-in-scene-snap-scale.png) | Snap scale to multiple of 1.1 |
+| ![](media/manage-entities-in-scene-snap-translation.png) | Snap translation to multiple of 1 |
+| ![](media/manage-entities-in-scene-snap-rotation.png) | Snap rotation to multiple of 22.5 |
+| ![](media/manage-entities-in-scene-snap-scale.png) | Snap scale to multiple of 1.1 |
 
 ## See also
 

@@ -54,7 +54,7 @@ After you add animations to an entity, you need to play them with a [script](../
 
 ### Example script
 
-```
+```cs
     public class SimpleAnimationScript : StartupScript
     {
         public override void Start()

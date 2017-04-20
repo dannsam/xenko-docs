@@ -28,7 +28,6 @@ You can:
 
     ![media/EditorProperties_preview_thumb.jpg](media/EditorProperties_preview_thumb.jpg)
 
-
 ## In this section
 
 * [Create assets](create-assets.md)

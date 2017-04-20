@@ -12,7 +12,7 @@ With the graphics compositor, you can:
 
   - use one or multiple cameras
   - filter entities in the scene
-  - render to one or more render targets, with different viewport
+  - render to one or more render targets, with different viewports
 - render a scene with a camera to a render target used as the input texture of a Material/Effect in a scene (eg render the rear-view mirror point-of-view to a texture, and display it on the rear-view mirror model)
 - easily mix the rendering mode at the same time in the same graphics composition
 - easily mix HDR and LDR rendering

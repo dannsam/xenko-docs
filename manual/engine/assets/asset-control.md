@@ -43,4 +43,4 @@ As a result, you can use a shared package from multiple games even if you have d
  
 # Additional information
 
-For additional information about asset management, see [Manage Assets](../../get-started/manage-assets.md)
+For additional information about asset management, see [Manage Assets](../../game-studio/manage-assets.md)

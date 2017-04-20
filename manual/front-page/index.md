@@ -1,7 +1,7 @@
 
 # Xenko 2.0 manual
 
-![Manual](media/manual.png)
+![Manual](../get-started/media/get-started.jpg)
 
 These pages contain information about how to use Xenko, an open-source C# game engine.
 
@@ -10,21 +10,20 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Navigation](../game-studio/navigation.md)
+* <span class="label label-doc-highlight">New</span> [Create a model from code](../scripts/create-a-model-from-code.md)
+* <span class="label label-doc-highlight">New</span> [Troubleshooting - Lights don't cast shadows](../troubleshooting/lights-dont-cast-shadows.md)
+* <span class="label label-doc-highlight">New</span> [HRTF](../audio/hrtf.md)
+* <span class="label label-doc-highlight">Updated</span> [Skyboxes](../graphics/skyboxes.md)
+* <span class="label label-doc-highlight">Updated</span> [Lights and shadows](../graphics/lights-and-shadows/index.md)
+* <span class="label label-doc-highlight">New</span> [Distribute a game](../files-and-folders/distribute-a-game.md)
+* <span class="label label-doc-highlight">Updated</span> [Materials](../graphics/materials/index.md)
 * <span class="label label-doc-highlight">New</span> [Xenko for Unity® developers](../xenko-for-unity-developers/index.md)
-* <span class="label label-doc-highlight">Updated</span> [Get started - Manage assets](../get-started/manage-assets.md)
-* <span class="label label-doc-highlight">Updated</span> [Get started - Navigate in the scene editor](../get-started/navigate-in-the-scene-editor.md)
-* <span class="label label-doc-highlight">New</span> [Animation](../animation/index.md)
-* <span class="label label-doc-highlight">Updated</span> [Physics - Collider shapes](../physics/collider-shapes.md)
-* <span class="label label-doc-highlight">Updated</span> [Physics - Tutorial: Script a trigger](../physics/script-a-trigger.md)
-* <span class="label label-doc-highlight">Updated</span> [Scripts](../scripts/index.md)
-    * <span class="label label-doc-highlight">New</span> [Scripts - Events](../scripts/events.md)
-    * <span class="label label-doc-highlight">New</span> [Scripts - Scheduling and priorities](../scripts/scheduling-and-priorities.md)
-* <span class="label label-doc-highlight">New</span> [Platforms - Xbox Live](../platforms/uwp/xbox-live.md)
-* <span class="label label-doc-highlight">Updated</span> [Project structure](../get-started/project-structure.md)
-* <span class="label label-doc-highlight">New</span> [Sprites](../sprites/index.md)
+* <span class="label label-doc-highlight">Updated</span> [Get started - Manage assets](../game-studio/manage-assets.md)
+* <span class="label label-doc-highlight">Updated</span> [Get started - Navigate in the scene editor](../game-studio/navigate-in-the-scene-editor.md)
 
 ## Improve this documentation
 
-The Xenko documentation is open-source, so anyone can edit it. If you find a mistake, you can correct it or comment in GitHub.
+The Xenko documentation is open-source, so anyone can edit it. If you find a mistake, you can correct it or comment in [GitHub](https://github.com/SiliconStudio/xenko-docs).
 
 To edit any page of this manual, in the top right, click **Improve this Doc**. Please make sure to follow the [writing guidelines](https://github.com/SiliconStudio/xenko-docs/blob/master-2.0/GUIDELINES.md).

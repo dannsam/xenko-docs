@@ -7,7 +7,7 @@
 
 ![Static and rigid body colliders](media/rigid-bodies-static-and-rigid-body-colliders.png)
 
-2. Add a static collider
+## Add a static collider
    
 1. Select the entity you want to make a static collider.
 
@@ -44,7 +44,7 @@ Is Trigger            | Toggles whether the static collider is a [trigger](trigg
 
 If you need to move a static collider at runtime, you can do it with a script:
 
-```
+```cs
 PhysicsComponent.Entity.Transform.Position += PhysicsComponent.Entity.Transform.Position + Vector3.UnitX;
 PhysicsComponent.Entity.Transform.UpdateWorldMatrix();
 PhysicsComponent.UpdatePhysicsTransformation();

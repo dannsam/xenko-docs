@@ -10,10 +10,10 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 ## Properties
 
-| Property                  | Description                                                 |
-| ------------------------- | ------ |
-| Amount                    | Amount/strength of the light streak.                                                                                                                                                                            |
-| Color Aberration Strength | Strength of the color aberration artifacts.                                                                                                           |
+| Property                  | Description              
+| ------------------------- | ------ 
+| Amount                    | Amount/strength of the light streak.                           
+| Color Aberration Strength | Strength of the color aberration artifacts.  
 | Halo Factor               | Strength of the main artifact.                     
 
 ## See also

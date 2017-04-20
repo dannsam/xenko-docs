@@ -16,14 +16,15 @@ These images show the difference between ambient and skybox lighting on two pure
 
 | Ambient lighting                                     | Skybox lighting     
 | ---------------------------------------------------- | -------------------------------
-| ![Ambient lighting](media/AmbientLight.png)  | ![Skybox lighting.png](media/SkyboxLight-MaterialPureDiffuse.png)  |                                                           |                        
+| ![Ambient lighting](media/AmbientLight.png)  | ![Skybox lighting.png](media/SkyboxLight-MaterialPureDiffuse.png) 
+                    
 These images show the effect of skybox lighting on a material with different metal and gloss properties:
 
-| Material Plastic    | Metal 100% Gloss 50%                                                                                    | Metal 100% Gloss 100%                                                                                      |
------------------------------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
- ![Material plastic](media/SkyboxLight-MaterialPlastic.png)  | ![Material 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss50.png)  | ![Metal 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss100.png)  |
+| Material Plastic    | Metal 100% Gloss 50%     | Metal 100% Gloss 100%   
+--------- | -------- | --- | -------- |
+ ![Material plastic](media/SkyboxLight-MaterialPlastic.png)  | ![Material 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss50.png)  | ![Metal 100% Gloss 100%](media/SkyboxLight-MaterialMetal100Gloss100.png)  
 
-Notice how the skybox texture colours are reflected.
+Notice how the skybox texture colors are reflected.
 
 ## Set up a skybox light
 
@@ -69,21 +70,21 @@ When you use a skybox as a light, Xenko uses it both in compressed form ([spheri
 
 ![Skybox lighting properties](media/skybox-asset-properties.png)
 
-| Property     | Description                                                                                                                                                                                    |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cube Map |  The cubemap asset used for the skybox. 
-| Ambient lighting      |  Use the skybox for ambient lighting as well as specular lighting
-| Diffuse SH Order  | The level of detail of the compressed skybox, used for diffuse lighting (dull materials). `Order5` is more detailed than `Order3`. |
-| Specular Cubemap Size | The texture size used for specular lighting. Larger textures have more detail. |
+| Property     | Description                                                                                                                                                                     
+| ------------ | ---------- 
+| Cube Map |  The cubemap asset used for the skybox
+| Specular Only      |  Use the skybox only for specular lighting
+| Diffuse SH Order  | The level of detail of the compressed skybox, used for diffuse lighting (dull materials). `Order5` is more detailed than `Order3`
+| Specular Cubemap Size | The texture size used for specular lighting. Larger textures have more detail.
 
 ## Skybox light properties
 
 ![media/SkyboxLightProperties.png](media/SkyboxLightProperties.png) 
 
-| Property     | Description   |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Intensity    | The light intensity |
-| Culling Mask | Which entity groups are affected by the light. By default, all groups are affected                                                                                                   |
+| Property     | Description   
+| ------------ | ----------
+| Intensity    | The light intensity 
+| Culling Mask | Which entity groups are affected by the light. By default, all groups are affected
 
 ## Example code
 

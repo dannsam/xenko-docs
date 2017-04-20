@@ -41,13 +41,11 @@ If you have other unnecessary files, such as custom configuration files (ie file
 
 After you create a release build, how you distribute it is up to you. 
 
-If you just want to create a file you can share, we recommend you zip it. The simplest way to do this is on Windows to right-click the folder and select **Send to > Compressed (zipped) folder**.
+To run games made with Xenko, users need:
 
-![Compress folder](media/compress-folder.png)
-
-This creates a zip file that other people can extract.
-
-![Zipped file](media/zip-file.png)
+- .NET 4.6.1
+- DirectX11 (included with Windows 10 and later)
+- Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
 
 ## See also
 

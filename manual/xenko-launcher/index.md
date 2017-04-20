@@ -20,7 +20,7 @@ If you choose to install the latest version of Xenko, the Xenko Launcher asks if
 
 ![Install Visual Studio integration](../get-started/media/install-VS-plug-in-prompt.png)
 
-The Visual Studio extension lets you edit shaders directly from Visual Studio, and provides syntax highlighting, live code analysis with validation, error-checking, and navigation (jump to definition). Installing the extension isn't mandatory, but we recommend it.
+The Visual Studio extension lets you edit shaders directly from Visual Studio, and provides syntax highlighting, live code analysis with validation, error checking, and navigation (jump to definition). Installing the extension isn't mandatory, but we recommend it.
 
 To install or reinstall the Visual Studio extension at any time, click the **Reinstall** button in the Xenko Launcher.
 
@@ -76,4 +76,5 @@ To open a project with a more recent version of Xenko:
 
 2. Select the Xenko version you want to open the project with. Game Studio prompts you to upgrade the project when it opens.
 
->[!Note] After you update a project to use a newer version of Xenko, you might need to make manual changes to get it to work. **Make sure you back up the project up and all its related files before you upgrade it.**
+>[!Note]
+>After you update a project to use a newer version of Xenko, you might need to make manual changes to get it to work. **Make sure you back up the project and all its related files before you upgrade it.**
