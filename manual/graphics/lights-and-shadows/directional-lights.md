@@ -22,9 +22,9 @@ When you select a directional light, the gizmo displays the light's main directi
 
 | Property     | Description                                                                                    
 | ------------ | ---------- |
-| Color        | The color of the directional light. Currently the light supports an RGB color. Future versions of Xenko will also support temperature colors.
-| Shadow      | See **Shadow properties** below
-|Intensity| The intensity of the light. The color is multiplied by this value before being sent to the shader. Note that currently this value has no units. This will change in future versions
+| Color        | The color of the light (RGB)
+| Shadow       | See **Shadow properties** below
+| Intensity    | The intensity of the light. The color is multiplied by this value before being sent to the shader. Note: negative values produce darkness and have unpredictable effects
 | Culling Mask | Defines which entity groups are affected by this light. By default, all groups are affected
 
 ## Shadows cast by directional lights
