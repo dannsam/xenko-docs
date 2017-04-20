@@ -14,29 +14,27 @@ Typically, you set up a post-effect by specifying:
 
 Xenko provides several pre-defined post-effects. You can also extend the system to create your own.
 
-## Add a post-effect
+## Add or edit a post-effect
 
-You add and edit post effects in the graphics compositor.
+You add and edit post effects in the [graphics compositor](../graphics-compositor/index.md).
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
-    ![Grap hics Compositor asset](media/graphics-compositor-asset.png)
+    ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
-    The Graphics Compositor editor opens.
+    The graphics compositor editor opens.
 
     ![Graphics Compositor editor](media/graphics-compositor-editor.png)
 
-2. Select the **post-processing effects** node. right-click and select **PostProcessingEffects**.
+2. Select the **post-processing effects** node.
 
-    If there's no post-process effects node, right-click and select ** Create
+    If there's no post-process effects node, right-click and select **Create > post-processing effects**.
 
-    Game Studio adds a post-effect layer to the pipeline.
+    Game Studio adds a post-effect layer to the graphics compositor.
 
-2. Connect the layer to the other layers in the pipeline.
+3. In the **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
 
-3. Select the **PostProcessingEffects** layer.
-
-4. In the **property grid** (on the right by default), enable the post-effects you want to use. For details about each post-effect and its setting, see the pages below.
+4. In the **property grid** (on the right by default), enable the post-effects you want to use and set their properties. For details about each post-effect and its properties, see the pages below.
 
 ## In this section
 
@@ -46,3 +44,7 @@ You add and edit post effects in the graphics compositor.
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
+
+## See also
+
+* [Graphics compositor](../graphics-compositor/index.md)
