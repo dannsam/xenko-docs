@@ -41,8 +41,7 @@ To use the **AnimationStart** script:
 
 This sample code assigns a simple animation to a character based on its walking speed:
 
-```
-cs
+```cs
 public class AnimationClipExample : SyncScript
 {
     // Public animation clips
