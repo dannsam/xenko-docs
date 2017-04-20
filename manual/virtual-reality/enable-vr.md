@@ -1,6 +1,9 @@
 # Enable VR
 
-This page explains how to add support for the Oculus Rift and Vive devices to your game. Other devices will be supported in Xenko soon.
+<span class="label label-doc-level">Beginner</span>
+<span class="label label-doc-audience">Programmer</span>
+
+This page explains how to add support for the Oculus Rift and Vive devices to your game. Xenko will support other devices soon.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
@@ -64,3 +67,7 @@ Your game is now ready to use VR.
 As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (multisample anti-aliasing) in the ForwardRenderer properties (below the VR settings).
 
 ![MSAA](media/MSAA.png)
+
+## See also
+
+* [VR sickness](vr-sickness.md)
