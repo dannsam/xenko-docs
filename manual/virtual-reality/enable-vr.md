@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-This page explains how to add support for the Oculus Rift and Vive devices to your game. Xenko will support other devices soon.
+This page explains how to add support for the Oculus Rift and Vive devices to your game. Future versions of Xenko will support other devices.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
@@ -57,10 +57,10 @@ Your game is now ready to use VR.
 
 ## VR properties
 
-| Property             | Description      
-|----------------------|--------
+| Property                | Description      
+|-------------------------|--------
 | Ignore camera rotation  | Disables camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)   
-| Resolution scale | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU 
+| Resolution scale        | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU 
 
 ## Multisample anti-aliasing 
 
@@ -71,3 +71,4 @@ As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (
 ## See also
 
 * [VR sickness](vr-sickness.md)
+* [Graphics compositor](../graphics/graphics-compositor/index.md) page.

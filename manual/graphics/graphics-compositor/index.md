@@ -6,16 +6,19 @@
 >[!Note]
 >This page requires a basic understanding of graphics pipelines.
 
+>[!Note]
+>The graphics compositor editor is a work in progress.
+
 The **graphics compositor** organizes how a [scene](../game-studio/scenes.md) is rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
 - use one or multiple cameras
 - filter entities in the scene
 - render to one or more render targets, with different viewports
 - render a scene with a camera to a render target used as the input texture of a Material/Effect in a scene (eg render the rear-view mirror point-of-view to a texture, and display it on the rear-view mirror model)
-- easily mix the rendering mode at the same time in the same graphics composition
-- easily mix HDR and LDR rendering
+- mix the rendering mode at the same time in the same graphics composition
+- mix HDR and LDR rendering
 - apply ImagePostProcessing Effects on a render target, selected before/after rendering a camera
-- easily clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or render the UI)
+- clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or render the UI)
 - manipulate the compositor from scripts (or any animation system) in the scene to modify the composition, enable effects, etc
 
 ## Set the graphics compositor
@@ -28,7 +31,7 @@ You can swap out the root scene or the graphics compositor, or both, but you sho
 
 ## Open the graphics compositor
 
-The graphics compositor is an asset. To open it, in the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
+In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
 ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
@@ -40,11 +43,11 @@ The Graphics Compositor editor opens.
 
 In the **Entry Points** node, you set up the entry points for your rendering pipeline. There are three entry points: **Game**, **SingleView**, and **Editor**.
 
-| Entry point | Description                                                                                 |
-|--------------------|---------------------------------------------------------------------------------------------|
-| Game               | The entry point from your game. You must have at least one camera in your scene
-| SingleView         |                     
-| Editor             | Entry point for the Scene Editor in Game Studio
+| Entry point | Description 
+|-------------|------------
+| Game        | The entry point from your game. You must have at least one camera in your scene
+| SingleView  |                     
+| Editor      | Entry point for the Scene Editor in Game Studio
 
 #### Add a step
 
@@ -97,7 +100,7 @@ To name a camera slot, double-click it in the list and type a new name.
 
 ![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png) 
 
-The graphics compositor matches enabled cameras to their appropriate slots each frame. 
+The graphics compositor matches enabled cameras to their appropriate slots each frame.
 
 > [!Note]
 > If multiple enabled cameras in your scene use the same camera slot, the result is undefined. Future versions of Xenko will have a priority system or similar to avoid this.
@@ -143,26 +146,11 @@ Renderers define a specific rendering action. Xenko includes several renderers:
 
 Create and set up a [render view](../rendering-pipeline/index.md#render-views) using a camera slot. It renders using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
 
-![media/render-camera-1.png](media/render-camera-1.png) 
+![Render camera](scene-renderers/media/render-camera-1.png)
 
 ## Properties
 
-| Property      | Description   
+| Property      | Description
 | ------------- | -------------
 | Child         | Select a renderer for this camera, such as ForwardRenderer or any of your custom renderers  
-| Camera        | Specify a Camera slot defined at the level of the Scene Graphics Compositor 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 
+| Camera        | Specify a Camera slot defined at the level of the Scene Graphics Compositor
