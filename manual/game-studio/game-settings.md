@@ -36,6 +36,22 @@ To set the default scene:
 
 For more information about scenes, see [Manage scenes](../game-studio/manage-scenes.md).
 
+## Graphics compositor
+
+You can have multiple graphics compositors in your project, but you can only use one at a time. 
+
+To set the graphics compositor:
+
+1. In the **GameSettings** properties, next to **Graphics compositor**, click the **Asset picker** button.
+    
+    ![Set default scene](media/game-settings-graphics-compositor.png)
+
+    The **asset picker** opens.
+
+2. Select the graphics compositor in the asset picker and click **OK**.
+
+For more information, see [Graphics compositor](../graphics/graphics-compositor/index.md).
+
 ## Splash screen
 
 The **splash screen** is displayed when your game starts. The default is the Xenko splash screen.

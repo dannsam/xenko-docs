@@ -21,6 +21,10 @@ The **graphics compositor** organizes how a [scene](../game-studio/scenes.md) is
 - clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or render the UI)
 - manipulate the compositor from scripts (or any animation system) in the scene to modify the composition, enable effects, etc
 
+## Create a graphics compositor
+
+
+
 ## Set the graphics compositor
 
 You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](media/game-studio/game-settings.md).
@@ -70,8 +74,6 @@ You can repeat steps 1 and 2 to add as many steps as you need. To remove a step,
 
 The **Forward Renderer** node controls the additional effects applied to the inputs. 
 
-
-
 ## Camera slots
 
 **Camera slots** link the graphics compositor to the camera entities in your scene. This means you can change the root scene or graphics compositor without having to assign new cameras each time. You can create as many camera slots as you need.
@@ -103,7 +105,7 @@ To name a camera slot, double-click it in the list and type a new name.
 The graphics compositor matches enabled cameras to their appropriate slots each frame.
 
 > [!Note]
-> If multiple enabled cameras in your scene use the same camera slot, the result is undefined. Future versions of Xenko will have a priority system or similar to avoid this.
+> If multiple enabled cameras in your scene use the same camera slot, the result is undefined.
 
 ## Render stage
 
