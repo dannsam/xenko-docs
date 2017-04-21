@@ -22,16 +22,23 @@ The **graphics compositor** organizes how a [scene](../../game-studio/scenes.md)
 
 When you create a project, Xenko includes a graphics compositor by default.
 
+To create a graphics compositor, in the **asset view**, click **Add asset** and select **Misc > Graphics compositor**.
+
+* Level 9
+* Level 10
+
 ## Set the graphics compositor
 
 You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](../../game-studio/game-settings.md).
 
 ![Set default scene](../../game-studio/media/game-settings-graphics-compositor.png)
 
+You can change which graphics compositor your game uses at runtime in a script. 
+
 ## Open the graphics compositor editor
 
 >[!Note]
->The graphics compositor editor is a work in progress, and a little unstable. It will be improved in future Xenko versions.
+>The graphics compositor editor is a beta feature, and a little unstable. It will be improved in future Xenko versions.
 
 In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -71,8 +78,6 @@ You can repeat steps 1 and 2 to add as many steps as you need. To remove a step,
 ## Forward Renderer
 
 The **Forward Renderer** node controls the additional effects applied to the inputs. 
-
-
 
 ## Render stage
 
