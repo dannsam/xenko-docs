@@ -26,4 +26,3 @@ Xenko achieves the effect by creating several versions of the original image, wi
 * [Color transforms](color-transforms/index.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
-* [Post-effects for developers](post-effects-for-developers.md)

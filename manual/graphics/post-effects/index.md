@@ -34,4 +34,3 @@ Xenko provides several pre-defined post-effects. You can also extend the system 
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
 * [Light streaks](light-streaks.md)
-* [Post-effects for developers](post-effects-for-developers.md)
