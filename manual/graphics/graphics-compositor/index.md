@@ -6,9 +6,6 @@
 >[!Note]
 >This page requires a basic understanding of graphics pipelines.
 
->[!Note]
->The graphics compositor editor is a work in progress.
-
 The **graphics compositor** organizes how a [scene](../game-studio/scenes.md) is rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
 - use one or multiple cameras
@@ -29,11 +26,10 @@ The **graphics compositor** organizes how a [scene](../game-studio/scenes.md) is
 
 You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](media/game-studio/game-settings.md).
 
-The graphics compositor and the **root scene asset** work together. They're both defined in the...  
+## Open the graphics compositor editor
 
-You can swap out the root scene or the graphics compositor, or both, but you should make sure that they work together at any given frame.
-
-## Open the graphics compositor
+>[!Note]
+>The graphics compositor editor is a work in progress.
 
 In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -74,38 +70,7 @@ You can repeat steps 1 and 2 to add as many steps as you need. To remove a step,
 
 The **Forward Renderer** node controls the additional effects applied to the inputs. 
 
-## Camera slots
 
-**Camera slots** link the graphics compositor to the camera entities in your scene. This means you can change the root scene or graphics compositor without having to assign new cameras each time. You can create as many camera slots as you need.
-
-You don't have to create a different camera slot for each camera in your scene. In fact, you can have fewer slots than cameras, and just change which cameras use each slot. The best practice is to disable the camera components on cameras you don't want to render.
-
-> [!Note]
-> Each camera slot must have a camera assigned to it. If you have an unused camera slot, delete it.
->
-> You can't assign a camera to more than one slot. If you need to do this, duplicate the camera entity and assign it to a different slot.
-
-### Create a camera slot
-
-In the graphics compositor editor, on the left, under **Camera slots**, click the **green plus** icon.
-
-To name a camera slot, double-click it in the list and type a new name.
-
-### Blind a camera to a camera slot
-
-1. In your scene, select the **entity** with the camera component you want to bind.
-
-2. In the **property grid** (on the right by default), under **Slot**, select the camera slot you want to bind the camera to.
-
-> [!Note]
-> The drop-down menu lists camera slots from the graphics compositor currently selected in the game settings.
-
-![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png) 
-
-The graphics compositor matches enabled cameras to their appropriate slots each frame.
-
-> [!Note]
-> If multiple enabled cameras in your scene use the same camera slot, the result is undefined.
 
 ## Render stage
 

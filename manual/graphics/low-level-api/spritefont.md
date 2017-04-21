@@ -3,7 +3,7 @@
 The @'SiliconStudio.Xenko.Graphics.SpriteFont' class is a convenient way to draw text. It works with the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class.
 
 >[!Note]
->Remember that you need to put all custom code in a [Custom scene renderer](../graphics-compositor/graphics-compositor-for-developers/custom-scene-renderer.md) to include it in the composition.
+>Remember that you need to put all custom code in a [Custom scene renderer](../graphics-compositor/custom-scene-renderer.md) to include it in the composition.
 
 # Load a spriteFont
 
