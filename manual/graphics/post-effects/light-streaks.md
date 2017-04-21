@@ -26,4 +26,3 @@ It creates star-pattern beams from the light point.
 * [Color transforms](color-transforms/index.md)
 * [Depth of field](depth-of-field.md)
 * [Lens flare](lens-flare.md)
-* [Post-effects for developers](post-effects-for-developers.md)

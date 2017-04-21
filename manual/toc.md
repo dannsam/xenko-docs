@@ -137,7 +137,6 @@
 ### [Depth of field](graphics/post-effects/depth-of-field.md)
 ### [Lens flare](graphics/post-effects/lens-flare.md)
 ### [Light streaks](graphics/post-effects/light-streaks.md)
-### [Post-effects for developers](graphics/post-effects/post-effects-for-developers.md)
 ## [Rendering pipeline](graphics/rendering-pipeline/index.md)
 ### [Render features](graphics/rendering-pipeline/render-features.md)
 ## [Sprite fonts](graphics/sprite-fonts.md)
