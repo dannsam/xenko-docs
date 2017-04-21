@@ -1,6 +1,6 @@
 # Bright filter
 
-The **bright filter** extracts the areas of an image which are the brightest. The bright filter itself isn't a post-effect, but its result is used later by other effects such as [bloom](bloom.md), [light streaks](light-streaks.md), and [lens flare](lens-flare.md).
+The **bright filter** extracts the brightest areas of an image. The bright filter itself isn't a post-effect, but its result is used later by other effects such as [bloom](bloom.md), [light streaks](light-streaks.md), and [lens flare](lens-flare.md).
 
 ![media/bright-filter-1.png](media/bright-filter-1.png) 
 

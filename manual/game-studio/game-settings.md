@@ -38,7 +38,7 @@ For more information about scenes, see [Manage scenes](../game-studio/manage-sce
 
 ## Graphics compositor
 
-You can have multiple graphics compositors in your project, but you can only use one at a time. 
+You can have multiple graphics compositors in your project, but you can only use one at a time.
 
 To set the graphics compositor:
 

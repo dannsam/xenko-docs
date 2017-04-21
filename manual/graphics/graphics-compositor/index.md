@@ -20,16 +20,18 @@ The **graphics compositor** organizes how a [scene](../../game-studio/scenes.md)
 
 ## Create a graphics compositor
 
-
+When you create a project, Xenko includes a graphics compositor by default.
 
 ## Set the graphics compositor
 
 You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](../../game-studio/game-settings.md).
 
+![Set default scene](../../game-studio/media/game-settings-graphics-compositor.png)
+
 ## Open the graphics compositor editor
 
 >[!Note]
->The graphics compositor editor is a work in progress.
+>The graphics compositor editor is a work in progress, and a little unstable. It will be improved in future Xenko versions.
 
 In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
