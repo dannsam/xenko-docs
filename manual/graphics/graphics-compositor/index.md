@@ -6,7 +6,7 @@
 >[!Note]
 >This page requires a basic understanding of graphics pipelines.
 
-The **graphics compositor** organizes how a [scene](../game-studio/scenes.md) is rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
+The **graphics compositor** organizes how a [scene](../../game-studio/scenes.md) is rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
 
 - use one or multiple cameras
 - filter entities in the scene
@@ -24,7 +24,7 @@ The **graphics compositor** organizes how a [scene](../game-studio/scenes.md) is
 
 ## Set the graphics compositor
 
-You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](media/game-studio/game-settings.md).
+You can have multiple graphics compositors in your project, but you can only use one compositor at a time. At runtime, Xenko uses the graphics compositor you specify in [Game Settings](../../game-studio/game-settings.md).
 
 ## Open the graphics compositor editor
 

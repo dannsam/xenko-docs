@@ -20,11 +20,11 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
-    ![Graphics Compositor asset](media/graphics-compositor-asset.png)
+    ![Graphics Compositor asset](..\graphics-compositor\media\graphics-compositor-asset.png)
 
     The graphics compositor editor opens.
 
-    ![Graphics Compositor editor](media/graphics-compositor-editor.png)
+    ![Graphics Compositor editor](..\graphics-compositor\media\graphics-compositor-editor.png)
 
 2. Select the **post-processing effects** node.
 

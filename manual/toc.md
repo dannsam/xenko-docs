@@ -93,7 +93,7 @@
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers/index.md)
 #### [Clear RenderFrame](graphics/graphics-compositor/scene-renderers/clear.md)
 #### [Render camera](graphics/graphics-compositor/scene-renderers/render-camera.md)
-#### [Custom scene renderer](graphics/graphics-compositor/graphics-compositor-for-developers/custom-scene-renderer.md)
+#### [Custom scene renderer](graphics/graphics-compositor/custom-scene-renderer.md)
 ## [Effects and shaders](graphics/effects-and-shaders/index.md)
 ### [Effect language](graphics/effects-and-shaders/effect-language.md)
 ### [Shading language](graphics/effects-and-shaders/shading-language/index.md)
