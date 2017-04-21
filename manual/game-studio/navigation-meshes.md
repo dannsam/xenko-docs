@@ -4,9 +4,9 @@
 <span class="label label-doc-audience">Level designer</span>
 <span class="label label-doc-audience">Programmer</span>
 
-**Navigation meshes** form the area that entities with navigation components can navigate. Xenko creates a separate navigation mesh for each [navigation group](navigation-groups.md) you create.
+**Navigation meshes** form the area that entities with navigation components can navigate. Xenko creates a layer in the navigation mesh for each [navigation group](navigation-groups.md) you create.
 
-Game Studio displays navigation meshes as colored overlays in your scene. The overlay shows where entities in the navigation group for that mesh can move. The mesh updates in real time as you edit your scene.
+Game Studio displays navigation meshes as colored overlays in your scene. The overlay shows where entities in the navigation group for that layer can move. The mesh updates in real time as you edit your scene.
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/withOutlineAE.jpg">
@@ -40,7 +40,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     ![Choose navigation group](media/choose-navigation-group-in-navigation-mesh.png)
 
-    Xenko builds a navigation mesh for this group. For more information about groups, including how to create them, see [Navigation groups](navigation-groups.md).
+    Xenko builds a layer in the navigation mesh for this group. For more information about groups, including how to create them, see [Navigation groups](navigation-groups.md).
 
 5. Repeat steps 3 and 4 for as many groups as you want to use the navigation mesh.
 
@@ -56,13 +56,13 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 | Build settings            | Advanced settings for the navigation mesh
 | Groups                    | The groups that use this navigation mesh
 
-## Show or hide navigation meshes in the scene editor
+## Show or hide a navigation mesh in the scene editor
 
-To show or hide a navigation mesh in the scene editor, use the **navigation visibility** menu in the scene editor toolbar.
+Use the **navigation visibility** menu in the scene editor toolbar.
 
 ![Navigation group visibility](media/navigation-group-visibility.png)
 
-Use the checkboxes to show or hide navigation meshes belonging to different groups. The colored boxes indicate the color of the groups displayed in the scene editor.
+To show or hide layers belonging to different groups, use the checkboxes. The colored boxes indicate the color of the groups displayed in the scene editor.
 
 | Navigation mesh hidden   | Navigation mesh shown
 |--------------------------| ------------

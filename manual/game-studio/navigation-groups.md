@@ -6,7 +6,7 @@
 
 **Navigation groups** define different navigation properties for the entities you add to them. These are defined in the project **game settings**.
 
-You can create different navigation groups for different kinds of entities. For example, if your game features vehicles controlled by scripts, you might create different navigation groups for different sizes of vehicle, each with different properties: a car group, a bus group, a motorcycle group, and so on.
+You can create different navigation groups for different kinds of entity. For example, if your game features vehicles controlled by scripts, you might create different navigation groups for different sizes of vehicle, each with different properties: a car group, a bus group, a motorcycle group, and so on.
 
 ## Create a navigation group
 
