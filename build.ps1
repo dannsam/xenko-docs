@@ -248,7 +248,6 @@ Write-Host "Generating documentation..."
 deps\docfx\docfx.exe build
 
 # Copy extra items
-Copy-Item robots.txt _site/
 Copy-Item ReleaseNotes/ReleaseNotes.md _site/ReleaseNotes/
 Copy-Item studio_getting_started_links.txt _site/
 Stop-Transcript
