@@ -1,130 +1,239 @@
 # Highlights
 
-Xenko 1.10β improves stability and performance and introduces changes in the asset serialization.
+## Scene hierarchy and scene streaming
 
-## Tool performance
+Working with scenes has become more flexible. Instead of a single scene, your game can now use a hierarchy of scenes to organize entities into levels, areas or layers, and let teams collaborate on them more efficiently.
 
-This release comes packed with several performance improvements, especially in the Game Studio and Asset Compiler.
+Game Studio displays child scenes together with their parent. Individual scenes can be loaded, unload, locked and moved around.
 
-We've rewritten how assets are loaded in the scene editor, resulting in a faster and smoother loading in the background, as well as reduced memory usage.
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/scene_editor_640.jpg">
+   <source src="media/ReleaseNotes-2.0/scene_editor_640.mp4" type="video/mp4">
+</video>
 
-We've made various improvements to the Asset Compiler startup time (important since we start multiple Asset Compilers to process FBX files). Also various key importers, such as the FBX importers, weren't scaling well with lots of polygons.
+When running your game, the **default scene** set in your **game settings** is loaded as the **root scene** and can be used to store persistent entities. More scenes can be dynamically loaded and unloaded from scripts and added as **child scenes**.
 
-The Content Bundle packing (run at the end of the Asset Compiler) can now work incrementally. Before, if you had several gigabytes of data but only changed a small asset, compilation was fast but saving the new bundle took a long time at the end of the build. This operation should be almost instant now.
+```
+var childScene = Content.Load<Scene>("myChildScene");
+SceneSystem.SceneInstance.RootScene.Children.Add(childScene);
+```
 
-## Unique GUID inside an asset
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/scene_streaming_640.jpg">
+   <source src="media/ReleaseNotes-2.0/scene_streaming_640.mp4" type="video/mp4">
+</video>
 
-While not a breaking change, we've introduced a new paradigm in our asset infrastructure, implying that any _identifiable_ object (ie any object that implements `IIdentifiable` interface) must have a unique identifier in the asset containing it.
+To get started, take a look at the new built-in `SceneStreamingScript`. It demonstrates background scene loading when passing through trigger volumes. 
 
-This constraint makes it easier to handle internal references inside an asset. Since it wasn't enforced before, **the first time you open an existing project with version 1.10, you might see warnings stating that the identifiers of some objects have been rewritten** (especially entity components and scripts). This is expected and should be harmless. The warnings shouldn't appear the next time you open the project.
+You can now use a scene's `Offset` to move its entities both at design time and runtime.
+
+The `ChildSceneComponent` has been removed. We encourage all entities to be managed by a single **entity manager** and rendered by a single **graphics compositor**.
+
+## Global illumination with light probes
+
+Light probes capture the lighting at the position you place them. They simulate indirect light, the effect of light bouncing off surfaces and illuminating other surfaces.
+
+They can make a dramatic difference to the mood and appearance of your scene.
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/light_probes_640.jpg">
+   <source src="media/ReleaseNotes-2.0/light_probes_640.mp4" type="video/mp4">
+</video>
+
+Light probes can be **placed freely** and are processed **per pixel**. This means you can use them not only on small dynamic objects, but also large or static objects (until we have light maps for those!).
+
+## Light shafts
+
+Xenko now supports shadow map-based light shafts for directional lights.
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/lightshaft_CoS_640.jpg">
+   <source src="media/ReleaseNotes-2.0/lightshaft_CoS_640.mp4" type="video/mp4">
+</video>
+
+Our implementation uses ray-marching rather than post effects, making the shaft visible and cool-looking even if the light source isn't visible.
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/lightshaft_640.jpg">
+   <source src="media/ReleaseNotes-2.0/lightshaft_640.mp4" type="video/mp4">
+</video>
+
+## Graphics compositor
+
+The graphics compositor is now a separate asset.
+
+Rendering parameters (such as VR) and post effect parameters can be tweaked in just a few clicks.
+
+![Graphics compositor](media/ReleaseNotes-2.0/graphics_compositor.jpg)
+
+This is just the first step towards making the graphics compositor easy to customize and extend. Stay tuned for more changes in future releases! 
+
+## Visual Studio package improvements
+
+Programmers working with Xenko often go back and forth between Game Studio and Visual Studio. To make their lives easier:
+
+* Game Studio now comes with full Visual Studio 2017 support.
+* You can now open the current solution in Game Studio directly from Visual Studio.
+* Previously, when assets are compiling, MSBuild didn't report any progress until finished. It now displays information, warnings and errors while it compiles.
+
+# Breaking changes
+
+## Backward compatibility
+
+Xenko 2.0 supports project upgrades only for projects created with Xenko 1.10 Beta. If you want to upgrade a project made with an older version, update it to Xenko 1.10 first.
+
+## Visual Studio support
+
+Xenko 2.0 supports Visual Studio 2015 and Visual Studio 2017 as IDEs. Visual Studio 2013 and earlier versions are no longer supported. 
+
+When upgrading a project from earlier version, in its `.csproj` file, set `ToolsVersion="14.0"` as the minimum required version.
+
+## Navigation
+
+All compontents related to navigation have been moved to their own `SiliconStudio.Xenko.Navigation` assembly and namespace.
 
 # Changelog
 
-## Version 1.10.0-beta
+## Version 2.0.0
 
-Release date 2016/3/9
+Release date 2017/04/25
 
 ### Enhancements
 
-#### Animation
-
-* The additive animation asset has been removed. Animation assets now support both regular and additive clips. Check the animation documentation for details
-* You can now specify start and end frames for animation clips. The animation framerate can be changed in the Game Settings asset. Actual data is still saved and used in seconds
-* PlayingAnimations is no longer visible in design time
-* The API for the animation component has changed. See the documentation or create an AnimationStart pre-built script for a quick look
-* Various bug fixes
-
 #### General
 
-* Content packaging in bundles is now incremental in Debug and Release. It drastically improves iteration time when making small changes then re-running a game with many or large assets. AppStore configuration will do a full rebuild
-* Asset compilation should have better startup time and be faster when spawning sub-processes (used by FBX)
-* FBX import for meshes with lots of triangles was extremely slow due to unoptimized access to edge data
-* FBX asset compilation would sometimes fail because the data limit on WCF was too low
-* Removed unecessary hashing of assemblies when building assets
-* Assets (YAML) now supports multiline strings properly
+* Added VR game template
+* Game Studio and actual runtime game now share the same build cache. This should speed up build times.
 
 #### Game Studio
 
-* In the Scene and Prefab editors, asset loading is now async, much faster, and more memory-friendly
-* You can now right-click a prefab instance and select "Select prefab in asset view"
-* Improved keyboard navigation in tree views (eg solution explorer, scene hierarchy): left arrow goes to parent node, right arrow goes to first child (when on a node)
-* Nodes of the entity tree in the scene/prefab editors automatically expand when children are added
+* Improved how internal objects of an asset can be referenced
+* Improved keyboard navigation in tree views (eg entity hierarchy in scene and prefab editors)
+* Improved scrolling in tree views
+* Improved drag and drop performance
+* Entities can now be dragged and dropped from one scene to another
+* Exceptions in the embedded game of a scene editor no longer crash Game Studio and can be recoverable
+* Components of vectors can now be edited independently when using multi-selection
+* Camera navigation now uses a different key set:
+    * Alt + left mouse button - orbit
+    * Mouse wheel - zoom
+    * Right mouse button - spin camera
+    * Middle mouse button - pan
+    * Right + middle mouse buttons - camera hover
+* Added camera speed slider
+* The "New game" template has been touched up
+* "Save" and "Save all" have been merged into just "Save"
+* Navigation mesh overlay visibility can now be toggled per group
+* Scripts can now be closed without saving and opened again later
+* Script undo history now persists after closing a script
+
+#### Assets
+
+* Texture assets are now split into color, normal and grayscale subtypes
+* Replaced `SkyboxUsage` enum on `SkyboxAsset` with a boolean `IsSpecularOnly`
+
+#### Engine
+
+* Added support for splash screens (they show only in release builds)
+
+#### Audio
+
+* Added HRTF binaural audio support for Windows (10+)
 
 #### Graphics
 
-* Improved SetViewport (which has a separate count from render target count)
-* Added SetScissorRectangle (note: viewport and scissors only work well for first viewport) [#521](https://github.com/SiliconStudio/xenko/issues/521)
-* Vulkan: SwapChain clearing wasn't passing validation layer
-* Forward+ light culling wasn't working well if projection matrix was off-center (ie VR)
-* RenderDocPlugin assembly lets you automatically load RenderDoc and capture inside editor (using /RenderDoc flag) or game
-* Cluster lighting wasn't working on OpenGL and OpenGL ES due to unimplemented `UpdateSubresource` for 3D textures
+* Added MSAA support
+* Added custom MSAA resolving filters
+* Shadow cascade calculation is now more stable
+* Multiple render targets now have better support
+* Point lights can now cast shadows
+* `SkyboxComponent` has been removed and the functionality moved into the `LightComponent` and `BackgroundComponent`
+* `BackgroundComponent` now accepts cubemap textures as an input
 
-#### Navigation
-
-* Debug overlay inside of the Game Studio is now slightly transparent
+#### Materials
 
 #### Particles
 
-* ShapeBuilder API has been updated. Custom shape builder implementations have to be upgraded accordingly
+* Additive rotation no longer has a default value of 1 radian; it's now 0
+* Initializers and updaters no longer add particle fields when disabled
 
-### Bugs fixed
+#### Physics
 
-#### General
-
-* C# "fixed" arrays didn't work due to IL changes
-* Connection Router sometimes couldn't restart properly due to adb child process keeping the parent process port open
-
-#### Game Studio
-
-* When importing an effect log, it often ended up in the wrong package. It's now created in the currently active package
-* Keyboard input often got stuck in the Game Studio (especially annoying when moving)
-* Script editor often crashed on saving or creation. Several related issues fixed
-* Mouse cursor could disappear during drag-and-drop operations [#385](https://github.com/SiliconStudio/xenko/issues/385) and [#546](https://github.com/SiliconStudio/xenko/issues/546)
-* Changing the layout type in the UI editor could make Game Studio crash [#547](https://github.com/SiliconStudio/xenko/issues/547)
-* Fix several issues related to folders in Scene and Prefab editors (renaming, copy/paste, undo/redo)
-* Fix a rare crash with the clipboard when another application is using it
-* Fix a crash that could occur when removing an item from certain types of collections
-* Fix input of Windows device name (CON, NUL, COM1) as folder names
- 
-#### Assets
-
-* Assets that contain multiple identifiable objects with the same `Id` now go through a fixup pass at load to re-generate unique ids
-* Make sure we generate new Ids for such objects after manipulations such as copy/pasting, duplicating, etc
-* When a property of an asset was overridden (from the archetype or from a prefab) to a value equivalent to the default value of the property, the override information was lost after reloading
-* The deserialization of some types from an asset file could fail due to impropert type and assembly resolving
-* Animations wouldn't import when the skeleton used for the animation had missing or extra bones
-* Some texture compression pairs which failed before now attempt a two-step conversion to create the target output format
-* FBX importer now ignores empty string names during mesh importing
-* Several crash issues fixed in the Assimp importer
-* SDF fonts and msdfgen have been upgraded to handle overlapping contours
-
-#### Graphics
-
-* Material culling wasn't applied properly
-* Multi Render Target info wasn't kept when doing multithread rendering with multiple command lists
-* Ambient lighting didn't update after the last Ambient Light had been removed from the scene
-* Fix possible shadow map hole between cascades, at specific viewing angles when using blending
+* Reworked collisions filtering to improve performance
 
 #### Navigation
 
-* TryFindPath would return a valid path even if the starting and ending point weren't connected
+* Bounding boxes can now be placed in the scene
+* Navigation meshes can now be generated/updated at runtime
+* `TryFindPath` now returns false instead of crashing if no navigation mesh is loaded
+* Navigation mesh layer indexes have been replaced with groups
 
-## Version 1.10.1-beta
+#### VR
 
-Release date 2016/3/13
+* Unique device-agnostic API
+* Oculus Rift support (HMD and controllers)
+* Vive support (HMD and controllers)
 
-### Bugs fixed
+### Issues fixed
 
-#### Game Studio
-
-* Fix a concurrency problem that could make the Game Studio crash while loading or updating assets in the Scene Editor
-
-## Version 1.10.2-beta
-
-Release date 2016/3/14
-
-### Bugs fixed
+#### General
 
 #### Game Studio
 
-* Fix additional concurrency problems that could make the Game Studio crash while loading or updating assets in the Scene Editor
+* Naming project libraries now avoids collisions
+* Invalid characters in the project name are now filtered out correctly and don't prevent the project compiling
+* Changing gizmo sizes no longer causes the slider to jump
+* Switching between gizmos no longer crashes the scene editor
+* Asset copy/paste now works better
+* Thumbnail behavior is now more stable
+* Fixed leaking of deleted assets or entities when navigating through the selection history
+* Fixed renaming assets undo/redo
+* Renaming an asset no longer closes its editor
+* Fixed reparenting assets with Alt key (maintains world position)
+* Fixed many problems related to manipulation of entities from prefabs
+* Fixed many problems related to moving entities in the scene hierarchy
+* The property grid now properly handles multi-selection
+* Fixed many problems related to properties overridden from Prefabs or from Archetypes
+* Fixed many problems related to copy/paste in the property grid
+* Fixed some cases where *Create prefab from selection* wasn't properly linking the selected entities to the newly created prefab
+* Fixed several problems when manipulating the model or materials in a `ModelComponent`, especially when the entity is inherited from a prefab
+* The material highlighting button now works properly
+* Assets that failed to save now prevent Game Studio from closing and losing your changes
+* Sprites can be selected again in the scene editor
+* Undoing/redoing creation or removal of script assets now works correctly
+* Setting a translation snap of 0 now works as expected
+* Light gizmos correctly update when changing the light type
+* Typing the URL to a reference in an asset picked now works as expected
+
+#### Assets
+
+
+#### Engine
+
+* Fixed right Shift key detection in WinForms
+* The `Start` method of scripts is now always called before the `Update` method of any `SyncScript` in the same frame
+* `SyncScripts` no longer cause crashes when scheduled from a different thread
+* Scripts are no longer started or updated if another script removes them from the scene in the same frame
+* `ImageElements` are now properly displayed when using a `SpriteFromTexture`
+ 
+#### Graphics
+
+* Orthographic views no longer display broken shadows
+* Shadows no longer disappear when viewed exactly vertically
+* Cascade blending no longer causes holes in shadows
+* Tesselated objects now cast shadows
+* Normal-mapped object lighting is now correct when non-uniform scaling is applied
+* Using unbound vertex streams in shaders no longer causes crashes
+* Bright post effects are now more stable
+* VR now shares shadows and culling for each eye
+* Clustered lighting now works with multiple render views
+* Fixed RGB/HSV color conversions
+* Fixed engine exit when using RenderDoc profiling
+* Fixed Multisample Quality Level for MSAA textures
+* Tesselation and displacement mapping no longer cause rendering errors in the editor
+ 
+#### Physics
+
+* Removing and re-adding entities no longer causes crashes in certain situations
+ 
+# Known Issues
+
+* On Linux, when switching the underlying Graphics Platform, rendering doesn't occur or fail. To fix the problem, delete the cache, local, and roaming folders on the Linux host and restart the game.
+* Performance issues on mobile (being worked on)
+* On iOS, if `Enable device-specific builds` is toggled on (from the project properties), it's not possible to debug game code. To speed up your development manually select the architecture of your device from the Advanced tab.
+* Live scripting has been temporarily disabled
