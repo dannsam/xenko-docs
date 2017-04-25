@@ -75,9 +75,9 @@ Translate              | Arrow keys, any mouse button pressed + A, S, D, Q, W, a
 Walk                   | Left mouse button
 Look around in a scene | Right mouse button
 Orbital rotation       | Alt key + Left mouse button
-Zoom in or zoom out    | Rotate mouse wheel, Alt key + Right mouse button
-Pan                    | Press middle mouse button
-Focus                  | Select an entity and press the F button
+Zoom in or zoom out    | Rotate mouse wheel, Alt key + Right mouse button + move mouse
+Pan                    | Middle mouse button + move mouse
+Focus                  | F (with entity selected)
 
 ## Change camera editor perspective
 
