@@ -10,11 +10,13 @@ The default renderers are:
 
 ## Select a renderer
 
+1. In the game compositor editor, select the **entry points** node.
 
+2. In the **property grid**, under **game renderer**, select the renderer you want to use.
 
 ## Clear
 
-Clears a frame with a solid color.
+Clears a frame, with a solid color.
 
 ![media/clear-renderframe-1.png](media/clear-renderframe-1.png)
 
@@ -30,9 +32,7 @@ Clears a frame with a solid color.
 
 ## Render camera
 
-Create and set up a [render view](../rendering-pipeline/index.md#render%20views) using a [camera slot](camera-slots.md). This renders using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
-
-RENDERS FROM THE CAMERA SLOT YOU SPECIFY USING THE RENDERING CHILD YOU SPECIFY (EG FORWARD RENDER)
+The **render camera** option creates a [render view](../rendering-pipeline/index.md#render%20views) using a [camera slot](camera-slots.md). This renders using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
 
 ![media/render-camera-1.png](media/render-camera-1.png)
 
@@ -40,22 +40,17 @@ RENDERS FROM THE CAMERA SLOT YOU SPECIFY USING THE RENDERING CHILD YOU SPECIFY (
 
 | Property      | Description                                                             
 | ------------- | ----------
-| Child         | Select a renderer for this camera, such as ForwardRenderer or a custom renderer     
-| Camera        | Specify a camera slot defined at the level of the Scene Graphics Compositor    
+| Camera        | Specify a [camera slot](camera-slot.md) to render from
+| Child         | Specify a renderer for the camera (eg the forward renderer or a custom renderer)
 
 ## Scene renderer collection
 
-The **scene renderer collection** executes multiple renderers in sequence.
+The **scene renderer collection** executes multiple renderers in sequence. You can add as many renderers as you need.
 
-you add them as children...
+>[!Note]
+>Xenko executes the renderers in list order.
 
-for example you can add forward renderers... 
+To add a renderer to the collection, next to **Children**, click the **green plus icon** and select the renderer you want to add.
 
 ![Add to scene collection](media/add-renderer-to-scene-renderer-collection.png)
 
-To add a renderer to the collection, next to **Children**, click the **green plus icon** and select the renderer you want to add. You can add as many as you need.
-
->[!Note]
->Xenko executes the renderers in the list order...
-
-## 
