@@ -18,7 +18,7 @@ To disable camera movement from inputs other than VR devices:
 
     The Graphics Compositor editor opens.
 
-2. In the Graphics Compositor, select the **ForwardRenderer**.
+2. Select the **ForwardRenderer**.
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
@@ -29,6 +29,8 @@ To disable camera movement from inputs other than VR devices:
 4. Select **Ignore camera rotation**. 
 
     ![Ignore camera rotation](media/ignore-camera-rotation.png)
+
+For more information about the graphics compositor, see the [Graphics compositor](../graphics/graphics-compositor/index.md) page.
 
 ## Framerate
 

@@ -3,7 +3,7 @@
 <span class="label label-doc-level">Beginner</span>
 <span class="label label-doc-audience">Programmer</span>
 
-This page explains how to add support for the Oculus Rift and Vive devices to your game. Xenko will support other devices soon.
+This page explains how to add support for the Oculus Rift and Vive devices to your game. Future versions of Xenko will support other devices.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
@@ -11,7 +11,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
     The Graphics Compositor editor opens.
 
-2. In the Graphics Compositor, select the **ForwardRenderer** node.
+2. In the Graphics Compositor, select the **forward renderer** node.
 
     ![Select forward renderer](media/select-forward-renderer.png)
 
@@ -25,7 +25,9 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
 
     ![Add VR item](media/add-vr-api.png)
 
-5. From the **Item** drop-down menu, select a VR API you want your game to support. You can add as many as you need.
+5. From the **Item** drop-down menu, select a VR API you want your game to support.
+
+    ![Add API](media/select-vr-api.png)
 
     | API    | Description 
     |--------|  --------
@@ -33,9 +35,11 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     | OpenVR | Supports Vive and Oculus Rift devices (best support for Vive) 
     | Dummy  | Displays the game on the screen with two "eye cameras", instead of in the VR device (mainly useful for development). To display the dummy view in the Game Studio scene editor, make sure the editor is connected to the forward renderer.
 
-6. Make sure the list order is correct.
+6. Repeat steps 4 and 5 to add as many APIs as you need.
 
-    When your game runs, it attempts to use the devices in the list order. For example, if the first item is Dummy, the game uses no VR device. If the last item is Dummy, the game only uses it if there is no VR device available.
+7. Make sure the list order is correct. When your game runs, it attempts to use the devices in the list order. For example, if the first item is Dummy, the game uses no VR device. If the last item is Dummy, the game only uses it if there is no VR device available.
+
+    To change the order, change the selected VR device in each item.
 
     >[!Tip]
     >Although the OpenVR API supports both Vive and Oculus Rift devices, the Oculus API provides better support for Oculus Rift. For this reason, we recommend the following list order:
@@ -46,7 +50,7 @@ This page explains how to add support for the Oculus Rift and Vive devices to yo
     >
     >This means your game uses the Oculus API if an Oculus Rift device is connected, and the OpenVR API if another device (eg a Vive) is connected.
 
-7. Enable **VRRendererSettings**.
+8. Enable **VRRendererSettings**.
 
     ![VR renderer settings](media/vr-renderer-settings.png)
 
@@ -57,17 +61,18 @@ Your game is now ready to use VR.
 
 ## VR properties
 
-| Property             | Description      
-|----------------------|--------
+| Property                | Description      
+|-------------------------|--------
 | Ignore camera rotation  | Disables camera movement from inputs other than VR devices, helping to reduce [VR sickness](vr-sickness.md)   
-| Resolution scale | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU 
+| Resolution scale        | The resolution of the image displayed in the VR device. Higher resolutions produce better images, but require more CPU
 
 ## Multisample anti-aliasing 
 
-As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (multisample anti-aliasing) in the ForwardRenderer properties (below the VR settings).
+As aliasing artifacts are more obvious in VR, we recommend you enable **MSAA** (multisample anti-aliasing) in the forward renderer properties (above the VR settings).
 
 ![MSAA](media/MSAA.png)
 
 ## See also
 
 * [VR sickness](vr-sickness.md)
+* [Graphics compositor](../graphics/graphics-compositor/index.md)
