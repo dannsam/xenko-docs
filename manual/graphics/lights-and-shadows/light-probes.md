@@ -6,7 +6,11 @@
 
 **Light probes** capture the lighting at the position you place them. They simulate **indirect light**, the effect of light bouncing off surfaces and illuminating other surfaces. They can make a dramatic difference to the mood and appearance of your scene.
 
-![Light probes on and off](media/light-probes-on-and-off.jpg)
+<p>
+<video autoplay loop class="responsive-video" poster="media/light_probes_640.jpg">
+   <source src="media/light_probes_640.mp4" type="video/mp4">
+</video>
+</p>
 
 The screenshot below shows a [point light](point-lights.md) surrounded by light probes in the scene editor. The probes form 3D areas (shown in the scene editor by the yellow wireframe connecting the probes).
 
