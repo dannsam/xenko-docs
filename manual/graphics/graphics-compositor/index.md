@@ -1,8 +1,11 @@
 # Graphics Compositor editor
 
+>[!Note]
+>This section is under construction, and will be updated soon.
+
 The Graphics Compositor editor displays the different layers of your graphics pipeline visually.
 
-# Open the Graphics Compositor editor
+## Open the Graphics Compositor editor
 
 In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
