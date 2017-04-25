@@ -38,7 +38,7 @@ You can capture a cubemap from a position in your scene.
 
 4. Browse to the location on disk you want to save the cubemap, specify a name, and click **Save**.
 
->![Tip]
+>[!Tip]
 >We recommend you save the cubemap in your project **Resources** folder. For more information, see [Organize your files in version control](../files-and-folders/version-control.md).
 
 Game Studio creates a cubemap `.dds` file in the location you specified.
