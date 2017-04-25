@@ -111,9 +111,9 @@ To display the camera options, click the **camera icon** in the top-right of the
 
 In **orthographic view**, lines of identical length appear the same length. Parallel lines never touch, and there's no vanishing point. It's easy to tell if objects are lined up exactly.
 
-   ![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
+![Perspective and orthographic diagram](media/perspective-orthographic-diagram.png)
 
-   ![Perspective and orthographic views](media/perspective-and-orthographic-views.png)
+![Perspective and orthographic views](media/perspective-and-orthographic-views.png)
 
 You can also switch between perspective and orthographic views by clicking the **view camera gizmo** as it faces you.
 
