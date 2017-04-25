@@ -135,6 +135,10 @@ Game Studio renders the area between the near and far planes.
 
 ![Camera position](../get-started/media/camera-position.png)
 
+#### Camera speed
+
+The **camera speed** setting changes how quickly the camera moves in the editor.
+
 ## See also
 
 * [Create and open a scene](create-a-scene.md)
