@@ -24,17 +24,17 @@ To develop for mobile platforms, you also need:
 
 | Platform | Requirements
 |----------|-------
-| Android  | Xamarin license* 
-| iOS      | Mac computer, Xamarin license* 
+| Android  | Xamarin* 
+| iOS      | Mac computer, Xamarin* 
 
 > [!Note]
-> *If you use Visual Studio, you already have a Xamarin license.
+> * If you use Visual Studio, you already have Xamarin. If you need to, you can get it from the [Xamarin site](https://store.xamarin.com/).
 
 For information about supported platforms, see [Platforms](../platforms/index.md).
 
 ## Run games made with Xenko
 
-To run games made with Xenko, users need:
+To run games made with Xenko, you need:
 
 - .NET 4.6.1
 - DirectX11 (included with Windows 10 and later)
