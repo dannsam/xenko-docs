@@ -14,44 +14,38 @@ There are several ways to move the editor camera around the scene editor.
 > [!TIP]
 > Holding the **Shift** key speeds up movement.
 
-### Walk
+### Fly
 
-To walk around the scene, hold the **left mouse button** and move the **the mouse**. This moves the editor camera along the X and Z dimensions.
+<video controls autoplay loop height="240" width="320">
+                <source src="media/navigate-in-scene-fly-in-the-scene.mp4" type="video/mp4">
+</video>
+
+Hold the **right mouse button** and **move the mouse** to change the camera direction. Hold the **right mouse button** and use the **WASD keys** to move. This is similar to the controls of many action games.
+
+### Pan
+
+Hold the **right mouse button** and the **center mouse button** and move the mouse.
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-walk-in-the-scene.mp4" type="video/mp4">
 </video>
-
-### Fly
-
-To fly around the scene, hold the **right mouse button**, then **move the mouse** to change the camera direction and use the **WASD keys** to move. This is similar to the controls of many action games.
-
-Action                          | Effect
---------------------------------|--------------
-**Right mouse button + move mouse**              | Rotate editor camera
-**A key + right mouse button**  | Move left
-**D key + right mouse button**  | Move right
-**S key + right mouse button**  | Move backward
-**W key + right mouse button**  | Move forward
-**Q key + right mouse button**  | Move down
-**E key + right mouse button**  | Move up
  
-<video controls autoplay loop height="240" width="320">
-                <source src="media/navigate-in-scene-fly-in-the-scene.mp4" type="video/mp4">
-</video>
- 
-### Rotate around a point
+### Dolly
 
-You can rotate around a center point by holding **Alt** and the **left mouse button** together and moving the **mouse**.
+To dolly (move the camera forward and backward), use the **mouse wheel**.
 
-The point of rotation is always the center of the screen. You can adjust the distance to the center with the **mouse wheel**.
+### Orbit
+
+Hold **Alt** and the **left mouse button** and move the **mouse**.
+
+The point of rotation is always the center of the screen. To adjust the distance to the center, use the **mouse wheel**.
 
 ![Rotation](media/navigate-in-scene-orbital-rotation-schema.png)
 
 <video controls autoplay loop height="240" width="320">
                 <source src="media/navigate-in-scene-orbital-rotation.mp4" type="video/mp4">
 </video>
- 
+
 ### Focus on an entity
 
 After you select an entity, press the **F** key. This zooms in on the entity and centers it in the camera editor.
@@ -65,17 +59,17 @@ You can also focus by clicking the **magnifying glass icon** next to the entity 
 </video>
 
 > [!TIP] 
-> Focusing and then rotating with **Alt + left mouse button** is useful for inspecting entities.
+> Focusing and then orbiting with **Alt + left mouse button** is useful for inspecting entities.
 
-### Controls
+### Table of controls
 
-Action                 | Controls
+Action                 | Control
 -----------------------|--------------
-Translate              | Arrow keys, any mouse button pressed + A, S, D, Q, W, and E keys
-Walk                   | Left mouse button
-Look around in a scene | Right mouse button
-Orbital rotation       | Alt key + Left mouse button
-Zoom in or zoom out    | Rotate mouse wheel, Alt key + Right mouse button + move mouse
+Move                    | Arrow keys + right mouse button <br>WASDQE keys + right mouse button </br>
+Look around             | Hold right mouse button + move mouse
+Pan                     | Middle mouse button + right mouse button + move mouse
+Orbit                   | Alt key + left mouse button
+Zoom                    | Mouse wheel <br>Alt + Right mouse button + move mouse</br>
 Pan                    | Middle mouse button + move mouse
 Focus                  | F (with entity selected)
 
