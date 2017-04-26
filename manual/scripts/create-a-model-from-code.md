@@ -58,7 +58,7 @@ You can create models in scripts at runtime. You can do this in several differen
     ```cs
     // Create an entity and add it to the scene.
     var entity = new Entity();
-    SceneSystem.SceneInstance.Scene.Entities.Add(entity);
+    SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
     
     // Create a model and assign it to the model component.
     var model = new Model();

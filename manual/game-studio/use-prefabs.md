@@ -37,7 +37,7 @@ To use prefabs at runtime, you need to intantiate them. For example, if you have
 private void InstantiateBulletPrefab()
 {
     // Note that "MyBulletPrefab" refers to the name and location of your prefab asset
-    var myBulletPrefab = Asset.Load<Prefab>("MyBulletPrefab");
+    var myBulletPrefab = Content.Load<Prefab>("MyBulletPrefab");
     
     // Instantiate a prefab
     var instance = myBulletPrefab.Instantiate();
@@ -47,7 +47,7 @@ private void InstantiateBulletPrefab()
     bullet.Transform.Position.X = 20.0f;
 
     // Add the bullet to the scene
-    SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
+    SceneSystem.SceneInstance.RootScene.Entities.Add(bullet);
 }
 ```
 

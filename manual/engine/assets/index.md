@@ -25,13 +25,13 @@ Loading an asset should be done with the help of @'SiliconStudio.Core.Serializat
 
 ```cs
 // Load an asset directly from a file:
-var texture = Asset.Load<Texture>("texture1");
+var texture = Content.Load<Texture>("texture1");
 
 // Load a Scene asset
-var scene = Asset.Load<Scene>("scenes/scene1");
+var scene = Content.Load<Scene>("scenes/scene1");
  
 // Load an Entity asset
-var entity = Asset.Load<Entity>("entity1");
+var entity = Content.Load<Entity>("entity1");
 ```
 
 
@@ -57,11 +57,11 @@ An asset is actually unload only when the number of call to unload match the num
 The @'SiliconStudio.Core.Serialization.Assets.AssetManager.Get' method returns the reference to a loaded asset but does not increment the asset reference counter.
 
 ```cs
- var firstReference = Asset.Load<Texture>("MyTexture"); // load the asset and increase the reference counter (ref count = 1)
+ var firstReference = Content.Load<Texture>("MyTexture"); // load the asset and increase the reference counter (ref count = 1)
  
 // the texture can be used here
  
-var secondReference = Asset.Load<Texture>("MyTexture"); // only increase the reference counter (ref count = 2)
+var secondReference = Content.Load<Texture>("MyTexture"); // only increase the reference counter (ref count = 2)
  
 // the texture can still be used here
  
