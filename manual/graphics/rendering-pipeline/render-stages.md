@@ -41,3 +41,18 @@ Of course, user are free to implement their own.
 ## Filtering
 
 You can create your own filter for objects in a Render Stage by inheriting from @'SiliconStudio.Xenko.Rendering.RenderStageFilter'.
+
+### Render stage selectors
+
+Render stage selectors define which objects in your scene are sent to which render stage, and choose which [effect](../effects-and-shaders/effect-language.md) to use when rendering a given object.
+
+For example, this is the typical setup for meshes:
+
+- @'SiliconStudio.Xenko.Rendering.MeshTransparentRenderStageSelector' chooses either the `Main` or `Transparent` render stage, depending on the material properties. The default effect is `XenkoForwardShadingEffect` defined by Xenko (you can create your own if you want).
+- @'SiliconStudio.Xenko.Rendering.ShadowMapRenderStageSelector' selects opaque meshes that cast shadows and adds them to the `ShadowMapCaster` render stage. The default effect is `XenkoForwardShadingEffect.ShadowMapCaster`, defined by Xenko.
+
+Either can filter by render group.
+
+![media/graphics-compositor-overview-3.png](media/graphics-compositor-overview-3.png)
+
+You can customize everything, so you can add other predefined render stage selectors (eg to add UI to a later full-screen pass), or create your own selector specific to your game.

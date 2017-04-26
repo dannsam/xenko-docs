@@ -2,23 +2,11 @@
 
 Scene renderers let you customize the [Collect](../render-pipeline/render-features.md#collect) and [Draw](../render-pipeline/render-features.md#draw) phases of the rendering.
 
-The default renderers are:
-
-- [Clear RenderFrame](clear.md)
-- [Render Camera](render-camera.md)
-- @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer', which you can use before the [camera renderer](render-camera.md) to force aspect ratio
-
-## Select a renderer
-
-1. In the game compositor editor, select the **entry points** node.
-
-2. In the **property grid**, under **game renderer**, select the renderer you want to use.
-
 ## Clear
 
 Clears a frame, with a solid color.
 
-![media/clear-renderframe-1.png](media/clear-renderframe-1.png)
+![Clear properties](media/clear-renderframe-1.png)
 
 ### Properties
 
@@ -32,9 +20,9 @@ Clears a frame, with a solid color.
 
 ## Render camera
 
-The **render camera** option creates a [render view](../rendering-pipeline/index.md#render%20views) using a [camera slot](camera-slots.md). This renders using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
+Renders a [view](../rendering-pipeline/index.md#render%20views) from a [camera slot](camera-slots.md) using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
 
-![media/render-camera-1.png](media/render-camera-1.png)
+![Render camera properties](media/render-camera-1.png)
 
 ### Properties
 
@@ -45,7 +33,7 @@ The **render camera** option creates a [render view](../rendering-pipeline/index
 
 ## Scene renderer collection
 
-The **scene renderer collection** executes multiple renderers in sequence. You can add as many renderers as you need.
+The **scene renderer collection** executes multiple renderers in sequence. You can add as many renderers to the collection as you need.
 
 >[!Note]
 >Xenko executes the renderers in list order.
@@ -54,3 +42,25 @@ To add a renderer to the collection, next to **Children**, click the **green plu
 
 ![Add to scene collection](media/add-renderer-to-scene-renderer-collection.png)
 
+## Forward renderer
+
+The **forward renderer** does most of the heavy lifting in your pipeline. From the forward renderer, you can apply [post effects](../post-effects/index.md) and light shafts. 
+
+The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality.md).
+
+## Post-processing effects
+
+**Post effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. You can use post effects to tune or embellish an image; for example, by giving it a more natural, realistic look, or to create stylized cinematic effects.
+
+For more information, see [Post effects](../post-effects/index.md).
+
+## Single stage renderer
+
+## Force aspect ratio scene renderer
+
+@'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer', which you can use before the [camera renderer](render-camera.md) to force aspect ratio
+
+## See also
+
+* [Graphics compositor](index.md)
+* [Camera slots](camera-slots.md)
