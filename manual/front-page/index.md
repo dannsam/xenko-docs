@@ -10,6 +10,7 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">Updated</span> [Navigation](../game-studio/navigate-in-the-scene-editor.md)
 * <span class="label label-doc-highlight">New</span> [Navigation](../game-studio/navigation.md)
 * <span class="label label-doc-highlight">New</span> [Create a model from code](../scripts/create-a-model-from-code.md)
 * <span class="label label-doc-highlight">New</span> [Troubleshooting - Lights don't cast shadows](../troubleshooting/lights-dont-cast-shadows.md)
