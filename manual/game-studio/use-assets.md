@@ -64,7 +64,7 @@ var model = Content.Load<Model>("AssetFolder/MyModel");
 Entity entity = new Entity(position, "Entity Added by Script") { new ModelComponent { Model = model } };
 
 // Add a new entity to the scene
-SceneSystem.SceneInstance.Scene.Entities.Add(entity);
+SceneSystem.SceneInstance.RootScene.Entities.Add(entity);
 ```
 
 > [!TIP]
