@@ -27,6 +27,24 @@ You can now use a scene's `Offset` to move its entities both at design time and 
 
 The `ChildSceneComponent` has been removed. We encourage all entities to be managed by a single **entity manager** and rendered by a single **graphics compositor**.
 
+## Virtual Reality
+
+Enabling VR is now as simple as a single click!
+
+Xenko's clustered forward rendering, with its multisample anti-aliasing, makes it ideal for VR. Xenko uses a single API for every device, with native support for Oculus and HTV Vive (more devices coming very soon).
+
+Xenko comes with a VR game sample that shows you how to implement VR gameplay, including environment interaction and teleportation:
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/vr_template_640.jpg">
+   <source src="media/ReleaseNotes-2.0/vr_template_640.mp4" type="video/mp4">
+</video>
+
+Save valuable time by visualizing and testing VR directly from the scene editor:
+
+<video autoplay loop class="responsive-video" poster="media/ReleaseNotes-2.0/vr_editor_640.jpg">
+   <source src="media/ReleaseNotes-2.0/vr_editor_640.mp4" type="video/mp4">
+</video>
+
 ## Global illumination with light probes
 
 Light probes capture the lighting at the position you place them. They simulate indirect light, the effect of light bouncing off surfaces and illuminating other surfaces.
