@@ -8,9 +8,16 @@ To preview your scene in your VR device, connect the editor to a [VR-enabled](en
 </video>
 </p>
 
+>[!Note]
+>Previewing scenes in VR is an **experimental feature**. It will be more stable soon.
+
+## Connect the editor to a VR-enabled renderer 
+
 To do this:
 
-1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
+1. Open the scene you want to preview in VR. 
+
+2. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
     ![Graphics Compositor asset](../graphics/graphics-compositor/media/graphics-compositor-asset.png)
 
@@ -18,13 +25,21 @@ To do this:
 
     ![Graphics Compositor editor](media/graphics-compositor-VR-template.png)
 
-2. Select the **forward render node** connected to the editor node. For example, in the screenshot below (taken from the Xenko VR sample project), the editor is connected to the lower forward renderer node.
+3. Select the **forward render node** connected to the editor node. For example, in the screenshot below (taken from the Xenko VR sample project), the editor is connected to the lower forward renderer node.
 
     ![Node connections](media/node-connections.png)
 
-3. With the forward renderer node selected, in the **property grid**, enable **VRRendererSettings**.
+4. With the forward renderer node selected, in the **property grid**, enable **VRRendererSettings**.
 
     ![Select editor renderer](media/enable-vr.png)
+
+5. The scene editor displays an error message.
+
+    ![VR error](media/vr-error.png)
+
+    Click **Resume**.
+
+6. If the scene editor doesn't display the scene, resize the scene preview window to reset it.
 
 Your VR device displays the scene preview. To display the scene on your monitor instead, disable **VRRendererSettings**.
 
