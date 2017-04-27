@@ -4,7 +4,7 @@ To preview your scene in your VR device, connect the editor to a [VR-enabled](en
 
 <p>
 <video autoplay loop class="responsive-video" poster="media/vr-editor_640.jpg">
-   <source src="media/vr-editor.mp4" type="video/mp4">
+   <source src="media/vr-editor_640.mp4" type="video/mp4">
 </video>
 </p>
 
