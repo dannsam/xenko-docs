@@ -35,7 +35,7 @@ If your editor and game nodes are connected to the same forward renderer, you mi
 
     The graphics compositor editor opens.
 
-    ![Graphics Compositor editor](media/graphics-compositor-VR-template.png)
+    ![Graphics Compositor editor](media/graphics-compositor-no-editor-node.png)
 
 2. Create a new forward renderer node. To do this, right-click the game compositor editor and select **Create > Forward renderer**.
 
