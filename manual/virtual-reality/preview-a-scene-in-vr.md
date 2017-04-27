@@ -1,9 +1,8 @@
 # Preview a scene in VR
 
-To preview your scene in VR, [enable VR](enable-vr.md) on the forward renderer the editor is connected to.
+To preview your scene in your VR device, connect the editor to a [VR-enabled](enable-vr.md) renderer.
 
->![Note]
->The graphics compositor screenshots on this page might differ from your Game Studio, depending on your graphics compositor setup.
+To do this:
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
@@ -13,20 +12,22 @@ To preview your scene in VR, [enable VR](enable-vr.md) on the forward renderer t
 
     ![Graphics Compositor editor](media/graphics-compositor-VR-template.png)
 
-2. Select the **Entry points** node.
+2. Select the **forward render node** connected to the editor node. For example, in the screenshot below (taken from the Xenko VR sample project), the editor is connected to the lower forward renderer node.
 
-    ![Entry points node](media/entry-points-node.png)
+    ![Node connections](media/node-connections.png)
 
-3. In the **property grid**, next to **Editor renderer**, select the forward renderer you use to run your game in VR.
+3. With the forward renderer node selected, in the **property grid**, enable **VRRendererSettings**.
 
-    > [!Note]
-    > Make sure the forward renderer has VR enabled. For instructions, see [Enable VR](enable-vr.md).
+    ![Select editor renderer](media/enable-vr.png)
 
-This sends the scene editor output to your VR device, so you can preview the scene in your VR before you run the game.
+Your VR device displays the scene preview. To display the scene on your monitor instead, disable **VRRendererSettings**.
 
-## Alternative: create a toggle
+## Create a separate renderer to preview scenes in VR
 
-This option creates an additional forward renderer you can use to switch between previewing scenes in VR and on your monitor.
+If your editor and game nodes are connected to the same forward renderer, you might want to create a separate renderer dedicated to the editor. This lets you easily switch between previewing the scene in your VR device and on your monitor.
+
+>[!Note]
+>If your editor and game nodes already use separate renderers (as in the VR sample project), you don't need to follow these instructions.
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
 
@@ -52,6 +53,7 @@ This option creates an additional forward renderer you can use to switch between
 
     > [!Tip]
     > You can right-click a property to copy or paste it.
+
     > ![Copy-paste properties](media/copy-paste-properties.png)
 
     > [!Note]
