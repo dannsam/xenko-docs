@@ -10,18 +10,16 @@ These pages contain information about how to use Xenko, an open-source C# game e
 
 ## Latest documentation
 
+* <span class="label label-doc-highlight">New</span> [Preview a scene in VR](../virtual-reality/preview-a-scene-in-vr.md)
 * <span class="label label-doc-highlight">Updated</span> [Navigate in the scene editor](../game-studio/navigate-in-the-scene-editor.md)
 * <span class="label label-doc-highlight">New</span> [Navigation](../game-studio/navigation.md)
 * <span class="label label-doc-highlight">New</span> [Create a model from code](../scripts/create-a-model-from-code.md)
 * <span class="label label-doc-highlight">New</span> [Troubleshooting - Lights don't cast shadows](../troubleshooting/lights-dont-cast-shadows.md)
 * <span class="label label-doc-highlight">New</span> [HRTF](../audio/hrtf.md)
 * <span class="label label-doc-highlight">Updated</span> [Skyboxes](../graphics/skyboxes.md)
+* <span class="label label-doc-highlight">New</span> [Lights and shadows](../graphics/lights-and-shadows/light-probes.md)
 * <span class="label label-doc-highlight">Updated</span> [Lights and shadows](../graphics/lights-and-shadows/index.md)
 * <span class="label label-doc-highlight">New</span> [Distribute a game](../files-and-folders/distribute-a-game.md)
-* <span class="label label-doc-highlight">Updated</span> [Materials](../graphics/materials/index.md)
-* <span class="label label-doc-highlight">New</span> [Xenko for Unity® developers](../xenko-for-unity-developers/index.md)
-* <span class="label label-doc-highlight">Updated</span> [Get started - Manage assets](../game-studio/manage-assets.md)
-* <span class="label label-doc-highlight">Updated</span> [Get started - Navigate in the scene editor](../game-studio/navigate-in-the-scene-editor.md)
 
 ## Improve this documentation
 
