@@ -7,4 +7,5 @@ Xenko supports the Oculus Rift and Vive virtual reality (VR) devices. Other devi
 ## In this section
 
 * [Enable VR](enable-vr.md)
+* [Preview a scene in VR](preview-a-scene-in-vr.md)
 * [VR sickness](vr-sickness.md)
