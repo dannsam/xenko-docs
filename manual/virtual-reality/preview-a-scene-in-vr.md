@@ -49,6 +49,10 @@ If your editor and game nodes are connected to the same forward renderer, you mi
 
     ![Select forward renderer](media/select-editor-forward-renderer.png)
 
+    Xenko links the editor to the forward renderer node.
+
+    ![Node connections](media/node-connections.png)
+
 5. Set the properties of the new forward renderer so they're identical to the forward renderer you use to run the game in VR, including the VR settings.
 
     > [!Tip]
