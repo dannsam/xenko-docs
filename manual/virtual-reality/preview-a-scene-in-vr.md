@@ -2,6 +2,12 @@
 
 To preview your scene in your VR device, connect the editor to a [VR-enabled](enable-vr.md) renderer.
 
+<p>
+<video autoplay loop class="responsive-video" poster="media/vr-editor_640.jpg">
+   <source src="media/vr-editor.mp4" type="video/mp4">
+</video>
+</p>
+
 To do this:
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor**.
