@@ -27,7 +27,7 @@ In the graphics compositor editor, on the left, under **Camera slots**, click th
     > [!Note]
     > The drop-down menu lists camera slots from the graphics compositor selected in the [game settings](../../game-studio/game-settings.md).
 
-    ![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png) 
+    ![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png)
 
 The graphics compositor matches enabled cameras to their appropriate slots each frame.
 

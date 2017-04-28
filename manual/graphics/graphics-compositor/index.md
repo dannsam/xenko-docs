@@ -49,13 +49,17 @@ In the **asset view** (in the bottom pane by default), double-click the **Graphi
 
 ![Graphics Compositor asset](media/graphics-compositor-asset.png)
 
-The Graphics Compositor editor opens.
+The craphics compositor editor opens.
 
 ![Graphics Compositor editor](media/graphics-compositor-editor.png)
 
-## Entry points
+## Nodes
 
-In the **Entry Points** node, you set up the entry points for your rendering pipeline. 
+The graphics compositor is divided into **nodes**. You can set the properties of each node in the **property grid** on the right. 
+
+### Entry points
+
+In the **Entry Points** node, you configure the pipeline for each entry point.
 
 ![Entry points node](media/entry-points-node.png)
 
@@ -63,11 +67,11 @@ There are three entry points:
 
 * **Game**, to render your game
 * **Editor**, to render the Game Studio editor
-* **Single view** (referred to as **Utility** in the property grid), to render other things, such as light probes and skyboxes
+* **Single view** (referred to as **Utility** in the property grid), to render other things, such as light probes and cubemaps
 
 Each entry point can use a separate rendering pipeline. For example, the game and editor might share the same forward renderer and post effects while your single view uses a separate forward renderer.
 
-### Connect an entry point to a renderer
+#### Connect an entry point to a renderer
 
 1. Select the **Entry point** node.
 
@@ -76,6 +80,14 @@ Each entry point can use a separate rendering pipeline. For example, the game an
     ![Select renderer](media/connect-entry-point.png)
 
 For information about the different renderers, see [Scene renders](scene-renderers.md).
+
+### Forward renderer
+
+### Debug renderer
+
+### Post-processing effects
+
+
 
 ## Create a node
 

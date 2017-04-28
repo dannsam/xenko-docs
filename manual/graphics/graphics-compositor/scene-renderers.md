@@ -23,7 +23,7 @@ Clears a frame, with a solid color.
 
 ## Render camera
 
-Renders a [view](../rendering-pipeline/index.md#render%20views) from a [camera slot](camera-slots.md) using @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child'.
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a [view](../rendering-pipeline/index.md#render%20views) from a [camera slot](camera-slots.md). 
 
 ![Render camera properties](media/render-camera-1.png)
 
@@ -36,7 +36,7 @@ Renders a [view](../rendering-pipeline/index.md#render%20views) from a [camera s
 
 ## Scene renderer collection
 
-The **scene renderer collection** executes multiple renderers in sequence. You can add as many renderers to the collection as you need.
+The **scene renderer collection** executes multiple renderers (eg render camera, render texture, etc) in sequence. You can add as many renderers to the collection as you need.
 
 >[!Note]
 >Xenko executes the renderers in list order.
@@ -57,11 +57,11 @@ The forward renderer is also where you set VR options. For more information, see
 
 ## Force aspect ratio scene renderer
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio. Use this before the **render camera**.
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio and applies a letterbox if the ratio is different from the screen. Use this before the **render camera**.
 
 ## Render texture
 
-Renders to a render texture, which you can then use in a material (eg to create a rear-view mirror).
+Renders to a render texture, which you can display in your scene (eg to create security camera footage on a screen). For more information, see [Render to a texture](render-to-a-texture.md).
 
 ## See also
 

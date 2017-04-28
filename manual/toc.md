@@ -89,9 +89,10 @@
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
-### [Camera slots](graphics/graphics-compositor/camera-slots.md)
+## [Camera slots](graphics/graphics-compositor/camera-slots.md)
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers.md)
 #### [Custom scene renderers](graphics/graphics-compositor/custom-scene-renderers.md)
+### [Render to a texture](graphics/graphics-compositor/render-to-a-texture.md)
 ## [Effects and shaders](graphics/effects-and-shaders/index.md)
 ### [Effect language](graphics/effects-and-shaders/effect-language.md)
 ### [Shading language](graphics/effects-and-shaders/shading-language/index.md)
