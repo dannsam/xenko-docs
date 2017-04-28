@@ -19,7 +19,7 @@ The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) 
 
 ## Create a graphics compositor
 
-Xenko includes a graphics compositor by default when you create a project.
+Xenko includes a graphics compositor when you create a project.
 
 If you need to create a graphics compositor, in the **asset view**, click **Add asset** and select **Misc > Graphics compositor**.
 

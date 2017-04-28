@@ -1,6 +1,6 @@
 # Render to a texture
 
-You can render to textures in your scene instead of directly to the screen. You can use this, for example, to display part of your scene on a TV screen in the same scene, such as security camera footage.
+You can render to textures in your scene instead of directly to the screen. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
 
 ## 1. Create a camera slot
 
@@ -29,11 +29,13 @@ Camera slots link the graphics compositor to the cameras in your scene. For more
 
 2. Position the entity so the camera captures the area of the scene you want to render to a texture.
 
-3. In the **property grid** (on the right by default), in the **Camera** component properties, under **Slot**, select the slot you created in the previous step.
+3. In the **property grid** (on the right by default), enable the **Camera** component using the checkbox.
 
-    ![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png)
+    ![Enable camera component](media/enable-camera-component.png)
 
-4. Position your camera so it captures the area of the scene you want to render to a texture.
+4. in the **Camera** component properties, under **Slot**, select the slot you created in the previous step.
+
+    ![Select camera slot](media/graphics-compositor-overview-2.png)
 
 ## 3. Create a render target texture
 
@@ -47,11 +49,11 @@ Game Studio adds a **render target** texture to your project assets.
 
 ![Render texture](media/render-target-texture-in-asset-view.png) 
 
-## 4. Use a render target texture
+## 4. Use the render target texture
 
-Use the render target texture in the scene where you want to display the camera output. This page suggests two examples.
+There are various ways you can use the render target texture.
 
-### Use the render target texture in a material
+### Example 1: Use the render target texture in a material
 
 1. In the material properties, under **Shading**, next to **Diffuse map**, click the **blue arrow** button and select **Texture**.
 
@@ -63,7 +65,7 @@ Use the render target texture in the scene where you want to display the camera 
 
     ![Select render frame](media/select-render-frame.png)
 
-### Use the render target texture in a sprite component
+### Example 2: Use the render target texture in a sprite component
 
 1. Create an entity and position it where you want to display the texture.
 
