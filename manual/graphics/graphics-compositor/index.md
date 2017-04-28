@@ -11,9 +11,9 @@ The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) 
 - use one or multiple cameras
 - filter entities in the scene
 - render to one or more render targets, with different viewports
-- render to a texture used by a material (eg a rear-view mirror)
+- render to a texture used by a material (eg to create a rear-view mirror)
 - set HDR or LDR rendering
-- apply post effects on a render target, selected before/after rendering a camera
+- apply post effects to a render target, selected before or after rendering a camera
 - clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or render the UI)
 - manipulate the compositor from scripts (or any animation system) in the scene to modify the composition, enable effects, etc
 
@@ -55,7 +55,11 @@ The Graphics Compositor editor opens.
 
 ## Entry points
 
-In the **Entry Points** node, you set up the entry points for your rendering pipeline. There are three entry points:
+In the **Entry Points** node, you set up the entry points for your rendering pipeline. 
+
+![Entry points node](media/entry-points-node.png)
+
+There are three entry points:
 
 * **Game**, to render your game
 * **Editor**, to render the Game Studio editor
@@ -73,24 +77,20 @@ Each entry point can use a separate rendering pipeline. For example, the game an
 
 For information about the different renderers, see [Scene renders](scene-renderers.md).
 
+## Create a node
 
+To create a node, right-click the graphics compositor editor and select the type of node you want to create:
 
+![Create node](../../virtual-reality/media/create-node.png)
 
+You can create three types of node:
 
+* forward renderers
+* debug renderers
+* [Post-processing effects](../post-effects/index.md)
 
+## See also
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* [Scene renders](scene-renderers.md)
+* [Custom scene renders](custom-scene-renderers.md)
+* [Camera slots](camera-slots.md)

@@ -1,6 +1,10 @@
 # Scene renderers
 
-Scene renderers let you customize the [Collect](../render-pipeline/render-features.md#collect) and [Draw](../render-pipeline/render-features.md#draw) phases of the rendering.
+Scene renderers let you customize the [Collect](../render-pipeline/render-features.md#collect) and [Draw](../render-pipeline/render-features.md#draw) phases of the rendering. You select scene renderers in the **entry points** node properties.
+
+![Select renderer](media/connect-entry-point.png)
+
+For more information about selecting renderers, see the [Graphics compositor](index.md) page.
 
 ## Clear
 
@@ -29,7 +33,7 @@ Renders a [view](../rendering-pipeline/index.md#render%20views) from a [camera s
 | Property      | Description                                                             
 | ------------- | ----------
 | Camera        | Specify a [camera slot](camera-slot.md) to render from
-| Child         | Specify a renderer for the camera (eg the forward renderer or a custom renderer)
+| Child         | Specify a renderer for the camera (eg a forward renderer or a custom renderer)
 
 ## Scene renderer collection
 
@@ -48,17 +52,19 @@ The **forward renderer** does most of the heavy lifting in your pipeline. From t
 
 The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality.md).
 
-## Post-processing effects
 
-**Post effects** are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. You can use post effects to tune or embellish an image; for example, by giving it a more natural, realistic look, or to create stylized cinematic effects.
-
-For more information, see [Post effects](../post-effects/index.md).
 
 ## Single stage renderer
+
+![Single stage renderer](media/single-stage-renderer.png)
 
 ## Force aspect ratio scene renderer
 
 @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer', which you can use before the [camera renderer](render-camera.md) to force aspect ratio
+
+## Render texture
+
+Renders to a render texture, which you can then use in a material (eg to create a rear-view mirror).
 
 ## See also
 
