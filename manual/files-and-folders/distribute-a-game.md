@@ -1,6 +1,6 @@
 # Distribute a game
 
-When you're ready to share your game, create a release build from Visual Studio, then distribute it.
+When you're ready to publish your game, create a release build from Visual Studio, then distribute it.
 
 ## 1. Create a release build
 
@@ -8,13 +8,13 @@ When you're ready to share your game, create a release build from Visual Studio,
 
 2. Open your project in Game Studio.
 
-3. In the toolbar, click the dropdown and select **Visual Studio**.
+3. In the toolbar, click the drop-down menu and select **Visual Studio**.
 
     ![Open in VS](media/open-in-visual-studio.png)
 
     Your project opens in Visual Studio.
 
-4. In the Visual Studio toolbar, from the dropdown menu, select **Release**.
+4. In the Visual Studio toolbar, from the drop-down menu, select **Release**.
 
     ![Select release](media/select-release.png)
 
@@ -24,8 +24,8 @@ When you're ready to share your game, create a release build from Visual Studio,
 
     Visual Studio creates a release build in your project bin folder (eg *MyGame/Bin/MyPlatform/Release*).
 
->[!Tip]
->You might want to rename the **Release** folder to something more descriptive (such as the title of your game).
+> [!Tip]
+> You might want to rename the **Release** folder to something more descriptive (such as the title of your game).
 
 ## 2. Delete unnecessary files
 
@@ -43,9 +43,9 @@ After you create a release build, how you distribute it is up to you.
 
 To run games made with Xenko, users need:
 
-- .NET 4.6.1
-- DirectX11 (included with Windows 10 and later)
-- Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
+* .NET 4.6.1
+* DirectX11 (included with Windows 10 and later)
+* Visual C++ 2015 runtimes (x86 and/or x64, depending on what you set in your project properties in Visual Studio)
 
 ## See also
 
