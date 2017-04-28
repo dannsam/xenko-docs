@@ -6,7 +6,7 @@ Xenko uses the @'SiliconStudio.Xenko.Graphics.Texture' class to interact with te
 
 To load a texture from an asset in Xenko, simply calls this function:
 
-### Code: Loading a texture
+### Code: Load a texture
 
 ```cs
 // loads the texture called duck.dds (or .png etc.)
@@ -19,7 +19,7 @@ This automatically generates a texture object with all of its field correctly fi
 
 You can also create textures without any asset (for example to be used as render target). To create such a texture, call the constructor of the @'SiliconStudio.Xenko.Graphics.Texture' class. Please refer to the @'SiliconStudio.Xenko.Graphics.Texture' class reference to get the full list of available options and parameters. Some texture formats may not be available on all platforms.
 
-### Code: Creating a texture
+### Code: Create a texture
 
 ```cs
 var myTexture = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource);
@@ -31,7 +31,7 @@ var myTexture = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.R8G8B
 
 The @'SiliconStudio.Xenko.Graphics.GraphicsPresenter' class always provides a default render target and a depth buffer. They are accessible through the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' and @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' properties. The presenter is exposed by the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Presenter' property of the @'SiliconStudio.Xenko.Graphics.GraphicsDevice'. However, you might want to use your own buffer to perform off-screen rendering or post-processes. As a result, Xenko offers a simple way to create textures that can act as render targets and a depth buffers.
 
-### Code: Creating a custom render target and depth buffer
+### Code: Create a custom render target and depth buffer
 
 ```cs
 // render target
@@ -50,7 +50,7 @@ var myDepthBuffer = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.D
 
 Once these buffers are created, you can can easily set them as current render targets.
 
-### Code: using a render target
+### Code: Use a render target
 
 ```cs
 // settings the render targets
@@ -72,7 +72,7 @@ You can set multiple render targets at the same time. See the overloads of @'Sil
 
 To clear render targets, call the @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Core.Mathematics.Color4)' and @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' methods.
 
-### Code: Clearing the targets
+### Code: Clear the targets
 
 ```cs
 CommandList.Clear(GraphicsDevice.Presenter.BackBuffer, Color.Black);
@@ -89,7 +89,7 @@ If you only want to render to a subset of the texture, you can set the render ta
 
 You can bind multiple viewports using @'SiliconStudio.Xenko.Graphics.CommandList.SetViewports(SiliconStudio.Xenko.Graphics.Viewport[])' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewports(System.Int32,SiliconStudio.Xenko.Graphics.Viewport[])' overloads for use with a geometry shader.
 
-### Code: Setting the viewports
+### Code: Set the viewports
 
 ```cs
 // example of a full HD buffer
@@ -104,7 +104,7 @@ CommandList.SetViewport(viewport);
 
 The @'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangle(SiliconStudio.Core.Mathematics.Rectangle)' and @'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangles(SiliconStudio.Core.Mathematics.Rectangle[])' methods set the scissors. Unlike the viewport, you need to provide the coordinates of the location of the vertices defining the scissor instead of its size.
 
-### Code: Setting the scissor
+### Code: Set the scissor
 
 ```cs
 // example of setting the scissor to crop the image by 10 pixel around it in a full hd buffer (1920x1080)
