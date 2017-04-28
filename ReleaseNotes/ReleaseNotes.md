@@ -140,7 +140,7 @@ Release date 2017/04/25
 
 * Added VR game template
 * Game Studio and actual runtime game now share the same build cache. This should speed up build times.
-* Build dependencies are managed by a new system that greatly simplify copying and deployment. This should later benefit plugins and user projects when exposed to the user.
+* Build dependencies are managed by a new system that greatly simplify copying and deployment. This should later benefit plugins and user projects when exposed to the user
 
 #### Game Studio
 
@@ -164,7 +164,7 @@ Release date 2017/04/25
 * Scripts can now be closed without saving and opened again later
 * Script undo history now persists after closing a script
 * Added ability to capture a DDS cubemap from current editor camera position.
-* When viewing vertex streams, normals are now in 0..1 range instead of -1..1. Also, it is now possible to view normals in both world and tangent space.
+* When viewing vertex streams, normals are now in 0..1 range instead of -1..1. Also, it is now possible to view normals in both world and tangent space
 
 #### Assets
 
@@ -192,8 +192,6 @@ Release date 2017/04/25
 * D3D11: Shaders that are compatible shares the same bytecode, avoiding extra state changes.
 * OpenGL: Implemented UpdateSubresource for 3D textures
 
-#### Materials
-
 #### Particles
 
 * Additive rotation no longer has a default value of 1 radian; it's now 0
@@ -217,8 +215,6 @@ Release date 2017/04/25
 * Vive support (HMD and controllers)
 
 ### Issues fixed
-
-#### General
 
 #### Game Studio
 
@@ -246,7 +242,7 @@ Release date 2017/04/25
 * Setting a translation snap of 0 now works as expected
 * Light gizmos correctly update when changing the light type
 * Typing the URL to a reference in an asset picked now works as expected
-* Keys were often stuck (especially annoying when moving around), this is fixed.
+* Keys were often stuck (especially annoying when moving around), this is fixed
 
 #### Assets
 
@@ -280,6 +276,26 @@ Release date 2017/04/25
 #### Physics
 
 * Removing and re-adding entities no longer causes crashes in certain situations
+
+## Version 2.0.1.1
+
+Release date 2017/4/28
+
+### Issues fixed
+
+#### Game Studio
+
+* Fixed a potential crash when enabling VR in the editor and opening multiple scenes/prefabs
+* Prevents to drag and drop an entity that depends on a prefab into it (or an ancestor prefab) that would have created a cyclic reference and crashed the editor
+* Fixed an issue with automatic assembly reload
+
+#### Engine
+
+* Fixed a crash when computing light probes
+
+#### Build
+
+* Fixed a possible issue when compiling a game that targets iOS and the right Xamarin version cannot be found
  
 # Known Issues
 
