@@ -130,7 +130,7 @@ Previously, rendering pipeline was customized by magic `IPipelinePlugin` at runt
 
 # Changelog
 
-## Version 2.0.0
+## Version 2.0.0.2
 
 Release date 2017/04/25
 
