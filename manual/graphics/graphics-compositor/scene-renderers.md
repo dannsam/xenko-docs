@@ -16,11 +16,10 @@ Clears a frame, with a solid color.
 
 | Property      | Description              
 | ------------- | ----------
-| Clear Flags   | <br>What to clear in the render frame (**Color only**, **Depth only**, or **Color and depth**)
+| Clear flags   | <br>What to clear in the render frame (**Color only**, **Depth only**, or **Color and depth**)
 | Color         | The color used to clear the color texture of the render frame. Only valid when **Clear Flags** is set to **Color** or **Color and depth**
-| Depth Value   | The depth value used to clear the depth texture of the render frame
-| Stencil Value | The stencil value used to clear the stencil texture of the render frame
-| Output        | See common properties in [Scene renderers](index.md)
+| Depth value   | The depth value used to clear the depth texture of the render frame
+| Stencil value | The stencil value used to clear the stencil texture of the render frame
 
 ## Render camera
 
@@ -52,15 +51,13 @@ The **forward renderer** does most of the heavy lifting in your pipeline. From t
 
 The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality.md).
 
-
-
 ## Single stage renderer
 
 ![Single stage renderer](media/single-stage-renderer.png)
 
 ## Force aspect ratio scene renderer
 
-@'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer', which you can use before the [camera renderer](render-camera.md) to force aspect ratio
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio. Use this before the **render camera**.
 
 ## Render texture
 
