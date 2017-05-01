@@ -28,7 +28,7 @@ To develop for mobile platforms, you also need:
 | iOS      | Mac computer, Xamarin* 
 
 > [!Note]
-> * Xamarin is included with Visual Studio licenses. For more information about how to install it, see You can install Xamarin as part of Visual Studio, you already have Xamarin. For instructions about how to install Xamarin with Visual Studio 2017, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
+> * Xamarin is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 2017, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
 
 For information about platforms Xenko supports, see [Platforms](../platforms/index.md).
 
