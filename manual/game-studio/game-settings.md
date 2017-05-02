@@ -79,6 +79,9 @@ For more information, see [Splash screen](/splash-screen.md).
 | Display orientation         | The display orientation of the game (default, portrait, left landscape, or right landscape).
 | Target graphics platform    | The target platform Xenko builds the project for. If you set this to **Default**, Xenko chooses the most appropriate platform.
 
+> [!Tip]
+> To check which default platform your project uses, add a break point to your code (eg in a script), run the project, and check the value of the [GraphicsDevice.Platform](xref:SiliconStudio.Xenko.Graphics.GraphicsDevice.Platform) variable.
+
 ## Editor settings
 
 The editor settings control how Game Studio displays entities in the scene editor. These settings have no effect on your game at runtime.
