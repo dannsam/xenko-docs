@@ -31,7 +31,7 @@ To do this, in the **Scene Editor**, right-click a child entity or entities and 
 
 ## Example code
 
-To use prefabs at runtime, you need to intantiate them. For example, if you have a prefab named _'MyBulletPrefab'_ in the root folder of your project, you can instantiate it with the following code:
+To use prefabs at runtime, you need to intantiate them. For example, if you have a prefab named *MyBulletPrefab* in the root folder of your project, you can instantiate it with the following code:
 
 ```cs
 private void InstantiateBulletPrefab()
