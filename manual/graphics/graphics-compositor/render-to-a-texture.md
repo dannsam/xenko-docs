@@ -4,7 +4,9 @@ You can render to textures in your scene instead of directly to the screen. For 
 
 ## 1. Create a camera slot
 
-Camera slots link the graphics compositor to the cameras in your scene. For more information, see [Camera slots](camera-slots.md).
+Camera slots link the graphics compositor to the cameras in your scene. You need to add a camera slot for your new camera to use.
+
+For more information, see [Camera slots](camera-slots.md).
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
@@ -49,7 +51,7 @@ Game Studio adds a **render target** texture to your project assets.
 
 ![Render texture](media/render-target-texture-in-asset-view.png) 
 
-## 4. Use the render target texture
+## 4. Place the render target texture in the scene
 
 There are various ways you can use the render target texture.
 
@@ -89,21 +91,74 @@ There are various ways you can use the render target texture.
 
 ## 5. Set up the graphics compositor
 
-> [!Note]
-> There are several ways to implement this in the graphics compositor. This page explains one method.
+To display a render texture in your scene, you need at least two renderers:
+
+* one to render your main camera
+* one to render the second camera to the render texture
+
+This page describes the simplest way to do this from scratch, using a **scene render collection** of two cameras and two renderers. Depending on your pipeline, you might need to create a different setup.
 
 1. In the graphics compositor, select the **Entry points** node.
 
     ![Entry points node](media/entry-points-node.png)
 
-2. In the **property grid** on the right, next to **Game renderer**, click the blue arrow and select **
+2. In the **property grid** on the right, next to **Game renderer**, click the **blue arrow** button and select **None** to delete your existing renderers.
 
-...
+    ![Cleared game renderers](media/game-renderers-cleared.png)
 
-3. Select **SceneRendererCollection**.
+### 1. Render the main camera
 
-4. 
+1. Click the **blue arrow** button and select **SceneRendererCollection**. 
+
+    ![Select scene renderer collection](media/select-scene-renderer-collection.png)
+
+2. Next to **Children**, click the **Green plus icon** and select **Render camera**.
+
+    ![Select render camera](media/select-render-camera.png)
+
+3. Next to **Camera**, click the **blue arrow** button and select your **main game camera**. This shouldn't be the camera you want to render to a texture from.
+
+    ![Select main camera](media/select-main-camera.png)
+
+4. Next to **Child**, select the renderer for your main game camera (eg the **forward renderer**).
+
+    ![Select forward render](media/select-main-camera-forward-renderer.png)
+
+### 2. Render the texture
+
+1. Under **Game renderer**, next to **Children**, click the **Green plus icon** and select **Render camera**.
+
+    ![Select render camera](media/select-render-camera2.png)
+
+2. Expand the **Render Camera** list item.
+
+    ![Expand list](media/expand-list.png)
+
+3. Next to **Camera**, click the **blue arrow** button and select the camera you want to render to a texture. 
+
+    ![Select texture camera](media/select-texture-camera.png)
+
+4. Next to **Child**, click the **blue arrow** button and select **RenderTextureSceneRenderer**.
+
+    ![Select render texture scene renderer](media/render-texture-scene-renderer.png)
+
+5. Under the **RenderTextureSceneRenderer**, next to **Child**, click the **blue arrow** button and select renderer for your main game camera (eg the **forward renderer**).
+
+    ![Select forward renderer](media/select-forward-renderer2.png)
+
+6. Next to **Render Texture**, click the **hand icon** to open the **asset picker**.
+
+7. Select the **render texture** and click **OK**.
+
+    ![Select render texture](media/asset-picker-select-render-texture.png)
+
+Your game is now ready to render the camera to the texture in the scene.
 
 ## Sample
 
 For an example of rendering to a camera in a project, see the **Animation** sample included with Xenko.
+
+## See also
+
+* [Graphics compositor](index.md)
+* [Scene renderers](scene-renders.md)
