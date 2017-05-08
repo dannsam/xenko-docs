@@ -30,8 +30,8 @@ If you need to create a graphics compositor, in the **asset view**, click **Add 
 
 You can choose:
 
-* Level 9 (HDR with post effects)
-* Level 10 (LDR with no post effects)
+* Level 10 (HDR with post effects)
+* Level 9 (LDR with no post effects)
 
 These aren't different kinds of graphics compositor, but rather presets you can customize as you need.
 
