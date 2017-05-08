@@ -1,6 +1,8 @@
 # Scene renderers
 
-Scene renderers let you customize the [Collect](../render-pipeline/render-features.md#collect) and [Draw](../render-pipeline/render-features.md#draw) phases of the rendering. You select scene renderers in the **entry points** node properties.
+**Scene renderers** let you customize the **collect** and **Draw** phases of the rendering. For more information about these stages, see [Render features](../rendering-pipeline/render-features.md). 
+
+You select scene renderers in the **entry points** node properties.
 
 ![Select renderer](media/connect-entry-point.png)
 
@@ -23,7 +25,7 @@ Clears a frame, with a solid color.
 
 ## Render camera
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a [view](../rendering-pipeline/index.md#render%20views) from a [camera slot](camera-slots.md). In simple terms, the **render camera** renderer takes the input from a camera in the scene so it can be displayed somewhere.
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a view from a [camera slot](camera-slots.md). In simple terms, the **render camera** renderer takes the input from a camera in the scene so it can be displayed somewhere.
 
 ![Render camera properties](media/render-camera-1.png)
 
@@ -31,7 +33,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to r
 
 | Property      | Description                                                             
 | ------------- | ----------
-| Camera        | Specify a [camera slot](camera-slot.md) to render from
+| Camera        | Specify a [camera slot](camera-slots.md) to render from
 | Child         | Specify a renderer for the camera (eg a forward renderer or a custom renderer)
 
 ## Scene renderer collection
@@ -47,9 +49,13 @@ To add a renderer to the collection, next to **Children**, click the **green plu
 
 ## Forward renderer
 
-The **forward renderer** does most of the heavy lifting in your pipeline. From the forward renderer, you can apply [post effects](../post-effects/index.md) and light shafts.
+In a typical setup, the **forward renderer** renders almost everything in your scene. It renders, in order:
 
-You configure the forward renderer properties in the **forward entry node**. This is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality.md).
+1. opaque objects
+2. transparent objects
+3. [post effects](../post-effects/index.md)
+
+The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality/index.md). You configure the forward renderer properties in the **forward entry node**. 
 
 ## Single stage renderer
 

@@ -89,7 +89,8 @@
 
 # [Graphics](graphics/index.md)
 ## [Graphics Compositor](graphics/graphics-compositor/index.md)
-## [Camera slots](graphics/graphics-compositor/camera-slots.md)
+### [Render to a texture](graphics/graphics-compositor/render-to-a-texture.md)
+### [Camera slots](graphics/graphics-compositor/camera-slots.md)
 ### [Scene renderers](graphics/graphics-compositor/scene-renderers.md)
 #### [Custom scene renderers](graphics/graphics-compositor/custom-scene-renderers.md)
 ### [Render to a texture](graphics/graphics-compositor/render-to-a-texture.md)

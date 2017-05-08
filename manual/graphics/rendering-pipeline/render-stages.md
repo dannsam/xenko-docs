@@ -53,6 +53,4 @@ For example, this is the typical setup for meshes:
 
 Either can filter by render group.
 
-![media/graphics-compositor-overview-3.png](media/graphics-compositor-overview-3.png)
-
 You can customize everything, so you can add other predefined render stage selectors (eg to add UI to a later full-screen pass), or create your own selector specific to your game.

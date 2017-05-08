@@ -1,6 +1,6 @@
 # Camera slots
 
-**Camera slots** link the graphics compositor to the camera entities in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../game-studio/manage-scenes.md) or [graphics compositor](index.md) without having to assign new cameras each time.
+**Camera slots** link the graphics compositor to the camera entities in your scene. You bind each camera to a slot, then define which slot the compositor uses. This means you can change the [root scene](../../game-studio/manage-scenes.md) or [graphics compositor](index.md) without having to assign new cameras each time.
 
 You can create as many camera slots as you need, but you don't have to create a different camera slot for each camera in your scene. In fact, you can have fewer slots than cameras, and just change which cameras use each slot. The best practice is to disable the camera components on cameras you don't want to render.
 

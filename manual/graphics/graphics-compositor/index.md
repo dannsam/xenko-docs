@@ -4,6 +4,9 @@
 <span class="label label-doc-audience">Programmer</span>
 
 >[!Note]
+>This section is under construction.
+
+>[!Note]
 >This page requires a basic understanding of graphics pipelines.
 
 The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) are rendered. You can use it to customize almost every part of the rendering pipeline. For example, you can:
@@ -15,7 +18,7 @@ The **graphics compositor** organizes how [scenes](../../game-studio/scenes.md) 
 - set HDR or LDR rendering
 - apply post effects to a render target, selected before or after rendering a camera
 - clear a render target or clear only the depth buffer (eg to always render on top of a render target in a FPS game, or render the UI)
-- manipulate the compositor from scripts (or any animation system) in the scene to modify the composition, enable effects, etc
+- modify the compositor from scripts (or any animation system), for example to modify post effects
 
 ## Create a graphics compositor
 
@@ -55,7 +58,7 @@ The graphics compositor editor opens.
 
 ## Nodes
 
-The graphics compositor is divided into **nodes**. You can set the properties of each node in the **property grid** on the right. 
+The graphics compositor is divided into **nodes**. You can set the properties of each node in the **property grid** on the right.
 
 ### Entry points
 
@@ -67,9 +70,9 @@ There are three entry points:
 
 * **Game**, to render your game
 * **Editor**, to render the Game Studio editor
-* **Single view** (referred to as **Utility** in the property grid), to render other things, such as light probes and cubemaps
+* **Single view** (referred to as **Utility** in the property grid), to render other things, such as [light probes](../lights-and-shadows/light-probes.md) and [cubemaps](../skyboxes.md).
 
-Each entry point can use a separate rendering pipeline. For example, the game and editor might share the same forward renderer and post effects while your single view uses a separate forward renderer.
+Each entry point can use a separate rendering pipeline. For example, the game and editor might share the same forward renderer and [post-processing effects](../post-effects/index.md) while your single view uses a separate forward renderer.
 
 #### Connect an entry point to a renderer
 
@@ -83,11 +86,21 @@ For information about the different renderers, see [Scene renders](scene-rendere
 
 ### Forward renderer
 
+In a typical setup, the **forward renderer** renders almost everything in your scene. It renders, in order:
+
+1. opaque objects
+2. transparent objects
+3. [post effects](../post-effects/index.md)
+
+The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality/index.md). You configure the forward renderer properties in the **forward entry node**. 
+
 ### Debug renderer
+
+The debug renderer is used by scripts to print debug information.
 
 ### Post-processing effects
 
-
+The **post-processing effects** node comes after the forward renderer and controls the post effects in your game. For more information, see [post-processing effects](../post-effects/index.md).
 
 ## Create a node
 
@@ -95,14 +108,8 @@ To create a node, right-click the graphics compositor editor and select the type
 
 ![Create node](../../virtual-reality/media/create-node.png)
 
-You can create three types of node:
-
-* forward renderers
-* debug renderers
-* [Post-processing effects](../post-effects/index.md)
-
 ## See also
 
-* [Scene renders](scene-renderers.md)
+* [Scene renderers](scene-renderers.md)
 * [Custom scene renders](custom-scene-renderers.md)
 * [Camera slots](camera-slots.md)

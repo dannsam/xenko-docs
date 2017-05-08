@@ -2,6 +2,8 @@
 
 Xenko uses the @'SiliconStudio.Xenko.Graphics.Texture' class to interact with texture objects in code.
 
+For more information about rendering to a texture, see [Render to a texture](../graphics-compositor/render-to-a-texture.md).
+
 ## Load a texture
 
 To load a texture from an asset in Xenko, call this function:
@@ -115,3 +117,7 @@ CommandList.SetScissorRectangles(rectangle);
 var rectangles = new[] { new Rectangle(10, 10, 1900, 1060), new Rectangle(0, 0, 256, 256) };
 CommandList.SetScissorRectangles(rectangles);
 ```
+
+## See also
+
+* [Render to a texture](../graphics-compositor/render-to-a-texture.md)

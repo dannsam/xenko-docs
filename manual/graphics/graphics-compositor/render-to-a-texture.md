@@ -6,6 +6,8 @@
 
 You can render to textures in your scene instead of directly to the screen. For example, you can use this to display part of your scene on a TV screen in the same scene, such as security camera footage.
 
+For API details, see ![Textures and render targets](../low-level-api/textures-and-render-targets.md).
+
 ## 1. Create a camera slot
 
 Camera slots link the graphics compositor to the cameras in your scene. You need to add a camera slot for your new camera to use.
@@ -177,6 +179,7 @@ For an example of rendering to a camera in a project, see the **Animation** samp
 
 ## See also
 
+* [Low-level API - textures and render targets](../low-level-api/textures-and-render-targets.md)
 * [Graphics compositor](index.md)
-* [Scene renderers](scene-renders.md)
+* [Scene renderers](scene-renderers.md)
 * [Camera slots](media/graphics-compositor-camera-slots.png)
