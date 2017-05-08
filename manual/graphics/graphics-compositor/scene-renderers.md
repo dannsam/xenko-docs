@@ -23,7 +23,7 @@ Clears a frame, with a solid color.
 
 ## Render camera
 
-Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a [view](../rendering-pipeline/index.md#render%20views) from a [camera slot](camera-slots.md). 
+Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to render a [view](../rendering-pipeline/index.md#render%20views) from a [camera slot](camera-slots.md). In simple terms, the **render camera** renderer takes the input from a camera in the scene so it can be displayed somewhere.
 
 ![Render camera properties](media/render-camera-1.png)
 
@@ -36,7 +36,7 @@ Uses @'SiliconStudio.Xenko.Rendering.Compositing.SceneCameraRenderer.Child' to r
 
 ## Scene renderer collection
 
-The **scene renderer collection** executes multiple renderers (eg render camera, render texture, etc) in sequence. You can add as many renderers to the collection as you need.
+The **scene renderer collection** executes multiple renderers (eg render camera, render texture, etc) in sequence. In simple terms, this lets you set multiple renderers for an entry point. You can add as many renderers to the collection as you need.
 
 >[!Note]
 >Xenko executes the renderers in list order.
@@ -47,9 +47,9 @@ To add a renderer to the collection, next to **Children**, click the **green plu
 
 ## Forward renderer
 
-The **forward renderer** does most of the heavy lifting in your pipeline. From the forward renderer, you can apply [post effects](../post-effects/index.md) and light shafts. 
+The **forward renderer** does most of the heavy lifting in your pipeline. From the forward renderer, you can apply [post effects](../post-effects/index.md) and light shafts.
 
-The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality.md).
+You configure the forward renderer properties in the **forward entry node**. This is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality.md).
 
 ## Single stage renderer
 
@@ -59,9 +59,24 @@ The forward renderer is also where you set VR options. For more information, see
 
 Uses @'SiliconStudio.Xenko.Rendering.Compositing.ForceAspectRatioSceneRenderer' to force an aspect ratio and applies a letterbox if the ratio is different from the screen. Use this before the **render camera**.
 
+![Force aspect ratio](media/force-aspect-ratio-properties.png)
+
+| Property      | Description                                                             
+| ------------- | ----------
+| Child         | Specify a renderer for the camera (eg a forward renderer or a custom renderer)
+| Fixed aspect ratio | The aspect ratio to force the view to
+| Force aspect ratio | Enable forced aspect ratio
+
 ## Render texture
 
 Renders to a render texture, which you can display in your scene (eg to create security camera footage on a screen). For more information, see [Render to a texture](render-to-a-texture.md).
+
+![Render texture properties](media/render-texture-scene-renderer-properties.png)
+
+| Property      | Description                                                             
+| ------------- | ----------
+| Child         | Specify a renderer for the camera (eg a forward renderer or a custom renderer)
+| Render texture| Specify a texture to render to
 
 ## See also
 
