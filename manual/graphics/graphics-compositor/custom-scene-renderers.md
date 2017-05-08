@@ -4,10 +4,7 @@ To create a custom renderer, directly implement the @'SiliconStudio.Xenko.Render
 
 ## Implement an ISceneRenderer
 
-You can use a base implementation of this interface:
-
-* @'SiliconStudio.Xenko.Rendering.Compositing.SceneRendererBase': Provides a default implementation of @'SiliconStudio.Xenko.Rendering.Compositing.ISceneRenderer' and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
-* @'SiliconStudio.Xenko.Rendering.Compositing.SceneRendererViewportBase': Inherits from @'SiliconStudio.Xenko.Rendering.Compositing.SceneRendererBase' and add the ability to configure a specific viewport.
+The * @'SiliconStudio.Xenko.Rendering.Compositing.SceneRendererBase' provides a default implementation of @'SiliconStudio.Xenko.Rendering.Compositing.ISceneRenderer' and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
 
 ```cs
 [DataContract("MyCustomRenderer")]
