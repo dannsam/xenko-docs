@@ -11,7 +11,7 @@ You can create as many camera slots as you need, but you don't have to create a 
 
 ## Create a camera slot
 
-In the graphics compositor editor, on the left, under **Camera slots**, click the **green plus** icon.
+In the graphics compositor editor, on the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png).
 
 ![Camera slots](media/graphics-compositor-camera-slots.png)
 

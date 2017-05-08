@@ -22,7 +22,7 @@ For more information, see [Camera slots](camera-slots.md).
 
     ![Graphics Compositor editor](media/graphics-compositor-editor.png)
 
-2. On the left, under **Camera slots**, click the **green plus** icon to create a camera slot.
+2. On the left, under **Camera slots**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) to create a camera slot.
 
     ![Camera slots](media/graphics-compositor-camera-slots.png)
 
@@ -123,7 +123,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 ### 1. Render the texture
 
-1. Under **Game renderer**, next to **Children**, click the **green plus icon** and select **Render camera**.
+1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) and select **Render camera**.
 
     ![Select render camera](media/select-render-camera.png)
 
@@ -151,7 +151,7 @@ This page describes the simplest way to do this from scratch, using two cameras 
 
 ### 2. Render the main camera
 
-1. Under **Game renderer**, next to **Children**, click the **green plus icon** and select **Render camera**.
+1. Under **Game renderer**, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) and select **Render camera**.
 
     ![Select render camera](media/select-render-camera2.png)
 

@@ -40,7 +40,7 @@ If the materials have **different** shading models, Xenko applies each material'
 
 1. Select the material you want to add a layer to.
 
-2. In the **property grid** (on the right by default), next to **Layers**, click the **green plus icon**.
+2. In the **property grid** (on the right by default), next to **Layers**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png).
 
     ![Add a layer](media/add-a-layer.png)
 

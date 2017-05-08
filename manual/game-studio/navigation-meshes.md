@@ -30,7 +30,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
     For more information about scenes, see [Scenes](scenes.md).
 
-3. Under **Selected groups**, click the **green plus** icon.
+3. Under **Selected groups**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png).
 
     Game Studio adds a new item to the list of groups.
 
