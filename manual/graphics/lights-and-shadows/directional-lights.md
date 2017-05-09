@@ -4,11 +4,11 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Artist</span>
 
-**Directional lights** come uniformly from one direction. This is often used for simulating large, distant light sources such as the sun. By default, new scenes you create in Xenko contain a single directional light.
+**Directional lights** come uniformly from one direction. They're often used for simulating large, distant light sources such as the sun, and cast shadows. By default, new scenes you create in Xenko contain a directional light.
 
 ![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 
-Game Studio shows directional lights with the following icon:
+The scene editor shows the position of directional lights with the following icon:
 
 ![media/DirectionalLight.png](media/DirectionalLight.png) 
 
