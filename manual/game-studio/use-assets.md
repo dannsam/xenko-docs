@@ -18,7 +18,7 @@ To add an asset to an entity component, drag the asset to the **asset picker** i
 
 ![Drag and drop an asset](media/use-assets-drag-and-drop.png)
 
-Alternatively, click the **hand icon** ![](media/use-assets-hand-icon.png) to open the **asset picker** and select the asset from the list.
+Alternatively, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**) and select the asset from the list.
 
 ![Asset picker](media/use-assets-asset-picker.png)
 

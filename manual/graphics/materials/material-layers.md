@@ -48,7 +48,7 @@ If the materials have **different** shading models, Xenko applies each material'
 
     ![Empty layer](media/empty-layer.png)
 
-3. Next to the layer, click the hand icon.
+3. Next to the layer, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     The **asset picker** opens.
 
