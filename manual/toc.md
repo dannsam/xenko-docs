@@ -60,7 +60,7 @@
 
 # [Game Studio](game-studio/index.md)
 ## [Scenes](game-studio/scenes.md)
-### [Create a scene](game-studio/create-a-scene.md)
+### [Create and open a scene](game-studio/create-a-scene.md)
 ### [Navigate in the scene editor](game-studio/navigate-in-the-scene-editor.md)
 ### [Manage scenes](game-studio/manage-scenes.md)
 ### [Load scenes](game-studio/load-scenes.md)
