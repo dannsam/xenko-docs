@@ -74,6 +74,10 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal
 | Debug               | Displays the shadow map cascades in the scene editor
 
+## Light shafts
+
+Combined with a **light shaft component**, directional lights cast light shafts. For more information, see [Light shafts](light-shafts.md).
+
 ## See also
 
 * [Add a light](add-a-light.md)
@@ -82,4 +86,5 @@ The different colors indicate the cascade for each distance range (Green: 0, Blu
 * [Skybox lights](skybox-lights.md)
 * [Spot lights](spot-lights.md)
 * [Light probes](light-probes.md)
+* [Light shafts](light-shafts.md)
 * [Shadows](shadows.md)

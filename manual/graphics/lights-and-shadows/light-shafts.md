@@ -34,6 +34,8 @@ Only [directional lights](directional-lights.md) can create light shafts.
 
 3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) and select **LightShafts**.
 
+    ![Select light shafts](media/select-light-shafts.png)
+
 ## 1. Add a light shaft component
 
 1. In your scene, select the entity with the **directional light** you want to cast light shafts.
@@ -91,7 +93,7 @@ The **light shaft bounding volume** defines the area in which directional lights
 
     This model defines the shape of the light shaft bounding volume.
 
-10. Using the **transform** component, position the entity where you want directional lights to cast light shafts. 
+10. Using the **transform** component, position the entity where you want directional lights to cast light shafts.
 
 ### 3a. Optional: Add a model to the bounding volume to use as a guide
 
@@ -112,6 +114,11 @@ Currently, Game Studio doesn't display the bounding volume in the scene editor. 
     ![Clear model shadows](media/clear-model-shadows.png)
 
 As the model has no material, it's only visible in the scene editor, and not at runtime.
+
+
+* Light intensity and color affects the light shafts
+* Light shaft density
+* Separate bounding boxes
 
 ## See also
 
