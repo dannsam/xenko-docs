@@ -63,7 +63,7 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 1. In the **asset view**, click **Add asset**. 
 
-2. Under **Models**, select a model in the shape you want the volume to be (eg a cube).
+2. Under **Models**, select a model in the shape you want the volume to be. For example, if you use a cube, light shafts will be created in a cube-shaped area.
 
     ![Cube model](media/add-cube-model.png)
 
@@ -73,7 +73,7 @@ The **light shaft bounding volume** defines the area in which light shafts are c
 
 3. You don't need a material for the model, so click **Cancel** to create a model without a material.
 
-4. In the scene, create an empty **entity**. It doesn't matter where.
+4. In the scene, create an empty **entity**. For now, it doesn't matter where you put it; you can reposition it later.
 
 5. With the entity selected, in the **property grid**, click **Add component** and select **light shaft bounding volume**.
 
@@ -116,6 +116,8 @@ As a workaround, you can add a **model** component to use as a guide.
 5. After you place the bounding volume, disable or remove the model component to hide it at runtime.
 
 ## Optimize light shafts
+
+Light shafts work best in dark environments. You can adjust the directional light and light shaft component properties to achieve different results - for example, by changing the directional light color, or the light shaft density.
 
 Multiple light shafts viewed through one another can become visually noisy, as in the image below:
 
