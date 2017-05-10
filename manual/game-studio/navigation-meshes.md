@@ -16,7 +16,7 @@ Game Studio displays navigation meshes as colored overlays in your scene. The ov
 
 ## Create a navigation mesh
 
-1. In the **asset view** (bottom by default), click **Add asset > Navigation > Navigation mesh**.
+1. In the **asset view** (bottom by default), click **Add asset > Scenes > Navigation mesh**.
 
     ![Select Game Settings asset](media/add-navigation-mesh.png)
 

@@ -82,7 +82,7 @@
 ## [Navigation](game-studio/navigation.md)
 ### [Navigation groups](game-studio/navigation-groups.md)
 ### [Navigation meshes](game-studio/navigation-meshes.md)
-### [Navigtation bounding boxes](game-studio/navigation-bounding-boxes.md)
+### [Navigation bounding boxes](game-studio/navigation-bounding-boxes.md)
 ### [Navigation components](game-studio/navigation-components.md)
 ### [Dynamic navigation](game-studio/dynamic-navigation.md)
 ## [World units](game-studio/world-units.md)
