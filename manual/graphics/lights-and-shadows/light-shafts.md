@@ -4,7 +4,7 @@
 <span class="label label-doc-audience">Designer</span>
 <span class="label label-doc-audience">Artist</span>
 
-**Light shafts**, also called **god rays**, simulate visible rays (crepucular rays) originating from a light source. 
+**Light shafts**, also called **god rays**, are visible rays originating from a [directional light](directional-lights.md). 
 
 <video autoplay loop class="responsive-video" poster="media/lightshaft_CoS_640.jpg">
    <source src="media/lightshaft_CoS_640.mp4" type="video/mp4">
@@ -17,8 +17,6 @@ Xenko light shafts are based on [shadow maps](shadows.md) and use raymarching ra
 </video>
 
 To create light shafts, use three components together: **lights**, **light shafts**, and **light shaft bounding volumes**.
-
-Only [directional lights](directional-lights.md) can create light shafts.
 
 ## 1. Enable light shafts in the graphics compositor
 
@@ -38,7 +36,7 @@ Only [directional lights](directional-lights.md) can create light shafts.
 
 ## 2. Add a light shaft component
 
-1. In your scene, select the entity with the **directional light** you want to cast light shafts.
+1. In your scene, select the entity with the **directional light** you want to create light shafts.
 
     For more information about how to use directional lights, including how to add them, see [directional lights](directional-lights.md).
 
