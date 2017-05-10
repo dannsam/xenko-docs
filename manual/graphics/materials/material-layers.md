@@ -48,7 +48,7 @@ If the materials have **different** shading models, Xenko applies each material'
 
     ![Empty layer](media/empty-layer.png)
 
-3. Next to the layer, click the hand icon.
+3. Next to the layer, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     The **asset picker** opens.
 
@@ -68,11 +68,11 @@ Game Studio blends the material layers using the blend map you specified. You ca
 
 ## Layer properties
 
-| Property        | Description |
-| --------------- | --------------- | 
-| Material        | The material blended in this layer|
-| Blend Map       | The [blend map](material-maps.md) used to blend this layer with the layer above|
-| Layer Overrides |  **UV Scale**: A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map) |
+| Property        | Description 
+| --------------- | --------------- 
+| Material        | The material blended in this layer
+| Blend Map       | The [blend map](material-maps.md) used to blend this layer with the layer above
+| Layer Overrides |  **UV Scale**: A UV scale applied to all textures UV of the material of the layer (excluding the occlusion map)
 
 ## See also
 

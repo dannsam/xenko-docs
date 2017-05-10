@@ -6,15 +6,15 @@
 
 Post effects are usually applied to an image. This means they have no connection with vertices or meshes. They only work with the color values of each pixel (and sometimes their depth).
 
-Typically, you set up a post-effect by specifying:
+Typically, you set up a post effect by specifying:
 
 - input buffers (eg color, depth)
 - one or several output buffers
-- parameters to customize the behavior of the post-effect during its rendering pass
+- parameters to customize the behavior of the post effect during its rendering pass
 
 Xenko provides several predefined post effects. You can also extend the system to create your own.
 
-## Add or edit a post-effect
+## Add or edit a post effect
 
 You add and edit post effects in the [graphics compositor](../graphics-compositor/index.md).
 
@@ -30,11 +30,11 @@ You add and edit post effects in the [graphics compositor](../graphics-composito
 
     If there's no post-process effects node, right-click and select **Create > post-processing effects**.
 
-    Game Studio adds a post-effect node to the graphics compositor.
+    Game Studio adds a post effect node to the graphics compositor.
 
 3. In the **forward renderer** node, on the **PostEffects** slot, click and drag a link to the **post-processing effects** node.
 
-4. In the **property grid** (on the right by default), enable the post effects you want to use and set their properties. For details about each post-effect and its properties, see the pages below.
+4. In the **property grid** (on the right by default), enable the post effects you want to use and set their properties. For details about each post effect and its properties, see the pages below.
 
 ## In this section
 

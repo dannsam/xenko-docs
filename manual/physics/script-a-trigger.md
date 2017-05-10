@@ -88,7 +88,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     Game Studio adds a model component to the entity.
 
-5. Under **Model**, click the hand icon (**Pick asset up**) to open the **Asset picker**.
+5. Under **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Pick an asset up](media/physics-tutorials-pick-an-asset-up.png)
 
@@ -96,7 +96,7 @@ Right now, the trigger is invisible at runtime. To better show how the trigger w
 
     ![Select Cube model](media/physics-tutorials-select-cube-model.png)
 
-7. In the **Property grid**, under **Model > Materials**, click the hand icon (**Pick asset up**) to open the **Asset picker**.
+7. In the **Property grid**, under **Model > Materials**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
     ![Select material](media/physics-tutorials-material-asset-picker.png)
 
