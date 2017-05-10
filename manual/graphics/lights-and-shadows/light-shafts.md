@@ -59,7 +59,7 @@ To create light shafts, use three components together: **lights**, **light shaft
 
 ## 3. Add a bounding volume
 
-The **light shaft bounding volume** defines the area in which light shafts are created.
+The **light shaft bounding volume** defines the area in which light shafts are created. You can add the bounding volume to the same entity that has the directional light, but it's usually simpler to add it to a separate entity.
 
 1. In the **asset view**, click **Add asset**. 
 
