@@ -55,7 +55,9 @@ In a typical setup, the **forward renderer** renders almost everything in your s
 2. transparent objects
 3. [post effects](../post-effects/index.md)
 
-The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality/index.md). You configure the forward renderer properties in the **forward entry node**. 
+The forward renderer is also where you set VR options. For more information, see [Virtual reality](../../virtual-reality/index.md). 
+
+You configure the forward renderer properties in the **forward entry node**. 
 
 ## Single stage renderer
 
