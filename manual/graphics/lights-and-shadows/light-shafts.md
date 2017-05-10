@@ -20,7 +20,7 @@ To create light shafts, use three components together: **lights**, **light shaft
 
 ## 1. Enable light shafts in the graphics compositor
 
-To use light shafts, you first have to enable them in the graphics compositor.
+Xenko disables light shafts by default in new projects. To enable them:
 
 1. In the **asset view** (in the bottom pane by default), double-click the **Graphics Compositor** asset.
 
