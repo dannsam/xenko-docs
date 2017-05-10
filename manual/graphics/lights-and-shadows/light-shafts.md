@@ -10,7 +10,7 @@
    <source src="media/lightshaft_CoS_640.mp4" type="video/mp4">
 </video>
 
-Xenko light shafts are shadow map-based and use ray-marching rather than post effects, so they're visible even when the light source isn't.
+Xenko light shafts are based on [shadow maps](shadows.md) and use raymarching rather than post effects, so they're visible even when the light source isn't.
 
 <video autoplay loop class="responsive-video" poster="media/lightshaft_640.jpg">
    <source src="media/lightshaft_640.mp4" type="video/mp4">
@@ -36,7 +36,7 @@ Only [directional lights](directional-lights.md) can create light shafts.
 
     ![Select light shafts](media/select-light-shafts.png)
 
-## 1. Add a light shaft component
+## 2. Add a light shaft component
 
 1. In your scene, select the entity with the **directional light** you want to cast light shafts.
 
@@ -59,9 +59,9 @@ Only [directional lights](directional-lights.md) can create light shafts.
 
     Game Studio adds a light shaft component to the entity.
 
-## 3. Add a light shaft bounding volume
+## 3. Add a bounding volume
 
-The **light shaft bounding volume** defines the area in which directional lights cast light shafts.
+The **light shaft bounding volume** defines the area in which light shafts are created.
 
 1. In the **asset view**, click **Add asset**. 
 
@@ -83,7 +83,7 @@ The **light shaft bounding volume** defines the area in which directional lights
 
 6. In the **light shaft bounding volume** component properties, next to **light shaft**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
-7. In the **entity picker**, select the entity with the directional light you want to cast light shafts and click **OK**.
+7. In the **entity picker**, select the entity with the directional light you want to create light shafts and click **OK**.
 
 8. In the **light shaft bounding volume** component properties, next to **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
@@ -93,11 +93,13 @@ The **light shaft bounding volume** defines the area in which directional lights
 
     This model defines the shape of the light shaft bounding volume.
 
-10. Using the **transform** component, position the entity where you want directional lights to cast light shafts.
+10. Using the **transform** component, position and scale the entity to cover the area where you want to create light shafts.
 
-### 3a. Optional: Add a model to the bounding volume to use as a guide
+### 4. Optional: Use a model as a bounding volume guide
 
-Currently, Game Studio doesn't display the bounding volume in the scene editor. Instead, you can use **model** component as a guide.
+Currently, Game Studio doesn't display the bounding volume in the scene editor. This will change in future versions. 
+
+As a workaround, you can add a **model** component to use as a guide.
 
 1. On the entity with the light shaft bounding volume component, click **Add component** and select Model.
 
@@ -105,20 +107,35 @@ Currently, Game Studio doesn't display the bounding volume in the scene editor. 
 
 2. Under the **Model** component properties, next to **Model**, click ![Hand icon](~/manual/game-studio/media/hand-icon.png) (**Pick an asset up**).
 
-3. In the **asset picker**, select the model you created and click **OK**.
+3. In the **asset picker**, select the model you created earlier and click **OK**.
 
     ![Select model](media/select-procedural-model.png)
 
-4. Under **Materials**, clear the **Cast shadows** checkbox. This prevents the model from blocking your light shafts.
+4. Under **Materials**, clear the **Cast shadows** checkbox. This stops your model blocking light shafts.
 
     ![Clear model shadows](media/clear-model-shadows.png)
 
-As the model has no material, it's only visible in the scene editor, and not at runtime.
+5. After you place the bounding volume, disable or remove the model component to hide it at runtime.
 
+## Optimize light shafts
+
+Light shafts use the color value of the directional light.
 
 * Light intensity and color affects the light shafts
+
 * Light shaft density
+
 * Separate bounding boxes
+
+## Separate bounding volumes
+
+Multiple light shafts viewed through one another can become visually noisy, as in the image below:
+
+![Noisy light shafts](media/noisy-light-shafts.jpg)
+
+To reduce this effect, in the light shaft component properties, reduce the **density factor**.
+
+Alternatively, 
 
 ## See also
 
