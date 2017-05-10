@@ -51,7 +51,7 @@ To create light shafts, use three components together: **lights**, **light shaft
     > [!Note]
     > Directional lights must use a single shadow cascade to create light shafts.
 
-4. Click **add component** and select **light shaft**.
+4. Click **Add component** and select **Light shaft**.
 
     ![Add light shaft component](media/add-light-shaft-component.png)
 
