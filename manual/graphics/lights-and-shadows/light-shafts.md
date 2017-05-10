@@ -119,23 +119,26 @@ As a workaround, you can add a **model** component to use as a guide.
 
 ## Optimize light shafts
 
-Light shafts use the color value of the directional light.
-
-* Light intensity and color affects the light shafts
-
-* Light shaft density
-
-* Separate bounding boxes
-
-## Separate bounding volumes
-
 Multiple light shafts viewed through one another can become visually noisy, as in the image below:
 
 ![Noisy light shafts](media/noisy-light-shafts.jpg)
 
-To reduce this effect, in the light shaft component properties, reduce the **density factor**.
+To reduce this, in the **light shaft component properties**, reduce the **density factor**.
 
-Alternatively, 
+![Density factor](media/density-factor.jpg)
+
+Alternatively, use multiple bounding volumes. To do this:
+
+1. Create additional bounding volume(s) and position them to cover the area where you want to create light shafts.
+
+2. In the **light shaft component properties**, make sure **separate bounding volumes** is enabled.
+
+![Separate bounding volume](media/separate-bounding-volumes.jpg)
+
+This calculates the light shafts in each bounding volume separately, creating higher-quality light shafts when viewed together.
+
+>[!Note]
+>Using multiple bounding volumes uses more processing power.
 
 ## See also
 
