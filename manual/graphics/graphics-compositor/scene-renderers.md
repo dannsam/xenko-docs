@@ -43,7 +43,7 @@ The **scene renderer collection** executes multiple renderers (eg render camera,
 >[!Note]
 >Xenko executes the renderers in list order.
 
-To add a renderer to the collection, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) and select the renderer you want to add.
+To add a renderer to the collection, next to **Children**, click ![Green plus button](~/manual/game-studio/media/green-plus-icon.png) (**Add a new item to the list**) and select the renderer you want to add.
 
 ![Add to scene collection](media/add-renderer-to-scene-renderer-collection.png)
 
