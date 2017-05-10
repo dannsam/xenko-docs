@@ -30,7 +30,7 @@ To create light shafts, use three components together: **lights**, **light shaft
 
 2. Select the **forward renderer** node.
 
-3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) (**Create a new instance with the selected type**) and select **LightShafts**.
+3. In the **property grid** (on the right by default), next to **Light shafts**, click ![Blue arrow button](~/manual/game-studio/media/blue-arrow-icon.png) (**Create a new instance with the selected type**) and select **LightShafts**.
 
     ![Select light shafts](media/select-light-shafts.png)
 
