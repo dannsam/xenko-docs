@@ -123,9 +123,9 @@ Multiple light shafts viewed through one another can become visually noisy, as i
 
 ![Noisy light shafts](media/noisy-light-shafts.jpg)
 
-To reduce this, in the **light shaft component properties**, reduce the **density factor**.
+To reduce this effect, in the **light shaft component properties**, reduce the **density factor**.
 
-![Density factor](media/density-factor.jpg)
+![Density factor](media/density-factor.png)
 
 Alternatively, use multiple bounding volumes. To do this:
 
@@ -133,7 +133,7 @@ Alternatively, use multiple bounding volumes. To do this:
 
 2. In the **light shaft component properties**, make sure **separate bounding volumes** is enabled.
 
-![Separate bounding volume](media/separate-bounding-volumes.jpg)
+![Separate bounding volume](media/separate-bounding-volumes.png)
 
 This calculates the light shafts in each bounding volume separately, creating higher-quality light shafts when viewed together.
 
