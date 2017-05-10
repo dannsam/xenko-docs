@@ -7,7 +7,9 @@ You can create as many camera slots as you need, but you don't have to create a 
 > [!Note]
 > Each camera slot must have a camera assigned to it. If you have an unused camera slot, delete it.
 >
-> You can't assign a camera to more than one slot. If you need to do this, duplicate the camera entity and assign it to a different slot.
+> You can't assign a single camera to more than one slot. If you need to do this, duplicate the camera entity and assign it to a different slot.
+
+> If multiple enabled cameras in your scene use the same camera slot, the result is undefined.
 
 ## Create a camera slot
 
@@ -31,8 +33,21 @@ In the graphics compositor editor, on the left, under **Camera slots**, click ![
 
 The graphics compositor matches enabled cameras to their appropriate slots each frame.
 
+## Create a camera and assign a camera slot from a script
+
+Use:
+
+```cs
+var camera = new CameraComponent();
+ camera.Slot = SceneSystem.GraphicsCompositor.Cameras[0].ToSlotId();
+```
+
 > [!Note]
-> If multiple enabled cameras in your scene use the same camera slot, the result is undefined.
+> Must sure you:
+>
+> * always have at least one enabled camera
+>
+> * don't have two cameras enabled and assigned to the same slot at the same time 
 
 ## See also
 
