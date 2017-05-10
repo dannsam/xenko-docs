@@ -43,7 +43,7 @@ var camera = new CameraComponent();
 ```
 
 > [!Note]
-> Must sure you:
+> Make sure you:
 >
 > * always have at least one enabled camera
 >
