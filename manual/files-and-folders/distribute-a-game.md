@@ -14,11 +14,21 @@ When you're ready to publish your game, create a release build from Visual Studi
 
     Your project opens in Visual Studio.
 
-4. In the Visual Studio toolbar, from the drop-down menu, select **Release**.
+4. In Visual Studio, from the **Solution Configurations** drop-down menu, select **Release**.
 
     ![Select release](media/select-release.png)
 
-5. Under **Build**, select **Build solution**.
+5. From the **Solution platforms** drop-down menu, select the platform you want to create a build for.
+
+    ![Select platform](media/select-platform.png)
+
+    >[!Note]
+    >
+    >You can only build for platforms you've added to your Xenko project. For instructions about how to do this, see [Add or remove a platform](../platforms/add-or-remove-a-platform.md).
+    >
+    >To build for Android or iOS, you need Xamarin, which is included with Visual Studio licenses. For instructions about how to install Xamarin with Visual Studio 2017, see [this MSDN page](https://docs.microsoft.com/en-us/visualstudio/cross-platform/setup-and-install).
+
+6. Under **Build**, select **Build solution**.
 
     ![Build solution](media/build-solution.png)
 
@@ -49,5 +59,6 @@ To run games made with Xenko, users need:
 
 ## See also
 
+* [Add or remove a platform](../platforms/add-or-remove-a-platform.md)
 * [Version control](version-control.md)
 * [Project structure](project-structure.md)
