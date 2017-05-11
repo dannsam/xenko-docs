@@ -66,7 +66,7 @@ Four of the lampposts now have a green light. The fifth is still red, as overrid
 ## See also
 
 * [Prefab index](prefabs.md)
-* [Create prefabs](create-a-prefab.md)
+* [Create a prefab](create-a-prefab.md)
 * [Use prefabs](use-prefabs.md)
 * [Edit prefabs](edit-prefabs.md)
 * [Nested prefabs](nested-prefabs.md)
